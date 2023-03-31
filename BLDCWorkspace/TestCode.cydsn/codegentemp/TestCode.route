@@ -1,0 +1,21 @@
+net ClockBlock_HFClk
+	term   ":m0s8clockblockcell.hfclk"
+	switch ":m0s8clockblockcell.hfclk==>:udb@[UDB=(0,0)]:controlcell.busclk"
+	term   ":udb@[UDB=(0,0)]:controlcell.busclk"
+end ClockBlock_HFClk
+net Net_1
+	term   ":udb@[UDB=(0,0)]:controlcell.control_0"
+	switch ":udb@[UDB=(0,0)]:controlcell.control_0==>:udb@[UDB=(0,0)]:controlcell_control_0_permute.in_0"
+	switch ":udb@[UDB=(0,0)]:controlcell_control_0_permute.controlcell_control_0==>Stub-:udbswitch@[UDB=(0,0)][side=top]:v104"
+	switch "OStub-:udbswitch@[UDB=(0,0)][side=top]:v104"
+	switch ":udbswitch@[UDB=(0,0)][side=top]:104,66"
+	switch ":hvswitch@[UDB=(1,0)][side=left]:13,66_f"
+	switch ":hvswitch@[UDB=(0,0)][side=left]:vseg_13_bot_f"
+	switch ":hvswitch@[UDB=(0,0)][side=left]:13,5_b"
+	switch ":dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:87,5_f"
+	switch "IStub-:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v87+:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v89+:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v91"
+	switch "Stub-:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v87+:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v89+:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v91==>:ioport3:inputs1_mux.in_3"
+	switch ":ioport3:inputs1_mux.pin3__pin_input==>:ioport3:hsiom_out3.dsi"
+	switch ":ioport3:hsiom_out3.hsiom3_out==>:ioport3:pin3.pin_input"
+	term   ":ioport3:pin3.pin_input"
+end Net_1
