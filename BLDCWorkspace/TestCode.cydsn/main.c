@@ -20,7 +20,7 @@ int main(void)
     for(;;)
     {
        LEDReg_Control = 1;
-        CyDelay(501);
+        CyDelay(500);
         LEDReg_Control = 0;
         CyDelay(500);
         LEDReg_Control = 1;
