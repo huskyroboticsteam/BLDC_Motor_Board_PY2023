@@ -10,6 +10,7 @@
  * ========================================
 */
 #include "project.h"
+#include "../CANLib/CANPacket.h"
 
 int main(void)
 {
@@ -19,7 +20,7 @@ int main(void)
 
     for(;;)
     {
-       LEDReg_Control = 1;
+        LEDReg_Control = 1;
         CyDelay(500);
         LEDReg_Control = 0;
         CyDelay(500);

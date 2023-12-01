@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccVByeU6.s 			page 1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc4lJRIb.s 			page 1
 
 
    1              		.syntax unified
@@ -40,10 +40,11 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccVByeU6.s 			page 1
   10:main.c        ****  * ========================================
   11:main.c        **** */
   12:main.c        **** #include "project.h"
-  13:main.c        **** 
-  14:main.c        **** int main(void)
-  15:main.c        **** {
-  28              		.loc 1 15 0
+  13:main.c        **** #include "../CANLib/CANPacket.h"
+  14:main.c        **** 
+  15:main.c        **** int main(void)
+  16:main.c        **** {
+  28              		.loc 1 16 0
   29              		.cfi_startproc
   30              		@ Volatile: function does not return.
   31              		@ args = 0, pretend = 0, frame = 0
@@ -54,46 +55,46 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccVByeU6.s 			page 1
   36              		.cfi_offset 5, -12
   37              		.cfi_offset 6, -8
   38              		.cfi_offset 14, -4
-  16:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
-  39              		.loc 1 16 0
+  17:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+  39              		.loc 1 17 0
   40              		.syntax divided
-  41              	@ 16 "main.c" 1
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccVByeU6.s 			page 2
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc4lJRIb.s 			page 2
 
 
+  41              	@ 17 "main.c" 1
   42 0002 62B6     		CPSIE   i
   43              	@ 0 "" 2
   44              		.thumb
   45              		.syntax unified
   46              	.L2:
-  17:main.c        **** 
-  18:main.c        ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
-  19:main.c        **** 
-  20:main.c        ****     for(;;)
-  21:main.c        ****     {
-  22:main.c        ****        LEDReg_Control = 1;
-  47              		.loc 1 22 0 discriminator 1
+  18:main.c        **** 
+  19:main.c        ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
+  20:main.c        **** 
+  21:main.c        ****     for(;;)
+  22:main.c        ****     {
+  23:main.c        ****         LEDReg_Control = 1;
+  47              		.loc 1 23 0 discriminator 1
   48 0004 074C     		ldr	r4, .L3
   49 0006 0125     		movs	r5, #1
   50 0008 2570     		strb	r5, [r4]
-  23:main.c        ****         CyDelay(500);
-  51              		.loc 1 23 0 discriminator 1
+  24:main.c        ****         CyDelay(500);
+  51              		.loc 1 24 0 discriminator 1
   52 000a FA26     		movs	r6, #250
   53 000c 7600     		lsls	r6, r6, #1
   54 000e 3000     		movs	r0, r6
   55 0010 FFF7FEFF 		bl	CyDelay
   56              	.LVL0:
-  24:main.c        ****         LEDReg_Control = 0;
-  57              		.loc 1 24 0 discriminator 1
+  25:main.c        ****         LEDReg_Control = 0;
+  57              		.loc 1 25 0 discriminator 1
   58 0014 0023     		movs	r3, #0
   59 0016 2370     		strb	r3, [r4]
-  25:main.c        ****         CyDelay(500);
-  60              		.loc 1 25 0 discriminator 1
+  26:main.c        ****         CyDelay(500);
+  60              		.loc 1 26 0 discriminator 1
   61 0018 3000     		movs	r0, r6
   62 001a FFF7FEFF 		bl	CyDelay
   63              	.LVL1:
-  26:main.c        ****         LEDReg_Control = 1;
-  64              		.loc 1 26 0 discriminator 1
+  27:main.c        ****         LEDReg_Control = 1;
+  64              		.loc 1 27 0 discriminator 1
   65 001e 2570     		strb	r5, [r4]
   66 0020 F0E7     		b	.L2
   67              	.L4:
@@ -114,36 +115,36 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccVByeU6.s 			page 1
   82 0006 00000000 		.4byte	.Ldebug_abbrev0
   83 000a 04       		.byte	0x4
   84 000b 01       		.uleb128 0x1
-  85 000c D3000000 		.4byte	.LASF16
+  85 000c E2000000 		.4byte	.LASF16
   86 0010 0C       		.byte	0xc
   87 0011 1B000000 		.4byte	.LASF17
-  88 0015 5E000000 		.4byte	.LASF18
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccVByeU6.s 			page 3
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc4lJRIb.s 			page 3
 
 
+  88 0015 77000000 		.4byte	.LASF18
   89 0019 00000000 		.4byte	.Ldebug_ranges0+0
   90 001d 00000000 		.4byte	0
   91 0021 00000000 		.4byte	.Ldebug_line0
   92 0025 02       		.uleb128 0x2
   93 0026 01       		.byte	0x1
   94 0027 06       		.byte	0x6
-  95 0028 74010000 		.4byte	.LASF0
+  95 0028 83010000 		.4byte	.LASF0
   96 002c 02       		.uleb128 0x2
   97 002d 01       		.byte	0x1
   98 002e 08       		.byte	0x8
-  99 002f B0000000 		.4byte	.LASF1
+  99 002f 64000000 		.4byte	.LASF1
  100 0033 02       		.uleb128 0x2
  101 0034 02       		.byte	0x2
  102 0035 05       		.byte	0x5
- 103 0036 8C010000 		.4byte	.LASF2
+ 103 0036 9B010000 		.4byte	.LASF2
  104 003a 02       		.uleb128 0x2
  105 003b 02       		.byte	0x2
  106 003c 07       		.byte	0x7
- 107 003d 61010000 		.4byte	.LASF3
+ 107 003d 70010000 		.4byte	.LASF3
  108 0041 02       		.uleb128 0x2
  109 0042 04       		.byte	0x4
  110 0043 05       		.byte	0x5
- 111 0044 C3000000 		.4byte	.LASF4
+ 111 0044 D2000000 		.4byte	.LASF4
  112 0048 02       		.uleb128 0x2
  113 0049 04       		.byte	0x4
  114 004a 07       		.byte	0x7
@@ -172,20 +173,20 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccVByeU6.s 			page 1
  137 0077 02       		.uleb128 0x2
  138 0078 04       		.byte	0x4
  139 0079 04       		.byte	0x4
- 140 007a AA000000 		.4byte	.LASF9
+ 140 007a 5E000000 		.4byte	.LASF9
  141 007e 02       		.uleb128 0x2
  142 007f 08       		.byte	0x8
  143 0080 04       		.byte	0x4
- 144 0081 CC000000 		.4byte	.LASF10
+ 144 0081 DB000000 		.4byte	.LASF10
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc4lJRIb.s 			page 4
+
+
  145 0085 02       		.uleb128 0x2
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccVByeU6.s 			page 4
-
-
  146 0086 01       		.byte	0x1
  147 0087 08       		.byte	0x8
- 148 0088 BE000000 		.4byte	.LASF11
+ 148 0088 72000000 		.4byte	.LASF11
  149 008c 04       		.uleb128 0x4
- 150 008d 96010000 		.4byte	.LASF13
+ 150 008d A5010000 		.4byte	.LASF13
  151 0091 02       		.byte	0x2
  152 0092 A502     		.2byte	0x2a5
  153 0094 98000000 		.4byte	0x98
@@ -194,15 +195,15 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccVByeU6.s 			page 1
  156 009d 02       		.uleb128 0x2
  157 009e 04       		.byte	0x4
  158 009f 07       		.byte	0x7
- 159 00a0 9B010000 		.4byte	.LASF14
+ 159 00a0 AA010000 		.4byte	.LASF14
  160 00a4 02       		.uleb128 0x2
  161 00a5 08       		.byte	0x8
  162 00a6 04       		.byte	0x4
- 163 00a7 80010000 		.4byte	.LASF15
+ 163 00a7 8F010000 		.4byte	.LASF15
  164 00ab 06       		.uleb128 0x6
  165 00ac 22000000 		.4byte	.LASF19
  166 00b0 01       		.byte	0x1
- 167 00b1 0E       		.byte	0xe
+ 167 00b1 0F       		.byte	0xf
  168 00b2 5D000000 		.4byte	0x5d
  169 00b6 00000000 		.4byte	.LFB35
  170 00ba 28000000 		.4byte	.LFE35-.LFB35
@@ -237,10 +238,10 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccVByeU6.s 			page 1
  199 00f2 03       		.byte	0x3
  200 00f3 EC       		.byte	0xec
  201 00f4 00       		.byte	0
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc4lJRIb.s 			page 5
+
+
  202              		.section	.debug_abbrev,"",%progbits
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccVByeU6.s 			page 5
-
-
  203              	.Ldebug_abbrev0:
  204 0000 01       		.uleb128 0x1
  205 0001 11       		.uleb128 0x11
@@ -297,10 +298,10 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccVByeU6.s 			page 1
  256 0034 00       		.byte	0
  257 0035 00       		.byte	0
  258 0036 05       		.uleb128 0x5
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc4lJRIb.s 			page 6
+
+
  259 0037 35       		.uleb128 0x35
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccVByeU6.s 			page 6
-
-
  260 0038 00       		.byte	0
  261 0039 49       		.uleb128 0x49
  262 003a 13       		.uleb128 0x13
@@ -357,10 +358,10 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccVByeU6.s 			page 1
  313 0074 00       		.byte	0
  314 0075 09       		.uleb128 0x9
  315 0076 898201   		.uleb128 0x4109
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc4lJRIb.s 			page 7
+
+
  316 0079 01       		.byte	0x1
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccVByeU6.s 			page 7
-
-
  317 007a 11       		.uleb128 0x11
  318 007b 01       		.uleb128 0x1
  319 007c 31       		.uleb128 0x31
@@ -417,10 +418,10 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccVByeU6.s 			page 1
  363      7400
  364              	.LASF8:
  365 000e 756E7369 		.ascii	"unsigned int\000"
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc4lJRIb.s 			page 8
+
+
  365      676E6564 
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccVByeU6.s 			page 8
-
-
  365      20696E74 
  365      00
  366              	.LASF17:
@@ -447,77 +448,77 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccVByeU6.s 			page 1
  377      6720756E 
  377      7369676E 
  377      65642069 
- 378              	.LASF18:
- 379 005e 433A5C55 		.ascii	"C:\\Users\\lucbu\\OneDrive\\Documents\\PSoC Creator"
- 379      73657273 
- 379      5C6C7563 
- 379      62755C4F 
- 379      6E654472 
- 380 008c 5C424C44 		.ascii	"\\BLDCWorkspace\\TestCode.cydsn\000"
- 380      43576F72 
- 380      6B737061 
- 380      63655C54 
- 380      65737443 
- 381              	.LASF9:
- 382 00aa 666C6F61 		.ascii	"float\000"
- 382      7400
- 383              	.LASF1:
- 384 00b0 756E7369 		.ascii	"unsigned char\000"
- 384      676E6564 
- 384      20636861 
- 384      7200
- 385              	.LASF11:
- 386 00be 63686172 		.ascii	"char\000"
- 386      00
+ 378              	.LASF9:
+ 379 005e 666C6F61 		.ascii	"float\000"
+ 379      7400
+ 380              	.LASF1:
+ 381 0064 756E7369 		.ascii	"unsigned char\000"
+ 381      676E6564 
+ 381      20636861 
+ 381      7200
+ 382              	.LASF11:
+ 383 0072 63686172 		.ascii	"char\000"
+ 383      00
+ 384              	.LASF18:
+ 385 0077 433A5C55 		.ascii	"C:\\Users\\casey\\Desktop\\Robotics Stuff\\BLDC_Mot"
+ 385      73657273 
+ 385      5C636173 
+ 385      65795C44 
+ 385      65736B74 
+ 386 00a5 6F725F42 		.ascii	"or_Board_PY2023\\BLDCWorkspace\\TestCode.cydsn\000"
+ 386      6F617264 
+ 386      5F505932 
+ 386      3032335C 
+ 386      424C4443 
  387              	.LASF4:
- 388 00c3 6C6F6E67 		.ascii	"long int\000"
+ 388 00d2 6C6F6E67 		.ascii	"long int\000"
  388      20696E74 
  388      00
  389              	.LASF10:
- 390 00cc 646F7562 		.ascii	"double\000"
+ 390 00db 646F7562 		.ascii	"double\000"
  390      6C6500
  391              	.LASF16:
- 392 00d3 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccVByeU6.s 			page 9
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc4lJRIb.s 			page 9
 
 
+ 392 00e2 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
  392      43313120 
  392      352E342E 
  392      31203230 
  392      31363036 
- 393 0106 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 393 0115 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
  393      20726576 
  393      6973696F 
  393      6E203233 
  393      37373135 
- 394 0139 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 394 0148 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
  394      66756E63 
  394      74696F6E 
  394      2D736563 
  394      74696F6E 
  395              	.LASF3:
- 396 0161 73686F72 		.ascii	"short unsigned int\000"
+ 396 0170 73686F72 		.ascii	"short unsigned int\000"
  396      7420756E 
  396      7369676E 
  396      65642069 
  396      6E7400
  397              	.LASF0:
- 398 0174 7369676E 		.ascii	"signed char\000"
+ 398 0183 7369676E 		.ascii	"signed char\000"
  398      65642063 
  398      68617200 
  399              	.LASF15:
- 400 0180 6C6F6E67 		.ascii	"long double\000"
+ 400 018f 6C6F6E67 		.ascii	"long double\000"
  400      20646F75 
  400      626C6500 
  401              	.LASF2:
- 402 018c 73686F72 		.ascii	"short int\000"
+ 402 019b 73686F72 		.ascii	"short int\000"
  402      7420696E 
  402      7400
  403              	.LASF13:
- 404 0196 72656738 		.ascii	"reg8\000"
+ 404 01a5 72656738 		.ascii	"reg8\000"
  404      00
  405              	.LASF14:
- 406 019b 73697A65 		.ascii	"sizetype\000"
+ 406 01aa 73697A65 		.ascii	"sizetype\000"
  406      74797065 
  406      00
  407              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

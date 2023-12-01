@@ -1,0 +1,3 @@
+[submodule ".\\BLDCWorkspace\\CANLib"]
+	path = .\\BLDCWorkspace\\CANLib
+	url = https://github.com/huskyroboticsteam/HindsightCAN.git

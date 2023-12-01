@@ -27,6 +27,23 @@
 <v>BLDCWorkspace\TestCode\TestCode.cydwr\System</v>
 <v>BLDCWorkspace\TestCode\TestCode.cydwr\Directives</v>
 <v>BLDCWorkspace\TestCode\TestCode.cydwr\Flash Security</v>
+<v>BLDCWorkspace\TestCode\CANLib</v>
+<v>BLDCWorkspace\TestCode\CANLib\CANCommon.c</v>
+<v>BLDCWorkspace\TestCode\CANLib\CANCommon.h</v>
+<v>BLDCWorkspace\TestCode\CANLib\CANGPIO.c</v>
+<v>BLDCWorkspace\TestCode\CANLib\CANGPIO.h</v>
+<v>BLDCWorkspace\TestCode\CANLib\CANLibrary.h</v>
+<v>BLDCWorkspace\TestCode\CANLib\CANLocalization.c</v>
+<v>BLDCWorkspace\TestCode\CANLib\CANLocalization.h</v>
+<v>BLDCWorkspace\TestCode\CANLib\CANMotorUnit.c</v>
+<v>BLDCWorkspace\TestCode\CANLib\CANMotorUnit.h</v>
+<v>BLDCWorkspace\TestCode\CANLib\CANPacket.c</v>
+<v>BLDCWorkspace\TestCode\CANLib\CANPacket.h</v>
+<v>BLDCWorkspace\TestCode\CANLib\CANPower.c</v>
+<v>BLDCWorkspace\TestCode\CANLib\CANPower.h</v>
+<v>BLDCWorkspace\TestCode\CANLib\CANScience.c</v>
+<v>BLDCWorkspace\TestCode\CANLib\CANScience.h</v>
+<v>BLDCWorkspace\TestCode\CANLib\CANSerialNumbers.h</v>
 <v>BLDCWorkspace\TestCode\Header Files</v>
 <v>BLDCWorkspace\TestCode\Header Files\cyapicallbacks.h</v>
 <v>BLDCWorkspace\TestCode\Source Files</v>
@@ -46,6 +63,23 @@
 <v>BLDCWorkspace\TestCode\TestCode.cydwr\System</v>
 <v>BLDCWorkspace\TestCode\TestCode.cydwr\Directives</v>
 <v>BLDCWorkspace\TestCode\TestCode.cydwr\Flash Security</v>
+<v>BLDCWorkspace\TestCode\CANLib</v>
+<v>BLDCWorkspace\TestCode\CANLib\CANCommon.c</v>
+<v>BLDCWorkspace\TestCode\CANLib\CANCommon.h</v>
+<v>BLDCWorkspace\TestCode\CANLib\CANGPIO.c</v>
+<v>BLDCWorkspace\TestCode\CANLib\CANGPIO.h</v>
+<v>BLDCWorkspace\TestCode\CANLib\CANLibrary.h</v>
+<v>BLDCWorkspace\TestCode\CANLib\CANLocalization.c</v>
+<v>BLDCWorkspace\TestCode\CANLib\CANLocalization.h</v>
+<v>BLDCWorkspace\TestCode\CANLib\CANMotorUnit.c</v>
+<v>BLDCWorkspace\TestCode\CANLib\CANMotorUnit.h</v>
+<v>BLDCWorkspace\TestCode\CANLib\CANPacket.c</v>
+<v>BLDCWorkspace\TestCode\CANLib\CANPacket.h</v>
+<v>BLDCWorkspace\TestCode\CANLib\CANPower.c</v>
+<v>BLDCWorkspace\TestCode\CANLib\CANPower.h</v>
+<v>BLDCWorkspace\TestCode\CANLib\CANScience.c</v>
+<v>BLDCWorkspace\TestCode\CANLib\CANScience.h</v>
+<v>BLDCWorkspace\TestCode\CANLib\CANSerialNumbers.h</v>
 <v>BLDCWorkspace\TestCode\Header Files</v>
 <v>BLDCWorkspace\TestCode\Header Files\cyapicallbacks.h</v>
 <v>BLDCWorkspace\TestCode\Source Files</v>
@@ -76,6 +110,13 @@
 <v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541</v>
 <v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug</v>
 <v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CANCommon.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CANGPIO.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CANLocalization.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CANMotorUnit.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CANPacket.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CANPower.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CANScience.lst</v>
 <v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
 <v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
 <v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
@@ -102,30 +143,6 @@
 <VisibleNodeIds>
 <v>BLDCWorkspace</v>
 <v>BLDCWorkspace\TestCode</v>
-<v>BLDCWorkspace\TestCode\CortexM0</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CyDMA.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_1.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_1_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\LEDReg.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\LEDReg_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\TestCode.elf</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\TestCode.hex</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\TestCode.map</v>
-<v>BLDCWorkspace\TestCode\TestCode.gpdsc</v>
 <v>BLDCWorkspace\TestCode\TestCode.rpt</v>
 <v>BLDCWorkspace\TestCode\TestCode_timing.html</v>
 </VisibleNodeIds>
@@ -167,7 +184,18 @@
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
-<OpenDocs />
+<OpenDocs>
+<name v=".\TestCode.cydsn\main.c" />
+<name v=".\TestCode.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\CANLib\CANCommon.h" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1051, 565" SelectedTabbedMdiWindow="8fa1ed20-be7c-4ee1-9bf5-a86278b27c5b"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="f9102868-88ca-4853-ab28-0a28d99070b3" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDCWorkspace\TestCode.cydsn\main.c" Guid="8fa1ed20-be7c-4ee1-9bf5-a86278b27c5b" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDCWorkspace\TestCode.cydsn\TopDesign\TopDesign.cysch" Guid="b3175113-70df-493d-ace1-e2862d3b0fcd" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDCWorkspace\CANLib\CANCommon.h" Guid="bf07f0a8-6510-4ccb-99d4-379bdfb79890" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
