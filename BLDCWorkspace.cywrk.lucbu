@@ -149,13 +149,6 @@
 <v>BLDCWorkspace\TestCode\PSoC 4 Architecture TRM</v>
 <v>BLDCWorkspace\TestCode\PSoC 4200L Family Datasheet</v>
 <v>BLDCWorkspace\TestCode\System Reference Guides</v>
-<v>BLDCWorkspace\TestCode\System Reference Guides\cy_boot_v6_0</v>
-<v>BLDCWorkspace\TestCode\System Reference Guides\cy_dmac_v1_10</v>
-<v>BLDCWorkspace\TestCode\System Reference Guides\cy_lfclk_v1_20</v>
-<v>BLDCWorkspace\TestCode\CAN_v3_0.pdf</v>
-<v>BLDCWorkspace\TestCode\cy_pins_v2_20</v>
-<v>BLDCWorkspace\TestCode\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
-<v>BLDCWorkspace\TestCode\SCB_P4_v4_0.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>BLDCWorkspace</v>
@@ -163,13 +156,6 @@
 <v>BLDCWorkspace\TestCode\PSoC 4 Architecture TRM</v>
 <v>BLDCWorkspace\TestCode\PSoC 4200L Family Datasheet</v>
 <v>BLDCWorkspace\TestCode\System Reference Guides</v>
-<v>BLDCWorkspace\TestCode\System Reference Guides\cy_boot_v6_0</v>
-<v>BLDCWorkspace\TestCode\System Reference Guides\cy_dmac_v1_10</v>
-<v>BLDCWorkspace\TestCode\System Reference Guides\cy_lfclk_v1_20</v>
-<v>BLDCWorkspace\TestCode\CAN_v3_0.pdf</v>
-<v>BLDCWorkspace\TestCode\cy_pins_v2_20</v>
-<v>BLDCWorkspace\TestCode\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
-<v>BLDCWorkspace\TestCode\SCB_P4_v4_0.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
