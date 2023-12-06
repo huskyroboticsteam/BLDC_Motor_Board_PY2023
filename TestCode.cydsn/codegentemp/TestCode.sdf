@@ -1,0 +1,23 @@
+(DELAYFILE
+ (SDFVERSION "IEEE 1497 4.0")
+ (DATE "2022-12-02T02:02:31Z")
+ (DESIGN "TestCode")
+ (VENDOR "Cypress Semiconductor")
+ (PROGRAM "PSoC Creator")
+ (VERSION " 4.4")
+ (DIVIDER .)
+ (TIMESCALE 1 ns)
+ (CELL
+  (CELLTYPE "TestCode")
+  (INSTANCE *)
+  (DELAY
+   (ABSOLUTE
+    (INTERCONNECT ClockBlock.hfclk \\LEDReg\:Sync\:ctrl_reg\\.busclk (0.000:0.000:0.000))
+    (INTERCONNECT LED_1\(0\).pad_out LED_1\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT \\LEDReg\:Sync\:ctrl_reg\\.control_0 LED_1\(0\).pin_input (5.340:5.340:5.340))
+    (INTERCONNECT LED_1\(0\).pad_out LED_1\(0\)_PAD (0.000:0.000:0.000))
+    (INTERCONNECT LED_1\(0\)_PAD LED_1\(0\).pad_in (0.000:0.000:0.000))
+   )
+  )
+ )
+)
