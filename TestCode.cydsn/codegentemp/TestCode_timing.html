@@ -539,32 +539,32 @@ function getElementsByClass(rootNode, elemName, className)
 <tr> <td class="prop"> Project :</td>
 <td class="proptext"> TestCode</td></tr>
 <tr> <td class="prop"> Build Time :</td>
-<td class="proptext"> 12/01/22 18:02:31</td></tr>
+<td class="proptext"> 01/11/24 18:41:16</td></tr>
 <tr> <td class="prop"> Device :</td>
-<td class="proptext"> CY8C4248LQI-BL583</td></tr>
+<td class="proptext"> CY8C4248AZI-L485</td></tr>
 <tr> <td class="prop"> Temperature :</td>
 <td class="proptext"> -40C - 85C</td></tr>
-<tr> <td class="prop"> VDDA_1 :</td>
+<tr> <td class="prop"> VBUS :</td>
+<td class="proptext"> 5.00</td></tr>
+<tr> <td class="prop"> VDDA_0 :</td>
 <td class="proptext"> 3.30</td></tr>
 <tr> <td class="prop"> VDDA_CTB :</td>
 <td class="proptext"> 3.30</td></tr>
-<tr> <td class="prop"> VDDD_0 :</td>
+<tr> <td class="prop"> VDDD :</td>
+<td class="proptext"> 3.30</td></tr>
+<tr> <td class="prop"> VDDIO :</td>
 <td class="proptext"> 3.30</td></tr>
 <tr> <td class="prop"> VDDIO_0 :</td>
 <td class="proptext"> 3.30</td></tr>
-<tr> <td class="prop"> VDDIO_1 :</td>
-<td class="proptext"> 3.30</td></tr>
 <tr> <td class="prop"> VDDIO_2 :</td>
 <td class="proptext"> 3.30</td></tr>
-<tr> <td class="prop"> VDDR_BGLS :</td>
+<tr> <td class="prop"> VDDIO_3 :</td>
 <td class="proptext"> 3.30</td></tr>
-<tr> <td class="prop"> VDDR_HF :</td>
+<tr> <td class="prop"> VDDIO_4 :</td>
 <td class="proptext"> 3.30</td></tr>
-<tr> <td class="prop"> VDDR_HLS :</td>
+<tr> <td class="prop"> VDDIO_A :</td>
 <td class="proptext"> 3.30</td></tr>
-<tr> <td class="prop"> VDDR_LF :</td>
-<td class="proptext"> 3.30</td></tr>
-<tr> <td class="prop"> VDDR_SYN :</td>
+<tr> <td class="prop"> VDDIO_A_1 :</td>
 <td class="proptext"> 3.30</td></tr>
 <tr> <td class="prop"> Voltage :</td>
 <td class="proptext"> 3.3</td></tr>
@@ -611,10 +611,26 @@ Clock Summary Section</span>
  <td class = "text_info"> </td>
 </tr>
 <tr> 
+ <td class = "text_info">CyExtClk</td>
+ <td class = "text_info">CyExtClk</td>
+ <td class = "number">40.000&nbsp;MHz</td>
+ <td class = "number">40.000&nbsp;MHz</td>
+ <td class = "number"> N/A </td>
+ <td class = "text_info"> </td>
+</tr>
+<tr> 
  <td class = "text_info">CyHFClk</td>
  <td class = "text_info">CyHFClk</td>
- <td class = "number">48.000&nbsp;MHz</td>
- <td class = "number">48.000&nbsp;MHz</td>
+ <td class = "number">40.000&nbsp;MHz</td>
+ <td class = "number">40.000&nbsp;MHz</td>
+ <td class = "number"> N/A </td>
+ <td class = "text_info"> </td>
+</tr>
+<tr> 
+ <td class = "text_info">UART_SCBCLK</td>
+ <td class = "text_info">CyHFClk</td>
+ <td class = "number">1.379&nbsp;MHz</td>
+ <td class = "number">1.379&nbsp;MHz</td>
  <td class = "number"> N/A </td>
  <td class = "text_info"> </td>
 </tr>
@@ -645,16 +661,16 @@ Clock Summary Section</span>
 <tr> 
  <td class = "text_info">CyRouted1</td>
  <td class = "text_info">CyRouted1</td>
- <td class = "number">48.000&nbsp;MHz</td>
- <td class = "number">48.000&nbsp;MHz</td>
+ <td class = "number">40.000&nbsp;MHz</td>
+ <td class = "number">40.000&nbsp;MHz</td>
  <td class = "number"> N/A </td>
  <td class = "text_info"> </td>
 </tr>
 <tr> 
  <td class = "text_info">CySysClk</td>
  <td class = "text_info">CySysClk</td>
- <td class = "number">48.000&nbsp;MHz</td>
- <td class = "number">48.000&nbsp;MHz</td>
+ <td class = "number">40.000&nbsp;MHz</td>
+ <td class = "number">40.000&nbsp;MHz</td>
  <td class = "number"> N/A </td>
  <td class = "text_info"> </td>
 </tr>
@@ -666,104 +682,16 @@ Clock Summary Section</span>
  <td class = "number"> N/A </td>
  <td class = "text_info"> </td>
 </tr>
-</tbody>
- </table> 
-</div>
-</div>
-<div class="sta_sec" >
-<div>
-<a href="#" style="text-decoration: none; color: inherit;">
-<span class="sec_head"><span style="font-family: monospace;">+</span>
-Clock To Output Section</span>
-</a>
-</div><div class="sta_secbody"><div class="sta_sec" >
-<div>
-<a href="#" style="text-decoration: none; color: inherit;">
-<span class="sec_head"><span style="font-family: monospace;">+</span>
-CyHFClk</span>
-</a>
-</div><div class="sta_secbody"><table class="sta_tscs">
- <thead> 
 <tr> 
-<th>Source</th>
-<th>Destination</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">\LEDReg:Sync:ctrl_reg\/control_0</td>
- <td class = "text_info">LED_1(0)_PAD</td>
- <td class = "number">22.838</td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="3">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\LEDReg:Sync:ctrl_reg\</td>
- <td class = "text_info">\LEDReg:Sync:ctrl_reg\/busclk</td>
- <td class = "text_info">\LEDReg:Sync:ctrl_reg\/control_0</td>
- <td class = "number">2.580</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">Net_1</td>
- <td class = "text_info">\LEDReg:Sync:ctrl_reg\/control_0</td>
- <td class = "text_info">LED_1(0)/pin_input</td>
- <td class = "number">5.340</td>
-</tr>
-<tr> 
- <td class = "text_info">iocell1</td>
- <td class = "text_info">P3[3]</td>
- <td class = "number">1</td>
- <td class = "text_info">LED_1(0)</td>
- <td class = "text_info">LED_1(0)/pin_input</td>
- <td class = "text_info">LED_1(0)/pad_out</td>
- <td class = "number">14.918</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">LED_1(0)_PAD</td>
- <td class = "text_info">LED_1(0)/pad_out</td>
- <td class = "text_info">LED_1(0)_PAD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
+ <td class = "text_info">UART_SCBCLK(FFB)</td>
+ <td class = "text_info">UART_SCBCLK(FFB)</td>
+ <td class = "number">1.379&nbsp;MHz</td>
+ <td class = "number">1.379&nbsp;MHz</td>
+ <td class = "number"> N/A </td>
  <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Clock path delay</td>
- <td class = "number">0.000</td>
 </tr>
 </tbody>
  </table> 
-</td>
-</tr>
-</tbody>
- </table> 
-</div>
-</div>
 </div>
 </div>
 </body>

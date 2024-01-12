@@ -1,6 +1,6 @@
-C:\Users\lucbu\OneDrive\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|dd1c876a-25d8-44a8-b19f-4650a47f71b1
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|bd10360a-342d-43ab-94e1-ab23ed3bfafc
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|75c1a1fb-0425-4d12-a76e-dd526a00a2c7
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|cd30ca34-5141-4d68-ae33-bb19ceb1fa79
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|295d9273-9584-402f-a4a1-bb2801b3e287
-C:\Users\lucbu\OneDrive\Documents\PSoC Creator\BLDCWorkspace\TestCode.cydsn\TestCode.cyprj|3c88413f-e8ea-4967-839b-caf96539cb43
+C:\Users\lucbu\DocumentStorage\GitHub\BLDC_Motor_Board_PY2023\TestCode.cydsn\TestCode.cyprj|98794727-e0df-4c82-9bc3-618b053d7b4e
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|ddecd8e3-f794-448a-9bc1-14575d9a7e48
+C:\Users\lucbu\OneDrive\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|9e50d4cb-1c01-44d1-b76c-315568142b67
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|a792bfb3-20af-4e66-907e-f3df0c35684c
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|f28d2e81-e5bf-44fa-a324-08a4b0068f73
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|2f5c6211-c998-4882-b97f-0a8dd22aa434

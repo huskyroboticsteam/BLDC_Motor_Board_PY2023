@@ -27,6 +27,18 @@ static cydma_callback_t CyDmaInterruptCallback[CYDMA_CH_NR] = {
     &CyDmaDefaultInterruptCallback, &CyDmaDefaultInterruptCallback,
     &CyDmaDefaultInterruptCallback, &CyDmaDefaultInterruptCallback,
     &CyDmaDefaultInterruptCallback, &CyDmaDefaultInterruptCallback,
+    &CyDmaDefaultInterruptCallback, &CyDmaDefaultInterruptCallback,
+    &CyDmaDefaultInterruptCallback, &CyDmaDefaultInterruptCallback,
+    &CyDmaDefaultInterruptCallback, &CyDmaDefaultInterruptCallback,
+    &CyDmaDefaultInterruptCallback, &CyDmaDefaultInterruptCallback,
+    &CyDmaDefaultInterruptCallback, &CyDmaDefaultInterruptCallback,
+    &CyDmaDefaultInterruptCallback, &CyDmaDefaultInterruptCallback,
+    &CyDmaDefaultInterruptCallback, &CyDmaDefaultInterruptCallback,
+    &CyDmaDefaultInterruptCallback, &CyDmaDefaultInterruptCallback,
+    &CyDmaDefaultInterruptCallback, &CyDmaDefaultInterruptCallback,
+    &CyDmaDefaultInterruptCallback, &CyDmaDefaultInterruptCallback,
+    &CyDmaDefaultInterruptCallback, &CyDmaDefaultInterruptCallback,
+    &CyDmaDefaultInterruptCallback, &CyDmaDefaultInterruptCallback,
     &CyDmaDefaultInterruptCallback, &CyDmaDefaultInterruptCallback
 };
 
@@ -597,7 +609,7 @@ void CyDmaChDisable(int32 channel)
 void CyDmaTrigger(int32 channel)
 {
     /* The LUT is device-dependent, thus it is generated during the build process. */
-    static const uint32 trCtlLut[] = {0xC0020000U};
+    static const uint32 trCtlLut[] = {0xC0020000U, 0xC0020100U, 0xC0020200U, 0xC0020208U};
 
     CYASSERT((channel >= 0) && (channel < CYDMA_CH_NR));
 

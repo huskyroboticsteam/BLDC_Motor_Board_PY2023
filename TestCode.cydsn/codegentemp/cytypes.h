@@ -280,7 +280,7 @@
 
     /* Presence of the BLESS IP block */
     #if (CY_IP_HOBTO_DEVICE)
-        #define CY_IP_BLESS             (1 != 0)
+        #define CY_IP_BLESS             (0 != 0)
         #define CY_IP_BLESSV3           (CYIPBLOCK_m0s8bless_VERSION == 3)
     #else
         #define CY_IP_BLESS             (0 != 0)
@@ -288,7 +288,7 @@
     #endif  /* (CY_IP_HOBTO_DEVICE) */
 
     #if (CY_IP_HOBTO_DEVICE)
-        #define CY_IP_USBDEV            (0 != 0)
+        #define CY_IP_USBDEV            (1 != 0)
     #else
         #define CY_IP_USBDEV            (0 != 0)
     #endif  /* (CY_IP_HOBTO_DEVICE) */
@@ -324,7 +324,7 @@
             #endif
         #else
             #define CY_IP_WCO_BLESS         (0 != 0)
-            #define CY_IP_WCO_WCO           (0 == 1)
+            #define CY_IP_WCO_WCO           (1 == 1)
             #define CY_IP_WCO_WCOV2         (0 != 0)
             #define CY_IP_WCO_SRSSV2        (0 == 1)
         #endif  /* (CY_IP_BLESS) */
@@ -364,7 +364,7 @@
         #else
             #define CY_IP_ECO_BLESS         (0 != 0)
             #define CY_IP_ECO_BLESSV3       (0 != 0)
-            #define CY_IP_ECO_SRSSV2        (0 == 1)
+            #define CY_IP_ECO_SRSSV2        (1 == 1)
             #define CY_IP_ECO_SRSSLT        ((0 != 0) && (0 != 0))
             #define CY_IP_ECOV2_SRSSLT      (CY_IP_ECO_SRSSLT && CY_IP_EXCO_IP_V2)
         #endif  /* (CY_IP_BLESS) */
@@ -381,11 +381,11 @@
     /* PLL is present */
     #if (CY_IP_HOBTO_DEVICE)
         #if(CY_IP_SRSSV2)
-            #define CY_IP_PLL           ((0 != 0) || \
-                                          (0 != 0))
+            #define CY_IP_PLL           ((1 != 0) || \
+                                          (1 != 0))
 
-            #define CY_IP_PLL_NR        (0u + \
-                                          0u)
+            #define CY_IP_PLL_NR        (1u + \
+                                          1u)
 
         #elif (CY_IP_SRSSLT)
             #define CY_IP_PLL           (-1 == 1)
