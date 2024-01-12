@@ -1,0 +1,11 @@
+# Design01
+# 2023-03-23 21:56:50Z
+
+# IO_2@[IOP=(3)][IoId=(2)] is reserved: SWDDebugEnabled
+dont_use_io iocell 3 2
+# IO_3@[IOP=(3)][IoId=(3)] is reserved: SWDDebugEnabled
+dont_use_io iocell 3 3
+set_location "ClockGenBlock" m0s8clockgenblockcell -1 -1 0
+set_io "Pin_Red(0)" iocell 1 6
+set_io "Pin_Green(0)" iocell 0 2
+set_io "Pin_Blue(0)" iocell 0 3
