@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccRWhpO0.s 			page 1
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccWLN5Ux.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccRWhpO0.s 			page 1
   28:Generated_Source\PSoC4/UART_PM.c **** #endif /* (UART_SCB_MODE_EZI2C_INC) */
   29:Generated_Source\PSoC4/UART_PM.c **** 
   30:Generated_Source\PSoC4/UART_PM.c **** #if(UART_SCB_MODE_SPI_INC || UART_SCB_MODE_UART_INC)
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccRWhpO0.s 			page 2
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccWLN5Ux.s 			page 2
 
 
   31:Generated_Source\PSoC4/UART_PM.c ****     #include "UART_SPI_UART_PVT.h"
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccRWhpO0.s 			page 1
   77:Generated_Source\PSoC4/UART_PM.c ****     if(UART_SCB_WAKE_ENABLE_CHECK)
   78:Generated_Source\PSoC4/UART_PM.c ****     {
   79:Generated_Source\PSoC4/UART_PM.c ****         if(UART_SCB_MODE_I2C_RUNTM_CFG)
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccRWhpO0.s 			page 3
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccWLN5Ux.s 			page 3
 
 
   80:Generated_Source\PSoC4/UART_PM.c ****         {
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccRWhpO0.s 			page 1
   41 000a 1370     		strb	r3, [r2]
  129:Generated_Source\PSoC4/UART_PM.c **** 
  130:Generated_Source\PSoC4/UART_PM.c ****         if(0u != UART_backup.enableState)
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccRWhpO0.s 			page 4
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccWLN5Ux.s 			page 4
 
 
   42              		.loc 1 130 0
@@ -201,7 +201,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccRWhpO0.s 			page 1
   51              	.L4:
   52              		.align	2
   53              	.L3:
-  54 0014 00002540 		.word	1076166656
+  54 0014 00002440 		.word	1076101120
   55 0018 00000000 		.word	.LANCHOR0
   56              		.cfi_endproc
   57              	.LFE1:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccRWhpO0.s 			page 1
  160:Generated_Source\PSoC4/UART_PM.c **** {
   67              		.loc 1 160 0
   68              		.cfi_startproc
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccRWhpO0.s 			page 5
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccWLN5Ux.s 			page 5
 
 
   69              		@ args = 0, pretend = 0, frame = 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccRWhpO0.s 			page 1
  209:Generated_Source\PSoC4/UART_PM.c **** 
  210:Generated_Source\PSoC4/UART_PM.c ****     #else
  211:Generated_Source\PSoC4/UART_PM.c **** 
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccRWhpO0.s 			page 6
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccWLN5Ux.s 			page 6
 
 
  212:Generated_Source\PSoC4/UART_PM.c ****         if(0u != UART_backup.enableState)
@@ -348,36 +348,36 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccRWhpO0.s 			page 1
  110 0006 00000000 		.4byte	.Ldebug_abbrev0
  111 000a 04       		.byte	0x4
  112 000b 01       		.uleb128 0x1
- 113 000c 25010000 		.4byte	.LASF22
+ 113 000c 28010000 		.4byte	.LASF22
  114 0010 0C       		.byte	0xc
- 115 0011 F1010000 		.4byte	.LASF23
- 116 0015 84000000 		.4byte	.LASF24
+ 115 0011 F4010000 		.4byte	.LASF23
+ 116 0015 B6000000 		.4byte	.LASF24
  117 0019 00000000 		.4byte	.Ldebug_ranges0+0
  118 001d 00000000 		.4byte	0
  119 0021 00000000 		.4byte	.Ldebug_line0
  120 0025 02       		.uleb128 0x2
  121 0026 01       		.byte	0x1
  122 0027 06       		.byte	0x6
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccRWhpO0.s 			page 7
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccWLN5Ux.s 			page 7
 
 
- 123 0028 C6010000 		.4byte	.LASF0
+ 123 0028 C9010000 		.4byte	.LASF0
  124 002c 02       		.uleb128 0x2
  125 002d 01       		.byte	0x1
  126 002e 08       		.byte	0x8
- 127 002f DD000000 		.4byte	.LASF1
+ 127 002f 90000000 		.4byte	.LASF1
  128 0033 02       		.uleb128 0x2
  129 0034 02       		.byte	0x2
  130 0035 05       		.byte	0x5
- 131 0036 DE010000 		.4byte	.LASF2
+ 131 0036 E1010000 		.4byte	.LASF2
  132 003a 02       		.uleb128 0x2
  133 003b 02       		.byte	0x2
  134 003c 07       		.byte	0x7
- 135 003d B3010000 		.4byte	.LASF3
+ 135 003d B6010000 		.4byte	.LASF3
  136 0041 02       		.uleb128 0x2
  137 0042 04       		.byte	0x4
  138 0043 05       		.byte	0x5
- 139 0044 16010000 		.4byte	.LASF4
+ 139 0044 19010000 		.4byte	.LASF4
  140 0048 02       		.uleb128 0x2
  141 0049 04       		.byte	0x4
  142 004a 07       		.byte	0x7
@@ -415,16 +415,16 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccRWhpO0.s 			page 1
  174 008a 02       		.uleb128 0x2
  175 008b 08       		.byte	0x8
  176 008c 04       		.byte	0x4
- 177 008d 0F010000 		.4byte	.LASF12
+ 177 008d 12010000 		.4byte	.LASF12
  178 0091 02       		.uleb128 0x2
  179 0092 01       		.byte	0x1
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccRWhpO0.s 			page 8
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccWLN5Ux.s 			page 8
 
 
  180 0093 08       		.byte	0x8
- 181 0094 EB000000 		.4byte	.LASF13
+ 181 0094 9E000000 		.4byte	.LASF13
  182 0098 04       		.uleb128 0x4
- 183 0099 1F010000 		.4byte	.LASF14
+ 183 0099 22010000 		.4byte	.LASF14
  184 009d 02       		.byte	0x2
  185 009e A702     		.2byte	0x2a7
  186 00a0 A4000000 		.4byte	0xa4
@@ -433,25 +433,25 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccRWhpO0.s 			page 1
  189 00a9 02       		.uleb128 0x2
  190 00aa 08       		.byte	0x8
  191 00ab 04       		.byte	0x4
- 192 00ac D2010000 		.4byte	.LASF15
+ 192 00ac D5010000 		.4byte	.LASF15
  193 00b0 02       		.uleb128 0x2
  194 00b1 04       		.byte	0x4
  195 00b2 07       		.byte	0x7
- 196 00b3 E8010000 		.4byte	.LASF16
+ 196 00b3 EB010000 		.4byte	.LASF16
  197 00b7 06       		.uleb128 0x6
  198 00b8 01       		.byte	0x1
  199 00b9 03       		.byte	0x3
  200 00ba 60       		.byte	0x60
  201 00bb CC000000 		.4byte	0xcc
  202 00bf 07       		.uleb128 0x7
- 203 00c0 03010000 		.4byte	.LASF25
+ 203 00c0 06010000 		.4byte	.LASF25
  204 00c4 03       		.byte	0x3
  205 00c5 62       		.byte	0x62
  206 00c6 6B000000 		.4byte	0x6b
  207 00ca 00       		.byte	0
  208 00cb 00       		.byte	0
  209 00cc 08       		.uleb128 0x8
- 210 00cd F0000000 		.4byte	.LASF17
+ 210 00cd A3000000 		.4byte	.LASF17
  211 00d1 03       		.byte	0x3
  212 00d2 63       		.byte	0x63
  213 00d3 B7000000 		.4byte	0xb7
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccRWhpO0.s 			page 1
  234 0106 9C       		.byte	0x9c
  235 0107 15010000 		.4byte	0x115
  236 010b 0A       		.uleb128 0xa
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccRWhpO0.s 			page 9
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccWLN5Ux.s 			page 9
 
 
  237 010c 0E000000 		.4byte	.LVL1
@@ -498,8 +498,8 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccRWhpO0.s 			page 1
  251 012f 03       		.byte	0x3
  252 0130 73       		.byte	0x73
  253 0131 0C       		.uleb128 0xc
- 254 0132 D1000000 		.4byte	.LASF21
- 255 0136 D1000000 		.4byte	.LASF21
+ 254 0132 84000000 		.4byte	.LASF21
+ 255 0136 84000000 		.4byte	.LASF21
  256 013a 03       		.byte	0x3
  257 013b 71       		.byte	0x71
  258 013c 00       		.byte	0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccRWhpO0.s 			page 1
  291 001e 03       		.uleb128 0x3
  292 001f 24       		.uleb128 0x24
  293 0020 00       		.byte	0
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccRWhpO0.s 			page 10
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccWLN5Ux.s 			page 10
 
 
  294 0021 0B       		.uleb128 0xb
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccRWhpO0.s 			page 1
  348 0057 00       		.byte	0
  349 0058 00       		.byte	0
  350 0059 08       		.uleb128 0x8
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccRWhpO0.s 			page 11
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccWLN5Ux.s 			page 11
 
 
  351 005a 16       		.uleb128 0x16
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccRWhpO0.s 			page 1
  405 0093 0B       		.uleb128 0xb
  406 0094 49       		.uleb128 0x49
  407 0095 13       		.uleb128 0x13
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccRWhpO0.s 			page 12
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccWLN5Ux.s 			page 12
 
 
  408 0096 3F       		.uleb128 0x3f
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccRWhpO0.s 			page 1
  458 0000 6C6F6E67 		.ascii	"long long int\000"
  458      206C6F6E 
  458      6720696E 
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccRWhpO0.s 			page 13
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccWLN5Ux.s 			page 13
 
 
  458      7400
@@ -764,95 +764,95 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccRWhpO0.s 			page 1
  477              	.LASF11:
  478 007e 666C6F61 		.ascii	"float\000"
  478      7400
- 479              	.LASF24:
- 480 0084 433A5C55 		.ascii	"C:\\Users\\lucbu\\DocumentStorage\\GitHub\\BLDC_Mot"
- 480      73657273 
- 480      5C6C7563 
- 480      62755C44 
- 480      6F63756D 
- 481 00b2 6F725F42 		.ascii	"or_Board_PY2023\\TestCode.cydsn\000"
- 481      6F617264 
- 481      5F505932 
- 481      3032335C 
- 481      54657374 
- 482              	.LASF21:
- 483 00d1 55415254 		.ascii	"UART_Enable\000"
- 483      5F456E61 
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccRWhpO0.s 			page 14
+ 479              	.LASF21:
+ 480 0084 55415254 		.ascii	"UART_Enable\000"
+ 480      5F456E61 
+ 480      626C6500 
+ 481              	.LASF1:
+ 482 0090 756E7369 		.ascii	"unsigned char\000"
+ 482      676E6564 
+ 482      20636861 
+ 482      7200
+ 483              	.LASF13:
+ 484 009e 63686172 		.ascii	"char\000"
+ 484      00
+ 485              	.LASF17:
+ 486 00a3 55415254 		.ascii	"UART_BACKUP_STRUCT\000"
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccWLN5Ux.s 			page 14
 
 
- 483      626C6500 
- 484              	.LASF1:
- 485 00dd 756E7369 		.ascii	"unsigned char\000"
- 485      676E6564 
- 485      20636861 
- 485      7200
- 486              	.LASF13:
- 487 00eb 63686172 		.ascii	"char\000"
- 487      00
- 488              	.LASF17:
- 489 00f0 55415254 		.ascii	"UART_BACKUP_STRUCT\000"
- 489      5F424143 
- 489      4B55505F 
- 489      53545255 
- 489      435400
+ 486      5F424143 
+ 486      4B55505F 
+ 486      53545255 
+ 486      435400
+ 487              	.LASF24:
+ 488 00b6 433A5C55 		.ascii	"C:\\Users\\lucbu\\OneDrive\\Documents\\GitHub\\BLDC"
+ 488      73657273 
+ 488      5C6C7563 
+ 488      62755C4F 
+ 488      6E654472 
+ 489 00e3 5F4D6F74 		.ascii	"_Motor_Board_PY2023\\TestCode.cydsn\000"
+ 489      6F725F42 
+ 489      6F617264 
+ 489      5F505932 
+ 489      3032335C 
  490              	.LASF25:
- 491 0103 656E6162 		.ascii	"enableState\000"
+ 491 0106 656E6162 		.ascii	"enableState\000"
  491      6C655374 
  491      61746500 
  492              	.LASF12:
- 493 010f 646F7562 		.ascii	"double\000"
+ 493 0112 646F7562 		.ascii	"double\000"
  493      6C6500
  494              	.LASF4:
- 495 0116 6C6F6E67 		.ascii	"long int\000"
+ 495 0119 6C6F6E67 		.ascii	"long int\000"
  495      20696E74 
  495      00
  496              	.LASF14:
- 497 011f 72656733 		.ascii	"reg32\000"
+ 497 0122 72656733 		.ascii	"reg32\000"
  497      3200
  498              	.LASF22:
- 499 0125 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 499 0128 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
  499      43313120 
  499      352E342E 
  499      31203230 
  499      31363036 
- 500 0158 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 500 015b 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
  500      20726576 
  500      6973696F 
  500      6E203233 
  500      37373135 
- 501 018b 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 501 018e 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
  501      66756E63 
  501      74696F6E 
  501      2D736563 
  501      74696F6E 
  502              	.LASF3:
- 503 01b3 73686F72 		.ascii	"short unsigned int\000"
+ 503 01b6 73686F72 		.ascii	"short unsigned int\000"
  503      7420756E 
  503      7369676E 
  503      65642069 
  503      6E7400
  504              	.LASF0:
- 505 01c6 7369676E 		.ascii	"signed char\000"
+ 505 01c9 7369676E 		.ascii	"signed char\000"
  505      65642063 
  505      68617200 
  506              	.LASF15:
- 507 01d2 6C6F6E67 		.ascii	"long double\000"
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccRWhpO0.s 			page 15
+ 507 01d5 6C6F6E67 		.ascii	"long double\000"
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccWLN5Ux.s 			page 15
 
 
  507      20646F75 
  507      626C6500 
  508              	.LASF2:
- 509 01de 73686F72 		.ascii	"short int\000"
+ 509 01e1 73686F72 		.ascii	"short int\000"
  509      7420696E 
  509      7400
  510              	.LASF16:
- 511 01e8 73697A65 		.ascii	"sizetype\000"
+ 511 01eb 73697A65 		.ascii	"sizetype\000"
  511      74797065 
  511      00
  512              	.LASF23:
- 513 01f1 47656E65 		.ascii	"Generated_Source\\PSoC4\\UART_PM.c\000"
+ 513 01f4 47656E65 		.ascii	"Generated_Source\\PSoC4\\UART_PM.c\000"
  513      72617465 
  513      645F536F 
  513      75726365 

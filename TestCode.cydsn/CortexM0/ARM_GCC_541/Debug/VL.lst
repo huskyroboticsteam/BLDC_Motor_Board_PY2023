@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccEGy7Jh.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
   28:Generated_Source\PSoC4/VL.c **** #else
   29:Generated_Source\PSoC4/VL.c ****     #if (CY_PSOC4_4200L)
   30:Generated_Source\PSoC4/VL.c ****         #define VL_SetP4PinDriveMode(shift, mode)  \
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 2
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccEGy7Jh.s 			page 2
 
 
   31:Generated_Source\PSoC4/VL.c ****         do { \
@@ -116,9 +116,9 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
   36 0002 1168     		ldr	r1, [r2]
   37 0004 034B     		ldr	r3, .L2+4
   38 0006 0B40     		ands	r3, r1
-  39 0008 8001     		lsls	r0, r0, #6
+  39 0008 4002     		lsls	r0, r0, #9
   40              	.LVL1:
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 3
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccEGy7Jh.s 			page 3
 
 
   41 000a 1843     		orrs	r0, r3
@@ -130,8 +130,8 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
   46              	.L3:
   47              		.align	2
   48              	.L2:
-  49 0010 08010440 		.word	1074004232
-  50 0014 3FFEFFFF 		.word	-449
+  49 0010 08050440 		.word	1074005256
+  50 0014 FFF1FFFF 		.word	-3585
   51              		.cfi_endproc
   52              	.LFE0:
   53              		.size	VL_SetDriveMode, .-VL_SetDriveMode
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
  108:Generated_Source\PSoC4/VL.c **** * \funcusage
  109:Generated_Source\PSoC4/VL.c **** *  \snippet VL_SUT.c usage_VL_Write
  110:Generated_Source\PSoC4/VL.c **** *******************************************************************************/
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 4
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccEGy7Jh.s 			page 4
 
 
  111:Generated_Source\PSoC4/VL.c **** void VL_Write(uint8 value)
@@ -194,12 +194,12 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
   69 0000 0449     		ldr	r1, .L5
   70 0002 0A68     		ldr	r2, [r1]
   71 0004 D2B2     		uxtb	r2, r2
-  72 0006 0423     		movs	r3, #4
+  72 0006 0823     		movs	r3, #8
   73 0008 9A43     		bics	r2, r3
   74              	.LVL3:
  114:Generated_Source\PSoC4/VL.c ****     drVal = (drVal | ((uint8)(value << VL_SHIFT) & VL_MASK));
   75              		.loc 1 114 0
-  76 000a 8000     		lsls	r0, r0, #2
+  76 000a C000     		lsls	r0, r0, #3
   77              	.LVL4:
   78 000c 1840     		ands	r0, r3
   79 000e 1043     		orrs	r0, r2
@@ -214,7 +214,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
   86              	.L6:
   87              		.align	2
   88              	.L5:
-  89 0014 00010440 		.word	1074004224
+  89 0014 00050440 		.word	1074005248
   90              		.cfi_endproc
   91              	.LFE1:
   92              		.size	VL_Write, .-VL_Write
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
  126:Generated_Source\PSoC4/VL.c **** *
  127:Generated_Source\PSoC4/VL.c **** * The pin's status register returns the current logic level present on the 
  128:Generated_Source\PSoC4/VL.c **** * physical pin.
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 5
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccEGy7Jh.s 			page 5
 
 
  129:Generated_Source\PSoC4/VL.c **** *
@@ -259,7 +259,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
  106              		.loc 1 138 0
  107 0000 024B     		ldr	r3, .L8
  108 0002 1868     		ldr	r0, [r3]
- 109 0004 8008     		lsrs	r0, r0, #2
+ 109 0004 C008     		lsrs	r0, r0, #3
  110 0006 0123     		movs	r3, #1
  111 0008 1840     		ands	r0, r3
  139:Generated_Source\PSoC4/VL.c **** }
@@ -269,7 +269,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
  115              	.L9:
  116              		.align	2
  117              	.L8:
- 118 000c 04010440 		.word	1074004228
+ 118 000c 04050440 		.word	1074005252
  119              		.cfi_endproc
  120              	.LFE2:
  121              		.size	VL_Read, .-VL_Read
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
  154:Generated_Source\PSoC4/VL.c **** * register. For output pins this is a useful function to determine the value 
  155:Generated_Source\PSoC4/VL.c **** * just written to the pin.
  156:Generated_Source\PSoC4/VL.c **** *
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 6
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccEGy7Jh.s 			page 6
 
 
  157:Generated_Source\PSoC4/VL.c **** * \return 
@@ -319,7 +319,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
  135              		.loc 1 166 0
  136 0000 024B     		ldr	r3, .L11
  137 0002 1868     		ldr	r0, [r3]
- 138 0004 8008     		lsrs	r0, r0, #2
+ 138 0004 C008     		lsrs	r0, r0, #3
  139 0006 0123     		movs	r3, #1
  140 0008 1840     		ands	r0, r3
  167:Generated_Source\PSoC4/VL.c **** }
@@ -329,7 +329,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
  144              	.L12:
  145              		.align	2
  146              	.L11:
- 147 000c 00010440 		.word	1074004224
+ 147 000c 00050440 		.word	1074005248
  148              		.cfi_endproc
  149              	.LFE3:
  150              		.size	VL_ReadDataReg, .-VL_ReadDataReg
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
  182:Generated_Source\PSoC4/VL.c **** *  The pin position as listed in the Pins component. You may OR these to be 
  183:Generated_Source\PSoC4/VL.c **** *  able to configure the interrupt mode of multiple pins within a Pins 
  184:Generated_Source\PSoC4/VL.c **** *  component. Or you may use VL_INTR_ALL to configure the
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 7
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccEGy7Jh.s 			page 7
 
 
  185:Generated_Source\PSoC4/VL.c **** *  interrupt mode of all the pins in the Pins component.       
@@ -412,13 +412,13 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
  178              	.L15:
  179 000e C046     		.align	2
  180              	.L14:
- 181 0010 0C010440 		.word	1074004236
+ 181 0010 0C050440 		.word	1074005260
  182              		.cfi_endproc
  183              	.LFE4:
  184              		.size	VL_SetInterruptMode, .-VL_SetInterruptMode
  185              		.section	.text.VL_ClearInterrupt,"ax",%progbits
  186              		.align	2
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 8
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccEGy7Jh.s 			page 8
 
 
  187              		.global	VL_ClearInterrupt
@@ -460,7 +460,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
  198              		.loc 1 238 0
  199 0000 034A     		ldr	r2, .L17
  200 0002 1068     		ldr	r0, [r2]
- 201 0004 0423     		movs	r3, #4
+ 201 0004 0823     		movs	r3, #8
  202 0006 1840     		ands	r0, r3
  203              	.LVL9:
  239:Generated_Source\PSoC4/VL.c **** 	VL_INTSTAT = maskedStatus;
@@ -468,7 +468,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
  205 0008 1060     		str	r0, [r2]
  240:Generated_Source\PSoC4/VL.c ****     return maskedStatus >> VL_SHIFT;
  206              		.loc 1 240 0
- 207 000a 8008     		lsrs	r0, r0, #2
+ 207 000a C008     		lsrs	r0, r0, #3
  208              	.LVL10:
  209 000c C0B2     		uxtb	r0, r0
  241:Generated_Source\PSoC4/VL.c **** }
@@ -478,10 +478,10 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
  213              	.L18:
  214              		.align	2
  215              	.L17:
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 9
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccEGy7Jh.s 			page 9
 
 
- 216 0010 10010440 		.word	1074004240
+ 216 0010 10050440 		.word	1074005264
  217              		.cfi_endproc
  218              	.LFE5:
  219              		.size	VL_ClearInterrupt, .-VL_ClearInterrupt
@@ -495,17 +495,17 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
  227 0006 00000000 		.4byte	.Ldebug_abbrev0
  228 000a 04       		.byte	0x4
  229 000b 01       		.uleb128 0x1
- 230 000c 1A010000 		.4byte	.LASF28
+ 230 000c CD000000 		.4byte	.LASF28
  231 0010 0C       		.byte	0xc
  232 0011 15000000 		.4byte	.LASF29
- 233 0015 76000000 		.4byte	.LASF30
+ 233 0015 9D010000 		.4byte	.LASF30
  234 0019 00000000 		.4byte	.Ldebug_ranges0+0
  235 001d 00000000 		.4byte	0
  236 0021 00000000 		.4byte	.Ldebug_line0
  237 0025 02       		.uleb128 0x2
  238 0026 01       		.byte	0x1
  239 0027 06       		.byte	0x6
- 240 0028 0C020000 		.4byte	.LASF0
+ 240 0028 0F020000 		.4byte	.LASF0
  241 002c 02       		.uleb128 0x2
  242 002d 01       		.byte	0x1
  243 002e 08       		.byte	0x8
@@ -513,7 +513,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
  245 0033 02       		.uleb128 0x2
  246 0034 02       		.byte	0x2
  247 0035 05       		.byte	0x5
- 248 0036 EA010000 		.4byte	.LASF2
+ 248 0036 ED010000 		.4byte	.LASF2
  249 003a 02       		.uleb128 0x2
  250 003b 02       		.byte	0x2
  251 003c 07       		.byte	0x7
@@ -521,7 +521,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
  253 0041 02       		.uleb128 0x2
  254 0042 04       		.byte	0x4
  255 0043 05       		.byte	0x5
- 256 0044 FA010000 		.4byte	.LASF4
+ 256 0044 FD010000 		.4byte	.LASF4
  257 0048 02       		.uleb128 0x2
  258 0049 04       		.byte	0x4
  259 004a 07       		.byte	0x7
@@ -529,34 +529,34 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
  261 004f 02       		.uleb128 0x2
  262 0050 08       		.byte	0x8
  263 0051 05       		.byte	0x5
- 264 0052 BA010000 		.4byte	.LASF6
+ 264 0052 6D010000 		.4byte	.LASF6
  265 0056 02       		.uleb128 0x2
  266 0057 08       		.byte	0x8
  267 0058 07       		.byte	0x7
- 268 0059 FE000000 		.4byte	.LASF7
+ 268 0059 B1000000 		.4byte	.LASF7
  269 005d 03       		.uleb128 0x3
  270 005e 04       		.byte	0x4
  271 005f 05       		.byte	0x5
  272 0060 696E7400 		.ascii	"int\000"
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 10
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccEGy7Jh.s 			page 10
 
 
  273 0064 02       		.uleb128 0x2
  274 0065 04       		.byte	0x4
  275 0066 07       		.byte	0x7
- 276 0067 F1000000 		.4byte	.LASF8
+ 276 0067 A4000000 		.4byte	.LASF8
  277 006b 04       		.uleb128 0x4
- 278 006c F4010000 		.4byte	.LASF9
+ 278 006c F7010000 		.4byte	.LASF9
  279 0070 02       		.byte	0x2
  280 0071 FB01     		.2byte	0x1fb
  281 0073 2C000000 		.4byte	0x2c
  282 0077 04       		.uleb128 0x4
- 283 0078 D2000000 		.4byte	.LASF10
+ 283 0078 85000000 		.4byte	.LASF10
  284 007c 02       		.byte	0x2
  285 007d FC01     		.2byte	0x1fc
  286 007f 3A000000 		.4byte	0x3a
  287 0083 04       		.uleb128 0x4
- 288 0084 E2000000 		.4byte	.LASF11
+ 288 0084 95000000 		.4byte	.LASF11
  289 0088 02       		.byte	0x2
  290 0089 FD01     		.2byte	0x1fd
  291 008b 48000000 		.4byte	0x48
@@ -567,11 +567,11 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
  296 0096 02       		.uleb128 0x2
  297 0097 08       		.byte	0x8
  298 0098 04       		.byte	0x4
- 299 0099 CB000000 		.4byte	.LASF13
+ 299 0099 7E000000 		.4byte	.LASF13
  300 009d 02       		.uleb128 0x2
  301 009e 01       		.byte	0x1
  302 009f 08       		.byte	0x8
- 303 00a0 D5010000 		.4byte	.LASF14
+ 303 00a0 88010000 		.4byte	.LASF14
  304 00a4 04       		.uleb128 0x4
  305 00a5 00000000 		.4byte	.LASF15
  306 00a9 02       		.byte	0x2
@@ -580,7 +580,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
  309 00b0 05       		.uleb128 0x5
  310 00b1 83000000 		.4byte	0x83
  311 00b5 06       		.uleb128 0x6
- 312 00b6 DA010000 		.4byte	.LASF16
+ 312 00b6 8D010000 		.4byte	.LASF16
  313 00ba 01       		.byte	0x1
  314 00bb 48       		.byte	0x48
  315 00bc 00000000 		.4byte	.LFB0
@@ -589,16 +589,16 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
  318 00c5 9C       		.byte	0x9c
  319 00c6 DA000000 		.4byte	0xda
  320 00ca 07       		.uleb128 0x7
- 321 00cb 15010000 		.4byte	.LASF18
+ 321 00cb C8000000 		.4byte	.LASF18
  322 00cf 01       		.byte	0x1
  323 00d0 48       		.byte	0x48
  324 00d1 6B000000 		.4byte	0x6b
  325 00d5 00000000 		.4byte	.LLST0
  326 00d9 00       		.byte	0
  327 00da 06       		.uleb128 0x6
- 328 00db 03020000 		.4byte	.LASF17
+ 328 00db 06020000 		.4byte	.LASF17
  329 00df 01       		.byte	0x1
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 11
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccEGy7Jh.s 			page 11
 
 
  330 00e0 6F       		.byte	0x6f
@@ -621,7 +621,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
  347 0109 42000000 		.4byte	.LLST2
  348 010d 00       		.byte	0
  349 010e 09       		.uleb128 0x9
- 350 010f C3000000 		.4byte	.LASF20
+ 350 010f 76000000 		.4byte	.LASF20
  351 0113 01       		.byte	0x1
  352 0114 88       		.byte	0x88
  353 0115 6B000000 		.4byte	0x6b
@@ -639,7 +639,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
  365 0136 01       		.uleb128 0x1
  366 0137 9C       		.byte	0x9c
  367 0138 06       		.uleb128 0x6
- 368 0139 18020000 		.4byte	.LASF22
+ 368 0139 1B020000 		.4byte	.LASF22
  369 013d 01       		.byte	0x1
  370 013e CF       		.byte	0xcf
  371 013f 00000000 		.4byte	.LFB4
@@ -648,23 +648,23 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
  374 0148 9C       		.byte	0x9c
  375 0149 77010000 		.4byte	0x177
  376 014d 07       		.uleb128 0x7
- 377 014e D9000000 		.4byte	.LASF23
+ 377 014e 8C000000 		.4byte	.LASF23
  378 0152 01       		.byte	0x1
  379 0153 CF       		.byte	0xcf
  380 0154 77000000 		.4byte	0x77
  381 0158 60000000 		.4byte	.LLST3
  382 015c 0A       		.uleb128 0xa
- 383 015d 15010000 		.4byte	.LASF18
+ 383 015d C8000000 		.4byte	.LASF18
  384 0161 01       		.byte	0x1
  385 0162 CF       		.byte	0xcf
  386 0163 77000000 		.4byte	0x77
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 12
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccEGy7Jh.s 			page 12
 
 
  387 0167 01       		.uleb128 0x1
  388 0168 51       		.byte	0x51
  389 0169 0B       		.uleb128 0xb
- 390 016a E9000000 		.4byte	.LASF25
+ 390 016a 9C000000 		.4byte	.LASF25
  391 016e 01       		.byte	0x1
  392 016f D1       		.byte	0xd1
  393 0170 83000000 		.4byte	0x83
@@ -672,7 +672,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
  395 0175 53       		.byte	0x53
  396 0176 00       		.byte	0
  397 0177 0C       		.uleb128 0xc
- 398 0178 A8010000 		.4byte	.LASF26
+ 398 0178 5B010000 		.4byte	.LASF26
  399 017c 01       		.byte	0x1
  400 017d EC       		.byte	0xec
  401 017e 6B000000 		.4byte	0x6b
@@ -681,7 +681,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
  404 018a 01       		.uleb128 0x1
  405 018b 9C       		.byte	0x9c
  406 018c 08       		.uleb128 0x8
- 407 018d C8010000 		.4byte	.LASF27
+ 407 018d 7B010000 		.4byte	.LASF27
  408 0191 01       		.byte	0x1
  409 0192 EE       		.byte	0xee
  410 0193 6B000000 		.4byte	0x6b
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
  441 0019 0B       		.uleb128 0xb
  442 001a 03       		.uleb128 0x3
  443 001b 0E       		.uleb128 0xe
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 13
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccEGy7Jh.s 			page 13
 
 
  444 001c 00       		.byte	0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
  498 0053 01       		.uleb128 0x1
  499 0054 13       		.uleb128 0x13
  500 0055 00       		.byte	0
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 14
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccEGy7Jh.s 			page 14
 
 
  501 0056 00       		.byte	0
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
  555 008d 00       		.byte	0
  556 008e 00       		.byte	0
  557 008f 0A       		.uleb128 0xa
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 15
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccEGy7Jh.s 			page 15
 
 
  558 0090 05       		.uleb128 0x5
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
  612 00c7 00       		.byte	0
  613              		.section	.debug_loc,"",%progbits
  614              	.Ldebug_loc0:
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 16
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccEGy7Jh.s 			page 16
 
 
  615              	.LLST0:
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
  669 0081 08000000 		.4byte	.LVL9
  670 0085 0C000000 		.4byte	.LVL10
  671 0089 0100     		.2byte	0x1
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 17
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccEGy7Jh.s 			page 17
 
 
  672 008b 50       		.byte	0x50
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
  722      01010101 
  723              	.LASF15:
  724 0000 72656733 		.ascii	"reg32\000"
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 18
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccEGy7Jh.s 			page 18
 
 
  724      3200
@@ -1059,117 +1059,117 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 1
  740      7369676E 
  740      65642069 
  740      6E7400
- 741              	.LASF30:
- 742 0076 433A5C55 		.ascii	"C:\\Users\\lucbu\\DocumentStorage\\GitHub\\BLDC_Mot"
- 742      73657273 
- 742      5C6C7563 
- 742      62755C44 
- 742      6F63756D 
- 743 00a4 6F725F42 		.ascii	"or_Board_PY2023\\TestCode.cydsn\000"
- 743      6F617264 
- 743      5F505932 
- 743      3032335C 
- 743      54657374 
- 744              	.LASF20:
- 745 00c3 564C5F52 		.ascii	"VL_Read\000"
- 745      65616400 
- 746              	.LASF13:
- 747 00cb 646F7562 		.ascii	"double\000"
- 747      6C6500
- 748              	.LASF10:
- 749 00d2 75696E74 		.ascii	"uint16\000"
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 19
+ 741              	.LASF20:
+ 742 0076 564C5F52 		.ascii	"VL_Read\000"
+ 742      65616400 
+ 743              	.LASF13:
+ 744 007e 646F7562 		.ascii	"double\000"
+ 744      6C6500
+ 745              	.LASF10:
+ 746 0085 75696E74 		.ascii	"uint16\000"
+ 746      313600
+ 747              	.LASF23:
+ 748 008c 706F7369 		.ascii	"position\000"
+ 748      74696F6E 
+ 748      00
+ 749              	.LASF11:
+ 750 0095 75696E74 		.ascii	"uint32\000"
+ 750      333200
+ 751              	.LASF25:
+ 752 009c 696E7472 		.ascii	"intrCfg\000"
+ 752      43666700 
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccEGy7Jh.s 			page 19
 
 
- 749      313600
- 750              	.LASF23:
- 751 00d9 706F7369 		.ascii	"position\000"
- 751      74696F6E 
- 751      00
- 752              	.LASF11:
- 753 00e2 75696E74 		.ascii	"uint32\000"
- 753      333200
- 754              	.LASF25:
- 755 00e9 696E7472 		.ascii	"intrCfg\000"
- 755      43666700 
- 756              	.LASF8:
- 757 00f1 756E7369 		.ascii	"unsigned int\000"
- 757      676E6564 
- 757      20696E74 
- 757      00
- 758              	.LASF7:
- 759 00fe 6C6F6E67 		.ascii	"long long unsigned int\000"
- 759      206C6F6E 
- 759      6720756E 
- 759      7369676E 
- 759      65642069 
- 760              	.LASF18:
- 761 0115 6D6F6465 		.ascii	"mode\000"
- 761      00
- 762              	.LASF28:
- 763 011a 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 763      43313120 
- 763      352E342E 
- 763      31203230 
- 763      31363036 
- 764 014d 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 764      20726576 
- 764      6973696F 
- 764      6E203233 
- 764      37373135 
- 765 0180 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 765      66756E63 
- 765      74696F6E 
- 765      2D736563 
- 765      74696F6E 
- 766              	.LASF26:
- 767 01a8 564C5F43 		.ascii	"VL_ClearInterrupt\000"
- 767      6C656172 
- 767      496E7465 
- 767      72727570 
- 767      7400
- 768              	.LASF6:
- 769 01ba 6C6F6E67 		.ascii	"long long int\000"
- 769      206C6F6E 
- 769      6720696E 
- 769      7400
- 770              	.LASF27:
- 771 01c8 6D61736B 		.ascii	"maskedStatus\000"
- 771      65645374 
- 771      61747573 
- 771      00
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\cc440ray.s 			page 20
+ 753              	.LASF8:
+ 754 00a4 756E7369 		.ascii	"unsigned int\000"
+ 754      676E6564 
+ 754      20696E74 
+ 754      00
+ 755              	.LASF7:
+ 756 00b1 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 756      206C6F6E 
+ 756      6720756E 
+ 756      7369676E 
+ 756      65642069 
+ 757              	.LASF18:
+ 758 00c8 6D6F6465 		.ascii	"mode\000"
+ 758      00
+ 759              	.LASF28:
+ 760 00cd 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 760      43313120 
+ 760      352E342E 
+ 760      31203230 
+ 760      31363036 
+ 761 0100 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 761      20726576 
+ 761      6973696F 
+ 761      6E203233 
+ 761      37373135 
+ 762 0133 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 762      66756E63 
+ 762      74696F6E 
+ 762      2D736563 
+ 762      74696F6E 
+ 763              	.LASF26:
+ 764 015b 564C5F43 		.ascii	"VL_ClearInterrupt\000"
+ 764      6C656172 
+ 764      496E7465 
+ 764      72727570 
+ 764      7400
+ 765              	.LASF6:
+ 766 016d 6C6F6E67 		.ascii	"long long int\000"
+ 766      206C6F6E 
+ 766      6720696E 
+ 766      7400
+ 767              	.LASF27:
+ 768 017b 6D61736B 		.ascii	"maskedStatus\000"
+ 768      65645374 
+ 768      61747573 
+ 768      00
+ 769              	.LASF14:
+ 770 0188 63686172 		.ascii	"char\000"
+ 770      00
+ 771              	.LASF16:
+ 772 018d 564C5F53 		.ascii	"VL_SetDriveMode\000"
+ 772      65744472 
+ 772      6976654D 
+ 772      6F646500 
+ 773              	.LASF30:
+ 774 019d 433A5C55 		.ascii	"C:\\Users\\lucbu\\OneDrive\\Documents\\GitHub\\BLDC"
+ 774      73657273 
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccEGy7Jh.s 			page 20
 
 
- 772              	.LASF14:
- 773 01d5 63686172 		.ascii	"char\000"
- 773      00
- 774              	.LASF16:
- 775 01da 564C5F53 		.ascii	"VL_SetDriveMode\000"
- 775      65744472 
- 775      6976654D 
- 775      6F646500 
+ 774      5C6C7563 
+ 774      62755C4F 
+ 774      6E654472 
+ 775 01ca 5F4D6F74 		.ascii	"_Motor_Board_PY2023\\TestCode.cydsn\000"
+ 775      6F725F42 
+ 775      6F617264 
+ 775      5F505932 
+ 775      3032335C 
  776              	.LASF2:
- 777 01ea 73686F72 		.ascii	"short int\000"
+ 777 01ed 73686F72 		.ascii	"short int\000"
  777      7420696E 
  777      7400
  778              	.LASF9:
- 779 01f4 75696E74 		.ascii	"uint8\000"
+ 779 01f7 75696E74 		.ascii	"uint8\000"
  779      3800
  780              	.LASF4:
- 781 01fa 6C6F6E67 		.ascii	"long int\000"
+ 781 01fd 6C6F6E67 		.ascii	"long int\000"
  781      20696E74 
  781      00
  782              	.LASF17:
- 783 0203 564C5F57 		.ascii	"VL_Write\000"
+ 783 0206 564C5F57 		.ascii	"VL_Write\000"
  783      72697465 
  783      00
  784              	.LASF0:
- 785 020c 7369676E 		.ascii	"signed char\000"
+ 785 020f 7369676E 		.ascii	"signed char\000"
  785      65642063 
  785      68617200 
  786              	.LASF22:
- 787 0218 564C5F53 		.ascii	"VL_SetInterruptMode\000"
+ 787 021b 564C5F53 		.ascii	"VL_SetInterruptMode\000"
  787      6574496E 
  787      74657272 
  787      7570744D 

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccxgCmXT.s 			page 1
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccZvd2sY.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccxgCmXT.s 			page 1
   39              		.thumb
   40              		.syntax unified
   41              	.L2:
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccxgCmXT.s 			page 2
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccZvd2sY.s 			page 2
 
 
   42 0002 FEE7     		b	.L2
@@ -74,37 +74,37 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccxgCmXT.s 			page 1
   52 0006 00000000 		.4byte	.Ldebug_abbrev0
   53 000a 04       		.byte	0x4
   54 000b 01       		.uleb128 0x1
-  55 000c C0000000 		.4byte	.LASF14
+  55 000c C3000000 		.4byte	.LASF14
   56 0010 0C       		.byte	0xc
-  57 0011 1B000000 		.4byte	.LASF15
-  58 0015 50000000 		.4byte	.LASF16
+  57 0011 6B000000 		.4byte	.LASF15
+  58 0015 0E000000 		.4byte	.LASF16
   59 0019 00000000 		.4byte	.Ldebug_ranges0+0
   60 001d 00000000 		.4byte	0
   61 0021 00000000 		.4byte	.Ldebug_line0
   62 0025 02       		.uleb128 0x2
   63 0026 01       		.byte	0x1
   64 0027 06       		.byte	0x6
-  65 0028 61010000 		.4byte	.LASF0
+  65 0028 64010000 		.4byte	.LASF0
   66 002c 02       		.uleb128 0x2
   67 002d 01       		.byte	0x1
   68 002e 08       		.byte	0x8
-  69 002f 9D000000 		.4byte	.LASF1
+  69 002f A0000000 		.4byte	.LASF1
   70 0033 02       		.uleb128 0x2
   71 0034 02       		.byte	0x2
   72 0035 05       		.byte	0x5
-  73 0036 7F010000 		.4byte	.LASF2
+  73 0036 82010000 		.4byte	.LASF2
   74 003a 02       		.uleb128 0x2
   75 003b 02       		.byte	0x2
   76 003c 07       		.byte	0x7
-  77 003d 4E010000 		.4byte	.LASF3
+  77 003d 51010000 		.4byte	.LASF3
   78 0041 02       		.uleb128 0x2
   79 0042 04       		.byte	0x4
   80 0043 05       		.byte	0x5
-  81 0044 B0000000 		.4byte	.LASF4
+  81 0044 B3000000 		.4byte	.LASF4
   82 0048 02       		.uleb128 0x2
   83 0049 04       		.byte	0x4
   84 004a 07       		.byte	0x7
-  85 004b 27000000 		.4byte	.LASF5
+  85 004b 77000000 		.4byte	.LASF5
   86 004f 02       		.uleb128 0x2
   87 0050 08       		.byte	0x8
   88 0051 05       		.byte	0x5
@@ -112,40 +112,40 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccxgCmXT.s 			page 1
   90 0056 02       		.uleb128 0x2
   91 0057 08       		.byte	0x8
   92 0058 07       		.byte	0x7
-  93 0059 39000000 		.4byte	.LASF7
+  93 0059 89000000 		.4byte	.LASF7
   94 005d 03       		.uleb128 0x3
   95 005e 04       		.byte	0x4
   96 005f 05       		.byte	0x5
   97 0060 696E7400 		.ascii	"int\000"
   98 0064 02       		.uleb128 0x2
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccxgCmXT.s 			page 3
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccZvd2sY.s 			page 3
 
 
   99 0065 04       		.byte	0x4
  100 0066 07       		.byte	0x7
- 101 0067 0E000000 		.4byte	.LASF8
+ 101 0067 5E000000 		.4byte	.LASF8
  102 006b 02       		.uleb128 0x2
  103 006c 04       		.byte	0x4
  104 006d 04       		.byte	0x4
- 105 006e 79010000 		.4byte	.LASF9
+ 105 006e 7C010000 		.4byte	.LASF9
  106 0072 02       		.uleb128 0x2
  107 0073 08       		.byte	0x8
  108 0074 04       		.byte	0x4
- 109 0075 B9000000 		.4byte	.LASF10
+ 109 0075 BC000000 		.4byte	.LASF10
  110 0079 02       		.uleb128 0x2
  111 007a 01       		.byte	0x1
  112 007b 08       		.byte	0x8
- 113 007c AB000000 		.4byte	.LASF11
+ 113 007c AE000000 		.4byte	.LASF11
  114 0080 02       		.uleb128 0x2
  115 0081 08       		.byte	0x8
  116 0082 04       		.byte	0x4
- 117 0083 6D010000 		.4byte	.LASF12
+ 117 0083 70010000 		.4byte	.LASF12
  118 0087 02       		.uleb128 0x2
  119 0088 04       		.byte	0x4
  120 0089 07       		.byte	0x7
- 121 008a 89010000 		.4byte	.LASF13
+ 121 008a 8C010000 		.4byte	.LASF13
  122 008e 04       		.uleb128 0x4
- 123 008f 22000000 		.4byte	.LASF17
+ 123 008f 72000000 		.4byte	.LASF17
  124 0093 01       		.byte	0x1
  125 0094 0E       		.byte	0xe
  126 0095 5D000000 		.4byte	0x5d
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccxgCmXT.s 			page 1
  153 0013 02       		.uleb128 0x2
  154 0014 24       		.uleb128 0x24
  155 0015 00       		.byte	0
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccxgCmXT.s 			page 4
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccZvd2sY.s 			page 4
 
 
  156 0016 0B       		.uleb128 0xb
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccxgCmXT.s 			page 1
  210 000e 0000     		.2byte	0
  211 0010 00000000 		.4byte	.LFB34
  212 0014 04000000 		.4byte	.LFE34-.LFB34
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccxgCmXT.s 			page 5
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccZvd2sY.s 			page 5
 
 
  213 0018 00000000 		.4byte	0
@@ -261,97 +261,97 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccxgCmXT.s 			page 1
  225      206C6F6E 
  225      6720696E 
  225      7400
- 226              	.LASF8:
- 227 000e 756E7369 		.ascii	"unsigned int\000"
- 227      676E6564 
- 227      20696E74 
- 227      00
- 228              	.LASF15:
- 229 001b 6D61696E 		.ascii	"main.c\000"
- 229      2E6300
- 230              	.LASF17:
- 231 0022 6D61696E 		.ascii	"main\000"
- 231      00
- 232              	.LASF5:
- 233 0027 6C6F6E67 		.ascii	"long unsigned int\000"
- 233      20756E73 
- 233      69676E65 
- 233      6420696E 
- 233      7400
- 234              	.LASF7:
- 235 0039 6C6F6E67 		.ascii	"long long unsigned int\000"
- 235      206C6F6E 
- 235      6720756E 
- 235      7369676E 
- 235      65642069 
- 236              	.LASF16:
- 237 0050 433A5C55 		.ascii	"C:\\Users\\lucbu\\DocumentStorage\\GitHub\\BLDC_Mot"
- 237      73657273 
- 237      5C6C7563 
- 237      62755C44 
- 237      6F63756D 
- 238 007e 6F725F42 		.ascii	"or_Board_PY2023\\TestCode.cydsn\000"
- 238      6F617264 
- 238      5F505932 
- 238      3032335C 
- 238      54657374 
+ 226              	.LASF16:
+ 227 000e 433A5C55 		.ascii	"C:\\Users\\lucbu\\OneDrive\\Documents\\GitHub\\BLDC"
+ 227      73657273 
+ 227      5C6C7563 
+ 227      62755C4F 
+ 227      6E654472 
+ 228 003b 5F4D6F74 		.ascii	"_Motor_Board_PY2023\\TestCode.cydsn\000"
+ 228      6F725F42 
+ 228      6F617264 
+ 228      5F505932 
+ 228      3032335C 
+ 229              	.LASF8:
+ 230 005e 756E7369 		.ascii	"unsigned int\000"
+ 230      676E6564 
+ 230      20696E74 
+ 230      00
+ 231              	.LASF15:
+ 232 006b 6D61696E 		.ascii	"main.c\000"
+ 232      2E6300
+ 233              	.LASF17:
+ 234 0072 6D61696E 		.ascii	"main\000"
+ 234      00
+ 235              	.LASF5:
+ 236 0077 6C6F6E67 		.ascii	"long unsigned int\000"
+ 236      20756E73 
+ 236      69676E65 
+ 236      6420696E 
+ 236      7400
+ 237              	.LASF7:
+ 238 0089 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 238      206C6F6E 
+ 238      6720756E 
+ 238      7369676E 
+ 238      65642069 
  239              	.LASF1:
- 240 009d 756E7369 		.ascii	"unsigned char\000"
+ 240 00a0 756E7369 		.ascii	"unsigned char\000"
  240      676E6564 
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccxgCmXT.s 			page 6
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccZvd2sY.s 			page 6
 
 
  240      20636861 
  240      7200
  241              	.LASF11:
- 242 00ab 63686172 		.ascii	"char\000"
+ 242 00ae 63686172 		.ascii	"char\000"
  242      00
  243              	.LASF4:
- 244 00b0 6C6F6E67 		.ascii	"long int\000"
+ 244 00b3 6C6F6E67 		.ascii	"long int\000"
  244      20696E74 
  244      00
  245              	.LASF10:
- 246 00b9 646F7562 		.ascii	"double\000"
+ 246 00bc 646F7562 		.ascii	"double\000"
  246      6C6500
  247              	.LASF14:
- 248 00c0 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 248 00c3 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
  248      43313120 
  248      352E342E 
  248      31203230 
  248      31363036 
- 249 00f3 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 249 00f6 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
  249      20726576 
  249      6973696F 
  249      6E203233 
  249      37373135 
- 250 0126 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 250 0129 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
  250      66756E63 
  250      74696F6E 
  250      2D736563 
  250      74696F6E 
  251              	.LASF3:
- 252 014e 73686F72 		.ascii	"short unsigned int\000"
+ 252 0151 73686F72 		.ascii	"short unsigned int\000"
  252      7420756E 
  252      7369676E 
  252      65642069 
  252      6E7400
  253              	.LASF0:
- 254 0161 7369676E 		.ascii	"signed char\000"
+ 254 0164 7369676E 		.ascii	"signed char\000"
  254      65642063 
  254      68617200 
  255              	.LASF12:
- 256 016d 6C6F6E67 		.ascii	"long double\000"
+ 256 0170 6C6F6E67 		.ascii	"long double\000"
  256      20646F75 
  256      626C6500 
  257              	.LASF9:
- 258 0179 666C6F61 		.ascii	"float\000"
+ 258 017c 666C6F61 		.ascii	"float\000"
  258      7400
  259              	.LASF2:
- 260 017f 73686F72 		.ascii	"short int\000"
+ 260 0182 73686F72 		.ascii	"short int\000"
  260      7420696E 
  260      7400
  261              	.LASF13:
- 262 0189 73697A65 		.ascii	"sizetype\000"
+ 262 018c 73697A65 		.ascii	"sizetype\000"
  262      74797065 
  262      00
  263              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
