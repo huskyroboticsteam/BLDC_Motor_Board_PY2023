@@ -1,8 +1,170 @@
---------------- Build Started: 02/03/2024 12:44:37 Project: TestCode, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
-cydsfit.exe -.appdatapath "C:\Users\M4rz4n\AppData\Local\Cypress Semiconductor\PSoC Creator\4.4" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p "C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\TestCode.cyprj" -d CY8C4248AZI-L485 -s "C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\Generated_Source\PSoC4" -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
-Elaborating Design...
-ADD: sdb.M0050: error: Terminal "count" requires connection when it is visible.
- * C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\TopDesign\TopDesign.cysch (Signal: Net_456)
- * C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\TopDesign\TopDesign.cysch (Shape_113.27)
-Error: fit.M0050: The fitter aborted due to errors, please address all errors and rebuild. (App=cydsfit)
---------------- Build Failed: 02/03/2024 12:44:44 ---------------
+--------------- Build Started: 02/07/2024 14:21:16 Project: TestCode, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+The code generation step is up to date.
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM0\ARM_GCC_541\Debug\main.o
+main.c: In function 'main':
+main.c:108:16: warning: implicit declaration of function 'GetState' [-Wimplicit-function-declaration]
+         switch(GetState()) {
+                ^
+main.c:109:18: error: 'UNINIT' undeclared (first use in this function)
+             case(UNINIT):
+                  ^
+main.c:109:18: note: each undeclared identifier is reported only once for each function it appears in
+main.c:111:17: warning: implicit declaration of function 'SetStateTo' [-Wimplicit-function-declaration]
+                 SetStateTo(CHECK_CAN);
+                 ^
+main.c:111:28: error: 'CHECK_CAN' undeclared (first use in this function)
+                 SetStateTo(CHECK_CAN);
+                            ^
+main.c:113:18: error: 'SET_PWM' undeclared (first use in this function)
+             case(SET_PWM):
+                  ^
+main.c:114:17: warning: implicit declaration of function 'set_PWM' [-Wimplicit-function-declaration]
+                 set_PWM(nextPWM, ignoreLimSw, Status_Reg_Switches_Read());
+                 ^
+main.c:114:25: error: 'nextPWM' undeclared (first use in this function)
+                 set_PWM(nextPWM, ignoreLimSw, Status_Reg_Switches_Read());
+                         ^
+main.c:114:47: warning: implicit declaration of function 'Status_Reg_Switches_Read' [-Wimplicit-function-declaration]
+                 set_PWM(nextPWM, ignoreLimSw, Status_Reg_Switches_Read());
+                                               ^
+main.c:117:18: error: 'CALC_PID' undeclared (first use in this function)
+             case(CALC_PID):
+                  ^
+main.c:118:17: warning: implicit declaration of function 'SetPosition' [-Wimplicit-function-declaration]
+                 SetPosition(millidegreeTarget);   
+                 ^
+main.c:118:29: error: 'millidegreeTarget' undeclared (first use in this function)
+                 SetPosition(millidegreeTarget);   
+                             ^
+main.c:121:18: error: 'QUEUE_ERROR' undeclared (first use in this function)
+             case(QUEUE_ERROR):
+                  ^
+main.c:125:17: warning: implicit declaration of function 'NextStateFromCAN' [-Wimplicit-function-declaration]
+                 NextStateFromCAN(&can_recieve, &can_send);
+                 ^
+main.c:133:17: warning: implicit declaration of function 'GotoUninitState' [-Wimplicit-function-declaration]
+                 GotoUninitState();
+                 ^
+main.c:137:13: warning: implicit declaration of function 'UART_SpiUartGetRxBufferSize' [-Wimplicit-function-declaration]
+         if (UART_SpiUartGetRxBufferSize()) {
+             ^
+main.c:138:24: warning: implicit declaration of function 'UART_UartGetByte' [-Wimplicit-function-declaration]
+             DebugPrint(UART_UartGetByte());
+                        ^
+main.c: In function 'Initialize':
+main.c:147:5: error: 'CyGlobalIntEnable' undeclared (first use in this function)
+     CyGlobalIntEnable; /* Enable global interrupts. LED arrays need this first */
+     ^
+main.c:149:5: warning: implicit declaration of function 'Status_Reg_Switches_InterruptEnable' [-Wimplicit-function-declaration]
+     Status_Reg_Switches_InterruptEnable();
+     ^
+main.c:151:15: warning: implicit declaration of function 'Can_addr_Read' [-Wimplicit-function-declaration]
+     address = Can_addr_Read();
+               ^
+main.c:160:5: warning: implicit declaration of function 'ERROR_LED_Write' [-Wimplicit-function-declaration]
+     ERROR_LED_Write(~(address >> 3 & 1));
+     ^
+main.c:166:5: warning: implicit declaration of function 'CAN_LED_Write' [-Wimplicit-function-declaration]
+     CAN_LED_Write(~address & 1);
+     ^
+main.c:172:5: warning: implicit declaration of function 'TMC6100_SPI_Start' [-Wimplicit-function-declaration]
+     TMC6100_SPI_Start();
+     ^
+main.c:173:5: warning: implicit declaration of function 'Current_Sensor_I2C_Start' [-Wimplicit-function-declaration]
+     Current_Sensor_I2C_Start();
+     ^
+main.c:174:5: warning: implicit declaration of function 'UART_Start' [-Wimplicit-function-declaration]
+     UART_Start();
+     ^
+main.c:178:5: warning: implicit declaration of function 'isr_Limit_1_StartEx' [-Wimplicit-function-declaration]
+     isr_Limit_1_StartEx(Pin_Limit_Handler);
+     ^
+main.c:178:25: error: 'Pin_Limit_Handler' undeclared (first use in this function)
+     isr_Limit_1_StartEx(Pin_Limit_Handler);
+                         ^
+main.c:179:5: warning: implicit declaration of function 'isr_period_PWM_StartEx' [-Wimplicit-function-declaration]
+     isr_period_PWM_StartEx(Period_Reset_Handler);
+     ^
+main.c:179:28: error: 'Period_Reset_Handler' undeclared (first use in this function)
+     isr_period_PWM_StartEx(Period_Reset_Handler);
+                            ^
+main.c: In function 'DebugPrint':
+main.c:185:13: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+             sprintf(txData, "Encoder Value: %li  \r\n", QuadDec_GetCounter());
+             ^
+main.c:185:13: warning: incompatible implicit declaration of built-in function 'sprintf'
+main.c:185:13: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+main.c:185:57: warning: implicit declaration of function 'QuadDec_GetCounter' [-Wimplicit-function-declaration]
+             sprintf(txData, "Encoder Value: %li  \r\n", QuadDec_GetCounter());
+                                                         ^
+main.c:185:29: warning: format '%li' expects argument of type 'long int', but argument 3 has type 'int' [-Wformat=]
+             sprintf(txData, "Encoder Value: %li  \r\n", QuadDec_GetCounter());
+                             ^
+main.c:188:55: warning: implicit declaration of function 'GetMode' [-Wimplicit-function-declaration]
+             sprintf(txData, "Mode: %x State:%x \r\n", GetMode(), GetState());
+                                                       ^
+main.c:192:13: warning: implicit declaration of function 'GetkPosition' [-Wimplicit-function-declaration]
+             GetkPosition(), GetkIntegral(), GetkDerivative(), (int) GetConversion(), PIDconstsSet());
+             ^
+main.c:192:29: warning: implicit declaration of function 'GetkIntegral' [-Wimplicit-function-declaration]
+             GetkPosition(), GetkIntegral(), GetkDerivative(), (int) GetConversion(), PIDconstsSet());
+                             ^
+main.c:192:45: warning: implicit declaration of function 'GetkDerivative' [-Wimplicit-function-declaration]
+             GetkPosition(), GetkIntegral(), GetkDerivative(), (int) GetConversion(), PIDconstsSet());
+                                             ^
+main.c:192:69: warning: implicit declaration of function 'GetConversion' [-Wimplicit-function-declaration]
+             GetkPosition(), GetkIntegral(), GetkDerivative(), (int) GetConversion(), PIDconstsSet());
+                                                                     ^
+The command 'arm-none-eabi-gcc.exe' failed with exit code '1'.
+main.c:192:86: warning: implicit declaration of function 'PIDconstsSet' [-Wimplicit-function-declaration]
+             GetkPosition(), GetkIntegral(), GetkDerivative(), (int) GetConversion(), PIDconstsSet());
+                                                                                      ^
+main.c:195:57: warning: implicit declaration of function 'GetPositionmDeg' [-Wimplicit-function-declaration]
+             sprintf(txData, "Position (mDeg): %i \r\n", GetPositionmDeg());
+                                                         ^
+main.c:199:29: warning: implicit declaration of function 'GetPotVal' [-Wimplicit-function-declaration]
+                             GetPotVal(), GetTickMin(), GetTickMax(),
+                             ^
+main.c:199:42: warning: implicit declaration of function 'GetTickMin' [-Wimplicit-function-declaration]
+                             GetPotVal(), GetTickMin(), GetTickMax(),
+                                          ^
+main.c:199:56: warning: implicit declaration of function 'GetTickMax' [-Wimplicit-function-declaration]
+                             GetPotVal(), GetTickMin(), GetTickMax(),
+                                                        ^
+main.c:200:29: warning: implicit declaration of function 'GetmDegMin' [-Wimplicit-function-declaration]
+                             GetmDegMin(), GetmDegMax(), GetUsingPot());
+                             ^
+main.c:200:43: warning: implicit declaration of function 'GetmDegMax' [-Wimplicit-function-declaration]
+                             GetmDegMin(), GetmDegMax(), GetUsingPot());
+                                           ^
+main.c:200:57: warning: implicit declaration of function 'GetUsingPot' [-Wimplicit-function-declaration]
+                             GetmDegMin(), GetmDegMax(), GetUsingPot());
+                                                         ^
+main.c:206:5: warning: implicit declaration of function 'UART_UartPutString' [-Wimplicit-function-declaration]
+     UART_UartPutString(txData);
+     ^
+main.c: In function 'PrintCanPacket':
+main.c:211:9: warning: incompatible implicit declaration of built-in function 'sprintf'
+         sprintf(txData,"Byte%d %x   ", i+1, receivedPacket.data[i]);
+         ^
+main.c:211:9: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+main.c:215:5: warning: incompatible implicit declaration of built-in function 'sprintf'
+     sprintf(txData,"ID:%x %x %x\r\n",receivedPacket.id >> 10, 
+     ^
+main.c:215:5: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+main.c: In function 'ReadCAN':
+main.c:226:9: error: 'CAN_time_LED' undeclared (first use in this function)
+         CAN_time_LED = 0;
+         ^
+main.c:229:12: error: 'NO_NEW_CAN_PACKET' undeclared (first use in this function)
+     return NO_NEW_CAN_PACKET; //Means no Packet
+            ^
+main.c: In function 'DisplayErrorCode':
+main.c:241:5: error: 'ERRORTimeLED' undeclared (first use in this function)
+     ERRORTimeLED = 0;
+     ^
+main.c: In function 'ReadCAN':
+main.c:230:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+--------------- Build Failed: 02/07/2024 14:21:16 ---------------

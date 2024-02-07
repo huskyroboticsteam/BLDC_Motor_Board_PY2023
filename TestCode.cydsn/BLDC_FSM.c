@@ -14,6 +14,7 @@ uint8_t hall2State;
 uint8_t hall3State;
 
 // FSM changing through states
+// "--state = X" means "don't-care"
 void readHallState() {
     hall1State = HALL1_Read();
     hall2State = HALL2_Read();

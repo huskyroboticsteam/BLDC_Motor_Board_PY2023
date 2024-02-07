@@ -15,15 +15,14 @@
 #include "BLDC_Drive.h"
 #include "BLDC_CAN.h"
 #include "BLDC_FSM.h"
-#include "PositionPID.h"
 #include <math.h>
-#include "Motor_Unit_CAN.h"
+
 
 
 //LED
-uint8_t CAN_LED = 0;
-uint8_t DEBUG_LED = 0;
-uint8_t ERROR_LED = 0;
+uint8_t Can_LED = 0;
+uint8_t Debug_LED = 0;
+uint8_t Error_LED = 0;
 
 // int32_t millidegreeTarget = 0;
 
@@ -35,7 +34,7 @@ char txData[TX_DATA_SIZE];
 // extern uint8 invalidate;
 uint8_t ignoreLimSw = 0;
 // uint8_t encoderTimeOut = 0;
-unit8_t hallSensorsTimeOut = 0;
+uint8_t hallSensorsTimeOut = 0;
 
 // Motor Unit Variables
 //uint8_t bound_set1;
@@ -44,19 +43,13 @@ unit8_t hallSensorsTimeOut = 0;
 //int32_t enc_lim_2;
 
 //Status and Data Structs
-volatile uint8 drive = 0;
+volatile uint8_t drive = 0;
 uint8_t CAN_check_delay = 0;
 CANPacket can_recieve;
 CANPacket can_send;
 
-uint8 address = 0;
+uint8_t address = 0;
 
-CY_ISR(Period_Reset_Handler) {
-    int timer = Timer_PWM_ReadStatusRegister();
-    invalidate++;
-    CAN_time_LED++;
-    CAN_check_delay ++;
-    ERROR_LED++;
 /*
     if(invalidate >= 20){
         set_PWM(0, 0, 0);   
@@ -105,7 +98,7 @@ CY_ISR(Pin_Limit_Handler){
 */
 
     
-/*
+
 int main(void)
 { 
     Initialize();
@@ -147,7 +140,7 @@ int main(void)
     }
 }
 
-*/
+
 
 
 void Initialize(void) {
@@ -173,12 +166,14 @@ void Initialize(void) {
     CAN_LED_Write(~address & 1);
     #endif
     
+    
+    // Initialize protocols
     InitCAN(0x4, (int)address);
-    Timer_PWM_Start();
-    QuadDec_Start();
-    PWM_Motor_Start();  
-    ADC_Pot_Start();
-    GetPotVal();
+    TMC6100_SPI_Start();
+    Current_Sensor_I2C_Start();
+    UART_Start();
+    
+    
 
     isr_Limit_1_StartEx(Pin_Limit_Handler);
     isr_period_PWM_StartEx(Period_Reset_Handler);
@@ -228,7 +223,7 @@ uint16_t ReadCAN(CANPacket *receivedPacket){
         #ifdef CAN_LED
         CAN_LED_Write(LED_ON);
         #endif
-        CAN_time_LED = 0;
+        Can_LED = 0;
         return receivedPacket->data[0];
     }
     return NO_NEW_CAN_PACKET; //Means no Packet
@@ -243,7 +238,7 @@ void DisplayErrorCode(uint8_t code) {
     Debug_1_Write(LED_OFF);
     #endif
     
-    ERRORTimeLED = 0;
+    Error_LED = 0;
     ERROR_LED_Write(LED_ON);
     
     #ifdef PRINT_MOTOR_ERROR
