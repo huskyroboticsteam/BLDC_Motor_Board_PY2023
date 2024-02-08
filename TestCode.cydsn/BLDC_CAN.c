@@ -11,10 +11,9 @@
 */
 
 #include "main.h"
-#include "Motor_Unit_CAN.h"
-#include "Motor_Unit_FSM.h"
+#include "BLDC_CAN.h"
+#include "BLDC_FSM.h"
 #include "BLDC_Drive.h"
-#include "PositionPID.h"
 
 extern int16_t nextPWM;
 extern int32_t millidegreeTarget;

@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="BLDCWorkspace\TestCode\Header Files\BLDC_FSM.h">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="BLDCWorkspace\TestCode\Source Files\BLDC_FSM.c">
 <ExpandedNodeIds>
 <v>BLDCWorkspace</v>
 <v>BLDCWorkspace\TestCode</v>
@@ -47,17 +47,24 @@
 <v>BLDCWorkspace\TestCode\Header Files\BLDC_Debug.h</v>
 <v>BLDCWorkspace\TestCode\Header Files\BLDC_Drive.h</v>
 <v>BLDCWorkspace\TestCode\Header Files\BLDC_FSM.h</v>
+<v>BLDCWorkspace\TestCode\Header Files\BLDC_pid.h</v>
 <v>BLDCWorkspace\TestCode\Header Files\cyapicallbacks.h</v>
 <v>BLDCWorkspace\TestCode\Header Files\main.h</v>
 <v>BLDCWorkspace\TestCode\Source Files</v>
 <v>BLDCWorkspace\TestCode\Source Files\BLDC_CAN.c</v>
 <v>BLDCWorkspace\TestCode\Source Files\BLDC_Drive.c</v>
 <v>BLDCWorkspace\TestCode\Source Files\BLDC_FSM.c</v>
+<v>BLDCWorkspace\TestCode\Source Files\BLDC_pid.c</v>
 <v>BLDCWorkspace\TestCode\Source Files\main.c</v>
 <v>BLDCWorkspace\TestCode\Generated_Source</v>
 <v>BLDCWorkspace\TestCode\Generated_Source\PSoC4</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
+<v>BLDCWorkspace\TestCode\TestCode.cydwr\DMA</v>
+<v>BLDCWorkspace\TestCode\TestCode.cydwr\Clocks</v>
+<v>BLDCWorkspace\TestCode\TestCode.cydwr\Interrupts</v>
+<v>BLDCWorkspace\TestCode\TestCode.cydwr\System</v>
+<v>BLDCWorkspace\TestCode\TestCode.cydwr\Directives</v>
 <v>BLDCWorkspace\TestCode\TestCode.cydwr\Flash Security</v>
 <v>BLDCWorkspace\TestCode\CAN Library</v>
 <v>BLDCWorkspace\TestCode\CAN Library\CANCommon.c</v>
@@ -79,24 +86,19 @@
 <v>BLDCWorkspace\TestCode\Header Files\BLDC_Debug.h</v>
 <v>BLDCWorkspace\TestCode\Header Files\BLDC_Drive.h</v>
 <v>BLDCWorkspace\TestCode\Header Files\BLDC_FSM.h</v>
+<v>BLDCWorkspace\TestCode\Header Files\BLDC_pid.h</v>
 <v>BLDCWorkspace\TestCode\Header Files\cyapicallbacks.h</v>
 <v>BLDCWorkspace\TestCode\Header Files\main.h</v>
 <v>BLDCWorkspace\TestCode\Source Files</v>
 <v>BLDCWorkspace\TestCode\Source Files\BLDC_CAN.c</v>
 <v>BLDCWorkspace\TestCode\Source Files\BLDC_Drive.c</v>
 <v>BLDCWorkspace\TestCode\Source Files\BLDC_FSM.c</v>
+<v>BLDCWorkspace\TestCode\Source Files\BLDC_pid.c</v>
 <v>BLDCWorkspace\TestCode\Source Files\main.c</v>
 <v>BLDCWorkspace\TestCode\Generated_Source</v>
 <v>BLDCWorkspace\TestCode\Generated_Source\PSoC4</v>
 <v>BLDCWorkspace\TestCode\Generated_Source\PSoC4\CAN</v>
 <v>BLDCWorkspace\TestCode\Generated_Source\PSoC4\CAN_HFCLK</v>
-<v>BLDCWorkspace\TestCode\Generated_Source\PSoC4\CAN_isr</v>
-<v>BLDCWorkspace\TestCode\Generated_Source\PSoC4\CAN_LED</v>
-<v>BLDCWorkspace\TestCode\Generated_Source\PSoC4\Clock_2</v>
-<v>BLDCWorkspace\TestCode\Generated_Source\PSoC4\Cur_Alert_1</v>
-<v>BLDCWorkspace\TestCode\Generated_Source\PSoC4\Cur_Alert_2</v>
-<v>BLDCWorkspace\TestCode\Generated_Source\PSoC4\Cur_Alert_3</v>
-<v>BLDCWorkspace\TestCode\Generated_Source\PSoC4\Current_Sensor_I2C</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -353,7 +355,6 @@
 <name v=".\TestCode.cydsn\BLDC_Drive.c" />
 <name v=".\TestCode.cydsn\BLDC_FSM.h" />
 <name v=".\TestCode.cydsn\BLDC_FSM.c" />
-<name v=".\HindsightCAN\PortFiles\PortPSOC_CY8C4248AZI_L485.c" />
 <name v=".\HindsightCAN\CANCommon.h" />
 <name v=".\TestCode.cydsn\BLDC_CAN.h" />
 <name v=".\TestCode.cydsn\main.h" />
@@ -362,8 +363,11 @@
 <name v=".\TestCode.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\HindsightCAN\CANCommon.c" />
 <name v=".\HindsightCAN\Port.h" />
-<name v=".\HindsightCAN\CANLibrary.h" />
-<name v=".\TestCode.cydsn\Generated_Source\PSoC4\HALL1.c" />
+<name v=".\HindsightCAN\CANMotorUnit.h" />
+<name v=".\HindsightCAN\CANMotorUnit.c" />
+<name v=".\TestCode.cydsn\BLDC_pid.h" />
+<name v=".\TestCode.cydsn\BLDC_pid.c" />
+<name v=".\TestCode.cydsn\BLDC_Drive.h" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -371,7 +375,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1116, 580" SelectedTabbedMdiWindow="22d1f15a-0755-4707-9b1a-238c7ff8b8e9"><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_CAN.c" Guid="4777c224-29c2-4389-b43c-6bbe8042962a" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_Drive.c" Guid="7dd1d09f-f639-4fe5-8af6-de5a95fbd232" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_FSM.h" Guid="e361f52c-f9dd-467e-b105-c927aba580fb" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_FSM.c" Guid="0a0c8b93-2272-4cbc-9d6e-3d40445741da" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="6659a7a9-1ba9-4e08-828f-36f641d6385a" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\HindsightCAN\PortFiles\PortPSOC_CY8C4248AZI_L485.c" Guid="85163143-9b5b-49ed-9a57-e8700c3c616d" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\HindsightCAN\CANCommon.h" Guid="0d805462-b47c-4ca0-86c2-e5edd57ca880" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_CAN.h" Guid="e5b491dd-f0b3-4249-8f01-5546f0b9dc1c" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\main.h" Guid="05f980c0-4500-45d5-a6b6-650155b471a1" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\main.c" Guid="0a36796e-d49f-446d-8deb-6aa6b8a63d26" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\TestCode.cydwr" Guid="cd0120ef-a8ab-4305-b119-3c7ff988a4f5" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\TopDesign\TopDesign.cysch" Guid="3d624d01-1e43-4ac6-ac1d-794d68ea50ee" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\HindsightCAN\CANCommon.c" Guid="7914bd32-8735-406c-8762-efe89d1f010d" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\HindsightCAN\Port.h" Guid="a4f06e06-f27f-4858-9898-69862e98eaa8" /><ToolWindow Key="Output Window Plugin:7305390e-eabe-4963-b21f-3a0f11b4b1d5:Output Window" Guid="f69622ea-66c5-4840-993d-d58095df0588" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\HindsightCAN\CANLibrary.h" Guid="8f20c588-c33a-44ea-888d-3c83adde1323" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\Generated_Source\PSoC4\HALL1.c" Guid="22d1f15a-0755-4707-9b1a-238c7ff8b8e9" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1116, 661" SelectedTabbedMdiWindow="0a0c8b93-2272-4cbc-9d6e-3d40445741da"><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_CAN.c" Guid="4777c224-29c2-4389-b43c-6bbe8042962a" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_Drive.c" Guid="7dd1d09f-f639-4fe5-8af6-de5a95fbd232" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_FSM.h" Guid="e361f52c-f9dd-467e-b105-c927aba580fb" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_FSM.c" Guid="0a0c8b93-2272-4cbc-9d6e-3d40445741da" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="6659a7a9-1ba9-4e08-828f-36f641d6385a" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\HindsightCAN\CANCommon.h" Guid="0d805462-b47c-4ca0-86c2-e5edd57ca880" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_CAN.h" Guid="e5b491dd-f0b3-4249-8f01-5546f0b9dc1c" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\main.h" Guid="05f980c0-4500-45d5-a6b6-650155b471a1" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\main.c" Guid="0a36796e-d49f-446d-8deb-6aa6b8a63d26" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\TestCode.cydwr" Guid="cd0120ef-a8ab-4305-b119-3c7ff988a4f5" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\TopDesign\TopDesign.cysch" Guid="3d624d01-1e43-4ac6-ac1d-794d68ea50ee" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\HindsightCAN\CANCommon.c" Guid="7914bd32-8735-406c-8762-efe89d1f010d" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\HindsightCAN\Port.h" Guid="a4f06e06-f27f-4858-9898-69862e98eaa8" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\HindsightCAN\CANMotorUnit.h" Guid="9462e09d-d6f4-4d73-9a70-2edc5c0566b8" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\HindsightCAN\CANMotorUnit.c" Guid="6d0549a1-f567-4f0f-8fe4-37e91cd42c4c" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_pid.h" Guid="384448dd-80c9-4d38-9201-1c6ef5e16db3" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_pid.c" Guid="086f041e-3f7e-46d0-9f99-54a802ad8b9e" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_Drive.h" Guid="709d1ccf-e4e0-431c-9fce-f8d6b2f26e01" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

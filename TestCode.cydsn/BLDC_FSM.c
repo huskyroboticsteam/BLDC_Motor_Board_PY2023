@@ -13,6 +13,24 @@ uint8_t hall1State;
 uint8_t hall2State;
 uint8_t hall3State;
 
+uint8_t BLDC_state;
+
+
+void GotoUninitState() {
+    //halt motor
+    #ifdef RGB_LED_ARRAY
+    StripLights_DisplayClear(StripLights_BLACK);
+    #endif
+
+    BLDC_state = 0xFF;
+}
+
+uint8_t GetState(){
+    return BLDC_State;
+}
+
+
+
 // FSM changing through states
 // "--state = X" means "don't-care"
 void readHallState() {
