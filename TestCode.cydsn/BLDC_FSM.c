@@ -26,7 +26,7 @@ void GotoUninitState() {
 }
 
 uint8_t GetState(){
-    return BLDC_State;
+    return BLDC_state;
 }
 
 

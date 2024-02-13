@@ -402,12 +402,12 @@ void Timer_1_WriteControlRegister(uint8 control)
 *  The present value of the counter.
 *
 *******************************************************************************/
-uint16 Timer_1_ReadPeriod(void) 
+uint32 Timer_1_ReadPeriod(void) 
 {
    #if(Timer_1_UsingFixedFunction)
-       return ((uint16)CY_GET_REG16(Timer_1_PERIOD_LSB_PTR));
+       return ((uint32)CY_GET_REG16(Timer_1_PERIOD_LSB_PTR));
    #else
-       return (CY_GET_REG16(Timer_1_PERIOD_LSB_PTR));
+       return (CY_GET_REG32(Timer_1_PERIOD_LSB_PTR));
    #endif /* (Timer_1_UsingFixedFunction) */
 }
 
@@ -428,13 +428,13 @@ uint16 Timer_1_ReadPeriod(void)
 *  void
 *
 *******************************************************************************/
-void Timer_1_WritePeriod(uint16 period) 
+void Timer_1_WritePeriod(uint32 period) 
 {
     #if(Timer_1_UsingFixedFunction)
         uint16 period_temp = (uint16)period;
         CY_SET_REG16(Timer_1_PERIOD_LSB_PTR, period_temp);
     #else
-        CY_SET_REG16(Timer_1_PERIOD_LSB_PTR, period);
+        CY_SET_REG32(Timer_1_PERIOD_LSB_PTR, period);
     #endif /*Write Period value with appropriate resolution suffix depending on UDB or fixed function implementation */
 }
 
@@ -453,12 +453,12 @@ void Timer_1_WritePeriod(uint16 period)
 *  Present Capture value.
 *
 *******************************************************************************/
-uint16 Timer_1_ReadCapture(void) 
+uint32 Timer_1_ReadCapture(void) 
 {
    #if(Timer_1_UsingFixedFunction)
-       return ((uint16)CY_GET_REG16(Timer_1_CAPTURE_LSB_PTR));
+       return ((uint32)CY_GET_REG16(Timer_1_CAPTURE_LSB_PTR));
    #else
-       return (CY_GET_REG16(Timer_1_CAPTURE_LSB_PTR));
+       return (CY_GET_REG32(Timer_1_CAPTURE_LSB_PTR));
    #endif /* (Timer_1_UsingFixedFunction) */
 }
 
@@ -477,7 +477,7 @@ uint16 Timer_1_ReadCapture(void)
 *  void
 *
 *******************************************************************************/
-void Timer_1_WriteCounter(uint16 counter) 
+void Timer_1_WriteCounter(uint32 counter) 
 {
    #if(Timer_1_UsingFixedFunction)
         /* This functionality is removed until a FixedFunction HW update to
@@ -486,7 +486,7 @@ void Timer_1_WriteCounter(uint16 counter)
         CY_SET_REG16(Timer_1_COUNTER_LSB_PTR, (uint16)counter);
         
     #else
-        CY_SET_REG16(Timer_1_COUNTER_LSB_PTR, counter);
+        CY_SET_REG32(Timer_1_COUNTER_LSB_PTR, counter);
     #endif /* Set Write Counter only for the UDB implementation (Write Counter not available in fixed function Timer */
 }
 
@@ -505,7 +505,7 @@ void Timer_1_WriteCounter(uint16 counter)
 *  Present compare value.
 *
 *******************************************************************************/
-uint16 Timer_1_ReadCounter(void) 
+uint32 Timer_1_ReadCounter(void) 
 {
     /* Force capture by reading Accumulator */
     /* Must first do a software capture to be able to read the counter */
@@ -518,9 +518,9 @@ uint16 Timer_1_ReadCounter(void)
 
     /* Read the data from the FIFO (or capture register for Fixed Function)*/
     #if(Timer_1_UsingFixedFunction)
-        return ((uint16)CY_GET_REG16(Timer_1_CAPTURE_LSB_PTR));
+        return ((uint32)CY_GET_REG16(Timer_1_CAPTURE_LSB_PTR));
     #else
-        return (CY_GET_REG16(Timer_1_CAPTURE_LSB_PTR));
+        return (CY_GET_REG32(Timer_1_CAPTURE_LSB_PTR));
     #endif /* (Timer_1_UsingFixedFunction) */
 }
 
