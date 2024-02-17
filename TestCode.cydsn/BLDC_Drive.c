@@ -15,7 +15,7 @@
 #include <stdio.h>
 #include "main.h"
 #include <stdint.h>
-#include "MotorDrive.h"
+#include "BLDC_Drive.h"
 
 uint8_t invalidate = 0;
 extern char txData[TX_DATA_SIZE];
@@ -50,7 +50,7 @@ uint8_t readHallState(void)
 
 }
 
-void commutateMotor(unit8_t hallState) {
+void commutateMotor(uint8_t hallState) {
     // determine the motor phase to energize based on the hall state
         
         // TODO: implement th appropriate logic to switch the motor phases
