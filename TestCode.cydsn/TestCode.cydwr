@@ -35,6 +35,7 @@
       <Data key="22f62978-195d-41cc-bc16-6bfa3cac221b" value="VL" />
       <Data key="43ec2fa1-bf22-4b71-9477-b6ca7b97f0b0/23b8206d-1c77-4e61-be4a-b4037d5de5fc" value="UART_tx" />
       <Data key="43ec2fa1-bf22-4b71-9477-b6ca7b97f0b0/78e33e5d-45ea-4b75-88d5-73274e8a7ce4" value="UART_rx" />
+      <Data key="61a63c74-75bf-4771-9581-6086e70f6279" value="Pin_Limit_2" />
       <Data key="65db8fe1-d362-4ae6-9fd0-68da221e2e5a" value="WH" />
       <Data key="86a90bbb-e3b1-4d37-8817-474bbb81f22f" value="DIP_2" />
       <Data key="86bed5a6-0673-4c7a-83e6-9a30b3987bd4" value="Cur_Alert_1" />
@@ -43,6 +44,7 @@
       <Data key="20363a88-1aa9-4e15-a7fe-63eccd151423" value="DEBUG_LED" />
       <Data key="29938f8e-7989-4f38-afcc-a0b03c6eb22d" value="DRV_EN" />
       <Data key="1425177d-0d0e-4468-8bcc-e638e5509a9b" value="RX_1" />
+      <Data key="9180543e-4fe7-4df7-85a3-72ecdc712ad2" value="Pin_Limit_1" />
       <Data key="85274322-7235-4fdc-8d17-f14805f2ddfd" value="LimSW_Pin_2" />
       <Data key="aa84b704-2a7e-4630-b9c9-0a7dd437d181" value="UH" />
       <Data key="b21853a2-bdec-418d-8042-192fbb5bddb4" value="VS_LED" />
@@ -3883,6 +3885,11 @@
         <Data key="Port Format" value="4,0" />
       </Group>
     </Group>
+    <Group key="61a63c74-75bf-4771-9581-6086e70f6279">
+      <Group key="0">
+        <Data key="Port Format" value="7,0" />
+      </Group>
+    </Group>
     <Group key="65db8fe1-d362-4ae6-9fd0-68da221e2e5a">
       <Group key="0">
         <Data key="Port Format" value="5,2" />
@@ -3921,6 +3928,11 @@
     <Group key="1425177d-0d0e-4468-8bcc-e638e5509a9b">
       <Group key="0">
         <Data key="Port Format" value="0,0" />
+      </Group>
+    </Group>
+    <Group key="9180543e-4fe7-4df7-85a3-72ecdc712ad2">
+      <Group key="0">
+        <Data key="Port Format" value="7,1" />
       </Group>
     </Group>
     <Group key="85274322-7235-4fdc-8d17-f14805f2ddfd">

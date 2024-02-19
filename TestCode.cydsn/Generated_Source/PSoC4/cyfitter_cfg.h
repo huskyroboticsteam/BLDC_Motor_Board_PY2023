@@ -22,6 +22,7 @@
 extern void cyfitter_cfg(void);
 
 /* Analog Set/Unset methods */
+extern void SetAnalogRoutingPumps(uint8 enabled);
 
 
 #endif /* CYFITTER_CFG_H */
