@@ -1,16 +1,9 @@
-/* ========================================
- *
- * Copyright YOUR COMPANY, THE YEAR
- * All Rights Reserved
- * UNPUBLISHED, LICENSED SOFTWARE.
- *
- * CONFIDENTIAL AND PROPRIETARY INFORMATION
- * WHICH IS THE PROPERTY OF your company.
- *
- * ========================================
+/*
+
+    Control FSM
+
 */
 
-/* [] END OF FILE */
 #include "BLDC_FSM.h"
 #include "BLDC_Drive.h"
 #include "project.h"
@@ -21,11 +14,15 @@
 0x0 = pwm
 0x1 = PID*/
 uint8_t motorUnitMode   = 0xFF;
-uint8_t motorUnitState  = UNINIT;
+uint8_t motorUnitState  = UNINIT; // motorUnitState - 
 uint8_t PIDConstSetReg      = 0;
 
 extern const uint32 StripLights_CLUT[ ];
 
+
+// all the xxxIsSet methods check if the constant has been set by the Jetson,
+// they set PID register to different values, since the Jetson needs to tell
+// the board what units to use on startup
 void GotoUninitState() {
     //halt motor
     #ifdef RGB_LED_ARRAY
@@ -47,14 +44,14 @@ uint8_t GetState(){
 uint8_t GetMode(){
     return motorUnitMode;
 }
+
+// The next three methods check for the PID constants
 void PositionConstIsSet() {
     PIDConstSetReg |= 0b100;
 }
-
 void IntegralConstIsSet(){
     PIDConstSetReg |= 0b10;
 }
-
 void DerivativeConstIsSet(){
     PIDConstSetReg |= 0b1;
 }
@@ -62,6 +59,7 @@ void DerivativeConstIsSet(){
 void PPJRConstIsSet() {
     PIDConstSetReg |= 0b1000;
 }
+
 
 void MaxJointRevIsSet(){
 }
