@@ -3,7 +3,6 @@
     Rotor FSM:
         - Phase shifting logic
         
-
 */
 
 // -------------------------------------------------------------------------WE ARE NOT USING PWM
@@ -90,6 +89,11 @@ uint8_t BLDC_state;
 // FSM changing through states
 // "--state = X" means "don't-care"
 // Read the states
+
+// turn this into a long case statement???
+
+// add a method that stops this finite state machine
+
 void readHallState() {
     hall1State = HALL1_Read();
     hall2State = HALL2_Read();
@@ -153,6 +157,7 @@ void readHallState() {
 		WLstate = 1;
     }
     
+    // write registers in UVW
     UH_Write(UHstate);
     UL_Write(ULstate);
     VH_Write(VHstate);

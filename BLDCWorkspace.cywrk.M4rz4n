@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="BLDCWorkspace\TestCode\Source Files\BLDC_FSM.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="BLDCWorkspace\TestCode\TopDesign">
 <ExpandedNodeIds>
 <v>BLDCWorkspace</v>
 <v>BLDCWorkspace\TestCode</v>
@@ -357,12 +357,9 @@
 <name v=".\TestCode.cydsn\BLDC_CAN.h" />
 <name v=".\TestCode.cydsn\main.h" />
 <name v=".\TestCode.cydsn\main.c" />
-<name v=".\HindsightCAN\CANMotorUnit.h" />
-<name v=".\HindsightCAN\CANMotorUnit.c" />
 <name v=".\TestCode.cydsn\BLDC_pid.h" />
 <name v=".\TestCode.cydsn\BLDC_pid.c" />
 <name v=".\TestCode.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\TestCode.cydsn\TestCode.cydwr" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -370,7 +367,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1012, 661" SelectedTabbedMdiWindow="7dd1d09f-f639-4fe5-8af6-de5a95fbd232"><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_CAN.c" Guid="4777c224-29c2-4389-b43c-6bbe8042962a" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_Drive.c" Guid="7dd1d09f-f639-4fe5-8af6-de5a95fbd232" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_FSM.h" Guid="e361f52c-f9dd-467e-b105-c927aba580fb" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_FSM.c" Guid="0a0c8b93-2272-4cbc-9d6e-3d40445741da" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_CAN.h" Guid="e5b491dd-f0b3-4249-8f01-5546f0b9dc1c" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\main.h" Guid="05f980c0-4500-45d5-a6b6-650155b471a1" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\main.c" Guid="0a36796e-d49f-446d-8deb-6aa6b8a63d26" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\HindsightCAN\CANMotorUnit.h" Guid="9462e09d-d6f4-4d73-9a70-2edc5c0566b8" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\HindsightCAN\CANMotorUnit.c" Guid="6d0549a1-f567-4f0f-8fe4-37e91cd42c4c" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_pid.h" Guid="384448dd-80c9-4d38-9201-1c6ef5e16db3" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_pid.c" Guid="086f041e-3f7e-46d0-9f99-54a802ad8b9e" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\TopDesign\TopDesign.cysch" Guid="0e5eb19d-cbfa-43a8-ad65-02176b5c83e5" /><ToolWindow Key="Output Window Plugin:7305390e-eabe-4963-b21f-3a0f11b4b1d5:Output Window" Guid="f69622ea-66c5-4840-993d-d58095df0588" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\TestCode.cydwr" Guid="50d4bf8b-bf3c-4904-b929-d3d9189dd30b" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="6659a7a9-1ba9-4e08-828f-36f641d6385a" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="958, 661" SelectedTabbedMdiWindow="dba0a066-5ac1-4a57-9205-82f1f87c21e1"><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_CAN.c" Guid="4777c224-29c2-4389-b43c-6bbe8042962a" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_Drive.c" Guid="7dd1d09f-f639-4fe5-8af6-de5a95fbd232" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_FSM.h" Guid="e361f52c-f9dd-467e-b105-c927aba580fb" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_FSM.c" Guid="0a0c8b93-2272-4cbc-9d6e-3d40445741da" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_CAN.h" Guid="e5b491dd-f0b3-4249-8f01-5546f0b9dc1c" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\main.h" Guid="05f980c0-4500-45d5-a6b6-650155b471a1" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\main.c" Guid="0a36796e-d49f-446d-8deb-6aa6b8a63d26" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_pid.h" Guid="384448dd-80c9-4d38-9201-1c6ef5e16db3" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_pid.c" Guid="086f041e-3f7e-46d0-9f99-54a802ad8b9e" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="6659a7a9-1ba9-4e08-828f-36f641d6385a" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\TopDesign\TopDesign.cysch" Guid="dba0a066-5ac1-4a57-9205-82f1f87c21e1" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

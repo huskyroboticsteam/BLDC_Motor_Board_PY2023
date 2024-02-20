@@ -1,4 +1,4 @@
---------------- Build Started: 02/18/2024 17:38:02 Project: TestCode, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+--------------- Build Started: 02/19/2024 19:38:44 Project: TestCode, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
 cydsfit.exe -.appdatapath "C:\Users\M4rz4n\AppData\Local\Cypress Semiconductor\PSoC Creator\4.4" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p "C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\TestCode.cyprj" -d CY8C4248AZI-L485 -s "C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\Generated_Source\PSoC4" -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 Elaborating Design...
 ADD: sdb.M0065: information: Analog terminal "ADC_Pot.vinMinus0" on TopDesign is unconnected.
@@ -15,4 +15,4 @@ Error: mpr.M0145: 'Pin_Limit_1(0)' cannot be placed at P7[1]. P7 cannot be used 
 Dependency Generation...
 Cleanup...
 Error: fit.M0050: The fitter aborted due to errors, please address all errors and rebuild. (App=cydsfit)
---------------- Build Failed: 02/18/2024 17:38:07 ---------------
+--------------- Build Failed: 02/19/2024 19:38:51 ---------------
