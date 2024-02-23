@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: Timer_general_PM.c
+* File Name: Timer_Period_Reset_PM.c
 * Version 2.80
 *
 *  Description:
@@ -16,13 +16,13 @@
 * the software package with which this file was provided.
 ********************************************************************************/
 
-#include "Timer_general.h"
+#include "Timer_Period_Reset.h"
 
-static Timer_general_backupStruct Timer_general_backup;
+static Timer_Period_Reset_backupStruct Timer_Period_Reset_backup;
 
 
 /*******************************************************************************
-* Function Name: Timer_general_SaveConfig
+* Function Name: Timer_Period_Reset_SaveConfig
 ********************************************************************************
 *
 * Summary:
@@ -35,29 +35,29 @@ static Timer_general_backupStruct Timer_general_backup;
 *  void
 *
 * Global variables:
-*  Timer_general_backup:  Variables of this global structure are modified to
+*  Timer_Period_Reset_backup:  Variables of this global structure are modified to
 *  store the values of non retention configuration registers when Sleep() API is
 *  called.
 *
 *******************************************************************************/
-void Timer_general_SaveConfig(void) 
+void Timer_Period_Reset_SaveConfig(void) 
 {
-    #if (!Timer_general_UsingFixedFunction)
-        Timer_general_backup.TimerUdb = Timer_general_ReadCounter();
-        Timer_general_backup.InterruptMaskValue = Timer_general_STATUS_MASK;
-        #if (Timer_general_UsingHWCaptureCounter)
-            Timer_general_backup.TimerCaptureCounter = Timer_general_ReadCaptureCount();
+    #if (!Timer_Period_Reset_UsingFixedFunction)
+        Timer_Period_Reset_backup.TimerUdb = Timer_Period_Reset_ReadCounter();
+        Timer_Period_Reset_backup.InterruptMaskValue = Timer_Period_Reset_STATUS_MASK;
+        #if (Timer_Period_Reset_UsingHWCaptureCounter)
+            Timer_Period_Reset_backup.TimerCaptureCounter = Timer_Period_Reset_ReadCaptureCount();
         #endif /* Back Up capture counter register  */
 
-        #if(!Timer_general_UDB_CONTROL_REG_REMOVED)
-            Timer_general_backup.TimerControlRegister = Timer_general_ReadControlRegister();
+        #if(!Timer_Period_Reset_UDB_CONTROL_REG_REMOVED)
+            Timer_Period_Reset_backup.TimerControlRegister = Timer_Period_Reset_ReadControlRegister();
         #endif /* Backup the enable state of the Timer component */
     #endif /* Backup non retention registers in UDB implementation. All fixed function registers are retention */
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_general_RestoreConfig
+* Function Name: Timer_Period_Reset_RestoreConfig
 ********************************************************************************
 *
 * Summary:
@@ -70,29 +70,29 @@ void Timer_general_SaveConfig(void)
 *  void
 *
 * Global variables:
-*  Timer_general_backup:  Variables of this global structure are used to
+*  Timer_Period_Reset_backup:  Variables of this global structure are used to
 *  restore the values of non retention registers on wakeup from sleep mode.
 *
 *******************************************************************************/
-void Timer_general_RestoreConfig(void) 
+void Timer_Period_Reset_RestoreConfig(void) 
 {   
-    #if (!Timer_general_UsingFixedFunction)
+    #if (!Timer_Period_Reset_UsingFixedFunction)
 
-        Timer_general_WriteCounter(Timer_general_backup.TimerUdb);
-        Timer_general_STATUS_MASK =Timer_general_backup.InterruptMaskValue;
-        #if (Timer_general_UsingHWCaptureCounter)
-            Timer_general_SetCaptureCount(Timer_general_backup.TimerCaptureCounter);
+        Timer_Period_Reset_WriteCounter(Timer_Period_Reset_backup.TimerUdb);
+        Timer_Period_Reset_STATUS_MASK =Timer_Period_Reset_backup.InterruptMaskValue;
+        #if (Timer_Period_Reset_UsingHWCaptureCounter)
+            Timer_Period_Reset_SetCaptureCount(Timer_Period_Reset_backup.TimerCaptureCounter);
         #endif /* Restore Capture counter register*/
 
-        #if(!Timer_general_UDB_CONTROL_REG_REMOVED)
-            Timer_general_WriteControlRegister(Timer_general_backup.TimerControlRegister);
+        #if(!Timer_Period_Reset_UDB_CONTROL_REG_REMOVED)
+            Timer_Period_Reset_WriteControlRegister(Timer_Period_Reset_backup.TimerControlRegister);
         #endif /* Restore the enable state of the Timer component */
     #endif /* Restore non retention registers in the UDB implementation only */
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_general_Sleep
+* Function Name: Timer_Period_Reset_Sleep
 ********************************************************************************
 *
 * Summary:
@@ -105,32 +105,32 @@ void Timer_general_RestoreConfig(void)
 *  void
 *
 * Global variables:
-*  Timer_general_backup.TimerEnableState:  Is modified depending on the
+*  Timer_Period_Reset_backup.TimerEnableState:  Is modified depending on the
 *  enable state of the block before entering sleep mode.
 *
 *******************************************************************************/
-void Timer_general_Sleep(void) 
+void Timer_Period_Reset_Sleep(void) 
 {
-    #if(!Timer_general_UDB_CONTROL_REG_REMOVED)
+    #if(!Timer_Period_Reset_UDB_CONTROL_REG_REMOVED)
         /* Save Counter's enable state */
-        if(Timer_general_CTRL_ENABLE == (Timer_general_CONTROL & Timer_general_CTRL_ENABLE))
+        if(Timer_Period_Reset_CTRL_ENABLE == (Timer_Period_Reset_CONTROL & Timer_Period_Reset_CTRL_ENABLE))
         {
             /* Timer is enabled */
-            Timer_general_backup.TimerEnableState = 1u;
+            Timer_Period_Reset_backup.TimerEnableState = 1u;
         }
         else
         {
             /* Timer is disabled */
-            Timer_general_backup.TimerEnableState = 0u;
+            Timer_Period_Reset_backup.TimerEnableState = 0u;
         }
     #endif /* Back up enable state from the Timer control register */
-    Timer_general_Stop();
-    Timer_general_SaveConfig();
+    Timer_Period_Reset_Stop();
+    Timer_Period_Reset_SaveConfig();
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_general_Wakeup
+* Function Name: Timer_Period_Reset_Wakeup
 ********************************************************************************
 *
 * Summary:
@@ -143,17 +143,17 @@ void Timer_general_Sleep(void)
 *  void
 *
 * Global variables:
-*  Timer_general_backup.enableState:  Is used to restore the enable state of
+*  Timer_Period_Reset_backup.enableState:  Is used to restore the enable state of
 *  block on wakeup from sleep mode.
 *
 *******************************************************************************/
-void Timer_general_Wakeup(void) 
+void Timer_Period_Reset_Wakeup(void) 
 {
-    Timer_general_RestoreConfig();
-    #if(!Timer_general_UDB_CONTROL_REG_REMOVED)
-        if(Timer_general_backup.TimerEnableState == 1u)
+    Timer_Period_Reset_RestoreConfig();
+    #if(!Timer_Period_Reset_UDB_CONTROL_REG_REMOVED)
+        if(Timer_Period_Reset_backup.TimerEnableState == 1u)
         {     /* Enable Timer's operation */
-                Timer_general_Enable();
+                Timer_Period_Reset_Enable();
         } /* Do nothing if Timer was disabled before */
     #endif /* Remove this code section if Control register is removed */
 }

@@ -43,7 +43,7 @@ void NextStateFromCAN(CANPacket *receivedPacket, CANPacket *packetToSend) {
     switch(packageID){
         case(ID_MOTOR_UNIT_MODE_SEL):
             if(GetModeFromPacket(receivedPacket) == MOTOR_UNIT_MODE_PWM) {
-                set_speed(0, 0, 0);
+                set_speed(0, 1);
                 SetModeTo(MOTOR_UNIT_MODE_PWM);
                 SetStateTo(CHECK_CAN);
             }
@@ -124,7 +124,7 @@ void NextStateFromCAN(CANPacket *receivedPacket, CANPacket *packetToSend) {
         case(ID_MOTOR_UNIT_ENC_INIT):
             setUsingPot(0);
             if(GetMode() == MOTOR_UNIT_MODE_PID){ //turn off and clear PID Loop if encoder is reinit while running
-                set_PWM(0, 0, 0);
+                set_PWM(0, 1);
                 ClearPIDProgress();
                 DisablePID();
             }
@@ -154,7 +154,7 @@ void NextStateFromCAN(CANPacket *receivedPacket, CANPacket *packetToSend) {
         // Common Packets 
         case(ID_ESTOP):
             UART_UartPutString("\r\n\r\n\r\nSTOP\r\n\r\n\r\n");
-            set_PWM(0, 0, 0);
+            set_speed(0, 1);
             GotoUninitState();
             break;
         

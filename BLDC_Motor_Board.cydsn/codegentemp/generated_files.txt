@@ -100,8 +100,8 @@
   <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\CAN_LED.h" value="HEADER;;;;;CAN_LED" />
   <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\CAN_LED_aliases.h" value="HEADER;;;;;CAN_LED" />
   <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\CAN_LED_PM.c" value="SOURCE_C;CortexM0;;;;CAN_LED" />
-  <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\Status_Reg_1.c" value="SOURCE_C;CortexM0;;;;Status_Reg_1" />
-  <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\Status_Reg_1.h" value="HEADER;;;;;Status_Reg_1" />
+  <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\Address_Register.c" value="SOURCE_C;CortexM0;;;;Address_Register" />
+  <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\Address_Register.h" value="HEADER;;;;;Address_Register" />
   <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\DRV_EN.c" value="SOURCE_C;CortexM0;;;;DRV_EN" />
   <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\DRV_EN.h" value="HEADER;;;;;DRV_EN" />
   <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\DRV_EN_aliases.h" value="HEADER;;;;;DRV_EN" />
@@ -122,11 +122,11 @@
   <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\DIP_1.h" value="HEADER;;;;;DIP_1" />
   <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\DIP_1_aliases.h" value="HEADER;;;;;DIP_1" />
   <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\DIP_1_PM.c" value="SOURCE_C;CortexM0;;;;DIP_1" />
-  <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\Timer_general.c" value="SOURCE_C;CortexM0;;;;Timer_general" />
-  <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\Timer_general.h" value="HEADER;;;;;Timer_general" />
-  <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\Timer_general_PM.c" value="SOURCE_C;CortexM0;;;;Timer_general" />
-  <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\isr_1.c" value="SOURCE_C;CortexM0;;;;isr_1" />
-  <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\isr_1.h" value="HEADER;;;;;isr_1" />
+  <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\Timer_Rotor_Delay.c" value="SOURCE_C;CortexM0;;;;Timer_Rotor_Delay" />
+  <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\Timer_Rotor_Delay.h" value="HEADER;;;;;Timer_Rotor_Delay" />
+  <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\Timer_Rotor_Delay_PM.c" value="SOURCE_C;CortexM0;;;;Timer_Rotor_Delay" />
+  <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\isr_Hall.c" value="SOURCE_C;CortexM0;;;;isr_Hall" />
+  <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\isr_Hall.h" value="HEADER;;;;;isr_Hall" />
   <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\Pin_Limit_2.c" value="SOURCE_C;CortexM0;;;;Pin_Limit_2" />
   <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\Pin_Limit_2.h" value="HEADER;;;;;Pin_Limit_2" />
   <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\Pin_Limit_2_aliases.h" value="HEADER;;;;;Pin_Limit_2" />
@@ -153,10 +153,15 @@
   <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\Cur_Alert_3.h" value="HEADER;;;;;Cur_Alert_3" />
   <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\Cur_Alert_3_aliases.h" value="HEADER;;;;;Cur_Alert_3" />
   <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\Cur_Alert_3_PM.c" value="SOURCE_C;CortexM0;;;;Cur_Alert_3" />
-  <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\ADC_Pot.c" value="SOURCE_C;CortexM0;;;;ADC_Pot" />
-  <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\ADC_Pot.h" value="HEADER;;;;;ADC_Pot" />
-  <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\ADC_Pot_PM.c" value="SOURCE_C;CortexM0;;;;ADC_Pot" />
-  <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\ADC_Pot_INT.c" value="SOURCE_C;CortexM0;;;;ADC_Pot" />
+  <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\isr_Limit_1.c" value="SOURCE_C;CortexM0;;;;isr_Limit_1" />
+  <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\isr_Limit_1.h" value="HEADER;;;;;isr_Limit_1" />
+  <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\Limit_Register.c" value="SOURCE_C;CortexM0;;;;Limit_Register" />
+  <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\Limit_Register.h" value="HEADER;;;;;Limit_Register" />
+  <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\Timer_Period_Reset.c" value="SOURCE_C;CortexM0;;;;Timer_Period_Reset" />
+  <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\Timer_Period_Reset.h" value="HEADER;;;;;Timer_Period_Reset" />
+  <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\Timer_Period_Reset_PM.c" value="SOURCE_C;CortexM0;;;;Timer_Period_Reset" />
+  <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\isr_Period_Reset.c" value="SOURCE_C;CortexM0;;;;isr_Period_Reset" />
+  <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\isr_Period_Reset.h" value="HEADER;;;;;isr_Period_Reset" />
   <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\CAN_isr.c" value="SOURCE_C;CortexM0;;;;CAN_isr" />
   <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\CAN_isr.h" value="HEADER;;;;;CAN_isr" />
   <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\CAN_HFCLK.c" value="SOURCE_C;CortexM0;;;;CAN_HFCLK" />
@@ -201,10 +206,6 @@
   <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\TMC6100_SPI_mosi_s.h" value="HEADER;;;;;TMC6100_SPI_mosi_s" />
   <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\TMC6100_SPI_mosi_s_aliases.h" value="HEADER;;;;;TMC6100_SPI_mosi_s" />
   <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\TMC6100_SPI_mosi_s_PM.c" value="SOURCE_C;CortexM0;;;;TMC6100_SPI_mosi_s" />
-  <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\ADC_Pot_IRQ.c" value="SOURCE_C;CortexM0;;;;ADC_Pot_IRQ" />
-  <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\ADC_Pot_IRQ.h" value="HEADER;;;;;ADC_Pot_IRQ" />
-  <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\ADC_Pot_intClock.c" value="SOURCE_C;CortexM0;;;;ADC_Pot_intClock" />
-  <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\ADC_Pot_intClock.h" value="HEADER;;;;;ADC_Pot_intClock" />
   <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\cm0gcc.ld" value="LINKER_SCRIPT;;;b98f980c-3bd1-4fc7-a887-c56a20a46fdd;;cy_boot" />
   <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\Cm0RealView.scat" value="LINKER_SCRIPT;;;fdb8e1ae-f83a-46cf-9446-1d703716f38a;;cy_boot" />
   <file name="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\Cm0Start.c" value="SOURCE_C;CortexM0;;;;cy_boot" />

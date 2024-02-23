@@ -31,17 +31,19 @@ void commutateMotor(uint8_t hallState) {
 }
 
 // -32768 <= speed < 32768
-void set_speed(int16_t speed, uint8_t disable_limit, uint8 limitSW) {
+void set_speed(int16_t speed, uint8_t disable_limit) {
     #ifdef PRINT_PWM_COMMAND
     sprintf(txData, "PWM:%d disable_limit: %d\r\n",compare,disable_limit);
     UART_UartPutString(txData); 
     #endif
+   
+    uint8 limitSW = disable_limit ? 0 : Limit_Register_Read();
     
     invalidate = 0;
-    if (speed < 0 && (!(limitSW & 0b10) || disable_limit) ) { // check if speed is negative, if not (hit the bottom limit switch) || limit switch is disabled
+    if (speed < 0 && !(limitSW & 0b10)) { // check if speed is negative, if not (hit the bottom limit switch) || limit switch is disabled
         currentDir = 0;
         currentSpeed = -speed;
-    } else if (speed > 0 && (!(limitSW & 0b01) || disable_limit) ){ // check if speed is positive, if not (hit the top limit switch) || limit switch is disabled
+    } else if (speed > 0 && !(limitSW & 0b01)){ // check if speed is positive, if not (hit the top limit switch) || limit switch is disabled
         currentDir = 1;
         currentSpeed = speed;
     } else { // set speed = 0; (special case

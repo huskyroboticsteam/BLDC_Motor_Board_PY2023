@@ -51,7 +51,6 @@ CANPacket can_send;
 uint8_t address = 0;
 
 CY_ISR(Period_Reset_Handler) {
-    int timer = Timer_general_ReadStatusRegister();
     invalidate++;
     Can_LED++;
     CAN_check_delay ++;
@@ -59,7 +58,7 @@ CY_ISR(Period_Reset_Handler) {
     Debug_LED++; // do I need this?
 
     if(invalidate >= 20){
-        set_speed(0, 0, 0);   
+        set_speed(0, 1);   
     }
     if(Error_LED >= 3) {
         #ifdef ERROR_LED
@@ -84,7 +83,7 @@ CY_ISR(Pin_Limit_Handler){
     
     UART_UartPutString("LIMIT HIT\n\r");
     
-    set_speed(GetCurrentSpeed(), ignoreLimSw, Status_Reg_Switches_Read());
+    set_speed(GetCurrentSpeed(), ignoreLimSw);
     
     #ifdef CAN_TELEM_SEND
     AssembleLimitSwitchAlertPacket(&can_send, DEVICE_GROUP_JETSON, 
@@ -117,7 +116,7 @@ int main(void)
                 SetStateTo(CHECK_CAN);
                 break;
             case(SET_PWM):
-                set_speed(nextPWM, ignoreLimSw, Status_Reg_Switches_Read());
+                set_speed(nextPWM, ignoreLimSw);
                 SetStateTo(CHECK_CAN);
                 break;
             case(CALC_PID):
@@ -152,9 +151,9 @@ int main(void)
 void Initialize(void) {
     CyGlobalIntEnable; /* Enable global interrupts. LED arrays need this first */
     
-    Status_Reg_Switches_InterruptEnable();
+    Limit_Register_InterruptEnable();
     
-    address = Can_addr_Read();
+    address = Address_Register_Read();
     
     #ifdef ENABLE_DEBUG_UART
     UART_Start();
@@ -172,17 +171,16 @@ void Initialize(void) {
     CAN_LED_Write(~address & 1);
     #endif
     
-    
     // Initialize protocols
     InitCAN(0x4, (int)address);
     TMC6100_SPI_Start();
     Current_Sensor_I2C_Start();
     UART_Start();
+    Timer_Rotor_Delay_Start();   
+    Timer_Period_Reset_Start();   
     
-    
-
     isr_Limit_1_StartEx(Pin_Limit_Handler);
-    isr_period_PWM_StartEx(Period_Reset_Handler);
+    isr_Period_Reset_StartEx(Period_Reset_Handler);
 }
 
 void DebugPrint(char input) {

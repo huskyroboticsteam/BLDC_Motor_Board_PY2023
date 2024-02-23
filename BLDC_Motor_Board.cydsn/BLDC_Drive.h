@@ -34,7 +34,7 @@ struct HallState
     uint8_t C : 1;
 };
 
-void set_speed(int16_t speed, uint8_t disable_limit, uint8_t limitSW);
+void set_speed(int16_t speed, uint8_t disable_limit);
 int16_t GetCurrentSpeed();
 void readHallState();
 void commutateMotor(uint8_t hallState);

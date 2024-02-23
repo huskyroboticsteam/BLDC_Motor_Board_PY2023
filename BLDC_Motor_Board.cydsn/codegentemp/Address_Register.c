@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: Status_Reg_1.c  
+* File Name: Address_Register.c  
 * Version 1.90
 *
 * Description:
@@ -15,13 +15,13 @@
 * the software package with which this file was provided.
 *******************************************************************************/
 
-#include "Status_Reg_1.h"
+#include "Address_Register.h"
 
-#if !defined(Status_Reg_1_sts_sts_reg__REMOVED) /* Check for removal by optimization */
+#if !defined(Address_Register_sts_sts_reg__REMOVED) /* Check for removal by optimization */
 
 
 /*******************************************************************************
-* Function Name: Status_Reg_1_Read
+* Function Name: Address_Register_Read
 ********************************************************************************
 *
 * Summary:
@@ -34,14 +34,14 @@
 *  The current value in the Status Register.
 *
 *******************************************************************************/
-uint8 Status_Reg_1_Read(void) 
+uint8 Address_Register_Read(void) 
 { 
-    return Status_Reg_1_Status;
+    return Address_Register_Status;
 }
 
 
 /*******************************************************************************
-* Function Name: Status_Reg_1_InterruptEnable
+* Function Name: Address_Register_InterruptEnable
 ********************************************************************************
 *
 * Summary:
@@ -54,17 +54,17 @@ uint8 Status_Reg_1_Read(void)
 *  None.
 *
 *******************************************************************************/
-void Status_Reg_1_InterruptEnable(void) 
+void Address_Register_InterruptEnable(void) 
 {
     uint8 interruptState;
     interruptState = CyEnterCriticalSection();
-    Status_Reg_1_Status_Aux_Ctrl |= Status_Reg_1_STATUS_INTR_ENBL;
+    Address_Register_Status_Aux_Ctrl |= Address_Register_STATUS_INTR_ENBL;
     CyExitCriticalSection(interruptState);
 }
 
 
 /*******************************************************************************
-* Function Name: Status_Reg_1_InterruptDisable
+* Function Name: Address_Register_InterruptDisable
 ********************************************************************************
 *
 * Summary:
@@ -77,17 +77,17 @@ void Status_Reg_1_InterruptEnable(void)
 *  None.
 *
 *******************************************************************************/
-void Status_Reg_1_InterruptDisable(void) 
+void Address_Register_InterruptDisable(void) 
 {
     uint8 interruptState;
     interruptState = CyEnterCriticalSection();
-    Status_Reg_1_Status_Aux_Ctrl &= (uint8)(~Status_Reg_1_STATUS_INTR_ENBL);
+    Address_Register_Status_Aux_Ctrl &= (uint8)(~Address_Register_STATUS_INTR_ENBL);
     CyExitCriticalSection(interruptState);
 }
 
 
 /*******************************************************************************
-* Function Name: Status_Reg_1_WriteMask
+* Function Name: Address_Register_WriteMask
 ********************************************************************************
 *
 * Summary:
@@ -100,17 +100,17 @@ void Status_Reg_1_InterruptDisable(void)
 *  None.
 *
 *******************************************************************************/
-void Status_Reg_1_WriteMask(uint8 mask) 
+void Address_Register_WriteMask(uint8 mask) 
 {
-    #if(Status_Reg_1_INPUTS < 8u)
-    	mask &= ((uint8)(1u << Status_Reg_1_INPUTS) - 1u);
-	#endif /* End Status_Reg_1_INPUTS < 8u */
-    Status_Reg_1_Status_Mask = mask;
+    #if(Address_Register_INPUTS < 8u)
+    	mask &= ((uint8)(1u << Address_Register_INPUTS) - 1u);
+	#endif /* End Address_Register_INPUTS < 8u */
+    Address_Register_Status_Mask = mask;
 }
 
 
 /*******************************************************************************
-* Function Name: Status_Reg_1_ReadMask
+* Function Name: Address_Register_ReadMask
 ********************************************************************************
 *
 * Summary:
@@ -123,9 +123,9 @@ void Status_Reg_1_WriteMask(uint8 mask)
 *  The value of the interrupt mask of the Status Register.
 *
 *******************************************************************************/
-uint8 Status_Reg_1_ReadMask(void) 
+uint8 Address_Register_ReadMask(void) 
 {
-    return Status_Reg_1_Status_Mask;
+    return Address_Register_Status_Mask;
 }
 
 #endif /* End check for removal by optimization */

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccERlXwg.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 1
   29              		.cfi_startproc
   30              		@ args = 0, pretend = 0, frame = 0
   31              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 2
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccERlXwg.s 			page 2
 
 
   32 0000 10B5     		push	{r4, lr}
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 1
   75              	.L6:
   76 0006 C046     		.align	2
   77              	.L5:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 3
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccERlXwg.s 			page 3
 
 
   78 0008 00000000 		.word	.LANCHOR0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 1
  126              		@ sp needed
  127 0004 7047     		bx	lr
  128              	.L12:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 4
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccERlXwg.s 			page 4
 
 
  129 0006 C046     		.align	2
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 1
  176 0002 1178     		ldrb	r1, [r2]
  177 0004 0423     		movs	r3, #4
  178 0006 0B43     		orrs	r3, r1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 5
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccERlXwg.s 			page 5
 
 
  179 0008 1370     		strb	r3, [r2]
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 1
  228              		.cfi_startproc
  229              		@ args = 0, pretend = 0, frame = 0
  230              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 6
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccERlXwg.s 			page 6
 
 
  231              		@ link register save eliminated.
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 1
  279              		.global	MaxJointRevIsSet
  280              		.code	16
  281              		.thumb_func
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 7
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccERlXwg.s 			page 7
 
 
  282              		.type	MaxJointRevIsSet, %function
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 1
  327              		.align	2
  328              		.global	ClearPIDconst
  329              		.code	16
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 8
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccERlXwg.s 			page 8
 
 
  330              		.thumb_func
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 1
  380 0004 0400     		.2byte	0x4
  381 0006 00000000 		.4byte	.Ldebug_abbrev0
  382 000a 04       		.byte	0x4
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 9
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccERlXwg.s 			page 9
 
 
  383 000b 01       		.uleb128 0x1
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 1
  437 0077 5B010000 		.4byte	.LASF10
  438 007b 03       		.byte	0x3
  439 007c 18       		.byte	0x18
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 10
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccERlXwg.s 			page 10
 
 
  440 007d 2C000000 		.4byte	0x2c
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 1
  494 00ec 26       		.byte	0x26
  495 00ed 00000000 		.4byte	.LFB37
  496 00f1 0C000000 		.4byte	.LFE37-.LFB37
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 11
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccERlXwg.s 			page 11
 
 
  497 00f5 01       		.uleb128 0x1
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 1
  551 0167 5B000000 		.4byte	.LASF25
  552 016b 01       		.byte	0x1
  553 016c 3B       		.byte	0x3b
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 12
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccERlXwg.s 			page 12
 
 
  554 016d 00000000 		.4byte	.LFB43
@@ -718,10 +718,10 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 1
  608 01e2 15000000 		.4byte	.LASF36
  609 01e6 15000000 		.4byte	.LASF36
  610 01ea 04       		.byte	0x4
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 13
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccERlXwg.s 			page 13
 
 
- 611 01eb 20       		.byte	0x20
+ 611 01eb 1D       		.byte	0x1d
  612 01ec 00       		.byte	0
  613              		.section	.debug_abbrev,"",%progbits
  614              	.Ldebug_abbrev0:
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 1
  665 0032 03       		.uleb128 0x3
  666 0033 08       		.uleb128 0x8
  667 0034 00       		.byte	0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 14
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccERlXwg.s 			page 14
 
 
  668 0035 00       		.byte	0
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 1
  722 006f 01       		.uleb128 0x1
  723 0070 13       		.uleb128 0x13
  724 0071 00       		.byte	0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 15
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccERlXwg.s 			page 15
 
 
  725 0072 00       		.byte	0
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 1
  779 00a9 40       		.uleb128 0x40
  780 00aa 18       		.uleb128 0x18
  781 00ab 9742     		.uleb128 0x2117
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 16
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccERlXwg.s 			page 16
 
 
  782 00ad 19       		.uleb128 0x19
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 1
  836 0030 00000000 		.4byte	.LFB39
  837 0034 0C000000 		.4byte	.LFE39-.LFB39
  838 0038 00000000 		.4byte	.LFB40
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 17
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccERlXwg.s 			page 17
 
 
  839 003c 10000000 		.4byte	.LFE40-.LFB40
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 1
  886      6E737449 
  886      73536574 
  887              	.LASF36:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 18
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccERlXwg.s 			page 18
 
 
  888 0015 436C6561 		.ascii	"ClearPIDProgress\000"
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 1
  910      6E7400
  911              	.LASF26:
  912 00b0 4D61784A 		.ascii	"MaxJointRevIsSet\000"
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 19
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccERlXwg.s 			page 19
 
 
  912      6F696E74 
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 1
  932      37373135 
  933 01ce 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
  933      66756E63 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 20
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccERlXwg.s 			page 20
 
 
  933      74696F6E 
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 1
  957      65642063 
  957      68617200 
  958              	.LASF17:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 21
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccERlXwg.s 			page 21
 
 
  959 0285 5365744D 		.ascii	"SetModeTo\000"

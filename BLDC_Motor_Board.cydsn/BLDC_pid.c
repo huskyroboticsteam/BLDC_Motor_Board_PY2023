@@ -89,11 +89,8 @@ int32_t GetPositionmDeg() {
     return 0;
 }
 
-void SetPosition(int32_t mDegs) {
-        //TODO: Make Potentiometer Compatible
-        int32_t speed = Position_PID(mDegs);
-        
-        set_speed(speed, ignoreLimSw, Status_Reg_Switches_Read());   
+void SetPosition(int32_t mDegs) {       
+        set_speed(Position_PID(mDegs), ignoreLimSw);   
 }
 
 int32_t Position_PID(int32 targetmDeg){

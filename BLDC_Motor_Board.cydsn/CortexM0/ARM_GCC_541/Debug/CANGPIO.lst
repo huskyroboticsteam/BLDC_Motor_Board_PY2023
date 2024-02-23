@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
   33 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
   34              		.cfi_def_cfa_offset 24
   35              		.cfi_offset 3, -24
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 2
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 2
 
 
   36              		.cfi_offset 4, -20
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
   81              		.global	GetGPIOPWMChannelFromPacket
   82              		.code	16
   83              		.thumb_func
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 3
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 3
 
 
   84              		.type	GetGPIOPWMChannelFromPacket, %function
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  127              		.loc 1 42 0
  128              		@ sp needed
  129 000e 10BD     		pop	{r4, pc}
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 4
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 4
 
 
  130              		.cfi_endproc
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
   59:CANLib/CANGPIO.c ****     int nextByte = WritePacketIDOnly(packetToAssemble->data, ID_GPIO_PWM_DUTY_CYCLE);
  168              		.loc 1 59 0
  169 0016 E51C     		adds	r5, r4, #3
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 5
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 5
 
 
  170 0018 0121     		movs	r1, #1
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  216 000c 80B2     		uxth	r0, r0
   68:CANLib/CANGPIO.c **** }
  217              		.loc 1 68 0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 6
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 6
 
 
  218              		@ sp needed
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
   85:CANLib/CANGPIO.c **** 
   86:CANLib/CANGPIO.c ****     int nextByte = WritePacketIDOnly(packetToAssemble->data, ID_GPIO_ADC_STATE);
  256              		.loc 1 86 0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 7
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 7
 
 
  257 0016 E01C     		adds	r0, r4, #3
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  303              		.thumb_func
  304              		.type	GetGPIOADCStateFromPacket, %function
  305              	GetGPIOADCStateFromPacket:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 8
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 8
 
 
  306              	.LFB7:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  340              		.cfi_offset 6, -12
  341              		.cfi_offset 7, -8
  342              		.cfi_offset 14, -4
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 9
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 9
 
 
  343 0002 0400     		movs	r4, r0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  387              		.align	2
  388              		.global	GetGPIORegisterFromPacket
  389              		.code	16
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 10
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 10
 
 
  390              		.thumb_func
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  434              		.global	GetGPIOBitConfigFromPacket
  435              		.code	16
  436              		.thumb_func
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 11
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 11
 
 
  437              		.type	GetGPIOBitConfigFromPacket, %function
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  471              		.cfi_offset 4, -20
  472              		.cfi_offset 5, -16
  473              		.cfi_offset 6, -12
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 12
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 12
 
 
  474              		.cfi_offset 7, -8
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  518              		.size	AssembleGPIOWrite, .-AssembleGPIOWrite
  519              		.section	.text.GetGPIOWriteValuesFromPacket,"ax",%progbits
  520              		.align	2
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 13
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 13
 
 
  521              		.global	GetGPIOWriteValuesFromPacket
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  569 0033 37000000 		.4byte	0x37
  570 0037 02       		.uleb128 0x2
  571 0038 01       		.byte	0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 14
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 14
 
 
  572 0039 08       		.byte	0x8
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  626 009f 06       		.uleb128 0x6
  627 00a0 696400   		.ascii	"id\000"
  628 00a3 04       		.byte	0x4
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 15
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 15
 
 
  629 00a4 11       		.byte	0x11
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  683 0119 F1020000 		.4byte	.LASF18
  684 011d 01       		.byte	0x1
  685 011e 14       		.byte	0x14
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 16
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 16
 
 
  686 011f 81000000 		.4byte	0x81
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  740 018e 00       		.sleb128 0
  741 018f 0E       		.uleb128 0xe
  742 0190 01       		.uleb128 0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 17
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 17
 
 
  743 0191 51       		.byte	0x51
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  797 0200 0E       		.uleb128 0xe
  798 0201 01       		.uleb128 0x1
  799 0202 51       		.byte	0x51
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 18
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 18
 
 
  800 0203 01       		.uleb128 0x1
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  854 027b 0D       		.uleb128 0xd
  855 027c 10000000 		.4byte	.LVL17
  856 0280 E0050000 		.4byte	0x5e0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 19
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 19
 
 
  857 0284 8E020000 		.4byte	0x28e
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  911 02de 97010000 		.4byte	0x197
  912 02e2 1B020000 		.4byte	.LLST14
  913 02e6 0F       		.uleb128 0xf
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 20
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 20
 
 
  914 02e7 0C000000 		.4byte	.LVL25
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  968 034d 81000000 		.4byte	0x81
  969 0351 B7020000 		.4byte	.LLST18
  970 0355 0B       		.uleb128 0xb
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 21
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 21
 
 
  971 0356 2F000000 		.4byte	.LASF31
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  1025 03c5 11       		.uleb128 0x11
  1026 03c6 02020000 		.4byte	.LASF33
  1027 03ca 01       		.byte	0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 22
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 22
 
 
  1028 03cb 61       		.byte	0x61
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  1082 044f 7C010000 		.4byte	.LASF37
  1083 0453 01       		.byte	0x1
  1084 0454 72       		.byte	0x72
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 23
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 23
 
 
  1085 0455 81000000 		.4byte	0x81
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  1139 04c4 84       		.byte	0x84
  1140 04c5 81000000 		.4byte	0x81
  1141 04c9 00000000 		.4byte	.LFB10
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 24
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 24
 
 
  1142 04cd 04000000 		.4byte	.LFE10-.LFB10
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  1196 054e 30050000 		.4byte	.LLST35
  1197 0552 0B       		.uleb128 0xb
  1198 0553 D4010000 		.4byte	.LASF35
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 25
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 25
 
 
  1199 0557 01       		.byte	0x1
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  1253 05c6 04000000 		.4byte	.LFE13-.LFB13
  1254 05ca 01       		.uleb128 0x1
  1255 05cb 9C       		.byte	0x9c
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 26
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 26
 
 
  1256 05cc E0050000 		.4byte	0x5e0
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  1310 0017 0B       		.uleb128 0xb
  1311 0018 3E       		.uleb128 0x3e
  1312 0019 0B       		.uleb128 0xb
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 27
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 27
 
 
  1313 001a 03       		.uleb128 0x3
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  1367 0050 00       		.byte	0
  1368 0051 00       		.byte	0
  1369 0052 07       		.uleb128 0x7
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 28
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 28
 
 
  1370 0053 0D       		.uleb128 0xd
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  1424 008a 13       		.uleb128 0x13
  1425 008b 00       		.byte	0
  1426 008c 00       		.byte	0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 29
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 29
 
 
  1427 008d 0B       		.uleb128 0xb
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  1481 00ca 01       		.uleb128 0x1
  1482 00cb 31       		.uleb128 0x31
  1483 00cc 13       		.uleb128 0x13
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 30
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 30
 
 
  1484 00cd 00       		.byte	0
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  1538 0104 00       		.byte	0
  1539 0105 00       		.byte	0
  1540              		.section	.debug_loc,"",%progbits
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 31
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 31
 
 
  1541              	.Ldebug_loc0:
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  1595 007b 00000000 		.4byte	.LVL0
  1596 007f 08000000 		.4byte	.LVL1
  1597 0083 0100     		.2byte	0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 32
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 32
 
 
  1598 0085 53       		.byte	0x53
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  1652 0107 00000000 		.4byte	.LVL11
  1653 010b 04000000 		.4byte	.LVL12
  1654 010f 0100     		.2byte	0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 33
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 33
 
 
  1655 0111 50       		.byte	0x50
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  1709              	.LLST10:
  1710 018f 00000000 		.4byte	.LVL14
  1711 0193 0F000000 		.4byte	.LVL17-1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 34
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 34
 
 
  1712 0197 0100     		.2byte	0x1
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  1766              	.LLST14:
  1767 021b 00000000 		.4byte	.LVL23
  1768 021f 04000000 		.4byte	.LVL24
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 35
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 35
 
 
  1769 0223 0100     		.2byte	0x1
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  1823 02a1 0F000000 		.4byte	.LVL29-1
  1824 02a5 2A000000 		.4byte	.LFE5
  1825 02a9 0400     		.2byte	0x4
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 36
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 36
 
 
  1826 02ab F3       		.byte	0xf3
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  1880 032d 02000000 		.4byte	.LVL34
  1881 0331 04000000 		.4byte	.LFE6
  1882 0335 0400     		.2byte	0x4
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 37
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 37
 
 
  1883 0337 F3       		.byte	0xf3
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  1937 03b5 13000000 		.4byte	.LVL41-1
  1938 03b9 0100     		.2byte	0x1
  1939 03bb 52       		.byte	0x52
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 38
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 38
 
 
  1940 03bc 13000000 		.4byte	.LVL41-1
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  1994 043f 0200     		.2byte	0x2
  1995 0441 73       		.byte	0x73
  1996 0442 00       		.sleb128 0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 39
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 39
 
 
  1997 0443 13000000 		.4byte	.LVL41-1
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  2051 04cc 50       		.byte	0x50
  2052 04cd 02000000 		.4byte	.LVL52
  2053 04d1 04000000 		.4byte	.LFE11
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 40
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 40
 
 
  2054 04d5 0400     		.2byte	0x4
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  2108 0551 00000000 		.4byte	.LVL53
  2109 0555 08000000 		.4byte	.LVL54
  2110 0559 0100     		.2byte	0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 41
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 41
 
 
  2111 055b 53       		.byte	0x53
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  2165 05de 0100     		.2byte	0x1
  2166 05e0 50       		.byte	0x50
  2167 05e1 24000000 		.4byte	.LVL59
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 42
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 42
 
 
  2168 05e5 2A000000 		.4byte	.LVL60
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  2222 006c 04000000 		.4byte	.LFE11-.LFB11
  2223 0070 00000000 		.4byte	.LFB12
  2224 0074 34000000 		.4byte	.LFE12-.LFB12
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 43
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 43
 
 
  2225 0078 00000000 		.4byte	.LFB13
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  2267      6E637946 
  2268              	.LASF31:
  2269 002f 73746174 		.ascii	"state\000"
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 44
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 44
 
 
  2269      6500
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  2290 0160 47657447 		.ascii	"GetGPIOPWMChannelFromPacket\000"
  2290      50494F50 
  2290      574D4368 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 45
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 45
 
 
  2290      616E6E65 
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  2314 0226 62697457 		.ascii	"bitWriteValue\000"
  2314      72697465 
  2314      56616C75 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 46
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 46
 
 
  2314      6500
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  2335              	.LASF30:
  2336 02e6 41444343 		.ascii	"ADCChannel\000"
  2336      68616E6E 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 47
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 47
 
 
  2336      656C00
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 1
  2356      53657450 
  2356      574D4475 
  2357              	.LASF20:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccsWe66K.s 			page 48
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc09vo6a.s 			page 48
 
 
  2358 03be 66726571 		.ascii	"frequency\000"

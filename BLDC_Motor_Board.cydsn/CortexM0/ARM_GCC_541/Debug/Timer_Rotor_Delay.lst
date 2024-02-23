@@ -1,0 +1,2463 @@
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"Timer_Rotor_Delay.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.Timer_Rotor_Delay_Enable,"ax",%progbits
+  20              		.align	2
+  21              		.global	Timer_Rotor_Delay_Enable
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	Timer_Rotor_Delay_Enable, %function
+  25              	Timer_Rotor_Delay_Enable:
+  26              	.LFB2:
+  27              		.file 1 "Generated_Source\\PSoC4\\Timer_Rotor_Delay.c"
+   1:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** /*******************************************************************************
+   2:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * File Name: Timer_Rotor_Delay.c
+   3:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Version 2.80
+   4:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+   5:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Description:
+   6:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  The Timer component consists of a 8, 16, 24 or 32-bit timer with
+   7:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  a selectable period between 2 and 2^Width - 1.  The timer may free run
+   8:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  or be used as a capture timer as well.  The capture can be initiated
+   9:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  by a positive or negative edge signal as well as via software.
+  10:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  A trigger input can be programmed to enable the timer on rising edge
+  11:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  falling edge, either edge or continous run.
+  12:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  Interrupts may be generated due to a terminal count condition
+  13:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  or a capture event.
+  14:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+  15:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Note:
+  16:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+  17:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** ********************************************************************************
+  18:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Copyright 2008-2017, Cypress Semiconductor Corporation.  All rights reserved.
+  19:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * You may use this file only in accordance with the license, terms, conditions,
+  20:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  21:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * the software package with which this file was provided.
+  22:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** ********************************************************************************/
+  23:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+  24:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** #include "Timer_Rotor_Delay.h"
+  25:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+  26:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** uint8 Timer_Rotor_Delay_initVar = 0u;
+  27:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+  28:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+  29:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** /*******************************************************************************
+  30:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Function Name: Timer_Rotor_Delay_Init
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 2
+
+
+  31:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** ********************************************************************************
+  32:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+  33:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Summary:
+  34:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  Initialize to the schematic state
+  35:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+  36:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Parameters:
+  37:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  void
+  38:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+  39:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Return:
+  40:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  void
+  41:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+  42:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *******************************************************************************/
+  43:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** void Timer_Rotor_Delay_Init(void) 
+  44:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** {
+  45:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #if(!Timer_Rotor_Delay_UsingFixedFunction)
+  46:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****             /* Interrupt State Backup for Critical Region*/
+  47:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****             uint8 Timer_Rotor_Delay_interruptState;
+  48:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #endif /* Interrupt state back up for Fixed Function only */
+  49:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+  50:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #if (Timer_Rotor_Delay_UsingFixedFunction)
+  51:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         /* Clear all bits but the enable bit (if it's already set) for Timer operation */
+  52:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         Timer_Rotor_Delay_CONTROL &= Timer_Rotor_Delay_CTRL_ENABLE;
+  53:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+  54:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         /* Clear the mode bits for continuous run mode */
+  55:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         #if (CY_PSOC5A)
+  56:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****             Timer_Rotor_Delay_CONTROL2 &= ((uint8)(~Timer_Rotor_Delay_CTRL_MODE_MASK));
+  57:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         #endif /* Clear bits in CONTROL2 only in PSOC5A */
+  58:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+  59:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         #if (CY_PSOC3 || CY_PSOC5LP)
+  60:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****             Timer_Rotor_Delay_CONTROL3 &= ((uint8)(~Timer_Rotor_Delay_CTRL_MODE_MASK));
+  61:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         #endif /* CONTROL3 register exists only in PSoC3 OR PSoC5LP */
+  62:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+  63:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         /* Check if One Shot mode is enabled i.e. RunMode !=0*/
+  64:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         #if (Timer_Rotor_Delay_RunModeUsed != 0x0u)
+  65:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****             /* Set 3rd bit of Control register to enable one shot mode */
+  66:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****             Timer_Rotor_Delay_CONTROL |= 0x04u;
+  67:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         #endif /* One Shot enabled only when RunModeUsed is not Continuous*/
+  68:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+  69:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         #if (Timer_Rotor_Delay_RunModeUsed == 2)
+  70:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****             #if (CY_PSOC5A)
+  71:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****                 /* Set last 2 bits of control2 register if one shot(halt on
+  72:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****                 interrupt) is enabled*/
+  73:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****                 Timer_Rotor_Delay_CONTROL2 |= 0x03u;
+  74:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****             #endif /* Set One-Shot Halt on Interrupt bit in CONTROL2 for PSoC5A */
+  75:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+  76:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****             #if (CY_PSOC3 || CY_PSOC5LP)
+  77:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****                 /* Set last 2 bits of control3 register if one shot(halt on
+  78:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****                 interrupt) is enabled*/
+  79:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****                 Timer_Rotor_Delay_CONTROL3 |= 0x03u;
+  80:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****             #endif /* Set One-Shot Halt on Interrupt bit in CONTROL3 for PSoC3 or PSoC5LP */
+  81:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+  82:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         #endif /* Remove section if One Shot Halt on Interrupt is not enabled */
+  83:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+  84:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         #if (Timer_Rotor_Delay_UsingHWEnable != 0)
+  85:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****             #if (CY_PSOC5A)
+  86:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****                 /* Set the default Run Mode of the Timer to Continuous */
+  87:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****                 Timer_Rotor_Delay_CONTROL2 |= Timer_Rotor_Delay_CTRL_MODE_PULSEWIDTH;
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 3
+
+
+  88:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****             #endif /* Set Continuous Run Mode in CONTROL2 for PSoC5A */
+  89:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+  90:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****             #if (CY_PSOC3 || CY_PSOC5LP)
+  91:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****                 /* Clear and Set ROD and COD bits of CFG2 register */
+  92:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****                 Timer_Rotor_Delay_CONTROL3 &= ((uint8)(~Timer_Rotor_Delay_CTRL_RCOD_MASK));
+  93:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****                 Timer_Rotor_Delay_CONTROL3 |= Timer_Rotor_Delay_CTRL_RCOD;
+  94:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+  95:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****                 /* Clear and Enable the HW enable bit in CFG2 register */
+  96:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****                 Timer_Rotor_Delay_CONTROL3 &= ((uint8)(~Timer_Rotor_Delay_CTRL_ENBL_MASK));
+  97:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****                 Timer_Rotor_Delay_CONTROL3 |= Timer_Rotor_Delay_CTRL_ENBL;
+  98:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+  99:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****                 /* Set the default Run Mode of the Timer to Continuous */
+ 100:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****                 Timer_Rotor_Delay_CONTROL3 |= Timer_Rotor_Delay_CTRL_MODE_CONTINUOUS;
+ 101:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****             #endif /* Set Continuous Run Mode in CONTROL3 for PSoC3ES3 or PSoC5A */
+ 102:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 103:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         #endif /* Configure Run Mode with hardware enable */
+ 104:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 105:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         /* Clear and Set SYNCTC and SYNCCMP bits of RT1 register */
+ 106:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         Timer_Rotor_Delay_RT1 &= ((uint8)(~Timer_Rotor_Delay_RT1_MASK));
+ 107:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         Timer_Rotor_Delay_RT1 |= Timer_Rotor_Delay_SYNC;
+ 108:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 109:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         /*Enable DSI Sync all all inputs of the Timer*/
+ 110:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         Timer_Rotor_Delay_RT1 &= ((uint8)(~Timer_Rotor_Delay_SYNCDSI_MASK));
+ 111:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         Timer_Rotor_Delay_RT1 |= Timer_Rotor_Delay_SYNCDSI_EN;
+ 112:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 113:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         /* Set the IRQ to use the status register interrupts */
+ 114:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         Timer_Rotor_Delay_CONTROL2 |= Timer_Rotor_Delay_CTRL2_IRQ_SEL;
+ 115:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #endif /* Configuring registers of fixed function implementation */
+ 116:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 117:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     /* Set Initial values from Configuration */
+ 118:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     Timer_Rotor_Delay_WritePeriod(Timer_Rotor_Delay_INIT_PERIOD);
+ 119:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     Timer_Rotor_Delay_WriteCounter(Timer_Rotor_Delay_INIT_PERIOD);
+ 120:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 121:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #if (Timer_Rotor_Delay_UsingHWCaptureCounter)/* Capture counter is enabled */
+ 122:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         Timer_Rotor_Delay_CAPTURE_COUNT_CTRL |= Timer_Rotor_Delay_CNTR_ENABLE;
+ 123:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         Timer_Rotor_Delay_SetCaptureCount(Timer_Rotor_Delay_INIT_CAPTURE_COUNT);
+ 124:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #endif /* Configure capture counter value */
+ 125:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 126:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #if (!Timer_Rotor_Delay_UsingFixedFunction)
+ 127:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         #if (Timer_Rotor_Delay_SoftwareCaptureMode)
+ 128:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****             Timer_Rotor_Delay_SetCaptureMode(Timer_Rotor_Delay_INIT_CAPTURE_MODE);
+ 129:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         #endif /* Set Capture Mode for UDB implementation if capture mode is software controlled */
+ 130:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 131:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         #if (Timer_Rotor_Delay_SoftwareTriggerMode)
+ 132:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****             #if (!Timer_Rotor_Delay_UDB_CONTROL_REG_REMOVED)
+ 133:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****                 if (0u == (Timer_Rotor_Delay_CONTROL & Timer_Rotor_Delay__B_TIMER__TM_SOFTWARE))
+ 134:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****                 {
+ 135:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****                     Timer_Rotor_Delay_SetTriggerMode(Timer_Rotor_Delay_INIT_TRIGGER_MODE);
+ 136:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****                 }
+ 137:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****             #endif /* (!Timer_Rotor_Delay_UDB_CONTROL_REG_REMOVED) */
+ 138:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         #endif /* Set trigger mode for UDB Implementation if trigger mode is software controlled */
+ 139:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 140:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         /* CyEnterCriticalRegion and CyExitCriticalRegion are used to mark following region critica
+ 141:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         /* Enter Critical Region*/
+ 142:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         Timer_Rotor_Delay_interruptState = CyEnterCriticalSection();
+ 143:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 144:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         /* Use the interrupt output of the status register for IRQ output */
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 4
+
+
+ 145:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         Timer_Rotor_Delay_STATUS_AUX_CTRL |= Timer_Rotor_Delay_STATUS_ACTL_INT_EN_MASK;
+ 146:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 147:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         /* Exit Critical Region*/
+ 148:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         CyExitCriticalSection(Timer_Rotor_Delay_interruptState);
+ 149:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 150:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         #if (Timer_Rotor_Delay_EnableTriggerMode)
+ 151:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****             Timer_Rotor_Delay_EnableTrigger();
+ 152:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         #endif /* Set Trigger enable bit for UDB implementation in the control register*/
+ 153:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 		
+ 154:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 		
+ 155:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         #if (Timer_Rotor_Delay_InterruptOnCaptureCount && !Timer_Rotor_Delay_UDB_CONTROL_REG_REMOVE
+ 156:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****             Timer_Rotor_Delay_SetInterruptCount(Timer_Rotor_Delay_INIT_INT_CAPTURE_COUNT);
+ 157:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         #endif /* Set interrupt count in UDB implementation if interrupt count feature is checked.*
+ 158:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 159:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         Timer_Rotor_Delay_ClearFIFO();
+ 160:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #endif /* Configure additional features of UDB implementation */
+ 161:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 162:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     Timer_Rotor_Delay_SetInterruptMode(Timer_Rotor_Delay_INIT_INTERRUPT_MODE);
+ 163:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** }
+ 164:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 165:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 166:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** /*******************************************************************************
+ 167:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Function Name: Timer_Rotor_Delay_Enable
+ 168:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** ********************************************************************************
+ 169:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 170:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Summary:
+ 171:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  Enable the Timer
+ 172:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 173:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Parameters:
+ 174:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  void
+ 175:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 176:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Return:
+ 177:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  void
+ 178:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 179:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *******************************************************************************/
+ 180:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** void Timer_Rotor_Delay_Enable(void) 
+ 181:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** {
+  28              		.loc 1 181 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+ 182:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     /* Globally Enable the Fixed Function Block chosen */
+ 183:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #if (Timer_Rotor_Delay_UsingFixedFunction)
+ 184:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         Timer_Rotor_Delay_GLOBAL_ENABLE |= Timer_Rotor_Delay_BLOCK_EN_MASK;
+ 185:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         Timer_Rotor_Delay_GLOBAL_STBY_ENABLE |= Timer_Rotor_Delay_BLOCK_STBY_EN_MASK;
+ 186:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #endif /* Set Enable bit for enabling Fixed function timer*/
+ 187:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 188:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     /* Remove assignment if control register is removed */
+ 189:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #if (!Timer_Rotor_Delay_UDB_CONTROL_REG_REMOVED || Timer_Rotor_Delay_UsingFixedFunction)
+ 190:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         Timer_Rotor_Delay_CONTROL |= Timer_Rotor_Delay_CTRL_ENABLE;
+  33              		.loc 1 190 0
+  34 0000 034A     		ldr	r2, .L2
+  35 0002 1178     		ldrb	r1, [r2]
+  36 0004 8023     		movs	r3, #128
+  37 0006 5B42     		rsbs	r3, r3, #0
+  38 0008 0B43     		orrs	r3, r1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 5
+
+
+  39 000a DBB2     		uxtb	r3, r3
+  40 000c 1370     		strb	r3, [r2]
+ 191:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #endif /* Remove assignment if control register is removed */
+ 192:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** }
+  41              		.loc 1 192 0
+  42              		@ sp needed
+  43 000e 7047     		bx	lr
+  44              	.L3:
+  45              		.align	2
+  46              	.L2:
+  47 0010 74000F40 		.word	1074724980
+  48              		.cfi_endproc
+  49              	.LFE2:
+  50              		.size	Timer_Rotor_Delay_Enable, .-Timer_Rotor_Delay_Enable
+  51              		.section	.text.Timer_Rotor_Delay_Stop,"ax",%progbits
+  52              		.align	2
+  53              		.global	Timer_Rotor_Delay_Stop
+  54              		.code	16
+  55              		.thumb_func
+  56              		.type	Timer_Rotor_Delay_Stop, %function
+  57              	Timer_Rotor_Delay_Stop:
+  58              	.LFB4:
+ 193:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 194:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 195:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** /*******************************************************************************
+ 196:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Function Name: Timer_Rotor_Delay_Start
+ 197:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** ********************************************************************************
+ 198:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 199:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Summary:
+ 200:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  The start function initializes the timer with the default values, the
+ 201:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  enables the timerto begin counting.  It does not enable interrupts,
+ 202:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  the EnableInt command should be called if interrupt generation is required.
+ 203:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 204:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Parameters:
+ 205:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  void
+ 206:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 207:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Return:
+ 208:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  void
+ 209:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 210:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Global variables:
+ 211:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  Timer_Rotor_Delay_initVar: Is modified when this function is called for the
+ 212:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *   first time. Is used to ensure that initialization happens only once.
+ 213:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 214:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *******************************************************************************/
+ 215:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** void Timer_Rotor_Delay_Start(void) 
+ 216:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** {
+ 217:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     if(Timer_Rotor_Delay_initVar == 0u)
+ 218:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     {
+ 219:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         Timer_Rotor_Delay_Init();
+ 220:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 221:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         Timer_Rotor_Delay_initVar = 1u;   /* Clear this bit for Initialization */
+ 222:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     }
+ 223:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 224:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     /* Enable the Timer */
+ 225:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     Timer_Rotor_Delay_Enable();
+ 226:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** }
+ 227:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 6
+
+
+ 228:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 229:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** /*******************************************************************************
+ 230:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Function Name: Timer_Rotor_Delay_Stop
+ 231:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** ********************************************************************************
+ 232:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 233:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Summary:
+ 234:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  The stop function halts the timer, but does not change any modes or disable
+ 235:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  interrupts.
+ 236:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 237:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Parameters:
+ 238:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  void
+ 239:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 240:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Return:
+ 241:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  void
+ 242:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 243:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Side Effects: If the Enable mode is set to Hardware only then this function
+ 244:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *               has no effect on the operation of the timer.
+ 245:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 246:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *******************************************************************************/
+ 247:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** void Timer_Rotor_Delay_Stop(void) 
+ 248:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** {
+  59              		.loc 1 248 0
+  60              		.cfi_startproc
+  61              		@ args = 0, pretend = 0, frame = 0
+  62              		@ frame_needed = 0, uses_anonymous_args = 0
+  63              		@ link register save eliminated.
+ 249:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     /* Disable Timer */
+ 250:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #if(!Timer_Rotor_Delay_UDB_CONTROL_REG_REMOVED || Timer_Rotor_Delay_UsingFixedFunction)
+ 251:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         Timer_Rotor_Delay_CONTROL &= ((uint8)(~Timer_Rotor_Delay_CTRL_ENABLE));
+  64              		.loc 1 251 0
+  65 0000 024A     		ldr	r2, .L5
+  66 0002 1178     		ldrb	r1, [r2]
+  67 0004 7F23     		movs	r3, #127
+  68 0006 0B40     		ands	r3, r1
+  69 0008 1370     		strb	r3, [r2]
+ 252:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #endif /* Remove assignment if control register is removed */
+ 253:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 254:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     /* Globally disable the Fixed Function Block chosen */
+ 255:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #if (Timer_Rotor_Delay_UsingFixedFunction)
+ 256:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         Timer_Rotor_Delay_GLOBAL_ENABLE &= ((uint8)(~Timer_Rotor_Delay_BLOCK_EN_MASK));
+ 257:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         Timer_Rotor_Delay_GLOBAL_STBY_ENABLE &= ((uint8)(~Timer_Rotor_Delay_BLOCK_STBY_EN_MASK));
+ 258:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #endif /* Disable global enable for the Timer Fixed function block to stop the Timer*/
+ 259:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** }
+  70              		.loc 1 259 0
+  71              		@ sp needed
+  72 000a 7047     		bx	lr
+  73              	.L6:
+  74              		.align	2
+  75              	.L5:
+  76 000c 74000F40 		.word	1074724980
+  77              		.cfi_endproc
+  78              	.LFE4:
+  79              		.size	Timer_Rotor_Delay_Stop, .-Timer_Rotor_Delay_Stop
+  80              		.section	.text.Timer_Rotor_Delay_SetInterruptMode,"ax",%progbits
+  81              		.align	2
+  82              		.global	Timer_Rotor_Delay_SetInterruptMode
+  83              		.code	16
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 7
+
+
+  84              		.thumb_func
+  85              		.type	Timer_Rotor_Delay_SetInterruptMode, %function
+  86              	Timer_Rotor_Delay_SetInterruptMode:
+  87              	.LFB5:
+ 260:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 261:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 262:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** /*******************************************************************************
+ 263:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Function Name: Timer_Rotor_Delay_SetInterruptMode
+ 264:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** ********************************************************************************
+ 265:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 266:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Summary:
+ 267:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  This function selects which of the interrupt inputs may cause an interrupt.
+ 268:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  The twosources are caputure and terminal.  One, both or neither may
+ 269:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  be selected.
+ 270:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 271:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Parameters:
+ 272:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  interruptMode:   This parameter is used to enable interrups on either/or
+ 273:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *                   terminal count or capture.
+ 274:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 275:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Return:
+ 276:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  void
+ 277:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 278:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *******************************************************************************/
+ 279:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** void Timer_Rotor_Delay_SetInterruptMode(uint8 interruptMode) 
+ 280:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** {
+  88              		.loc 1 280 0
+  89              		.cfi_startproc
+  90              		@ args = 0, pretend = 0, frame = 0
+  91              		@ frame_needed = 0, uses_anonymous_args = 0
+  92              		@ link register save eliminated.
+  93              	.LVL0:
+ 281:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     Timer_Rotor_Delay_STATUS_MASK = interruptMode;
+  94              		.loc 1 281 0
+  95 0000 014B     		ldr	r3, .L8
+  96 0002 1870     		strb	r0, [r3]
+ 282:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** }
+  97              		.loc 1 282 0
+  98              		@ sp needed
+  99 0004 7047     		bx	lr
+ 100              	.L9:
+ 101 0006 C046     		.align	2
+ 102              	.L8:
+ 103 0008 82000F40 		.word	1074724994
+ 104              		.cfi_endproc
+ 105              	.LFE5:
+ 106              		.size	Timer_Rotor_Delay_SetInterruptMode, .-Timer_Rotor_Delay_SetInterruptMode
+ 107              		.section	.text.Timer_Rotor_Delay_SoftwareCapture,"ax",%progbits
+ 108              		.align	2
+ 109              		.global	Timer_Rotor_Delay_SoftwareCapture
+ 110              		.code	16
+ 111              		.thumb_func
+ 112              		.type	Timer_Rotor_Delay_SoftwareCapture, %function
+ 113              	Timer_Rotor_Delay_SoftwareCapture:
+ 114              	.LFB6:
+ 283:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 284:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 285:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** /*******************************************************************************
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 8
+
+
+ 286:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Function Name: Timer_Rotor_Delay_SoftwareCapture
+ 287:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** ********************************************************************************
+ 288:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 289:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Summary:
+ 290:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  This function forces a capture independent of the capture signal.
+ 291:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 292:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Parameters:
+ 293:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  void
+ 294:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 295:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Return:
+ 296:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  void
+ 297:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 298:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Side Effects:
+ 299:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  An existing hardware capture could be overwritten.
+ 300:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 301:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *******************************************************************************/
+ 302:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** void Timer_Rotor_Delay_SoftwareCapture(void) 
+ 303:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** {
+ 115              		.loc 1 303 0
+ 116              		.cfi_startproc
+ 117              		@ args = 0, pretend = 0, frame = 0
+ 118              		@ frame_needed = 0, uses_anonymous_args = 0
+ 119              		@ link register save eliminated.
+ 304:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     /* Generate a software capture by reading the counter register */
+ 305:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #if(Timer_Rotor_Delay_UsingFixedFunction)
+ 306:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         (void)CY_GET_REG16(Timer_Rotor_Delay_COUNTER_LSB_PTR);
+ 307:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #else
+ 308:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         (void)CY_GET_REG8(Timer_Rotor_Delay_COUNTER_LSB_PTR_8BIT);
+ 120              		.loc 1 308 0
+ 121 0000 014B     		ldr	r3, .L11
+ 122 0002 1B78     		ldrb	r3, [r3]
+ 309:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #endif/* (Timer_Rotor_Delay_UsingFixedFunction) */
+ 310:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     /* Capture Data is now in the FIFO */
+ 311:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** }
+ 123              		.loc 1 311 0
+ 124              		@ sp needed
+ 125 0004 7047     		bx	lr
+ 126              	.L12:
+ 127 0006 C046     		.align	2
+ 128              	.L11:
+ 129 0008 04000F40 		.word	1074724868
+ 130              		.cfi_endproc
+ 131              	.LFE6:
+ 132              		.size	Timer_Rotor_Delay_SoftwareCapture, .-Timer_Rotor_Delay_SoftwareCapture
+ 133              		.section	.text.Timer_Rotor_Delay_ReadStatusRegister,"ax",%progbits
+ 134              		.align	2
+ 135              		.global	Timer_Rotor_Delay_ReadStatusRegister
+ 136              		.code	16
+ 137              		.thumb_func
+ 138              		.type	Timer_Rotor_Delay_ReadStatusRegister, %function
+ 139              	Timer_Rotor_Delay_ReadStatusRegister:
+ 140              	.LFB7:
+ 312:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 313:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 314:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** /*******************************************************************************
+ 315:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Function Name: Timer_Rotor_Delay_ReadStatusRegister
+ 316:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** ********************************************************************************
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 9
+
+
+ 317:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 318:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Summary:
+ 319:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  Reads the status register and returns it's state. This function should use
+ 320:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  defined types for the bit-field information as the bits in this register may
+ 321:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  be permuteable.
+ 322:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 323:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Parameters:
+ 324:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  void
+ 325:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 326:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Return:
+ 327:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  The contents of the status register
+ 328:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 329:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Side Effects:
+ 330:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  Status register bits may be clear on read.
+ 331:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 332:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *******************************************************************************/
+ 333:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** uint8   Timer_Rotor_Delay_ReadStatusRegister(void) 
+ 334:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** {
+ 141              		.loc 1 334 0
+ 142              		.cfi_startproc
+ 143              		@ args = 0, pretend = 0, frame = 0
+ 144              		@ frame_needed = 0, uses_anonymous_args = 0
+ 145              		@ link register save eliminated.
+ 335:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     return (Timer_Rotor_Delay_STATUS);
+ 146              		.loc 1 335 0
+ 147 0000 014B     		ldr	r3, .L14
+ 148 0002 1878     		ldrb	r0, [r3]
+ 149 0004 C0B2     		uxtb	r0, r0
+ 336:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** }
+ 150              		.loc 1 336 0
+ 151              		@ sp needed
+ 152 0006 7047     		bx	lr
+ 153              	.L15:
+ 154              		.align	2
+ 155              	.L14:
+ 156 0008 62000F40 		.word	1074724962
+ 157              		.cfi_endproc
+ 158              	.LFE7:
+ 159              		.size	Timer_Rotor_Delay_ReadStatusRegister, .-Timer_Rotor_Delay_ReadStatusRegister
+ 160              		.section	.text.Timer_Rotor_Delay_ReadControlRegister,"ax",%progbits
+ 161              		.align	2
+ 162              		.global	Timer_Rotor_Delay_ReadControlRegister
+ 163              		.code	16
+ 164              		.thumb_func
+ 165              		.type	Timer_Rotor_Delay_ReadControlRegister, %function
+ 166              	Timer_Rotor_Delay_ReadControlRegister:
+ 167              	.LFB8:
+ 337:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 338:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 339:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** #if (!Timer_Rotor_Delay_UDB_CONTROL_REG_REMOVED) /* Remove API if control register is unused */
+ 340:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 341:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 342:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** /*******************************************************************************
+ 343:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Function Name: Timer_Rotor_Delay_ReadControlRegister
+ 344:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** ********************************************************************************
+ 345:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 346:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Summary:
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 10
+
+
+ 347:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  Reads the control register and returns it's value.
+ 348:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 349:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Parameters:
+ 350:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  void
+ 351:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 352:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Return:
+ 353:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  The contents of the control register
+ 354:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 355:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *******************************************************************************/
+ 356:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** uint8 Timer_Rotor_Delay_ReadControlRegister(void) 
+ 357:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** {
+ 168              		.loc 1 357 0
+ 169              		.cfi_startproc
+ 170              		@ args = 0, pretend = 0, frame = 0
+ 171              		@ frame_needed = 0, uses_anonymous_args = 0
+ 172              		@ link register save eliminated.
+ 358:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #if (!Timer_Rotor_Delay_UDB_CONTROL_REG_REMOVED) 
+ 359:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         return ((uint8)Timer_Rotor_Delay_CONTROL);
+ 173              		.loc 1 359 0
+ 174 0000 014B     		ldr	r3, .L17
+ 175 0002 1878     		ldrb	r0, [r3]
+ 176 0004 C0B2     		uxtb	r0, r0
+ 360:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #else
+ 361:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         return (0);
+ 362:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #endif /* (!Timer_Rotor_Delay_UDB_CONTROL_REG_REMOVED) */
+ 363:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** }
+ 177              		.loc 1 363 0
+ 178              		@ sp needed
+ 179 0006 7047     		bx	lr
+ 180              	.L18:
+ 181              		.align	2
+ 182              	.L17:
+ 183 0008 74000F40 		.word	1074724980
+ 184              		.cfi_endproc
+ 185              	.LFE8:
+ 186              		.size	Timer_Rotor_Delay_ReadControlRegister, .-Timer_Rotor_Delay_ReadControlRegister
+ 187              		.section	.text.Timer_Rotor_Delay_WriteControlRegister,"ax",%progbits
+ 188              		.align	2
+ 189              		.global	Timer_Rotor_Delay_WriteControlRegister
+ 190              		.code	16
+ 191              		.thumb_func
+ 192              		.type	Timer_Rotor_Delay_WriteControlRegister, %function
+ 193              	Timer_Rotor_Delay_WriteControlRegister:
+ 194              	.LFB9:
+ 364:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 365:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 366:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** /*******************************************************************************
+ 367:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Function Name: Timer_Rotor_Delay_WriteControlRegister
+ 368:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** ********************************************************************************
+ 369:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 370:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Summary:
+ 371:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  Sets the bit-field of the control register.
+ 372:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 373:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Parameters:
+ 374:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  control: The contents of the control register
+ 375:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 376:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Return:
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 11
+
+
+ 377:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 378:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *******************************************************************************/
+ 379:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** void Timer_Rotor_Delay_WriteControlRegister(uint8 control) 
+ 380:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** {
+ 195              		.loc 1 380 0
+ 196              		.cfi_startproc
+ 197              		@ args = 0, pretend = 0, frame = 0
+ 198              		@ frame_needed = 0, uses_anonymous_args = 0
+ 199              		@ link register save eliminated.
+ 200              	.LVL1:
+ 381:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #if (!Timer_Rotor_Delay_UDB_CONTROL_REG_REMOVED) 
+ 382:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         Timer_Rotor_Delay_CONTROL = control;
+ 201              		.loc 1 382 0
+ 202 0000 014B     		ldr	r3, .L20
+ 203 0002 1870     		strb	r0, [r3]
+ 383:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #else
+ 384:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         control = 0u;
+ 385:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #endif /* (!Timer_Rotor_Delay_UDB_CONTROL_REG_REMOVED) */
+ 386:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** }
+ 204              		.loc 1 386 0
+ 205              		@ sp needed
+ 206 0004 7047     		bx	lr
+ 207              	.L21:
+ 208 0006 C046     		.align	2
+ 209              	.L20:
+ 210 0008 74000F40 		.word	1074724980
+ 211              		.cfi_endproc
+ 212              	.LFE9:
+ 213              		.size	Timer_Rotor_Delay_WriteControlRegister, .-Timer_Rotor_Delay_WriteControlRegister
+ 214              		.section	.text.Timer_Rotor_Delay_ReadPeriod,"ax",%progbits
+ 215              		.align	2
+ 216              		.global	Timer_Rotor_Delay_ReadPeriod
+ 217              		.code	16
+ 218              		.thumb_func
+ 219              		.type	Timer_Rotor_Delay_ReadPeriod, %function
+ 220              	Timer_Rotor_Delay_ReadPeriod:
+ 221              	.LFB10:
+ 387:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 388:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** #endif /* Remove API if control register is unused */
+ 389:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 390:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 391:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** /*******************************************************************************
+ 392:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Function Name: Timer_Rotor_Delay_ReadPeriod
+ 393:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** ********************************************************************************
+ 394:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 395:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Summary:
+ 396:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  This function returns the current value of the Period.
+ 397:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 398:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Parameters:
+ 399:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  void
+ 400:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 401:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Return:
+ 402:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  The present value of the counter.
+ 403:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 404:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *******************************************************************************/
+ 405:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** uint16 Timer_Rotor_Delay_ReadPeriod(void) 
+ 406:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** {
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 12
+
+
+ 222              		.loc 1 406 0
+ 223              		.cfi_startproc
+ 224              		@ args = 0, pretend = 0, frame = 0
+ 225              		@ frame_needed = 0, uses_anonymous_args = 0
+ 226              		@ link register save eliminated.
+ 407:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****    #if(Timer_Rotor_Delay_UsingFixedFunction)
+ 408:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****        return ((uint16)CY_GET_REG16(Timer_Rotor_Delay_PERIOD_LSB_PTR));
+ 409:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****    #else
+ 410:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****        return (CY_GET_REG16(Timer_Rotor_Delay_PERIOD_LSB_PTR));
+ 227              		.loc 1 410 0
+ 228 0000 014B     		ldr	r3, .L23
+ 229 0002 1888     		ldrh	r0, [r3]
+ 230 0004 80B2     		uxth	r0, r0
+ 411:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****    #endif /* (Timer_Rotor_Delay_UsingFixedFunction) */
+ 412:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** }
+ 231              		.loc 1 412 0
+ 232              		@ sp needed
+ 233 0006 7047     		bx	lr
+ 234              	.L24:
+ 235              		.align	2
+ 236              	.L23:
+ 237 0008 48100F40 		.word	1074729032
+ 238              		.cfi_endproc
+ 239              	.LFE10:
+ 240              		.size	Timer_Rotor_Delay_ReadPeriod, .-Timer_Rotor_Delay_ReadPeriod
+ 241              		.section	.text.Timer_Rotor_Delay_WritePeriod,"ax",%progbits
+ 242              		.align	2
+ 243              		.global	Timer_Rotor_Delay_WritePeriod
+ 244              		.code	16
+ 245              		.thumb_func
+ 246              		.type	Timer_Rotor_Delay_WritePeriod, %function
+ 247              	Timer_Rotor_Delay_WritePeriod:
+ 248              	.LFB11:
+ 413:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 414:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 415:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** /*******************************************************************************
+ 416:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Function Name: Timer_Rotor_Delay_WritePeriod
+ 417:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** ********************************************************************************
+ 418:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 419:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Summary:
+ 420:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  This function is used to change the period of the counter.  The new period
+ 421:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  will be loaded the next time terminal count is detected.
+ 422:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 423:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Parameters:
+ 424:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  period: This value may be between 1 and (2^Resolution)-1.  A value of 0 will
+ 425:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *          result in the counter remaining at zero.
+ 426:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 427:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Return:
+ 428:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  void
+ 429:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 430:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *******************************************************************************/
+ 431:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** void Timer_Rotor_Delay_WritePeriod(uint16 period) 
+ 432:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** {
+ 249              		.loc 1 432 0
+ 250              		.cfi_startproc
+ 251              		@ args = 0, pretend = 0, frame = 0
+ 252              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 13
+
+
+ 253              		@ link register save eliminated.
+ 254              	.LVL2:
+ 433:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #if(Timer_Rotor_Delay_UsingFixedFunction)
+ 434:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         uint16 period_temp = (uint16)period;
+ 435:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         CY_SET_REG16(Timer_Rotor_Delay_PERIOD_LSB_PTR, period_temp);
+ 436:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #else
+ 437:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         CY_SET_REG16(Timer_Rotor_Delay_PERIOD_LSB_PTR, period);
+ 255              		.loc 1 437 0
+ 256 0000 014B     		ldr	r3, .L26
+ 257 0002 1880     		strh	r0, [r3]
+ 438:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #endif /*Write Period value with appropriate resolution suffix depending on UDB or fixed functi
+ 439:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** }
+ 258              		.loc 1 439 0
+ 259              		@ sp needed
+ 260 0004 7047     		bx	lr
+ 261              	.L27:
+ 262 0006 C046     		.align	2
+ 263              	.L26:
+ 264 0008 48100F40 		.word	1074729032
+ 265              		.cfi_endproc
+ 266              	.LFE11:
+ 267              		.size	Timer_Rotor_Delay_WritePeriod, .-Timer_Rotor_Delay_WritePeriod
+ 268              		.section	.text.Timer_Rotor_Delay_ReadCapture,"ax",%progbits
+ 269              		.align	2
+ 270              		.global	Timer_Rotor_Delay_ReadCapture
+ 271              		.code	16
+ 272              		.thumb_func
+ 273              		.type	Timer_Rotor_Delay_ReadCapture, %function
+ 274              	Timer_Rotor_Delay_ReadCapture:
+ 275              	.LFB12:
+ 440:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 441:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 442:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** /*******************************************************************************
+ 443:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Function Name: Timer_Rotor_Delay_ReadCapture
+ 444:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** ********************************************************************************
+ 445:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 446:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Summary:
+ 447:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  This function returns the last value captured.
+ 448:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 449:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Parameters:
+ 450:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  void
+ 451:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 452:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Return:
+ 453:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  Present Capture value.
+ 454:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 455:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *******************************************************************************/
+ 456:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** uint16 Timer_Rotor_Delay_ReadCapture(void) 
+ 457:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** {
+ 276              		.loc 1 457 0
+ 277              		.cfi_startproc
+ 278              		@ args = 0, pretend = 0, frame = 0
+ 279              		@ frame_needed = 0, uses_anonymous_args = 0
+ 280              		@ link register save eliminated.
+ 458:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****    #if(Timer_Rotor_Delay_UsingFixedFunction)
+ 459:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****        return ((uint16)CY_GET_REG16(Timer_Rotor_Delay_CAPTURE_LSB_PTR));
+ 460:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****    #else
+ 461:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****        return (CY_GET_REG16(Timer_Rotor_Delay_CAPTURE_LSB_PTR));
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 14
+
+
+ 281              		.loc 1 461 0
+ 282 0000 014B     		ldr	r3, .L29
+ 283 0002 1888     		ldrh	r0, [r3]
+ 284 0004 80B2     		uxth	r0, r0
+ 462:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****    #endif /* (Timer_Rotor_Delay_UsingFixedFunction) */
+ 463:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** }
+ 285              		.loc 1 463 0
+ 286              		@ sp needed
+ 287 0006 7047     		bx	lr
+ 288              	.L30:
+ 289              		.align	2
+ 290              	.L29:
+ 291 0008 88100F40 		.word	1074729096
+ 292              		.cfi_endproc
+ 293              	.LFE12:
+ 294              		.size	Timer_Rotor_Delay_ReadCapture, .-Timer_Rotor_Delay_ReadCapture
+ 295              		.section	.text.Timer_Rotor_Delay_WriteCounter,"ax",%progbits
+ 296              		.align	2
+ 297              		.global	Timer_Rotor_Delay_WriteCounter
+ 298              		.code	16
+ 299              		.thumb_func
+ 300              		.type	Timer_Rotor_Delay_WriteCounter, %function
+ 301              	Timer_Rotor_Delay_WriteCounter:
+ 302              	.LFB13:
+ 464:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 465:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 466:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** /*******************************************************************************
+ 467:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Function Name: Timer_Rotor_Delay_WriteCounter
+ 468:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** ********************************************************************************
+ 469:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 470:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Summary:
+ 471:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  This funtion is used to set the counter to a specific value
+ 472:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 473:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Parameters:
+ 474:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  counter:  New counter value.
+ 475:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 476:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Return:
+ 477:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  void
+ 478:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 479:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *******************************************************************************/
+ 480:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** void Timer_Rotor_Delay_WriteCounter(uint16 counter) 
+ 481:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** {
+ 303              		.loc 1 481 0
+ 304              		.cfi_startproc
+ 305              		@ args = 0, pretend = 0, frame = 0
+ 306              		@ frame_needed = 0, uses_anonymous_args = 0
+ 307              		@ link register save eliminated.
+ 308              	.LVL3:
+ 482:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****    #if(Timer_Rotor_Delay_UsingFixedFunction)
+ 483:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         /* This functionality is removed until a FixedFunction HW update to
+ 484:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****          * allow this register to be written
+ 485:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****          */
+ 486:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         CY_SET_REG16(Timer_Rotor_Delay_COUNTER_LSB_PTR, (uint16)counter);
+ 487:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         
+ 488:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #else
+ 489:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         CY_SET_REG16(Timer_Rotor_Delay_COUNTER_LSB_PTR, counter);
+ 309              		.loc 1 489 0
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 15
+
+
+ 310 0000 014B     		ldr	r3, .L32
+ 311 0002 1880     		strh	r0, [r3]
+ 490:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #endif /* Set Write Counter only for the UDB implementation (Write Counter not available in fix
+ 491:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** }
+ 312              		.loc 1 491 0
+ 313              		@ sp needed
+ 314 0004 7047     		bx	lr
+ 315              	.L33:
+ 316 0006 C046     		.align	2
+ 317              	.L32:
+ 318 0008 08100F40 		.word	1074728968
+ 319              		.cfi_endproc
+ 320              	.LFE13:
+ 321              		.size	Timer_Rotor_Delay_WriteCounter, .-Timer_Rotor_Delay_WriteCounter
+ 322              		.section	.text.Timer_Rotor_Delay_ReadCounter,"ax",%progbits
+ 323              		.align	2
+ 324              		.global	Timer_Rotor_Delay_ReadCounter
+ 325              		.code	16
+ 326              		.thumb_func
+ 327              		.type	Timer_Rotor_Delay_ReadCounter, %function
+ 328              	Timer_Rotor_Delay_ReadCounter:
+ 329              	.LFB14:
+ 492:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 493:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 494:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** /*******************************************************************************
+ 495:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Function Name: Timer_Rotor_Delay_ReadCounter
+ 496:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** ********************************************************************************
+ 497:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 498:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Summary:
+ 499:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  This function returns the current counter value.
+ 500:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 501:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Parameters:
+ 502:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  void
+ 503:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 504:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Return:
+ 505:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  Present compare value.
+ 506:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 507:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *******************************************************************************/
+ 508:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** uint16 Timer_Rotor_Delay_ReadCounter(void) 
+ 509:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** {
+ 330              		.loc 1 509 0
+ 331              		.cfi_startproc
+ 332              		@ args = 0, pretend = 0, frame = 0
+ 333              		@ frame_needed = 0, uses_anonymous_args = 0
+ 334              		@ link register save eliminated.
+ 510:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     /* Force capture by reading Accumulator */
+ 511:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     /* Must first do a software capture to be able to read the counter */
+ 512:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     /* It is up to the user code to make sure there isn't already captured data in the FIFO */
+ 513:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #if(Timer_Rotor_Delay_UsingFixedFunction)
+ 514:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         (void)CY_GET_REG16(Timer_Rotor_Delay_COUNTER_LSB_PTR);
+ 515:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #else
+ 516:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         (void)CY_GET_REG8(Timer_Rotor_Delay_COUNTER_LSB_PTR_8BIT);
+ 335              		.loc 1 516 0
+ 336 0000 024B     		ldr	r3, .L35
+ 337 0002 1B78     		ldrb	r3, [r3]
+ 517:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #endif/* (Timer_Rotor_Delay_UsingFixedFunction) */
+ 518:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 16
+
+
+ 519:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     /* Read the data from the FIFO (or capture register for Fixed Function)*/
+ 520:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #if(Timer_Rotor_Delay_UsingFixedFunction)
+ 521:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         return ((uint16)CY_GET_REG16(Timer_Rotor_Delay_CAPTURE_LSB_PTR));
+ 522:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #else
+ 523:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         return (CY_GET_REG16(Timer_Rotor_Delay_CAPTURE_LSB_PTR));
+ 338              		.loc 1 523 0
+ 339 0004 024B     		ldr	r3, .L35+4
+ 340 0006 1888     		ldrh	r0, [r3]
+ 341 0008 80B2     		uxth	r0, r0
+ 524:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #endif /* (Timer_Rotor_Delay_UsingFixedFunction) */
+ 525:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** }
+ 342              		.loc 1 525 0
+ 343              		@ sp needed
+ 344 000a 7047     		bx	lr
+ 345              	.L36:
+ 346              		.align	2
+ 347              	.L35:
+ 348 000c 04000F40 		.word	1074724868
+ 349 0010 88100F40 		.word	1074729096
+ 350              		.cfi_endproc
+ 351              	.LFE14:
+ 352              		.size	Timer_Rotor_Delay_ReadCounter, .-Timer_Rotor_Delay_ReadCounter
+ 353              		.section	.text.Timer_Rotor_Delay_EnableTrigger,"ax",%progbits
+ 354              		.align	2
+ 355              		.global	Timer_Rotor_Delay_EnableTrigger
+ 356              		.code	16
+ 357              		.thumb_func
+ 358              		.type	Timer_Rotor_Delay_EnableTrigger, %function
+ 359              	Timer_Rotor_Delay_EnableTrigger:
+ 360              	.LFB15:
+ 526:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 527:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 528:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** #if(!Timer_Rotor_Delay_UsingFixedFunction) /* UDB Specific Functions */
+ 529:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 530:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     
+ 531:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** /*******************************************************************************
+ 532:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****  * The functions below this point are only available using the UDB
+ 533:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****  * implementation.  If a feature is selected, then the API is enabled.
+ 534:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****  ******************************************************************************/
+ 535:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 536:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 537:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** #if (Timer_Rotor_Delay_SoftwareCaptureMode)
+ 538:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 539:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 540:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** /*******************************************************************************
+ 541:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Function Name: Timer_Rotor_Delay_SetCaptureMode
+ 542:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** ********************************************************************************
+ 543:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 544:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Summary:
+ 545:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  This function sets the capture mode to either rising or falling edge.
+ 546:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 547:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Parameters:
+ 548:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  captureMode: This parameter sets the capture mode of the UDB capture feature
+ 549:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  The parameter values are defined using the
+ 550:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  #define Timer_Rotor_Delay__B_TIMER__CM_NONE 0
+ 551:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** #define Timer_Rotor_Delay__B_TIMER__CM_RISINGEDGE 1
+ 552:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** #define Timer_Rotor_Delay__B_TIMER__CM_FALLINGEDGE 2
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 17
+
+
+ 553:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** #define Timer_Rotor_Delay__B_TIMER__CM_EITHEREDGE 3
+ 554:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** #define Timer_Rotor_Delay__B_TIMER__CM_SOFTWARE 4
+ 555:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****  identifiers
+ 556:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  The following are the possible values of the parameter
+ 557:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  Timer_Rotor_Delay__B_TIMER__CM_NONE        - Set Capture mode to None
+ 558:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  Timer_Rotor_Delay__B_TIMER__CM_RISINGEDGE  - Rising edge of Capture input
+ 559:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  Timer_Rotor_Delay__B_TIMER__CM_FALLINGEDGE - Falling edge of Capture input
+ 560:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  Timer_Rotor_Delay__B_TIMER__CM_EITHEREDGE  - Either edge of Capture input
+ 561:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 562:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Return:
+ 563:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  void
+ 564:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 565:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *******************************************************************************/
+ 566:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** void Timer_Rotor_Delay_SetCaptureMode(uint8 captureMode) 
+ 567:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** {
+ 568:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     /* This must only set to two bits of the control register associated */
+ 569:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     captureMode = ((uint8)((uint8)captureMode << Timer_Rotor_Delay_CTRL_CAP_MODE_SHIFT));
+ 570:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     captureMode &= (Timer_Rotor_Delay_CTRL_CAP_MODE_MASK);
+ 571:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 572:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #if (!Timer_Rotor_Delay_UDB_CONTROL_REG_REMOVED)
+ 573:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         /* Clear the Current Setting */
+ 574:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         Timer_Rotor_Delay_CONTROL &= ((uint8)(~Timer_Rotor_Delay_CTRL_CAP_MODE_MASK));
+ 575:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 576:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         /* Write The New Setting */
+ 577:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         Timer_Rotor_Delay_CONTROL |= captureMode;
+ 578:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #endif /* (!Timer_Rotor_Delay_UDB_CONTROL_REG_REMOVED) */
+ 579:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** }
+ 580:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** #endif /* Remove API if Capture Mode is not Software Controlled */
+ 581:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 582:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 583:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** #if (Timer_Rotor_Delay_SoftwareTriggerMode)
+ 584:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 585:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 586:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** /*******************************************************************************
+ 587:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Function Name: Timer_Rotor_Delay_SetTriggerMode
+ 588:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** ********************************************************************************
+ 589:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 590:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Summary:
+ 591:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  This function sets the trigger input mode
+ 592:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 593:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Parameters:
+ 594:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  triggerMode: Pass one of the pre-defined Trigger Modes (except Software)
+ 595:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #define Timer_Rotor_Delay__B_TIMER__TM_NONE 0x00u
+ 596:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #define Timer_Rotor_Delay__B_TIMER__TM_RISINGEDGE 0x04u
+ 597:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #define Timer_Rotor_Delay__B_TIMER__TM_FALLINGEDGE 0x08u
+ 598:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #define Timer_Rotor_Delay__B_TIMER__TM_EITHEREDGE 0x0Cu
+ 599:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #define Timer_Rotor_Delay__B_TIMER__TM_SOFTWARE 0x10u
+ 600:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 601:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Return:
+ 602:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  void
+ 603:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 604:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *******************************************************************************/
+ 605:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** void Timer_Rotor_Delay_SetTriggerMode(uint8 triggerMode) 
+ 606:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** {
+ 607:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     /* This must only set to two bits of the control register associated */
+ 608:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     triggerMode &= Timer_Rotor_Delay_CTRL_TRIG_MODE_MASK;
+ 609:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 18
+
+
+ 610:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #if (!Timer_Rotor_Delay_UDB_CONTROL_REG_REMOVED)   /* Remove assignment if control register is 
+ 611:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     
+ 612:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         /* Clear the Current Setting */
+ 613:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         Timer_Rotor_Delay_CONTROL &= ((uint8)(~Timer_Rotor_Delay_CTRL_TRIG_MODE_MASK));
+ 614:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 615:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         /* Write The New Setting */
+ 616:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         Timer_Rotor_Delay_CONTROL |= (triggerMode | Timer_Rotor_Delay__B_TIMER__TM_SOFTWARE);
+ 617:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #endif /* Remove code section if control register is not used */
+ 618:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** }
+ 619:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** #endif /* Remove API if Trigger Mode is not Software Controlled */
+ 620:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 621:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** #if (Timer_Rotor_Delay_EnableTriggerMode)
+ 622:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 623:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 624:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** /*******************************************************************************
+ 625:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Function Name: Timer_Rotor_Delay_EnableTrigger
+ 626:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** ********************************************************************************
+ 627:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 628:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Summary:
+ 629:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  Sets the control bit enabling Hardware Trigger mode
+ 630:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 631:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Parameters:
+ 632:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  void
+ 633:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 634:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Return:
+ 635:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  void
+ 636:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 637:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *******************************************************************************/
+ 638:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** void Timer_Rotor_Delay_EnableTrigger(void) 
+ 639:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** {
+ 361              		.loc 1 639 0
+ 362              		.cfi_startproc
+ 363              		@ args = 0, pretend = 0, frame = 0
+ 364              		@ frame_needed = 0, uses_anonymous_args = 0
+ 365              		@ link register save eliminated.
+ 640:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #if (!Timer_Rotor_Delay_UDB_CONTROL_REG_REMOVED)   /* Remove assignment if control register is 
+ 641:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         Timer_Rotor_Delay_CONTROL |= Timer_Rotor_Delay_CTRL_TRIG_EN;
+ 366              		.loc 1 641 0
+ 367 0000 034A     		ldr	r2, .L38
+ 368 0002 1178     		ldrb	r1, [r2]
+ 369 0004 1023     		movs	r3, #16
+ 370 0006 0B43     		orrs	r3, r1
+ 371 0008 DBB2     		uxtb	r3, r3
+ 372 000a 1370     		strb	r3, [r2]
+ 642:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #endif /* Remove code section if control register is not used */
+ 643:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** }
+ 373              		.loc 1 643 0
+ 374              		@ sp needed
+ 375 000c 7047     		bx	lr
+ 376              	.L39:
+ 377 000e C046     		.align	2
+ 378              	.L38:
+ 379 0010 74000F40 		.word	1074724980
+ 380              		.cfi_endproc
+ 381              	.LFE15:
+ 382              		.size	Timer_Rotor_Delay_EnableTrigger, .-Timer_Rotor_Delay_EnableTrigger
+ 383              		.section	.text.Timer_Rotor_Delay_DisableTrigger,"ax",%progbits
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 19
+
+
+ 384              		.align	2
+ 385              		.global	Timer_Rotor_Delay_DisableTrigger
+ 386              		.code	16
+ 387              		.thumb_func
+ 388              		.type	Timer_Rotor_Delay_DisableTrigger, %function
+ 389              	Timer_Rotor_Delay_DisableTrigger:
+ 390              	.LFB16:
+ 644:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 645:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 646:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** /*******************************************************************************
+ 647:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Function Name: Timer_Rotor_Delay_DisableTrigger
+ 648:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** ********************************************************************************
+ 649:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 650:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Summary:
+ 651:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  Clears the control bit enabling Hardware Trigger mode
+ 652:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 653:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Parameters:
+ 654:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  void
+ 655:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 656:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Return:
+ 657:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  void
+ 658:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 659:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *******************************************************************************/
+ 660:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** void Timer_Rotor_Delay_DisableTrigger(void) 
+ 661:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** {
+ 391              		.loc 1 661 0
+ 392              		.cfi_startproc
+ 393              		@ args = 0, pretend = 0, frame = 0
+ 394              		@ frame_needed = 0, uses_anonymous_args = 0
+ 395              		@ link register save eliminated.
+ 662:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #if (!Timer_Rotor_Delay_UDB_CONTROL_REG_REMOVED )   /* Remove assignment if control register is
+ 663:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         Timer_Rotor_Delay_CONTROL &= ((uint8)(~Timer_Rotor_Delay_CTRL_TRIG_EN));
+ 396              		.loc 1 663 0
+ 397 0000 024A     		ldr	r2, .L41
+ 398 0002 1378     		ldrb	r3, [r2]
+ 399 0004 1021     		movs	r1, #16
+ 400 0006 8B43     		bics	r3, r1
+ 401 0008 1370     		strb	r3, [r2]
+ 664:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #endif /* Remove code section if control register is not used */
+ 665:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** }
+ 402              		.loc 1 665 0
+ 403              		@ sp needed
+ 404 000a 7047     		bx	lr
+ 405              	.L42:
+ 406              		.align	2
+ 407              	.L41:
+ 408 000c 74000F40 		.word	1074724980
+ 409              		.cfi_endproc
+ 410              	.LFE16:
+ 411              		.size	Timer_Rotor_Delay_DisableTrigger, .-Timer_Rotor_Delay_DisableTrigger
+ 412              		.section	.text.Timer_Rotor_Delay_ClearFIFO,"ax",%progbits
+ 413              		.align	2
+ 414              		.global	Timer_Rotor_Delay_ClearFIFO
+ 415              		.code	16
+ 416              		.thumb_func
+ 417              		.type	Timer_Rotor_Delay_ClearFIFO, %function
+ 418              	Timer_Rotor_Delay_ClearFIFO:
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 20
+
+
+ 419              	.LFB17:
+ 666:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** #endif /* Remove API is Trigger Mode is set to None */
+ 667:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 668:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** #if(Timer_Rotor_Delay_InterruptOnCaptureCount)
+ 669:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 670:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 671:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** /*******************************************************************************
+ 672:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Function Name: Timer_Rotor_Delay_SetInterruptCount
+ 673:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** ********************************************************************************
+ 674:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 675:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Summary:
+ 676:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  This function sets the capture count before an interrupt is triggered.
+ 677:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 678:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Parameters:
+ 679:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  interruptCount:  A value between 0 and 3 is valid.  If the value is 0, then
+ 680:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *                   an interrupt will occur each time a capture occurs.
+ 681:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *                   A value of 1 to 3 will cause the interrupt
+ 682:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *                   to delay by the same number of captures.
+ 683:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 684:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Return:
+ 685:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  void
+ 686:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 687:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *******************************************************************************/
+ 688:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** void Timer_Rotor_Delay_SetInterruptCount(uint8 interruptCount) 
+ 689:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** {
+ 690:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     /* This must only set to two bits of the control register associated */
+ 691:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     interruptCount &= Timer_Rotor_Delay_CTRL_INTCNT_MASK;
+ 692:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 693:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #if (!Timer_Rotor_Delay_UDB_CONTROL_REG_REMOVED)
+ 694:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         /* Clear the Current Setting */
+ 695:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         Timer_Rotor_Delay_CONTROL &= ((uint8)(~Timer_Rotor_Delay_CTRL_INTCNT_MASK));
+ 696:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         /* Write The New Setting */
+ 697:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         Timer_Rotor_Delay_CONTROL |= interruptCount;
+ 698:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #endif /* (!Timer_Rotor_Delay_UDB_CONTROL_REG_REMOVED) */
+ 699:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** }
+ 700:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** #endif /* Timer_Rotor_Delay_InterruptOnCaptureCount */
+ 701:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 702:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 703:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** #if (Timer_Rotor_Delay_UsingHWCaptureCounter)
+ 704:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 705:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 706:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** /*******************************************************************************
+ 707:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Function Name: Timer_Rotor_Delay_SetCaptureCount
+ 708:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** ********************************************************************************
+ 709:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 710:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Summary:
+ 711:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  This function sets the capture count
+ 712:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 713:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Parameters:
+ 714:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  captureCount: A value between 2 and 127 inclusive is valid.  A value of 1
+ 715:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *                to 127 will cause the interrupt to delay by the same number of
+ 716:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *                captures.
+ 717:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 718:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Return:
+ 719:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  void
+ 720:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 721:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *******************************************************************************/
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 21
+
+
+ 722:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** void Timer_Rotor_Delay_SetCaptureCount(uint8 captureCount) 
+ 723:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** {
+ 724:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     Timer_Rotor_Delay_CAP_COUNT = captureCount;
+ 725:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** }
+ 726:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 727:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 728:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** /*******************************************************************************
+ 729:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Function Name: Timer_Rotor_Delay_ReadCaptureCount
+ 730:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** ********************************************************************************
+ 731:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 732:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Summary:
+ 733:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  This function reads the capture count setting
+ 734:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 735:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Parameters:
+ 736:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  void
+ 737:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 738:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Return:
+ 739:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  Returns the Capture Count Setting
+ 740:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 741:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *******************************************************************************/
+ 742:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** uint8 Timer_Rotor_Delay_ReadCaptureCount(void) 
+ 743:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** {
+ 744:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     return ((uint8)Timer_Rotor_Delay_CAP_COUNT);
+ 745:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** }
+ 746:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** #endif /* Timer_Rotor_Delay_UsingHWCaptureCounter */
+ 747:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 748:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 749:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** /*******************************************************************************
+ 750:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Function Name: Timer_Rotor_Delay_ClearFIFO
+ 751:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** ********************************************************************************
+ 752:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 753:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Summary:
+ 754:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  This function clears all capture data from the capture FIFO
+ 755:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 756:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Parameters:
+ 757:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  void
+ 758:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 759:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** * Return:
+ 760:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *  void
+ 761:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *
+ 762:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** *******************************************************************************/
+ 763:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** void Timer_Rotor_Delay_ClearFIFO(void) 
+ 764:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** {
+ 420              		.loc 1 764 0
+ 421              		.cfi_startproc
+ 422              		@ args = 0, pretend = 0, frame = 0
+ 423              		@ frame_needed = 0, uses_anonymous_args = 0
+ 424 0000 10B5     		push	{r4, lr}
+ 425              		.cfi_def_cfa_offset 8
+ 426              		.cfi_offset 4, -8
+ 427              		.cfi_offset 14, -4
+ 765:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     while(0u != (Timer_Rotor_Delay_ReadStatusRegister() & Timer_Rotor_Delay_STATUS_FIFONEMP))
+ 428              		.loc 1 765 0
+ 429 0002 01E0     		b	.L44
+ 430              	.L45:
+ 766:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     {
+ 767:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         (void)Timer_Rotor_Delay_ReadCapture();
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 22
+
+
+ 431              		.loc 1 767 0
+ 432 0004 FFF7FEFF 		bl	Timer_Rotor_Delay_ReadCapture
+ 433              	.LVL4:
+ 434              	.L44:
+ 765:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     while(0u != (Timer_Rotor_Delay_ReadStatusRegister() & Timer_Rotor_Delay_STATUS_FIFONEMP))
+ 435              		.loc 1 765 0
+ 436 0008 FFF7FEFF 		bl	Timer_Rotor_Delay_ReadStatusRegister
+ 437              	.LVL5:
+ 438 000c 0307     		lsls	r3, r0, #28
+ 439 000e F9D4     		bmi	.L45
+ 768:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     }
+ 769:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** }
+ 440              		.loc 1 769 0
+ 441              		@ sp needed
+ 442 0010 10BD     		pop	{r4, pc}
+ 443              		.cfi_endproc
+ 444              	.LFE17:
+ 445              		.size	Timer_Rotor_Delay_ClearFIFO, .-Timer_Rotor_Delay_ClearFIFO
+ 446 0012 C046     		.section	.text.Timer_Rotor_Delay_Init,"ax",%progbits
+ 447              		.align	2
+ 448              		.global	Timer_Rotor_Delay_Init
+ 449              		.code	16
+ 450              		.thumb_func
+ 451              		.type	Timer_Rotor_Delay_Init, %function
+ 452              	Timer_Rotor_Delay_Init:
+ 453              	.LFB1:
+  44:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #if(!Timer_Rotor_Delay_UsingFixedFunction)
+ 454              		.loc 1 44 0
+ 455              		.cfi_startproc
+ 456              		@ args = 0, pretend = 0, frame = 0
+ 457              		@ frame_needed = 0, uses_anonymous_args = 0
+ 458 0000 10B5     		push	{r4, lr}
+ 459              		.cfi_def_cfa_offset 8
+ 460              		.cfi_offset 4, -8
+ 461              		.cfi_offset 14, -4
+ 118:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     Timer_Rotor_Delay_WriteCounter(Timer_Rotor_Delay_INIT_PERIOD);
+ 462              		.loc 1 118 0
+ 463 0002 4024     		movs	r4, #64
+ 464 0004 FF34     		adds	r4, r4, #255
+ 465 0006 2000     		movs	r0, r4
+ 466 0008 FFF7FEFF 		bl	Timer_Rotor_Delay_WritePeriod
+ 467              	.LVL6:
+ 119:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 468              		.loc 1 119 0
+ 469 000c 2000     		movs	r0, r4
+ 470 000e FFF7FEFF 		bl	Timer_Rotor_Delay_WriteCounter
+ 471              	.LVL7:
+ 142:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 472              		.loc 1 142 0
+ 473 0012 FFF7FEFF 		bl	CyEnterCriticalSection
+ 474              	.LVL8:
+ 145:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 475              		.loc 1 145 0
+ 476 0016 084A     		ldr	r2, .L47
+ 477 0018 1178     		ldrb	r1, [r2]
+ 478 001a 1023     		movs	r3, #16
+ 479 001c 0B43     		orrs	r3, r1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 23
+
+
+ 480 001e DBB2     		uxtb	r3, r3
+ 481 0020 1370     		strb	r3, [r2]
+ 148:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 482              		.loc 1 148 0
+ 483 0022 FFF7FEFF 		bl	CyExitCriticalSection
+ 484              	.LVL9:
+ 151:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****         #endif /* Set Trigger enable bit for UDB implementation in the control register*/
+ 485              		.loc 1 151 0
+ 486 0026 FFF7FEFF 		bl	Timer_Rotor_Delay_EnableTrigger
+ 487              	.LVL10:
+ 159:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     #endif /* Configure additional features of UDB implementation */
+ 488              		.loc 1 159 0
+ 489 002a FFF7FEFF 		bl	Timer_Rotor_Delay_ClearFIFO
+ 490              	.LVL11:
+ 162:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** }
+ 491              		.loc 1 162 0
+ 492 002e 0020     		movs	r0, #0
+ 493 0030 FFF7FEFF 		bl	Timer_Rotor_Delay_SetInterruptMode
+ 494              	.LVL12:
+ 163:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 495              		.loc 1 163 0
+ 496              		@ sp needed
+ 497 0034 10BD     		pop	{r4, pc}
+ 498              	.L48:
+ 499 0036 C046     		.align	2
+ 500              	.L47:
+ 501 0038 92000F40 		.word	1074725010
+ 502              		.cfi_endproc
+ 503              	.LFE1:
+ 504              		.size	Timer_Rotor_Delay_Init, .-Timer_Rotor_Delay_Init
+ 505              		.section	.text.Timer_Rotor_Delay_Start,"ax",%progbits
+ 506              		.align	2
+ 507              		.global	Timer_Rotor_Delay_Start
+ 508              		.code	16
+ 509              		.thumb_func
+ 510              		.type	Timer_Rotor_Delay_Start, %function
+ 511              	Timer_Rotor_Delay_Start:
+ 512              	.LFB3:
+ 216:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     if(Timer_Rotor_Delay_initVar == 0u)
+ 513              		.loc 1 216 0
+ 514              		.cfi_startproc
+ 515              		@ args = 0, pretend = 0, frame = 0
+ 516              		@ frame_needed = 0, uses_anonymous_args = 0
+ 517 0000 10B5     		push	{r4, lr}
+ 518              		.cfi_def_cfa_offset 8
+ 519              		.cfi_offset 4, -8
+ 520              		.cfi_offset 14, -4
+ 217:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     {
+ 521              		.loc 1 217 0
+ 522 0002 064B     		ldr	r3, .L51
+ 523 0004 1B78     		ldrb	r3, [r3]
+ 524 0006 002B     		cmp	r3, #0
+ 525 0008 04D1     		bne	.L50
+ 219:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 526              		.loc 1 219 0
+ 527 000a FFF7FEFF 		bl	Timer_Rotor_Delay_Init
+ 528              	.LVL13:
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 24
+
+
+ 221:Generated_Source\PSoC4/Timer_Rotor_Delay.c ****     }
+ 529              		.loc 1 221 0
+ 530 000e 0122     		movs	r2, #1
+ 531 0010 024B     		ldr	r3, .L51
+ 532 0012 1A70     		strb	r2, [r3]
+ 533              	.L50:
+ 225:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** }
+ 534              		.loc 1 225 0
+ 535 0014 FFF7FEFF 		bl	Timer_Rotor_Delay_Enable
+ 536              	.LVL14:
+ 226:Generated_Source\PSoC4/Timer_Rotor_Delay.c **** 
+ 537              		.loc 1 226 0
+ 538              		@ sp needed
+ 539 0018 10BD     		pop	{r4, pc}
+ 540              	.L52:
+ 541 001a C046     		.align	2
+ 542              	.L51:
+ 543 001c 00000000 		.word	.LANCHOR0
+ 544              		.cfi_endproc
+ 545              	.LFE3:
+ 546              		.size	Timer_Rotor_Delay_Start, .-Timer_Rotor_Delay_Start
+ 547              		.global	Timer_Rotor_Delay_initVar
+ 548              		.bss
+ 549              		.set	.LANCHOR0,. + 0
+ 550              		.type	Timer_Rotor_Delay_initVar, %object
+ 551              		.size	Timer_Rotor_Delay_initVar, 1
+ 552              	Timer_Rotor_Delay_initVar:
+ 553 0000 00       		.space	1
+ 554              		.text
+ 555              	.Letext0:
+ 556              		.file 2 "Generated_Source\\PSoC4\\cytypes.h"
+ 557              		.file 3 "Generated_Source\\PSoC4\\CyLib.h"
+ 558              		.section	.debug_info,"",%progbits
+ 559              	.Ldebug_info0:
+ 560 0000 17030000 		.4byte	0x317
+ 561 0004 0400     		.2byte	0x4
+ 562 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 563 000a 04       		.byte	0x4
+ 564 000b 01       		.uleb128 0x1
+ 565 000c EA020000 		.4byte	.LASF41
+ 566 0010 0C       		.byte	0xc
+ 567 0011 D2030000 		.4byte	.LASF42
+ 568 0015 2F020000 		.4byte	.LASF43
+ 569 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 570 001d 00000000 		.4byte	0
+ 571 0021 00000000 		.4byte	.Ldebug_line0
+ 572 0025 02       		.uleb128 0x2
+ 573 0026 01       		.byte	0x1
+ 574 0027 06       		.byte	0x6
+ 575 0028 3A040000 		.4byte	.LASF0
+ 576 002c 02       		.uleb128 0x2
+ 577 002d 01       		.byte	0x1
+ 578 002e 08       		.byte	0x8
+ 579 002f A8010000 		.4byte	.LASF1
+ 580 0033 02       		.uleb128 0x2
+ 581 0034 02       		.byte	0x2
+ 582 0035 05       		.byte	0x5
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 25
+
+
+ 583 0036 16040000 		.4byte	.LASF2
+ 584 003a 02       		.uleb128 0x2
+ 585 003b 02       		.byte	0x2
+ 586 003c 07       		.byte	0x7
+ 587 003d 6F000000 		.4byte	.LASF3
+ 588 0041 02       		.uleb128 0x2
+ 589 0042 04       		.byte	0x4
+ 590 0043 05       		.byte	0x5
+ 591 0044 20040000 		.4byte	.LASF4
+ 592 0048 02       		.uleb128 0x2
+ 593 0049 04       		.byte	0x4
+ 594 004a 07       		.byte	0x7
+ 595 004b BB010000 		.4byte	.LASF5
+ 596 004f 02       		.uleb128 0x2
+ 597 0050 08       		.byte	0x8
+ 598 0051 05       		.byte	0x5
+ 599 0052 B6030000 		.4byte	.LASF6
+ 600 0056 02       		.uleb128 0x2
+ 601 0057 08       		.byte	0x8
+ 602 0058 07       		.byte	0x7
+ 603 0059 91010000 		.4byte	.LASF7
+ 604 005d 03       		.uleb128 0x3
+ 605 005e 04       		.byte	0x4
+ 606 005f 05       		.byte	0x5
+ 607 0060 696E7400 		.ascii	"int\000"
+ 608 0064 02       		.uleb128 0x2
+ 609 0065 04       		.byte	0x4
+ 610 0066 07       		.byte	0x7
+ 611 0067 C7020000 		.4byte	.LASF8
+ 612 006b 04       		.uleb128 0x4
+ 613 006c E4010000 		.4byte	.LASF9
+ 614 0070 02       		.byte	0x2
+ 615 0071 FB01     		.2byte	0x1fb
+ 616 0073 2C000000 		.4byte	0x2c
+ 617 0077 04       		.uleb128 0x4
+ 618 0078 84020000 		.4byte	.LASF10
+ 619 007c 02       		.byte	0x2
+ 620 007d FC01     		.2byte	0x1fc
+ 621 007f 3A000000 		.4byte	0x3a
+ 622 0083 02       		.uleb128 0x2
+ 623 0084 04       		.byte	0x4
+ 624 0085 04       		.byte	0x4
+ 625 0086 83010000 		.4byte	.LASF11
+ 626 008a 02       		.uleb128 0x2
+ 627 008b 08       		.byte	0x8
+ 628 008c 04       		.byte	0x4
+ 629 008d 28020000 		.4byte	.LASF12
+ 630 0091 02       		.uleb128 0x2
+ 631 0092 01       		.byte	0x1
+ 632 0093 08       		.byte	0x8
+ 633 0094 29040000 		.4byte	.LASF13
+ 634 0098 04       		.uleb128 0x4
+ 635 0099 B6010000 		.4byte	.LASF14
+ 636 009d 02       		.byte	0x2
+ 637 009e A502     		.2byte	0x2a5
+ 638 00a0 A4000000 		.4byte	0xa4
+ 639 00a4 05       		.uleb128 0x5
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 26
+
+
+ 640 00a5 6B000000 		.4byte	0x6b
+ 641 00a9 04       		.uleb128 0x4
+ 642 00aa 00000000 		.4byte	.LASF15
+ 643 00ae 02       		.byte	0x2
+ 644 00af A602     		.2byte	0x2a6
+ 645 00b1 B5000000 		.4byte	0xb5
+ 646 00b5 05       		.uleb128 0x5
+ 647 00b6 77000000 		.4byte	0x77
+ 648 00ba 02       		.uleb128 0x2
+ 649 00bb 08       		.byte	0x8
+ 650 00bc 04       		.byte	0x4
+ 651 00bd 2E040000 		.4byte	.LASF16
+ 652 00c1 02       		.uleb128 0x2
+ 653 00c2 04       		.byte	0x4
+ 654 00c3 07       		.byte	0x7
+ 655 00c4 78030000 		.4byte	.LASF17
+ 656 00c8 06       		.uleb128 0x6
+ 657 00c9 FD030000 		.4byte	.LASF18
+ 658 00cd 01       		.byte	0x1
+ 659 00ce B4       		.byte	0xb4
+ 660 00cf 00000000 		.4byte	.LFB2
+ 661 00d3 14000000 		.4byte	.LFE2-.LFB2
+ 662 00d7 01       		.uleb128 0x1
+ 663 00d8 9C       		.byte	0x9c
+ 664 00d9 06       		.uleb128 0x6
+ 665 00da 81030000 		.4byte	.LASF19
+ 666 00de 01       		.byte	0x1
+ 667 00df F7       		.byte	0xf7
+ 668 00e0 00000000 		.4byte	.LFB4
+ 669 00e4 10000000 		.4byte	.LFE4-.LFB4
+ 670 00e8 01       		.uleb128 0x1
+ 671 00e9 9C       		.byte	0x9c
+ 672 00ea 07       		.uleb128 0x7
+ 673 00eb 60010000 		.4byte	.LASF23
+ 674 00ef 01       		.byte	0x1
+ 675 00f0 1701     		.2byte	0x117
+ 676 00f2 00000000 		.4byte	.LFB5
+ 677 00f6 0C000000 		.4byte	.LFE5-.LFB5
+ 678 00fa 01       		.uleb128 0x1
+ 679 00fb 9C       		.byte	0x9c
+ 680 00fc 0F010000 		.4byte	0x10f
+ 681 0100 08       		.uleb128 0x8
+ 682 0101 C4030000 		.4byte	.LASF25
+ 683 0105 01       		.byte	0x1
+ 684 0106 1701     		.2byte	0x117
+ 685 0108 6B000000 		.4byte	0x6b
+ 686 010c 01       		.uleb128 0x1
+ 687 010d 50       		.byte	0x50
+ 688 010e 00       		.byte	0
+ 689 010f 09       		.uleb128 0x9
+ 690 0110 DA000000 		.4byte	.LASF20
+ 691 0114 01       		.byte	0x1
+ 692 0115 2E01     		.2byte	0x12e
+ 693 0117 00000000 		.4byte	.LFB6
+ 694 011b 0C000000 		.4byte	.LFE6-.LFB6
+ 695 011f 01       		.uleb128 0x1
+ 696 0120 9C       		.byte	0x9c
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 27
+
+
+ 697 0121 0A       		.uleb128 0xa
+ 698 0122 8B020000 		.4byte	.LASF21
+ 699 0126 01       		.byte	0x1
+ 700 0127 4D01     		.2byte	0x14d
+ 701 0129 6B000000 		.4byte	0x6b
+ 702 012d 00000000 		.4byte	.LFB7
+ 703 0131 0C000000 		.4byte	.LFE7-.LFB7
+ 704 0135 01       		.uleb128 0x1
+ 705 0136 9C       		.byte	0x9c
+ 706 0137 0A       		.uleb128 0xa
+ 707 0138 3A010000 		.4byte	.LASF22
+ 708 013c 01       		.byte	0x1
+ 709 013d 6401     		.2byte	0x164
+ 710 013f 6B000000 		.4byte	0x6b
+ 711 0143 00000000 		.4byte	.LFB8
+ 712 0147 0C000000 		.4byte	.LFE8-.LFB8
+ 713 014b 01       		.uleb128 0x1
+ 714 014c 9C       		.byte	0x9c
+ 715 014d 07       		.uleb128 0x7
+ 716 014e 06000000 		.4byte	.LASF24
+ 717 0152 01       		.byte	0x1
+ 718 0153 7B01     		.2byte	0x17b
+ 719 0155 00000000 		.4byte	.LFB9
+ 720 0159 0C000000 		.4byte	.LFE9-.LFB9
+ 721 015d 01       		.uleb128 0x1
+ 722 015e 9C       		.byte	0x9c
+ 723 015f 72010000 		.4byte	0x172
+ 724 0163 08       		.uleb128 0x8
+ 725 0164 EA010000 		.4byte	.LASF26
+ 726 0168 01       		.byte	0x1
+ 727 0169 7B01     		.2byte	0x17b
+ 728 016b 6B000000 		.4byte	0x6b
+ 729 016f 01       		.uleb128 0x1
+ 730 0170 50       		.byte	0x50
+ 731 0171 00       		.byte	0
+ 732 0172 0A       		.uleb128 0xa
+ 733 0173 82000000 		.4byte	.LASF27
+ 734 0177 01       		.byte	0x1
+ 735 0178 9501     		.2byte	0x195
+ 736 017a 77000000 		.4byte	0x77
+ 737 017e 00000000 		.4byte	.LFB10
+ 738 0182 0C000000 		.4byte	.LFE10-.LFB10
+ 739 0186 01       		.uleb128 0x1
+ 740 0187 9C       		.byte	0x9c
+ 741 0188 07       		.uleb128 0x7
+ 742 0189 98030000 		.4byte	.LASF28
+ 743 018d 01       		.byte	0x1
+ 744 018e AF01     		.2byte	0x1af
+ 745 0190 00000000 		.4byte	.LFB11
+ 746 0194 0C000000 		.4byte	.LFE11-.LFB11
+ 747 0198 01       		.uleb128 0x1
+ 748 0199 9C       		.byte	0x9c
+ 749 019a AD010000 		.4byte	0x1ad
+ 750 019e 08       		.uleb128 0x8
+ 751 019f 47000000 		.4byte	.LASF29
+ 752 01a3 01       		.byte	0x1
+ 753 01a4 AF01     		.2byte	0x1af
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 28
+
+
+ 754 01a6 77000000 		.4byte	0x77
+ 755 01aa 01       		.uleb128 0x1
+ 756 01ab 50       		.byte	0x50
+ 757 01ac 00       		.byte	0
+ 758 01ad 0A       		.uleb128 0xa
+ 759 01ae FC000000 		.4byte	.LASF30
+ 760 01b2 01       		.byte	0x1
+ 761 01b3 C801     		.2byte	0x1c8
+ 762 01b5 77000000 		.4byte	0x77
+ 763 01b9 00000000 		.4byte	.LFB12
+ 764 01bd 0C000000 		.4byte	.LFE12-.LFB12
+ 765 01c1 01       		.uleb128 0x1
+ 766 01c2 9C       		.byte	0x9c
+ 767 01c3 07       		.uleb128 0x7
+ 768 01c4 BB000000 		.4byte	.LASF31
+ 769 01c8 01       		.byte	0x1
+ 770 01c9 E001     		.2byte	0x1e0
+ 771 01cb 00000000 		.4byte	.LFB13
+ 772 01cf 0C000000 		.4byte	.LFE13-.LFB13
+ 773 01d3 01       		.uleb128 0x1
+ 774 01d4 9C       		.byte	0x9c
+ 775 01d5 E8010000 		.4byte	0x1e8
+ 776 01d9 08       		.uleb128 0x8
+ 777 01da 89010000 		.4byte	.LASF32
+ 778 01de 01       		.byte	0x1
+ 779 01df E001     		.2byte	0x1e0
+ 780 01e1 77000000 		.4byte	0x77
+ 781 01e5 01       		.uleb128 0x1
+ 782 01e6 50       		.byte	0x50
+ 783 01e7 00       		.byte	0
+ 784 01e8 0A       		.uleb128 0xa
+ 785 01e9 F2010000 		.4byte	.LASF33
+ 786 01ed 01       		.byte	0x1
+ 787 01ee FC01     		.2byte	0x1fc
+ 788 01f0 77000000 		.4byte	0x77
+ 789 01f4 00000000 		.4byte	.LFB14
+ 790 01f8 14000000 		.4byte	.LFE14-.LFB14
+ 791 01fc 01       		.uleb128 0x1
+ 792 01fd 9C       		.byte	0x9c
+ 793 01fe 09       		.uleb128 0x9
+ 794 01ff 1A010000 		.4byte	.LASF34
+ 795 0203 01       		.byte	0x1
+ 796 0204 7E02     		.2byte	0x27e
+ 797 0206 00000000 		.4byte	.LFB15
+ 798 020a 14000000 		.4byte	.LFE15-.LFB15
+ 799 020e 01       		.uleb128 0x1
+ 800 020f 9C       		.byte	0x9c
+ 801 0210 09       		.uleb128 0x9
+ 802 0211 4E000000 		.4byte	.LASF35
+ 803 0215 01       		.byte	0x1
+ 804 0216 9402     		.2byte	0x294
+ 805 0218 00000000 		.4byte	.LFB16
+ 806 021c 10000000 		.4byte	.LFE16-.LFB16
+ 807 0220 01       		.uleb128 0x1
+ 808 0221 9C       		.byte	0x9c
+ 809 0222 07       		.uleb128 0x7
+ 810 0223 9F000000 		.4byte	.LASF36
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 29
+
+
+ 811 0227 01       		.byte	0x1
+ 812 0228 FB02     		.2byte	0x2fb
+ 813 022a 00000000 		.4byte	.LFB17
+ 814 022e 12000000 		.4byte	.LFE17-.LFB17
+ 815 0232 01       		.uleb128 0x1
+ 816 0233 9C       		.byte	0x9c
+ 817 0234 4B020000 		.4byte	0x24b
+ 818 0238 0B       		.uleb128 0xb
+ 819 0239 08000000 		.4byte	.LVL4
+ 820 023d AD010000 		.4byte	0x1ad
+ 821 0241 0B       		.uleb128 0xb
+ 822 0242 0C000000 		.4byte	.LVL5
+ 823 0246 21010000 		.4byte	0x121
+ 824 024a 00       		.byte	0
+ 825 024b 0C       		.uleb128 0xc
+ 826 024c CD010000 		.4byte	.LASF37
+ 827 0250 01       		.byte	0x1
+ 828 0251 2B       		.byte	0x2b
+ 829 0252 00000000 		.4byte	.LFB1
+ 830 0256 3C000000 		.4byte	.LFE1-.LFB1
+ 831 025a 01       		.uleb128 0x1
+ 832 025b 9C       		.byte	0x9c
+ 833 025c CB020000 		.4byte	0x2cb
+ 834 0260 0D       		.uleb128 0xd
+ 835 0261 46040000 		.4byte	.LASF44
+ 836 0265 01       		.byte	0x1
+ 837 0266 2F       		.byte	0x2f
+ 838 0267 6B000000 		.4byte	0x6b
+ 839 026b 00000000 		.4byte	.LLST0
+ 840 026f 0E       		.uleb128 0xe
+ 841 0270 0C000000 		.4byte	.LVL6
+ 842 0274 88010000 		.4byte	0x188
+ 843 0278 83020000 		.4byte	0x283
+ 844 027c 0F       		.uleb128 0xf
+ 845 027d 01       		.uleb128 0x1
+ 846 027e 50       		.byte	0x50
+ 847 027f 02       		.uleb128 0x2
+ 848 0280 74       		.byte	0x74
+ 849 0281 00       		.sleb128 0
+ 850 0282 00       		.byte	0
+ 851 0283 0E       		.uleb128 0xe
+ 852 0284 12000000 		.4byte	.LVL7
+ 853 0288 C3010000 		.4byte	0x1c3
+ 854 028c 97020000 		.4byte	0x297
+ 855 0290 0F       		.uleb128 0xf
+ 856 0291 01       		.uleb128 0x1
+ 857 0292 50       		.byte	0x50
+ 858 0293 02       		.uleb128 0x2
+ 859 0294 74       		.byte	0x74
+ 860 0295 00       		.sleb128 0
+ 861 0296 00       		.byte	0
+ 862 0297 0B       		.uleb128 0xb
+ 863 0298 16000000 		.4byte	.LVL8
+ 864 029c 04030000 		.4byte	0x304
+ 865 02a0 0B       		.uleb128 0xb
+ 866 02a1 26000000 		.4byte	.LVL9
+ 867 02a5 0F030000 		.4byte	0x30f
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 30
+
+
+ 868 02a9 0B       		.uleb128 0xb
+ 869 02aa 2A000000 		.4byte	.LVL10
+ 870 02ae FE010000 		.4byte	0x1fe
+ 871 02b2 0B       		.uleb128 0xb
+ 872 02b3 2E000000 		.4byte	.LVL11
+ 873 02b7 22020000 		.4byte	0x222
+ 874 02bb 10       		.uleb128 0x10
+ 875 02bc 34000000 		.4byte	.LVL12
+ 876 02c0 EA000000 		.4byte	0xea
+ 877 02c4 0F       		.uleb128 0xf
+ 878 02c5 01       		.uleb128 0x1
+ 879 02c6 50       		.byte	0x50
+ 880 02c7 01       		.uleb128 0x1
+ 881 02c8 30       		.byte	0x30
+ 882 02c9 00       		.byte	0
+ 883 02ca 00       		.byte	0
+ 884 02cb 0C       		.uleb128 0xc
+ 885 02cc 10020000 		.4byte	.LASF38
+ 886 02d0 01       		.byte	0x1
+ 887 02d1 D7       		.byte	0xd7
+ 888 02d2 00000000 		.4byte	.LFB3
+ 889 02d6 20000000 		.4byte	.LFE3-.LFB3
+ 890 02da 01       		.uleb128 0x1
+ 891 02db 9C       		.byte	0x9c
+ 892 02dc F3020000 		.4byte	0x2f3
+ 893 02e0 0B       		.uleb128 0xb
+ 894 02e1 0E000000 		.4byte	.LVL13
+ 895 02e5 4B020000 		.4byte	0x24b
+ 896 02e9 0B       		.uleb128 0xb
+ 897 02ea 18000000 		.4byte	.LVL14
+ 898 02ee C8000000 		.4byte	0xc8
+ 899 02f2 00       		.byte	0
+ 900 02f3 11       		.uleb128 0x11
+ 901 02f4 2D000000 		.4byte	.LASF45
+ 902 02f8 01       		.byte	0x1
+ 903 02f9 1A       		.byte	0x1a
+ 904 02fa 6B000000 		.4byte	0x6b
+ 905 02fe 05       		.uleb128 0x5
+ 906 02ff 03       		.byte	0x3
+ 907 0300 00000000 		.4byte	Timer_Rotor_Delay_initVar
+ 908 0304 12       		.uleb128 0x12
+ 909 0305 B0020000 		.4byte	.LASF39
+ 910 0309 B0020000 		.4byte	.LASF39
+ 911 030d 03       		.byte	0x3
+ 912 030e F8       		.byte	0xf8
+ 913 030f 12       		.uleb128 0x12
+ 914 0310 D4020000 		.4byte	.LASF40
+ 915 0314 D4020000 		.4byte	.LASF40
+ 916 0318 03       		.byte	0x3
+ 917 0319 F9       		.byte	0xf9
+ 918 031a 00       		.byte	0
+ 919              		.section	.debug_abbrev,"",%progbits
+ 920              	.Ldebug_abbrev0:
+ 921 0000 01       		.uleb128 0x1
+ 922 0001 11       		.uleb128 0x11
+ 923 0002 01       		.byte	0x1
+ 924 0003 25       		.uleb128 0x25
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 31
+
+
+ 925 0004 0E       		.uleb128 0xe
+ 926 0005 13       		.uleb128 0x13
+ 927 0006 0B       		.uleb128 0xb
+ 928 0007 03       		.uleb128 0x3
+ 929 0008 0E       		.uleb128 0xe
+ 930 0009 1B       		.uleb128 0x1b
+ 931 000a 0E       		.uleb128 0xe
+ 932 000b 55       		.uleb128 0x55
+ 933 000c 17       		.uleb128 0x17
+ 934 000d 11       		.uleb128 0x11
+ 935 000e 01       		.uleb128 0x1
+ 936 000f 10       		.uleb128 0x10
+ 937 0010 17       		.uleb128 0x17
+ 938 0011 00       		.byte	0
+ 939 0012 00       		.byte	0
+ 940 0013 02       		.uleb128 0x2
+ 941 0014 24       		.uleb128 0x24
+ 942 0015 00       		.byte	0
+ 943 0016 0B       		.uleb128 0xb
+ 944 0017 0B       		.uleb128 0xb
+ 945 0018 3E       		.uleb128 0x3e
+ 946 0019 0B       		.uleb128 0xb
+ 947 001a 03       		.uleb128 0x3
+ 948 001b 0E       		.uleb128 0xe
+ 949 001c 00       		.byte	0
+ 950 001d 00       		.byte	0
+ 951 001e 03       		.uleb128 0x3
+ 952 001f 24       		.uleb128 0x24
+ 953 0020 00       		.byte	0
+ 954 0021 0B       		.uleb128 0xb
+ 955 0022 0B       		.uleb128 0xb
+ 956 0023 3E       		.uleb128 0x3e
+ 957 0024 0B       		.uleb128 0xb
+ 958 0025 03       		.uleb128 0x3
+ 959 0026 08       		.uleb128 0x8
+ 960 0027 00       		.byte	0
+ 961 0028 00       		.byte	0
+ 962 0029 04       		.uleb128 0x4
+ 963 002a 16       		.uleb128 0x16
+ 964 002b 00       		.byte	0
+ 965 002c 03       		.uleb128 0x3
+ 966 002d 0E       		.uleb128 0xe
+ 967 002e 3A       		.uleb128 0x3a
+ 968 002f 0B       		.uleb128 0xb
+ 969 0030 3B       		.uleb128 0x3b
+ 970 0031 05       		.uleb128 0x5
+ 971 0032 49       		.uleb128 0x49
+ 972 0033 13       		.uleb128 0x13
+ 973 0034 00       		.byte	0
+ 974 0035 00       		.byte	0
+ 975 0036 05       		.uleb128 0x5
+ 976 0037 35       		.uleb128 0x35
+ 977 0038 00       		.byte	0
+ 978 0039 49       		.uleb128 0x49
+ 979 003a 13       		.uleb128 0x13
+ 980 003b 00       		.byte	0
+ 981 003c 00       		.byte	0
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 32
+
+
+ 982 003d 06       		.uleb128 0x6
+ 983 003e 2E       		.uleb128 0x2e
+ 984 003f 00       		.byte	0
+ 985 0040 3F       		.uleb128 0x3f
+ 986 0041 19       		.uleb128 0x19
+ 987 0042 03       		.uleb128 0x3
+ 988 0043 0E       		.uleb128 0xe
+ 989 0044 3A       		.uleb128 0x3a
+ 990 0045 0B       		.uleb128 0xb
+ 991 0046 3B       		.uleb128 0x3b
+ 992 0047 0B       		.uleb128 0xb
+ 993 0048 27       		.uleb128 0x27
+ 994 0049 19       		.uleb128 0x19
+ 995 004a 11       		.uleb128 0x11
+ 996 004b 01       		.uleb128 0x1
+ 997 004c 12       		.uleb128 0x12
+ 998 004d 06       		.uleb128 0x6
+ 999 004e 40       		.uleb128 0x40
+ 1000 004f 18       		.uleb128 0x18
+ 1001 0050 9742     		.uleb128 0x2117
+ 1002 0052 19       		.uleb128 0x19
+ 1003 0053 00       		.byte	0
+ 1004 0054 00       		.byte	0
+ 1005 0055 07       		.uleb128 0x7
+ 1006 0056 2E       		.uleb128 0x2e
+ 1007 0057 01       		.byte	0x1
+ 1008 0058 3F       		.uleb128 0x3f
+ 1009 0059 19       		.uleb128 0x19
+ 1010 005a 03       		.uleb128 0x3
+ 1011 005b 0E       		.uleb128 0xe
+ 1012 005c 3A       		.uleb128 0x3a
+ 1013 005d 0B       		.uleb128 0xb
+ 1014 005e 3B       		.uleb128 0x3b
+ 1015 005f 05       		.uleb128 0x5
+ 1016 0060 27       		.uleb128 0x27
+ 1017 0061 19       		.uleb128 0x19
+ 1018 0062 11       		.uleb128 0x11
+ 1019 0063 01       		.uleb128 0x1
+ 1020 0064 12       		.uleb128 0x12
+ 1021 0065 06       		.uleb128 0x6
+ 1022 0066 40       		.uleb128 0x40
+ 1023 0067 18       		.uleb128 0x18
+ 1024 0068 9742     		.uleb128 0x2117
+ 1025 006a 19       		.uleb128 0x19
+ 1026 006b 01       		.uleb128 0x1
+ 1027 006c 13       		.uleb128 0x13
+ 1028 006d 00       		.byte	0
+ 1029 006e 00       		.byte	0
+ 1030 006f 08       		.uleb128 0x8
+ 1031 0070 05       		.uleb128 0x5
+ 1032 0071 00       		.byte	0
+ 1033 0072 03       		.uleb128 0x3
+ 1034 0073 0E       		.uleb128 0xe
+ 1035 0074 3A       		.uleb128 0x3a
+ 1036 0075 0B       		.uleb128 0xb
+ 1037 0076 3B       		.uleb128 0x3b
+ 1038 0077 05       		.uleb128 0x5
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 33
+
+
+ 1039 0078 49       		.uleb128 0x49
+ 1040 0079 13       		.uleb128 0x13
+ 1041 007a 02       		.uleb128 0x2
+ 1042 007b 18       		.uleb128 0x18
+ 1043 007c 00       		.byte	0
+ 1044 007d 00       		.byte	0
+ 1045 007e 09       		.uleb128 0x9
+ 1046 007f 2E       		.uleb128 0x2e
+ 1047 0080 00       		.byte	0
+ 1048 0081 3F       		.uleb128 0x3f
+ 1049 0082 19       		.uleb128 0x19
+ 1050 0083 03       		.uleb128 0x3
+ 1051 0084 0E       		.uleb128 0xe
+ 1052 0085 3A       		.uleb128 0x3a
+ 1053 0086 0B       		.uleb128 0xb
+ 1054 0087 3B       		.uleb128 0x3b
+ 1055 0088 05       		.uleb128 0x5
+ 1056 0089 27       		.uleb128 0x27
+ 1057 008a 19       		.uleb128 0x19
+ 1058 008b 11       		.uleb128 0x11
+ 1059 008c 01       		.uleb128 0x1
+ 1060 008d 12       		.uleb128 0x12
+ 1061 008e 06       		.uleb128 0x6
+ 1062 008f 40       		.uleb128 0x40
+ 1063 0090 18       		.uleb128 0x18
+ 1064 0091 9742     		.uleb128 0x2117
+ 1065 0093 19       		.uleb128 0x19
+ 1066 0094 00       		.byte	0
+ 1067 0095 00       		.byte	0
+ 1068 0096 0A       		.uleb128 0xa
+ 1069 0097 2E       		.uleb128 0x2e
+ 1070 0098 00       		.byte	0
+ 1071 0099 3F       		.uleb128 0x3f
+ 1072 009a 19       		.uleb128 0x19
+ 1073 009b 03       		.uleb128 0x3
+ 1074 009c 0E       		.uleb128 0xe
+ 1075 009d 3A       		.uleb128 0x3a
+ 1076 009e 0B       		.uleb128 0xb
+ 1077 009f 3B       		.uleb128 0x3b
+ 1078 00a0 05       		.uleb128 0x5
+ 1079 00a1 27       		.uleb128 0x27
+ 1080 00a2 19       		.uleb128 0x19
+ 1081 00a3 49       		.uleb128 0x49
+ 1082 00a4 13       		.uleb128 0x13
+ 1083 00a5 11       		.uleb128 0x11
+ 1084 00a6 01       		.uleb128 0x1
+ 1085 00a7 12       		.uleb128 0x12
+ 1086 00a8 06       		.uleb128 0x6
+ 1087 00a9 40       		.uleb128 0x40
+ 1088 00aa 18       		.uleb128 0x18
+ 1089 00ab 9742     		.uleb128 0x2117
+ 1090 00ad 19       		.uleb128 0x19
+ 1091 00ae 00       		.byte	0
+ 1092 00af 00       		.byte	0
+ 1093 00b0 0B       		.uleb128 0xb
+ 1094 00b1 898201   		.uleb128 0x4109
+ 1095 00b4 00       		.byte	0
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 34
+
+
+ 1096 00b5 11       		.uleb128 0x11
+ 1097 00b6 01       		.uleb128 0x1
+ 1098 00b7 31       		.uleb128 0x31
+ 1099 00b8 13       		.uleb128 0x13
+ 1100 00b9 00       		.byte	0
+ 1101 00ba 00       		.byte	0
+ 1102 00bb 0C       		.uleb128 0xc
+ 1103 00bc 2E       		.uleb128 0x2e
+ 1104 00bd 01       		.byte	0x1
+ 1105 00be 3F       		.uleb128 0x3f
+ 1106 00bf 19       		.uleb128 0x19
+ 1107 00c0 03       		.uleb128 0x3
+ 1108 00c1 0E       		.uleb128 0xe
+ 1109 00c2 3A       		.uleb128 0x3a
+ 1110 00c3 0B       		.uleb128 0xb
+ 1111 00c4 3B       		.uleb128 0x3b
+ 1112 00c5 0B       		.uleb128 0xb
+ 1113 00c6 27       		.uleb128 0x27
+ 1114 00c7 19       		.uleb128 0x19
+ 1115 00c8 11       		.uleb128 0x11
+ 1116 00c9 01       		.uleb128 0x1
+ 1117 00ca 12       		.uleb128 0x12
+ 1118 00cb 06       		.uleb128 0x6
+ 1119 00cc 40       		.uleb128 0x40
+ 1120 00cd 18       		.uleb128 0x18
+ 1121 00ce 9742     		.uleb128 0x2117
+ 1122 00d0 19       		.uleb128 0x19
+ 1123 00d1 01       		.uleb128 0x1
+ 1124 00d2 13       		.uleb128 0x13
+ 1125 00d3 00       		.byte	0
+ 1126 00d4 00       		.byte	0
+ 1127 00d5 0D       		.uleb128 0xd
+ 1128 00d6 34       		.uleb128 0x34
+ 1129 00d7 00       		.byte	0
+ 1130 00d8 03       		.uleb128 0x3
+ 1131 00d9 0E       		.uleb128 0xe
+ 1132 00da 3A       		.uleb128 0x3a
+ 1133 00db 0B       		.uleb128 0xb
+ 1134 00dc 3B       		.uleb128 0x3b
+ 1135 00dd 0B       		.uleb128 0xb
+ 1136 00de 49       		.uleb128 0x49
+ 1137 00df 13       		.uleb128 0x13
+ 1138 00e0 02       		.uleb128 0x2
+ 1139 00e1 17       		.uleb128 0x17
+ 1140 00e2 00       		.byte	0
+ 1141 00e3 00       		.byte	0
+ 1142 00e4 0E       		.uleb128 0xe
+ 1143 00e5 898201   		.uleb128 0x4109
+ 1144 00e8 01       		.byte	0x1
+ 1145 00e9 11       		.uleb128 0x11
+ 1146 00ea 01       		.uleb128 0x1
+ 1147 00eb 31       		.uleb128 0x31
+ 1148 00ec 13       		.uleb128 0x13
+ 1149 00ed 01       		.uleb128 0x1
+ 1150 00ee 13       		.uleb128 0x13
+ 1151 00ef 00       		.byte	0
+ 1152 00f0 00       		.byte	0
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 35
+
+
+ 1153 00f1 0F       		.uleb128 0xf
+ 1154 00f2 8A8201   		.uleb128 0x410a
+ 1155 00f5 00       		.byte	0
+ 1156 00f6 02       		.uleb128 0x2
+ 1157 00f7 18       		.uleb128 0x18
+ 1158 00f8 9142     		.uleb128 0x2111
+ 1159 00fa 18       		.uleb128 0x18
+ 1160 00fb 00       		.byte	0
+ 1161 00fc 00       		.byte	0
+ 1162 00fd 10       		.uleb128 0x10
+ 1163 00fe 898201   		.uleb128 0x4109
+ 1164 0101 01       		.byte	0x1
+ 1165 0102 11       		.uleb128 0x11
+ 1166 0103 01       		.uleb128 0x1
+ 1167 0104 31       		.uleb128 0x31
+ 1168 0105 13       		.uleb128 0x13
+ 1169 0106 00       		.byte	0
+ 1170 0107 00       		.byte	0
+ 1171 0108 11       		.uleb128 0x11
+ 1172 0109 34       		.uleb128 0x34
+ 1173 010a 00       		.byte	0
+ 1174 010b 03       		.uleb128 0x3
+ 1175 010c 0E       		.uleb128 0xe
+ 1176 010d 3A       		.uleb128 0x3a
+ 1177 010e 0B       		.uleb128 0xb
+ 1178 010f 3B       		.uleb128 0x3b
+ 1179 0110 0B       		.uleb128 0xb
+ 1180 0111 49       		.uleb128 0x49
+ 1181 0112 13       		.uleb128 0x13
+ 1182 0113 3F       		.uleb128 0x3f
+ 1183 0114 19       		.uleb128 0x19
+ 1184 0115 02       		.uleb128 0x2
+ 1185 0116 18       		.uleb128 0x18
+ 1186 0117 00       		.byte	0
+ 1187 0118 00       		.byte	0
+ 1188 0119 12       		.uleb128 0x12
+ 1189 011a 2E       		.uleb128 0x2e
+ 1190 011b 00       		.byte	0
+ 1191 011c 3F       		.uleb128 0x3f
+ 1192 011d 19       		.uleb128 0x19
+ 1193 011e 3C       		.uleb128 0x3c
+ 1194 011f 19       		.uleb128 0x19
+ 1195 0120 6E       		.uleb128 0x6e
+ 1196 0121 0E       		.uleb128 0xe
+ 1197 0122 03       		.uleb128 0x3
+ 1198 0123 0E       		.uleb128 0xe
+ 1199 0124 3A       		.uleb128 0x3a
+ 1200 0125 0B       		.uleb128 0xb
+ 1201 0126 3B       		.uleb128 0x3b
+ 1202 0127 0B       		.uleb128 0xb
+ 1203 0128 00       		.byte	0
+ 1204 0129 00       		.byte	0
+ 1205 012a 00       		.byte	0
+ 1206              		.section	.debug_loc,"",%progbits
+ 1207              	.Ldebug_loc0:
+ 1208              	.LLST0:
+ 1209 0000 16000000 		.4byte	.LVL8
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 36
+
+
+ 1210 0004 25000000 		.4byte	.LVL9-1
+ 1211 0008 0100     		.2byte	0x1
+ 1212 000a 50       		.byte	0x50
+ 1213 000b 00000000 		.4byte	0
+ 1214 000f 00000000 		.4byte	0
+ 1215              		.section	.debug_aranges,"",%progbits
+ 1216 0000 9C000000 		.4byte	0x9c
+ 1217 0004 0200     		.2byte	0x2
+ 1218 0006 00000000 		.4byte	.Ldebug_info0
+ 1219 000a 04       		.byte	0x4
+ 1220 000b 00       		.byte	0
+ 1221 000c 0000     		.2byte	0
+ 1222 000e 0000     		.2byte	0
+ 1223 0010 00000000 		.4byte	.LFB2
+ 1224 0014 14000000 		.4byte	.LFE2-.LFB2
+ 1225 0018 00000000 		.4byte	.LFB4
+ 1226 001c 10000000 		.4byte	.LFE4-.LFB4
+ 1227 0020 00000000 		.4byte	.LFB5
+ 1228 0024 0C000000 		.4byte	.LFE5-.LFB5
+ 1229 0028 00000000 		.4byte	.LFB6
+ 1230 002c 0C000000 		.4byte	.LFE6-.LFB6
+ 1231 0030 00000000 		.4byte	.LFB7
+ 1232 0034 0C000000 		.4byte	.LFE7-.LFB7
+ 1233 0038 00000000 		.4byte	.LFB8
+ 1234 003c 0C000000 		.4byte	.LFE8-.LFB8
+ 1235 0040 00000000 		.4byte	.LFB9
+ 1236 0044 0C000000 		.4byte	.LFE9-.LFB9
+ 1237 0048 00000000 		.4byte	.LFB10
+ 1238 004c 0C000000 		.4byte	.LFE10-.LFB10
+ 1239 0050 00000000 		.4byte	.LFB11
+ 1240 0054 0C000000 		.4byte	.LFE11-.LFB11
+ 1241 0058 00000000 		.4byte	.LFB12
+ 1242 005c 0C000000 		.4byte	.LFE12-.LFB12
+ 1243 0060 00000000 		.4byte	.LFB13
+ 1244 0064 0C000000 		.4byte	.LFE13-.LFB13
+ 1245 0068 00000000 		.4byte	.LFB14
+ 1246 006c 14000000 		.4byte	.LFE14-.LFB14
+ 1247 0070 00000000 		.4byte	.LFB15
+ 1248 0074 14000000 		.4byte	.LFE15-.LFB15
+ 1249 0078 00000000 		.4byte	.LFB16
+ 1250 007c 10000000 		.4byte	.LFE16-.LFB16
+ 1251 0080 00000000 		.4byte	.LFB17
+ 1252 0084 12000000 		.4byte	.LFE17-.LFB17
+ 1253 0088 00000000 		.4byte	.LFB1
+ 1254 008c 3C000000 		.4byte	.LFE1-.LFB1
+ 1255 0090 00000000 		.4byte	.LFB3
+ 1256 0094 20000000 		.4byte	.LFE3-.LFB3
+ 1257 0098 00000000 		.4byte	0
+ 1258 009c 00000000 		.4byte	0
+ 1259              		.section	.debug_ranges,"",%progbits
+ 1260              	.Ldebug_ranges0:
+ 1261 0000 00000000 		.4byte	.LFB2
+ 1262 0004 14000000 		.4byte	.LFE2
+ 1263 0008 00000000 		.4byte	.LFB4
+ 1264 000c 10000000 		.4byte	.LFE4
+ 1265 0010 00000000 		.4byte	.LFB5
+ 1266 0014 0C000000 		.4byte	.LFE5
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 37
+
+
+ 1267 0018 00000000 		.4byte	.LFB6
+ 1268 001c 0C000000 		.4byte	.LFE6
+ 1269 0020 00000000 		.4byte	.LFB7
+ 1270 0024 0C000000 		.4byte	.LFE7
+ 1271 0028 00000000 		.4byte	.LFB8
+ 1272 002c 0C000000 		.4byte	.LFE8
+ 1273 0030 00000000 		.4byte	.LFB9
+ 1274 0034 0C000000 		.4byte	.LFE9
+ 1275 0038 00000000 		.4byte	.LFB10
+ 1276 003c 0C000000 		.4byte	.LFE10
+ 1277 0040 00000000 		.4byte	.LFB11
+ 1278 0044 0C000000 		.4byte	.LFE11
+ 1279 0048 00000000 		.4byte	.LFB12
+ 1280 004c 0C000000 		.4byte	.LFE12
+ 1281 0050 00000000 		.4byte	.LFB13
+ 1282 0054 0C000000 		.4byte	.LFE13
+ 1283 0058 00000000 		.4byte	.LFB14
+ 1284 005c 14000000 		.4byte	.LFE14
+ 1285 0060 00000000 		.4byte	.LFB15
+ 1286 0064 14000000 		.4byte	.LFE15
+ 1287 0068 00000000 		.4byte	.LFB16
+ 1288 006c 10000000 		.4byte	.LFE16
+ 1289 0070 00000000 		.4byte	.LFB17
+ 1290 0074 12000000 		.4byte	.LFE17
+ 1291 0078 00000000 		.4byte	.LFB1
+ 1292 007c 3C000000 		.4byte	.LFE1
+ 1293 0080 00000000 		.4byte	.LFB3
+ 1294 0084 20000000 		.4byte	.LFE3
+ 1295 0088 00000000 		.4byte	0
+ 1296 008c 00000000 		.4byte	0
+ 1297              		.section	.debug_line,"",%progbits
+ 1298              	.Ldebug_line0:
+ 1299 0000 A4010000 		.section	.debug_str,"MS",%progbits,1
+ 1299      02005900 
+ 1299      00000201 
+ 1299      FB0E0D00 
+ 1299      01010101 
+ 1300              	.LASF15:
+ 1301 0000 72656731 		.ascii	"reg16\000"
+ 1301      3600
+ 1302              	.LASF24:
+ 1303 0006 54696D65 		.ascii	"Timer_Rotor_Delay_WriteControlRegister\000"
+ 1303      725F526F 
+ 1303      746F725F 
+ 1303      44656C61 
+ 1303      795F5772 
+ 1304              	.LASF45:
+ 1305 002d 54696D65 		.ascii	"Timer_Rotor_Delay_initVar\000"
+ 1305      725F526F 
+ 1305      746F725F 
+ 1305      44656C61 
+ 1305      795F696E 
+ 1306              	.LASF29:
+ 1307 0047 70657269 		.ascii	"period\000"
+ 1307      6F6400
+ 1308              	.LASF35:
+ 1309 004e 54696D65 		.ascii	"Timer_Rotor_Delay_DisableTrigger\000"
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 38
+
+
+ 1309      725F526F 
+ 1309      746F725F 
+ 1309      44656C61 
+ 1309      795F4469 
+ 1310              	.LASF3:
+ 1311 006f 73686F72 		.ascii	"short unsigned int\000"
+ 1311      7420756E 
+ 1311      7369676E 
+ 1311      65642069 
+ 1311      6E7400
+ 1312              	.LASF27:
+ 1313 0082 54696D65 		.ascii	"Timer_Rotor_Delay_ReadPeriod\000"
+ 1313      725F526F 
+ 1313      746F725F 
+ 1313      44656C61 
+ 1313      795F5265 
+ 1314              	.LASF36:
+ 1315 009f 54696D65 		.ascii	"Timer_Rotor_Delay_ClearFIFO\000"
+ 1315      725F526F 
+ 1315      746F725F 
+ 1315      44656C61 
+ 1315      795F436C 
+ 1316              	.LASF31:
+ 1317 00bb 54696D65 		.ascii	"Timer_Rotor_Delay_WriteCounter\000"
+ 1317      725F526F 
+ 1317      746F725F 
+ 1317      44656C61 
+ 1317      795F5772 
+ 1318              	.LASF20:
+ 1319 00da 54696D65 		.ascii	"Timer_Rotor_Delay_SoftwareCapture\000"
+ 1319      725F526F 
+ 1319      746F725F 
+ 1319      44656C61 
+ 1319      795F536F 
+ 1320              	.LASF30:
+ 1321 00fc 54696D65 		.ascii	"Timer_Rotor_Delay_ReadCapture\000"
+ 1321      725F526F 
+ 1321      746F725F 
+ 1321      44656C61 
+ 1321      795F5265 
+ 1322              	.LASF34:
+ 1323 011a 54696D65 		.ascii	"Timer_Rotor_Delay_EnableTrigger\000"
+ 1323      725F526F 
+ 1323      746F725F 
+ 1323      44656C61 
+ 1323      795F456E 
+ 1324              	.LASF22:
+ 1325 013a 54696D65 		.ascii	"Timer_Rotor_Delay_ReadControlRegister\000"
+ 1325      725F526F 
+ 1325      746F725F 
+ 1325      44656C61 
+ 1325      795F5265 
+ 1326              	.LASF23:
+ 1327 0160 54696D65 		.ascii	"Timer_Rotor_Delay_SetInterruptMode\000"
+ 1327      725F526F 
+ 1327      746F725F 
+ 1327      44656C61 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 39
+
+
+ 1327      795F5365 
+ 1328              	.LASF11:
+ 1329 0183 666C6F61 		.ascii	"float\000"
+ 1329      7400
+ 1330              	.LASF32:
+ 1331 0189 636F756E 		.ascii	"counter\000"
+ 1331      74657200 
+ 1332              	.LASF7:
+ 1333 0191 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1333      206C6F6E 
+ 1333      6720756E 
+ 1333      7369676E 
+ 1333      65642069 
+ 1334              	.LASF1:
+ 1335 01a8 756E7369 		.ascii	"unsigned char\000"
+ 1335      676E6564 
+ 1335      20636861 
+ 1335      7200
+ 1336              	.LASF14:
+ 1337 01b6 72656738 		.ascii	"reg8\000"
+ 1337      00
+ 1338              	.LASF5:
+ 1339 01bb 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1339      20756E73 
+ 1339      69676E65 
+ 1339      6420696E 
+ 1339      7400
+ 1340              	.LASF37:
+ 1341 01cd 54696D65 		.ascii	"Timer_Rotor_Delay_Init\000"
+ 1341      725F526F 
+ 1341      746F725F 
+ 1341      44656C61 
+ 1341      795F496E 
+ 1342              	.LASF9:
+ 1343 01e4 75696E74 		.ascii	"uint8\000"
+ 1343      3800
+ 1344              	.LASF26:
+ 1345 01ea 636F6E74 		.ascii	"control\000"
+ 1345      726F6C00 
+ 1346              	.LASF33:
+ 1347 01f2 54696D65 		.ascii	"Timer_Rotor_Delay_ReadCounter\000"
+ 1347      725F526F 
+ 1347      746F725F 
+ 1347      44656C61 
+ 1347      795F5265 
+ 1348              	.LASF38:
+ 1349 0210 54696D65 		.ascii	"Timer_Rotor_Delay_Start\000"
+ 1349      725F526F 
+ 1349      746F725F 
+ 1349      44656C61 
+ 1349      795F5374 
+ 1350              	.LASF12:
+ 1351 0228 646F7562 		.ascii	"double\000"
+ 1351      6C6500
+ 1352              	.LASF43:
+ 1353 022f 433A5C55 		.ascii	"C:\\Users\\casey\\Desktop\\Robotics Stuff\\BLDC_Mot"
+ 1353      73657273 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 40
+
+
+ 1353      5C636173 
+ 1353      65795C44 
+ 1353      65736B74 
+ 1354 025d 6F725F42 		.ascii	"or_Board_PY2023\\BLDC_Motor_Board.cydsn\000"
+ 1354      6F617264 
+ 1354      5F505932 
+ 1354      3032335C 
+ 1354      424C4443 
+ 1355              	.LASF10:
+ 1356 0284 75696E74 		.ascii	"uint16\000"
+ 1356      313600
+ 1357              	.LASF21:
+ 1358 028b 54696D65 		.ascii	"Timer_Rotor_Delay_ReadStatusRegister\000"
+ 1358      725F526F 
+ 1358      746F725F 
+ 1358      44656C61 
+ 1358      795F5265 
+ 1359              	.LASF39:
+ 1360 02b0 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 1360      74657243 
+ 1360      72697469 
+ 1360      63616C53 
+ 1360      65637469 
+ 1361              	.LASF8:
+ 1362 02c7 756E7369 		.ascii	"unsigned int\000"
+ 1362      676E6564 
+ 1362      20696E74 
+ 1362      00
+ 1363              	.LASF40:
+ 1364 02d4 43794578 		.ascii	"CyExitCriticalSection\000"
+ 1364      69744372 
+ 1364      69746963 
+ 1364      616C5365 
+ 1364      6374696F 
+ 1365              	.LASF41:
+ 1366 02ea 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1366      43313120 
+ 1366      352E342E 
+ 1366      31203230 
+ 1366      31363036 
+ 1367 031d 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 1367      20726576 
+ 1367      6973696F 
+ 1367      6E203233 
+ 1367      37373135 
+ 1368 0350 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1368      66756E63 
+ 1368      74696F6E 
+ 1368      2D736563 
+ 1368      74696F6E 
+ 1369              	.LASF17:
+ 1370 0378 73697A65 		.ascii	"sizetype\000"
+ 1370      74797065 
+ 1370      00
+ 1371              	.LASF19:
+ 1372 0381 54696D65 		.ascii	"Timer_Rotor_Delay_Stop\000"
+ 1372      725F526F 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 41
+
+
+ 1372      746F725F 
+ 1372      44656C61 
+ 1372      795F5374 
+ 1373              	.LASF28:
+ 1374 0398 54696D65 		.ascii	"Timer_Rotor_Delay_WritePeriod\000"
+ 1374      725F526F 
+ 1374      746F725F 
+ 1374      44656C61 
+ 1374      795F5772 
+ 1375              	.LASF6:
+ 1376 03b6 6C6F6E67 		.ascii	"long long int\000"
+ 1376      206C6F6E 
+ 1376      6720696E 
+ 1376      7400
+ 1377              	.LASF25:
+ 1378 03c4 696E7465 		.ascii	"interruptMode\000"
+ 1378      72727570 
+ 1378      744D6F64 
+ 1378      6500
+ 1379              	.LASF42:
+ 1380 03d2 47656E65 		.ascii	"Generated_Source\\PSoC4\\Timer_Rotor_Delay.c\000"
+ 1380      72617465 
+ 1380      645F536F 
+ 1380      75726365 
+ 1380      5C50536F 
+ 1381              	.LASF18:
+ 1382 03fd 54696D65 		.ascii	"Timer_Rotor_Delay_Enable\000"
+ 1382      725F526F 
+ 1382      746F725F 
+ 1382      44656C61 
+ 1382      795F456E 
+ 1383              	.LASF2:
+ 1384 0416 73686F72 		.ascii	"short int\000"
+ 1384      7420696E 
+ 1384      7400
+ 1385              	.LASF4:
+ 1386 0420 6C6F6E67 		.ascii	"long int\000"
+ 1386      20696E74 
+ 1386      00
+ 1387              	.LASF13:
+ 1388 0429 63686172 		.ascii	"char\000"
+ 1388      00
+ 1389              	.LASF16:
+ 1390 042e 6C6F6E67 		.ascii	"long double\000"
+ 1390      20646F75 
+ 1390      626C6500 
+ 1391              	.LASF0:
+ 1392 043a 7369676E 		.ascii	"signed char\000"
+ 1392      65642063 
+ 1392      68617200 
+ 1393              	.LASF44:
+ 1394 0446 54696D65 		.ascii	"Timer_Rotor_Delay_interruptState\000"
+ 1394      725F526F 
+ 1394      746F725F 
+ 1394      44656C61 
+ 1394      795F696E 
+ 1395              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cczMaf2z.s 			page 42
+
+

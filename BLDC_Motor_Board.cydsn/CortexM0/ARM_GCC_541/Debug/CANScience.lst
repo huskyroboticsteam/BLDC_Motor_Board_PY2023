@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccAa9JiT.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 1
   44 0008 FFF7FEFF 		bl	ConstructCANID
   45              	.LVL2:
   46 000c 2080     		strh	r0, [r4]
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 2
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccAa9JiT.s 			page 2
 
 
   12:CANLib/CANScience.c **** 	packetToAssemble->dlc = 2;
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 1
   89 000a 0120     		movs	r0, #1
   90              	.LVL7:
   91 000c FFF7FEFF 		bl	ConstructCANID
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 3
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccAa9JiT.s 			page 3
 
 
   92              	.LVL8:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 1
  134 0006 04AB     		add	r3, sp, #16
  135              	.LVL12:
  136 0008 0025     		movs	r5, #0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 4
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccAa9JiT.s 			page 4
 
 
  137 000a 5D57     		ldrsb	r5, [r3, r5]
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 1
  181              		.loc 1 45 0
  182              		@ sp needed
  183 0004 7047     		bx	lr
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 5
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccAa9JiT.s 			page 5
 
 
  184              		.cfi_endproc
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 1
  230              		.cfi_endproc
  231              	.LFE5:
  232              		.size	GetScienceLazySusanPosFromPacket, .-GetScienceLazySusanPosFromPacket
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 6
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccAa9JiT.s 			page 6
 
 
  233              		.section	.text.GetScienceServoIDFromPacket,"ax",%progbits
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 1
  283 0033 09030000 		.4byte	.LASF2
  284 0037 02       		.uleb128 0x2
  285 0038 25000000 		.4byte	.LASF1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 7
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccAa9JiT.s 			page 7
 
 
  286 003c 02       		.byte	0x2
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 1
  340 00a2 02       		.uleb128 0x2
  341 00a3 B2020000 		.4byte	.LASF14
  342 00a7 03       		.byte	0x3
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 8
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccAa9JiT.s 			page 8
 
 
  343 00a8 24       		.byte	0x24
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 1
  397 0116 06       		.byte	0x6
  398 0117 75010000 		.4byte	0x175
  399 011b 00000000 		.4byte	.LLST0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 9
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccAa9JiT.s 			page 9
 
 
  400 011f 0B       		.uleb128 0xb
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 1
  454 018b 9C       		.byte	0x9c
  455 018c 04020000 		.4byte	0x204
  456 0190 0B       		.uleb128 0xb
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 10
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccAa9JiT.s 			page 10
 
 
  457 0191 91000000 		.4byte	.LASF18
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 1
  511 0203 00       		.byte	0
  512 0204 0A       		.uleb128 0xa
  513 0205 FC000000 		.4byte	.LASF28
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 11
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccAa9JiT.s 			page 11
 
 
  514 0209 01       		.byte	0x1
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 1
  568 0284 74       		.byte	0x74
  569 0285 03       		.sleb128 3
  570 0286 0D       		.uleb128 0xd
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 12
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccAa9JiT.s 			page 12
 
 
  571 0287 01       		.uleb128 0x1
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 1
  625 02ff 13030000 		.4byte	0x313
  626 0303 0B       		.uleb128 0xb
  627 0304 98010000 		.4byte	.LASF30
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 13
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccAa9JiT.s 			page 13
 
 
  628 0308 01       		.byte	0x1
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 1
  682 0013 02       		.uleb128 0x2
  683 0014 16       		.uleb128 0x16
  684 0015 00       		.byte	0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 14
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccAa9JiT.s 			page 14
 
 
  685 0016 03       		.uleb128 0x3
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 1
  739 004c 49       		.uleb128 0x49
  740 004d 13       		.uleb128 0x13
  741 004e 38       		.uleb128 0x38
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 15
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccAa9JiT.s 			page 15
 
 
  742 004f 0B       		.uleb128 0xb
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 1
  796 0085 18       		.uleb128 0x18
  797 0086 9742     		.uleb128 0x2117
  798 0088 19       		.uleb128 0x19
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 16
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccAa9JiT.s 			page 16
 
 
  799 0089 01       		.uleb128 0x1
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 1
  853 00c6 13       		.uleb128 0x13
  854 00c7 00       		.byte	0
  855 00c8 00       		.byte	0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 17
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccAa9JiT.s 			page 17
 
 
  856 00c9 10       		.uleb128 0x10
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 1
  910              	.LLST0:
  911 0000 00000000 		.4byte	.LVL0
  912 0004 08000000 		.4byte	.LVL1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 18
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccAa9JiT.s 			page 18
 
 
  913 0008 0100     		.2byte	0x1
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 1
  967 0086 9F       		.byte	0x9f
  968 0087 00000000 		.4byte	0
  969 008b 00000000 		.4byte	0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 19
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccAa9JiT.s 			page 19
 
 
  970              	.LLST4:
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 1
  1024 0112 F3       		.byte	0xf3
  1025 0113 01       		.uleb128 0x1
  1026 0114 53       		.byte	0x53
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 20
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccAa9JiT.s 			page 20
 
 
  1027 0115 9F       		.byte	0x9f
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 1
  1081 0197 00000000 		.4byte	.LVL11
  1082 019b 11000000 		.4byte	.LVL14-1
  1083 019f 0100     		.2byte	0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 21
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccAa9JiT.s 			page 21
 
 
  1084 01a1 52       		.byte	0x52
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 1
  1138 021e 00000000 		.4byte	0
  1139 0222 00000000 		.4byte	0
  1140              	.LLST15:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 22
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccAa9JiT.s 			page 22
 
 
  1141 0226 00000000 		.4byte	.LVL19
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 1
  1195 0024 26000000 		.4byte	.LFE2-.LFB2
  1196 0028 00000000 		.4byte	.LFB3
  1197 002c 06000000 		.4byte	.LFE3-.LFB3
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 23
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccAa9JiT.s 			page 23
 
 
  1198 0030 00000000 		.4byte	.LFB4
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 1
  1236      69625C43 
  1236      414E5363 
  1236      69656E63 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 24
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccAa9JiT.s 			page 24
 
 
  1236      652E6300 
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 1
  1258      53636965 
  1258      6E636543 
  1258      6F6E7453 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 25
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccAa9JiT.s 			page 25
 
 
  1259              	.LASF25:
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 1
  1282 0211 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
  1282      20726576 
  1282      6973696F 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 26
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccAa9JiT.s 			page 26
 
 
  1282      6E203233 
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 1
  1305 0309 7369676E 		.ascii	"signed char\000"
  1305      65642063 
  1305      68617200 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccBqnYti.s 			page 27
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccAa9JiT.s 			page 27
 
 
  1306              	.LASF20:
