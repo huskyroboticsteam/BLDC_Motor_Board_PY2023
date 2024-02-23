@@ -15,6 +15,7 @@
     #define MotorDrive
 #endif
 
+// State of U, V, and W inductors (H-L)
 struct CoilState
 {
     uint8_t UH : 1;
@@ -23,6 +24,14 @@ struct CoilState
     uint8_t VL : 1;
     uint8_t WH : 1;
     uint8_t WL : 1;
+};
+
+// State of U, V, and W inductors (H-L)
+struct HallState
+{
+    uint8_t A : 1;
+    uint8_t B : 1;
+    uint8_t C : 1;
 };
 
 void set_speed(int16_t speed, uint8_t disable_limit, uint8_t limitSW);

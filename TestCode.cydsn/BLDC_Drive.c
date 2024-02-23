@@ -19,15 +19,6 @@ extern char txData[TX_DATA_SIZE];
 int32_t currentSpeed = 0;
 int8_t currentDir = 0;
 
-// Define Hall effect sensor pins:
-#define HALL_A_PIN
-#define HALL_B_PIN
-#define HALL_C_PIN
-
-#define PHASE_U_PIN
-#define PHASE_V_PIN
-#define PHASE_W_PIN
-
 #define MAX_RPM 1000
 
 // Timer
@@ -71,21 +62,8 @@ int16_t GetCurrentSpeed() {
     return currentSpeed;
 }
 
-
-// State of U, V, and W inductors high (polarity) and low (enable)
-uint8_t UHstate = 0;
-uint8_t ULstate = 0;
-uint8_t VHstate = 0;
-uint8_t VLstate = 0;
-uint8_t WHstate = 0;
-uint8_t WLstate = 0;
-
-// Hall effect sensor binary data
-uint8_t hall1State;
-uint8_t hall2State;
-uint8_t hall3State;
-
-struct CoilState BLDC_State;
+struct CoilState coilState = {0,0,0,0,0,0};
+struct HallState hallState = {0,0,0};
 
 // FSM changing through states
 // "--state = X" means "don't-care"
@@ -97,76 +75,22 @@ struct CoilState BLDC_State;
 
 
 void readHallState() {
-    hall1State = HALL1_Read();
-    hall2State = HALL2_Read();
-    hall3State = HALL3_Read();
+    hallState.A = HALL1_Read();
+    hallState.B = HALL2_Read();
+    hallState.C = HALL3_Read();
     
-    
-    
-	// State 1 (001)
-	if (~hall1State && ~hall2State && hall3State) {
-        UHstate = 1;
-		ULstate = 1;
-		// VHstate = X;
-		VLstate = 0;
-		WHstate = 0;
-		WLstate = 1;
-	}
-
-	// State 2 (101)
-	if (~hall1State && hall2State && hall3State) {
-		// UHstate = X;
-		ULstate = 0;
-		VHstate = 1;
-		VLstate = 0;
-		WHstate = 0;
-		WLstate = 1;
-	}
-
-	// State 3 (100)
-	if (~hall1State && hall2State && hall3State) {
-		UHstate = 0;
-		ULstate = 1;
-		VHstate = 1;
-		VLstate = 1;
-		// WHstate = X;
-		WLstate = 0;
-	}
-
-    // State 4 (110)
-    if (hall1State && ~hall2State && ~hall3State) {
-		UHstate = 0;
-		ULstate = 1;
-		// VHstate = X;
-		VLstate = 0;
-		WHstate = 0;
-		WLstate = 1;
-    }
-	    // State 5 (010)
-    if (hall1State && ~hall2State && hall3State) {
-		// UHstate = X;
-		ULstate = 1;
-		VHstate = 0;
-		VLstate = 1;
-		WHstate = 0;
-		WLstate = 1;
-    }
-	    // State 6 (011)
-    if (hall1State && hall2State && ~hall3State) {
-		UHstate = 1;
-		ULstate = 1;
-		// VHstate = X;
-		VLstate = 1;
-		WHstate = 0;
-		WLstate = 1;
-    }
+    coilState.UH = !hallState.B && hallState.C;
+	coilState.UL = !hallState.C && hallState.B;
+	coilState.VH = !hallState.C && hallState.A;
+	coilState.VL = !hallState.A && hallState.C;
+	coilState.WH = !hallState.A && hallState.B;
+	coilState.WL = !hallState.B && hallState.A;
     
     // write registers in UVW
-    UH_Write(UHstate);
-    UL_Write(ULstate);
-    VH_Write(VHstate);
-    VL_Write(VLstate);
-    WH_Write(WHstate);
-    WL_Write(WLstate);
-    
+    UH_Write(coilState.UH);
+    UL_Write(coilState.UL);
+    VH_Write(coilState.VH);
+    VL_Write(coilState.VL);
+    WH_Write(coilState.WH);
+    WL_Write(coilState.WL);
 }
