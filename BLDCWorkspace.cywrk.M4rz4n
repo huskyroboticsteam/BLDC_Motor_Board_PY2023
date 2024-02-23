@@ -13,271 +13,271 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="BLDCWorkspace\TestCode\TopDesign">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="BLDCWorkspace\BLDC_Motor_Board\TopDesign">
 <ExpandedNodeIds>
 <v>BLDCWorkspace</v>
-<v>BLDCWorkspace\TestCode</v>
-<v>BLDCWorkspace\TestCode\TopDesign</v>
-<v>BLDCWorkspace\TestCode\TestCode.cydwr</v>
-<v>BLDCWorkspace\TestCode\TestCode.cydwr\Pins</v>
-<v>BLDCWorkspace\TestCode\TestCode.cydwr\Analog</v>
-<v>BLDCWorkspace\TestCode\TestCode.cydwr\DMA</v>
-<v>BLDCWorkspace\TestCode\TestCode.cydwr\Clocks</v>
-<v>BLDCWorkspace\TestCode\TestCode.cydwr\Interrupts</v>
-<v>BLDCWorkspace\TestCode\TestCode.cydwr\System</v>
-<v>BLDCWorkspace\TestCode\TestCode.cydwr\Directives</v>
-<v>BLDCWorkspace\TestCode\TestCode.cydwr\Flash Security</v>
-<v>BLDCWorkspace\TestCode\CAN Library</v>
-<v>BLDCWorkspace\TestCode\CAN Library\CANCommon.c</v>
-<v>BLDCWorkspace\TestCode\CAN Library\CANCommon.h</v>
-<v>BLDCWorkspace\TestCode\CAN Library\CANGPIO.c</v>
-<v>BLDCWorkspace\TestCode\CAN Library\CANGPIO.h</v>
-<v>BLDCWorkspace\TestCode\CAN Library\CANLibrary.h</v>
-<v>BLDCWorkspace\TestCode\CAN Library\CANMotorUnit.c</v>
-<v>BLDCWorkspace\TestCode\CAN Library\CANMotorUnit.h</v>
-<v>BLDCWorkspace\TestCode\CAN Library\CANPacket.c</v>
-<v>BLDCWorkspace\TestCode\CAN Library\CANPacket.h</v>
-<v>BLDCWorkspace\TestCode\CAN Library\CANPower.c</v>
-<v>BLDCWorkspace\TestCode\CAN Library\CANPower.h</v>
-<v>BLDCWorkspace\TestCode\CAN Library\CANSerialNumbers.h</v>
-<v>BLDCWorkspace\TestCode\CAN Library\Port.h</v>
-<v>BLDCWorkspace\TestCode\CAN Library\PortPSOC_CY8C4248AZI_L485.c</v>
-<v>BLDCWorkspace\TestCode\Header Files</v>
-<v>BLDCWorkspace\TestCode\Header Files\BLDC_CAN.h</v>
-<v>BLDCWorkspace\TestCode\Header Files\BLDC_Debug.h</v>
-<v>BLDCWorkspace\TestCode\Header Files\BLDC_Drive.h</v>
-<v>BLDCWorkspace\TestCode\Header Files\BLDC_FSM.h</v>
-<v>BLDCWorkspace\TestCode\Header Files\BLDC_pid.h</v>
-<v>BLDCWorkspace\TestCode\Header Files\cyapicallbacks.h</v>
-<v>BLDCWorkspace\TestCode\Header Files\main.h</v>
-<v>BLDCWorkspace\TestCode\Source Files</v>
-<v>BLDCWorkspace\TestCode\Source Files\BLDC_CAN.c</v>
-<v>BLDCWorkspace\TestCode\Source Files\BLDC_Drive.c</v>
-<v>BLDCWorkspace\TestCode\Source Files\BLDC_FSM.c</v>
-<v>BLDCWorkspace\TestCode\Source Files\BLDC_pid.c</v>
-<v>BLDCWorkspace\TestCode\Source Files\main.c</v>
-<v>BLDCWorkspace\TestCode\Generated_Source\PSoC4</v>
-<v>BLDCWorkspace\TestCode\Generated_Source\PSoC4\CAN</v>
+<v>BLDCWorkspace\BLDC_Motor_Board</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\TopDesign</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\BLDC_Motor_Board.cydwr</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\BLDC_Motor_Board.cydwr\Pins</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\BLDC_Motor_Board.cydwr\Analog</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\BLDC_Motor_Board.cydwr\DMA</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\BLDC_Motor_Board.cydwr\Clocks</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\BLDC_Motor_Board.cydwr\Interrupts</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\BLDC_Motor_Board.cydwr\System</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\BLDC_Motor_Board.cydwr\Directives</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\BLDC_Motor_Board.cydwr\Flash Security</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANCommon.c</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANCommon.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANGPIO.c</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANGPIO.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANLibrary.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANMotorUnit.c</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANMotorUnit.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANPacket.c</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANPacket.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANPower.c</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANPower.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANSerialNumbers.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\Port.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\PortPSOC_CY8C4248AZI_L485.c</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Header Files</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Header Files\BLDC_CAN.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Header Files\BLDC_Debug.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Header Files\BLDC_Drive.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Header Files\BLDC_FSM.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Header Files\BLDC_pid.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Header Files\cyapicallbacks.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Header Files\main.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Source Files</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Source Files\BLDC_CAN.c</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Source Files\BLDC_Drive.c</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Source Files\BLDC_FSM.c</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Source Files\BLDC_pid.c</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Source Files\main.c</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Generated_Source\PSoC4</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Generated_Source\PSoC4\CAN</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
-<v>BLDCWorkspace\TestCode\TestCode.cydwr\Analog</v>
-<v>BLDCWorkspace\TestCode\TestCode.cydwr\DMA</v>
-<v>BLDCWorkspace\TestCode\TestCode.cydwr\Clocks</v>
-<v>BLDCWorkspace\TestCode\TestCode.cydwr\Interrupts</v>
-<v>BLDCWorkspace\TestCode\TestCode.cydwr\System</v>
-<v>BLDCWorkspace\TestCode\TestCode.cydwr\Directives</v>
-<v>BLDCWorkspace\TestCode\TestCode.cydwr\Flash Security</v>
-<v>BLDCWorkspace\TestCode\CAN Library</v>
-<v>BLDCWorkspace\TestCode\CAN Library\CANCommon.c</v>
-<v>BLDCWorkspace\TestCode\CAN Library\CANCommon.h</v>
-<v>BLDCWorkspace\TestCode\CAN Library\CANGPIO.c</v>
-<v>BLDCWorkspace\TestCode\CAN Library\CANGPIO.h</v>
-<v>BLDCWorkspace\TestCode\CAN Library\CANLibrary.h</v>
-<v>BLDCWorkspace\TestCode\CAN Library\CANMotorUnit.c</v>
-<v>BLDCWorkspace\TestCode\CAN Library\CANMotorUnit.h</v>
-<v>BLDCWorkspace\TestCode\CAN Library\CANPacket.c</v>
-<v>BLDCWorkspace\TestCode\CAN Library\CANPacket.h</v>
-<v>BLDCWorkspace\TestCode\CAN Library\CANPower.c</v>
-<v>BLDCWorkspace\TestCode\CAN Library\CANPower.h</v>
-<v>BLDCWorkspace\TestCode\CAN Library\CANSerialNumbers.h</v>
-<v>BLDCWorkspace\TestCode\CAN Library\Port.h</v>
-<v>BLDCWorkspace\TestCode\CAN Library\PortPSOC_CY8C4248AZI_L485.c</v>
-<v>BLDCWorkspace\TestCode\Header Files</v>
-<v>BLDCWorkspace\TestCode\Header Files\BLDC_CAN.h</v>
-<v>BLDCWorkspace\TestCode\Header Files\BLDC_Debug.h</v>
-<v>BLDCWorkspace\TestCode\Header Files\BLDC_Drive.h</v>
-<v>BLDCWorkspace\TestCode\Header Files\BLDC_FSM.h</v>
-<v>BLDCWorkspace\TestCode\Header Files\BLDC_pid.h</v>
-<v>BLDCWorkspace\TestCode\Header Files\cyapicallbacks.h</v>
-<v>BLDCWorkspace\TestCode\Header Files\main.h</v>
-<v>BLDCWorkspace\TestCode\Header Files\setInterrupt.h</v>
-<v>BLDCWorkspace\TestCode\Source Files</v>
-<v>BLDCWorkspace\TestCode\Source Files\BLDC_CAN.c</v>
-<v>BLDCWorkspace\TestCode\Source Files\BLDC_Drive.c</v>
-<v>BLDCWorkspace\TestCode\Source Files\BLDC_FSM.c</v>
-<v>BLDCWorkspace\TestCode\Source Files\BLDC_pid.c</v>
-<v>BLDCWorkspace\TestCode\Source Files\main.c</v>
-<v>BLDCWorkspace\TestCode\Source Files\setInterrupt.c</v>
-<v>BLDCWorkspace\TestCode\Generated_Source</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\BLDC_Motor_Board.cydwr\Analog</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\BLDC_Motor_Board.cydwr\DMA</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\BLDC_Motor_Board.cydwr\Clocks</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\BLDC_Motor_Board.cydwr\Interrupts</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\BLDC_Motor_Board.cydwr\System</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\BLDC_Motor_Board.cydwr\Directives</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\BLDC_Motor_Board.cydwr\Flash Security</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANCommon.c</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANCommon.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANGPIO.c</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANGPIO.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANLibrary.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANMotorUnit.c</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANMotorUnit.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANPacket.c</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANPacket.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANPower.c</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANPower.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANSerialNumbers.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\Port.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\PortPSOC_CY8C4248AZI_L485.c</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Header Files</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Header Files\BLDC_CAN.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Header Files\BLDC_Debug.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Header Files\BLDC_Drive.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Header Files\BLDC_FSM.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Header Files\BLDC_pid.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Header Files\cyapicallbacks.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Header Files\main.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Header Files\setInterrupt.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Source Files</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Source Files\BLDC_CAN.c</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Source Files\BLDC_Drive.c</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Source Files\BLDC_FSM.c</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Source Files\BLDC_pid.c</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Source Files\main.c</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Source Files\setInterrupt.c</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Generated_Source</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>BLDCWorkspace</v>
-<v>BLDCWorkspace\TestCode</v>
-<v>BLDCWorkspace\TestCode\TopDesign</v>
-<v>BLDCWorkspace\TestCode\TopDesign\TopDesign.cysch</v>
+<v>BLDCWorkspace\BLDC_Motor_Board</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\TopDesign</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\TopDesign\TopDesign.cysch</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>BLDCWorkspace</v>
-<v>BLDCWorkspace\TestCode</v>
-<v>BLDCWorkspace\TestCode\TopDesign</v>
-<v>BLDCWorkspace\TestCode\TopDesign\TopDesign.cysch</v>
+<v>BLDCWorkspace\BLDC_Motor_Board</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\TopDesign</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\TopDesign\TopDesign.cysch</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>BLDCWorkspace</v>
-<v>BLDCWorkspace\TestCode</v>
-<v>BLDCWorkspace\TestCode\CortexM0</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\BLDC_CAN.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\BLDC_Drive.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\BLDC_FSM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_HFCLK.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_INT.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_isr.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_LED.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_LED_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_TX_RX_func.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Clock_2.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Cur_Alert_1.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Cur_Alert_1_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Cur_Alert_2.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Cur_Alert_2_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Cur_Alert_3.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Cur_Alert_3_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_BOOT.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_I2C.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_I2C_BOOT.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_I2C_INT.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_I2C_MASTER.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_SCB_IRQ.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_SCBCLK.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_scl.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_scl_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_sda.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_sda_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CyDMA.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\DEBUG_LED.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\DEBUG_LED_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\DIP_1.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\DIP_1_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\DRV_EN.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\DRV_EN_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\ERROR_LED.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\ERROR_LED_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\FAULT.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\FAULT_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\HALL1.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\HALL1_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\HALL2.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\HALL2_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\HALL3.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\HALL3_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\isr_1.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\LimSW_Pin_1.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\LimSW_Pin_1_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\LimSW_Pin_2.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\LimSW_Pin_2_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\RX_1.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\RX_1_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Status_Reg_1.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\TMC6100_SPI.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\TMC6100_SPI_BOOT.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\TMC6100_SPI_miso_s.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\TMC6100_SPI_miso_s_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\TMC6100_SPI_mosi_s.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\TMC6100_SPI_mosi_s_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\TMC6100_SPI_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\TMC6100_SPI_SCBCLK.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\TMC6100_SPI_sclk_s.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\TMC6100_SPI_sclk_s_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\TMC6100_SPI_SPI.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\TMC6100_SPI_SPI_BOOT.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\TMC6100_SPI_SPI_UART.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\TMC6100_SPI_ss_s.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\TMC6100_SPI_ss_s_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\TX_1.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\TX_1_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_BOOT.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_rx.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_rx_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_SCBCLK.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_SPI_UART.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_SPI_UART_INT.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_tx.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_tx_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_UART.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_UART_BOOT.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\UH.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\UH_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\UL.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\UL_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\VH.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\VH_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\VL.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\VL_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\WH.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\WH_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\WL.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\WL_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\TestCode.elf</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\TestCode.hex</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\TestCode.map</v>
-<v>BLDCWorkspace\TestCode\TestCode.gpdsc</v>
-<v>BLDCWorkspace\TestCode\TestCode.rpt</v>
-<v>BLDCWorkspace\TestCode\TestCode_timing.html</v>
+<v>BLDCWorkspace\BLDC_Motor_Board</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\BLDC_CAN.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\BLDC_Drive.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\BLDC_FSM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_HFCLK.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_INT.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_isr.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_LED.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_LED_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_TX_RX_func.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Clock_2.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Cur_Alert_1.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Cur_Alert_1_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Cur_Alert_2.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Cur_Alert_2_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Cur_Alert_3.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Cur_Alert_3_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_BOOT.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_I2C.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_I2C_BOOT.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_I2C_INT.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_I2C_MASTER.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_SCB_IRQ.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_SCBCLK.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_scl.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_scl_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_sda.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_sda_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\CyDMA.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\DEBUG_LED.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\DEBUG_LED_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\DIP_1.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\DIP_1_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\DRV_EN.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\DRV_EN_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\ERROR_LED.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\ERROR_LED_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\FAULT.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\FAULT_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\HALL1.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\HALL1_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\HALL2.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\HALL2_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\HALL3.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\HALL3_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\isr_1.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\LimSW_Pin_1.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\LimSW_Pin_1_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\LimSW_Pin_2.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\LimSW_Pin_2_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\RX_1.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\RX_1_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Status_Reg_1.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\TMC6100_SPI.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\TMC6100_SPI_BOOT.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\TMC6100_SPI_miso_s.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\TMC6100_SPI_miso_s_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\TMC6100_SPI_mosi_s.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\TMC6100_SPI_mosi_s_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\TMC6100_SPI_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\TMC6100_SPI_SCBCLK.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\TMC6100_SPI_sclk_s.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\TMC6100_SPI_sclk_s_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\TMC6100_SPI_SPI.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\TMC6100_SPI_SPI_BOOT.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\TMC6100_SPI_SPI_UART.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\TMC6100_SPI_ss_s.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\TMC6100_SPI_ss_s_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\TX_1.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\TX_1_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_BOOT.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_rx.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_rx_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_SCBCLK.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_SPI_UART.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_SPI_UART_INT.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_tx.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_tx_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_UART.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_UART_BOOT.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\UH.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\UH_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\UL.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\UL_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\VH.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\VH_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\VL.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\VL_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\WH.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\WH_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\WL.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\WL_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.elf</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.hex</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.map</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\BLDC_Motor_Board.gpdsc</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\BLDC_Motor_Board.rpt</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\BLDC_Motor_Board_timing.html</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>BLDCWorkspace</v>
-<v>BLDCWorkspace\TestCode</v>
-<v>BLDCWorkspace\TestCode\CortexM0</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\BLDC_CAN.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\BLDC_Drive.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\BLDC_FSM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_HFCLK.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_INT.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_isr.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_LED.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_LED_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_TX_RX_func.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Clock_2.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Cur_Alert_1.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Cur_Alert_1_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Cur_Alert_2.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Cur_Alert_2_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Cur_Alert_3.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Cur_Alert_3_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_BOOT.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_I2C.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_I2C_BOOT.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_I2C_INT.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_I2C_MASTER.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_SCB_IRQ.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_SCBCLK.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_scl.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_scl_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_sda.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_sda_PM.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\BLDC_CAN.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\BLDC_Drive.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\BLDC_FSM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_HFCLK.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_INT.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_isr.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_LED.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_LED_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_TX_RX_func.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Clock_2.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Cur_Alert_1.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Cur_Alert_1_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Cur_Alert_2.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Cur_Alert_2_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Cur_Alert_3.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Cur_Alert_3_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_BOOT.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_I2C.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_I2C_BOOT.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_I2C_INT.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_I2C_MASTER.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_SCB_IRQ.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_SCBCLK.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_scl.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_scl_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_sda.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_sda_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -288,59 +288,59 @@
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>BLDCWorkspace</v>
-<v>BLDCWorkspace\TestCode</v>
-<v>BLDCWorkspace\TestCode\PSoC 4 Architecture TRM</v>
-<v>BLDCWorkspace\TestCode\PSoC 4200L Family Datasheet</v>
-<v>BLDCWorkspace\TestCode\System Reference Guides</v>
-<v>BLDCWorkspace\TestCode\System Reference Guides\cy_boot_v6_0</v>
-<v>BLDCWorkspace\TestCode\System Reference Guides\cy_dmac_v1_10</v>
-<v>BLDCWorkspace\TestCode\System Reference Guides\cy_lfclk_v1_20</v>
-<v>BLDCWorkspace\TestCode\ADC_SAR_SEQ_P4_v2_50.pdf</v>
-<v>BLDCWorkspace\TestCode\CAN_v3_0.pdf</v>
-<v>BLDCWorkspace\TestCode\cy_clock_v2_20</v>
-<v>BLDCWorkspace\TestCode\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
-<v>BLDCWorkspace\TestCode\cy_isr_v1_70</v>
-<v>BLDCWorkspace\TestCode\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
-<v>BLDCWorkspace\TestCode\cy_pins_v2_20</v>
-<v>BLDCWorkspace\TestCode\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
-<v>BLDCWorkspace\TestCode\CyStatusReg_v1_90</v>
-<v>BLDCWorkspace\TestCode\CyStatusReg_v1_90\CyStatusReg_v1_90.pdf</v>
-<v>BLDCWorkspace\TestCode\Debouncer_v1_0.pdf</v>
-<v>BLDCWorkspace\TestCode\not_v1_0</v>
-<v>BLDCWorkspace\TestCode\not_v1_0\not_v1_0.pdf</v>
-<v>BLDCWorkspace\TestCode\QuadDec_v3_0.pdf</v>
-<v>BLDCWorkspace\TestCode\SCB_P4_v4_0</v>
-<v>BLDCWorkspace\TestCode\SCB_P4_v4_0\SCB_P4_v4_0.pdf</v>
-<v>BLDCWorkspace\TestCode\Timer_v2_80.pdf</v>
-<v>BLDCWorkspace\TestCode\ZeroTerminal.pdf</v>
+<v>BLDCWorkspace\BLDC_Motor_Board</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\PSoC 4 Architecture TRM</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\PSoC 4200L Family Datasheet</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\System Reference Guides</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\System Reference Guides\cy_boot_v6_0</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\System Reference Guides\cy_dmac_v1_10</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\System Reference Guides\cy_lfclk_v1_20</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\ADC_SAR_SEQ_P4_v2_50.pdf</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CAN_v3_0.pdf</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\cy_clock_v2_20</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\cy_isr_v1_70</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\cy_pins_v2_20</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CyStatusReg_v1_90</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CyStatusReg_v1_90\CyStatusReg_v1_90.pdf</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Debouncer_v1_0.pdf</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\not_v1_0</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\not_v1_0\not_v1_0.pdf</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\QuadDec_v3_0.pdf</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\SCB_P4_v4_0</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\SCB_P4_v4_0\SCB_P4_v4_0.pdf</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Timer_v2_80.pdf</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\ZeroTerminal.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>BLDCWorkspace</v>
-<v>BLDCWorkspace\TestCode</v>
-<v>BLDCWorkspace\TestCode\PSoC 4 Architecture TRM</v>
-<v>BLDCWorkspace\TestCode\PSoC 4200L Family Datasheet</v>
-<v>BLDCWorkspace\TestCode\System Reference Guides</v>
-<v>BLDCWorkspace\TestCode\System Reference Guides\cy_boot_v6_0</v>
-<v>BLDCWorkspace\TestCode\System Reference Guides\cy_dmac_v1_10</v>
-<v>BLDCWorkspace\TestCode\System Reference Guides\cy_lfclk_v1_20</v>
-<v>BLDCWorkspace\TestCode\ADC_SAR_SEQ_P4_v2_50.pdf</v>
-<v>BLDCWorkspace\TestCode\CAN_v3_0.pdf</v>
-<v>BLDCWorkspace\TestCode\cy_clock_v2_20</v>
-<v>BLDCWorkspace\TestCode\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
-<v>BLDCWorkspace\TestCode\cy_isr_v1_70</v>
-<v>BLDCWorkspace\TestCode\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
-<v>BLDCWorkspace\TestCode\cy_pins_v2_20</v>
-<v>BLDCWorkspace\TestCode\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
-<v>BLDCWorkspace\TestCode\CyStatusReg_v1_90</v>
-<v>BLDCWorkspace\TestCode\CyStatusReg_v1_90\CyStatusReg_v1_90.pdf</v>
-<v>BLDCWorkspace\TestCode\Debouncer_v1_0.pdf</v>
-<v>BLDCWorkspace\TestCode\not_v1_0</v>
-<v>BLDCWorkspace\TestCode\not_v1_0\not_v1_0.pdf</v>
-<v>BLDCWorkspace\TestCode\QuadDec_v3_0.pdf</v>
-<v>BLDCWorkspace\TestCode\SCB_P4_v4_0</v>
-<v>BLDCWorkspace\TestCode\SCB_P4_v4_0\SCB_P4_v4_0.pdf</v>
-<v>BLDCWorkspace\TestCode\Timer_v2_80.pdf</v>
-<v>BLDCWorkspace\TestCode\ZeroTerminal.pdf</v>
+<v>BLDCWorkspace\BLDC_Motor_Board</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\PSoC 4 Architecture TRM</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\PSoC 4200L Family Datasheet</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\System Reference Guides</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\System Reference Guides\cy_boot_v6_0</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\System Reference Guides\cy_dmac_v1_10</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\System Reference Guides\cy_lfclk_v1_20</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\ADC_SAR_SEQ_P4_v2_50.pdf</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CAN_v3_0.pdf</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\cy_clock_v2_20</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\cy_isr_v1_70</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\cy_pins_v2_20</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CyStatusReg_v1_90</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CyStatusReg_v1_90\CyStatusReg_v1_90.pdf</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Debouncer_v1_0.pdf</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\not_v1_0</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\not_v1_0\not_v1_0.pdf</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\QuadDec_v3_0.pdf</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\SCB_P4_v4_0</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\SCB_P4_v4_0\SCB_P4_v4_0.pdf</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\Timer_v2_80.pdf</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\ZeroTerminal.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -350,16 +350,16 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v=".\TestCode.cydsn\BLDC_CAN.c" />
-<name v=".\TestCode.cydsn\BLDC_Drive.c" />
-<name v=".\TestCode.cydsn\BLDC_FSM.h" />
-<name v=".\TestCode.cydsn\BLDC_FSM.c" />
-<name v=".\TestCode.cydsn\BLDC_CAN.h" />
-<name v=".\TestCode.cydsn\main.h" />
-<name v=".\TestCode.cydsn\main.c" />
-<name v=".\TestCode.cydsn\BLDC_pid.h" />
-<name v=".\TestCode.cydsn\BLDC_pid.c" />
-<name v=".\TestCode.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\BLDC_Motor_Board.cydsn\BLDC_CAN.c" />
+<name v=".\BLDC_Motor_Board.cydsn\BLDC_Drive.c" />
+<name v=".\BLDC_Motor_Board.cydsn\BLDC_FSM.h" />
+<name v=".\BLDC_Motor_Board.cydsn\BLDC_FSM.c" />
+<name v=".\BLDC_Motor_Board.cydsn\BLDC_CAN.h" />
+<name v=".\BLDC_Motor_Board.cydsn\main.h" />
+<name v=".\BLDC_Motor_Board.cydsn\main.c" />
+<name v=".\BLDC_Motor_Board.cydsn\BLDC_pid.h" />
+<name v=".\BLDC_Motor_Board.cydsn\BLDC_pid.c" />
+<name v=".\BLDC_Motor_Board.cydsn\TopDesign\TopDesign.cysch" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -367,7 +367,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="958, 661" SelectedTabbedMdiWindow="dba0a066-5ac1-4a57-9205-82f1f87c21e1"><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_CAN.c" Guid="4777c224-29c2-4389-b43c-6bbe8042962a" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_Drive.c" Guid="7dd1d09f-f639-4fe5-8af6-de5a95fbd232" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_FSM.h" Guid="e361f52c-f9dd-467e-b105-c927aba580fb" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_FSM.c" Guid="0a0c8b93-2272-4cbc-9d6e-3d40445741da" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_CAN.h" Guid="e5b491dd-f0b3-4249-8f01-5546f0b9dc1c" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\main.h" Guid="05f980c0-4500-45d5-a6b6-650155b471a1" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\main.c" Guid="0a36796e-d49f-446d-8deb-6aa6b8a63d26" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_pid.h" Guid="384448dd-80c9-4d38-9201-1c6ef5e16db3" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_pid.c" Guid="086f041e-3f7e-46d0-9f99-54a802ad8b9e" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="6659a7a9-1ba9-4e08-828f-36f641d6385a" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\TopDesign\TopDesign.cysch" Guid="dba0a066-5ac1-4a57-9205-82f1f87c21e1" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="958, 661" SelectedTabbedMdiWindow="dba0a066-5ac1-4a57-9205-82f1f87c21e1"><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_CAN.c" Guid="4777c224-29c2-4389-b43c-6bbe8042962a" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_Drive.c" Guid="7dd1d09f-f639-4fe5-8af6-de5a95fbd232" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_FSM.h" Guid="e361f52c-f9dd-467e-b105-c927aba580fb" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_FSM.c" Guid="0a0c8b93-2272-4cbc-9d6e-3d40445741da" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_CAN.h" Guid="e5b491dd-f0b3-4249-8f01-5546f0b9dc1c" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\main.h" Guid="05f980c0-4500-45d5-a6b6-650155b471a1" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\main.c" Guid="0a36796e-d49f-446d-8deb-6aa6b8a63d26" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_pid.h" Guid="384448dd-80c9-4d38-9201-1c6ef5e16db3" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_pid.c" Guid="086f041e-3f7e-46d0-9f99-54a802ad8b9e" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="6659a7a9-1ba9-4e08-828f-36f641d6385a" /><DocumentWindow Key="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\TopDesign\TopDesign.cysch" Guid="dba0a066-5ac1-4a57-9205-82f1f87c21e1" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

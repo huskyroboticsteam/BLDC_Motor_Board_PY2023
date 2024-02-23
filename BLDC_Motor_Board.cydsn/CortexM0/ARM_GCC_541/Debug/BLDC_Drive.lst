@@ -1,0 +1,1702 @@
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cct4zfDi.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"BLDC_Drive.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.commutateMotor,"ax",%progbits
+  20              		.align	2
+  21              		.global	commutateMotor
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	commutateMotor, %function
+  25              	commutateMotor:
+  26              	.LFB35:
+  27              		.file 1 "BLDC_Drive.c"
+   1:BLDC_Drive.c  **** /* ========================================
+   2:BLDC_Drive.c  ****  *
+   3:BLDC_Drive.c  ****  * Copyright YOUR COMPANY, THE YEAR
+   4:BLDC_Drive.c  ****  * All Rights Reserved
+   5:BLDC_Drive.c  ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:BLDC_Drive.c  ****  *
+   7:BLDC_Drive.c  ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:BLDC_Drive.c  ****  * WHICH IS THE PROPERTY OF your company.
+   9:BLDC_Drive.c  ****  *
+  10:BLDC_Drive.c  ****  * ========================================
+  11:BLDC_Drive.c  **** */
+  12:BLDC_Drive.c  **** 
+  13:BLDC_Drive.c  **** // -------------------------------------------------------------------------WE ARE NOT USING PWM
+  14:BLDC_Drive.c  **** #include <project.h>
+  15:BLDC_Drive.c  **** #include <stdio.h>
+  16:BLDC_Drive.c  **** #include "main.h"
+  17:BLDC_Drive.c  **** #include <stdint.h>
+  18:BLDC_Drive.c  **** #include "BLDC_Drive.h"
+  19:BLDC_Drive.c  **** #include <project.h>
+  20:BLDC_Drive.c  **** 
+  21:BLDC_Drive.c  **** uint8_t invalidate = 0;
+  22:BLDC_Drive.c  **** extern char txData[TX_DATA_SIZE];
+  23:BLDC_Drive.c  **** 
+  24:BLDC_Drive.c  **** int32_t currentSpeed = 0;
+  25:BLDC_Drive.c  **** int8_t currentDir = 0;
+  26:BLDC_Drive.c  **** 
+  27:BLDC_Drive.c  **** // Define Hall effect sensor pins:
+  28:BLDC_Drive.c  **** #define HALL_A_PIN
+  29:BLDC_Drive.c  **** #define HALL_B_PIN
+  30:BLDC_Drive.c  **** #define HALL_C_PIN
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cct4zfDi.s 			page 2
+
+
+  31:BLDC_Drive.c  **** 
+  32:BLDC_Drive.c  **** #define PHASE_U_PIN
+  33:BLDC_Drive.c  **** #define PHASE_V_PIN
+  34:BLDC_Drive.c  **** #define PHASE_W_PIN
+  35:BLDC_Drive.c  **** 
+  36:BLDC_Drive.c  **** #define MAX_RPM 1000
+  37:BLDC_Drive.c  **** 
+  38:BLDC_Drive.c  **** // Timer
+  39:BLDC_Drive.c  **** float delay_ms;
+  40:BLDC_Drive.c  **** 
+  41:BLDC_Drive.c  **** void commutateMotor(uint8_t hallState) {
+  28              		.loc 1 41 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  33              	.LVL0:
+  42:BLDC_Drive.c  ****     // determine the motor phase to energize based on the hall state
+  43:BLDC_Drive.c  ****         
+  44:BLDC_Drive.c  ****         // TODO: implement th appropriate logic to switch the motor phases
+  45:BLDC_Drive.c  **** }
+  34              		.loc 1 45 0
+  35              		@ sp needed
+  36 0000 7047     		bx	lr
+  37              		.cfi_endproc
+  38              	.LFE35:
+  39              		.size	commutateMotor, .-commutateMotor
+  40              		.global	__aeabi_i2f
+  41              		.global	__aeabi_fdiv
+  42 0002 C046     		.section	.text.set_speed,"ax",%progbits
+  43              		.align	2
+  44              		.global	set_speed
+  45              		.code	16
+  46              		.thumb_func
+  47              		.type	set_speed, %function
+  48              	set_speed:
+  49              	.LFB36:
+  46:BLDC_Drive.c  **** 
+  47:BLDC_Drive.c  **** // -32768 <= speed < 32768
+  48:BLDC_Drive.c  **** void set_speed(int16_t speed, uint8_t disable_limit, uint8 limitSW) {
+  50              		.loc 1 48 0
+  51              		.cfi_startproc
+  52              		@ args = 0, pretend = 0, frame = 0
+  53              		@ frame_needed = 0, uses_anonymous_args = 0
+  54              	.LVL1:
+  55 0000 10B5     		push	{r4, lr}
+  56              		.cfi_def_cfa_offset 8
+  57              		.cfi_offset 4, -8
+  58              		.cfi_offset 14, -4
+  49:BLDC_Drive.c  ****     #ifdef PRINT_PWM_COMMAND
+  50:BLDC_Drive.c  ****     sprintf(txData, "PWM:%d disable_limit: %d\r\n",compare,disable_limit);
+  51:BLDC_Drive.c  ****     UART_UartPutString(txData); 
+  52:BLDC_Drive.c  ****     #endif
+  53:BLDC_Drive.c  ****     
+  54:BLDC_Drive.c  ****     invalidate = 0;
+  59              		.loc 1 54 0
+  60 0002 0024     		movs	r4, #0
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cct4zfDi.s 			page 3
+
+
+  61 0004 174B     		ldr	r3, .L10
+  62 0006 1C70     		strb	r4, [r3]
+  55:BLDC_Drive.c  ****     if (speed < 0 && (!(limitSW & 0b10) || disable_limit) ) { // check if speed is negative, if not
+  63              		.loc 1 55 0
+  64 0008 0028     		cmp	r0, #0
+  65 000a 09DA     		bge	.L3
+  66              		.loc 1 55 0 is_stmt 0 discriminator 1
+  67 000c 9307     		lsls	r3, r2, #30
+  68 000e 01D5     		bpl	.L4
+  69              		.loc 1 55 0 discriminator 2
+  70 0010 0029     		cmp	r1, #0
+  71 0012 05D0     		beq	.L3
+  72              	.L4:
+  56:BLDC_Drive.c  ****         currentDir = 0;
+  73              		.loc 1 56 0 is_stmt 1
+  74 0014 134B     		ldr	r3, .L10
+  75 0016 0022     		movs	r2, #0
+  76              	.LVL2:
+  77 0018 5A70     		strb	r2, [r3, #1]
+  57:BLDC_Drive.c  ****         currentSpeed = -speed;
+  78              		.loc 1 57 0
+  79 001a 4042     		rsbs	r0, r0, #0
+  80              	.LVL3:
+  81 001c 5860     		str	r0, [r3, #4]
+  82 001e 0DE0     		b	.L5
+  83              	.LVL4:
+  84              	.L3:
+  58:BLDC_Drive.c  ****     } else if (speed > 0 && (!(limitSW & 0b01) || disable_limit) ){ // check if speed is positive, 
+  85              		.loc 1 58 0
+  86 0020 0028     		cmp	r0, #0
+  87 0022 08DD     		ble	.L6
+  88              		.loc 1 58 0 is_stmt 0 discriminator 1
+  89 0024 D307     		lsls	r3, r2, #31
+  90 0026 01D5     		bpl	.L7
+  91              		.loc 1 58 0 discriminator 2
+  92 0028 0029     		cmp	r1, #0
+  93 002a 04D0     		beq	.L6
+  94              	.L7:
+  59:BLDC_Drive.c  ****         currentDir = 1;
+  95              		.loc 1 59 0 is_stmt 1
+  96 002c 0D4B     		ldr	r3, .L10
+  97 002e 0122     		movs	r2, #1
+  98              	.LVL5:
+  99 0030 5A70     		strb	r2, [r3, #1]
+  60:BLDC_Drive.c  ****         currentSpeed = speed;
+ 100              		.loc 1 60 0
+ 101 0032 5860     		str	r0, [r3, #4]
+ 102 0034 02E0     		b	.L5
+ 103              	.LVL6:
+ 104              	.L6:
+  61:BLDC_Drive.c  ****     } else { // set speed = 0; (special case
+  62:BLDC_Drive.c  ****         currentSpeed = 0;
+ 105              		.loc 1 62 0
+ 106 0036 0022     		movs	r2, #0
+ 107              	.LVL7:
+ 108 0038 0A4B     		ldr	r3, .L10
+ 109 003a 5A60     		str	r2, [r3, #4]
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cct4zfDi.s 			page 4
+
+
+ 110              	.LVL8:
+ 111              	.L5:
+  63:BLDC_Drive.c  ****     }
+  64:BLDC_Drive.c  ****     
+  65:BLDC_Drive.c  ****     if (currentSpeed != 0) {
+ 112              		.loc 1 65 0
+ 113 003c 094B     		ldr	r3, .L10
+ 114 003e 5868     		ldr	r0, [r3, #4]
+ 115 0040 0028     		cmp	r0, #0
+ 116 0042 0BD0     		beq	.L8
+  66:BLDC_Drive.c  ****         delay_ms = (float)(1 << 15)*10000/currentSpeed/MAX_RPM;
+ 117              		.loc 1 66 0
+ 118 0044 FFF7FEFF 		bl	__aeabi_i2f
+ 119              	.LVL9:
+ 120 0048 011C     		adds	r1, r0, #0
+ 121 004a 0748     		ldr	r0, .L10+4
+ 122 004c FFF7FEFF 		bl	__aeabi_fdiv
+ 123              	.LVL10:
+ 124 0050 0649     		ldr	r1, .L10+8
+ 125 0052 FFF7FEFF 		bl	__aeabi_fdiv
+ 126              	.LVL11:
+ 127 0056 064B     		ldr	r3, .L10+12
+ 128 0058 1860     		str	r0, [r3]
+ 129 005a 02E0     		b	.L2
+ 130              	.LVL12:
+ 131              	.L8:
+  67:BLDC_Drive.c  ****     }
+  68:BLDC_Drive.c  ****     else {
+  69:BLDC_Drive.c  ****         delay_ms = 0;
+ 132              		.loc 1 69 0
+ 133 005c 0022     		movs	r2, #0
+ 134 005e 044B     		ldr	r3, .L10+12
+ 135 0060 1A60     		str	r2, [r3]
+ 136              	.LVL13:
+ 137              	.L2:
+  70:BLDC_Drive.c  ****         // stop motor (stop state machine)
+  71:BLDC_Drive.c  ****         
+  72:BLDC_Drive.c  ****     }
+  73:BLDC_Drive.c  **** }
+ 138              		.loc 1 73 0
+ 139              		@ sp needed
+ 140 0062 10BD     		pop	{r4, pc}
+ 141              	.L11:
+ 142              		.align	2
+ 143              	.L10:
+ 144 0064 00000000 		.word	.LANCHOR0
+ 145 0068 00409C4D 		.word	1302085632
+ 146 006c 00007A44 		.word	1148846080
+ 147 0070 00000000 		.word	delay_ms
+ 148              		.cfi_endproc
+ 149              	.LFE36:
+ 150              		.size	set_speed, .-set_speed
+ 151              		.section	.text.GetCurrentSpeed,"ax",%progbits
+ 152              		.align	2
+ 153              		.global	GetCurrentSpeed
+ 154              		.code	16
+ 155              		.thumb_func
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cct4zfDi.s 			page 5
+
+
+ 156              		.type	GetCurrentSpeed, %function
+ 157              	GetCurrentSpeed:
+ 158              	.LFB37:
+  74:BLDC_Drive.c  **** 
+  75:BLDC_Drive.c  **** int16_t GetCurrentSpeed() {
+ 159              		.loc 1 75 0
+ 160              		.cfi_startproc
+ 161              		@ args = 0, pretend = 0, frame = 0
+ 162              		@ frame_needed = 0, uses_anonymous_args = 0
+ 163              		@ link register save eliminated.
+  76:BLDC_Drive.c  ****     return currentSpeed;
+ 164              		.loc 1 76 0
+ 165 0000 014B     		ldr	r3, .L13
+ 166 0002 0420     		movs	r0, #4
+ 167 0004 185E     		ldrsh	r0, [r3, r0]
+  77:BLDC_Drive.c  **** }
+ 168              		.loc 1 77 0
+ 169              		@ sp needed
+ 170 0006 7047     		bx	lr
+ 171              	.L14:
+ 172              		.align	2
+ 173              	.L13:
+ 174 0008 00000000 		.word	.LANCHOR0
+ 175              		.cfi_endproc
+ 176              	.LFE37:
+ 177              		.size	GetCurrentSpeed, .-GetCurrentSpeed
+ 178              		.section	.text.readHallState,"ax",%progbits
+ 179              		.align	2
+ 180              		.global	readHallState
+ 181              		.code	16
+ 182              		.thumb_func
+ 183              		.type	readHallState, %function
+ 184              	readHallState:
+ 185              	.LFB38:
+  78:BLDC_Drive.c  **** 
+  79:BLDC_Drive.c  **** 
+  80:BLDC_Drive.c  **** // State of U, V, and W inductors high (polarity) and low (enable)
+  81:BLDC_Drive.c  **** uint8_t UHstate = 0;
+  82:BLDC_Drive.c  **** uint8_t ULstate = 0;
+  83:BLDC_Drive.c  **** uint8_t VHstate = 0;
+  84:BLDC_Drive.c  **** uint8_t VLstate = 0;
+  85:BLDC_Drive.c  **** uint8_t WHstate = 0;
+  86:BLDC_Drive.c  **** uint8_t WLstate = 0;
+  87:BLDC_Drive.c  **** 
+  88:BLDC_Drive.c  **** // Hall effect sensor binary data
+  89:BLDC_Drive.c  **** uint8_t hall1State;
+  90:BLDC_Drive.c  **** uint8_t hall2State;
+  91:BLDC_Drive.c  **** uint8_t hall3State;
+  92:BLDC_Drive.c  **** 
+  93:BLDC_Drive.c  **** uint8_t BLDC_state;
+  94:BLDC_Drive.c  **** // FSM changing through states
+  95:BLDC_Drive.c  **** // "--state = X" means "don't-care"
+  96:BLDC_Drive.c  **** // Read the states
+  97:BLDC_Drive.c  **** void readHallState() {
+ 186              		.loc 1 97 0
+ 187              		.cfi_startproc
+ 188              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cct4zfDi.s 			page 6
+
+
+ 189              		@ frame_needed = 0, uses_anonymous_args = 0
+ 190 0000 70B5     		push	{r4, r5, r6, lr}
+ 191              		.cfi_def_cfa_offset 16
+ 192              		.cfi_offset 4, -16
+ 193              		.cfi_offset 5, -12
+ 194              		.cfi_offset 6, -8
+ 195              		.cfi_offset 14, -4
+  98:BLDC_Drive.c  ****     hall1State = HALL1_Read();
+ 196              		.loc 1 98 0
+ 197 0002 FFF7FEFF 		bl	HALL1_Read
+ 198              	.LVL14:
+ 199 0006 404C     		ldr	r4, .L22
+ 200 0008 2070     		strb	r0, [r4]
+  99:BLDC_Drive.c  ****     hall2State = HALL2_Read();
+ 201              		.loc 1 99 0
+ 202 000a FFF7FEFF 		bl	HALL2_Read
+ 203              	.LVL15:
+ 204 000e 3F4B     		ldr	r3, .L22+4
+ 205 0010 1870     		strb	r0, [r3]
+ 100:BLDC_Drive.c  ****     hall3State = HALL3_Read();
+ 206              		.loc 1 100 0
+ 207 0012 FFF7FEFF 		bl	HALL3_Read
+ 208              	.LVL16:
+ 209 0016 0200     		movs	r2, r0
+ 210 0018 3D4B     		ldr	r3, .L22+8
+ 211 001a 1870     		strb	r0, [r3]
+ 101:BLDC_Drive.c  ****     
+ 102:BLDC_Drive.c  **** 	// State 1 (001)
+ 103:BLDC_Drive.c  **** 	if (~hall1State && ~hall2State && hall3State) {
+ 212              		.loc 1 103 0
+ 213 001c 2378     		ldrb	r3, [r4]
+ 214 001e 1900     		movs	r1, r3
+ 215 0020 581C     		adds	r0, r3, #1
+ 216 0022 0DD0     		beq	.L16
+ 217              		.loc 1 103 0 is_stmt 0 discriminator 1
+ 218 0024 3948     		ldr	r0, .L22+4
+ 219 0026 0078     		ldrb	r0, [r0]
+ 220 0028 0130     		adds	r0, r0, #1
+ 221 002a 09D0     		beq	.L16
+ 222              		.loc 1 103 0 discriminator 2
+ 223 002c 002A     		cmp	r2, #0
+ 224 002e 07D0     		beq	.L16
+ 104:BLDC_Drive.c  ****         UHstate = 1;
+ 225              		.loc 1 104 0 is_stmt 1
+ 226 0030 3848     		ldr	r0, .L22+12
+ 227 0032 0124     		movs	r4, #1
+ 228 0034 0472     		strb	r4, [r0, #8]
+ 105:BLDC_Drive.c  **** 		ULstate = 1;
+ 229              		.loc 1 105 0
+ 230 0036 4472     		strb	r4, [r0, #9]
+ 106:BLDC_Drive.c  **** 		// VHstate = X;
+ 107:BLDC_Drive.c  **** 		VLstate = 0;
+ 231              		.loc 1 107 0
+ 232 0038 0025     		movs	r5, #0
+ 233 003a 8572     		strb	r5, [r0, #10]
+ 108:BLDC_Drive.c  **** 		WHstate = 0;
+ 234              		.loc 1 108 0
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cct4zfDi.s 			page 7
+
+
+ 235 003c C572     		strb	r5, [r0, #11]
+ 109:BLDC_Drive.c  **** 		WLstate = 1;
+ 236              		.loc 1 109 0
+ 237 003e 0473     		strb	r4, [r0, #12]
+ 238              	.L16:
+ 110:BLDC_Drive.c  **** 	}
+ 111:BLDC_Drive.c  **** 
+ 112:BLDC_Drive.c  **** 	// State 2 (101)
+ 113:BLDC_Drive.c  **** 	if (~hall1State && hall2State && hall3State) {
+ 239              		.loc 1 113 0
+ 240 0040 481C     		adds	r0, r1, #1
+ 241 0042 0DD0     		beq	.L17
+ 242              		.loc 1 113 0 is_stmt 0 discriminator 1
+ 243 0044 3148     		ldr	r0, .L22+4
+ 244 0046 0078     		ldrb	r0, [r0]
+ 245 0048 0028     		cmp	r0, #0
+ 246 004a 09D0     		beq	.L17
+ 247              		.loc 1 113 0 discriminator 2
+ 248 004c 002A     		cmp	r2, #0
+ 249 004e 07D0     		beq	.L17
+ 114:BLDC_Drive.c  **** 		// UHstate = X;
+ 115:BLDC_Drive.c  **** 		ULstate = 0;
+ 250              		.loc 1 115 0 is_stmt 1
+ 251 0050 3048     		ldr	r0, .L22+12
+ 252 0052 0024     		movs	r4, #0
+ 253 0054 4472     		strb	r4, [r0, #9]
+ 116:BLDC_Drive.c  **** 		VHstate = 1;
+ 254              		.loc 1 116 0
+ 255 0056 0125     		movs	r5, #1
+ 256 0058 4573     		strb	r5, [r0, #13]
+ 117:BLDC_Drive.c  **** 		VLstate = 0;
+ 257              		.loc 1 117 0
+ 258 005a 8472     		strb	r4, [r0, #10]
+ 118:BLDC_Drive.c  **** 		WHstate = 0;
+ 259              		.loc 1 118 0
+ 260 005c C472     		strb	r4, [r0, #11]
+ 119:BLDC_Drive.c  **** 		WLstate = 1;
+ 261              		.loc 1 119 0
+ 262 005e 0573     		strb	r5, [r0, #12]
+ 263              	.L17:
+ 120:BLDC_Drive.c  **** 	}
+ 121:BLDC_Drive.c  **** 
+ 122:BLDC_Drive.c  **** 	// State 3 (100)
+ 123:BLDC_Drive.c  **** 	if (~hall1State && hall2State && hall3State) {
+ 264              		.loc 1 123 0
+ 265 0060 0131     		adds	r1, r1, #1
+ 266 0062 0DD0     		beq	.L18
+ 267              		.loc 1 123 0 is_stmt 0 discriminator 1
+ 268 0064 2949     		ldr	r1, .L22+4
+ 269 0066 0978     		ldrb	r1, [r1]
+ 270 0068 0029     		cmp	r1, #0
+ 271 006a 09D0     		beq	.L18
+ 272              		.loc 1 123 0 discriminator 2
+ 273 006c 002A     		cmp	r2, #0
+ 274 006e 07D0     		beq	.L18
+ 124:BLDC_Drive.c  **** 		UHstate = 0;
+ 275              		.loc 1 124 0 is_stmt 1
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cct4zfDi.s 			page 8
+
+
+ 276 0070 2849     		ldr	r1, .L22+12
+ 277 0072 0024     		movs	r4, #0
+ 278 0074 0C72     		strb	r4, [r1, #8]
+ 125:BLDC_Drive.c  **** 		ULstate = 1;
+ 279              		.loc 1 125 0
+ 280 0076 0120     		movs	r0, #1
+ 281 0078 4872     		strb	r0, [r1, #9]
+ 126:BLDC_Drive.c  **** 		VHstate = 1;
+ 282              		.loc 1 126 0
+ 283 007a 4873     		strb	r0, [r1, #13]
+ 127:BLDC_Drive.c  **** 		VLstate = 1;
+ 284              		.loc 1 127 0
+ 285 007c 8872     		strb	r0, [r1, #10]
+ 128:BLDC_Drive.c  **** 		// WHstate = X;
+ 129:BLDC_Drive.c  **** 		WLstate = 0;
+ 286              		.loc 1 129 0
+ 287 007e 0C73     		strb	r4, [r1, #12]
+ 288              	.L18:
+ 130:BLDC_Drive.c  **** 	}
+ 131:BLDC_Drive.c  **** 
+ 132:BLDC_Drive.c  ****     // State 4 (110)
+ 133:BLDC_Drive.c  ****     if (hall1State && ~hall2State && ~hall3State) {
+ 289              		.loc 1 133 0
+ 290 0080 002B     		cmp	r3, #0
+ 291 0082 0DD0     		beq	.L19
+ 292              		.loc 1 133 0 is_stmt 0 discriminator 1
+ 293 0084 2149     		ldr	r1, .L22+4
+ 294 0086 0978     		ldrb	r1, [r1]
+ 295 0088 0131     		adds	r1, r1, #1
+ 296 008a 09D0     		beq	.L19
+ 297              		.loc 1 133 0 discriminator 2
+ 298 008c 511C     		adds	r1, r2, #1
+ 299 008e 07D0     		beq	.L19
+ 134:BLDC_Drive.c  **** 		UHstate = 0;
+ 300              		.loc 1 134 0 is_stmt 1
+ 301 0090 2049     		ldr	r1, .L22+12
+ 302 0092 0020     		movs	r0, #0
+ 303 0094 0872     		strb	r0, [r1, #8]
+ 135:BLDC_Drive.c  **** 		ULstate = 1;
+ 304              		.loc 1 135 0
+ 305 0096 0124     		movs	r4, #1
+ 306 0098 4C72     		strb	r4, [r1, #9]
+ 136:BLDC_Drive.c  **** 		// VHstate = X;
+ 137:BLDC_Drive.c  **** 		VLstate = 0;
+ 307              		.loc 1 137 0
+ 308 009a 8872     		strb	r0, [r1, #10]
+ 138:BLDC_Drive.c  **** 		WHstate = 0;
+ 309              		.loc 1 138 0
+ 310 009c C872     		strb	r0, [r1, #11]
+ 139:BLDC_Drive.c  **** 		WLstate = 1;
+ 311              		.loc 1 139 0
+ 312 009e 0C73     		strb	r4, [r1, #12]
+ 313              	.L19:
+ 140:BLDC_Drive.c  ****     }
+ 141:BLDC_Drive.c  **** 	    // State 5 (010)
+ 142:BLDC_Drive.c  ****     if (hall1State && ~hall2State && hall3State) {
+ 314              		.loc 1 142 0
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cct4zfDi.s 			page 9
+
+
+ 315 00a0 002B     		cmp	r3, #0
+ 316 00a2 0DD0     		beq	.L20
+ 317              		.loc 1 142 0 is_stmt 0 discriminator 1
+ 318 00a4 1949     		ldr	r1, .L22+4
+ 319 00a6 0978     		ldrb	r1, [r1]
+ 320 00a8 0131     		adds	r1, r1, #1
+ 321 00aa 09D0     		beq	.L20
+ 322              		.loc 1 142 0 discriminator 2
+ 323 00ac 002A     		cmp	r2, #0
+ 324 00ae 07D0     		beq	.L20
+ 143:BLDC_Drive.c  **** 		// UHstate = X;
+ 144:BLDC_Drive.c  **** 		ULstate = 1;
+ 325              		.loc 1 144 0 is_stmt 1
+ 326 00b0 1849     		ldr	r1, .L22+12
+ 327 00b2 0120     		movs	r0, #1
+ 328 00b4 4872     		strb	r0, [r1, #9]
+ 145:BLDC_Drive.c  **** 		VHstate = 0;
+ 329              		.loc 1 145 0
+ 330 00b6 0024     		movs	r4, #0
+ 331 00b8 4C73     		strb	r4, [r1, #13]
+ 146:BLDC_Drive.c  **** 		VLstate = 1;
+ 332              		.loc 1 146 0
+ 333 00ba 8872     		strb	r0, [r1, #10]
+ 147:BLDC_Drive.c  **** 		WHstate = 0;
+ 334              		.loc 1 147 0
+ 335 00bc CC72     		strb	r4, [r1, #11]
+ 148:BLDC_Drive.c  **** 		WLstate = 1;
+ 336              		.loc 1 148 0
+ 337 00be 0873     		strb	r0, [r1, #12]
+ 338              	.L20:
+ 149:BLDC_Drive.c  ****     }
+ 150:BLDC_Drive.c  **** 	    // State 6 (011)
+ 151:BLDC_Drive.c  ****     if (hall1State && hall2State && ~hall3State) {
+ 339              		.loc 1 151 0
+ 340 00c0 002B     		cmp	r3, #0
+ 341 00c2 0DD0     		beq	.L21
+ 342              		.loc 1 151 0 is_stmt 0 discriminator 1
+ 343 00c4 114B     		ldr	r3, .L22+4
+ 344 00c6 1B78     		ldrb	r3, [r3]
+ 345 00c8 002B     		cmp	r3, #0
+ 346 00ca 09D0     		beq	.L21
+ 347              		.loc 1 151 0 discriminator 2
+ 348 00cc 531C     		adds	r3, r2, #1
+ 349 00ce 07D0     		beq	.L21
+ 152:BLDC_Drive.c  **** 		UHstate = 1;
+ 350              		.loc 1 152 0 is_stmt 1
+ 351 00d0 104B     		ldr	r3, .L22+12
+ 352 00d2 0122     		movs	r2, #1
+ 353 00d4 1A72     		strb	r2, [r3, #8]
+ 153:BLDC_Drive.c  **** 		ULstate = 1;
+ 354              		.loc 1 153 0
+ 355 00d6 5A72     		strb	r2, [r3, #9]
+ 154:BLDC_Drive.c  **** 		// VHstate = X;
+ 155:BLDC_Drive.c  **** 		VLstate = 1;
+ 356              		.loc 1 155 0
+ 357 00d8 9A72     		strb	r2, [r3, #10]
+ 156:BLDC_Drive.c  **** 		WHstate = 0;
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cct4zfDi.s 			page 10
+
+
+ 358              		.loc 1 156 0
+ 359 00da 0021     		movs	r1, #0
+ 360 00dc D972     		strb	r1, [r3, #11]
+ 157:BLDC_Drive.c  **** 		WLstate = 1;
+ 361              		.loc 1 157 0
+ 362 00de 1A73     		strb	r2, [r3, #12]
+ 363              	.L21:
+ 158:BLDC_Drive.c  ****     }
+ 159:BLDC_Drive.c  ****     
+ 160:BLDC_Drive.c  ****     UH_Write(UHstate);
+ 364              		.loc 1 160 0
+ 365 00e0 0C4C     		ldr	r4, .L22+12
+ 366 00e2 207A     		ldrb	r0, [r4, #8]
+ 367 00e4 FFF7FEFF 		bl	UH_Write
+ 368              	.LVL17:
+ 161:BLDC_Drive.c  ****     UL_Write(ULstate);
+ 369              		.loc 1 161 0
+ 370 00e8 607A     		ldrb	r0, [r4, #9]
+ 371 00ea FFF7FEFF 		bl	UL_Write
+ 372              	.LVL18:
+ 162:BLDC_Drive.c  ****     VH_Write(VHstate);
+ 373              		.loc 1 162 0
+ 374 00ee 607B     		ldrb	r0, [r4, #13]
+ 375 00f0 FFF7FEFF 		bl	VH_Write
+ 376              	.LVL19:
+ 163:BLDC_Drive.c  ****     VL_Write(VLstate);
+ 377              		.loc 1 163 0
+ 378 00f4 A07A     		ldrb	r0, [r4, #10]
+ 379 00f6 FFF7FEFF 		bl	VL_Write
+ 380              	.LVL20:
+ 164:BLDC_Drive.c  ****     WH_Write(WHstate);
+ 381              		.loc 1 164 0
+ 382 00fa E07A     		ldrb	r0, [r4, #11]
+ 383 00fc FFF7FEFF 		bl	WH_Write
+ 384              	.LVL21:
+ 165:BLDC_Drive.c  ****     WL_Write(WLstate);
+ 385              		.loc 1 165 0
+ 386 0100 207B     		ldrb	r0, [r4, #12]
+ 387 0102 FFF7FEFF 		bl	WL_Write
+ 388              	.LVL22:
+ 166:BLDC_Drive.c  ****     
+ 167:BLDC_Drive.c  **** }...
+ 389              		.loc 1 167 0
+ 390              		@ sp needed
+ 391 0106 70BD     		pop	{r4, r5, r6, pc}
+ 392              	.L23:
+ 393              		.align	2
+ 394              	.L22:
+ 395 0108 00000000 		.word	hall1State
+ 396 010c 00000000 		.word	hall2State
+ 397 0110 00000000 		.word	hall3State
+ 398 0114 00000000 		.word	.LANCHOR0
+ 399              		.cfi_endproc
+ 400              	.LFE38:
+ 401              		.size	readHallState, .-readHallState
+ 402              		.comm	BLDC_state,1,1
+ 403              		.comm	hall3State,1,1
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cct4zfDi.s 			page 11
+
+
+ 404              		.comm	hall2State,1,1
+ 405              		.comm	hall1State,1,1
+ 406              		.global	WLstate
+ 407              		.global	WHstate
+ 408              		.global	VLstate
+ 409              		.global	VHstate
+ 410              		.global	ULstate
+ 411              		.global	UHstate
+ 412              		.comm	delay_ms,4,4
+ 413              		.global	currentDir
+ 414              		.global	currentSpeed
+ 415              		.global	invalidate
+ 416              		.bss
+ 417              		.align	2
+ 418              		.set	.LANCHOR0,. + 0
+ 419              		.type	invalidate, %object
+ 420              		.size	invalidate, 1
+ 421              	invalidate:
+ 422 0000 00       		.space	1
+ 423              		.type	currentDir, %object
+ 424              		.size	currentDir, 1
+ 425              	currentDir:
+ 426 0001 00       		.space	1
+ 427 0002 0000     		.space	2
+ 428              		.type	currentSpeed, %object
+ 429              		.size	currentSpeed, 4
+ 430              	currentSpeed:
+ 431 0004 00000000 		.space	4
+ 432              		.type	UHstate, %object
+ 433              		.size	UHstate, 1
+ 434              	UHstate:
+ 435 0008 00       		.space	1
+ 436              		.type	ULstate, %object
+ 437              		.size	ULstate, 1
+ 438              	ULstate:
+ 439 0009 00       		.space	1
+ 440              		.type	VLstate, %object
+ 441              		.size	VLstate, 1
+ 442              	VLstate:
+ 443 000a 00       		.space	1
+ 444              		.type	WHstate, %object
+ 445              		.size	WHstate, 1
+ 446              	WHstate:
+ 447 000b 00       		.space	1
+ 448              		.type	WLstate, %object
+ 449              		.size	WLstate, 1
+ 450              	WLstate:
+ 451 000c 00       		.space	1
+ 452              		.type	VHstate, %object
+ 453              		.size	VHstate, 1
+ 454              	VHstate:
+ 455 000d 00       		.space	1
+ 456              		.text
+ 457              	.Letext0:
+ 458              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 459              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 460              		.file 4 "Generated_Source\\PSoC4/cytypes.h"
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cct4zfDi.s 			page 12
+
+
+ 461              		.file 5 "Generated_Source\\PSoC4/HALL1.h"
+ 462              		.file 6 "Generated_Source\\PSoC4/HALL2.h"
+ 463              		.file 7 "Generated_Source\\PSoC4/HALL3.h"
+ 464              		.file 8 "Generated_Source\\PSoC4/UH.h"
+ 465              		.file 9 "Generated_Source\\PSoC4/UL.h"
+ 466              		.file 10 "Generated_Source\\PSoC4/VH.h"
+ 467              		.file 11 "Generated_Source\\PSoC4/VL.h"
+ 468              		.file 12 "Generated_Source\\PSoC4/WH.h"
+ 469              		.file 13 "Generated_Source\\PSoC4/WL.h"
+ 470              		.section	.debug_info,"",%progbits
+ 471              	.Ldebug_info0:
+ 472 0000 22030000 		.4byte	0x322
+ 473 0004 0400     		.2byte	0x4
+ 474 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 475 000a 04       		.byte	0x4
+ 476 000b 01       		.uleb128 0x1
+ 477 000c E2010000 		.4byte	.LASF52
+ 478 0010 0C       		.byte	0xc
+ 479 0011 00000000 		.4byte	.LASF53
+ 480 0015 38010000 		.4byte	.LASF54
+ 481 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 482 001d 00000000 		.4byte	0
+ 483 0021 00000000 		.4byte	.Ldebug_line0
+ 484 0025 02       		.uleb128 0x2
+ 485 0026 0D000000 		.4byte	.LASF0
+ 486 002a 02       		.byte	0x2
+ 487 002b 1B       		.byte	0x1b
+ 488 002c 30000000 		.4byte	0x30
+ 489 0030 03       		.uleb128 0x3
+ 490 0031 01       		.byte	0x1
+ 491 0032 06       		.byte	0x6
+ 492 0033 03030000 		.4byte	.LASF2
+ 493 0037 02       		.uleb128 0x2
+ 494 0038 16000000 		.4byte	.LASF1
+ 495 003c 02       		.byte	0x2
+ 496 003d 1D       		.byte	0x1d
+ 497 003e 42000000 		.4byte	0x42
+ 498 0042 03       		.uleb128 0x3
+ 499 0043 01       		.byte	0x1
+ 500 0044 08       		.byte	0x8
+ 501 0045 AD000000 		.4byte	.LASF3
+ 502 0049 02       		.uleb128 0x2
+ 503 004a 23010000 		.4byte	.LASF4
+ 504 004e 02       		.byte	0x2
+ 505 004f 29       		.byte	0x29
+ 506 0050 54000000 		.4byte	0x54
+ 507 0054 03       		.uleb128 0x3
+ 508 0055 02       		.byte	0x2
+ 509 0056 05       		.byte	0x5
+ 510 0057 C6020000 		.4byte	.LASF5
+ 511 005b 03       		.uleb128 0x3
+ 512 005c 02       		.byte	0x2
+ 513 005d 07       		.byte	0x7
+ 514 005e 0F030000 		.4byte	.LASF6
+ 515 0062 02       		.uleb128 0x2
+ 516 0063 47000000 		.4byte	.LASF7
+ 517 0067 02       		.byte	0x2
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cct4zfDi.s 			page 13
+
+
+ 518 0068 3F       		.byte	0x3f
+ 519 0069 6D000000 		.4byte	0x6d
+ 520 006d 03       		.uleb128 0x3
+ 521 006e 04       		.byte	0x4
+ 522 006f 05       		.byte	0x5
+ 523 0070 E9020000 		.4byte	.LASF8
+ 524 0074 03       		.uleb128 0x3
+ 525 0075 04       		.byte	0x4
+ 526 0076 07       		.byte	0x7
+ 527 0077 D7000000 		.4byte	.LASF9
+ 528 007b 03       		.uleb128 0x3
+ 529 007c 08       		.byte	0x8
+ 530 007d 05       		.byte	0x5
+ 531 007e 8C020000 		.4byte	.LASF10
+ 532 0082 03       		.uleb128 0x3
+ 533 0083 08       		.byte	0x8
+ 534 0084 07       		.byte	0x7
+ 535 0085 B0010000 		.4byte	.LASF11
+ 536 0089 04       		.uleb128 0x4
+ 537 008a 04       		.byte	0x4
+ 538 008b 05       		.byte	0x5
+ 539 008c 696E7400 		.ascii	"int\000"
+ 540 0090 03       		.uleb128 0x3
+ 541 0091 04       		.byte	0x4
+ 542 0092 07       		.byte	0x7
+ 543 0093 A3010000 		.4byte	.LASF12
+ 544 0097 02       		.uleb128 0x2
+ 545 0098 88000000 		.4byte	.LASF13
+ 546 009c 03       		.byte	0x3
+ 547 009d 14       		.byte	0x14
+ 548 009e 25000000 		.4byte	0x25
+ 549 00a2 02       		.uleb128 0x2
+ 550 00a3 C7010000 		.4byte	.LASF14
+ 551 00a7 03       		.byte	0x3
+ 552 00a8 18       		.byte	0x18
+ 553 00a9 37000000 		.4byte	0x37
+ 554 00ad 02       		.uleb128 0x2
+ 555 00ae DA010000 		.4byte	.LASF15
+ 556 00b2 03       		.byte	0x3
+ 557 00b3 20       		.byte	0x20
+ 558 00b4 49000000 		.4byte	0x49
+ 559 00b8 02       		.uleb128 0x2
+ 560 00b9 8F000000 		.4byte	.LASF16
+ 561 00bd 03       		.byte	0x3
+ 562 00be 2C       		.byte	0x2c
+ 563 00bf 62000000 		.4byte	0x62
+ 564 00c3 05       		.uleb128 0x5
+ 565 00c4 DA020000 		.4byte	.LASF17
+ 566 00c8 04       		.byte	0x4
+ 567 00c9 FB01     		.2byte	0x1fb
+ 568 00cb 42000000 		.4byte	0x42
+ 569 00cf 03       		.uleb128 0x3
+ 570 00d0 04       		.byte	0x4
+ 571 00d1 04       		.byte	0x4
+ 572 00d2 41000000 		.4byte	.LASF18
+ 573 00d6 03       		.uleb128 0x3
+ 574 00d7 08       		.byte	0x8
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cct4zfDi.s 			page 14
+
+
+ 575 00d8 04       		.byte	0x4
+ 576 00d9 07010000 		.4byte	.LASF19
+ 577 00dd 03       		.uleb128 0x3
+ 578 00de 01       		.byte	0x1
+ 579 00df 08       		.byte	0x8
+ 580 00e0 A3020000 		.4byte	.LASF20
+ 581 00e4 03       		.uleb128 0x3
+ 582 00e5 08       		.byte	0x8
+ 583 00e6 04       		.byte	0x4
+ 584 00e7 0E010000 		.4byte	.LASF21
+ 585 00eb 03       		.uleb128 0x3
+ 586 00ec 04       		.byte	0x4
+ 587 00ed 07       		.byte	0x7
+ 588 00ee 83020000 		.4byte	.LASF22
+ 589 00f2 06       		.uleb128 0x6
+ 590 00f3 94010000 		.4byte	.LASF23
+ 591 00f7 01       		.byte	0x1
+ 592 00f8 29       		.byte	0x29
+ 593 00f9 00000000 		.4byte	.LFB35
+ 594 00fd 02000000 		.4byte	.LFE35-.LFB35
+ 595 0101 01       		.uleb128 0x1
+ 596 0102 9C       		.byte	0x9c
+ 597 0103 15010000 		.4byte	0x115
+ 598 0107 07       		.uleb128 0x7
+ 599 0108 D0020000 		.4byte	.LASF25
+ 600 010c 01       		.byte	0x1
+ 601 010d 29       		.byte	0x29
+ 602 010e A2000000 		.4byte	0xa2
+ 603 0112 01       		.uleb128 0x1
+ 604 0113 50       		.byte	0x50
+ 605 0114 00       		.byte	0
+ 606 0115 08       		.uleb128 0x8
+ 607 0116 C4000000 		.4byte	.LASF24
+ 608 011a 01       		.byte	0x1
+ 609 011b 30       		.byte	0x30
+ 610 011c 00000000 		.4byte	.LFB36
+ 611 0120 74000000 		.4byte	.LFE36-.LFB36
+ 612 0124 01       		.uleb128 0x1
+ 613 0125 9C       		.byte	0x9c
+ 614 0126 58010000 		.4byte	0x158
+ 615 012a 09       		.uleb128 0x9
+ 616 012b 7D020000 		.4byte	.LASF26
+ 617 012f 01       		.byte	0x1
+ 618 0130 30       		.byte	0x30
+ 619 0131 AD000000 		.4byte	0xad
+ 620 0135 00000000 		.4byte	.LLST0
+ 621 0139 09       		.uleb128 0x9
+ 622 013a 9F000000 		.4byte	.LASF27
+ 623 013e 01       		.byte	0x1
+ 624 013f 30       		.byte	0x30
+ 625 0140 A2000000 		.4byte	0xa2
+ 626 0144 3A000000 		.4byte	.LLST1
+ 627 0148 09       		.uleb128 0x9
+ 628 0149 FF000000 		.4byte	.LASF28
+ 629 014d 01       		.byte	0x1
+ 630 014e 30       		.byte	0x30
+ 631 014f C3000000 		.4byte	0xc3
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cct4zfDi.s 			page 15
+
+
+ 632 0153 74000000 		.4byte	.LLST2
+ 633 0157 00       		.byte	0
+ 634 0158 0A       		.uleb128 0xa
+ 635 0159 20000000 		.4byte	.LASF55
+ 636 015d 01       		.byte	0x1
+ 637 015e 4B       		.byte	0x4b
+ 638 015f AD000000 		.4byte	0xad
+ 639 0163 00000000 		.4byte	.LFB37
+ 640 0167 0C000000 		.4byte	.LFE37-.LFB37
+ 641 016b 01       		.uleb128 0x1
+ 642 016c 9C       		.byte	0x9c
+ 643 016d 0B       		.uleb128 0xb
+ 644 016e 51000000 		.4byte	.LASF56
+ 645 0172 01       		.byte	0x1
+ 646 0173 61       		.byte	0x61
+ 647 0174 00000000 		.4byte	.LFB38
+ 648 0178 18010000 		.4byte	.LFE38-.LFB38
+ 649 017c 01       		.uleb128 0x1
+ 650 017d 9C       		.byte	0x9c
+ 651 017e D4010000 		.4byte	0x1d4
+ 652 0182 0C       		.uleb128 0xc
+ 653 0183 06000000 		.4byte	.LVL14
+ 654 0187 C2020000 		.4byte	0x2c2
+ 655 018b 0C       		.uleb128 0xc
+ 656 018c 0E000000 		.4byte	.LVL15
+ 657 0190 CD020000 		.4byte	0x2cd
+ 658 0194 0C       		.uleb128 0xc
+ 659 0195 16000000 		.4byte	.LVL16
+ 660 0199 D8020000 		.4byte	0x2d8
+ 661 019d 0C       		.uleb128 0xc
+ 662 019e E8000000 		.4byte	.LVL17
+ 663 01a2 E3020000 		.4byte	0x2e3
+ 664 01a6 0C       		.uleb128 0xc
+ 665 01a7 EE000000 		.4byte	.LVL18
+ 666 01ab EE020000 		.4byte	0x2ee
+ 667 01af 0C       		.uleb128 0xc
+ 668 01b0 F4000000 		.4byte	.LVL19
+ 669 01b4 F9020000 		.4byte	0x2f9
+ 670 01b8 0C       		.uleb128 0xc
+ 671 01b9 FA000000 		.4byte	.LVL20
+ 672 01bd 04030000 		.4byte	0x304
+ 673 01c1 0C       		.uleb128 0xc
+ 674 01c2 00010000 		.4byte	.LVL21
+ 675 01c6 0F030000 		.4byte	0x30f
+ 676 01ca 0C       		.uleb128 0xc
+ 677 01cb 06010000 		.4byte	.LVL22
+ 678 01cf 1A030000 		.4byte	0x31a
+ 679 01d3 00       		.byte	0
+ 680 01d4 0D       		.uleb128 0xd
+ 681 01d5 E9000000 		.4byte	.LASF29
+ 682 01d9 01       		.byte	0x1
+ 683 01da 15       		.byte	0x15
+ 684 01db A2000000 		.4byte	0xa2
+ 685 01df 05       		.uleb128 0x5
+ 686 01e0 03       		.byte	0x3
+ 687 01e1 00000000 		.4byte	invalidate
+ 688 01e5 0D       		.uleb128 0xd
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cct4zfDi.s 			page 16
+
+
+ 689 01e6 70020000 		.4byte	.LASF30
+ 690 01ea 01       		.byte	0x1
+ 691 01eb 18       		.byte	0x18
+ 692 01ec B8000000 		.4byte	0xb8
+ 693 01f0 05       		.uleb128 0x5
+ 694 01f1 03       		.byte	0x3
+ 695 01f2 00000000 		.4byte	currentSpeed
+ 696 01f6 0D       		.uleb128 0xd
+ 697 01f7 CF010000 		.4byte	.LASF31
+ 698 01fb 01       		.byte	0x1
+ 699 01fc 19       		.byte	0x19
+ 700 01fd 97000000 		.4byte	0x97
+ 701 0201 05       		.uleb128 0x5
+ 702 0202 03       		.byte	0x3
+ 703 0203 00000000 		.4byte	currentDir
+ 704 0207 0D       		.uleb128 0xd
+ 705 0208 BB000000 		.4byte	.LASF32
+ 706 020c 01       		.byte	0x1
+ 707 020d 27       		.byte	0x27
+ 708 020e CF000000 		.4byte	0xcf
+ 709 0212 05       		.uleb128 0x5
+ 710 0213 03       		.byte	0x3
+ 711 0214 00000000 		.4byte	delay_ms
+ 712 0218 0D       		.uleb128 0xd
+ 713 0219 B3020000 		.4byte	.LASF33
+ 714 021d 01       		.byte	0x1
+ 715 021e 51       		.byte	0x51
+ 716 021f A2000000 		.4byte	0xa2
+ 717 0223 05       		.uleb128 0x5
+ 718 0224 03       		.byte	0x3
+ 719 0225 00000000 		.4byte	UHstate
+ 720 0229 0D       		.uleb128 0xd
+ 721 022a 39000000 		.4byte	.LASF34
+ 722 022e 01       		.byte	0x1
+ 723 022f 52       		.byte	0x52
+ 724 0230 A2000000 		.4byte	0xa2
+ 725 0234 05       		.uleb128 0x5
+ 726 0235 03       		.byte	0x3
+ 727 0236 00000000 		.4byte	ULstate
+ 728 023a 0D       		.uleb128 0xd
+ 729 023b F2020000 		.4byte	.LASF35
+ 730 023f 01       		.byte	0x1
+ 731 0240 53       		.byte	0x53
+ 732 0241 A2000000 		.4byte	0xa2
+ 733 0245 05       		.uleb128 0x5
+ 734 0246 03       		.byte	0x3
+ 735 0247 00000000 		.4byte	VHstate
+ 736 024b 0D       		.uleb128 0xd
+ 737 024c 75000000 		.4byte	.LASF36
+ 738 0250 01       		.byte	0x1
+ 739 0251 54       		.byte	0x54
+ 740 0252 A2000000 		.4byte	0xa2
+ 741 0256 05       		.uleb128 0x5
+ 742 0257 03       		.byte	0x3
+ 743 0258 00000000 		.4byte	VLstate
+ 744 025c 0D       		.uleb128 0xd
+ 745 025d 22030000 		.4byte	.LASF37
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cct4zfDi.s 			page 17
+
+
+ 746 0261 01       		.byte	0x1
+ 747 0262 55       		.byte	0x55
+ 748 0263 A2000000 		.4byte	0xa2
+ 749 0267 05       		.uleb128 0x5
+ 750 0268 03       		.byte	0x3
+ 751 0269 00000000 		.4byte	WHstate
+ 752 026d 0D       		.uleb128 0xd
+ 753 026e 97000000 		.4byte	.LASF38
+ 754 0272 01       		.byte	0x1
+ 755 0273 56       		.byte	0x56
+ 756 0274 A2000000 		.4byte	0xa2
+ 757 0278 05       		.uleb128 0x5
+ 758 0279 03       		.byte	0x3
+ 759 027a 00000000 		.4byte	WLstate
+ 760 027e 0D       		.uleb128 0xd
+ 761 027f BB020000 		.4byte	.LASF39
+ 762 0283 01       		.byte	0x1
+ 763 0284 59       		.byte	0x59
+ 764 0285 A2000000 		.4byte	0xa2
+ 765 0289 05       		.uleb128 0x5
+ 766 028a 03       		.byte	0x3
+ 767 028b 00000000 		.4byte	hall1State
+ 768 028f 0D       		.uleb128 0xd
+ 769 0290 5F000000 		.4byte	.LASF40
+ 770 0294 01       		.byte	0x1
+ 771 0295 5A       		.byte	0x5a
+ 772 0296 A2000000 		.4byte	0xa2
+ 773 029a 05       		.uleb128 0x5
+ 774 029b 03       		.byte	0x3
+ 775 029c 00000000 		.4byte	hall2State
+ 776 02a0 0D       		.uleb128 0xd
+ 777 02a1 F4000000 		.4byte	.LASF41
+ 778 02a5 01       		.byte	0x1
+ 779 02a6 5B       		.byte	0x5b
+ 780 02a7 A2000000 		.4byte	0xa2
+ 781 02ab 05       		.uleb128 0x5
+ 782 02ac 03       		.byte	0x3
+ 783 02ad 00000000 		.4byte	hall3State
+ 784 02b1 0D       		.uleb128 0xd
+ 785 02b2 6A000000 		.4byte	.LASF42
+ 786 02b6 01       		.byte	0x1
+ 787 02b7 5D       		.byte	0x5d
+ 788 02b8 A2000000 		.4byte	0xa2
+ 789 02bc 05       		.uleb128 0x5
+ 790 02bd 03       		.byte	0x3
+ 791 02be 00000000 		.4byte	BLDC_state
+ 792 02c2 0E       		.uleb128 0xe
+ 793 02c3 7D000000 		.4byte	.LASF43
+ 794 02c7 7D000000 		.4byte	.LASF43
+ 795 02cb 05       		.byte	0x5
+ 796 02cc 32       		.byte	0x32
+ 797 02cd 0E       		.uleb128 0xe
+ 798 02ce 2D010000 		.4byte	.LASF44
+ 799 02d2 2D010000 		.4byte	.LASF44
+ 800 02d6 06       		.byte	0x6
+ 801 02d7 32       		.byte	0x32
+ 802 02d8 0E       		.uleb128 0xe
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cct4zfDi.s 			page 18
+
+
+ 803 02d9 A8020000 		.4byte	.LASF45
+ 804 02dd A8020000 		.4byte	.LASF45
+ 805 02e1 07       		.byte	0x7
+ 806 02e2 32       		.byte	0x32
+ 807 02e3 0E       		.uleb128 0xe
+ 808 02e4 E0020000 		.4byte	.LASF46
+ 809 02e8 E0020000 		.4byte	.LASF46
+ 810 02ec 08       		.byte	0x8
+ 811 02ed 33       		.byte	0x33
+ 812 02ee 0E       		.uleb128 0xe
+ 813 02ef 30000000 		.4byte	.LASF47
+ 814 02f3 30000000 		.4byte	.LASF47
+ 815 02f7 09       		.byte	0x9
+ 816 02f8 33       		.byte	0x33
+ 817 02f9 0E       		.uleb128 0xe
+ 818 02fa 1A010000 		.4byte	.LASF48
+ 819 02fe 1A010000 		.4byte	.LASF48
+ 820 0302 0A       		.byte	0xa
+ 821 0303 33       		.byte	0x33
+ 822 0304 0E       		.uleb128 0xe
+ 823 0305 FA020000 		.4byte	.LASF49
+ 824 0309 FA020000 		.4byte	.LASF49
+ 825 030d 0B       		.byte	0xb
+ 826 030e 33       		.byte	0x33
+ 827 030f 0E       		.uleb128 0xe
+ 828 0310 CE000000 		.4byte	.LASF50
+ 829 0314 CE000000 		.4byte	.LASF50
+ 830 0318 0C       		.byte	0xc
+ 831 0319 33       		.byte	0x33
+ 832 031a 0E       		.uleb128 0xe
+ 833 031b 9A020000 		.4byte	.LASF51
+ 834 031f 9A020000 		.4byte	.LASF51
+ 835 0323 0D       		.byte	0xd
+ 836 0324 33       		.byte	0x33
+ 837 0325 00       		.byte	0
+ 838              		.section	.debug_abbrev,"",%progbits
+ 839              	.Ldebug_abbrev0:
+ 840 0000 01       		.uleb128 0x1
+ 841 0001 11       		.uleb128 0x11
+ 842 0002 01       		.byte	0x1
+ 843 0003 25       		.uleb128 0x25
+ 844 0004 0E       		.uleb128 0xe
+ 845 0005 13       		.uleb128 0x13
+ 846 0006 0B       		.uleb128 0xb
+ 847 0007 03       		.uleb128 0x3
+ 848 0008 0E       		.uleb128 0xe
+ 849 0009 1B       		.uleb128 0x1b
+ 850 000a 0E       		.uleb128 0xe
+ 851 000b 55       		.uleb128 0x55
+ 852 000c 17       		.uleb128 0x17
+ 853 000d 11       		.uleb128 0x11
+ 854 000e 01       		.uleb128 0x1
+ 855 000f 10       		.uleb128 0x10
+ 856 0010 17       		.uleb128 0x17
+ 857 0011 00       		.byte	0
+ 858 0012 00       		.byte	0
+ 859 0013 02       		.uleb128 0x2
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cct4zfDi.s 			page 19
+
+
+ 860 0014 16       		.uleb128 0x16
+ 861 0015 00       		.byte	0
+ 862 0016 03       		.uleb128 0x3
+ 863 0017 0E       		.uleb128 0xe
+ 864 0018 3A       		.uleb128 0x3a
+ 865 0019 0B       		.uleb128 0xb
+ 866 001a 3B       		.uleb128 0x3b
+ 867 001b 0B       		.uleb128 0xb
+ 868 001c 49       		.uleb128 0x49
+ 869 001d 13       		.uleb128 0x13
+ 870 001e 00       		.byte	0
+ 871 001f 00       		.byte	0
+ 872 0020 03       		.uleb128 0x3
+ 873 0021 24       		.uleb128 0x24
+ 874 0022 00       		.byte	0
+ 875 0023 0B       		.uleb128 0xb
+ 876 0024 0B       		.uleb128 0xb
+ 877 0025 3E       		.uleb128 0x3e
+ 878 0026 0B       		.uleb128 0xb
+ 879 0027 03       		.uleb128 0x3
+ 880 0028 0E       		.uleb128 0xe
+ 881 0029 00       		.byte	0
+ 882 002a 00       		.byte	0
+ 883 002b 04       		.uleb128 0x4
+ 884 002c 24       		.uleb128 0x24
+ 885 002d 00       		.byte	0
+ 886 002e 0B       		.uleb128 0xb
+ 887 002f 0B       		.uleb128 0xb
+ 888 0030 3E       		.uleb128 0x3e
+ 889 0031 0B       		.uleb128 0xb
+ 890 0032 03       		.uleb128 0x3
+ 891 0033 08       		.uleb128 0x8
+ 892 0034 00       		.byte	0
+ 893 0035 00       		.byte	0
+ 894 0036 05       		.uleb128 0x5
+ 895 0037 16       		.uleb128 0x16
+ 896 0038 00       		.byte	0
+ 897 0039 03       		.uleb128 0x3
+ 898 003a 0E       		.uleb128 0xe
+ 899 003b 3A       		.uleb128 0x3a
+ 900 003c 0B       		.uleb128 0xb
+ 901 003d 3B       		.uleb128 0x3b
+ 902 003e 05       		.uleb128 0x5
+ 903 003f 49       		.uleb128 0x49
+ 904 0040 13       		.uleb128 0x13
+ 905 0041 00       		.byte	0
+ 906 0042 00       		.byte	0
+ 907 0043 06       		.uleb128 0x6
+ 908 0044 2E       		.uleb128 0x2e
+ 909 0045 01       		.byte	0x1
+ 910 0046 3F       		.uleb128 0x3f
+ 911 0047 19       		.uleb128 0x19
+ 912 0048 03       		.uleb128 0x3
+ 913 0049 0E       		.uleb128 0xe
+ 914 004a 3A       		.uleb128 0x3a
+ 915 004b 0B       		.uleb128 0xb
+ 916 004c 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cct4zfDi.s 			page 20
+
+
+ 917 004d 0B       		.uleb128 0xb
+ 918 004e 27       		.uleb128 0x27
+ 919 004f 19       		.uleb128 0x19
+ 920 0050 11       		.uleb128 0x11
+ 921 0051 01       		.uleb128 0x1
+ 922 0052 12       		.uleb128 0x12
+ 923 0053 06       		.uleb128 0x6
+ 924 0054 40       		.uleb128 0x40
+ 925 0055 18       		.uleb128 0x18
+ 926 0056 9742     		.uleb128 0x2117
+ 927 0058 19       		.uleb128 0x19
+ 928 0059 01       		.uleb128 0x1
+ 929 005a 13       		.uleb128 0x13
+ 930 005b 00       		.byte	0
+ 931 005c 00       		.byte	0
+ 932 005d 07       		.uleb128 0x7
+ 933 005e 05       		.uleb128 0x5
+ 934 005f 00       		.byte	0
+ 935 0060 03       		.uleb128 0x3
+ 936 0061 0E       		.uleb128 0xe
+ 937 0062 3A       		.uleb128 0x3a
+ 938 0063 0B       		.uleb128 0xb
+ 939 0064 3B       		.uleb128 0x3b
+ 940 0065 0B       		.uleb128 0xb
+ 941 0066 49       		.uleb128 0x49
+ 942 0067 13       		.uleb128 0x13
+ 943 0068 02       		.uleb128 0x2
+ 944 0069 18       		.uleb128 0x18
+ 945 006a 00       		.byte	0
+ 946 006b 00       		.byte	0
+ 947 006c 08       		.uleb128 0x8
+ 948 006d 2E       		.uleb128 0x2e
+ 949 006e 01       		.byte	0x1
+ 950 006f 3F       		.uleb128 0x3f
+ 951 0070 19       		.uleb128 0x19
+ 952 0071 03       		.uleb128 0x3
+ 953 0072 0E       		.uleb128 0xe
+ 954 0073 3A       		.uleb128 0x3a
+ 955 0074 0B       		.uleb128 0xb
+ 956 0075 3B       		.uleb128 0x3b
+ 957 0076 0B       		.uleb128 0xb
+ 958 0077 27       		.uleb128 0x27
+ 959 0078 19       		.uleb128 0x19
+ 960 0079 11       		.uleb128 0x11
+ 961 007a 01       		.uleb128 0x1
+ 962 007b 12       		.uleb128 0x12
+ 963 007c 06       		.uleb128 0x6
+ 964 007d 40       		.uleb128 0x40
+ 965 007e 18       		.uleb128 0x18
+ 966 007f 9642     		.uleb128 0x2116
+ 967 0081 19       		.uleb128 0x19
+ 968 0082 01       		.uleb128 0x1
+ 969 0083 13       		.uleb128 0x13
+ 970 0084 00       		.byte	0
+ 971 0085 00       		.byte	0
+ 972 0086 09       		.uleb128 0x9
+ 973 0087 05       		.uleb128 0x5
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cct4zfDi.s 			page 21
+
+
+ 974 0088 00       		.byte	0
+ 975 0089 03       		.uleb128 0x3
+ 976 008a 0E       		.uleb128 0xe
+ 977 008b 3A       		.uleb128 0x3a
+ 978 008c 0B       		.uleb128 0xb
+ 979 008d 3B       		.uleb128 0x3b
+ 980 008e 0B       		.uleb128 0xb
+ 981 008f 49       		.uleb128 0x49
+ 982 0090 13       		.uleb128 0x13
+ 983 0091 02       		.uleb128 0x2
+ 984 0092 17       		.uleb128 0x17
+ 985 0093 00       		.byte	0
+ 986 0094 00       		.byte	0
+ 987 0095 0A       		.uleb128 0xa
+ 988 0096 2E       		.uleb128 0x2e
+ 989 0097 00       		.byte	0
+ 990 0098 3F       		.uleb128 0x3f
+ 991 0099 19       		.uleb128 0x19
+ 992 009a 03       		.uleb128 0x3
+ 993 009b 0E       		.uleb128 0xe
+ 994 009c 3A       		.uleb128 0x3a
+ 995 009d 0B       		.uleb128 0xb
+ 996 009e 3B       		.uleb128 0x3b
+ 997 009f 0B       		.uleb128 0xb
+ 998 00a0 49       		.uleb128 0x49
+ 999 00a1 13       		.uleb128 0x13
+ 1000 00a2 11       		.uleb128 0x11
+ 1001 00a3 01       		.uleb128 0x1
+ 1002 00a4 12       		.uleb128 0x12
+ 1003 00a5 06       		.uleb128 0x6
+ 1004 00a6 40       		.uleb128 0x40
+ 1005 00a7 18       		.uleb128 0x18
+ 1006 00a8 9742     		.uleb128 0x2117
+ 1007 00aa 19       		.uleb128 0x19
+ 1008 00ab 00       		.byte	0
+ 1009 00ac 00       		.byte	0
+ 1010 00ad 0B       		.uleb128 0xb
+ 1011 00ae 2E       		.uleb128 0x2e
+ 1012 00af 01       		.byte	0x1
+ 1013 00b0 3F       		.uleb128 0x3f
+ 1014 00b1 19       		.uleb128 0x19
+ 1015 00b2 03       		.uleb128 0x3
+ 1016 00b3 0E       		.uleb128 0xe
+ 1017 00b4 3A       		.uleb128 0x3a
+ 1018 00b5 0B       		.uleb128 0xb
+ 1019 00b6 3B       		.uleb128 0x3b
+ 1020 00b7 0B       		.uleb128 0xb
+ 1021 00b8 11       		.uleb128 0x11
+ 1022 00b9 01       		.uleb128 0x1
+ 1023 00ba 12       		.uleb128 0x12
+ 1024 00bb 06       		.uleb128 0x6
+ 1025 00bc 40       		.uleb128 0x40
+ 1026 00bd 18       		.uleb128 0x18
+ 1027 00be 9742     		.uleb128 0x2117
+ 1028 00c0 19       		.uleb128 0x19
+ 1029 00c1 01       		.uleb128 0x1
+ 1030 00c2 13       		.uleb128 0x13
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cct4zfDi.s 			page 22
+
+
+ 1031 00c3 00       		.byte	0
+ 1032 00c4 00       		.byte	0
+ 1033 00c5 0C       		.uleb128 0xc
+ 1034 00c6 898201   		.uleb128 0x4109
+ 1035 00c9 00       		.byte	0
+ 1036 00ca 11       		.uleb128 0x11
+ 1037 00cb 01       		.uleb128 0x1
+ 1038 00cc 31       		.uleb128 0x31
+ 1039 00cd 13       		.uleb128 0x13
+ 1040 00ce 00       		.byte	0
+ 1041 00cf 00       		.byte	0
+ 1042 00d0 0D       		.uleb128 0xd
+ 1043 00d1 34       		.uleb128 0x34
+ 1044 00d2 00       		.byte	0
+ 1045 00d3 03       		.uleb128 0x3
+ 1046 00d4 0E       		.uleb128 0xe
+ 1047 00d5 3A       		.uleb128 0x3a
+ 1048 00d6 0B       		.uleb128 0xb
+ 1049 00d7 3B       		.uleb128 0x3b
+ 1050 00d8 0B       		.uleb128 0xb
+ 1051 00d9 49       		.uleb128 0x49
+ 1052 00da 13       		.uleb128 0x13
+ 1053 00db 3F       		.uleb128 0x3f
+ 1054 00dc 19       		.uleb128 0x19
+ 1055 00dd 02       		.uleb128 0x2
+ 1056 00de 18       		.uleb128 0x18
+ 1057 00df 00       		.byte	0
+ 1058 00e0 00       		.byte	0
+ 1059 00e1 0E       		.uleb128 0xe
+ 1060 00e2 2E       		.uleb128 0x2e
+ 1061 00e3 00       		.byte	0
+ 1062 00e4 3F       		.uleb128 0x3f
+ 1063 00e5 19       		.uleb128 0x19
+ 1064 00e6 3C       		.uleb128 0x3c
+ 1065 00e7 19       		.uleb128 0x19
+ 1066 00e8 6E       		.uleb128 0x6e
+ 1067 00e9 0E       		.uleb128 0xe
+ 1068 00ea 03       		.uleb128 0x3
+ 1069 00eb 0E       		.uleb128 0xe
+ 1070 00ec 3A       		.uleb128 0x3a
+ 1071 00ed 0B       		.uleb128 0xb
+ 1072 00ee 3B       		.uleb128 0x3b
+ 1073 00ef 0B       		.uleb128 0xb
+ 1074 00f0 00       		.byte	0
+ 1075 00f1 00       		.byte	0
+ 1076 00f2 00       		.byte	0
+ 1077              		.section	.debug_loc,"",%progbits
+ 1078              	.Ldebug_loc0:
+ 1079              	.LLST0:
+ 1080 0000 00000000 		.4byte	.LVL1
+ 1081 0004 1C000000 		.4byte	.LVL3
+ 1082 0008 0100     		.2byte	0x1
+ 1083 000a 50       		.byte	0x50
+ 1084 000b 1C000000 		.4byte	.LVL3
+ 1085 000f 20000000 		.4byte	.LVL4
+ 1086 0013 0400     		.2byte	0x4
+ 1087 0015 F3       		.byte	0xf3
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cct4zfDi.s 			page 23
+
+
+ 1088 0016 01       		.uleb128 0x1
+ 1089 0017 50       		.byte	0x50
+ 1090 0018 9F       		.byte	0x9f
+ 1091 0019 20000000 		.4byte	.LVL4
+ 1092 001d 3C000000 		.4byte	.LVL8
+ 1093 0021 0100     		.2byte	0x1
+ 1094 0023 50       		.byte	0x50
+ 1095 0024 3C000000 		.4byte	.LVL8
+ 1096 0028 74000000 		.4byte	.LFE36
+ 1097 002c 0400     		.2byte	0x4
+ 1098 002e F3       		.byte	0xf3
+ 1099 002f 01       		.uleb128 0x1
+ 1100 0030 50       		.byte	0x50
+ 1101 0031 9F       		.byte	0x9f
+ 1102 0032 00000000 		.4byte	0
+ 1103 0036 00000000 		.4byte	0
+ 1104              	.LLST1:
+ 1105 003a 00000000 		.4byte	.LVL1
+ 1106 003e 47000000 		.4byte	.LVL9-1
+ 1107 0042 0100     		.2byte	0x1
+ 1108 0044 51       		.byte	0x51
+ 1109 0045 47000000 		.4byte	.LVL9-1
+ 1110 0049 5C000000 		.4byte	.LVL12
+ 1111 004d 0400     		.2byte	0x4
+ 1112 004f F3       		.byte	0xf3
+ 1113 0050 01       		.uleb128 0x1
+ 1114 0051 51       		.byte	0x51
+ 1115 0052 9F       		.byte	0x9f
+ 1116 0053 5C000000 		.4byte	.LVL12
+ 1117 0057 62000000 		.4byte	.LVL13
+ 1118 005b 0100     		.2byte	0x1
+ 1119 005d 51       		.byte	0x51
+ 1120 005e 62000000 		.4byte	.LVL13
+ 1121 0062 74000000 		.4byte	.LFE36
+ 1122 0066 0400     		.2byte	0x4
+ 1123 0068 F3       		.byte	0xf3
+ 1124 0069 01       		.uleb128 0x1
+ 1125 006a 51       		.byte	0x51
+ 1126 006b 9F       		.byte	0x9f
+ 1127 006c 00000000 		.4byte	0
+ 1128 0070 00000000 		.4byte	0
+ 1129              	.LLST2:
+ 1130 0074 00000000 		.4byte	.LVL1
+ 1131 0078 18000000 		.4byte	.LVL2
+ 1132 007c 0100     		.2byte	0x1
+ 1133 007e 52       		.byte	0x52
+ 1134 007f 18000000 		.4byte	.LVL2
+ 1135 0083 20000000 		.4byte	.LVL4
+ 1136 0087 0400     		.2byte	0x4
+ 1137 0089 F3       		.byte	0xf3
+ 1138 008a 01       		.uleb128 0x1
+ 1139 008b 52       		.byte	0x52
+ 1140 008c 9F       		.byte	0x9f
+ 1141 008d 20000000 		.4byte	.LVL4
+ 1142 0091 30000000 		.4byte	.LVL5
+ 1143 0095 0100     		.2byte	0x1
+ 1144 0097 52       		.byte	0x52
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cct4zfDi.s 			page 24
+
+
+ 1145 0098 30000000 		.4byte	.LVL5
+ 1146 009c 36000000 		.4byte	.LVL6
+ 1147 00a0 0400     		.2byte	0x4
+ 1148 00a2 F3       		.byte	0xf3
+ 1149 00a3 01       		.uleb128 0x1
+ 1150 00a4 52       		.byte	0x52
+ 1151 00a5 9F       		.byte	0x9f
+ 1152 00a6 36000000 		.4byte	.LVL6
+ 1153 00aa 38000000 		.4byte	.LVL7
+ 1154 00ae 0100     		.2byte	0x1
+ 1155 00b0 52       		.byte	0x52
+ 1156 00b1 38000000 		.4byte	.LVL7
+ 1157 00b5 74000000 		.4byte	.LFE36
+ 1158 00b9 0400     		.2byte	0x4
+ 1159 00bb F3       		.byte	0xf3
+ 1160 00bc 01       		.uleb128 0x1
+ 1161 00bd 52       		.byte	0x52
+ 1162 00be 9F       		.byte	0x9f
+ 1163 00bf 00000000 		.4byte	0
+ 1164 00c3 00000000 		.4byte	0
+ 1165              		.section	.debug_aranges,"",%progbits
+ 1166 0000 34000000 		.4byte	0x34
+ 1167 0004 0200     		.2byte	0x2
+ 1168 0006 00000000 		.4byte	.Ldebug_info0
+ 1169 000a 04       		.byte	0x4
+ 1170 000b 00       		.byte	0
+ 1171 000c 0000     		.2byte	0
+ 1172 000e 0000     		.2byte	0
+ 1173 0010 00000000 		.4byte	.LFB35
+ 1174 0014 02000000 		.4byte	.LFE35-.LFB35
+ 1175 0018 00000000 		.4byte	.LFB36
+ 1176 001c 74000000 		.4byte	.LFE36-.LFB36
+ 1177 0020 00000000 		.4byte	.LFB37
+ 1178 0024 0C000000 		.4byte	.LFE37-.LFB37
+ 1179 0028 00000000 		.4byte	.LFB38
+ 1180 002c 18010000 		.4byte	.LFE38-.LFB38
+ 1181 0030 00000000 		.4byte	0
+ 1182 0034 00000000 		.4byte	0
+ 1183              		.section	.debug_ranges,"",%progbits
+ 1184              	.Ldebug_ranges0:
+ 1185 0000 00000000 		.4byte	.LFB35
+ 1186 0004 02000000 		.4byte	.LFE35
+ 1187 0008 00000000 		.4byte	.LFB36
+ 1188 000c 74000000 		.4byte	.LFE36
+ 1189 0010 00000000 		.4byte	.LFB37
+ 1190 0014 0C000000 		.4byte	.LFE37
+ 1191 0018 00000000 		.4byte	.LFB38
+ 1192 001c 18010000 		.4byte	.LFE38
+ 1193 0020 00000000 		.4byte	0
+ 1194 0024 00000000 		.4byte	0
+ 1195              		.section	.debug_line,"",%progbits
+ 1196              	.Ldebug_line0:
+ 1197 0000 76020000 		.section	.debug_str,"MS",%progbits,1
+ 1197      02009501 
+ 1197      00000201 
+ 1197      FB0E0D00 
+ 1197      01010101 
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cct4zfDi.s 			page 25
+
+
+ 1198              	.LASF53:
+ 1199 0000 424C4443 		.ascii	"BLDC_Drive.c\000"
+ 1199      5F447269 
+ 1199      76652E63 
+ 1199      00
+ 1200              	.LASF0:
+ 1201 000d 5F5F696E 		.ascii	"__int8_t\000"
+ 1201      74385F74 
+ 1201      00
+ 1202              	.LASF1:
+ 1203 0016 5F5F7569 		.ascii	"__uint8_t\000"
+ 1203      6E74385F 
+ 1203      7400
+ 1204              	.LASF55:
+ 1205 0020 47657443 		.ascii	"GetCurrentSpeed\000"
+ 1205      75727265 
+ 1205      6E745370 
+ 1205      65656400 
+ 1206              	.LASF47:
+ 1207 0030 554C5F57 		.ascii	"UL_Write\000"
+ 1207      72697465 
+ 1207      00
+ 1208              	.LASF34:
+ 1209 0039 554C7374 		.ascii	"ULstate\000"
+ 1209      61746500 
+ 1210              	.LASF18:
+ 1211 0041 666C6F61 		.ascii	"float\000"
+ 1211      7400
+ 1212              	.LASF7:
+ 1213 0047 5F5F696E 		.ascii	"__int32_t\000"
+ 1213      7433325F 
+ 1213      7400
+ 1214              	.LASF56:
+ 1215 0051 72656164 		.ascii	"readHallState\000"
+ 1215      48616C6C 
+ 1215      53746174 
+ 1215      6500
+ 1216              	.LASF40:
+ 1217 005f 68616C6C 		.ascii	"hall2State\000"
+ 1217      32537461 
+ 1217      746500
+ 1218              	.LASF42:
+ 1219 006a 424C4443 		.ascii	"BLDC_state\000"
+ 1219      5F737461 
+ 1219      746500
+ 1220              	.LASF36:
+ 1221 0075 564C7374 		.ascii	"VLstate\000"
+ 1221      61746500 
+ 1222              	.LASF43:
+ 1223 007d 48414C4C 		.ascii	"HALL1_Read\000"
+ 1223      315F5265 
+ 1223      616400
+ 1224              	.LASF13:
+ 1225 0088 696E7438 		.ascii	"int8_t\000"
+ 1225      5F7400
+ 1226              	.LASF16:
+ 1227 008f 696E7433 		.ascii	"int32_t\000"
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cct4zfDi.s 			page 26
+
+
+ 1227      325F7400 
+ 1228              	.LASF38:
+ 1229 0097 574C7374 		.ascii	"WLstate\000"
+ 1229      61746500 
+ 1230              	.LASF27:
+ 1231 009f 64697361 		.ascii	"disable_limit\000"
+ 1231      626C655F 
+ 1231      6C696D69 
+ 1231      7400
+ 1232              	.LASF3:
+ 1233 00ad 756E7369 		.ascii	"unsigned char\000"
+ 1233      676E6564 
+ 1233      20636861 
+ 1233      7200
+ 1234              	.LASF32:
+ 1235 00bb 64656C61 		.ascii	"delay_ms\000"
+ 1235      795F6D73 
+ 1235      00
+ 1236              	.LASF24:
+ 1237 00c4 7365745F 		.ascii	"set_speed\000"
+ 1237      73706565 
+ 1237      6400
+ 1238              	.LASF50:
+ 1239 00ce 57485F57 		.ascii	"WH_Write\000"
+ 1239      72697465 
+ 1239      00
+ 1240              	.LASF9:
+ 1241 00d7 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1241      20756E73 
+ 1241      69676E65 
+ 1241      6420696E 
+ 1241      7400
+ 1242              	.LASF29:
+ 1243 00e9 696E7661 		.ascii	"invalidate\000"
+ 1243      6C696461 
+ 1243      746500
+ 1244              	.LASF41:
+ 1245 00f4 68616C6C 		.ascii	"hall3State\000"
+ 1245      33537461 
+ 1245      746500
+ 1246              	.LASF28:
+ 1247 00ff 6C696D69 		.ascii	"limitSW\000"
+ 1247      74535700 
+ 1248              	.LASF19:
+ 1249 0107 646F7562 		.ascii	"double\000"
+ 1249      6C6500
+ 1250              	.LASF21:
+ 1251 010e 6C6F6E67 		.ascii	"long double\000"
+ 1251      20646F75 
+ 1251      626C6500 
+ 1252              	.LASF48:
+ 1253 011a 56485F57 		.ascii	"VH_Write\000"
+ 1253      72697465 
+ 1253      00
+ 1254              	.LASF4:
+ 1255 0123 5F5F696E 		.ascii	"__int16_t\000"
+ 1255      7431365F 
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cct4zfDi.s 			page 27
+
+
+ 1255      7400
+ 1256              	.LASF44:
+ 1257 012d 48414C4C 		.ascii	"HALL2_Read\000"
+ 1257      325F5265 
+ 1257      616400
+ 1258              	.LASF54:
+ 1259 0138 433A5C55 		.ascii	"C:\\Users\\M4rz4n\\Desktop\\Husky Robotics\\Firmwar"
+ 1259      73657273 
+ 1259      5C4D3472 
+ 1259      7A346E5C 
+ 1259      4465736B 
+ 1260 0166 655C424C 		.ascii	"e\\BLDC\\BLDC_Motor_Board_PY2023\\BLDC_Motor_Board.cydsn\000"
+ 1260      44435C42 
+ 1260      4C44435F 
+ 1260      4D6F746F 
+ 1260      725F426F 
+ 1261              	.LASF23:
+ 1262 0194 636F6D6D 		.ascii	"commutateMotor\000"
+ 1262      75746174 
+ 1262      654D6F74 
+ 1262      6F7200
+ 1263              	.LASF12:
+ 1264 01a3 756E7369 		.ascii	"unsigned int\000"
+ 1264      676E6564 
+ 1264      20696E74 
+ 1264      00
+ 1265              	.LASF11:
+ 1266 01b0 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1266      206C6F6E 
+ 1266      6720756E 
+ 1266      7369676E 
+ 1266      65642069 
+ 1267              	.LASF14:
+ 1268 01c7 75696E74 		.ascii	"uint8_t\000"
+ 1268      385F7400 
+ 1269              	.LASF31:
+ 1270 01cf 63757272 		.ascii	"currentDir\000"
+ 1270      656E7444 
+ 1270      697200
+ 1271              	.LASF15:
+ 1272 01da 696E7431 		.ascii	"int16_t\000"
+ 1272      365F7400 
+ 1273              	.LASF52:
+ 1274 01e2 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1274      43313120 
+ 1274      352E342E 
+ 1274      31203230 
+ 1274      31363036 
+ 1275 0215 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 1275      20726576 
+ 1275      6973696F 
+ 1275      6E203233 
+ 1275      37373135 
+ 1276 0248 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1276      66756E63 
+ 1276      74696F6E 
+ 1276      2D736563 
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cct4zfDi.s 			page 28
+
+
+ 1276      74696F6E 
+ 1277              	.LASF30:
+ 1278 0270 63757272 		.ascii	"currentSpeed\000"
+ 1278      656E7453 
+ 1278      70656564 
+ 1278      00
+ 1279              	.LASF26:
+ 1280 027d 73706565 		.ascii	"speed\000"
+ 1280      6400
+ 1281              	.LASF22:
+ 1282 0283 73697A65 		.ascii	"sizetype\000"
+ 1282      74797065 
+ 1282      00
+ 1283              	.LASF10:
+ 1284 028c 6C6F6E67 		.ascii	"long long int\000"
+ 1284      206C6F6E 
+ 1284      6720696E 
+ 1284      7400
+ 1285              	.LASF51:
+ 1286 029a 574C5F57 		.ascii	"WL_Write\000"
+ 1286      72697465 
+ 1286      00
+ 1287              	.LASF20:
+ 1288 02a3 63686172 		.ascii	"char\000"
+ 1288      00
+ 1289              	.LASF45:
+ 1290 02a8 48414C4C 		.ascii	"HALL3_Read\000"
+ 1290      335F5265 
+ 1290      616400
+ 1291              	.LASF33:
+ 1292 02b3 55487374 		.ascii	"UHstate\000"
+ 1292      61746500 
+ 1293              	.LASF39:
+ 1294 02bb 68616C6C 		.ascii	"hall1State\000"
+ 1294      31537461 
+ 1294      746500
+ 1295              	.LASF5:
+ 1296 02c6 73686F72 		.ascii	"short int\000"
+ 1296      7420696E 
+ 1296      7400
+ 1297              	.LASF25:
+ 1298 02d0 68616C6C 		.ascii	"hallState\000"
+ 1298      53746174 
+ 1298      6500
+ 1299              	.LASF17:
+ 1300 02da 75696E74 		.ascii	"uint8\000"
+ 1300      3800
+ 1301              	.LASF46:
+ 1302 02e0 55485F57 		.ascii	"UH_Write\000"
+ 1302      72697465 
+ 1302      00
+ 1303              	.LASF8:
+ 1304 02e9 6C6F6E67 		.ascii	"long int\000"
+ 1304      20696E74 
+ 1304      00
+ 1305              	.LASF35:
+ 1306 02f2 56487374 		.ascii	"VHstate\000"
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cct4zfDi.s 			page 29
+
+
+ 1306      61746500 
+ 1307              	.LASF49:
+ 1308 02fa 564C5F57 		.ascii	"VL_Write\000"
+ 1308      72697465 
+ 1308      00
+ 1309              	.LASF2:
+ 1310 0303 7369676E 		.ascii	"signed char\000"
+ 1310      65642063 
+ 1310      68617200 
+ 1311              	.LASF6:
+ 1312 030f 73686F72 		.ascii	"short unsigned int\000"
+ 1312      7420756E 
+ 1312      7369676E 
+ 1312      65642069 
+ 1312      6E7400
+ 1313              	.LASF37:
+ 1314 0322 57487374 		.ascii	"WHstate\000"
+ 1314      61746500 
+ 1315              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

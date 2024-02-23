@@ -3,11 +3,11 @@
 <!--This file is machine generated and read. It is not intended to be edited by hand.-->
 <!--Due to this, there is no schema for this file.-->
 <CyGuid_2867d519-54d2-4c01-9830-c51cb08bc3dd type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWorkspaceSerialize" version="5" xml_contents_version="3" name="BLDCWorkspace" persistent="BLDCWorkspace.cywrk" platform="NOT_USED">
-<current_project name=".\TestCode.cydsn\TestCode.cyprj" />
+<current_project name=".\BLDC_Motor_Board.cydsn\BLDC_Motor_Board.cyprj" />
 <wrkspc_folders />
 <files />
 <projects>
-<v>.\TestCode.cydsn\TestCode.cyprj</v>
+<v>.\BLDC_Motor_Board.cydsn\BLDC_Motor_Board.cyprj</v>
 </projects>
 <workspace_id v="f5b68cbd-6975-438d-a03b-6ed4e68ea169" />
 <WriteAppVersionLastSavedWith v="4.4.0.80" />
