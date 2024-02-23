@@ -12,7 +12,7 @@
 #ifndef MAIN_HEADER
     #define MAIN_HEADER
     
-    #include "../HindsightCAN/CANLibrary.h"
+    #include "CANLib/CANLibrary.h"
     #include "cyapicallbacks.h"
     #include <stdint.h>
             

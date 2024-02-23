@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 1
 
 
    1              		.syntax unified
@@ -28,64 +28,61 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
   25              	GotoUninitState:
   26              	.LFB35:
   27              		.file 1 "BLDC_FSM.c"
-   1:BLDC_FSM.c    **** /* ========================================
-   2:BLDC_FSM.c    ****  *
-   3:BLDC_FSM.c    ****  * Copyright YOUR COMPANY, THE YEAR
-   4:BLDC_FSM.c    ****  * All Rights Reserved
-   5:BLDC_FSM.c    ****  * UNPUBLISHED, LICENSED SOFTWARE.
-   6:BLDC_FSM.c    ****  *
-   7:BLDC_FSM.c    ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
-   8:BLDC_FSM.c    ****  * WHICH IS THE PROPERTY OF your company.
-   9:BLDC_FSM.c    ****  *
-  10:BLDC_FSM.c    ****  * ========================================
-  11:BLDC_FSM.c    **** */
-  12:BLDC_FSM.c    **** 
-  13:BLDC_FSM.c    **** /* [] END OF FILE */
-  14:BLDC_FSM.c    **** #include "BLDC_FSM.h"
-  15:BLDC_FSM.c    **** #include "BLDC_Drive.h"
-  16:BLDC_FSM.c    **** #include "project.h"
-  17:BLDC_FSM.c    **** #include "BLDC_pid.h"
-  18:BLDC_FSM.c    **** 
-  19:BLDC_FSM.c    **** /*drive mode
-  20:BLDC_FSM.c    **** 0xFF = un-init
-  21:BLDC_FSM.c    **** 0x0 = pwm
-  22:BLDC_FSM.c    **** 0x1 = PID*/
-  23:BLDC_FSM.c    **** uint8_t motorUnitMode   = 0xFF;
-  24:BLDC_FSM.c    **** uint8_t motorUnitState  = UNINIT;
-  25:BLDC_FSM.c    **** uint8_t PIDConstSetReg      = 0;
-  26:BLDC_FSM.c    **** 
-  27:BLDC_FSM.c    **** extern const uint32 StripLights_CLUT[ ];
-  28:BLDC_FSM.c    **** 
-  29:BLDC_FSM.c    **** void GotoUninitState() {
-  28              		.loc 1 29 0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 2
-
-
+   1:BLDC_FSM.c    **** /*
+   2:BLDC_FSM.c    **** 
+   3:BLDC_FSM.c    ****     Control FSM
+   4:BLDC_FSM.c    **** 
+   5:BLDC_FSM.c    **** */
+   6:BLDC_FSM.c    **** 
+   7:BLDC_FSM.c    **** #include "BLDC_FSM.h"
+   8:BLDC_FSM.c    **** #include "BLDC_Drive.h"
+   9:BLDC_FSM.c    **** #include "project.h"
+  10:BLDC_FSM.c    **** #include "BLDC_pid.h"
+  11:BLDC_FSM.c    **** 
+  12:BLDC_FSM.c    **** /*drive mode
+  13:BLDC_FSM.c    **** 0xFF = un-init
+  14:BLDC_FSM.c    **** 0x0 = pwm
+  15:BLDC_FSM.c    **** 0x1 = PID*/
+  16:BLDC_FSM.c    **** uint8_t motorUnitMode   = 0xFF;
+  17:BLDC_FSM.c    **** uint8_t motorUnitState  = UNINIT; // motorUnitState - 
+  18:BLDC_FSM.c    **** uint8_t PIDConstSetReg      = 0;
+  19:BLDC_FSM.c    **** 
+  20:BLDC_FSM.c    **** extern const uint32 StripLights_CLUT[ ];
+  21:BLDC_FSM.c    **** 
+  22:BLDC_FSM.c    **** 
+  23:BLDC_FSM.c    **** // all the xxxIsSet methods check if the constant has been set by the Jetson,
+  24:BLDC_FSM.c    **** // they set PID register to different values, since the Jetson needs to tell
+  25:BLDC_FSM.c    **** // the board what units to use on startup
+  26:BLDC_FSM.c    **** void GotoUninitState() {
+  28              		.loc 1 26 0
   29              		.cfi_startproc
   30              		@ args = 0, pretend = 0, frame = 0
   31              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 2
+
+
   32 0000 10B5     		push	{r4, lr}
   33              		.cfi_def_cfa_offset 8
   34              		.cfi_offset 4, -8
   35              		.cfi_offset 14, -4
-  30:BLDC_FSM.c    ****     //halt motor
-  31:BLDC_FSM.c    ****     #ifdef RGB_LED_ARRAY
-  32:BLDC_FSM.c    ****     StripLights_DisplayClear(StripLights_BLACK);
-  33:BLDC_FSM.c    ****     #endif
-  34:BLDC_FSM.c    ****     ClearPIDProgress();
-  36              		.loc 1 34 0
+  27:BLDC_FSM.c    ****     //halt motor
+  28:BLDC_FSM.c    ****     #ifdef RGB_LED_ARRAY
+  29:BLDC_FSM.c    ****     StripLights_DisplayClear(StripLights_BLACK);
+  30:BLDC_FSM.c    ****     #endif
+  31:BLDC_FSM.c    ****     ClearPIDProgress();
+  36              		.loc 1 31 0
   37 0002 FFF7FEFF 		bl	ClearPIDProgress
   38              	.LVL0:
-  35:BLDC_FSM.c    ****     motorUnitMode = 0xFF;
-  39              		.loc 1 35 0
+  32:BLDC_FSM.c    ****     motorUnitMode = 0xFF;
+  39              		.loc 1 32 0
   40 0006 024B     		ldr	r3, .L2
   41 0008 FF22     		movs	r2, #255
   42 000a 1A70     		strb	r2, [r3]
-  36:BLDC_FSM.c    ****     motorUnitState = UNINIT;
-  43              		.loc 1 36 0
+  33:BLDC_FSM.c    ****     motorUnitState = UNINIT;
+  43              		.loc 1 33 0
   44 000c 5A70     		strb	r2, [r3, #1]
-  37:BLDC_FSM.c    **** }
-  45              		.loc 1 37 0
+  34:BLDC_FSM.c    **** }
+  45              		.loc 1 34 0
   46              		@ sp needed
   47 000e 10BD     		pop	{r4, pc}
   48              	.L3:
@@ -103,27 +100,27 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
   60              		.type	SetStateTo, %function
   61              	SetStateTo:
   62              	.LFB36:
-  38:BLDC_FSM.c    **** void SetStateTo(uint8_t state) {
-  63              		.loc 1 38 0
+  35:BLDC_FSM.c    **** void SetStateTo(uint8_t state) {
+  63              		.loc 1 35 0
   64              		.cfi_startproc
   65              		@ args = 0, pretend = 0, frame = 0
   66              		@ frame_needed = 0, uses_anonymous_args = 0
   67              		@ link register save eliminated.
   68              	.LVL1:
-  39:BLDC_FSM.c    ****     motorUnitState = state;
-  69              		.loc 1 39 0
+  36:BLDC_FSM.c    ****     motorUnitState = state;
+  69              		.loc 1 36 0
   70 0000 014B     		ldr	r3, .L5
   71 0002 5870     		strb	r0, [r3, #1]
-  40:BLDC_FSM.c    **** }
-  72              		.loc 1 40 0
+  37:BLDC_FSM.c    **** }
+  72              		.loc 1 37 0
   73              		@ sp needed
   74 0004 7047     		bx	lr
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 3
-
-
   75              	.L6:
   76 0006 C046     		.align	2
   77              	.L5:
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 3
+
+
   78 0008 00000000 		.word	.LANCHOR0
   79              		.cfi_endproc
   80              	.LFE36:
@@ -136,19 +133,19 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
   87              		.type	SetModeTo, %function
   88              	SetModeTo:
   89              	.LFB37:
-  41:BLDC_FSM.c    **** void SetModeTo(uint8_t mode) {
-  90              		.loc 1 41 0
+  38:BLDC_FSM.c    **** void SetModeTo(uint8_t mode) {
+  90              		.loc 1 38 0
   91              		.cfi_startproc
   92              		@ args = 0, pretend = 0, frame = 0
   93              		@ frame_needed = 0, uses_anonymous_args = 0
   94              		@ link register save eliminated.
   95              	.LVL2:
-  42:BLDC_FSM.c    ****     motorUnitMode = mode;
-  96              		.loc 1 42 0
+  39:BLDC_FSM.c    ****     motorUnitMode = mode;
+  96              		.loc 1 39 0
   97 0000 014B     		ldr	r3, .L8
   98 0002 1870     		strb	r0, [r3]
-  43:BLDC_FSM.c    **** }
-  99              		.loc 1 43 0
+  40:BLDC_FSM.c    **** }
+  99              		.loc 1 40 0
  100              		@ sp needed
  101 0004 7047     		bx	lr
  102              	.L9:
@@ -166,24 +163,24 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
  114              		.type	GetState, %function
  115              	GetState:
  116              	.LFB38:
-  44:BLDC_FSM.c    **** uint8_t GetState(){
- 117              		.loc 1 44 0
+  41:BLDC_FSM.c    **** uint8_t GetState(){
+ 117              		.loc 1 41 0
  118              		.cfi_startproc
  119              		@ args = 0, pretend = 0, frame = 0
  120              		@ frame_needed = 0, uses_anonymous_args = 0
  121              		@ link register save eliminated.
-  45:BLDC_FSM.c    ****     return motorUnitState;
- 122              		.loc 1 45 0
+  42:BLDC_FSM.c    ****     return motorUnitState;
+ 122              		.loc 1 42 0
  123 0000 014B     		ldr	r3, .L11
  124 0002 5878     		ldrb	r0, [r3, #1]
-  46:BLDC_FSM.c    **** }
- 125              		.loc 1 46 0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 4
-
-
+  43:BLDC_FSM.c    **** }
+ 125              		.loc 1 43 0
  126              		@ sp needed
  127 0004 7047     		bx	lr
  128              	.L12:
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 4
+
+
  129 0006 C046     		.align	2
  130              	.L11:
  131 0008 00000000 		.word	.LANCHOR0
@@ -198,18 +195,18 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
  140              		.type	GetMode, %function
  141              	GetMode:
  142              	.LFB39:
-  47:BLDC_FSM.c    **** uint8_t GetMode(){
- 143              		.loc 1 47 0
+  44:BLDC_FSM.c    **** uint8_t GetMode(){
+ 143              		.loc 1 44 0
  144              		.cfi_startproc
  145              		@ args = 0, pretend = 0, frame = 0
  146              		@ frame_needed = 0, uses_anonymous_args = 0
  147              		@ link register save eliminated.
-  48:BLDC_FSM.c    ****     return motorUnitMode;
- 148              		.loc 1 48 0
+  45:BLDC_FSM.c    ****     return motorUnitMode;
+ 148              		.loc 1 45 0
  149 0000 014B     		ldr	r3, .L14
  150 0002 1878     		ldrb	r0, [r3]
-  49:BLDC_FSM.c    **** }
- 151              		.loc 1 49 0
+  46:BLDC_FSM.c    **** }
+ 151              		.loc 1 46 0
  152              		@ sp needed
  153 0004 7047     		bx	lr
  154              	.L15:
@@ -227,24 +224,26 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
  166              		.type	PositionConstIsSet, %function
  167              	PositionConstIsSet:
  168              	.LFB40:
-  50:BLDC_FSM.c    **** void PositionConstIsSet() {
- 169              		.loc 1 50 0
+  47:BLDC_FSM.c    **** 
+  48:BLDC_FSM.c    **** // The next three methods check for the PID constants
+  49:BLDC_FSM.c    **** void PositionConstIsSet() {
+ 169              		.loc 1 49 0
  170              		.cfi_startproc
  171              		@ args = 0, pretend = 0, frame = 0
  172              		@ frame_needed = 0, uses_anonymous_args = 0
  173              		@ link register save eliminated.
-  51:BLDC_FSM.c    ****     PIDConstSetReg |= 0b100;
- 174              		.loc 1 51 0
+  50:BLDC_FSM.c    ****     PIDConstSetReg |= 0b100;
+ 174              		.loc 1 50 0
  175 0000 024A     		ldr	r2, .L17
  176 0002 1178     		ldrb	r1, [r2]
  177 0004 0423     		movs	r3, #4
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 5
-
-
  178 0006 0B43     		orrs	r3, r1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 5
+
+
  179 0008 1370     		strb	r3, [r2]
-  52:BLDC_FSM.c    **** }
- 180              		.loc 1 52 0
+  51:BLDC_FSM.c    **** }
+ 180              		.loc 1 51 0
  181              		@ sp needed
  182 000a 7047     		bx	lr
  183              	.L18:
@@ -262,22 +261,21 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
  195              		.type	IntegralConstIsSet, %function
  196              	IntegralConstIsSet:
  197              	.LFB41:
-  53:BLDC_FSM.c    **** 
-  54:BLDC_FSM.c    **** void IntegralConstIsSet(){
- 198              		.loc 1 54 0
+  52:BLDC_FSM.c    **** void IntegralConstIsSet(){
+ 198              		.loc 1 52 0
  199              		.cfi_startproc
  200              		@ args = 0, pretend = 0, frame = 0
  201              		@ frame_needed = 0, uses_anonymous_args = 0
  202              		@ link register save eliminated.
-  55:BLDC_FSM.c    ****     PIDConstSetReg |= 0b10;
- 203              		.loc 1 55 0
+  53:BLDC_FSM.c    ****     PIDConstSetReg |= 0b10;
+ 203              		.loc 1 53 0
  204 0000 024A     		ldr	r2, .L20
  205 0002 1178     		ldrb	r1, [r2]
  206 0004 0223     		movs	r3, #2
  207 0006 0B43     		orrs	r3, r1
  208 0008 1370     		strb	r3, [r2]
-  56:BLDC_FSM.c    **** }
- 209              		.loc 1 56 0
+  54:BLDC_FSM.c    **** }
+ 209              		.loc 1 54 0
  210              		@ sp needed
  211 000a 7047     		bx	lr
  212              	.L21:
@@ -295,25 +293,24 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
  224              		.type	DerivativeConstIsSet, %function
  225              	DerivativeConstIsSet:
  226              	.LFB42:
-  57:BLDC_FSM.c    **** 
-  58:BLDC_FSM.c    **** void DerivativeConstIsSet(){
- 227              		.loc 1 58 0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 6
-
-
+  55:BLDC_FSM.c    **** void DerivativeConstIsSet(){
+ 227              		.loc 1 55 0
  228              		.cfi_startproc
  229              		@ args = 0, pretend = 0, frame = 0
  230              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 6
+
+
  231              		@ link register save eliminated.
-  59:BLDC_FSM.c    ****     PIDConstSetReg |= 0b1;
- 232              		.loc 1 59 0
+  56:BLDC_FSM.c    ****     PIDConstSetReg |= 0b1;
+ 232              		.loc 1 56 0
  233 0000 024A     		ldr	r2, .L23
  234 0002 1178     		ldrb	r1, [r2]
  235 0004 0123     		movs	r3, #1
  236 0006 0B43     		orrs	r3, r1
  237 0008 1370     		strb	r3, [r2]
-  60:BLDC_FSM.c    **** }
- 238              		.loc 1 60 0
+  57:BLDC_FSM.c    **** }
+ 238              		.loc 1 57 0
  239              		@ sp needed
  240 000a 7047     		bx	lr
  241              	.L24:
@@ -331,22 +328,22 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
  253              		.type	PPJRConstIsSet, %function
  254              	PPJRConstIsSet:
  255              	.LFB43:
-  61:BLDC_FSM.c    **** 
-  62:BLDC_FSM.c    **** void PPJRConstIsSet() {
- 256              		.loc 1 62 0
+  58:BLDC_FSM.c    **** 
+  59:BLDC_FSM.c    **** void PPJRConstIsSet() {
+ 256              		.loc 1 59 0
  257              		.cfi_startproc
  258              		@ args = 0, pretend = 0, frame = 0
  259              		@ frame_needed = 0, uses_anonymous_args = 0
  260              		@ link register save eliminated.
-  63:BLDC_FSM.c    ****     PIDConstSetReg |= 0b1000;
- 261              		.loc 1 63 0
+  60:BLDC_FSM.c    ****     PIDConstSetReg |= 0b1000;
+ 261              		.loc 1 60 0
  262 0000 024A     		ldr	r2, .L26
  263 0002 1178     		ldrb	r1, [r2]
  264 0004 0823     		movs	r3, #8
  265 0006 0B43     		orrs	r3, r1
  266 0008 1370     		strb	r3, [r2]
-  64:BLDC_FSM.c    **** }
- 267              		.loc 1 64 0
+  61:BLDC_FSM.c    **** }
+ 267              		.loc 1 61 0
  268              		@ sp needed
  269 000a 7047     		bx	lr
  270              	.L27:
@@ -358,24 +355,25 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
  276              		.size	PPJRConstIsSet, .-PPJRConstIsSet
  277              		.section	.text.MaxJointRevIsSet,"ax",%progbits
  278              		.align	2
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 7
-
-
  279              		.global	MaxJointRevIsSet
  280              		.code	16
  281              		.thumb_func
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 7
+
+
  282              		.type	MaxJointRevIsSet, %function
  283              	MaxJointRevIsSet:
  284              	.LFB44:
-  65:BLDC_FSM.c    **** 
-  66:BLDC_FSM.c    **** void MaxJointRevIsSet(){
- 285              		.loc 1 66 0
+  62:BLDC_FSM.c    **** 
+  63:BLDC_FSM.c    **** 
+  64:BLDC_FSM.c    **** void MaxJointRevIsSet(){
+ 285              		.loc 1 64 0
  286              		.cfi_startproc
  287              		@ args = 0, pretend = 0, frame = 0
  288              		@ frame_needed = 0, uses_anonymous_args = 0
  289              		@ link register save eliminated.
-  67:BLDC_FSM.c    **** }
- 290              		.loc 1 67 0
+  65:BLDC_FSM.c    **** }
+ 290              		.loc 1 65 0
  291              		@ sp needed
  292 0000 7047     		bx	lr
  293              		.cfi_endproc
@@ -389,24 +387,24 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
  301              		.type	PIDconstsSet, %function
  302              	PIDconstsSet:
  303              	.LFB45:
-  68:BLDC_FSM.c    **** 
-  69:BLDC_FSM.c    **** //return 1 if all PID const are set. Return 0 if not
-  70:BLDC_FSM.c    **** uint8_t PIDconstsSet(){
- 304              		.loc 1 70 0
+  66:BLDC_FSM.c    **** 
+  67:BLDC_FSM.c    **** //return 1 if all PID const are set. Return 0 if not
+  68:BLDC_FSM.c    **** uint8_t PIDconstsSet(){
+ 304              		.loc 1 68 0
  305              		.cfi_startproc
  306              		@ args = 0, pretend = 0, frame = 0
  307              		@ frame_needed = 0, uses_anonymous_args = 0
  308              		@ link register save eliminated.
-  71:BLDC_FSM.c    ****     return PIDConstSetReg == 0b1111; 
- 309              		.loc 1 71 0
+  69:BLDC_FSM.c    ****     return PIDConstSetReg == 0b1111; 
+ 309              		.loc 1 69 0
  310 0000 034B     		ldr	r3, .L30
  311 0002 1878     		ldrb	r0, [r3]
  312 0004 0F38     		subs	r0, r0, #15
  313 0006 4342     		rsbs	r3, r0, #0
  314 0008 5841     		adcs	r0, r0, r3
  315 000a C0B2     		uxtb	r0, r0
-  72:BLDC_FSM.c    **** }
- 316              		.loc 1 72 0
+  70:BLDC_FSM.c    **** }
+ 316              		.loc 1 70 0
  317              		@ sp needed
  318 000c 7047     		bx	lr
  319              	.L31:
@@ -418,29 +416,29 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
  325              		.size	PIDconstsSet, .-PIDconstsSet
  326              		.section	.text.ClearPIDconst,"ax",%progbits
  327              		.align	2
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 8
-
-
  328              		.global	ClearPIDconst
  329              		.code	16
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 8
+
+
  330              		.thumb_func
  331              		.type	ClearPIDconst, %function
  332              	ClearPIDconst:
  333              	.LFB46:
-  73:BLDC_FSM.c    **** 
-  74:BLDC_FSM.c    **** void ClearPIDconst() {
- 334              		.loc 1 74 0
+  71:BLDC_FSM.c    **** 
+  72:BLDC_FSM.c    **** void ClearPIDconst() {
+ 334              		.loc 1 72 0
  335              		.cfi_startproc
  336              		@ args = 0, pretend = 0, frame = 0
  337              		@ frame_needed = 0, uses_anonymous_args = 0
  338              		@ link register save eliminated.
-  75:BLDC_FSM.c    ****     PIDConstSetReg = 0;
- 339              		.loc 1 75 0
+  73:BLDC_FSM.c    ****     PIDConstSetReg = 0;
+ 339              		.loc 1 73 0
  340 0000 0022     		movs	r2, #0
  341 0002 014B     		ldr	r3, .L33
  342 0004 1A70     		strb	r2, [r3]
-  76:BLDC_FSM.c    **** }...
- 343              		.loc 1 76 0
+  74:BLDC_FSM.c    **** }...
+ 343              		.loc 1 74 0
  344              		@ sp needed
  345 0006 7047     		bx	lr
  346              	.L34:
@@ -478,13 +476,13 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
  378              	.Ldebug_info0:
  379 0000 E9010000 		.4byte	0x1e9
  380 0004 0400     		.2byte	0x4
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 9
-
-
  381 0006 00000000 		.4byte	.Ldebug_abbrev0
  382 000a 04       		.byte	0x4
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 9
+
+
  383 000b 01       		.uleb128 0x1
- 384 000c 6F010000 		.4byte	.LASF32
+ 384 000c 68010000 		.4byte	.LASF32
  385 0010 0C       		.byte	0xc
  386 0011 C1000000 		.4byte	.LASF33
  387 0015 E2000000 		.4byte	.LASF34
@@ -494,7 +492,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
  391 0025 02       		.uleb128 0x2
  392 0026 01       		.byte	0x1
  393 0027 06       		.byte	0x6
- 394 0028 80020000 		.4byte	.LASF0
+ 394 0028 79020000 		.4byte	.LASF0
  395 002c 03       		.uleb128 0x3
  396 002d 26000000 		.4byte	.LASF9
  397 0031 02       		.byte	0x2
@@ -507,7 +505,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
  404 003e 02       		.uleb128 0x2
  405 003f 02       		.byte	0x2
  406 0040 05       		.byte	0x5
- 407 0041 4E020000 		.4byte	.LASF2
+ 407 0041 47020000 		.4byte	.LASF2
  408 0045 02       		.uleb128 0x2
  409 0046 02       		.byte	0x2
  410 0047 07       		.byte	0x7
@@ -515,7 +513,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
  412 004c 02       		.uleb128 0x2
  413 004d 04       		.byte	0x4
  414 004e 05       		.byte	0x5
- 415 004f 6B020000 		.4byte	.LASF4
+ 415 004f 64020000 		.4byte	.LASF4
  416 0053 02       		.uleb128 0x2
  417 0054 04       		.byte	0x4
  418 0055 07       		.byte	0x7
@@ -523,11 +521,11 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
  420 005a 02       		.uleb128 0x2
  421 005b 08       		.byte	0x8
  422 005c 05       		.byte	0x5
- 423 005d 2E020000 		.4byte	.LASF6
+ 423 005d 27020000 		.4byte	.LASF6
  424 0061 02       		.uleb128 0x2
  425 0062 08       		.byte	0x8
  426 0063 07       		.byte	0x7
- 427 0064 4B010000 		.4byte	.LASF7
+ 427 0064 44010000 		.4byte	.LASF7
  428 0068 04       		.uleb128 0x4
  429 0069 04       		.byte	0x4
  430 006a 05       		.byte	0x5
@@ -535,27 +533,27 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
  432 006f 02       		.uleb128 0x2
  433 0070 04       		.byte	0x4
  434 0071 07       		.byte	0x7
- 435 0072 3E010000 		.4byte	.LASF8
+ 435 0072 37010000 		.4byte	.LASF8
  436 0076 03       		.uleb128 0x3
- 437 0077 62010000 		.4byte	.LASF10
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 10
-
-
+ 437 0077 5B010000 		.4byte	.LASF10
  438 007b 03       		.byte	0x3
  439 007c 18       		.byte	0x18
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 10
+
+
  440 007d 2C000000 		.4byte	0x2c
  441 0081 02       		.uleb128 0x2
  442 0082 08       		.byte	0x8
  443 0083 04       		.byte	0x4
- 444 0084 74020000 		.4byte	.LASF11
+ 444 0084 6D020000 		.4byte	.LASF11
  445 0088 02       		.uleb128 0x2
  446 0089 04       		.byte	0x4
  447 008a 07       		.byte	0x7
- 448 008b 1A020000 		.4byte	.LASF12
+ 448 008b 13020000 		.4byte	.LASF12
  449 008f 02       		.uleb128 0x2
  450 0090 01       		.byte	0x1
  451 0091 08       		.byte	0x8
- 452 0092 3C020000 		.4byte	.LASF13
+ 452 0092 35020000 		.4byte	.LASF13
  453 0096 02       		.uleb128 0x2
  454 0097 04       		.byte	0x4
  455 0098 04       		.byte	0x4
@@ -565,9 +563,9 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
  459 009f 04       		.byte	0x4
  460 00a0 DB000000 		.4byte	.LASF15
  461 00a4 05       		.uleb128 0x5
- 462 00a5 96020000 		.4byte	.LASF35
+ 462 00a5 8F020000 		.4byte	.LASF35
  463 00a9 01       		.byte	0x1
- 464 00aa 1D       		.byte	0x1d
+ 464 00aa 1A       		.byte	0x1a
  465 00ab 00000000 		.4byte	.LFB35
  466 00af 14000000 		.4byte	.LFE35-.LFB35
  467 00b3 01       		.uleb128 0x1
@@ -578,9 +576,9 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
  472 00be E1010000 		.4byte	0x1e1
  473 00c2 00       		.byte	0
  474 00c3 07       		.uleb128 0x7
- 475 00c4 23020000 		.4byte	.LASF16
+ 475 00c4 1C020000 		.4byte	.LASF16
  476 00c8 01       		.byte	0x1
- 477 00c9 26       		.byte	0x26
+ 477 00c9 23       		.byte	0x23
  478 00ca 00000000 		.4byte	.LFB36
  479 00ce 0C000000 		.4byte	.LFE36-.LFB36
  480 00d2 01       		.uleb128 0x1
@@ -589,27 +587,27 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
  483 00d8 08       		.uleb128 0x8
  484 00d9 4F000000 		.4byte	.LASF18
  485 00dd 01       		.byte	0x1
- 486 00de 26       		.byte	0x26
+ 486 00de 23       		.byte	0x23
  487 00df 76000000 		.4byte	0x76
  488 00e3 01       		.uleb128 0x1
  489 00e4 50       		.byte	0x50
  490 00e5 00       		.byte	0
  491 00e6 07       		.uleb128 0x7
- 492 00e7 8C020000 		.4byte	.LASF17
+ 492 00e7 85020000 		.4byte	.LASF17
  493 00eb 01       		.byte	0x1
- 494 00ec 29       		.byte	0x29
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 11
-
-
+ 494 00ec 26       		.byte	0x26
  495 00ed 00000000 		.4byte	.LFB37
  496 00f1 0C000000 		.4byte	.LFE37-.LFB37
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 11
+
+
  497 00f5 01       		.uleb128 0x1
  498 00f6 9C       		.byte	0x9c
  499 00f7 09010000 		.4byte	0x109
  500 00fb 08       		.uleb128 0x8
- 501 00fc 6A010000 		.4byte	.LASF19
+ 501 00fc 63010000 		.4byte	.LASF19
  502 0100 01       		.byte	0x1
- 503 0101 29       		.byte	0x29
+ 503 0101 26       		.byte	0x26
  504 0102 76000000 		.4byte	0x76
  505 0106 01       		.uleb128 0x1
  506 0107 50       		.byte	0x50
@@ -617,7 +615,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
  508 0109 09       		.uleb128 0x9
  509 010a 46000000 		.4byte	.LASF20
  510 010e 01       		.byte	0x1
- 511 010f 2C       		.byte	0x2c
+ 511 010f 29       		.byte	0x29
  512 0110 76000000 		.4byte	0x76
  513 0114 00000000 		.4byte	.LFB38
  514 0118 0C000000 		.4byte	.LFE38-.LFB38
@@ -626,16 +624,16 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
  517 011e 09       		.uleb128 0x9
  518 011f 3E000000 		.4byte	.LASF21
  519 0123 01       		.byte	0x1
- 520 0124 2F       		.byte	0x2f
+ 520 0124 2C       		.byte	0x2c
  521 0125 76000000 		.4byte	0x76
  522 0129 00000000 		.4byte	.LFB39
  523 012d 0C000000 		.4byte	.LFE39-.LFB39
  524 0131 01       		.uleb128 0x1
  525 0132 9C       		.byte	0x9c
  526 0133 0A       		.uleb128 0xa
- 527 0134 58020000 		.4byte	.LASF22
+ 527 0134 51020000 		.4byte	.LASF22
  528 0138 01       		.byte	0x1
- 529 0139 32       		.byte	0x32
+ 529 0139 31       		.byte	0x31
  530 013a 00000000 		.4byte	.LFB40
  531 013e 10000000 		.4byte	.LFE40-.LFB40
  532 0142 01       		.uleb128 0x1
@@ -643,7 +641,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
  534 0144 0A       		.uleb128 0xa
  535 0145 8A000000 		.4byte	.LASF23
  536 0149 01       		.byte	0x1
- 537 014a 36       		.byte	0x36
+ 537 014a 34       		.byte	0x34
  538 014b 00000000 		.4byte	.LFB41
  539 014f 10000000 		.4byte	.LFE41-.LFB41
  540 0153 01       		.uleb128 0x1
@@ -651,18 +649,18 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
  542 0155 0A       		.uleb128 0xa
  543 0156 00000000 		.4byte	.LASF24
  544 015a 01       		.byte	0x1
- 545 015b 3A       		.byte	0x3a
+ 545 015b 37       		.byte	0x37
  546 015c 00000000 		.4byte	.LFB42
  547 0160 10000000 		.4byte	.LFE42-.LFB42
  548 0164 01       		.uleb128 0x1
  549 0165 9C       		.byte	0x9c
  550 0166 0A       		.uleb128 0xa
  551 0167 5B000000 		.4byte	.LASF25
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 12
-
-
  552 016b 01       		.byte	0x1
- 553 016c 3E       		.byte	0x3e
+ 553 016c 3B       		.byte	0x3b
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 12
+
+
  554 016d 00000000 		.4byte	.LFB43
  555 0171 10000000 		.4byte	.LFE43-.LFB43
  556 0175 01       		.uleb128 0x1
@@ -670,24 +668,24 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
  558 0177 0A       		.uleb128 0xa
  559 0178 B0000000 		.4byte	.LASF26
  560 017c 01       		.byte	0x1
- 561 017d 42       		.byte	0x42
+ 561 017d 40       		.byte	0x40
  562 017e 00000000 		.4byte	.LFB44
  563 0182 02000000 		.4byte	.LFE44-.LFB44
  564 0186 01       		.uleb128 0x1
  565 0187 9C       		.byte	0x9c
  566 0188 09       		.uleb128 0x9
- 567 0189 41020000 		.4byte	.LASF27
+ 567 0189 3A020000 		.4byte	.LASF27
  568 018d 01       		.byte	0x1
- 569 018e 46       		.byte	0x46
+ 569 018e 44       		.byte	0x44
  570 018f 76000000 		.4byte	0x76
  571 0193 00000000 		.4byte	.LFB45
  572 0197 14000000 		.4byte	.LFE45-.LFB45
  573 019b 01       		.uleb128 0x1
  574 019c 9C       		.byte	0x9c
  575 019d 0A       		.uleb128 0xa
- 576 019e 0C020000 		.4byte	.LASF28
+ 576 019e 05020000 		.4byte	.LASF28
  577 01a2 01       		.byte	0x1
- 578 01a3 4A       		.byte	0x4a
+ 578 01a3 48       		.byte	0x48
  579 01a4 00000000 		.4byte	.LFB46
  580 01a8 0C000000 		.4byte	.LFE46-.LFB46
  581 01ac 01       		.uleb128 0x1
@@ -695,15 +693,15 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
  583 01ae 0B       		.uleb128 0xb
  584 01af 30000000 		.4byte	.LASF29
  585 01b3 01       		.byte	0x1
- 586 01b4 17       		.byte	0x17
+ 586 01b4 10       		.byte	0x10
  587 01b5 76000000 		.4byte	0x76
  588 01b9 05       		.uleb128 0x5
  589 01ba 03       		.byte	0x3
  590 01bb 00000000 		.4byte	motorUnitMode
  591 01bf 0B       		.uleb128 0xb
- 592 01c0 FD010000 		.4byte	.LASF30
+ 592 01c0 F6010000 		.4byte	.LASF30
  593 01c4 01       		.byte	0x1
- 594 01c5 18       		.byte	0x18
+ 594 01c5 11       		.byte	0x11
  595 01c6 76000000 		.4byte	0x76
  596 01ca 05       		.uleb128 0x5
  597 01cb 03       		.byte	0x3
@@ -711,18 +709,18 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
  599 01d0 0B       		.uleb128 0xb
  600 01d1 CC000000 		.4byte	.LASF31
  601 01d5 01       		.byte	0x1
- 602 01d6 19       		.byte	0x19
+ 602 01d6 12       		.byte	0x12
  603 01d7 76000000 		.4byte	0x76
  604 01db 05       		.uleb128 0x5
  605 01dc 03       		.byte	0x3
  606 01dd 00000000 		.4byte	PIDConstSetReg
  607 01e1 0C       		.uleb128 0xc
  608 01e2 15000000 		.4byte	.LASF36
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 13
-
-
  609 01e6 15000000 		.4byte	.LASF36
  610 01ea 04       		.byte	0x4
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 13
+
+
  611 01eb 20       		.byte	0x20
  612 01ec 00       		.byte	0
  613              		.section	.debug_abbrev,"",%progbits
@@ -778,11 +776,11 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
  663 0030 3E       		.uleb128 0x3e
  664 0031 0B       		.uleb128 0xb
  665 0032 03       		.uleb128 0x3
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 14
-
-
  666 0033 08       		.uleb128 0x8
  667 0034 00       		.byte	0
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 14
+
+
  668 0035 00       		.byte	0
  669 0036 05       		.uleb128 0x5
  670 0037 2E       		.uleb128 0x2e
@@ -838,11 +836,11 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
  720 006c 9742     		.uleb128 0x2117
  721 006e 19       		.uleb128 0x19
  722 006f 01       		.uleb128 0x1
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 15
-
-
  723 0070 13       		.uleb128 0x13
  724 0071 00       		.byte	0
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 15
+
+
  725 0072 00       		.byte	0
  726 0073 08       		.uleb128 0x8
  727 0074 05       		.uleb128 0x5
@@ -898,11 +896,11 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
  777 00a7 12       		.uleb128 0x12
  778 00a8 06       		.uleb128 0x6
  779 00a9 40       		.uleb128 0x40
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 16
-
-
  780 00aa 18       		.uleb128 0x18
  781 00ab 9742     		.uleb128 0x2117
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 16
+
+
  782 00ad 19       		.uleb128 0x19
  783 00ae 00       		.byte	0
  784 00af 00       		.byte	0
@@ -958,11 +956,11 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
  834 0028 00000000 		.4byte	.LFB38
  835 002c 0C000000 		.4byte	.LFE38-.LFB38
  836 0030 00000000 		.4byte	.LFB39
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 17
-
-
  837 0034 0C000000 		.4byte	.LFE39-.LFB39
  838 0038 00000000 		.4byte	.LFB40
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 17
+
+
  839 003c 10000000 		.4byte	.LFE40-.LFB40
  840 0040 00000000 		.4byte	.LFB41
  841 0044 10000000 		.4byte	.LFE41-.LFB41
@@ -1008,7 +1006,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
  881 0064 00000000 		.4byte	0
  882              		.section	.debug_line,"",%progbits
  883              	.Ldebug_line0:
- 884 0000 02020000 		.section	.debug_str,"MS",%progbits,1
+ 884 0000 01020000 		.section	.debug_str,"MS",%progbits,1
  884      02002C01 
  884      00000201 
  884      FB0E0D00 
@@ -1018,11 +1016,11 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
  886      76617469 
  886      7665436F 
  886      6E737449 
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 18
-
-
  886      73536574 
  887              	.LASF36:
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 18
+
+
  888 0015 436C6561 		.ascii	"ClearPIDProgress\000"
  888      72504944 
  888      50726F67 
@@ -1078,11 +1076,11 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
  910      7369676E 
  910      65642069 
  910      6E7400
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 19
-
-
  911              	.LASF26:
  912 00b0 4D61784A 		.ascii	"MaxJointRevIsSet\000"
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 19
+
+
  912      6F696E74 
  912      52657649 
  912      73536574 
@@ -1100,114 +1098,114 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 1
  918 00db 646F7562 		.ascii	"double\000"
  918      6C6500
  919              	.LASF34:
- 920 00e2 433A5C55 		.ascii	"C:\\Users\\M4rz4n\\Desktop\\Husky Robotics\\Firmwar"
+ 920 00e2 433A5C55 		.ascii	"C:\\Users\\casey\\Desktop\\Robotics Stuff\\BLDC_Mot"
  920      73657273 
- 920      5C4D3472 
- 920      7A346E5C 
- 920      4465736B 
- 921 0110 655C424C 		.ascii	"e\\BLDC\\BLDC_Motor_Board_PY2023\\BLDC_Motor_Board.cydsn\000"
- 921      44435C42 
- 921      4C44435F 
- 921      4D6F746F 
- 921      725F426F 
+ 920      5C636173 
+ 920      65795C44 
+ 920      65736B74 
+ 921 0110 6F725F42 		.ascii	"or_Board_PY2023\\BLDC_Motor_Board.cydsn\000"
+ 921      6F617264 
+ 921      5F505932 
+ 921      3032335C 
+ 921      424C4443 
  922              	.LASF8:
- 923 013e 756E7369 		.ascii	"unsigned int\000"
+ 923 0137 756E7369 		.ascii	"unsigned int\000"
  923      676E6564 
  923      20696E74 
  923      00
  924              	.LASF7:
- 925 014b 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 925 0144 6C6F6E67 		.ascii	"long long unsigned int\000"
  925      206C6F6E 
  925      6720756E 
  925      7369676E 
  925      65642069 
  926              	.LASF10:
- 927 0162 75696E74 		.ascii	"uint8_t\000"
+ 927 015b 75696E74 		.ascii	"uint8_t\000"
  927      385F7400 
  928              	.LASF19:
- 929 016a 6D6F6465 		.ascii	"mode\000"
+ 929 0163 6D6F6465 		.ascii	"mode\000"
  929      00
  930              	.LASF32:
- 931 016f 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 931 0168 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
  931      43313120 
  931      352E342E 
  931      31203230 
  931      31363036 
- 932 01a2 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 932 019b 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
  932      20726576 
  932      6973696F 
  932      6E203233 
  932      37373135 
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 20
-
-
- 933 01d5 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 933 01ce 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
  933      66756E63 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 20
+
+
  933      74696F6E 
  933      2D736563 
  933      74696F6E 
  934              	.LASF30:
- 935 01fd 6D6F746F 		.ascii	"motorUnitState\000"
+ 935 01f6 6D6F746F 		.ascii	"motorUnitState\000"
  935      72556E69 
  935      74537461 
  935      746500
  936              	.LASF28:
- 937 020c 436C6561 		.ascii	"ClearPIDconst\000"
+ 937 0205 436C6561 		.ascii	"ClearPIDconst\000"
  937      72504944 
  937      636F6E73 
  937      7400
  938              	.LASF12:
- 939 021a 73697A65 		.ascii	"sizetype\000"
+ 939 0213 73697A65 		.ascii	"sizetype\000"
  939      74797065 
  939      00
  940              	.LASF16:
- 941 0223 53657453 		.ascii	"SetStateTo\000"
+ 941 021c 53657453 		.ascii	"SetStateTo\000"
  941      74617465 
  941      546F00
  942              	.LASF6:
- 943 022e 6C6F6E67 		.ascii	"long long int\000"
+ 943 0227 6C6F6E67 		.ascii	"long long int\000"
  943      206C6F6E 
  943      6720696E 
  943      7400
  944              	.LASF13:
- 945 023c 63686172 		.ascii	"char\000"
+ 945 0235 63686172 		.ascii	"char\000"
  945      00
  946              	.LASF27:
- 947 0241 50494463 		.ascii	"PIDconstsSet\000"
+ 947 023a 50494463 		.ascii	"PIDconstsSet\000"
  947      6F6E7374 
  947      73536574 
  947      00
  948              	.LASF2:
- 949 024e 73686F72 		.ascii	"short int\000"
+ 949 0247 73686F72 		.ascii	"short int\000"
  949      7420696E 
  949      7400
  950              	.LASF22:
- 951 0258 506F7369 		.ascii	"PositionConstIsSet\000"
+ 951 0251 506F7369 		.ascii	"PositionConstIsSet\000"
  951      74696F6E 
  951      436F6E73 
  951      74497353 
  951      657400
  952              	.LASF4:
- 953 026b 6C6F6E67 		.ascii	"long int\000"
+ 953 0264 6C6F6E67 		.ascii	"long int\000"
  953      20696E74 
  953      00
  954              	.LASF11:
- 955 0274 6C6F6E67 		.ascii	"long double\000"
+ 955 026d 6C6F6E67 		.ascii	"long double\000"
  955      20646F75 
  955      626C6500 
  956              	.LASF0:
- 957 0280 7369676E 		.ascii	"signed char\000"
+ 957 0279 7369676E 		.ascii	"signed char\000"
  957      65642063 
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccSVGUGT.s 			page 21
-
-
  957      68617200 
  958              	.LASF17:
- 959 028c 5365744D 		.ascii	"SetModeTo\000"
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccbciXFo.s 			page 21
+
+
+ 959 0285 5365744D 		.ascii	"SetModeTo\000"
  959      6F646554 
  959      6F00
  960              	.LASF35:
- 961 0296 476F746F 		.ascii	"GotoUninitState\000"
+ 961 028f 476F746F 		.ascii	"GotoUninitState\000"
  961      556E696E 
  961      69745374 
  961      61746500 

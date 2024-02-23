@@ -15,18 +15,15 @@
 void SetPosition(int32_t mDegs) ;
 int32_t MiliDegreesToTicks(int32_t miliDegrees);
 int32_t Position_PID(int32 targetmDeg);
-int32_t GetEncoderValWithFlip();
-int32_t GetPotVal();
 int32_t GetPositionmDeg();
-uint8_t GetUsingPot();
 
 void SetkPosition(int32_t kP);
 void SetkIntegral(int32_t kI);
 void SetkDerivative(int32_t kD);
 void SetConversion(double conv);
 double UpdateConversion();
-void SetEncoderDir(uint8_t flip);
-void setEncoderAtLimit(int enc_limit);
+// void SetEncoderDir(uint8_t flip);
+// void setEncoderAtLimit(int enc_limit);
 
 //used for mode change 
 void ClearPIDProgress();

@@ -1,0 +1,3687 @@
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"BLDC_pid.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.ClearPIDProgress,"ax",%progbits
+  20              		.align	2
+  21              		.global	ClearPIDProgress
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	ClearPIDProgress, %function
+  25              	ClearPIDProgress:
+  26              	.LFB35:
+  27              		.file 1 "BLDC_pid.c"
+   1:BLDC_pid.c    **** 
+   2:BLDC_pid.c    **** // ---------------------------------------------------use delay instead of PWM---------------------
+   3:BLDC_pid.c    **** 
+   4:BLDC_pid.c    **** // #include "Motor_Unit_Debug.h"
+   5:BLDC_pid.c    **** #include <project.h>
+   6:BLDC_pid.c    **** #include "BLDC_pid.h"
+   7:BLDC_pid.c    **** #include "BLDC_Drive.h"
+   8:BLDC_pid.c    **** #include "main.h"
+   9:BLDC_pid.c    **** #include <math.h>
+  10:BLDC_pid.c    **** 
+  11:BLDC_pid.c    **** int32_t delayTime = 1000;
+  12:BLDC_pid.c    **** // int32_t PWM = 0;
+  13:BLDC_pid.c    **** int32_t kPosition = 0, kIntegral = 0, kDerivative = 0;
+  14:BLDC_pid.c    **** int32_t tickMax = 0, tickMin = 0, mDegMax = 0, mDegMin = 0;
+  15:BLDC_pid.c    **** int8 flipEncoder = 1;
+  16:BLDC_pid.c    **** double mDegPerTick = 0.0;
+  17:BLDC_pid.c    **** 
+  18:BLDC_pid.c    **** int integral = 0;     //needs to be reset upon mode change
+  19:BLDC_pid.c    **** int lastError = 0;    //needs to be reset upon mode change
+  20:BLDC_pid.c    **** int integralClamp = 5000;
+  21:BLDC_pid.c    **** 
+  22:BLDC_pid.c    **** // double ratio;
+  23:BLDC_pid.c    **** // uint8 complete = 0;
+  24:BLDC_pid.c    **** 
+  25:BLDC_pid.c    **** uint8_t usingPot = 0;
+  26:BLDC_pid.c    **** uint8_t enabledPID = 0;
+  27:BLDC_pid.c    **** 
+  28:BLDC_pid.c    **** uint32_t maxSpeed = 32768;
+  29:BLDC_pid.c    **** 
+  30:BLDC_pid.c    **** extern uint8_t ignoreLimSw;
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 2
+
+
+  31:BLDC_pid.c    **** extern char txData[TX_DATA_SIZE];
+  32:BLDC_pid.c    **** 
+  33:BLDC_pid.c    **** void ClearPIDProgress() {
+  28              		.loc 1 33 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  34:BLDC_pid.c    ****     integral = 0;
+  33              		.loc 1 34 0
+  34 0000 024B     		ldr	r3, .L2
+  35 0002 0022     		movs	r2, #0
+  36 0004 1A60     		str	r2, [r3]
+  35:BLDC_pid.c    ****     lastError = 0;
+  37              		.loc 1 35 0
+  38 0006 5A60     		str	r2, [r3, #4]
+  36:BLDC_pid.c    **** }
+  39              		.loc 1 36 0
+  40              		@ sp needed
+  41 0008 7047     		bx	lr
+  42              	.L3:
+  43 000a C046     		.align	2
+  44              	.L2:
+  45 000c 00000000 		.word	.LANCHOR0
+  46              		.cfi_endproc
+  47              	.LFE35:
+  48              		.size	ClearPIDProgress, .-ClearPIDProgress
+  49              		.section	.text.DisablePID,"ax",%progbits
+  50              		.align	2
+  51              		.global	DisablePID
+  52              		.code	16
+  53              		.thumb_func
+  54              		.type	DisablePID, %function
+  55              	DisablePID:
+  56              	.LFB36:
+  37:BLDC_pid.c    **** void DisablePID() {
+  57              		.loc 1 37 0
+  58              		.cfi_startproc
+  59              		@ args = 0, pretend = 0, frame = 0
+  60              		@ frame_needed = 0, uses_anonymous_args = 0
+  61              		@ link register save eliminated.
+  38:BLDC_pid.c    ****     enabledPID = 0;
+  62              		.loc 1 38 0
+  63 0000 0022     		movs	r2, #0
+  64 0002 014B     		ldr	r3, .L5
+  65 0004 1A72     		strb	r2, [r3, #8]
+  39:BLDC_pid.c    **** }
+  66              		.loc 1 39 0
+  67              		@ sp needed
+  68 0006 7047     		bx	lr
+  69              	.L6:
+  70              		.align	2
+  71              	.L5:
+  72 0008 00000000 		.word	.LANCHOR0
+  73              		.cfi_endproc
+  74              	.LFE36:
+  75              		.size	DisablePID, .-DisablePID
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 3
+
+
+  76              		.section	.text.EnablePID,"ax",%progbits
+  77              		.align	2
+  78              		.global	EnablePID
+  79              		.code	16
+  80              		.thumb_func
+  81              		.type	EnablePID, %function
+  82              	EnablePID:
+  83              	.LFB37:
+  40:BLDC_pid.c    **** void EnablePID() {
+  84              		.loc 1 40 0
+  85              		.cfi_startproc
+  86              		@ args = 0, pretend = 0, frame = 0
+  87              		@ frame_needed = 0, uses_anonymous_args = 0
+  88              		@ link register save eliminated.
+  41:BLDC_pid.c    ****     enabledPID = 1;
+  89              		.loc 1 41 0
+  90 0000 0122     		movs	r2, #1
+  91 0002 014B     		ldr	r3, .L8
+  92 0004 1A72     		strb	r2, [r3, #8]
+  42:BLDC_pid.c    **** }
+  93              		.loc 1 42 0
+  94              		@ sp needed
+  95 0006 7047     		bx	lr
+  96              	.L9:
+  97              		.align	2
+  98              	.L8:
+  99 0008 00000000 		.word	.LANCHOR0
+ 100              		.cfi_endproc
+ 101              	.LFE37:
+ 102              		.size	EnablePID, .-EnablePID
+ 103              		.section	.text.PIDIsEnabled,"ax",%progbits
+ 104              		.align	2
+ 105              		.global	PIDIsEnabled
+ 106              		.code	16
+ 107              		.thumb_func
+ 108              		.type	PIDIsEnabled, %function
+ 109              	PIDIsEnabled:
+ 110              	.LFB38:
+  43:BLDC_pid.c    **** uint8_t PIDIsEnabled() {
+ 111              		.loc 1 43 0
+ 112              		.cfi_startproc
+ 113              		@ args = 0, pretend = 0, frame = 0
+ 114              		@ frame_needed = 0, uses_anonymous_args = 0
+ 115              		@ link register save eliminated.
+  44:BLDC_pid.c    ****     return(enabledPID);
+ 116              		.loc 1 44 0
+ 117 0000 014B     		ldr	r3, .L11
+ 118 0002 187A     		ldrb	r0, [r3, #8]
+  45:BLDC_pid.c    **** }
+ 119              		.loc 1 45 0
+ 120              		@ sp needed
+ 121 0004 7047     		bx	lr
+ 122              	.L12:
+ 123 0006 C046     		.align	2
+ 124              	.L11:
+ 125 0008 00000000 		.word	.LANCHOR0
+ 126              		.cfi_endproc
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 4
+
+
+ 127              	.LFE38:
+ 128              		.size	PIDIsEnabled, .-PIDIsEnabled
+ 129              		.section	.text.InitializePID,"ax",%progbits
+ 130              		.align	2
+ 131              		.global	InitializePID
+ 132              		.code	16
+ 133              		.thumb_func
+ 134              		.type	InitializePID, %function
+ 135              	InitializePID:
+ 136              	.LFB39:
+  46:BLDC_pid.c    **** void InitializePID() {
+ 137              		.loc 1 46 0
+ 138              		.cfi_startproc
+ 139              		@ args = 0, pretend = 0, frame = 0
+ 140              		@ frame_needed = 0, uses_anonymous_args = 0
+ 141 0000 10B5     		push	{r4, lr}
+ 142              		.cfi_def_cfa_offset 8
+ 143              		.cfi_offset 4, -8
+ 144              		.cfi_offset 14, -4
+  47:BLDC_pid.c    ****     // set_PWM(0, 0, 0);
+  48:BLDC_pid.c    ****     ClearPIDProgress();
+ 145              		.loc 1 48 0
+ 146 0002 FFF7FEFF 		bl	ClearPIDProgress
+ 147              	.LVL0:
+  49:BLDC_pid.c    ****     DisablePID();
+ 148              		.loc 1 49 0
+ 149 0006 FFF7FEFF 		bl	DisablePID
+ 150              	.LVL1:
+  50:BLDC_pid.c    ****     lastError = 0;
+ 151              		.loc 1 50 0
+ 152 000a 0022     		movs	r2, #0
+ 153 000c 014B     		ldr	r3, .L14
+ 154 000e 5A60     		str	r2, [r3, #4]
+  51:BLDC_pid.c    **** }
+ 155              		.loc 1 51 0
+ 156              		@ sp needed
+ 157 0010 10BD     		pop	{r4, pc}
+ 158              	.L15:
+ 159 0012 C046     		.align	2
+ 160              	.L14:
+ 161 0014 00000000 		.word	.LANCHOR0
+ 162              		.cfi_endproc
+ 163              	.LFE39:
+ 164              		.size	InitializePID, .-InitializePID
+ 165              		.global	__aeabi_idiv
+ 166              		.section	.text.GetPotVal,"ax",%progbits
+ 167              		.align	2
+ 168              		.global	GetPotVal
+ 169              		.code	16
+ 170              		.thumb_func
+ 171              		.type	GetPotVal, %function
+ 172              	GetPotVal:
+ 173              	.LFB40:
+  52:BLDC_pid.c    **** 
+  53:BLDC_pid.c    **** int32_t GetPotVal() {
+ 174              		.loc 1 53 0
+ 175              		.cfi_startproc
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 5
+
+
+ 176              		@ args = 0, pretend = 0, frame = 0
+ 177              		@ frame_needed = 0, uses_anonymous_args = 0
+ 178 0000 70B5     		push	{r4, r5, r6, lr}
+ 179              		.cfi_def_cfa_offset 16
+ 180              		.cfi_offset 4, -16
+ 181              		.cfi_offset 5, -12
+ 182              		.cfi_offset 6, -8
+ 183              		.cfi_offset 14, -4
+ 184              	.LVL2:
+ 185              	.LBB2:
+  54:BLDC_pid.c    ****     int32_t n = 1000;
+  55:BLDC_pid.c    ****     int32_t sum = 0;
+  56:BLDC_pid.c    ****     for (int i = 0; i < n; i++) {
+ 186              		.loc 1 56 0
+ 187 0002 0024     		movs	r4, #0
+ 188              	.LBE2:
+  55:BLDC_pid.c    ****     for (int i = 0; i < n; i++) {
+ 189              		.loc 1 55 0
+ 190 0004 0025     		movs	r5, #0
+ 191              	.LBB3:
+ 192              		.loc 1 56 0
+ 193 0006 09E0     		b	.L17
+ 194              	.LVL3:
+ 195              	.L18:
+  57:BLDC_pid.c    ****         ADC_Pot_StartConvert();
+ 196              		.loc 1 57 0 discriminator 3
+ 197 0008 FFF7FEFF 		bl	ADC_Pot_StartConvert
+ 198              	.LVL4:
+  58:BLDC_pid.c    ****         ADC_Pot_IsEndConversion(ADC_Pot_WAIT_FOR_RESULT);
+ 199              		.loc 1 58 0 discriminator 3
+ 200 000c 0220     		movs	r0, #2
+ 201 000e FFF7FEFF 		bl	ADC_Pot_IsEndConversion
+ 202              	.LVL5:
+  59:BLDC_pid.c    ****         sum += ADC_Pot_GetResult16(0);
+ 203              		.loc 1 59 0 discriminator 3
+ 204 0012 0020     		movs	r0, #0
+ 205 0014 FFF7FEFF 		bl	ADC_Pot_GetResult16
+ 206              	.LVL6:
+ 207 0018 2D18     		adds	r5, r5, r0
+ 208              	.LVL7:
+  56:BLDC_pid.c    ****         ADC_Pot_StartConvert();
+ 209              		.loc 1 56 0 discriminator 3
+ 210 001a 0134     		adds	r4, r4, #1
+ 211              	.LVL8:
+ 212              	.L17:
+  56:BLDC_pid.c    ****         ADC_Pot_StartConvert();
+ 213              		.loc 1 56 0 is_stmt 0 discriminator 1
+ 214 001c 044B     		ldr	r3, .L19
+ 215 001e 9C42     		cmp	r4, r3
+ 216 0020 F2DD     		ble	.L18
+ 217              	.LBE3:
+  60:BLDC_pid.c    ****     }    
+  61:BLDC_pid.c    ****     return sum/n;
+ 218              		.loc 1 61 0 is_stmt 1
+ 219 0022 FA21     		movs	r1, #250
+ 220 0024 8900     		lsls	r1, r1, #2
+ 221 0026 2800     		movs	r0, r5
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 6
+
+
+ 222 0028 FFF7FEFF 		bl	__aeabi_idiv
+ 223              	.LVL9:
+  62:BLDC_pid.c    **** }
+ 224              		.loc 1 62 0
+ 225              		@ sp needed
+ 226              	.LVL10:
+ 227              	.LVL11:
+ 228 002c 70BD     		pop	{r4, r5, r6, pc}
+ 229              	.L20:
+ 230 002e C046     		.align	2
+ 231              	.L19:
+ 232 0030 E7030000 		.word	999
+ 233              		.cfi_endproc
+ 234              	.LFE40:
+ 235              		.size	GetPotVal, .-GetPotVal
+ 236              		.global	__aeabi_i2d
+ 237              		.global	__aeabi_ddiv
+ 238              		.section	.text.UpdateConversion,"ax",%progbits
+ 239              		.align	2
+ 240              		.global	UpdateConversion
+ 241              		.code	16
+ 242              		.thumb_func
+ 243              		.type	UpdateConversion, %function
+ 244              	UpdateConversion:
+ 245              	.LFB41:
+  63:BLDC_pid.c    **** 
+  64:BLDC_pid.c    **** double UpdateConversion() {
+ 246              		.loc 1 64 0
+ 247              		.cfi_startproc
+ 248              		@ args = 0, pretend = 0, frame = 0
+ 249              		@ frame_needed = 0, uses_anonymous_args = 0
+ 250 0000 D0B5     		push	{r4, r6, r7, lr}
+ 251              		.cfi_def_cfa_offset 16
+ 252              		.cfi_offset 4, -16
+ 253              		.cfi_offset 6, -12
+ 254              		.cfi_offset 7, -8
+ 255              		.cfi_offset 14, -4
+  65:BLDC_pid.c    ****     if (mDegMin == mDegMax) return 0;
+ 256              		.loc 1 65 0
+ 257 0002 0E4A     		ldr	r2, .L24
+ 258 0004 D068     		ldr	r0, [r2, #12]
+ 259 0006 1369     		ldr	r3, [r2, #16]
+ 260 0008 9842     		cmp	r0, r3
+ 261 000a 13D0     		beq	.L23
+  66:BLDC_pid.c    ****     mDegPerTick = (double) (mDegMax-mDegMin)/(tickMax-tickMin);
+ 262              		.loc 1 66 0
+ 263 000c 181A     		subs	r0, r3, r0
+ 264 000e FFF7FEFF 		bl	__aeabi_i2d
+ 265              	.LVL12:
+ 266 0012 0600     		movs	r6, r0
+ 267 0014 0F00     		movs	r7, r1
+ 268 0016 094C     		ldr	r4, .L24
+ 269 0018 6369     		ldr	r3, [r4, #20]
+ 270 001a A269     		ldr	r2, [r4, #24]
+ 271 001c 981A     		subs	r0, r3, r2
+ 272 001e FFF7FEFF 		bl	__aeabi_i2d
+ 273              	.LVL13:
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 7
+
+
+ 274 0022 0200     		movs	r2, r0
+ 275 0024 0B00     		movs	r3, r1
+ 276 0026 3000     		movs	r0, r6
+ 277 0028 3900     		movs	r1, r7
+ 278 002a FFF7FEFF 		bl	__aeabi_ddiv
+ 279              	.LVL14:
+ 280 002e 2062     		str	r0, [r4, #32]
+ 281 0030 6162     		str	r1, [r4, #36]
+  67:BLDC_pid.c    ****     return mDegPerTick;
+ 282              		.loc 1 67 0
+ 283 0032 01E0     		b	.L22
+ 284              	.L23:
+  65:BLDC_pid.c    ****     if (mDegMin == mDegMax) return 0;
+ 285              		.loc 1 65 0
+ 286 0034 0020     		movs	r0, #0
+ 287 0036 0021     		movs	r1, #0
+ 288              	.L22:
+  68:BLDC_pid.c    **** }
+ 289              		.loc 1 68 0
+ 290              		@ sp needed
+ 291 0038 D0BD     		pop	{r4, r6, r7, pc}
+ 292              	.L25:
+ 293 003a C046     		.align	2
+ 294              	.L24:
+ 295 003c 00000000 		.word	.LANCHOR0
+ 296              		.cfi_endproc
+ 297              	.LFE41:
+ 298              		.size	UpdateConversion, .-UpdateConversion
+ 299              		.section	.text.GetMaxPIDSpeed,"ax",%progbits
+ 300              		.align	2
+ 301              		.global	GetMaxPIDSpeed
+ 302              		.code	16
+ 303              		.thumb_func
+ 304              		.type	GetMaxPIDSpeed, %function
+ 305              	GetMaxPIDSpeed:
+ 306              	.LFB42:
+  69:BLDC_pid.c    **** 
+  70:BLDC_pid.c    **** int32_t GetMaxPIDSpeed(){ return maxSpeed; }
+ 307              		.loc 1 70 0
+ 308              		.cfi_startproc
+ 309              		@ args = 0, pretend = 0, frame = 0
+ 310              		@ frame_needed = 0, uses_anonymous_args = 0
+ 311              		@ link register save eliminated.
+ 312              		.loc 1 70 0
+ 313 0000 014B     		ldr	r3, .L27
+ 314 0002 1868     		ldr	r0, [r3]
+ 315              		@ sp needed
+ 316 0004 7047     		bx	lr
+ 317              	.L28:
+ 318 0006 C046     		.align	2
+ 319              	.L27:
+ 320 0008 00000000 		.word	.LANCHOR1
+ 321              		.cfi_endproc
+ 322              	.LFE42:
+ 323              		.size	GetMaxPIDSpeed, .-GetMaxPIDSpeed
+ 324              		.section	.text.GetkPosition,"ax",%progbits
+ 325              		.align	2
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 8
+
+
+ 326              		.global	GetkPosition
+ 327              		.code	16
+ 328              		.thumb_func
+ 329              		.type	GetkPosition, %function
+ 330              	GetkPosition:
+ 331              	.LFB43:
+  71:BLDC_pid.c    **** int32_t GetkPosition(){ return kPosition; }
+ 332              		.loc 1 71 0
+ 333              		.cfi_startproc
+ 334              		@ args = 0, pretend = 0, frame = 0
+ 335              		@ frame_needed = 0, uses_anonymous_args = 0
+ 336              		@ link register save eliminated.
+ 337              		.loc 1 71 0
+ 338 0000 014B     		ldr	r3, .L30
+ 339 0002 986A     		ldr	r0, [r3, #40]
+ 340              		@ sp needed
+ 341 0004 7047     		bx	lr
+ 342              	.L31:
+ 343 0006 C046     		.align	2
+ 344              	.L30:
+ 345 0008 00000000 		.word	.LANCHOR0
+ 346              		.cfi_endproc
+ 347              	.LFE43:
+ 348              		.size	GetkPosition, .-GetkPosition
+ 349              		.section	.text.GetkIntegral,"ax",%progbits
+ 350              		.align	2
+ 351              		.global	GetkIntegral
+ 352              		.code	16
+ 353              		.thumb_func
+ 354              		.type	GetkIntegral, %function
+ 355              	GetkIntegral:
+ 356              	.LFB44:
+  72:BLDC_pid.c    **** int32_t GetkIntegral(){ return kIntegral; }
+ 357              		.loc 1 72 0
+ 358              		.cfi_startproc
+ 359              		@ args = 0, pretend = 0, frame = 0
+ 360              		@ frame_needed = 0, uses_anonymous_args = 0
+ 361              		@ link register save eliminated.
+ 362              		.loc 1 72 0
+ 363 0000 014B     		ldr	r3, .L33
+ 364 0002 D86A     		ldr	r0, [r3, #44]
+ 365              		@ sp needed
+ 366 0004 7047     		bx	lr
+ 367              	.L34:
+ 368 0006 C046     		.align	2
+ 369              	.L33:
+ 370 0008 00000000 		.word	.LANCHOR0
+ 371              		.cfi_endproc
+ 372              	.LFE44:
+ 373              		.size	GetkIntegral, .-GetkIntegral
+ 374              		.section	.text.GetkDerivative,"ax",%progbits
+ 375              		.align	2
+ 376              		.global	GetkDerivative
+ 377              		.code	16
+ 378              		.thumb_func
+ 379              		.type	GetkDerivative, %function
+ 380              	GetkDerivative:
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 9
+
+
+ 381              	.LFB45:
+  73:BLDC_pid.c    **** int32_t GetkDerivative(){ return kDerivative; }
+ 382              		.loc 1 73 0
+ 383              		.cfi_startproc
+ 384              		@ args = 0, pretend = 0, frame = 0
+ 385              		@ frame_needed = 0, uses_anonymous_args = 0
+ 386              		@ link register save eliminated.
+ 387              		.loc 1 73 0
+ 388 0000 014B     		ldr	r3, .L36
+ 389 0002 186B     		ldr	r0, [r3, #48]
+ 390              		@ sp needed
+ 391 0004 7047     		bx	lr
+ 392              	.L37:
+ 393 0006 C046     		.align	2
+ 394              	.L36:
+ 395 0008 00000000 		.word	.LANCHOR0
+ 396              		.cfi_endproc
+ 397              	.LFE45:
+ 398              		.size	GetkDerivative, .-GetkDerivative
+ 399              		.section	.text.GetConversion,"ax",%progbits
+ 400              		.align	2
+ 401              		.global	GetConversion
+ 402              		.code	16
+ 403              		.thumb_func
+ 404              		.type	GetConversion, %function
+ 405              	GetConversion:
+ 406              	.LFB46:
+  74:BLDC_pid.c    **** double GetConversion(){ return mDegPerTick; }
+ 407              		.loc 1 74 0
+ 408              		.cfi_startproc
+ 409              		@ args = 0, pretend = 0, frame = 0
+ 410              		@ frame_needed = 0, uses_anonymous_args = 0
+ 411              		@ link register save eliminated.
+ 412              		.loc 1 74 0
+ 413 0000 014B     		ldr	r3, .L39
+ 414 0002 186A     		ldr	r0, [r3, #32]
+ 415 0004 596A     		ldr	r1, [r3, #36]
+ 416              		@ sp needed
+ 417 0006 7047     		bx	lr
+ 418              	.L40:
+ 419              		.align	2
+ 420              	.L39:
+ 421 0008 00000000 		.word	.LANCHOR0
+ 422              		.cfi_endproc
+ 423              	.LFE46:
+ 424              		.size	GetConversion, .-GetConversion
+ 425              		.section	.text.GetTickMax,"ax",%progbits
+ 426              		.align	2
+ 427              		.global	GetTickMax
+ 428              		.code	16
+ 429              		.thumb_func
+ 430              		.type	GetTickMax, %function
+ 431              	GetTickMax:
+ 432              	.LFB47:
+  75:BLDC_pid.c    **** int32_t GetTickMax(){ return tickMax; }
+ 433              		.loc 1 75 0
+ 434              		.cfi_startproc
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 10
+
+
+ 435              		@ args = 0, pretend = 0, frame = 0
+ 436              		@ frame_needed = 0, uses_anonymous_args = 0
+ 437              		@ link register save eliminated.
+ 438              		.loc 1 75 0
+ 439 0000 014B     		ldr	r3, .L42
+ 440 0002 5869     		ldr	r0, [r3, #20]
+ 441              		@ sp needed
+ 442 0004 7047     		bx	lr
+ 443              	.L43:
+ 444 0006 C046     		.align	2
+ 445              	.L42:
+ 446 0008 00000000 		.word	.LANCHOR0
+ 447              		.cfi_endproc
+ 448              	.LFE47:
+ 449              		.size	GetTickMax, .-GetTickMax
+ 450              		.section	.text.GetTickMin,"ax",%progbits
+ 451              		.align	2
+ 452              		.global	GetTickMin
+ 453              		.code	16
+ 454              		.thumb_func
+ 455              		.type	GetTickMin, %function
+ 456              	GetTickMin:
+ 457              	.LFB48:
+  76:BLDC_pid.c    **** int32_t GetTickMin(){ return tickMin; }
+ 458              		.loc 1 76 0
+ 459              		.cfi_startproc
+ 460              		@ args = 0, pretend = 0, frame = 0
+ 461              		@ frame_needed = 0, uses_anonymous_args = 0
+ 462              		@ link register save eliminated.
+ 463              		.loc 1 76 0
+ 464 0000 014B     		ldr	r3, .L45
+ 465 0002 9869     		ldr	r0, [r3, #24]
+ 466              		@ sp needed
+ 467 0004 7047     		bx	lr
+ 468              	.L46:
+ 469 0006 C046     		.align	2
+ 470              	.L45:
+ 471 0008 00000000 		.word	.LANCHOR0
+ 472              		.cfi_endproc
+ 473              	.LFE48:
+ 474              		.size	GetTickMin, .-GetTickMin
+ 475              		.section	.text.GetmDegMax,"ax",%progbits
+ 476              		.align	2
+ 477              		.global	GetmDegMax
+ 478              		.code	16
+ 479              		.thumb_func
+ 480              		.type	GetmDegMax, %function
+ 481              	GetmDegMax:
+ 482              	.LFB49:
+  77:BLDC_pid.c    **** int32_t GetmDegMax(){ return mDegMax; }
+ 483              		.loc 1 77 0
+ 484              		.cfi_startproc
+ 485              		@ args = 0, pretend = 0, frame = 0
+ 486              		@ frame_needed = 0, uses_anonymous_args = 0
+ 487              		@ link register save eliminated.
+ 488              		.loc 1 77 0
+ 489 0000 014B     		ldr	r3, .L48
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 11
+
+
+ 490 0002 1869     		ldr	r0, [r3, #16]
+ 491              		@ sp needed
+ 492 0004 7047     		bx	lr
+ 493              	.L49:
+ 494 0006 C046     		.align	2
+ 495              	.L48:
+ 496 0008 00000000 		.word	.LANCHOR0
+ 497              		.cfi_endproc
+ 498              	.LFE49:
+ 499              		.size	GetmDegMax, .-GetmDegMax
+ 500              		.section	.text.GetmDegMin,"ax",%progbits
+ 501              		.align	2
+ 502              		.global	GetmDegMin
+ 503              		.code	16
+ 504              		.thumb_func
+ 505              		.type	GetmDegMin, %function
+ 506              	GetmDegMin:
+ 507              	.LFB50:
+  78:BLDC_pid.c    **** int32_t GetmDegMin(){ return mDegMin; }
+ 508              		.loc 1 78 0
+ 509              		.cfi_startproc
+ 510              		@ args = 0, pretend = 0, frame = 0
+ 511              		@ frame_needed = 0, uses_anonymous_args = 0
+ 512              		@ link register save eliminated.
+ 513              		.loc 1 78 0
+ 514 0000 014B     		ldr	r3, .L51
+ 515 0002 D868     		ldr	r0, [r3, #12]
+ 516              		@ sp needed
+ 517 0004 7047     		bx	lr
+ 518              	.L52:
+ 519 0006 C046     		.align	2
+ 520              	.L51:
+ 521 0008 00000000 		.word	.LANCHOR0
+ 522              		.cfi_endproc
+ 523              	.LFE50:
+ 524              		.size	GetmDegMin, .-GetmDegMin
+ 525              		.section	.text.GetUsingPot,"ax",%progbits
+ 526              		.align	2
+ 527              		.global	GetUsingPot
+ 528              		.code	16
+ 529              		.thumb_func
+ 530              		.type	GetUsingPot, %function
+ 531              	GetUsingPot:
+ 532              	.LFB51:
+  79:BLDC_pid.c    **** uint8_t GetUsingPot(){ return usingPot; }
+ 533              		.loc 1 79 0
+ 534              		.cfi_startproc
+ 535              		@ args = 0, pretend = 0, frame = 0
+ 536              		@ frame_needed = 0, uses_anonymous_args = 0
+ 537              		@ link register save eliminated.
+ 538              		.loc 1 79 0
+ 539 0000 3423     		movs	r3, #52
+ 540 0002 014A     		ldr	r2, .L54
+ 541 0004 D05C     		ldrb	r0, [r2, r3]
+ 542              		@ sp needed
+ 543 0006 7047     		bx	lr
+ 544              	.L55:
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 12
+
+
+ 545              		.align	2
+ 546              	.L54:
+ 547 0008 00000000 		.word	.LANCHOR0
+ 548              		.cfi_endproc
+ 549              	.LFE51:
+ 550              		.size	GetUsingPot, .-GetUsingPot
+ 551              		.section	.text.SetMaxPIDSpeed,"ax",%progbits
+ 552              		.align	2
+ 553              		.global	SetMaxPIDSpeed
+ 554              		.code	16
+ 555              		.thumb_func
+ 556              		.type	SetMaxPIDSpeed, %function
+ 557              	SetMaxPIDSpeed:
+ 558              	.LFB52:
+  80:BLDC_pid.c    **** 
+  81:BLDC_pid.c    **** void SetMaxPIDSpeed(uint16_t setValue){ maxSpeed = setValue; }
+ 559              		.loc 1 81 0
+ 560              		.cfi_startproc
+ 561              		@ args = 0, pretend = 0, frame = 0
+ 562              		@ frame_needed = 0, uses_anonymous_args = 0
+ 563              		@ link register save eliminated.
+ 564              	.LVL15:
+ 565              		.loc 1 81 0
+ 566 0000 014B     		ldr	r3, .L57
+ 567 0002 1860     		str	r0, [r3]
+ 568              		@ sp needed
+ 569 0004 7047     		bx	lr
+ 570              	.L58:
+ 571 0006 C046     		.align	2
+ 572              	.L57:
+ 573 0008 00000000 		.word	.LANCHOR1
+ 574              		.cfi_endproc
+ 575              	.LFE52:
+ 576              		.size	SetMaxPIDSpeed, .-SetMaxPIDSpeed
+ 577              		.section	.text.SetkPosition,"ax",%progbits
+ 578              		.align	2
+ 579              		.global	SetkPosition
+ 580              		.code	16
+ 581              		.thumb_func
+ 582              		.type	SetkPosition, %function
+ 583              	SetkPosition:
+ 584              	.LFB53:
+  82:BLDC_pid.c    **** void SetkPosition(int32_t kP){ kPosition = kP; }
+ 585              		.loc 1 82 0
+ 586              		.cfi_startproc
+ 587              		@ args = 0, pretend = 0, frame = 0
+ 588              		@ frame_needed = 0, uses_anonymous_args = 0
+ 589              		@ link register save eliminated.
+ 590              	.LVL16:
+ 591              		.loc 1 82 0
+ 592 0000 014B     		ldr	r3, .L60
+ 593 0002 9862     		str	r0, [r3, #40]
+ 594              		@ sp needed
+ 595 0004 7047     		bx	lr
+ 596              	.L61:
+ 597 0006 C046     		.align	2
+ 598              	.L60:
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 13
+
+
+ 599 0008 00000000 		.word	.LANCHOR0
+ 600              		.cfi_endproc
+ 601              	.LFE53:
+ 602              		.size	SetkPosition, .-SetkPosition
+ 603              		.section	.text.SetkIntegral,"ax",%progbits
+ 604              		.align	2
+ 605              		.global	SetkIntegral
+ 606              		.code	16
+ 607              		.thumb_func
+ 608              		.type	SetkIntegral, %function
+ 609              	SetkIntegral:
+ 610              	.LFB54:
+  83:BLDC_pid.c    **** void SetkIntegral(int32_t kI){ kIntegral = kI; }
+ 611              		.loc 1 83 0
+ 612              		.cfi_startproc
+ 613              		@ args = 0, pretend = 0, frame = 0
+ 614              		@ frame_needed = 0, uses_anonymous_args = 0
+ 615              		@ link register save eliminated.
+ 616              	.LVL17:
+ 617              		.loc 1 83 0
+ 618 0000 014B     		ldr	r3, .L63
+ 619 0002 D862     		str	r0, [r3, #44]
+ 620              		@ sp needed
+ 621 0004 7047     		bx	lr
+ 622              	.L64:
+ 623 0006 C046     		.align	2
+ 624              	.L63:
+ 625 0008 00000000 		.word	.LANCHOR0
+ 626              		.cfi_endproc
+ 627              	.LFE54:
+ 628              		.size	SetkIntegral, .-SetkIntegral
+ 629              		.section	.text.SetkDerivative,"ax",%progbits
+ 630              		.align	2
+ 631              		.global	SetkDerivative
+ 632              		.code	16
+ 633              		.thumb_func
+ 634              		.type	SetkDerivative, %function
+ 635              	SetkDerivative:
+ 636              	.LFB55:
+  84:BLDC_pid.c    **** void SetkDerivative(int32_t kD){ kDerivative = kD; }
+ 637              		.loc 1 84 0
+ 638              		.cfi_startproc
+ 639              		@ args = 0, pretend = 0, frame = 0
+ 640              		@ frame_needed = 0, uses_anonymous_args = 0
+ 641              		@ link register save eliminated.
+ 642              	.LVL18:
+ 643              		.loc 1 84 0
+ 644 0000 014B     		ldr	r3, .L66
+ 645 0002 1863     		str	r0, [r3, #48]
+ 646              		@ sp needed
+ 647 0004 7047     		bx	lr
+ 648              	.L67:
+ 649 0006 C046     		.align	2
+ 650              	.L66:
+ 651 0008 00000000 		.word	.LANCHOR0
+ 652              		.cfi_endproc
+ 653              	.LFE55:
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 14
+
+
+ 654              		.size	SetkDerivative, .-SetkDerivative
+ 655              		.section	.text.setTickMin,"ax",%progbits
+ 656              		.align	2
+ 657              		.global	setTickMin
+ 658              		.code	16
+ 659              		.thumb_func
+ 660              		.type	setTickMin, %function
+ 661              	setTickMin:
+ 662              	.LFB56:
+  85:BLDC_pid.c    **** void setTickMin(int32_t val){ tickMin = val; }
+ 663              		.loc 1 85 0
+ 664              		.cfi_startproc
+ 665              		@ args = 0, pretend = 0, frame = 0
+ 666              		@ frame_needed = 0, uses_anonymous_args = 0
+ 667              		@ link register save eliminated.
+ 668              	.LVL19:
+ 669              		.loc 1 85 0
+ 670 0000 014B     		ldr	r3, .L69
+ 671 0002 9861     		str	r0, [r3, #24]
+ 672              		@ sp needed
+ 673 0004 7047     		bx	lr
+ 674              	.L70:
+ 675 0006 C046     		.align	2
+ 676              	.L69:
+ 677 0008 00000000 		.word	.LANCHOR0
+ 678              		.cfi_endproc
+ 679              	.LFE56:
+ 680              		.size	setTickMin, .-setTickMin
+ 681              		.section	.text.setTickMax,"ax",%progbits
+ 682              		.align	2
+ 683              		.global	setTickMax
+ 684              		.code	16
+ 685              		.thumb_func
+ 686              		.type	setTickMax, %function
+ 687              	setTickMax:
+ 688              	.LFB57:
+  86:BLDC_pid.c    **** void setTickMax(int32_t val){ tickMax = val; }
+ 689              		.loc 1 86 0
+ 690              		.cfi_startproc
+ 691              		@ args = 0, pretend = 0, frame = 0
+ 692              		@ frame_needed = 0, uses_anonymous_args = 0
+ 693              		@ link register save eliminated.
+ 694              	.LVL20:
+ 695              		.loc 1 86 0
+ 696 0000 014B     		ldr	r3, .L72
+ 697 0002 5861     		str	r0, [r3, #20]
+ 698              		@ sp needed
+ 699 0004 7047     		bx	lr
+ 700              	.L73:
+ 701 0006 C046     		.align	2
+ 702              	.L72:
+ 703 0008 00000000 		.word	.LANCHOR0
+ 704              		.cfi_endproc
+ 705              	.LFE57:
+ 706              		.size	setTickMax, .-setTickMax
+ 707              		.section	.text.setmDegMin,"ax",%progbits
+ 708              		.align	2
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 15
+
+
+ 709              		.global	setmDegMin
+ 710              		.code	16
+ 711              		.thumb_func
+ 712              		.type	setmDegMin, %function
+ 713              	setmDegMin:
+ 714              	.LFB58:
+  87:BLDC_pid.c    **** void setmDegMin(int32_t val){ mDegMin = val; }
+ 715              		.loc 1 87 0
+ 716              		.cfi_startproc
+ 717              		@ args = 0, pretend = 0, frame = 0
+ 718              		@ frame_needed = 0, uses_anonymous_args = 0
+ 719              		@ link register save eliminated.
+ 720              	.LVL21:
+ 721              		.loc 1 87 0
+ 722 0000 014B     		ldr	r3, .L75
+ 723 0002 D860     		str	r0, [r3, #12]
+ 724              		@ sp needed
+ 725 0004 7047     		bx	lr
+ 726              	.L76:
+ 727 0006 C046     		.align	2
+ 728              	.L75:
+ 729 0008 00000000 		.word	.LANCHOR0
+ 730              		.cfi_endproc
+ 731              	.LFE58:
+ 732              		.size	setmDegMin, .-setmDegMin
+ 733              		.section	.text.setmDegMax,"ax",%progbits
+ 734              		.align	2
+ 735              		.global	setmDegMax
+ 736              		.code	16
+ 737              		.thumb_func
+ 738              		.type	setmDegMax, %function
+ 739              	setmDegMax:
+ 740              	.LFB59:
+  88:BLDC_pid.c    **** void setmDegMax(int32_t val){ mDegMax = val; }
+ 741              		.loc 1 88 0
+ 742              		.cfi_startproc
+ 743              		@ args = 0, pretend = 0, frame = 0
+ 744              		@ frame_needed = 0, uses_anonymous_args = 0
+ 745              		@ link register save eliminated.
+ 746              	.LVL22:
+ 747              		.loc 1 88 0
+ 748 0000 014B     		ldr	r3, .L78
+ 749 0002 1861     		str	r0, [r3, #16]
+ 750              		@ sp needed
+ 751 0004 7047     		bx	lr
+ 752              	.L79:
+ 753 0006 C046     		.align	2
+ 754              	.L78:
+ 755 0008 00000000 		.word	.LANCHOR0
+ 756              		.cfi_endproc
+ 757              	.LFE59:
+ 758              		.size	setmDegMax, .-setmDegMax
+ 759              		.section	.text.setUsingPot,"ax",%progbits
+ 760              		.align	2
+ 761              		.global	setUsingPot
+ 762              		.code	16
+ 763              		.thumb_func
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 16
+
+
+ 764              		.type	setUsingPot, %function
+ 765              	setUsingPot:
+ 766              	.LFB60:
+  89:BLDC_pid.c    **** void setUsingPot(uint8_t pot){ usingPot = pot; }
+ 767              		.loc 1 89 0
+ 768              		.cfi_startproc
+ 769              		@ args = 0, pretend = 0, frame = 0
+ 770              		@ frame_needed = 0, uses_anonymous_args = 0
+ 771              		@ link register save eliminated.
+ 772              	.LVL23:
+ 773              		.loc 1 89 0
+ 774 0000 3423     		movs	r3, #52
+ 775 0002 014A     		ldr	r2, .L81
+ 776 0004 D054     		strb	r0, [r2, r3]
+ 777              		@ sp needed
+ 778 0006 7047     		bx	lr
+ 779              	.L82:
+ 780              		.align	2
+ 781              	.L81:
+ 782 0008 00000000 		.word	.LANCHOR0
+ 783              		.cfi_endproc
+ 784              	.LFE60:
+ 785              		.size	setUsingPot, .-setUsingPot
+ 786              		.section	.text.SetConversion,"ax",%progbits
+ 787              		.align	2
+ 788              		.global	SetConversion
+ 789              		.code	16
+ 790              		.thumb_func
+ 791              		.type	SetConversion, %function
+ 792              	SetConversion:
+ 793              	.LFB61:
+  90:BLDC_pid.c    **** void SetConversion(double conv){ mDegPerTick = conv; }
+ 794              		.loc 1 90 0
+ 795              		.cfi_startproc
+ 796              		@ args = 0, pretend = 0, frame = 0
+ 797              		@ frame_needed = 0, uses_anonymous_args = 0
+ 798              		@ link register save eliminated.
+ 799              	.LVL24:
+ 800              		.loc 1 90 0
+ 801 0000 014B     		ldr	r3, .L84
+ 802 0002 1862     		str	r0, [r3, #32]
+ 803 0004 5962     		str	r1, [r3, #36]
+ 804              		@ sp needed
+ 805 0006 7047     		bx	lr
+ 806              	.L85:
+ 807              		.align	2
+ 808              	.L84:
+ 809 0008 00000000 		.word	.LANCHOR0
+ 810              		.cfi_endproc
+ 811              	.LFE61:
+ 812              		.size	SetConversion, .-SetConversion
+ 813              		.section	.text.SetEncoderDir,"ax",%progbits
+ 814              		.align	2
+ 815              		.global	SetEncoderDir
+ 816              		.code	16
+ 817              		.thumb_func
+ 818              		.type	SetEncoderDir, %function
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 17
+
+
+ 819              	SetEncoderDir:
+ 820              	.LFB62:
+  91:BLDC_pid.c    **** 
+  92:BLDC_pid.c    **** void SetEncoderDir(uint8_t flip){
+ 821              		.loc 1 92 0
+ 822              		.cfi_startproc
+ 823              		@ args = 0, pretend = 0, frame = 0
+ 824              		@ frame_needed = 0, uses_anonymous_args = 0
+ 825              		@ link register save eliminated.
+ 826              	.LVL25:
+  93:BLDC_pid.c    ****     flipEncoder = (flip ? -1 : 1);
+ 827              		.loc 1 93 0
+ 828 0000 0028     		cmp	r0, #0
+ 829 0002 02D0     		beq	.L88
+ 830 0004 0122     		movs	r2, #1
+ 831 0006 5242     		rsbs	r2, r2, #0
+ 832 0008 00E0     		b	.L87
+ 833              	.L88:
+ 834 000a 0122     		movs	r2, #1
+ 835              	.L87:
+ 836              		.loc 1 93 0 is_stmt 0 discriminator 4
+ 837 000c 014B     		ldr	r3, .L89
+ 838 000e 1A71     		strb	r2, [r3, #4]
+  94:BLDC_pid.c    **** }
+ 839              		.loc 1 94 0 is_stmt 1 discriminator 4
+ 840              		@ sp needed
+ 841 0010 7047     		bx	lr
+ 842              	.L90:
+ 843 0012 C046     		.align	2
+ 844              	.L89:
+ 845 0014 00000000 		.word	.LANCHOR1
+ 846              		.cfi_endproc
+ 847              	.LFE62:
+ 848              		.size	SetEncoderDir, .-SetEncoderDir
+ 849              		.global	__aeabi_d2iz
+ 850              		.section	.text.setEncoderAtLimit,"ax",%progbits
+ 851              		.align	2
+ 852              		.global	setEncoderAtLimit
+ 853              		.code	16
+ 854              		.thumb_func
+ 855              		.type	setEncoderAtLimit, %function
+ 856              	setEncoderAtLimit:
+ 857              	.LFB63:
+  95:BLDC_pid.c    **** 
+  96:BLDC_pid.c    **** void setEncoderAtLimit(int enc_limit){
+ 858              		.loc 1 96 0
+ 859              		.cfi_startproc
+ 860              		@ args = 0, pretend = 0, frame = 0
+ 861              		@ frame_needed = 0, uses_anonymous_args = 0
+ 862              	.LVL26:
+ 863 0000 10B5     		push	{r4, lr}
+ 864              		.cfi_def_cfa_offset 8
+ 865              		.cfi_offset 4, -8
+ 866              		.cfi_offset 14, -4
+  97:BLDC_pid.c    ****     QuadDec_SetCounter((int)round(enc_limit * flipEncoder / mDegPerTick));    
+ 867              		.loc 1 97 0
+ 868 0002 094B     		ldr	r3, .L92
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 18
+
+
+ 869 0004 1B79     		ldrb	r3, [r3, #4]
+ 870 0006 5BB2     		sxtb	r3, r3
+ 871 0008 5843     		muls	r0, r3
+ 872              	.LVL27:
+ 873 000a FFF7FEFF 		bl	__aeabi_i2d
+ 874              	.LVL28:
+ 875 000e 074B     		ldr	r3, .L92+4
+ 876 0010 1A6A     		ldr	r2, [r3, #32]
+ 877 0012 5B6A     		ldr	r3, [r3, #36]
+ 878 0014 FFF7FEFF 		bl	__aeabi_ddiv
+ 879              	.LVL29:
+ 880 0018 FFF7FEFF 		bl	round
+ 881              	.LVL30:
+ 882 001c FFF7FEFF 		bl	__aeabi_d2iz
+ 883              	.LVL31:
+ 884 0020 FFF7FEFF 		bl	QuadDec_SetCounter
+ 885              	.LVL32:
+  98:BLDC_pid.c    **** }
+ 886              		.loc 1 98 0
+ 887              		@ sp needed
+ 888 0024 10BD     		pop	{r4, pc}
+ 889              	.L93:
+ 890 0026 C046     		.align	2
+ 891              	.L92:
+ 892 0028 00000000 		.word	.LANCHOR1
+ 893 002c 00000000 		.word	.LANCHOR0
+ 894              		.cfi_endproc
+ 895              	.LFE63:
+ 896              		.size	setEncoderAtLimit, .-setEncoderAtLimit
+ 897              		.global	__aeabi_dcmpeq
+ 898              		.global	__aeabi_dmul
+ 899              		.global	__aeabi_dadd
+ 900              		.section	.text.GetPositionmDeg,"ax",%progbits
+ 901              		.align	2
+ 902              		.global	GetPositionmDeg
+ 903              		.code	16
+ 904              		.thumb_func
+ 905              		.type	GetPositionmDeg, %function
+ 906              	GetPositionmDeg:
+ 907              	.LFB64:
+  99:BLDC_pid.c    **** 
+ 100:BLDC_pid.c    **** int32_t GetPositionmDeg() {
+ 908              		.loc 1 100 0
+ 909              		.cfi_startproc
+ 910              		@ args = 0, pretend = 0, frame = 0
+ 911              		@ frame_needed = 0, uses_anonymous_args = 0
+ 912 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 913              		.cfi_def_cfa_offset 24
+ 914              		.cfi_offset 3, -24
+ 915              		.cfi_offset 4, -20
+ 916              		.cfi_offset 5, -16
+ 917              		.cfi_offset 6, -12
+ 918              		.cfi_offset 7, -8
+ 919              		.cfi_offset 14, -4
+ 101:BLDC_pid.c    ****     if (mDegPerTick == 0.0)
+ 920              		.loc 1 101 0
+ 921 0002 1F4B     		ldr	r3, .L98
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 19
+
+
+ 922 0004 186A     		ldr	r0, [r3, #32]
+ 923 0006 596A     		ldr	r1, [r3, #36]
+ 924 0008 0022     		movs	r2, #0
+ 925 000a 0023     		movs	r3, #0
+ 926 000c FFF7FEFF 		bl	__aeabi_dcmpeq
+ 927              	.LVL33:
+ 928 0010 0028     		cmp	r0, #0
+ 929 0012 32D1     		bne	.L97
+ 102:BLDC_pid.c    ****         return(0);
+ 103:BLDC_pid.c    ****     
+ 104:BLDC_pid.c    ****     if (usingPot) {
+ 930              		.loc 1 104 0
+ 931 0014 3423     		movs	r3, #52
+ 932 0016 1A4A     		ldr	r2, .L98
+ 933 0018 D35C     		ldrb	r3, [r2, r3]
+ 934 001a 002B     		cmp	r3, #0
+ 935 001c 16D0     		beq	.L96
+ 105:BLDC_pid.c    ****         return (GetPotVal()-tickMin) * mDegPerTick + mDegMin;
+ 936              		.loc 1 105 0
+ 937 001e FFF7FEFF 		bl	GetPotVal
+ 938              	.LVL34:
+ 939 0022 174C     		ldr	r4, .L98
+ 940 0024 A369     		ldr	r3, [r4, #24]
+ 941 0026 C01A     		subs	r0, r0, r3
+ 942 0028 FFF7FEFF 		bl	__aeabi_i2d
+ 943              	.LVL35:
+ 944 002c 226A     		ldr	r2, [r4, #32]
+ 945 002e 636A     		ldr	r3, [r4, #36]
+ 946 0030 FFF7FEFF 		bl	__aeabi_dmul
+ 947              	.LVL36:
+ 948 0034 0600     		movs	r6, r0
+ 949 0036 0F00     		movs	r7, r1
+ 950 0038 E068     		ldr	r0, [r4, #12]
+ 951 003a FFF7FEFF 		bl	__aeabi_i2d
+ 952              	.LVL37:
+ 953 003e 3200     		movs	r2, r6
+ 954 0040 3B00     		movs	r3, r7
+ 955 0042 FFF7FEFF 		bl	__aeabi_dadd
+ 956              	.LVL38:
+ 957 0046 FFF7FEFF 		bl	__aeabi_d2iz
+ 958              	.LVL39:
+ 959 004a 17E0     		b	.L95
+ 960              	.L96:
+ 961              	.LBB4:
+ 106:BLDC_pid.c    ****     } else {
+ 107:BLDC_pid.c    ****         return QuadDec_GetCounter() * mDegPerTick * flipEncoder;
+ 962              		.loc 1 107 0
+ 963 004c FFF7FEFF 		bl	QuadDec_GetCounter
+ 964              	.LVL40:
+ 965 0050 FFF7FEFF 		bl	__aeabi_i2d
+ 966              	.LVL41:
+ 967 0054 0A4B     		ldr	r3, .L98
+ 968 0056 1A6A     		ldr	r2, [r3, #32]
+ 969 0058 5B6A     		ldr	r3, [r3, #36]
+ 970 005a FFF7FEFF 		bl	__aeabi_dmul
+ 971              	.LVL42:
+ 972 005e 0400     		movs	r4, r0
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 20
+
+
+ 973 0060 0D00     		movs	r5, r1
+ 974 0062 084B     		ldr	r3, .L98+4
+ 975 0064 0420     		movs	r0, #4
+ 976 0066 1856     		ldrsb	r0, [r3, r0]
+ 977 0068 FFF7FEFF 		bl	__aeabi_i2d
+ 978              	.LVL43:
+ 979 006c 2200     		movs	r2, r4
+ 980 006e 2B00     		movs	r3, r5
+ 981 0070 FFF7FEFF 		bl	__aeabi_dmul
+ 982              	.LVL44:
+ 983 0074 FFF7FEFF 		bl	__aeabi_d2iz
+ 984              	.LVL45:
+ 985 0078 00E0     		b	.L95
+ 986              	.L97:
+ 987              	.LBE4:
+ 102:BLDC_pid.c    ****     
+ 988              		.loc 1 102 0
+ 989 007a 0020     		movs	r0, #0
+ 990              	.L95:
+ 108:BLDC_pid.c    ****         // return 0 * mDegPerTick;
+ 109:BLDC_pid.c    ****     }
+ 110:BLDC_pid.c    **** }
+ 991              		.loc 1 110 0
+ 992              		@ sp needed
+ 993 007c F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 994              	.L99:
+ 995 007e C046     		.align	2
+ 996              	.L98:
+ 997 0080 00000000 		.word	.LANCHOR0
+ 998 0084 00000000 		.word	.LANCHOR1
+ 999              		.cfi_endproc
+ 1000              	.LFE64:
+ 1001              		.size	GetPositionmDeg, .-GetPositionmDeg
+ 1002              		.section	.text.Position_PID,"ax",%progbits
+ 1003              		.align	2
+ 1004              		.global	Position_PID
+ 1005              		.code	16
+ 1006              		.thumb_func
+ 1007              		.type	Position_PID, %function
+ 1008              	Position_PID:
+ 1009              	.LFB66:
+ 111:BLDC_pid.c    **** 
+ 112:BLDC_pid.c    **** void SetPosition(int32_t mDegs) {
+ 113:BLDC_pid.c    ****         //TODO: Make Potentiometer Compatible
+ 114:BLDC_pid.c    ****         int32_t speed = Position_PID(mDegs);
+ 115:BLDC_pid.c    ****         
+ 116:BLDC_pid.c    ****         set_speed(speed, ignoreLimSw, Status_Reg_Switches_Read());   
+ 117:BLDC_pid.c    **** }
+ 118:BLDC_pid.c    **** 
+ 119:BLDC_pid.c    **** int32_t Position_PID(int32 targetmDeg){
+ 1010              		.loc 1 119 0
+ 1011              		.cfi_startproc
+ 1012              		@ args = 0, pretend = 0, frame = 0
+ 1013              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1014              	.LVL46:
+ 1015 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 1016              		.cfi_def_cfa_offset 24
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 21
+
+
+ 1017              		.cfi_offset 3, -24
+ 1018              		.cfi_offset 4, -20
+ 1019              		.cfi_offset 5, -16
+ 1020              		.cfi_offset 6, -12
+ 1021              		.cfi_offset 7, -8
+ 1022              		.cfi_offset 14, -4
+ 1023 0002 0500     		movs	r5, r0
+ 120:BLDC_pid.c    ****         
+ 121:BLDC_pid.c    ****     if(!PIDIsEnabled()){
+ 1024              		.loc 1 121 0
+ 1025 0004 FFF7FEFF 		bl	PIDIsEnabled
+ 1026              	.LVL47:
+ 1027 0008 0028     		cmp	r0, #0
+ 1028 000a 2ED0     		beq	.L104
+ 122:BLDC_pid.c    ****         return(0);
+ 123:BLDC_pid.c    ****     }
+ 124:BLDC_pid.c    ****     
+ 125:BLDC_pid.c    ****     int32 current = GetPositionmDeg();
+ 1029              		.loc 1 125 0
+ 1030 000c FFF7FEFF 		bl	GetPositionmDeg
+ 1031              	.LVL48:
+ 126:BLDC_pid.c    ****     int32 error = targetmDeg - current;
+ 1032              		.loc 1 126 0
+ 1033 0010 2C1A     		subs	r4, r5, r0
+ 1034              	.LVL49:
+ 127:BLDC_pid.c    ****     
+ 128:BLDC_pid.c    ****     //if within tolerance exit
+ 129:BLDC_pid.c    ****     if(error <= 5 && error >= -5) {
+ 1035              		.loc 1 129 0
+ 1036 0012 631D     		adds	r3, r4, #5
+ 1037 0014 0A2B     		cmp	r3, #10
+ 1038 0016 2AD9     		bls	.L105
+ 130:BLDC_pid.c    ****       return(0);
+ 131:BLDC_pid.c    ****     }
+ 132:BLDC_pid.c    ****     
+ 133:BLDC_pid.c    ****     integral = integral + error;
+ 1039              		.loc 1 133 0
+ 1040 0018 164B     		ldr	r3, .L106
+ 1041 001a 1A68     		ldr	r2, [r3]
+ 1042 001c A218     		adds	r2, r4, r2
+ 1043 001e 1A60     		str	r2, [r3]
+ 134:BLDC_pid.c    ****     
+ 135:BLDC_pid.c    ****     //integral clamp
+ 136:BLDC_pid.c    ****     if (integral > integralClamp) {
+ 1044              		.loc 1 136 0
+ 1045 0020 154B     		ldr	r3, .L106+4
+ 1046 0022 9B68     		ldr	r3, [r3, #8]
+ 1047 0024 9A42     		cmp	r2, r3
+ 1048 0026 01DD     		ble	.L102
+ 137:BLDC_pid.c    ****         integral = integralClamp;   
+ 1049              		.loc 1 137 0
+ 1050 0028 124A     		ldr	r2, .L106
+ 1051 002a 1360     		str	r3, [r2]
+ 1052              	.L102:
+ 138:BLDC_pid.c    ****     }
+ 139:BLDC_pid.c    ****     if (integral < -integralClamp) {
+ 1053              		.loc 1 139 0
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 22
+
+
+ 1054 002c 5B42     		rsbs	r3, r3, #0
+ 1055 002e 114A     		ldr	r2, .L106
+ 1056 0030 1268     		ldr	r2, [r2]
+ 1057 0032 9342     		cmp	r3, r2
+ 1058 0034 01DD     		ble	.L103
+ 140:BLDC_pid.c    ****         integral = -integralClamp;
+ 1059              		.loc 1 140 0
+ 1060 0036 0F4A     		ldr	r2, .L106
+ 1061 0038 1360     		str	r3, [r2]
+ 1062              	.L103:
+ 141:BLDC_pid.c    ****     }
+ 142:BLDC_pid.c    ****     
+ 143:BLDC_pid.c    ****     int derivative = error - lastError;
+ 1063              		.loc 1 143 0
+ 1064 003a 0E4D     		ldr	r5, .L106
+ 1065              	.LVL50:
+ 1066 003c 6B68     		ldr	r3, [r5, #4]
+ 1067 003e E71A     		subs	r7, r4, r3
+ 1068              	.LVL51:
+ 144:BLDC_pid.c    ****     int PWMOut = error*kPosition/10 + integral*kIntegral/10 + derivative*kDerivative/10;
+ 1069              		.loc 1 144 0
+ 1070 0040 A86A     		ldr	r0, [r5, #40]
+ 1071              	.LVL52:
+ 1072 0042 6043     		muls	r0, r4
+ 1073 0044 0A21     		movs	r1, #10
+ 1074 0046 FFF7FEFF 		bl	__aeabi_idiv
+ 1075              	.LVL53:
+ 1076 004a 0600     		movs	r6, r0
+ 1077 004c E86A     		ldr	r0, [r5, #44]
+ 1078 004e 2B68     		ldr	r3, [r5]
+ 1079 0050 5843     		muls	r0, r3
+ 1080 0052 0A21     		movs	r1, #10
+ 1081 0054 FFF7FEFF 		bl	__aeabi_idiv
+ 1082              	.LVL54:
+ 1083 0058 3618     		adds	r6, r6, r0
+ 1084 005a 286B     		ldr	r0, [r5, #48]
+ 1085 005c 7843     		muls	r0, r7
+ 1086 005e 0A21     		movs	r1, #10
+ 1087 0060 FFF7FEFF 		bl	__aeabi_idiv
+ 1088              	.LVL55:
+ 145:BLDC_pid.c    ****     lastError = error;
+ 1089              		.loc 1 145 0
+ 1090 0064 6C60     		str	r4, [r5, #4]
+ 146:BLDC_pid.c    ****     
+ 147:BLDC_pid.c    ****     #ifdef PRINT_PID_DEBUG
+ 148:BLDC_pid.c    ****         sprintf(txData,"c:%li, P:%li, I%d, D:%d, Out:%d Time:%lu\n\r", current, error, integral, de
+ 149:BLDC_pid.c    ****         UART_UartPutString(txData);   
+ 150:BLDC_pid.c    ****     #endif
+ 151:BLDC_pid.c    ****  
+ 152:BLDC_pid.c    ****     return (PWMOut);
+ 1091              		.loc 1 152 0
+ 1092 0066 3018     		adds	r0, r6, r0
+ 1093              	.LVL56:
+ 1094 0068 02E0     		b	.L101
+ 1095              	.LVL57:
+ 1096              	.L104:
+ 122:BLDC_pid.c    ****     }
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 23
+
+
+ 1097              		.loc 1 122 0
+ 1098 006a 0020     		movs	r0, #0
+ 1099 006c 00E0     		b	.L101
+ 1100              	.LVL58:
+ 1101              	.L105:
+ 130:BLDC_pid.c    ****     }
+ 1102              		.loc 1 130 0
+ 1103 006e 0020     		movs	r0, #0
+ 1104              	.LVL59:
+ 1105              	.L101:
+ 153:BLDC_pid.c    **** }
+ 1106              		.loc 1 153 0
+ 1107              		@ sp needed
+ 1108 0070 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 1109              	.L107:
+ 1110 0072 C046     		.align	2
+ 1111              	.L106:
+ 1112 0074 00000000 		.word	.LANCHOR0
+ 1113 0078 00000000 		.word	.LANCHOR1
+ 1114              		.cfi_endproc
+ 1115              	.LFE66:
+ 1116              		.size	Position_PID, .-Position_PID
+ 1117              		.section	.text.SetPosition,"ax",%progbits
+ 1118              		.align	2
+ 1119              		.global	SetPosition
+ 1120              		.code	16
+ 1121              		.thumb_func
+ 1122              		.type	SetPosition, %function
+ 1123              	SetPosition:
+ 1124              	.LFB65:
+ 112:BLDC_pid.c    ****         //TODO: Make Potentiometer Compatible
+ 1125              		.loc 1 112 0
+ 1126              		.cfi_startproc
+ 1127              		@ args = 0, pretend = 0, frame = 0
+ 1128              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1129              	.LVL60:
+ 1130 0000 70B5     		push	{r4, r5, r6, lr}
+ 1131              		.cfi_def_cfa_offset 16
+ 1132              		.cfi_offset 4, -16
+ 1133              		.cfi_offset 5, -12
+ 1134              		.cfi_offset 6, -8
+ 1135              		.cfi_offset 14, -4
+ 114:BLDC_pid.c    ****         
+ 1136              		.loc 1 114 0
+ 1137 0002 FFF7FEFF 		bl	Position_PID
+ 1138              	.LVL61:
+ 1139 0006 0400     		movs	r4, r0
+ 1140              	.LVL62:
+ 116:BLDC_pid.c    **** }
+ 1141              		.loc 1 116 0
+ 1142 0008 044B     		ldr	r3, .L109
+ 1143 000a 1D78     		ldrb	r5, [r3]
+ 1144 000c FFF7FEFF 		bl	Status_Reg_Switches_Read
+ 1145              	.LVL63:
+ 1146 0010 C2B2     		uxtb	r2, r0
+ 1147 0012 20B2     		sxth	r0, r4
+ 1148 0014 2900     		movs	r1, r5
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 24
+
+
+ 1149 0016 FFF7FEFF 		bl	set_speed
+ 1150              	.LVL64:
+ 117:BLDC_pid.c    **** 
+ 1151              		.loc 1 117 0
+ 1152              		@ sp needed
+ 1153              	.LVL65:
+ 1154 001a 70BD     		pop	{r4, r5, r6, pc}
+ 1155              	.L110:
+ 1156              		.align	2
+ 1157              	.L109:
+ 1158 001c 00000000 		.word	ignoreLimSw
+ 1159              		.cfi_endproc
+ 1160              	.LFE65:
+ 1161              		.size	SetPosition, .-SetPosition
+ 1162              		.global	maxSpeed
+ 1163              		.global	enabledPID
+ 1164              		.global	usingPot
+ 1165              		.global	integralClamp
+ 1166              		.global	lastError
+ 1167              		.global	integral
+ 1168              		.global	mDegPerTick
+ 1169              		.global	flipEncoder
+ 1170              		.global	mDegMin
+ 1171              		.global	mDegMax
+ 1172              		.global	tickMin
+ 1173              		.global	tickMax
+ 1174              		.global	kDerivative
+ 1175              		.global	kIntegral
+ 1176              		.global	kPosition
+ 1177              		.global	delayTime
+ 1178              		.data
+ 1179              		.align	2
+ 1180              		.set	.LANCHOR1,. + 0
+ 1181              		.type	maxSpeed, %object
+ 1182              		.size	maxSpeed, 4
+ 1183              	maxSpeed:
+ 1184 0000 00800000 		.word	32768
+ 1185              		.type	flipEncoder, %object
+ 1186              		.size	flipEncoder, 1
+ 1187              	flipEncoder:
+ 1188 0004 01       		.byte	1
+ 1189 0005 000000   		.space	3
+ 1190              		.type	integralClamp, %object
+ 1191              		.size	integralClamp, 4
+ 1192              	integralClamp:
+ 1193 0008 88130000 		.word	5000
+ 1194              		.type	delayTime, %object
+ 1195              		.size	delayTime, 4
+ 1196              	delayTime:
+ 1197 000c E8030000 		.word	1000
+ 1198              		.bss
+ 1199              		.align	3
+ 1200              		.set	.LANCHOR0,. + 0
+ 1201              		.type	integral, %object
+ 1202              		.size	integral, 4
+ 1203              	integral:
+ 1204 0000 00000000 		.space	4
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 25
+
+
+ 1205              		.type	lastError, %object
+ 1206              		.size	lastError, 4
+ 1207              	lastError:
+ 1208 0004 00000000 		.space	4
+ 1209              		.type	enabledPID, %object
+ 1210              		.size	enabledPID, 1
+ 1211              	enabledPID:
+ 1212 0008 00       		.space	1
+ 1213 0009 000000   		.space	3
+ 1214              		.type	mDegMin, %object
+ 1215              		.size	mDegMin, 4
+ 1216              	mDegMin:
+ 1217 000c 00000000 		.space	4
+ 1218              		.type	mDegMax, %object
+ 1219              		.size	mDegMax, 4
+ 1220              	mDegMax:
+ 1221 0010 00000000 		.space	4
+ 1222              		.type	tickMax, %object
+ 1223              		.size	tickMax, 4
+ 1224              	tickMax:
+ 1225 0014 00000000 		.space	4
+ 1226              		.type	tickMin, %object
+ 1227              		.size	tickMin, 4
+ 1228              	tickMin:
+ 1229 0018 00000000 		.space	4
+ 1230 001c 00000000 		.space	4
+ 1231              		.type	mDegPerTick, %object
+ 1232              		.size	mDegPerTick, 8
+ 1233              	mDegPerTick:
+ 1234 0020 00000000 		.space	8
+ 1234      00000000 
+ 1235              		.type	kPosition, %object
+ 1236              		.size	kPosition, 4
+ 1237              	kPosition:
+ 1238 0028 00000000 		.space	4
+ 1239              		.type	kIntegral, %object
+ 1240              		.size	kIntegral, 4
+ 1241              	kIntegral:
+ 1242 002c 00000000 		.space	4
+ 1243              		.type	kDerivative, %object
+ 1244              		.size	kDerivative, 4
+ 1245              	kDerivative:
+ 1246 0030 00000000 		.space	4
+ 1247              		.type	usingPot, %object
+ 1248              		.size	usingPot, 1
+ 1249              	usingPot:
+ 1250 0034 00       		.space	1
+ 1251              		.text
+ 1252              	.Letext0:
+ 1253              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 1254              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 1255              		.file 4 "Generated_Source\\PSoC4/cytypes.h"
+ 1256              		.file 5 "Generated_Source\\PSoC4/ADC_Pot.h"
+ 1257              		.file 6 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 1258              		.file 7 "BLDC_Drive.h"
+ 1259              		.section	.debug_info,"",%progbits
+ 1260              	.Ldebug_info0:
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 26
+
+
+ 1261 0000 3E070000 		.4byte	0x73e
+ 1262 0004 0400     		.2byte	0x4
+ 1263 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 1264 000a 04       		.byte	0x4
+ 1265 000b 01       		.uleb128 0x1
+ 1266 000c 5B010000 		.4byte	.LASF90
+ 1267 0010 0C       		.byte	0xc
+ 1268 0011 C0040000 		.4byte	.LASF91
+ 1269 0015 CE000000 		.4byte	.LASF92
+ 1270 0019 18000000 		.4byte	.Ldebug_ranges0+0x18
+ 1271 001d 00000000 		.4byte	0
+ 1272 0021 00000000 		.4byte	.Ldebug_line0
+ 1273 0025 02       		.uleb128 0x2
+ 1274 0026 01       		.byte	0x1
+ 1275 0027 06       		.byte	0x6
+ 1276 0028 74030000 		.4byte	.LASF0
+ 1277 002c 03       		.uleb128 0x3
+ 1278 002d B1020000 		.4byte	.LASF3
+ 1279 0031 02       		.byte	0x2
+ 1280 0032 1D       		.byte	0x1d
+ 1281 0033 37000000 		.4byte	0x37
+ 1282 0037 02       		.uleb128 0x2
+ 1283 0038 01       		.byte	0x1
+ 1284 0039 08       		.byte	0x8
+ 1285 003a 0E030000 		.4byte	.LASF1
+ 1286 003e 02       		.uleb128 0x2
+ 1287 003f 02       		.byte	0x2
+ 1288 0040 05       		.byte	0x5
+ 1289 0041 71000000 		.4byte	.LASF2
+ 1290 0045 03       		.uleb128 0x3
+ 1291 0046 23010000 		.4byte	.LASF4
+ 1292 004a 02       		.byte	0x2
+ 1293 004b 2B       		.byte	0x2b
+ 1294 004c 50000000 		.4byte	0x50
+ 1295 0050 02       		.uleb128 0x2
+ 1296 0051 02       		.byte	0x2
+ 1297 0052 07       		.byte	0x7
+ 1298 0053 D9030000 		.4byte	.LASF5
+ 1299 0057 03       		.uleb128 0x3
+ 1300 0058 CB040000 		.4byte	.LASF6
+ 1301 005c 02       		.byte	0x2
+ 1302 005d 3F       		.byte	0x3f
+ 1303 005e 62000000 		.4byte	0x62
+ 1304 0062 02       		.uleb128 0x2
+ 1305 0063 04       		.byte	0x4
+ 1306 0064 05       		.byte	0x5
+ 1307 0065 9F020000 		.4byte	.LASF7
+ 1308 0069 03       		.uleb128 0x3
+ 1309 006a 5A040000 		.4byte	.LASF8
+ 1310 006e 02       		.byte	0x2
+ 1311 006f 41       		.byte	0x41
+ 1312 0070 74000000 		.4byte	0x74
+ 1313 0074 02       		.uleb128 0x2
+ 1314 0075 04       		.byte	0x4
+ 1315 0076 07       		.byte	0x7
+ 1316 0077 8B040000 		.4byte	.LASF9
+ 1317 007b 02       		.uleb128 0x2
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 27
+
+
+ 1318 007c 08       		.byte	0x8
+ 1319 007d 05       		.byte	0x5
+ 1320 007e 60020000 		.4byte	.LASF10
+ 1321 0082 02       		.uleb128 0x2
+ 1322 0083 08       		.byte	0x8
+ 1323 0084 07       		.byte	0x7
+ 1324 0085 80030000 		.4byte	.LASF11
+ 1325 0089 04       		.uleb128 0x4
+ 1326 008a 04       		.byte	0x4
+ 1327 008b 05       		.byte	0x5
+ 1328 008c 696E7400 		.ascii	"int\000"
+ 1329 0090 02       		.uleb128 0x2
+ 1330 0091 04       		.byte	0x4
+ 1331 0092 07       		.byte	0x7
+ 1332 0093 A0030000 		.4byte	.LASF12
+ 1333 0097 03       		.uleb128 0x3
+ 1334 0098 E9010000 		.4byte	.LASF13
+ 1335 009c 03       		.byte	0x3
+ 1336 009d 18       		.byte	0x18
+ 1337 009e 2C000000 		.4byte	0x2c
+ 1338 00a2 03       		.uleb128 0x3
+ 1339 00a3 AD030000 		.4byte	.LASF14
+ 1340 00a7 03       		.byte	0x3
+ 1341 00a8 24       		.byte	0x24
+ 1342 00a9 45000000 		.4byte	0x45
+ 1343 00ad 03       		.uleb128 0x3
+ 1344 00ae 2E040000 		.4byte	.LASF15
+ 1345 00b2 03       		.byte	0x3
+ 1346 00b3 2C       		.byte	0x2c
+ 1347 00b4 57000000 		.4byte	0x57
+ 1348 00b8 03       		.uleb128 0x3
+ 1349 00b9 97030000 		.4byte	.LASF16
+ 1350 00bd 03       		.byte	0x3
+ 1351 00be 30       		.byte	0x30
+ 1352 00bf 69000000 		.4byte	0x69
+ 1353 00c3 05       		.uleb128 0x5
+ 1354 00c4 81020000 		.4byte	.LASF17
+ 1355 00c8 04       		.byte	0x4
+ 1356 00c9 FE01     		.2byte	0x1fe
+ 1357 00cb 25000000 		.4byte	0x25
+ 1358 00cf 05       		.uleb128 0x5
+ 1359 00d0 9D040000 		.4byte	.LASF18
+ 1360 00d4 04       		.byte	0x4
+ 1361 00d5 0002     		.2byte	0x200
+ 1362 00d7 62000000 		.4byte	0x62
+ 1363 00db 02       		.uleb128 0x2
+ 1364 00dc 04       		.byte	0x4
+ 1365 00dd 04       		.byte	0x4
+ 1366 00de 47020000 		.4byte	.LASF19
+ 1367 00e2 02       		.uleb128 0x2
+ 1368 00e3 08       		.byte	0x8
+ 1369 00e4 04       		.byte	0x4
+ 1370 00e5 E5040000 		.4byte	.LASF20
+ 1371 00e9 02       		.uleb128 0x2
+ 1372 00ea 01       		.byte	0x1
+ 1373 00eb 08       		.byte	0x8
+ 1374 00ec 15040000 		.4byte	.LASF21
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 28
+
+
+ 1375 00f0 02       		.uleb128 0x2
+ 1376 00f1 08       		.byte	0x8
+ 1377 00f2 04       		.byte	0x4
+ 1378 00f3 EE020000 		.4byte	.LASF22
+ 1379 00f7 02       		.uleb128 0x2
+ 1380 00f8 04       		.byte	0x4
+ 1381 00f9 07       		.byte	0x7
+ 1382 00fa 91000000 		.4byte	.LASF23
+ 1383 00fe 06       		.uleb128 0x6
+ 1384 00ff 1C030000 		.4byte	.LASF24
+ 1385 0103 01       		.byte	0x1
+ 1386 0104 21       		.byte	0x21
+ 1387 0105 00000000 		.4byte	.LFB35
+ 1388 0109 10000000 		.4byte	.LFE35-.LFB35
+ 1389 010d 01       		.uleb128 0x1
+ 1390 010e 9C       		.byte	0x9c
+ 1391 010f 06       		.uleb128 0x6
+ 1392 0110 30020000 		.4byte	.LASF25
+ 1393 0114 01       		.byte	0x1
+ 1394 0115 25       		.byte	0x25
+ 1395 0116 00000000 		.4byte	.LFB36
+ 1396 011a 0C000000 		.4byte	.LFE36-.LFB36
+ 1397 011e 01       		.uleb128 0x1
+ 1398 011f 9C       		.byte	0x9c
+ 1399 0120 06       		.uleb128 0x6
+ 1400 0121 DB040000 		.4byte	.LASF26
+ 1401 0125 01       		.byte	0x1
+ 1402 0126 28       		.byte	0x28
+ 1403 0127 00000000 		.4byte	.LFB37
+ 1404 012b 0C000000 		.4byte	.LFE37-.LFB37
+ 1405 012f 01       		.uleb128 0x1
+ 1406 0130 9C       		.byte	0x9c
+ 1407 0131 07       		.uleb128 0x7
+ 1408 0132 B6030000 		.4byte	.LASF27
+ 1409 0136 01       		.byte	0x1
+ 1410 0137 2B       		.byte	0x2b
+ 1411 0138 97000000 		.4byte	0x97
+ 1412 013c 00000000 		.4byte	.LFB38
+ 1413 0140 0C000000 		.4byte	.LFE38-.LFB38
+ 1414 0144 01       		.uleb128 0x1
+ 1415 0145 9C       		.byte	0x9c
+ 1416 0146 08       		.uleb128 0x8
+ 1417 0147 52020000 		.4byte	.LASF93
+ 1418 014b 01       		.byte	0x1
+ 1419 014c 2E       		.byte	0x2e
+ 1420 014d 00000000 		.4byte	.LFB39
+ 1421 0151 18000000 		.4byte	.LFE39-.LFB39
+ 1422 0155 01       		.uleb128 0x1
+ 1423 0156 9C       		.byte	0x9c
+ 1424 0157 6E010000 		.4byte	0x16e
+ 1425 015b 09       		.uleb128 0x9
+ 1426 015c 06000000 		.4byte	.LVL0
+ 1427 0160 FE000000 		.4byte	0xfe
+ 1428 0164 09       		.uleb128 0x9
+ 1429 0165 0A000000 		.4byte	.LVL1
+ 1430 0169 0F010000 		.4byte	0x10f
+ 1431 016d 00       		.byte	0
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 29
+
+
+ 1432 016e 0A       		.uleb128 0xa
+ 1433 016f F9030000 		.4byte	.LASF39
+ 1434 0173 01       		.byte	0x1
+ 1435 0174 35       		.byte	0x35
+ 1436 0175 AD000000 		.4byte	0xad
+ 1437 0179 00000000 		.4byte	.LFB40
+ 1438 017d 34000000 		.4byte	.LFE40-.LFB40
+ 1439 0181 01       		.uleb128 0x1
+ 1440 0182 9C       		.byte	0x9c
+ 1441 0183 E0010000 		.4byte	0x1e0
+ 1442 0187 0B       		.uleb128 0xb
+ 1443 0188 6E00     		.ascii	"n\000"
+ 1444 018a 01       		.byte	0x1
+ 1445 018b 36       		.byte	0x36
+ 1446 018c AD000000 		.4byte	0xad
+ 1447 0190 E803     		.2byte	0x3e8
+ 1448 0192 0C       		.uleb128 0xc
+ 1449 0193 73756D00 		.ascii	"sum\000"
+ 1450 0197 01       		.byte	0x1
+ 1451 0198 37       		.byte	0x37
+ 1452 0199 AD000000 		.4byte	0xad
+ 1453 019d 00000000 		.4byte	.LLST0
+ 1454 01a1 0D       		.uleb128 0xd
+ 1455 01a2 00000000 		.4byte	.Ldebug_ranges0+0
+ 1456 01a6 0C       		.uleb128 0xc
+ 1457 01a7 6900     		.ascii	"i\000"
+ 1458 01a9 01       		.byte	0x1
+ 1459 01aa 38       		.byte	0x38
+ 1460 01ab 89000000 		.4byte	0x89
+ 1461 01af 1F000000 		.4byte	.LLST1
+ 1462 01b3 09       		.uleb128 0x9
+ 1463 01b4 0C000000 		.4byte	.LVL4
+ 1464 01b8 E8060000 		.4byte	0x6e8
+ 1465 01bc 0E       		.uleb128 0xe
+ 1466 01bd 12000000 		.4byte	.LVL5
+ 1467 01c1 F3060000 		.4byte	0x6f3
+ 1468 01c5 CF010000 		.4byte	0x1cf
+ 1469 01c9 0F       		.uleb128 0xf
+ 1470 01ca 01       		.uleb128 0x1
+ 1471 01cb 50       		.byte	0x50
+ 1472 01cc 01       		.uleb128 0x1
+ 1473 01cd 32       		.byte	0x32
+ 1474 01ce 00       		.byte	0
+ 1475 01cf 10       		.uleb128 0x10
+ 1476 01d0 18000000 		.4byte	.LVL6
+ 1477 01d4 FE060000 		.4byte	0x6fe
+ 1478 01d8 0F       		.uleb128 0xf
+ 1479 01d9 01       		.uleb128 0x1
+ 1480 01da 50       		.byte	0x50
+ 1481 01db 01       		.uleb128 0x1
+ 1482 01dc 30       		.byte	0x30
+ 1483 01dd 00       		.byte	0
+ 1484 01de 00       		.byte	0
+ 1485 01df 00       		.byte	0
+ 1486 01e0 11       		.uleb128 0x11
+ 1487 01e1 4F000000 		.4byte	.LASF28
+ 1488 01e5 01       		.byte	0x1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 30
+
+
+ 1489 01e6 40       		.byte	0x40
+ 1490 01e7 E2000000 		.4byte	0xe2
+ 1491 01eb 00000000 		.4byte	.LFB41
+ 1492 01ef 40000000 		.4byte	.LFE41-.LFB41
+ 1493 01f3 01       		.uleb128 0x1
+ 1494 01f4 9C       		.byte	0x9c
+ 1495 01f5 07       		.uleb128 0x7
+ 1496 01f6 EC040000 		.4byte	.LASF29
+ 1497 01fa 01       		.byte	0x1
+ 1498 01fb 46       		.byte	0x46
+ 1499 01fc AD000000 		.4byte	0xad
+ 1500 0200 00000000 		.4byte	.LFB42
+ 1501 0204 0C000000 		.4byte	.LFE42-.LFB42
+ 1502 0208 01       		.uleb128 0x1
+ 1503 0209 9C       		.byte	0x9c
+ 1504 020a 07       		.uleb128 0x7
+ 1505 020b 4E010000 		.4byte	.LASF30
+ 1506 020f 01       		.byte	0x1
+ 1507 0210 47       		.byte	0x47
+ 1508 0211 AD000000 		.4byte	0xad
+ 1509 0215 00000000 		.4byte	.LFB43
+ 1510 0219 0C000000 		.4byte	.LFE43-.LFB43
+ 1511 021d 01       		.uleb128 0x1
+ 1512 021e 9C       		.byte	0x9c
+ 1513 021f 07       		.uleb128 0x7
+ 1514 0220 EC030000 		.4byte	.LASF31
+ 1515 0224 01       		.byte	0x1
+ 1516 0225 48       		.byte	0x48
+ 1517 0226 AD000000 		.4byte	0xad
+ 1518 022a 00000000 		.4byte	.LFB44
+ 1519 022e 0C000000 		.4byte	.LFE44-.LFB44
+ 1520 0232 01       		.uleb128 0x1
+ 1521 0233 9C       		.byte	0x9c
+ 1522 0234 07       		.uleb128 0x7
+ 1523 0235 FB040000 		.4byte	.LASF32
+ 1524 0239 01       		.byte	0x1
+ 1525 023a 49       		.byte	0x49
+ 1526 023b AD000000 		.4byte	0xad
+ 1527 023f 00000000 		.4byte	.LFB45
+ 1528 0243 0C000000 		.4byte	.LFE45-.LFB45
+ 1529 0247 01       		.uleb128 0x1
+ 1530 0248 9C       		.byte	0x9c
+ 1531 0249 07       		.uleb128 0x7
+ 1532 024a C3030000 		.4byte	.LASF33
+ 1533 024e 01       		.byte	0x1
+ 1534 024f 4A       		.byte	0x4a
+ 1535 0250 E2000000 		.4byte	0xe2
+ 1536 0254 00000000 		.4byte	.LFB46
+ 1537 0258 0C000000 		.4byte	.LFE46-.LFB46
+ 1538 025c 01       		.uleb128 0x1
+ 1539 025d 9C       		.byte	0x9c
+ 1540 025e 07       		.uleb128 0x7
+ 1541 025f 00000000 		.4byte	.LASF34
+ 1542 0263 01       		.byte	0x1
+ 1543 0264 4B       		.byte	0x4b
+ 1544 0265 AD000000 		.4byte	0xad
+ 1545 0269 00000000 		.4byte	.LFB47
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 31
+
+
+ 1546 026d 0C000000 		.4byte	.LFE47-.LFB47
+ 1547 0271 01       		.uleb128 0x1
+ 1548 0272 9C       		.byte	0x9c
+ 1549 0273 07       		.uleb128 0x7
+ 1550 0274 86000000 		.4byte	.LASF35
+ 1551 0278 01       		.byte	0x1
+ 1552 0279 4C       		.byte	0x4c
+ 1553 027a AD000000 		.4byte	0xad
+ 1554 027e 00000000 		.4byte	.LFB48
+ 1555 0282 0C000000 		.4byte	.LFE48-.LFB48
+ 1556 0286 01       		.uleb128 0x1
+ 1557 0287 9C       		.byte	0x9c
+ 1558 0288 07       		.uleb128 0x7
+ 1559 0289 16050000 		.4byte	.LASF36
+ 1560 028d 01       		.byte	0x1
+ 1561 028e 4D       		.byte	0x4d
+ 1562 028f AD000000 		.4byte	0xad
+ 1563 0293 00000000 		.4byte	.LFB49
+ 1564 0297 0C000000 		.4byte	.LFE49-.LFB49
+ 1565 029b 01       		.uleb128 0x1
+ 1566 029c 9C       		.byte	0x9c
+ 1567 029d 07       		.uleb128 0x7
+ 1568 029e B4000000 		.4byte	.LASF37
+ 1569 02a2 01       		.byte	0x1
+ 1570 02a3 4E       		.byte	0x4e
+ 1571 02a4 AD000000 		.4byte	0xad
+ 1572 02a8 00000000 		.4byte	.LFB50
+ 1573 02ac 0C000000 		.4byte	.LFE50-.LFB50
+ 1574 02b0 01       		.uleb128 0x1
+ 1575 02b1 9C       		.byte	0x9c
+ 1576 02b2 07       		.uleb128 0x7
+ 1577 02b3 3B020000 		.4byte	.LASF38
+ 1578 02b7 01       		.byte	0x1
+ 1579 02b8 4F       		.byte	0x4f
+ 1580 02b9 97000000 		.4byte	0x97
+ 1581 02bd 00000000 		.4byte	.LFB51
+ 1582 02c1 0C000000 		.4byte	.LFE51-.LFB51
+ 1583 02c5 01       		.uleb128 0x1
+ 1584 02c6 9C       		.byte	0x9c
+ 1585 02c7 12       		.uleb128 0x12
+ 1586 02c8 41040000 		.4byte	.LASF40
+ 1587 02cc 01       		.byte	0x1
+ 1588 02cd 51       		.byte	0x51
+ 1589 02ce 00000000 		.4byte	.LFB52
+ 1590 02d2 0C000000 		.4byte	.LFE52-.LFB52
+ 1591 02d6 01       		.uleb128 0x1
+ 1592 02d7 9C       		.byte	0x9c
+ 1593 02d8 EA020000 		.4byte	0x2ea
+ 1594 02dc 13       		.uleb128 0x13
+ 1595 02dd 1A040000 		.4byte	.LASF42
+ 1596 02e1 01       		.byte	0x1
+ 1597 02e2 51       		.byte	0x51
+ 1598 02e3 A2000000 		.4byte	0xa2
+ 1599 02e7 01       		.uleb128 0x1
+ 1600 02e8 50       		.byte	0x50
+ 1601 02e9 00       		.byte	0
+ 1602 02ea 12       		.uleb128 0x12
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 32
+
+
+ 1603 02eb 2B000000 		.4byte	.LASF41
+ 1604 02ef 01       		.byte	0x1
+ 1605 02f0 52       		.byte	0x52
+ 1606 02f1 00000000 		.4byte	.LFB53
+ 1607 02f5 0C000000 		.4byte	.LFE53-.LFB53
+ 1608 02f9 01       		.uleb128 0x1
+ 1609 02fa 9C       		.byte	0x9c
+ 1610 02fb 0C030000 		.4byte	0x30c
+ 1611 02ff 14       		.uleb128 0x14
+ 1612 0300 6B5000   		.ascii	"kP\000"
+ 1613 0303 01       		.byte	0x1
+ 1614 0304 52       		.byte	0x52
+ 1615 0305 AD000000 		.4byte	0xad
+ 1616 0309 01       		.uleb128 0x1
+ 1617 030a 50       		.byte	0x50
+ 1618 030b 00       		.byte	0
+ 1619 030c 12       		.uleb128 0x12
+ 1620 030d 1E000000 		.4byte	.LASF43
+ 1621 0311 01       		.byte	0x1
+ 1622 0312 53       		.byte	0x53
+ 1623 0313 00000000 		.4byte	.LFB54
+ 1624 0317 0C000000 		.4byte	.LFE54-.LFB54
+ 1625 031b 01       		.uleb128 0x1
+ 1626 031c 9C       		.byte	0x9c
+ 1627 031d 2E030000 		.4byte	0x32e
+ 1628 0321 14       		.uleb128 0x14
+ 1629 0322 6B4900   		.ascii	"kI\000"
+ 1630 0325 01       		.byte	0x1
+ 1631 0326 53       		.byte	0x53
+ 1632 0327 AD000000 		.4byte	0xad
+ 1633 032b 01       		.uleb128 0x1
+ 1634 032c 50       		.byte	0x50
+ 1635 032d 00       		.byte	0
+ 1636 032e 12       		.uleb128 0x12
+ 1637 032f 2E010000 		.4byte	.LASF44
+ 1638 0333 01       		.byte	0x1
+ 1639 0334 54       		.byte	0x54
+ 1640 0335 00000000 		.4byte	.LFB55
+ 1641 0339 0C000000 		.4byte	.LFE55-.LFB55
+ 1642 033d 01       		.uleb128 0x1
+ 1643 033e 9C       		.byte	0x9c
+ 1644 033f 50030000 		.4byte	0x350
+ 1645 0343 14       		.uleb128 0x14
+ 1646 0344 6B4400   		.ascii	"kD\000"
+ 1647 0347 01       		.byte	0x1
+ 1648 0348 54       		.byte	0x54
+ 1649 0349 AD000000 		.4byte	0xad
+ 1650 034d 01       		.uleb128 0x1
+ 1651 034e 50       		.byte	0x50
+ 1652 034f 00       		.byte	0
+ 1653 0350 12       		.uleb128 0x12
+ 1654 0351 D1020000 		.4byte	.LASF45
+ 1655 0355 01       		.byte	0x1
+ 1656 0356 55       		.byte	0x55
+ 1657 0357 00000000 		.4byte	.LFB56
+ 1658 035b 0C000000 		.4byte	.LFE56-.LFB56
+ 1659 035f 01       		.uleb128 0x1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 33
+
+
+ 1660 0360 9C       		.byte	0x9c
+ 1661 0361 73030000 		.4byte	0x373
+ 1662 0365 14       		.uleb128 0x14
+ 1663 0366 76616C00 		.ascii	"val\000"
+ 1664 036a 01       		.byte	0x1
+ 1665 036b 55       		.byte	0x55
+ 1666 036c AD000000 		.4byte	0xad
+ 1667 0370 01       		.uleb128 0x1
+ 1668 0371 50       		.byte	0x50
+ 1669 0372 00       		.byte	0
+ 1670 0373 12       		.uleb128 0x12
+ 1671 0374 36040000 		.4byte	.LASF46
+ 1672 0378 01       		.byte	0x1
+ 1673 0379 56       		.byte	0x56
+ 1674 037a 00000000 		.4byte	.LFB57
+ 1675 037e 0C000000 		.4byte	.LFE57-.LFB57
+ 1676 0382 01       		.uleb128 0x1
+ 1677 0383 9C       		.byte	0x9c
+ 1678 0384 96030000 		.4byte	0x396
+ 1679 0388 14       		.uleb128 0x14
+ 1680 0389 76616C00 		.ascii	"val\000"
+ 1681 038d 01       		.byte	0x1
+ 1682 038e 56       		.byte	0x56
+ 1683 038f AD000000 		.4byte	0xad
+ 1684 0393 01       		.uleb128 0x1
+ 1685 0394 50       		.byte	0x50
+ 1686 0395 00       		.byte	0
+ 1687 0396 12       		.uleb128 0x12
+ 1688 0397 80040000 		.4byte	.LASF47
+ 1689 039b 01       		.byte	0x1
+ 1690 039c 57       		.byte	0x57
+ 1691 039d 00000000 		.4byte	.LFB58
+ 1692 03a1 0C000000 		.4byte	.LFE58-.LFB58
+ 1693 03a5 01       		.uleb128 0x1
+ 1694 03a6 9C       		.byte	0x9c
+ 1695 03a7 B9030000 		.4byte	0x3b9
+ 1696 03ab 14       		.uleb128 0x14
+ 1697 03ac 76616C00 		.ascii	"val\000"
+ 1698 03b0 01       		.byte	0x1
+ 1699 03b1 57       		.byte	0x57
+ 1700 03b2 AD000000 		.4byte	0xad
+ 1701 03b6 01       		.uleb128 0x1
+ 1702 03b7 50       		.byte	0x50
+ 1703 03b8 00       		.byte	0
+ 1704 03b9 12       		.uleb128 0x12
+ 1705 03ba 23040000 		.4byte	.LASF48
+ 1706 03be 01       		.byte	0x1
+ 1707 03bf 58       		.byte	0x58
+ 1708 03c0 00000000 		.4byte	.LFB59
+ 1709 03c4 0C000000 		.4byte	.LFE59-.LFB59
+ 1710 03c8 01       		.uleb128 0x1
+ 1711 03c9 9C       		.byte	0x9c
+ 1712 03ca DC030000 		.4byte	0x3dc
+ 1713 03ce 14       		.uleb128 0x14
+ 1714 03cf 76616C00 		.ascii	"val\000"
+ 1715 03d3 01       		.byte	0x1
+ 1716 03d4 58       		.byte	0x58
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 34
+
+
+ 1717 03d5 AD000000 		.4byte	0xad
+ 1718 03d9 01       		.uleb128 0x1
+ 1719 03da 50       		.byte	0x50
+ 1720 03db 00       		.byte	0
+ 1721 03dc 12       		.uleb128 0x12
+ 1722 03dd 56030000 		.4byte	.LASF49
+ 1723 03e1 01       		.byte	0x1
+ 1724 03e2 59       		.byte	0x59
+ 1725 03e3 00000000 		.4byte	.LFB60
+ 1726 03e7 0C000000 		.4byte	.LFE60-.LFB60
+ 1727 03eb 01       		.uleb128 0x1
+ 1728 03ec 9C       		.byte	0x9c
+ 1729 03ed FF030000 		.4byte	0x3ff
+ 1730 03f1 14       		.uleb128 0x14
+ 1731 03f2 706F7400 		.ascii	"pot\000"
+ 1732 03f6 01       		.byte	0x1
+ 1733 03f7 59       		.byte	0x59
+ 1734 03f8 97000000 		.4byte	0x97
+ 1735 03fc 01       		.uleb128 0x1
+ 1736 03fd 50       		.byte	0x50
+ 1737 03fe 00       		.byte	0
+ 1738 03ff 12       		.uleb128 0x12
+ 1739 0400 AB040000 		.4byte	.LASF50
+ 1740 0404 01       		.byte	0x1
+ 1741 0405 5A       		.byte	0x5a
+ 1742 0406 00000000 		.4byte	.LFB61
+ 1743 040a 0C000000 		.4byte	.LFE61-.LFB61
+ 1744 040e 01       		.uleb128 0x1
+ 1745 040f 9C       		.byte	0x9c
+ 1746 0410 27040000 		.4byte	0x427
+ 1747 0414 13       		.uleb128 0x13
+ 1748 0415 4D020000 		.4byte	.LASF51
+ 1749 0419 01       		.byte	0x1
+ 1750 041a 5A       		.byte	0x5a
+ 1751 041b E2000000 		.4byte	0xe2
+ 1752 041f 06       		.uleb128 0x6
+ 1753 0420 50       		.byte	0x50
+ 1754 0421 93       		.byte	0x93
+ 1755 0422 04       		.uleb128 0x4
+ 1756 0423 51       		.byte	0x51
+ 1757 0424 93       		.byte	0x93
+ 1758 0425 04       		.uleb128 0x4
+ 1759 0426 00       		.byte	0
+ 1760 0427 12       		.uleb128 0x12
+ 1761 0428 A6000000 		.4byte	.LASF52
+ 1762 042c 01       		.byte	0x1
+ 1763 042d 5C       		.byte	0x5c
+ 1764 042e 00000000 		.4byte	.LFB62
+ 1765 0432 18000000 		.4byte	.LFE62-.LFB62
+ 1766 0436 01       		.uleb128 0x1
+ 1767 0437 9C       		.byte	0x9c
+ 1768 0438 4A040000 		.4byte	0x44a
+ 1769 043c 13       		.uleb128 0x13
+ 1770 043d 60000000 		.4byte	.LASF53
+ 1771 0441 01       		.byte	0x1
+ 1772 0442 5C       		.byte	0x5c
+ 1773 0443 97000000 		.4byte	0x97
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 35
+
+
+ 1774 0447 01       		.uleb128 0x1
+ 1775 0448 50       		.byte	0x50
+ 1776 0449 00       		.byte	0
+ 1777 044a 15       		.uleb128 0x15
+ 1778 044b 62030000 		.4byte	.LASF54
+ 1779 044f 01       		.byte	0x1
+ 1780 0450 60       		.byte	0x60
+ 1781 0451 00000000 		.4byte	.LFB63
+ 1782 0455 30000000 		.4byte	.LFE63-.LFB63
+ 1783 0459 01       		.uleb128 0x1
+ 1784 045a 9C       		.byte	0x9c
+ 1785 045b 92040000 		.4byte	0x492
+ 1786 045f 16       		.uleb128 0x16
+ 1787 0460 26020000 		.4byte	.LASF55
+ 1788 0464 01       		.byte	0x1
+ 1789 0465 60       		.byte	0x60
+ 1790 0466 89000000 		.4byte	0x89
+ 1791 046a 3E000000 		.4byte	.LLST2
+ 1792 046e 17       		.uleb128 0x17
+ 1793 046f 6E020000 		.4byte	.LASF57
+ 1794 0473 01       		.byte	0x1
+ 1795 0474 61       		.byte	0x61
+ 1796 0475 89000000 		.4byte	0x89
+ 1797 0479 7F040000 		.4byte	0x47f
+ 1798 047d 18       		.uleb128 0x18
+ 1799 047e 00       		.byte	0
+ 1800 047f 09       		.uleb128 0x9
+ 1801 0480 1C000000 		.4byte	.LVL30
+ 1802 0484 09070000 		.4byte	0x709
+ 1803 0488 09       		.uleb128 0x9
+ 1804 0489 24000000 		.4byte	.LVL32
+ 1805 048d 15070000 		.4byte	0x715
+ 1806 0491 00       		.byte	0
+ 1807 0492 0A       		.uleb128 0xa
+ 1808 0493 2D030000 		.4byte	.LASF56
+ 1809 0497 01       		.byte	0x1
+ 1810 0498 64       		.byte	0x64
+ 1811 0499 AD000000 		.4byte	0xad
+ 1812 049d 00000000 		.4byte	.LFB64
+ 1813 04a1 88000000 		.4byte	.LFE64-.LFB64
+ 1814 04a5 01       		.uleb128 0x1
+ 1815 04a6 9C       		.byte	0x9c
+ 1816 04a7 DD040000 		.4byte	0x4dd
+ 1817 04ab 19       		.uleb128 0x19
+ 1818 04ac 4C000000 		.4byte	.LBB4
+ 1819 04b0 2E000000 		.4byte	.LBE4-.LBB4
+ 1820 04b4 D3040000 		.4byte	0x4d3
+ 1821 04b8 17       		.uleb128 0x17
+ 1822 04b9 0B000000 		.4byte	.LASF58
+ 1823 04bd 01       		.byte	0x1
+ 1824 04be 6B       		.byte	0x6b
+ 1825 04bf 89000000 		.4byte	0x89
+ 1826 04c3 C9040000 		.4byte	0x4c9
+ 1827 04c7 18       		.uleb128 0x18
+ 1828 04c8 00       		.byte	0
+ 1829 04c9 09       		.uleb128 0x9
+ 1830 04ca 50000000 		.4byte	.LVL40
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 36
+
+
+ 1831 04ce 20070000 		.4byte	0x720
+ 1832 04d2 00       		.byte	0
+ 1833 04d3 09       		.uleb128 0x9
+ 1834 04d4 22000000 		.4byte	.LVL34
+ 1835 04d8 6E010000 		.4byte	0x16e
+ 1836 04dc 00       		.byte	0
+ 1837 04dd 1A       		.uleb128 0x1a
+ 1838 04de 38000000 		.4byte	.LASF94
+ 1839 04e2 01       		.byte	0x1
+ 1840 04e3 77       		.byte	0x77
+ 1841 04e4 AD000000 		.4byte	0xad
+ 1842 04e8 00000000 		.4byte	.LFB66
+ 1843 04ec 7C000000 		.4byte	.LFE66-.LFB66
+ 1844 04f0 01       		.uleb128 0x1
+ 1845 04f1 9C       		.byte	0x9c
+ 1846 04f2 54050000 		.4byte	0x554
+ 1847 04f6 16       		.uleb128 0x16
+ 1848 04f7 7B000000 		.4byte	.LASF59
+ 1849 04fb 01       		.byte	0x1
+ 1850 04fc 77       		.byte	0x77
+ 1851 04fd CF000000 		.4byte	0xcf
+ 1852 0501 5F000000 		.4byte	.LLST3
+ 1853 0505 1B       		.uleb128 0x1b
+ 1854 0506 D1030000 		.4byte	.LASF60
+ 1855 050a 01       		.byte	0x1
+ 1856 050b 7D       		.byte	0x7d
+ 1857 050c CF000000 		.4byte	0xcf
+ 1858 0510 A4000000 		.4byte	.LLST4
+ 1859 0514 1B       		.uleb128 0x1b
+ 1860 0515 D5040000 		.4byte	.LASF61
+ 1861 0519 01       		.byte	0x1
+ 1862 051a 7E       		.byte	0x7e
+ 1863 051b CF000000 		.4byte	0xcf
+ 1864 051f C2000000 		.4byte	.LLST5
+ 1865 0523 1B       		.uleb128 0x1b
+ 1866 0524 3D010000 		.4byte	.LASF62
+ 1867 0528 01       		.byte	0x1
+ 1868 0529 8F       		.byte	0x8f
+ 1869 052a 89000000 		.4byte	0x89
+ 1870 052e E0000000 		.4byte	.LLST6
+ 1871 0532 1B       		.uleb128 0x1b
+ 1872 0533 B9040000 		.4byte	.LASF63
+ 1873 0537 01       		.byte	0x1
+ 1874 0538 90       		.byte	0x90
+ 1875 0539 89000000 		.4byte	0x89
+ 1876 053d F3000000 		.4byte	.LLST7
+ 1877 0541 09       		.uleb128 0x9
+ 1878 0542 08000000 		.4byte	.LVL47
+ 1879 0546 31010000 		.4byte	0x131
+ 1880 054a 09       		.uleb128 0x9
+ 1881 054b 10000000 		.4byte	.LVL48
+ 1882 054f 92040000 		.4byte	0x492
+ 1883 0553 00       		.byte	0
+ 1884 0554 12       		.uleb128 0x12
+ 1885 0555 65000000 		.4byte	.LASF64
+ 1886 0559 01       		.byte	0x1
+ 1887 055a 70       		.byte	0x70
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 37
+
+
+ 1888 055b 00000000 		.4byte	.LFB65
+ 1889 055f 20000000 		.4byte	.LFE65-.LFB65
+ 1890 0563 01       		.uleb128 0x1
+ 1891 0564 9C       		.byte	0x9c
+ 1892 0565 CD050000 		.4byte	0x5cd
+ 1893 0569 16       		.uleb128 0x16
+ 1894 056a BF000000 		.4byte	.LASF65
+ 1895 056e 01       		.byte	0x1
+ 1896 056f 70       		.byte	0x70
+ 1897 0570 AD000000 		.4byte	0xad
+ 1898 0574 16010000 		.4byte	.LLST8
+ 1899 0578 1B       		.uleb128 0x1b
+ 1900 0579 E8020000 		.4byte	.LASF66
+ 1901 057d 01       		.byte	0x1
+ 1902 057e 72       		.byte	0x72
+ 1903 057f AD000000 		.4byte	0xad
+ 1904 0583 37010000 		.4byte	.LLST9
+ 1905 0587 17       		.uleb128 0x17
+ 1906 0588 3D030000 		.4byte	.LASF67
+ 1907 058c 01       		.byte	0x1
+ 1908 058d 74       		.byte	0x74
+ 1909 058e 89000000 		.4byte	0x89
+ 1910 0592 98050000 		.4byte	0x598
+ 1911 0596 18       		.uleb128 0x18
+ 1912 0597 00       		.byte	0
+ 1913 0598 0E       		.uleb128 0xe
+ 1914 0599 06000000 		.4byte	.LVL61
+ 1915 059d DD040000 		.4byte	0x4dd
+ 1916 05a1 AD050000 		.4byte	0x5ad
+ 1917 05a5 0F       		.uleb128 0xf
+ 1918 05a6 01       		.uleb128 0x1
+ 1919 05a7 50       		.byte	0x50
+ 1920 05a8 03       		.uleb128 0x3
+ 1921 05a9 F3       		.byte	0xf3
+ 1922 05aa 01       		.uleb128 0x1
+ 1923 05ab 50       		.byte	0x50
+ 1924 05ac 00       		.byte	0
+ 1925 05ad 09       		.uleb128 0x9
+ 1926 05ae 10000000 		.4byte	.LVL63
+ 1927 05b2 2B070000 		.4byte	0x72b
+ 1928 05b6 10       		.uleb128 0x10
+ 1929 05b7 1A000000 		.4byte	.LVL64
+ 1930 05bb 36070000 		.4byte	0x736
+ 1931 05bf 0F       		.uleb128 0xf
+ 1932 05c0 01       		.uleb128 0x1
+ 1933 05c1 50       		.byte	0x50
+ 1934 05c2 02       		.uleb128 0x2
+ 1935 05c3 74       		.byte	0x74
+ 1936 05c4 00       		.sleb128 0
+ 1937 05c5 0F       		.uleb128 0xf
+ 1938 05c6 01       		.uleb128 0x1
+ 1939 05c7 51       		.byte	0x51
+ 1940 05c8 02       		.uleb128 0x2
+ 1941 05c9 75       		.byte	0x75
+ 1942 05ca 00       		.sleb128 0
+ 1943 05cb 00       		.byte	0
+ 1944 05cc 00       		.byte	0
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 38
+
+
+ 1945 05cd 1C       		.uleb128 0x1c
+ 1946 05ce BB020000 		.4byte	.LASF68
+ 1947 05d2 01       		.byte	0x1
+ 1948 05d3 0B       		.byte	0xb
+ 1949 05d4 AD000000 		.4byte	0xad
+ 1950 05d8 05       		.uleb128 0x5
+ 1951 05d9 03       		.byte	0x3
+ 1952 05da 00000000 		.4byte	delayTime
+ 1953 05de 1C       		.uleb128 0x1c
+ 1954 05df 50040000 		.4byte	.LASF69
+ 1955 05e3 01       		.byte	0x1
+ 1956 05e4 0D       		.byte	0xd
+ 1957 05e5 AD000000 		.4byte	0xad
+ 1958 05e9 05       		.uleb128 0x5
+ 1959 05ea 03       		.byte	0x3
+ 1960 05eb 00000000 		.4byte	kPosition
+ 1961 05ef 1C       		.uleb128 0x1c
+ 1962 05f0 65040000 		.4byte	.LASF70
+ 1963 05f4 01       		.byte	0x1
+ 1964 05f5 0D       		.byte	0xd
+ 1965 05f6 AD000000 		.4byte	0xad
+ 1966 05fa 05       		.uleb128 0x5
+ 1967 05fb 03       		.byte	0x3
+ 1968 05fc 00000000 		.4byte	kIntegral
+ 1969 0600 1C       		.uleb128 0x1c
+ 1970 0601 C5020000 		.4byte	.LASF71
+ 1971 0605 01       		.byte	0x1
+ 1972 0606 0D       		.byte	0xd
+ 1973 0607 AD000000 		.4byte	0xad
+ 1974 060b 05       		.uleb128 0x5
+ 1975 060c 03       		.byte	0x3
+ 1976 060d 00000000 		.4byte	kDerivative
+ 1977 0611 1C       		.uleb128 0x1c
+ 1978 0612 03040000 		.4byte	.LASF72
+ 1979 0616 01       		.byte	0x1
+ 1980 0617 0E       		.byte	0xe
+ 1981 0618 AD000000 		.4byte	0xad
+ 1982 061c 05       		.uleb128 0x5
+ 1983 061d 03       		.byte	0x3
+ 1984 061e 00000000 		.4byte	tickMax
+ 1985 0622 1C       		.uleb128 0x1c
+ 1986 0623 6F040000 		.4byte	.LASF73
+ 1987 0627 01       		.byte	0x1
+ 1988 0628 0E       		.byte	0xe
+ 1989 0629 AD000000 		.4byte	0xad
+ 1990 062d 05       		.uleb128 0x5
+ 1991 062e 03       		.byte	0x3
+ 1992 062f 00000000 		.4byte	tickMin
+ 1993 0633 1C       		.uleb128 0x1c
+ 1994 0634 06020000 		.4byte	.LASF74
+ 1995 0638 01       		.byte	0x1
+ 1996 0639 0E       		.byte	0xe
+ 1997 063a AD000000 		.4byte	0xad
+ 1998 063e 05       		.uleb128 0x5
+ 1999 063f 03       		.byte	0x3
+ 2000 0640 00000000 		.4byte	mDegMax
+ 2001 0644 1C       		.uleb128 0x1c
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 39
+
+
+ 2002 0645 A3040000 		.4byte	.LASF75
+ 2003 0649 01       		.byte	0x1
+ 2004 064a 0E       		.byte	0xe
+ 2005 064b AD000000 		.4byte	0xad
+ 2006 064f 05       		.uleb128 0x5
+ 2007 0650 03       		.byte	0x3
+ 2008 0651 00000000 		.4byte	mDegMin
+ 2009 0655 1C       		.uleb128 0x1c
+ 2010 0656 DC020000 		.4byte	.LASF76
+ 2011 065a 01       		.byte	0x1
+ 2012 065b 0F       		.byte	0xf
+ 2013 065c C3000000 		.4byte	0xc3
+ 2014 0660 05       		.uleb128 0x5
+ 2015 0661 03       		.byte	0x3
+ 2016 0662 00000000 		.4byte	flipEncoder
+ 2017 0666 1C       		.uleb128 0x1c
+ 2018 0667 9A000000 		.4byte	.LASF77
+ 2019 066b 01       		.byte	0x1
+ 2020 066c 10       		.byte	0x10
+ 2021 066d E2000000 		.4byte	0xe2
+ 2022 0671 05       		.uleb128 0x5
+ 2023 0672 03       		.byte	0x3
+ 2024 0673 00000000 		.4byte	mDegPerTick
+ 2025 0677 1C       		.uleb128 0x1c
+ 2026 0678 A8020000 		.4byte	.LASF78
+ 2027 067c 01       		.byte	0x1
+ 2028 067d 12       		.byte	0x12
+ 2029 067e 89000000 		.4byte	0x89
+ 2030 0682 05       		.uleb128 0x5
+ 2031 0683 03       		.byte	0x3
+ 2032 0684 00000000 		.4byte	integral
+ 2033 0688 1C       		.uleb128 0x1c
+ 2034 0689 45000000 		.4byte	.LASF79
+ 2035 068d 01       		.byte	0x1
+ 2036 068e 13       		.byte	0x13
+ 2037 068f 89000000 		.4byte	0x89
+ 2038 0693 05       		.uleb128 0x5
+ 2039 0694 03       		.byte	0x3
+ 2040 0695 00000000 		.4byte	lastError
+ 2041 0699 1C       		.uleb128 0x1c
+ 2042 069a 91020000 		.4byte	.LASF80
+ 2043 069e 01       		.byte	0x1
+ 2044 069f 14       		.byte	0x14
+ 2045 06a0 89000000 		.4byte	0x89
+ 2046 06a4 05       		.uleb128 0x5
+ 2047 06a5 03       		.byte	0x3
+ 2048 06a6 00000000 		.4byte	integralClamp
+ 2049 06aa 1C       		.uleb128 0x1c
+ 2050 06ab C5000000 		.4byte	.LASF81
+ 2051 06af 01       		.byte	0x1
+ 2052 06b0 19       		.byte	0x19
+ 2053 06b1 97000000 		.4byte	0x97
+ 2054 06b5 05       		.uleb128 0x5
+ 2055 06b6 03       		.byte	0x3
+ 2056 06b7 00000000 		.4byte	usingPot
+ 2057 06bb 1C       		.uleb128 0x1c
+ 2058 06bc 86020000 		.4byte	.LASF82
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 40
+
+
+ 2059 06c0 01       		.byte	0x1
+ 2060 06c1 1A       		.byte	0x1a
+ 2061 06c2 97000000 		.4byte	0x97
+ 2062 06c6 05       		.uleb128 0x5
+ 2063 06c7 03       		.byte	0x3
+ 2064 06c8 00000000 		.4byte	enabledPID
+ 2065 06cc 1C       		.uleb128 0x1c
+ 2066 06cd 77040000 		.4byte	.LASF83
+ 2067 06d1 01       		.byte	0x1
+ 2068 06d2 1C       		.byte	0x1c
+ 2069 06d3 B8000000 		.4byte	0xb8
+ 2070 06d7 05       		.uleb128 0x5
+ 2071 06d8 03       		.byte	0x3
+ 2072 06d9 00000000 		.4byte	maxSpeed
+ 2073 06dd 1D       		.uleb128 0x1d
+ 2074 06de 0A050000 		.4byte	.LASF84
+ 2075 06e2 01       		.byte	0x1
+ 2076 06e3 1E       		.byte	0x1e
+ 2077 06e4 97000000 		.4byte	0x97
+ 2078 06e8 1E       		.uleb128 0x1e
+ 2079 06e9 F1010000 		.4byte	.LASF85
+ 2080 06ed F1010000 		.4byte	.LASF85
+ 2081 06f1 05       		.byte	0x5
+ 2082 06f2 9D       		.byte	0x9d
+ 2083 06f3 1E       		.uleb128 0x1e
+ 2084 06f4 0E020000 		.4byte	.LASF86
+ 2085 06f8 0E020000 		.4byte	.LASF86
+ 2086 06fc 05       		.byte	0x5
+ 2087 06fd 9F       		.byte	0x9f
+ 2088 06fe 1E       		.uleb128 0x1e
+ 2089 06ff FA020000 		.4byte	.LASF87
+ 2090 0703 FA020000 		.4byte	.LASF87
+ 2091 0707 05       		.byte	0x5
+ 2092 0708 A0       		.byte	0xa0
+ 2093 0709 1F       		.uleb128 0x1f
+ 2094 070a 48010000 		.4byte	.LASF88
+ 2095 070e 48010000 		.4byte	.LASF88
+ 2096 0712 06       		.byte	0x6
+ 2097 0713 4B01     		.2byte	0x14b
+ 2098 0715 1E       		.uleb128 0x1e
+ 2099 0716 6E020000 		.4byte	.LASF57
+ 2100 071a 6E020000 		.4byte	.LASF57
+ 2101 071e 01       		.byte	0x1
+ 2102 071f 61       		.byte	0x61
+ 2103 0720 1E       		.uleb128 0x1e
+ 2104 0721 0B000000 		.4byte	.LASF58
+ 2105 0725 0B000000 		.4byte	.LASF58
+ 2106 0729 01       		.byte	0x1
+ 2107 072a 6B       		.byte	0x6b
+ 2108 072b 1E       		.uleb128 0x1e
+ 2109 072c 3D030000 		.4byte	.LASF67
+ 2110 0730 3D030000 		.4byte	.LASF67
+ 2111 0734 01       		.byte	0x1
+ 2112 0735 74       		.byte	0x74
+ 2113 0736 1E       		.uleb128 0x1e
+ 2114 0737 0B040000 		.4byte	.LASF89
+ 2115 073b 0B040000 		.4byte	.LASF89
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 41
+
+
+ 2116 073f 07       		.byte	0x7
+ 2117 0740 25       		.byte	0x25
+ 2118 0741 00       		.byte	0
+ 2119              		.section	.debug_abbrev,"",%progbits
+ 2120              	.Ldebug_abbrev0:
+ 2121 0000 01       		.uleb128 0x1
+ 2122 0001 11       		.uleb128 0x11
+ 2123 0002 01       		.byte	0x1
+ 2124 0003 25       		.uleb128 0x25
+ 2125 0004 0E       		.uleb128 0xe
+ 2126 0005 13       		.uleb128 0x13
+ 2127 0006 0B       		.uleb128 0xb
+ 2128 0007 03       		.uleb128 0x3
+ 2129 0008 0E       		.uleb128 0xe
+ 2130 0009 1B       		.uleb128 0x1b
+ 2131 000a 0E       		.uleb128 0xe
+ 2132 000b 55       		.uleb128 0x55
+ 2133 000c 17       		.uleb128 0x17
+ 2134 000d 11       		.uleb128 0x11
+ 2135 000e 01       		.uleb128 0x1
+ 2136 000f 10       		.uleb128 0x10
+ 2137 0010 17       		.uleb128 0x17
+ 2138 0011 00       		.byte	0
+ 2139 0012 00       		.byte	0
+ 2140 0013 02       		.uleb128 0x2
+ 2141 0014 24       		.uleb128 0x24
+ 2142 0015 00       		.byte	0
+ 2143 0016 0B       		.uleb128 0xb
+ 2144 0017 0B       		.uleb128 0xb
+ 2145 0018 3E       		.uleb128 0x3e
+ 2146 0019 0B       		.uleb128 0xb
+ 2147 001a 03       		.uleb128 0x3
+ 2148 001b 0E       		.uleb128 0xe
+ 2149 001c 00       		.byte	0
+ 2150 001d 00       		.byte	0
+ 2151 001e 03       		.uleb128 0x3
+ 2152 001f 16       		.uleb128 0x16
+ 2153 0020 00       		.byte	0
+ 2154 0021 03       		.uleb128 0x3
+ 2155 0022 0E       		.uleb128 0xe
+ 2156 0023 3A       		.uleb128 0x3a
+ 2157 0024 0B       		.uleb128 0xb
+ 2158 0025 3B       		.uleb128 0x3b
+ 2159 0026 0B       		.uleb128 0xb
+ 2160 0027 49       		.uleb128 0x49
+ 2161 0028 13       		.uleb128 0x13
+ 2162 0029 00       		.byte	0
+ 2163 002a 00       		.byte	0
+ 2164 002b 04       		.uleb128 0x4
+ 2165 002c 24       		.uleb128 0x24
+ 2166 002d 00       		.byte	0
+ 2167 002e 0B       		.uleb128 0xb
+ 2168 002f 0B       		.uleb128 0xb
+ 2169 0030 3E       		.uleb128 0x3e
+ 2170 0031 0B       		.uleb128 0xb
+ 2171 0032 03       		.uleb128 0x3
+ 2172 0033 08       		.uleb128 0x8
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 42
+
+
+ 2173 0034 00       		.byte	0
+ 2174 0035 00       		.byte	0
+ 2175 0036 05       		.uleb128 0x5
+ 2176 0037 16       		.uleb128 0x16
+ 2177 0038 00       		.byte	0
+ 2178 0039 03       		.uleb128 0x3
+ 2179 003a 0E       		.uleb128 0xe
+ 2180 003b 3A       		.uleb128 0x3a
+ 2181 003c 0B       		.uleb128 0xb
+ 2182 003d 3B       		.uleb128 0x3b
+ 2183 003e 05       		.uleb128 0x5
+ 2184 003f 49       		.uleb128 0x49
+ 2185 0040 13       		.uleb128 0x13
+ 2186 0041 00       		.byte	0
+ 2187 0042 00       		.byte	0
+ 2188 0043 06       		.uleb128 0x6
+ 2189 0044 2E       		.uleb128 0x2e
+ 2190 0045 00       		.byte	0
+ 2191 0046 3F       		.uleb128 0x3f
+ 2192 0047 19       		.uleb128 0x19
+ 2193 0048 03       		.uleb128 0x3
+ 2194 0049 0E       		.uleb128 0xe
+ 2195 004a 3A       		.uleb128 0x3a
+ 2196 004b 0B       		.uleb128 0xb
+ 2197 004c 3B       		.uleb128 0x3b
+ 2198 004d 0B       		.uleb128 0xb
+ 2199 004e 11       		.uleb128 0x11
+ 2200 004f 01       		.uleb128 0x1
+ 2201 0050 12       		.uleb128 0x12
+ 2202 0051 06       		.uleb128 0x6
+ 2203 0052 40       		.uleb128 0x40
+ 2204 0053 18       		.uleb128 0x18
+ 2205 0054 9742     		.uleb128 0x2117
+ 2206 0056 19       		.uleb128 0x19
+ 2207 0057 00       		.byte	0
+ 2208 0058 00       		.byte	0
+ 2209 0059 07       		.uleb128 0x7
+ 2210 005a 2E       		.uleb128 0x2e
+ 2211 005b 00       		.byte	0
+ 2212 005c 3F       		.uleb128 0x3f
+ 2213 005d 19       		.uleb128 0x19
+ 2214 005e 03       		.uleb128 0x3
+ 2215 005f 0E       		.uleb128 0xe
+ 2216 0060 3A       		.uleb128 0x3a
+ 2217 0061 0B       		.uleb128 0xb
+ 2218 0062 3B       		.uleb128 0x3b
+ 2219 0063 0B       		.uleb128 0xb
+ 2220 0064 49       		.uleb128 0x49
+ 2221 0065 13       		.uleb128 0x13
+ 2222 0066 11       		.uleb128 0x11
+ 2223 0067 01       		.uleb128 0x1
+ 2224 0068 12       		.uleb128 0x12
+ 2225 0069 06       		.uleb128 0x6
+ 2226 006a 40       		.uleb128 0x40
+ 2227 006b 18       		.uleb128 0x18
+ 2228 006c 9742     		.uleb128 0x2117
+ 2229 006e 19       		.uleb128 0x19
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 43
+
+
+ 2230 006f 00       		.byte	0
+ 2231 0070 00       		.byte	0
+ 2232 0071 08       		.uleb128 0x8
+ 2233 0072 2E       		.uleb128 0x2e
+ 2234 0073 01       		.byte	0x1
+ 2235 0074 3F       		.uleb128 0x3f
+ 2236 0075 19       		.uleb128 0x19
+ 2237 0076 03       		.uleb128 0x3
+ 2238 0077 0E       		.uleb128 0xe
+ 2239 0078 3A       		.uleb128 0x3a
+ 2240 0079 0B       		.uleb128 0xb
+ 2241 007a 3B       		.uleb128 0x3b
+ 2242 007b 0B       		.uleb128 0xb
+ 2243 007c 11       		.uleb128 0x11
+ 2244 007d 01       		.uleb128 0x1
+ 2245 007e 12       		.uleb128 0x12
+ 2246 007f 06       		.uleb128 0x6
+ 2247 0080 40       		.uleb128 0x40
+ 2248 0081 18       		.uleb128 0x18
+ 2249 0082 9742     		.uleb128 0x2117
+ 2250 0084 19       		.uleb128 0x19
+ 2251 0085 01       		.uleb128 0x1
+ 2252 0086 13       		.uleb128 0x13
+ 2253 0087 00       		.byte	0
+ 2254 0088 00       		.byte	0
+ 2255 0089 09       		.uleb128 0x9
+ 2256 008a 898201   		.uleb128 0x4109
+ 2257 008d 00       		.byte	0
+ 2258 008e 11       		.uleb128 0x11
+ 2259 008f 01       		.uleb128 0x1
+ 2260 0090 31       		.uleb128 0x31
+ 2261 0091 13       		.uleb128 0x13
+ 2262 0092 00       		.byte	0
+ 2263 0093 00       		.byte	0
+ 2264 0094 0A       		.uleb128 0xa
+ 2265 0095 2E       		.uleb128 0x2e
+ 2266 0096 01       		.byte	0x1
+ 2267 0097 3F       		.uleb128 0x3f
+ 2268 0098 19       		.uleb128 0x19
+ 2269 0099 03       		.uleb128 0x3
+ 2270 009a 0E       		.uleb128 0xe
+ 2271 009b 3A       		.uleb128 0x3a
+ 2272 009c 0B       		.uleb128 0xb
+ 2273 009d 3B       		.uleb128 0x3b
+ 2274 009e 0B       		.uleb128 0xb
+ 2275 009f 49       		.uleb128 0x49
+ 2276 00a0 13       		.uleb128 0x13
+ 2277 00a1 11       		.uleb128 0x11
+ 2278 00a2 01       		.uleb128 0x1
+ 2279 00a3 12       		.uleb128 0x12
+ 2280 00a4 06       		.uleb128 0x6
+ 2281 00a5 40       		.uleb128 0x40
+ 2282 00a6 18       		.uleb128 0x18
+ 2283 00a7 9642     		.uleb128 0x2116
+ 2284 00a9 19       		.uleb128 0x19
+ 2285 00aa 01       		.uleb128 0x1
+ 2286 00ab 13       		.uleb128 0x13
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 44
+
+
+ 2287 00ac 00       		.byte	0
+ 2288 00ad 00       		.byte	0
+ 2289 00ae 0B       		.uleb128 0xb
+ 2290 00af 34       		.uleb128 0x34
+ 2291 00b0 00       		.byte	0
+ 2292 00b1 03       		.uleb128 0x3
+ 2293 00b2 08       		.uleb128 0x8
+ 2294 00b3 3A       		.uleb128 0x3a
+ 2295 00b4 0B       		.uleb128 0xb
+ 2296 00b5 3B       		.uleb128 0x3b
+ 2297 00b6 0B       		.uleb128 0xb
+ 2298 00b7 49       		.uleb128 0x49
+ 2299 00b8 13       		.uleb128 0x13
+ 2300 00b9 1C       		.uleb128 0x1c
+ 2301 00ba 05       		.uleb128 0x5
+ 2302 00bb 00       		.byte	0
+ 2303 00bc 00       		.byte	0
+ 2304 00bd 0C       		.uleb128 0xc
+ 2305 00be 34       		.uleb128 0x34
+ 2306 00bf 00       		.byte	0
+ 2307 00c0 03       		.uleb128 0x3
+ 2308 00c1 08       		.uleb128 0x8
+ 2309 00c2 3A       		.uleb128 0x3a
+ 2310 00c3 0B       		.uleb128 0xb
+ 2311 00c4 3B       		.uleb128 0x3b
+ 2312 00c5 0B       		.uleb128 0xb
+ 2313 00c6 49       		.uleb128 0x49
+ 2314 00c7 13       		.uleb128 0x13
+ 2315 00c8 02       		.uleb128 0x2
+ 2316 00c9 17       		.uleb128 0x17
+ 2317 00ca 00       		.byte	0
+ 2318 00cb 00       		.byte	0
+ 2319 00cc 0D       		.uleb128 0xd
+ 2320 00cd 0B       		.uleb128 0xb
+ 2321 00ce 01       		.byte	0x1
+ 2322 00cf 55       		.uleb128 0x55
+ 2323 00d0 17       		.uleb128 0x17
+ 2324 00d1 00       		.byte	0
+ 2325 00d2 00       		.byte	0
+ 2326 00d3 0E       		.uleb128 0xe
+ 2327 00d4 898201   		.uleb128 0x4109
+ 2328 00d7 01       		.byte	0x1
+ 2329 00d8 11       		.uleb128 0x11
+ 2330 00d9 01       		.uleb128 0x1
+ 2331 00da 31       		.uleb128 0x31
+ 2332 00db 13       		.uleb128 0x13
+ 2333 00dc 01       		.uleb128 0x1
+ 2334 00dd 13       		.uleb128 0x13
+ 2335 00de 00       		.byte	0
+ 2336 00df 00       		.byte	0
+ 2337 00e0 0F       		.uleb128 0xf
+ 2338 00e1 8A8201   		.uleb128 0x410a
+ 2339 00e4 00       		.byte	0
+ 2340 00e5 02       		.uleb128 0x2
+ 2341 00e6 18       		.uleb128 0x18
+ 2342 00e7 9142     		.uleb128 0x2111
+ 2343 00e9 18       		.uleb128 0x18
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 45
+
+
+ 2344 00ea 00       		.byte	0
+ 2345 00eb 00       		.byte	0
+ 2346 00ec 10       		.uleb128 0x10
+ 2347 00ed 898201   		.uleb128 0x4109
+ 2348 00f0 01       		.byte	0x1
+ 2349 00f1 11       		.uleb128 0x11
+ 2350 00f2 01       		.uleb128 0x1
+ 2351 00f3 31       		.uleb128 0x31
+ 2352 00f4 13       		.uleb128 0x13
+ 2353 00f5 00       		.byte	0
+ 2354 00f6 00       		.byte	0
+ 2355 00f7 11       		.uleb128 0x11
+ 2356 00f8 2E       		.uleb128 0x2e
+ 2357 00f9 00       		.byte	0
+ 2358 00fa 3F       		.uleb128 0x3f
+ 2359 00fb 19       		.uleb128 0x19
+ 2360 00fc 03       		.uleb128 0x3
+ 2361 00fd 0E       		.uleb128 0xe
+ 2362 00fe 3A       		.uleb128 0x3a
+ 2363 00ff 0B       		.uleb128 0xb
+ 2364 0100 3B       		.uleb128 0x3b
+ 2365 0101 0B       		.uleb128 0xb
+ 2366 0102 49       		.uleb128 0x49
+ 2367 0103 13       		.uleb128 0x13
+ 2368 0104 11       		.uleb128 0x11
+ 2369 0105 01       		.uleb128 0x1
+ 2370 0106 12       		.uleb128 0x12
+ 2371 0107 06       		.uleb128 0x6
+ 2372 0108 40       		.uleb128 0x40
+ 2373 0109 18       		.uleb128 0x18
+ 2374 010a 9642     		.uleb128 0x2116
+ 2375 010c 19       		.uleb128 0x19
+ 2376 010d 00       		.byte	0
+ 2377 010e 00       		.byte	0
+ 2378 010f 12       		.uleb128 0x12
+ 2379 0110 2E       		.uleb128 0x2e
+ 2380 0111 01       		.byte	0x1
+ 2381 0112 3F       		.uleb128 0x3f
+ 2382 0113 19       		.uleb128 0x19
+ 2383 0114 03       		.uleb128 0x3
+ 2384 0115 0E       		.uleb128 0xe
+ 2385 0116 3A       		.uleb128 0x3a
+ 2386 0117 0B       		.uleb128 0xb
+ 2387 0118 3B       		.uleb128 0x3b
+ 2388 0119 0B       		.uleb128 0xb
+ 2389 011a 27       		.uleb128 0x27
+ 2390 011b 19       		.uleb128 0x19
+ 2391 011c 11       		.uleb128 0x11
+ 2392 011d 01       		.uleb128 0x1
+ 2393 011e 12       		.uleb128 0x12
+ 2394 011f 06       		.uleb128 0x6
+ 2395 0120 40       		.uleb128 0x40
+ 2396 0121 18       		.uleb128 0x18
+ 2397 0122 9742     		.uleb128 0x2117
+ 2398 0124 19       		.uleb128 0x19
+ 2399 0125 01       		.uleb128 0x1
+ 2400 0126 13       		.uleb128 0x13
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 46
+
+
+ 2401 0127 00       		.byte	0
+ 2402 0128 00       		.byte	0
+ 2403 0129 13       		.uleb128 0x13
+ 2404 012a 05       		.uleb128 0x5
+ 2405 012b 00       		.byte	0
+ 2406 012c 03       		.uleb128 0x3
+ 2407 012d 0E       		.uleb128 0xe
+ 2408 012e 3A       		.uleb128 0x3a
+ 2409 012f 0B       		.uleb128 0xb
+ 2410 0130 3B       		.uleb128 0x3b
+ 2411 0131 0B       		.uleb128 0xb
+ 2412 0132 49       		.uleb128 0x49
+ 2413 0133 13       		.uleb128 0x13
+ 2414 0134 02       		.uleb128 0x2
+ 2415 0135 18       		.uleb128 0x18
+ 2416 0136 00       		.byte	0
+ 2417 0137 00       		.byte	0
+ 2418 0138 14       		.uleb128 0x14
+ 2419 0139 05       		.uleb128 0x5
+ 2420 013a 00       		.byte	0
+ 2421 013b 03       		.uleb128 0x3
+ 2422 013c 08       		.uleb128 0x8
+ 2423 013d 3A       		.uleb128 0x3a
+ 2424 013e 0B       		.uleb128 0xb
+ 2425 013f 3B       		.uleb128 0x3b
+ 2426 0140 0B       		.uleb128 0xb
+ 2427 0141 49       		.uleb128 0x49
+ 2428 0142 13       		.uleb128 0x13
+ 2429 0143 02       		.uleb128 0x2
+ 2430 0144 18       		.uleb128 0x18
+ 2431 0145 00       		.byte	0
+ 2432 0146 00       		.byte	0
+ 2433 0147 15       		.uleb128 0x15
+ 2434 0148 2E       		.uleb128 0x2e
+ 2435 0149 01       		.byte	0x1
+ 2436 014a 3F       		.uleb128 0x3f
+ 2437 014b 19       		.uleb128 0x19
+ 2438 014c 03       		.uleb128 0x3
+ 2439 014d 0E       		.uleb128 0xe
+ 2440 014e 3A       		.uleb128 0x3a
+ 2441 014f 0B       		.uleb128 0xb
+ 2442 0150 3B       		.uleb128 0x3b
+ 2443 0151 0B       		.uleb128 0xb
+ 2444 0152 27       		.uleb128 0x27
+ 2445 0153 19       		.uleb128 0x19
+ 2446 0154 11       		.uleb128 0x11
+ 2447 0155 01       		.uleb128 0x1
+ 2448 0156 12       		.uleb128 0x12
+ 2449 0157 06       		.uleb128 0x6
+ 2450 0158 40       		.uleb128 0x40
+ 2451 0159 18       		.uleb128 0x18
+ 2452 015a 9642     		.uleb128 0x2116
+ 2453 015c 19       		.uleb128 0x19
+ 2454 015d 01       		.uleb128 0x1
+ 2455 015e 13       		.uleb128 0x13
+ 2456 015f 00       		.byte	0
+ 2457 0160 00       		.byte	0
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 47
+
+
+ 2458 0161 16       		.uleb128 0x16
+ 2459 0162 05       		.uleb128 0x5
+ 2460 0163 00       		.byte	0
+ 2461 0164 03       		.uleb128 0x3
+ 2462 0165 0E       		.uleb128 0xe
+ 2463 0166 3A       		.uleb128 0x3a
+ 2464 0167 0B       		.uleb128 0xb
+ 2465 0168 3B       		.uleb128 0x3b
+ 2466 0169 0B       		.uleb128 0xb
+ 2467 016a 49       		.uleb128 0x49
+ 2468 016b 13       		.uleb128 0x13
+ 2469 016c 02       		.uleb128 0x2
+ 2470 016d 17       		.uleb128 0x17
+ 2471 016e 00       		.byte	0
+ 2472 016f 00       		.byte	0
+ 2473 0170 17       		.uleb128 0x17
+ 2474 0171 2E       		.uleb128 0x2e
+ 2475 0172 01       		.byte	0x1
+ 2476 0173 3F       		.uleb128 0x3f
+ 2477 0174 19       		.uleb128 0x19
+ 2478 0175 03       		.uleb128 0x3
+ 2479 0176 0E       		.uleb128 0xe
+ 2480 0177 3A       		.uleb128 0x3a
+ 2481 0178 0B       		.uleb128 0xb
+ 2482 0179 3B       		.uleb128 0x3b
+ 2483 017a 0B       		.uleb128 0xb
+ 2484 017b 49       		.uleb128 0x49
+ 2485 017c 13       		.uleb128 0x13
+ 2486 017d 3C       		.uleb128 0x3c
+ 2487 017e 19       		.uleb128 0x19
+ 2488 017f 01       		.uleb128 0x1
+ 2489 0180 13       		.uleb128 0x13
+ 2490 0181 00       		.byte	0
+ 2491 0182 00       		.byte	0
+ 2492 0183 18       		.uleb128 0x18
+ 2493 0184 18       		.uleb128 0x18
+ 2494 0185 00       		.byte	0
+ 2495 0186 00       		.byte	0
+ 2496 0187 00       		.byte	0
+ 2497 0188 19       		.uleb128 0x19
+ 2498 0189 0B       		.uleb128 0xb
+ 2499 018a 01       		.byte	0x1
+ 2500 018b 11       		.uleb128 0x11
+ 2501 018c 01       		.uleb128 0x1
+ 2502 018d 12       		.uleb128 0x12
+ 2503 018e 06       		.uleb128 0x6
+ 2504 018f 01       		.uleb128 0x1
+ 2505 0190 13       		.uleb128 0x13
+ 2506 0191 00       		.byte	0
+ 2507 0192 00       		.byte	0
+ 2508 0193 1A       		.uleb128 0x1a
+ 2509 0194 2E       		.uleb128 0x2e
+ 2510 0195 01       		.byte	0x1
+ 2511 0196 3F       		.uleb128 0x3f
+ 2512 0197 19       		.uleb128 0x19
+ 2513 0198 03       		.uleb128 0x3
+ 2514 0199 0E       		.uleb128 0xe
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 48
+
+
+ 2515 019a 3A       		.uleb128 0x3a
+ 2516 019b 0B       		.uleb128 0xb
+ 2517 019c 3B       		.uleb128 0x3b
+ 2518 019d 0B       		.uleb128 0xb
+ 2519 019e 27       		.uleb128 0x27
+ 2520 019f 19       		.uleb128 0x19
+ 2521 01a0 49       		.uleb128 0x49
+ 2522 01a1 13       		.uleb128 0x13
+ 2523 01a2 11       		.uleb128 0x11
+ 2524 01a3 01       		.uleb128 0x1
+ 2525 01a4 12       		.uleb128 0x12
+ 2526 01a5 06       		.uleb128 0x6
+ 2527 01a6 40       		.uleb128 0x40
+ 2528 01a7 18       		.uleb128 0x18
+ 2529 01a8 9642     		.uleb128 0x2116
+ 2530 01aa 19       		.uleb128 0x19
+ 2531 01ab 01       		.uleb128 0x1
+ 2532 01ac 13       		.uleb128 0x13
+ 2533 01ad 00       		.byte	0
+ 2534 01ae 00       		.byte	0
+ 2535 01af 1B       		.uleb128 0x1b
+ 2536 01b0 34       		.uleb128 0x34
+ 2537 01b1 00       		.byte	0
+ 2538 01b2 03       		.uleb128 0x3
+ 2539 01b3 0E       		.uleb128 0xe
+ 2540 01b4 3A       		.uleb128 0x3a
+ 2541 01b5 0B       		.uleb128 0xb
+ 2542 01b6 3B       		.uleb128 0x3b
+ 2543 01b7 0B       		.uleb128 0xb
+ 2544 01b8 49       		.uleb128 0x49
+ 2545 01b9 13       		.uleb128 0x13
+ 2546 01ba 02       		.uleb128 0x2
+ 2547 01bb 17       		.uleb128 0x17
+ 2548 01bc 00       		.byte	0
+ 2549 01bd 00       		.byte	0
+ 2550 01be 1C       		.uleb128 0x1c
+ 2551 01bf 34       		.uleb128 0x34
+ 2552 01c0 00       		.byte	0
+ 2553 01c1 03       		.uleb128 0x3
+ 2554 01c2 0E       		.uleb128 0xe
+ 2555 01c3 3A       		.uleb128 0x3a
+ 2556 01c4 0B       		.uleb128 0xb
+ 2557 01c5 3B       		.uleb128 0x3b
+ 2558 01c6 0B       		.uleb128 0xb
+ 2559 01c7 49       		.uleb128 0x49
+ 2560 01c8 13       		.uleb128 0x13
+ 2561 01c9 3F       		.uleb128 0x3f
+ 2562 01ca 19       		.uleb128 0x19
+ 2563 01cb 02       		.uleb128 0x2
+ 2564 01cc 18       		.uleb128 0x18
+ 2565 01cd 00       		.byte	0
+ 2566 01ce 00       		.byte	0
+ 2567 01cf 1D       		.uleb128 0x1d
+ 2568 01d0 34       		.uleb128 0x34
+ 2569 01d1 00       		.byte	0
+ 2570 01d2 03       		.uleb128 0x3
+ 2571 01d3 0E       		.uleb128 0xe
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 49
+
+
+ 2572 01d4 3A       		.uleb128 0x3a
+ 2573 01d5 0B       		.uleb128 0xb
+ 2574 01d6 3B       		.uleb128 0x3b
+ 2575 01d7 0B       		.uleb128 0xb
+ 2576 01d8 49       		.uleb128 0x49
+ 2577 01d9 13       		.uleb128 0x13
+ 2578 01da 3F       		.uleb128 0x3f
+ 2579 01db 19       		.uleb128 0x19
+ 2580 01dc 3C       		.uleb128 0x3c
+ 2581 01dd 19       		.uleb128 0x19
+ 2582 01de 00       		.byte	0
+ 2583 01df 00       		.byte	0
+ 2584 01e0 1E       		.uleb128 0x1e
+ 2585 01e1 2E       		.uleb128 0x2e
+ 2586 01e2 00       		.byte	0
+ 2587 01e3 3F       		.uleb128 0x3f
+ 2588 01e4 19       		.uleb128 0x19
+ 2589 01e5 3C       		.uleb128 0x3c
+ 2590 01e6 19       		.uleb128 0x19
+ 2591 01e7 6E       		.uleb128 0x6e
+ 2592 01e8 0E       		.uleb128 0xe
+ 2593 01e9 03       		.uleb128 0x3
+ 2594 01ea 0E       		.uleb128 0xe
+ 2595 01eb 3A       		.uleb128 0x3a
+ 2596 01ec 0B       		.uleb128 0xb
+ 2597 01ed 3B       		.uleb128 0x3b
+ 2598 01ee 0B       		.uleb128 0xb
+ 2599 01ef 00       		.byte	0
+ 2600 01f0 00       		.byte	0
+ 2601 01f1 1F       		.uleb128 0x1f
+ 2602 01f2 2E       		.uleb128 0x2e
+ 2603 01f3 00       		.byte	0
+ 2604 01f4 3F       		.uleb128 0x3f
+ 2605 01f5 19       		.uleb128 0x19
+ 2606 01f6 3C       		.uleb128 0x3c
+ 2607 01f7 19       		.uleb128 0x19
+ 2608 01f8 6E       		.uleb128 0x6e
+ 2609 01f9 0E       		.uleb128 0xe
+ 2610 01fa 03       		.uleb128 0x3
+ 2611 01fb 0E       		.uleb128 0xe
+ 2612 01fc 3A       		.uleb128 0x3a
+ 2613 01fd 0B       		.uleb128 0xb
+ 2614 01fe 3B       		.uleb128 0x3b
+ 2615 01ff 05       		.uleb128 0x5
+ 2616 0200 00       		.byte	0
+ 2617 0201 00       		.byte	0
+ 2618 0202 00       		.byte	0
+ 2619              		.section	.debug_loc,"",%progbits
+ 2620              	.Ldebug_loc0:
+ 2621              	.LLST0:
+ 2622 0000 02000000 		.4byte	.LVL2
+ 2623 0004 08000000 		.4byte	.LVL3
+ 2624 0008 0200     		.2byte	0x2
+ 2625 000a 30       		.byte	0x30
+ 2626 000b 9F       		.byte	0x9f
+ 2627 000c 08000000 		.4byte	.LVL3
+ 2628 0010 2C000000 		.4byte	.LVL11
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 50
+
+
+ 2629 0014 0100     		.2byte	0x1
+ 2630 0016 55       		.byte	0x55
+ 2631 0017 00000000 		.4byte	0
+ 2632 001b 00000000 		.4byte	0
+ 2633              	.LLST1:
+ 2634 001f 02000000 		.4byte	.LVL2
+ 2635 0023 08000000 		.4byte	.LVL3
+ 2636 0027 0200     		.2byte	0x2
+ 2637 0029 30       		.byte	0x30
+ 2638 002a 9F       		.byte	0x9f
+ 2639 002b 08000000 		.4byte	.LVL3
+ 2640 002f 2C000000 		.4byte	.LVL10
+ 2641 0033 0100     		.2byte	0x1
+ 2642 0035 54       		.byte	0x54
+ 2643 0036 00000000 		.4byte	0
+ 2644 003a 00000000 		.4byte	0
+ 2645              	.LLST2:
+ 2646 003e 00000000 		.4byte	.LVL26
+ 2647 0042 0A000000 		.4byte	.LVL27
+ 2648 0046 0100     		.2byte	0x1
+ 2649 0048 50       		.byte	0x50
+ 2650 0049 0A000000 		.4byte	.LVL27
+ 2651 004d 30000000 		.4byte	.LFE63
+ 2652 0051 0400     		.2byte	0x4
+ 2653 0053 F3       		.byte	0xf3
+ 2654 0054 01       		.uleb128 0x1
+ 2655 0055 50       		.byte	0x50
+ 2656 0056 9F       		.byte	0x9f
+ 2657 0057 00000000 		.4byte	0
+ 2658 005b 00000000 		.4byte	0
+ 2659              	.LLST3:
+ 2660 005f 00000000 		.4byte	.LVL46
+ 2661 0063 07000000 		.4byte	.LVL47-1
+ 2662 0067 0100     		.2byte	0x1
+ 2663 0069 50       		.byte	0x50
+ 2664 006a 07000000 		.4byte	.LVL47-1
+ 2665 006e 3C000000 		.4byte	.LVL50
+ 2666 0072 0100     		.2byte	0x1
+ 2667 0074 55       		.byte	0x55
+ 2668 0075 3C000000 		.4byte	.LVL50
+ 2669 0079 6A000000 		.4byte	.LVL57
+ 2670 007d 0400     		.2byte	0x4
+ 2671 007f F3       		.byte	0xf3
+ 2672 0080 01       		.uleb128 0x1
+ 2673 0081 50       		.byte	0x50
+ 2674 0082 9F       		.byte	0x9f
+ 2675 0083 6A000000 		.4byte	.LVL57
+ 2676 0087 70000000 		.4byte	.LVL59
+ 2677 008b 0100     		.2byte	0x1
+ 2678 008d 55       		.byte	0x55
+ 2679 008e 70000000 		.4byte	.LVL59
+ 2680 0092 7C000000 		.4byte	.LFE66
+ 2681 0096 0400     		.2byte	0x4
+ 2682 0098 F3       		.byte	0xf3
+ 2683 0099 01       		.uleb128 0x1
+ 2684 009a 50       		.byte	0x50
+ 2685 009b 9F       		.byte	0x9f
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 51
+
+
+ 2686 009c 00000000 		.4byte	0
+ 2687 00a0 00000000 		.4byte	0
+ 2688              	.LLST4:
+ 2689 00a4 10000000 		.4byte	.LVL48
+ 2690 00a8 42000000 		.4byte	.LVL52
+ 2691 00ac 0100     		.2byte	0x1
+ 2692 00ae 50       		.byte	0x50
+ 2693 00af 6E000000 		.4byte	.LVL58
+ 2694 00b3 70000000 		.4byte	.LVL59
+ 2695 00b7 0100     		.2byte	0x1
+ 2696 00b9 50       		.byte	0x50
+ 2697 00ba 00000000 		.4byte	0
+ 2698 00be 00000000 		.4byte	0
+ 2699              	.LLST5:
+ 2700 00c2 12000000 		.4byte	.LVL49
+ 2701 00c6 6A000000 		.4byte	.LVL57
+ 2702 00ca 0100     		.2byte	0x1
+ 2703 00cc 54       		.byte	0x54
+ 2704 00cd 6E000000 		.4byte	.LVL58
+ 2705 00d1 70000000 		.4byte	.LVL59
+ 2706 00d5 0100     		.2byte	0x1
+ 2707 00d7 54       		.byte	0x54
+ 2708 00d8 00000000 		.4byte	0
+ 2709 00dc 00000000 		.4byte	0
+ 2710              	.LLST6:
+ 2711 00e0 40000000 		.4byte	.LVL51
+ 2712 00e4 6A000000 		.4byte	.LVL57
+ 2713 00e8 0100     		.2byte	0x1
+ 2714 00ea 57       		.byte	0x57
+ 2715 00eb 00000000 		.4byte	0
+ 2716 00ef 00000000 		.4byte	0
+ 2717              	.LLST7:
+ 2718 00f3 64000000 		.4byte	.LVL55
+ 2719 00f7 68000000 		.4byte	.LVL56
+ 2720 00fb 0600     		.2byte	0x6
+ 2721 00fd 76       		.byte	0x76
+ 2722 00fe 00       		.sleb128 0
+ 2723 00ff 70       		.byte	0x70
+ 2724 0100 00       		.sleb128 0
+ 2725 0101 22       		.byte	0x22
+ 2726 0102 9F       		.byte	0x9f
+ 2727 0103 68000000 		.4byte	.LVL56
+ 2728 0107 6A000000 		.4byte	.LVL57
+ 2729 010b 0100     		.2byte	0x1
+ 2730 010d 50       		.byte	0x50
+ 2731 010e 00000000 		.4byte	0
+ 2732 0112 00000000 		.4byte	0
+ 2733              	.LLST8:
+ 2734 0116 00000000 		.4byte	.LVL60
+ 2735 011a 05000000 		.4byte	.LVL61-1
+ 2736 011e 0100     		.2byte	0x1
+ 2737 0120 50       		.byte	0x50
+ 2738 0121 05000000 		.4byte	.LVL61-1
+ 2739 0125 20000000 		.4byte	.LFE65
+ 2740 0129 0400     		.2byte	0x4
+ 2741 012b F3       		.byte	0xf3
+ 2742 012c 01       		.uleb128 0x1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 52
+
+
+ 2743 012d 50       		.byte	0x50
+ 2744 012e 9F       		.byte	0x9f
+ 2745 012f 00000000 		.4byte	0
+ 2746 0133 00000000 		.4byte	0
+ 2747              	.LLST9:
+ 2748 0137 08000000 		.4byte	.LVL62
+ 2749 013b 0F000000 		.4byte	.LVL63-1
+ 2750 013f 0100     		.2byte	0x1
+ 2751 0141 50       		.byte	0x50
+ 2752 0142 0F000000 		.4byte	.LVL63-1
+ 2753 0146 1A000000 		.4byte	.LVL65
+ 2754 014a 0100     		.2byte	0x1
+ 2755 014c 54       		.byte	0x54
+ 2756 014d 00000000 		.4byte	0
+ 2757 0151 00000000 		.4byte	0
+ 2758              		.section	.debug_aranges,"",%progbits
+ 2759 0000 14010000 		.4byte	0x114
+ 2760 0004 0200     		.2byte	0x2
+ 2761 0006 00000000 		.4byte	.Ldebug_info0
+ 2762 000a 04       		.byte	0x4
+ 2763 000b 00       		.byte	0
+ 2764 000c 0000     		.2byte	0
+ 2765 000e 0000     		.2byte	0
+ 2766 0010 00000000 		.4byte	.LFB35
+ 2767 0014 10000000 		.4byte	.LFE35-.LFB35
+ 2768 0018 00000000 		.4byte	.LFB36
+ 2769 001c 0C000000 		.4byte	.LFE36-.LFB36
+ 2770 0020 00000000 		.4byte	.LFB37
+ 2771 0024 0C000000 		.4byte	.LFE37-.LFB37
+ 2772 0028 00000000 		.4byte	.LFB38
+ 2773 002c 0C000000 		.4byte	.LFE38-.LFB38
+ 2774 0030 00000000 		.4byte	.LFB39
+ 2775 0034 18000000 		.4byte	.LFE39-.LFB39
+ 2776 0038 00000000 		.4byte	.LFB40
+ 2777 003c 34000000 		.4byte	.LFE40-.LFB40
+ 2778 0040 00000000 		.4byte	.LFB41
+ 2779 0044 40000000 		.4byte	.LFE41-.LFB41
+ 2780 0048 00000000 		.4byte	.LFB42
+ 2781 004c 0C000000 		.4byte	.LFE42-.LFB42
+ 2782 0050 00000000 		.4byte	.LFB43
+ 2783 0054 0C000000 		.4byte	.LFE43-.LFB43
+ 2784 0058 00000000 		.4byte	.LFB44
+ 2785 005c 0C000000 		.4byte	.LFE44-.LFB44
+ 2786 0060 00000000 		.4byte	.LFB45
+ 2787 0064 0C000000 		.4byte	.LFE45-.LFB45
+ 2788 0068 00000000 		.4byte	.LFB46
+ 2789 006c 0C000000 		.4byte	.LFE46-.LFB46
+ 2790 0070 00000000 		.4byte	.LFB47
+ 2791 0074 0C000000 		.4byte	.LFE47-.LFB47
+ 2792 0078 00000000 		.4byte	.LFB48
+ 2793 007c 0C000000 		.4byte	.LFE48-.LFB48
+ 2794 0080 00000000 		.4byte	.LFB49
+ 2795 0084 0C000000 		.4byte	.LFE49-.LFB49
+ 2796 0088 00000000 		.4byte	.LFB50
+ 2797 008c 0C000000 		.4byte	.LFE50-.LFB50
+ 2798 0090 00000000 		.4byte	.LFB51
+ 2799 0094 0C000000 		.4byte	.LFE51-.LFB51
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 53
+
+
+ 2800 0098 00000000 		.4byte	.LFB52
+ 2801 009c 0C000000 		.4byte	.LFE52-.LFB52
+ 2802 00a0 00000000 		.4byte	.LFB53
+ 2803 00a4 0C000000 		.4byte	.LFE53-.LFB53
+ 2804 00a8 00000000 		.4byte	.LFB54
+ 2805 00ac 0C000000 		.4byte	.LFE54-.LFB54
+ 2806 00b0 00000000 		.4byte	.LFB55
+ 2807 00b4 0C000000 		.4byte	.LFE55-.LFB55
+ 2808 00b8 00000000 		.4byte	.LFB56
+ 2809 00bc 0C000000 		.4byte	.LFE56-.LFB56
+ 2810 00c0 00000000 		.4byte	.LFB57
+ 2811 00c4 0C000000 		.4byte	.LFE57-.LFB57
+ 2812 00c8 00000000 		.4byte	.LFB58
+ 2813 00cc 0C000000 		.4byte	.LFE58-.LFB58
+ 2814 00d0 00000000 		.4byte	.LFB59
+ 2815 00d4 0C000000 		.4byte	.LFE59-.LFB59
+ 2816 00d8 00000000 		.4byte	.LFB60
+ 2817 00dc 0C000000 		.4byte	.LFE60-.LFB60
+ 2818 00e0 00000000 		.4byte	.LFB61
+ 2819 00e4 0C000000 		.4byte	.LFE61-.LFB61
+ 2820 00e8 00000000 		.4byte	.LFB62
+ 2821 00ec 18000000 		.4byte	.LFE62-.LFB62
+ 2822 00f0 00000000 		.4byte	.LFB63
+ 2823 00f4 30000000 		.4byte	.LFE63-.LFB63
+ 2824 00f8 00000000 		.4byte	.LFB64
+ 2825 00fc 88000000 		.4byte	.LFE64-.LFB64
+ 2826 0100 00000000 		.4byte	.LFB66
+ 2827 0104 7C000000 		.4byte	.LFE66-.LFB66
+ 2828 0108 00000000 		.4byte	.LFB65
+ 2829 010c 20000000 		.4byte	.LFE65-.LFB65
+ 2830 0110 00000000 		.4byte	0
+ 2831 0114 00000000 		.4byte	0
+ 2832              		.section	.debug_ranges,"",%progbits
+ 2833              	.Ldebug_ranges0:
+ 2834 0000 02000000 		.4byte	.LBB2
+ 2835 0004 04000000 		.4byte	.LBE2
+ 2836 0008 06000000 		.4byte	.LBB3
+ 2837 000c 22000000 		.4byte	.LBE3
+ 2838 0010 00000000 		.4byte	0
+ 2839 0014 00000000 		.4byte	0
+ 2840 0018 00000000 		.4byte	.LFB35
+ 2841 001c 10000000 		.4byte	.LFE35
+ 2842 0020 00000000 		.4byte	.LFB36
+ 2843 0024 0C000000 		.4byte	.LFE36
+ 2844 0028 00000000 		.4byte	.LFB37
+ 2845 002c 0C000000 		.4byte	.LFE37
+ 2846 0030 00000000 		.4byte	.LFB38
+ 2847 0034 0C000000 		.4byte	.LFE38
+ 2848 0038 00000000 		.4byte	.LFB39
+ 2849 003c 18000000 		.4byte	.LFE39
+ 2850 0040 00000000 		.4byte	.LFB40
+ 2851 0044 34000000 		.4byte	.LFE40
+ 2852 0048 00000000 		.4byte	.LFB41
+ 2853 004c 40000000 		.4byte	.LFE41
+ 2854 0050 00000000 		.4byte	.LFB42
+ 2855 0054 0C000000 		.4byte	.LFE42
+ 2856 0058 00000000 		.4byte	.LFB43
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 54
+
+
+ 2857 005c 0C000000 		.4byte	.LFE43
+ 2858 0060 00000000 		.4byte	.LFB44
+ 2859 0064 0C000000 		.4byte	.LFE44
+ 2860 0068 00000000 		.4byte	.LFB45
+ 2861 006c 0C000000 		.4byte	.LFE45
+ 2862 0070 00000000 		.4byte	.LFB46
+ 2863 0074 0C000000 		.4byte	.LFE46
+ 2864 0078 00000000 		.4byte	.LFB47
+ 2865 007c 0C000000 		.4byte	.LFE47
+ 2866 0080 00000000 		.4byte	.LFB48
+ 2867 0084 0C000000 		.4byte	.LFE48
+ 2868 0088 00000000 		.4byte	.LFB49
+ 2869 008c 0C000000 		.4byte	.LFE49
+ 2870 0090 00000000 		.4byte	.LFB50
+ 2871 0094 0C000000 		.4byte	.LFE50
+ 2872 0098 00000000 		.4byte	.LFB51
+ 2873 009c 0C000000 		.4byte	.LFE51
+ 2874 00a0 00000000 		.4byte	.LFB52
+ 2875 00a4 0C000000 		.4byte	.LFE52
+ 2876 00a8 00000000 		.4byte	.LFB53
+ 2877 00ac 0C000000 		.4byte	.LFE53
+ 2878 00b0 00000000 		.4byte	.LFB54
+ 2879 00b4 0C000000 		.4byte	.LFE54
+ 2880 00b8 00000000 		.4byte	.LFB55
+ 2881 00bc 0C000000 		.4byte	.LFE55
+ 2882 00c0 00000000 		.4byte	.LFB56
+ 2883 00c4 0C000000 		.4byte	.LFE56
+ 2884 00c8 00000000 		.4byte	.LFB57
+ 2885 00cc 0C000000 		.4byte	.LFE57
+ 2886 00d0 00000000 		.4byte	.LFB58
+ 2887 00d4 0C000000 		.4byte	.LFE58
+ 2888 00d8 00000000 		.4byte	.LFB59
+ 2889 00dc 0C000000 		.4byte	.LFE59
+ 2890 00e0 00000000 		.4byte	.LFB60
+ 2891 00e4 0C000000 		.4byte	.LFE60
+ 2892 00e8 00000000 		.4byte	.LFB61
+ 2893 00ec 0C000000 		.4byte	.LFE61
+ 2894 00f0 00000000 		.4byte	.LFB62
+ 2895 00f4 18000000 		.4byte	.LFE62
+ 2896 00f8 00000000 		.4byte	.LFB63
+ 2897 00fc 30000000 		.4byte	.LFE63
+ 2898 0100 00000000 		.4byte	.LFB64
+ 2899 0104 88000000 		.4byte	.LFE64
+ 2900 0108 00000000 		.4byte	.LFB66
+ 2901 010c 7C000000 		.4byte	.LFE66
+ 2902 0110 00000000 		.4byte	.LFB65
+ 2903 0114 20000000 		.4byte	.LFE65
+ 2904 0118 00000000 		.4byte	0
+ 2905 011c 00000000 		.4byte	0
+ 2906              		.section	.debug_line,"",%progbits
+ 2907              	.Ldebug_line0:
+ 2908 0000 47040000 		.section	.debug_str,"MS",%progbits,1
+ 2908      0200D101 
+ 2908      00000201 
+ 2908      FB0E0D00 
+ 2908      01010101 
+ 2909              	.LASF34:
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 55
+
+
+ 2910 0000 47657454 		.ascii	"GetTickMax\000"
+ 2910      69636B4D 
+ 2910      617800
+ 2911              	.LASF58:
+ 2912 000b 51756164 		.ascii	"QuadDec_GetCounter\000"
+ 2912      4465635F 
+ 2912      47657443 
+ 2912      6F756E74 
+ 2912      657200
+ 2913              	.LASF43:
+ 2914 001e 5365746B 		.ascii	"SetkIntegral\000"
+ 2914      496E7465 
+ 2914      6772616C 
+ 2914      00
+ 2915              	.LASF41:
+ 2916 002b 5365746B 		.ascii	"SetkPosition\000"
+ 2916      506F7369 
+ 2916      74696F6E 
+ 2916      00
+ 2917              	.LASF94:
+ 2918 0038 506F7369 		.ascii	"Position_PID\000"
+ 2918      74696F6E 
+ 2918      5F504944 
+ 2918      00
+ 2919              	.LASF79:
+ 2920 0045 6C617374 		.ascii	"lastError\000"
+ 2920      4572726F 
+ 2920      7200
+ 2921              	.LASF28:
+ 2922 004f 55706461 		.ascii	"UpdateConversion\000"
+ 2922      7465436F 
+ 2922      6E766572 
+ 2922      73696F6E 
+ 2922      00
+ 2923              	.LASF53:
+ 2924 0060 666C6970 		.ascii	"flip\000"
+ 2924      00
+ 2925              	.LASF64:
+ 2926 0065 53657450 		.ascii	"SetPosition\000"
+ 2926      6F736974 
+ 2926      696F6E00 
+ 2927              	.LASF2:
+ 2928 0071 73686F72 		.ascii	"short int\000"
+ 2928      7420696E 
+ 2928      7400
+ 2929              	.LASF59:
+ 2930 007b 74617267 		.ascii	"targetmDeg\000"
+ 2930      65746D44 
+ 2930      656700
+ 2931              	.LASF35:
+ 2932 0086 47657454 		.ascii	"GetTickMin\000"
+ 2932      69636B4D 
+ 2932      696E00
+ 2933              	.LASF23:
+ 2934 0091 73697A65 		.ascii	"sizetype\000"
+ 2934      74797065 
+ 2934      00
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 56
+
+
+ 2935              	.LASF77:
+ 2936 009a 6D446567 		.ascii	"mDegPerTick\000"
+ 2936      50657254 
+ 2936      69636B00 
+ 2937              	.LASF52:
+ 2938 00a6 53657445 		.ascii	"SetEncoderDir\000"
+ 2938      6E636F64 
+ 2938      65724469 
+ 2938      7200
+ 2939              	.LASF37:
+ 2940 00b4 4765746D 		.ascii	"GetmDegMin\000"
+ 2940      4465674D 
+ 2940      696E00
+ 2941              	.LASF65:
+ 2942 00bf 6D446567 		.ascii	"mDegs\000"
+ 2942      7300
+ 2943              	.LASF81:
+ 2944 00c5 7573696E 		.ascii	"usingPot\000"
+ 2944      67506F74 
+ 2944      00
+ 2945              	.LASF92:
+ 2946 00ce 433A5C55 		.ascii	"C:\\Users\\casey\\Desktop\\Robotics Stuff\\BLDC_Mot"
+ 2946      73657273 
+ 2946      5C636173 
+ 2946      65795C44 
+ 2946      65736B74 
+ 2947 00fc 6F725F42 		.ascii	"or_Board_PY2023\\BLDC_Motor_Board.cydsn\000"
+ 2947      6F617264 
+ 2947      5F505932 
+ 2947      3032335C 
+ 2947      424C4443 
+ 2948              	.LASF4:
+ 2949 0123 5F5F7569 		.ascii	"__uint16_t\000"
+ 2949      6E743136 
+ 2949      5F7400
+ 2950              	.LASF44:
+ 2951 012e 5365746B 		.ascii	"SetkDerivative\000"
+ 2951      44657269 
+ 2951      76617469 
+ 2951      766500
+ 2952              	.LASF62:
+ 2953 013d 64657269 		.ascii	"derivative\000"
+ 2953      76617469 
+ 2953      766500
+ 2954              	.LASF88:
+ 2955 0148 726F756E 		.ascii	"round\000"
+ 2955      6400
+ 2956              	.LASF30:
+ 2957 014e 4765746B 		.ascii	"GetkPosition\000"
+ 2957      506F7369 
+ 2957      74696F6E 
+ 2957      00
+ 2958              	.LASF90:
+ 2959 015b 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2959      43313120 
+ 2959      352E342E 
+ 2959      31203230 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 57
+
+
+ 2959      31363036 
+ 2960 018e 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 2960      20726576 
+ 2960      6973696F 
+ 2960      6E203233 
+ 2960      37373135 
+ 2961 01c1 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2961      66756E63 
+ 2961      74696F6E 
+ 2961      2D736563 
+ 2961      74696F6E 
+ 2962              	.LASF13:
+ 2963 01e9 75696E74 		.ascii	"uint8_t\000"
+ 2963      385F7400 
+ 2964              	.LASF85:
+ 2965 01f1 4144435F 		.ascii	"ADC_Pot_StartConvert\000"
+ 2965      506F745F 
+ 2965      53746172 
+ 2965      74436F6E 
+ 2965      76657274 
+ 2966              	.LASF74:
+ 2967 0206 6D446567 		.ascii	"mDegMax\000"
+ 2967      4D617800 
+ 2968              	.LASF86:
+ 2969 020e 4144435F 		.ascii	"ADC_Pot_IsEndConversion\000"
+ 2969      506F745F 
+ 2969      4973456E 
+ 2969      64436F6E 
+ 2969      76657273 
+ 2970              	.LASF55:
+ 2971 0226 656E635F 		.ascii	"enc_limit\000"
+ 2971      6C696D69 
+ 2971      7400
+ 2972              	.LASF25:
+ 2973 0230 44697361 		.ascii	"DisablePID\000"
+ 2973      626C6550 
+ 2973      494400
+ 2974              	.LASF38:
+ 2975 023b 47657455 		.ascii	"GetUsingPot\000"
+ 2975      73696E67 
+ 2975      506F7400 
+ 2976              	.LASF19:
+ 2977 0247 666C6F61 		.ascii	"float\000"
+ 2977      7400
+ 2978              	.LASF51:
+ 2979 024d 636F6E76 		.ascii	"conv\000"
+ 2979      00
+ 2980              	.LASF93:
+ 2981 0252 496E6974 		.ascii	"InitializePID\000"
+ 2981      69616C69 
+ 2981      7A655049 
+ 2981      4400
+ 2982              	.LASF10:
+ 2983 0260 6C6F6E67 		.ascii	"long long int\000"
+ 2983      206C6F6E 
+ 2983      6720696E 
+ 2983      7400
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 58
+
+
+ 2984              	.LASF57:
+ 2985 026e 51756164 		.ascii	"QuadDec_SetCounter\000"
+ 2985      4465635F 
+ 2985      53657443 
+ 2985      6F756E74 
+ 2985      657200
+ 2986              	.LASF17:
+ 2987 0281 696E7438 		.ascii	"int8\000"
+ 2987      00
+ 2988              	.LASF82:
+ 2989 0286 656E6162 		.ascii	"enabledPID\000"
+ 2989      6C656450 
+ 2989      494400
+ 2990              	.LASF80:
+ 2991 0291 696E7465 		.ascii	"integralClamp\000"
+ 2991      6772616C 
+ 2991      436C616D 
+ 2991      7000
+ 2992              	.LASF7:
+ 2993 029f 6C6F6E67 		.ascii	"long int\000"
+ 2993      20696E74 
+ 2993      00
+ 2994              	.LASF78:
+ 2995 02a8 696E7465 		.ascii	"integral\000"
+ 2995      6772616C 
+ 2995      00
+ 2996              	.LASF3:
+ 2997 02b1 5F5F7569 		.ascii	"__uint8_t\000"
+ 2997      6E74385F 
+ 2997      7400
+ 2998              	.LASF68:
+ 2999 02bb 64656C61 		.ascii	"delayTime\000"
+ 2999      7954696D 
+ 2999      6500
+ 3000              	.LASF71:
+ 3001 02c5 6B446572 		.ascii	"kDerivative\000"
+ 3001      69766174 
+ 3001      69766500 
+ 3002              	.LASF45:
+ 3003 02d1 73657454 		.ascii	"setTickMin\000"
+ 3003      69636B4D 
+ 3003      696E00
+ 3004              	.LASF76:
+ 3005 02dc 666C6970 		.ascii	"flipEncoder\000"
+ 3005      456E636F 
+ 3005      64657200 
+ 3006              	.LASF66:
+ 3007 02e8 73706565 		.ascii	"speed\000"
+ 3007      6400
+ 3008              	.LASF22:
+ 3009 02ee 6C6F6E67 		.ascii	"long double\000"
+ 3009      20646F75 
+ 3009      626C6500 
+ 3010              	.LASF87:
+ 3011 02fa 4144435F 		.ascii	"ADC_Pot_GetResult16\000"
+ 3011      506F745F 
+ 3011      47657452 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 59
+
+
+ 3011      6573756C 
+ 3011      74313600 
+ 3012              	.LASF1:
+ 3013 030e 756E7369 		.ascii	"unsigned char\000"
+ 3013      676E6564 
+ 3013      20636861 
+ 3013      7200
+ 3014              	.LASF24:
+ 3015 031c 436C6561 		.ascii	"ClearPIDProgress\000"
+ 3015      72504944 
+ 3015      50726F67 
+ 3015      72657373 
+ 3015      00
+ 3016              	.LASF56:
+ 3017 032d 47657450 		.ascii	"GetPositionmDeg\000"
+ 3017      6F736974 
+ 3017      696F6E6D 
+ 3017      44656700 
+ 3018              	.LASF67:
+ 3019 033d 53746174 		.ascii	"Status_Reg_Switches_Read\000"
+ 3019      75735F52 
+ 3019      65675F53 
+ 3019      77697463 
+ 3019      6865735F 
+ 3020              	.LASF49:
+ 3021 0356 73657455 		.ascii	"setUsingPot\000"
+ 3021      73696E67 
+ 3021      506F7400 
+ 3022              	.LASF54:
+ 3023 0362 73657445 		.ascii	"setEncoderAtLimit\000"
+ 3023      6E636F64 
+ 3023      65724174 
+ 3023      4C696D69 
+ 3023      7400
+ 3024              	.LASF0:
+ 3025 0374 7369676E 		.ascii	"signed char\000"
+ 3025      65642063 
+ 3025      68617200 
+ 3026              	.LASF11:
+ 3027 0380 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 3027      206C6F6E 
+ 3027      6720756E 
+ 3027      7369676E 
+ 3027      65642069 
+ 3028              	.LASF16:
+ 3029 0397 75696E74 		.ascii	"uint32_t\000"
+ 3029      33325F74 
+ 3029      00
+ 3030              	.LASF12:
+ 3031 03a0 756E7369 		.ascii	"unsigned int\000"
+ 3031      676E6564 
+ 3031      20696E74 
+ 3031      00
+ 3032              	.LASF14:
+ 3033 03ad 75696E74 		.ascii	"uint16_t\000"
+ 3033      31365F74 
+ 3033      00
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 60
+
+
+ 3034              	.LASF27:
+ 3035 03b6 50494449 		.ascii	"PIDIsEnabled\000"
+ 3035      73456E61 
+ 3035      626C6564 
+ 3035      00
+ 3036              	.LASF33:
+ 3037 03c3 47657443 		.ascii	"GetConversion\000"
+ 3037      6F6E7665 
+ 3037      7273696F 
+ 3037      6E00
+ 3038              	.LASF60:
+ 3039 03d1 63757272 		.ascii	"current\000"
+ 3039      656E7400 
+ 3040              	.LASF5:
+ 3041 03d9 73686F72 		.ascii	"short unsigned int\000"
+ 3041      7420756E 
+ 3041      7369676E 
+ 3041      65642069 
+ 3041      6E7400
+ 3042              	.LASF31:
+ 3043 03ec 4765746B 		.ascii	"GetkIntegral\000"
+ 3043      496E7465 
+ 3043      6772616C 
+ 3043      00
+ 3044              	.LASF39:
+ 3045 03f9 47657450 		.ascii	"GetPotVal\000"
+ 3045      6F745661 
+ 3045      6C00
+ 3046              	.LASF72:
+ 3047 0403 7469636B 		.ascii	"tickMax\000"
+ 3047      4D617800 
+ 3048              	.LASF89:
+ 3049 040b 7365745F 		.ascii	"set_speed\000"
+ 3049      73706565 
+ 3049      6400
+ 3050              	.LASF21:
+ 3051 0415 63686172 		.ascii	"char\000"
+ 3051      00
+ 3052              	.LASF42:
+ 3053 041a 73657456 		.ascii	"setValue\000"
+ 3053      616C7565 
+ 3053      00
+ 3054              	.LASF48:
+ 3055 0423 7365746D 		.ascii	"setmDegMax\000"
+ 3055      4465674D 
+ 3055      617800
+ 3056              	.LASF15:
+ 3057 042e 696E7433 		.ascii	"int32_t\000"
+ 3057      325F7400 
+ 3058              	.LASF46:
+ 3059 0436 73657454 		.ascii	"setTickMax\000"
+ 3059      69636B4D 
+ 3059      617800
+ 3060              	.LASF40:
+ 3061 0441 5365744D 		.ascii	"SetMaxPIDSpeed\000"
+ 3061      61785049 
+ 3061      44537065 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 61
+
+
+ 3061      656400
+ 3062              	.LASF69:
+ 3063 0450 6B506F73 		.ascii	"kPosition\000"
+ 3063      6974696F 
+ 3063      6E00
+ 3064              	.LASF8:
+ 3065 045a 5F5F7569 		.ascii	"__uint32_t\000"
+ 3065      6E743332 
+ 3065      5F7400
+ 3066              	.LASF70:
+ 3067 0465 6B496E74 		.ascii	"kIntegral\000"
+ 3067      65677261 
+ 3067      6C00
+ 3068              	.LASF73:
+ 3069 046f 7469636B 		.ascii	"tickMin\000"
+ 3069      4D696E00 
+ 3070              	.LASF83:
+ 3071 0477 6D617853 		.ascii	"maxSpeed\000"
+ 3071      70656564 
+ 3071      00
+ 3072              	.LASF47:
+ 3073 0480 7365746D 		.ascii	"setmDegMin\000"
+ 3073      4465674D 
+ 3073      696E00
+ 3074              	.LASF9:
+ 3075 048b 6C6F6E67 		.ascii	"long unsigned int\000"
+ 3075      20756E73 
+ 3075      69676E65 
+ 3075      6420696E 
+ 3075      7400
+ 3076              	.LASF18:
+ 3077 049d 696E7433 		.ascii	"int32\000"
+ 3077      3200
+ 3078              	.LASF75:
+ 3079 04a3 6D446567 		.ascii	"mDegMin\000"
+ 3079      4D696E00 
+ 3080              	.LASF50:
+ 3081 04ab 53657443 		.ascii	"SetConversion\000"
+ 3081      6F6E7665 
+ 3081      7273696F 
+ 3081      6E00
+ 3082              	.LASF63:
+ 3083 04b9 50574D4F 		.ascii	"PWMOut\000"
+ 3083      757400
+ 3084              	.LASF91:
+ 3085 04c0 424C4443 		.ascii	"BLDC_pid.c\000"
+ 3085      5F706964 
+ 3085      2E6300
+ 3086              	.LASF6:
+ 3087 04cb 5F5F696E 		.ascii	"__int32_t\000"
+ 3087      7433325F 
+ 3087      7400
+ 3088              	.LASF61:
+ 3089 04d5 6572726F 		.ascii	"error\000"
+ 3089      7200
+ 3090              	.LASF26:
+ 3091 04db 456E6162 		.ascii	"EnablePID\000"
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc8Z76Za.s 			page 62
+
+
+ 3091      6C655049 
+ 3091      4400
+ 3092              	.LASF20:
+ 3093 04e5 646F7562 		.ascii	"double\000"
+ 3093      6C6500
+ 3094              	.LASF29:
+ 3095 04ec 4765744D 		.ascii	"GetMaxPIDSpeed\000"
+ 3095      61785049 
+ 3095      44537065 
+ 3095      656400
+ 3096              	.LASF32:
+ 3097 04fb 4765746B 		.ascii	"GetkDerivative\000"
+ 3097      44657269 
+ 3097      76617469 
+ 3097      766500
+ 3098              	.LASF84:
+ 3099 050a 69676E6F 		.ascii	"ignoreLimSw\000"
+ 3099      72654C69 
+ 3099      6D537700 
+ 3100              	.LASF36:
+ 3101 0516 4765746D 		.ascii	"GetmDegMax\000"
+ 3101      4465674D 
+ 3101      617800
+ 3102              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
