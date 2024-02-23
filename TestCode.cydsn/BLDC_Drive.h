@@ -10,4 +10,12 @@
  * ========================================
 */
 
-/* [] END OF FILE */
+#include <stdio.h>
+#ifndef MotorDrive
+    #define MotorDrive
+#endif
+
+void set_speed(int16_t speed, uint8_t disable_limit, uint8_t limitSW);
+int16_t GetCurrentSpeed();
+void readHallState();
+void commutateMotor(uint8_t hallState);

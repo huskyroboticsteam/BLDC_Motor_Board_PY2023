@@ -1,106 +1,74 @@
+/*
+
+    Control FSM
+
+*/
+
+#include "BLDC_FSM.h"
+#include "BLDC_Drive.h"
 #include "project.h"
+#include "BLDC_pid.h"
 
-// State of U, V, and W inductors high (polarity) and low (enable)
-uint8_t UHstate = 0;
-uint8_t ULstate = 0;
-uint8_t VHstate = 0;
-uint8_t VLstate = 0;
-uint8_t WHstate = 0;
-uint8_t WLstate = 0;
+/*drive mode
+0xFF = un-init
+0x0 = pwm
+0x1 = PID*/
+uint8_t motorUnitMode   = 0xFF;
+uint8_t motorUnitState  = UNINIT; // motorUnitState - 
+uint8_t PIDConstSetReg      = 0;
 
-// Hall effect sensor binary data
-uint8_t hall1State;
-uint8_t hall2State;
-uint8_t hall3State;
-
-uint8_t BLDC_state;
+extern const uint32 StripLights_CLUT[ ];
 
 
+// all the xxxIsSet methods check if the constant has been set by the Jetson,
+// they set PID register to different values, since the Jetson needs to tell
+// the board what units to use on startup
 void GotoUninitState() {
     //halt motor
     #ifdef RGB_LED_ARRAY
     StripLights_DisplayClear(StripLights_BLACK);
     #endif
-
-    BLDC_state = 0xFF;
+    ClearPIDProgress();
+    motorUnitMode = 0xFF;
+    motorUnitState = UNINIT;
 }
-
+void SetStateTo(uint8_t state) {
+    motorUnitState = state;
+}
+void SetModeTo(uint8_t mode) {
+    motorUnitMode = mode;
+}
 uint8_t GetState(){
-    return BLDC_state;
+    return motorUnitState;
+}
+uint8_t GetMode(){
+    return motorUnitMode;
+}
+
+// The next three methods check for the PID constants
+void PositionConstIsSet() {
+    PIDConstSetReg |= 0b100;
+}
+void IntegralConstIsSet(){
+    PIDConstSetReg |= 0b10;
+}
+void DerivativeConstIsSet(){
+    PIDConstSetReg |= 0b1;
+}
+
+void PPJRConstIsSet() {
+    PIDConstSetReg |= 0b1000;
 }
 
 
+void MaxJointRevIsSet(){
+}
 
-// FSM changing through states
-// "--state = X" means "don't-care"
-void readHallState() {
-    hall1State = HALL1_Read();
-    hall2State = HALL2_Read();
-    hall3State = HALL3_Read();
-    
-	// State 1 (001)
-	if (~hall1State && ~hall2State && hall3State) {
-        UHstate = 1;
-		ULstate = 1;
-		// VHstate = X;
-		VLstate = 0;
-		WHstate = 0;
-		WLstate = 1;
-	}
+//return 1 if all PID const are set. Return 0 if not
+uint8_t PIDconstsSet(){
+    return PIDConstSetReg == 0b1111; 
+}
 
-	// State 2 (101)
-	if (~hall1State && hall2State && hall3State) {
-		// UHstate = X;
-		ULstate = 0;
-		VHstate = 1;
-		VLstate = 0;
-		WHstate = 0;
-		WLstate = 1;
-	}
-
-	// State 3 (100)
-	if (~hall1State && hall2State && hall3State) {
-		UHstate = 0;
-		ULstate = 1;
-		VHstate = 1;
-		VLstate = 1;
-		// WHstate = X;
-		WLstate = 0;
-	}
-
-    // State 4 (110)
-    if (hall1State && ~hall2State && ~hall3State) {
-		UHstate = 0;
-		ULstate = 1;
-		// VHstate = X;
-		VLstate = 0;
-		WHstate = 0;
-		WLstate = 1;
-    }
-	    // State 5 (010)
-    if (hall1State && ~hall2State && hall3State) {
-		// UHstate = X;
-		ULstate = 1;
-		VHstate = 0;
-		VLstate = 1;
-		WHstate = 0;
-		WLstate = 1;
-    }
-	    // State 6 (011)
-    if (hall1State && hall2State && ~hall3State) {
-		UHstate = 1;
-		ULstate = 1;
-		// VHstate = X;
-		VLstate = 1;
-		WHstate = 0;
-		WLstate = 1;
-    }
-    
-    UH_Write(UHstate);
-    UL_Write(ULstate);
-    VH_Write(VHstate);
-    VL_Write(VLstate);
-    WH_Write(WHstate);
-    WL_Write(WLstate);
-    
+void ClearPIDconst() {
+    PIDConstSetReg = 0;
 }

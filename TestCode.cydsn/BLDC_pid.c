@@ -43,7 +43,7 @@ uint8_t PIDIsEnabled() {
     return(enabledPID);
 }
 void InitializePID() {
-    set_PWM(0, 0, 0);
+    // set_PWM(0, 0, 0);
     ClearPIDProgress();
     DisablePID();
     lastError = 0;

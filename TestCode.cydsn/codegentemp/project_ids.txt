@@ -1,6 +1,6 @@
-C:\Users\lucbu\OneDrive\Documents\GitHub\BLDC_Motor_Board_PY2023\TestCode.cydsn\TestCode.cyprj|d02779d1-4fb0-43c7-8652-0a77fb2af419
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|78f8695b-e5ed-4b6b-9218-3c703bf3fcf2
-C:\Users\lucbu\OneDrive\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|b941a9b5-fd4c-4f5b-88e1-287d91a4cd5d
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|5522bee8-932e-4904-b540-e79aca889634
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|81225611-6870-4b8e-bd93-d524abda31c0
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|cf3b2927-a96c-4aa6-8de2-41736c686065
+C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\TestCode.cydsn\TestCode.cyprj|3040dc25-bd4d-49aa-83b7-99249272b10c
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|17555bcb-e4d7-403c-b7c8-2cd4d8c33cc7
+C:\Users\M4rz4n\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|cafcd500-ea9e-40e8-a9fc-e8286b629ae1
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|eaa8d179-1edc-4623-8c16-970dd8e91c36
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|1fbf344a-8509-4216-9f02-ba92e4165ff4
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|16ffecc1-aedb-4609-92ea-ee5041a57441

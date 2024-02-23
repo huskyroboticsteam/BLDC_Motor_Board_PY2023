@@ -24,23 +24,23 @@ uint8_t Can_LED = 0;
 uint8_t Debug_LED = 0;
 uint8_t Error_LED = 0;
 
-// int32_t millidegreeTarget = 0;
+int32_t millidegreeTarget = 0;
 
 //Uart variables
 char txData[TX_DATA_SIZE];
 
 //drive varaible
-// int16 nextPWM = 0;
-// extern uint8 invalidate;
+int16 nextPWM = 0;
+extern uint8 invalidate;
 uint8_t ignoreLimSw = 0;
-// uint8_t encoderTimeOut = 0;
+uint8_t encoderTimeOut = 0;
 uint8_t hallSensorsTimeOut = 0;
 
 // Motor Unit Variables
-//uint8_t bound_set1;
-//uint8_t bound_set2;
-//int32_t enc_lim_1;
-//int32_t enc_lim_2;
+uint8_t bound_set1;
+uint8_t bound_set2;
+int32_t enc_lim_1;
+int32_t enc_lim_2;
 
 //Status and Data Structs
 volatile uint8_t drive = 0;
@@ -50,12 +50,18 @@ CANPacket can_send;
 
 uint8_t address = 0;
 
-/*
-    if(invalidate >= 20){
-        set_PWM(0, 0, 0);   
-    }
+CY_ISR(Period_Reset_Handler) {
+    int timer = Timer_general_ReadStatusRegister();
+    invalidate++;
+    Can_LED++;
+    CAN_check_delay ++;
+    Error_LED++;
+    Debug_LED++; // do I need this?
 
-    if(ERRORTimeLED >= 3) {
+    if(invalidate >= 20){
+        set_speed(0, 0, 0);   
+    }
+    if(Error_LED >= 3) {
         #ifdef ERROR_LED
         ERROR_LED_Write(LED_OFF);
         #endif
@@ -63,7 +69,7 @@ uint8_t address = 0;
         Debug_1_Write(LED_OFF);
         #endif
     }
-    if(CAN_time_LED >= 3){
+    if(Can_LED >= 3){
         #ifdef CAN_LED
         CAN_LED_Write(LED_OFF);
         #endif
@@ -78,7 +84,7 @@ CY_ISR(Pin_Limit_Handler){
     
     UART_UartPutString("LIMIT HIT\n\r");
     
-    set_PWM(GetCurrentPWM(), ignoreLimSw, Status_Reg_Switches_Read());
+    set_speed(GetCurrentSpeed(), ignoreLimSw, Status_Reg_Switches_Read());
     
     #ifdef CAN_TELEM_SEND
     AssembleLimitSwitchAlertPacket(&can_send, DEVICE_GROUP_JETSON, 
@@ -95,7 +101,7 @@ CY_ISR(Pin_Limit_Handler){
         UART_UartPutString("Change limit 2\n\r");
     }
 }
-*/
+
 
     
 
@@ -111,7 +117,7 @@ int main(void)
                 SetStateTo(CHECK_CAN);
                 break;
             case(SET_PWM):
-                set_PWM(nextPWM, ignoreLimSw, Status_Reg_Switches_Read());
+                set_speed(nextPWM, ignoreLimSw, Status_Reg_Switches_Read());
                 SetStateTo(CHECK_CAN);
                 break;
             case(CALC_PID):
@@ -181,6 +187,8 @@ void Initialize(void) {
 
 void DebugPrint(char input) {
     switch(input) {
+        case 's':
+            // set motor speed to 0.5 rpm
         case 'e':
             sprintf(txData, "Encoder Value: %li  \r\n", QuadDec_GetCounter());
             break;
