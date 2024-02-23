@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="BLDCWorkspace\TestCode\Source Files\BLDC_CAN.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="BLDCWorkspace\TestCode\Header Files\main.h">
 <ExpandedNodeIds>
 <v>BLDCWorkspace</v>
 <v>BLDCWorkspace\TestCode</v>
@@ -27,6 +27,7 @@
 <v>BLDCWorkspace\TestCode\TestCode.cydwr\System</v>
 <v>BLDCWorkspace\TestCode\TestCode.cydwr\Directives</v>
 <v>BLDCWorkspace\TestCode\TestCode.cydwr\Flash Security</v>
+<v>BLDCWorkspace\TestCode\CAN Library</v>
 <v>BLDCWorkspace\TestCode\CAN Library\CANCommon.c</v>
 <v>BLDCWorkspace\TestCode\CAN Library\CANCommon.h</v>
 <v>BLDCWorkspace\TestCode\CAN Library\CANGPIO.c</v>
@@ -59,7 +60,46 @@
 <v>BLDCWorkspace\TestCode\Source Files\setInterrupt.c</v>
 <v>BLDCWorkspace\TestCode\Generated_Source</v>
 </ExpandedNodeIds>
-<VisibleNodeIds />
+<VisibleNodeIds>
+<v>BLDCWorkspace\TestCode\TestCode.cydwr\Clocks</v>
+<v>BLDCWorkspace\TestCode\TestCode.cydwr\Interrupts</v>
+<v>BLDCWorkspace\TestCode\TestCode.cydwr\System</v>
+<v>BLDCWorkspace\TestCode\TestCode.cydwr\Directives</v>
+<v>BLDCWorkspace\TestCode\TestCode.cydwr\Flash Security</v>
+<v>BLDCWorkspace\TestCode\CAN Library</v>
+<v>BLDCWorkspace\TestCode\CAN Library\CANCommon.c</v>
+<v>BLDCWorkspace\TestCode\CAN Library\CANCommon.h</v>
+<v>BLDCWorkspace\TestCode\CAN Library\CANGPIO.c</v>
+<v>BLDCWorkspace\TestCode\CAN Library\CANGPIO.h</v>
+<v>BLDCWorkspace\TestCode\CAN Library\CANLibrary.h</v>
+<v>BLDCWorkspace\TestCode\CAN Library\CANMotorUnit.c</v>
+<v>BLDCWorkspace\TestCode\CAN Library\CANMotorUnit.h</v>
+<v>BLDCWorkspace\TestCode\CAN Library\CANPacket.c</v>
+<v>BLDCWorkspace\TestCode\CAN Library\CANPacket.h</v>
+<v>BLDCWorkspace\TestCode\CAN Library\CANPower.c</v>
+<v>BLDCWorkspace\TestCode\CAN Library\CANPower.h</v>
+<v>BLDCWorkspace\TestCode\CAN Library\CANSerialNumbers.h</v>
+<v>BLDCWorkspace\TestCode\CAN Library\Port.h</v>
+<v>BLDCWorkspace\TestCode\CAN Library\PortPSOC_CY8C4248AZI_L485.c</v>
+<v>BLDCWorkspace\TestCode\Header Files</v>
+<v>BLDCWorkspace\TestCode\Header Files\BLDC_CAN.h</v>
+<v>BLDCWorkspace\TestCode\Header Files\BLDC_Debug.h</v>
+<v>BLDCWorkspace\TestCode\Header Files\BLDC_Drive.h</v>
+<v>BLDCWorkspace\TestCode\Header Files\BLDC_FSM.h</v>
+<v>BLDCWorkspace\TestCode\Header Files\BLDC_pid.h</v>
+<v>BLDCWorkspace\TestCode\Header Files\cyapicallbacks.h</v>
+<v>BLDCWorkspace\TestCode\Header Files\main.h</v>
+<v>BLDCWorkspace\TestCode\Header Files\setInterrupt.h</v>
+<v>BLDCWorkspace\TestCode\Source Files</v>
+<v>BLDCWorkspace\TestCode\Source Files\BLDC_CAN.c</v>
+<v>BLDCWorkspace\TestCode\Source Files\BLDC_Drive.c</v>
+<v>BLDCWorkspace\TestCode\Source Files\BLDC_FSM.c</v>
+<v>BLDCWorkspace\TestCode\Source Files\BLDC_pid.c</v>
+<v>BLDCWorkspace\TestCode\Source Files\main.c</v>
+<v>BLDCWorkspace\TestCode\Source Files\setInterrupt.c</v>
+<v>BLDCWorkspace\TestCode\Generated_Source</v>
+<v>BLDCWorkspace\TestCode\Generated_Source\PSoC4</v>
+</VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
@@ -68,7 +108,12 @@
 <v>BLDCWorkspace\TestCode\TopDesign</v>
 <v>BLDCWorkspace\TestCode\TopDesign\TopDesign.cysch</v>
 </ExpandedNodeIds>
-<VisibleNodeIds />
+<VisibleNodeIds>
+<v>BLDCWorkspace</v>
+<v>BLDCWorkspace\TestCode</v>
+<v>BLDCWorkspace\TestCode\TopDesign</v>
+<v>BLDCWorkspace\TestCode\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
@@ -78,6 +123,9 @@
 <v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541</v>
 <v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug</v>
 <v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\BLDC_CAN.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\BLDC_Drive.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\BLDC_FSM.lst</v>
 <v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN.lst</v>
 <v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_HFCLK.lst</v>
 <v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_INT.lst</v>
@@ -142,8 +190,6 @@
 <v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\RX_1.lst</v>
 <v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\RX_1_PM.lst</v>
 <v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Status_Reg_1.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Timer_1.lst</v>
-<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Timer_1_PM.lst</v>
 <v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\TMC6100_SPI.lst</v>
 <v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\TMC6100_SPI_BOOT.lst</v>
 <v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\TMC6100_SPI_miso_s.lst</v>
@@ -192,7 +238,46 @@
 <v>BLDCWorkspace\TestCode\TestCode.rpt</v>
 <v>BLDCWorkspace\TestCode\TestCode_timing.html</v>
 </ExpandedNodeIds>
-<VisibleNodeIds />
+<VisibleNodeIds>
+<v>BLDCWorkspace</v>
+<v>BLDCWorkspace\TestCode</v>
+<v>BLDCWorkspace\TestCode\CortexM0</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\BLDC_CAN.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\BLDC_Drive.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\BLDC_FSM.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_HFCLK.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_INT.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_isr.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_LED.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_LED_PM.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_PM.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_TX_RX_func.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Clock_2.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Cur_Alert_1.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Cur_Alert_1_PM.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Cur_Alert_2.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Cur_Alert_2_PM.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Cur_Alert_3.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Cur_Alert_3_PM.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_BOOT.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_I2C.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_I2C_BOOT.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_I2C_INT.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_I2C_MASTER.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_PM.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_SCB_IRQ.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_SCBCLK.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_scl.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_scl_PM.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_sda.lst</v>
+<v>BLDCWorkspace\TestCode\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_sda_PM.lst</v>
+</VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
 <TreeKeysV2>
@@ -209,27 +294,53 @@
 <v>BLDCWorkspace\TestCode\System Reference Guides\cy_boot_v6_0</v>
 <v>BLDCWorkspace\TestCode\System Reference Guides\cy_dmac_v1_10</v>
 <v>BLDCWorkspace\TestCode\System Reference Guides\cy_lfclk_v1_20</v>
+<v>BLDCWorkspace\TestCode\ADC_SAR_SEQ_P4_v2_50.pdf</v>
 <v>BLDCWorkspace\TestCode\CAN_v3_0.pdf</v>
 <v>BLDCWorkspace\TestCode\cy_clock_v2_20</v>
 <v>BLDCWorkspace\TestCode\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
-<v>BLDCWorkspace\TestCode\cy_isr_v1_70.pdf</v>
+<v>BLDCWorkspace\TestCode\cy_isr_v1_70</v>
+<v>BLDCWorkspace\TestCode\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
 <v>BLDCWorkspace\TestCode\cy_pins_v2_20</v>
 <v>BLDCWorkspace\TestCode\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
-<v>BLDCWorkspace\TestCode\CyStatusReg_v1_90.pdf</v>
+<v>BLDCWorkspace\TestCode\CyStatusReg_v1_90</v>
+<v>BLDCWorkspace\TestCode\CyStatusReg_v1_90\CyStatusReg_v1_90.pdf</v>
 <v>BLDCWorkspace\TestCode\Debouncer_v1_0.pdf</v>
-<v>BLDCWorkspace\TestCode\Gnd_v1_0</v>
-<v>BLDCWorkspace\TestCode\Gnd_v1_0\Gnd_v1_0.pdf</v>
 <v>BLDCWorkspace\TestCode\not_v1_0</v>
 <v>BLDCWorkspace\TestCode\not_v1_0\not_v1_0.pdf</v>
 <v>BLDCWorkspace\TestCode\QuadDec_v3_0.pdf</v>
 <v>BLDCWorkspace\TestCode\SCB_P4_v4_0</v>
 <v>BLDCWorkspace\TestCode\SCB_P4_v4_0\SCB_P4_v4_0.pdf</v>
-<v>BLDCWorkspace\TestCode\SwitchSPST_v1_0</v>
-<v>BLDCWorkspace\TestCode\SwitchSPST_v1_0\SwitchSPST_v1_0.pdf</v>
 <v>BLDCWorkspace\TestCode\Timer_v2_80.pdf</v>
 <v>BLDCWorkspace\TestCode\ZeroTerminal.pdf</v>
 </ExpandedNodeIds>
-<VisibleNodeIds />
+<VisibleNodeIds>
+<v>BLDCWorkspace</v>
+<v>BLDCWorkspace\TestCode</v>
+<v>BLDCWorkspace\TestCode\PSoC 4 Architecture TRM</v>
+<v>BLDCWorkspace\TestCode\PSoC 4200L Family Datasheet</v>
+<v>BLDCWorkspace\TestCode\System Reference Guides</v>
+<v>BLDCWorkspace\TestCode\System Reference Guides\cy_boot_v6_0</v>
+<v>BLDCWorkspace\TestCode\System Reference Guides\cy_dmac_v1_10</v>
+<v>BLDCWorkspace\TestCode\System Reference Guides\cy_lfclk_v1_20</v>
+<v>BLDCWorkspace\TestCode\ADC_SAR_SEQ_P4_v2_50.pdf</v>
+<v>BLDCWorkspace\TestCode\CAN_v3_0.pdf</v>
+<v>BLDCWorkspace\TestCode\cy_clock_v2_20</v>
+<v>BLDCWorkspace\TestCode\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>BLDCWorkspace\TestCode\cy_isr_v1_70</v>
+<v>BLDCWorkspace\TestCode\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
+<v>BLDCWorkspace\TestCode\cy_pins_v2_20</v>
+<v>BLDCWorkspace\TestCode\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>BLDCWorkspace\TestCode\CyStatusReg_v1_90</v>
+<v>BLDCWorkspace\TestCode\CyStatusReg_v1_90\CyStatusReg_v1_90.pdf</v>
+<v>BLDCWorkspace\TestCode\Debouncer_v1_0.pdf</v>
+<v>BLDCWorkspace\TestCode\not_v1_0</v>
+<v>BLDCWorkspace\TestCode\not_v1_0\not_v1_0.pdf</v>
+<v>BLDCWorkspace\TestCode\QuadDec_v3_0.pdf</v>
+<v>BLDCWorkspace\TestCode\SCB_P4_v4_0</v>
+<v>BLDCWorkspace\TestCode\SCB_P4_v4_0\SCB_P4_v4_0.pdf</v>
+<v>BLDCWorkspace\TestCode\Timer_v2_80.pdf</v>
+<v>BLDCWorkspace\TestCode\ZeroTerminal.pdf</v>
+</VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
 </CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
@@ -238,17 +349,13 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
+<name v=".\TestCode.cydsn\setInterrupt.c" />
 <name v=".\TestCode.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\TestCode.cydsn\BLDC_Drive.c" />
+<name v=".\TestCode.cydsn\setInterrupt.h" />
 <name v=".\TestCode.cydsn\BLDC_FSM.c" />
-<name v=".\TestCode.cydsn\main.c" />
-<name v=".\TestCode.cydsn\BLDC_CAN.c" />
+<name v=".\TestCode.cydsn\BLDC_Drive.c" />
 <name v=".\TestCode.cydsn\BLDC_FSM.h" />
-<name v=".\TestCode.cydsn\BLDC_pid.c" />
-<name v=".\TestCode.cydsn\BLDC_CAN.h" />
-<name v=".\TestCode.cydsn\BLDC_Debug.h" />
-<name v=".\TestCode.cydsn\untitled01.c" />
-<name v=".\TestCode.cydsn\BLDC_Drive.h" />
+<name v=".\TestCode.cydsn\BLDC_CAN.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -256,7 +363,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1238, 739" SelectedTabbedMdiWindow="e9aa7fa0-ce9f-4a34-9628-d669b7e7939c"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="2995d0d8-9c1a-4ee8-baa7-dd2da4d2d565" /><DocumentWindow Key="C:\Users\lucbu\OneDrive\Documents\GitHub\BLDC_Motor_Board_PY2023\TestCode.cydsn\TopDesign\TopDesign.cysch" Guid="9e20aeea-5871-4829-847c-92aa786f596c" /><DocumentWindow Key="C:\Users\lucbu\OneDrive\Documents\GitHub\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_Drive.c" Guid="e9aa7fa0-ce9f-4a34-9628-d669b7e7939c" /><DocumentWindow Key="C:\Users\lucbu\OneDrive\Documents\GitHub\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_FSM.c" Guid="bc6f6f33-4125-4736-b606-e9d19dc0b667" /><DocumentWindow Key="C:\Users\lucbu\OneDrive\Documents\GitHub\BLDC_Motor_Board_PY2023\TestCode.cydsn\main.c" Guid="be12cfc6-4861-4e5d-aff7-b2ee6187082d" /><DocumentWindow Key="C:\Users\lucbu\OneDrive\Documents\GitHub\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_CAN.c" Guid="4879d1f8-25c9-431a-a1ec-1579930183af" /><DocumentWindow Key="C:\Users\lucbu\OneDrive\Documents\GitHub\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_FSM.h" Guid="578ee53a-aeda-4992-a846-2d83d2d13a9d" /><DocumentWindow Key="C:\Users\lucbu\OneDrive\Documents\GitHub\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_pid.c" Guid="6b71cc7d-5848-4424-a145-b55088ce6a09" /><DocumentWindow Key="C:\Users\lucbu\OneDrive\Documents\GitHub\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_CAN.h" Guid="8c2554f2-0c41-49df-b9b4-702ca76f8ebe" /><DocumentWindow Key="C:\Users\lucbu\OneDrive\Documents\GitHub\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_Debug.h" Guid="c7c06119-f9c6-46f6-a97f-71191d221da9" /><DocumentWindow Key="C:\Users\lucbu\OneDrive\Documents\GitHub\BLDC_Motor_Board_PY2023\TestCode.cydsn\untitled01.c" Guid="202968a2-afc4-464e-aa95-96bf454c5dc5" /><DocumentWindow Key="C:\Users\lucbu\OneDrive\Documents\GitHub\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_Drive.h" Guid="b44a7116-25a8-4ef1-a924-b593de527e20" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1238, 739" SelectedTabbedMdiWindow="b2baeb7d-9e0f-40d7-9048-3ed6668545db"><DocumentWindow Key="C:\Users\lucbu\OneDrive\Documents\GitHub\BLDC_Motor_Board_PY2023\TestCode.cydsn\setInterrupt.c" Guid="69b0e126-b979-464c-bbce-d53146d2dac6" /><DocumentWindow Key="C:\Users\lucbu\OneDrive\Documents\GitHub\BLDC_Motor_Board_PY2023\TestCode.cydsn\TopDesign\TopDesign.cysch" Guid="82471fd2-8256-4635-8c12-0dfe8afaa6f1" /><DocumentWindow Key="C:\Users\lucbu\OneDrive\Documents\GitHub\BLDC_Motor_Board_PY2023\TestCode.cydsn\setInterrupt.h" Guid="ed8e287d-15bc-45f2-95a9-75431a07b34b" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="2995d0d8-9c1a-4ee8-baa7-dd2da4d2d565" /><DocumentWindow Key="C:\Users\lucbu\OneDrive\Documents\GitHub\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_FSM.c" Guid="8f868231-9cad-4154-be99-a932360ab934" /><DocumentWindow Key="C:\Users\lucbu\OneDrive\Documents\GitHub\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_Drive.c" Guid="b5f8fdae-3903-4de0-b50f-58ca50272956" /><DocumentWindow Key="C:\Users\lucbu\OneDrive\Documents\GitHub\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_FSM.h" Guid="32838ce2-2fb2-452d-809a-551cd12aa0bb" /><DocumentWindow Key="C:\Users\lucbu\OneDrive\Documents\GitHub\BLDC_Motor_Board_PY2023\TestCode.cydsn\BLDC_CAN.c" Guid="b2baeb7d-9e0f-40d7-9048-3ed6668545db" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="Debug" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

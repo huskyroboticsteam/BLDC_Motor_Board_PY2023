@@ -26,6 +26,7 @@ extern int32_t enc_lim_2;
 extern char txData[TX_DATA_SIZE];
 extern uint8 address;
 
+
 void SendEncoderData (CANPacket *packetToSend){
     AssembleTelemetryReportPacket(packetToSend, DEVICE_GROUP_JETSON, DEVICE_SERIAL_JETSON, 
         PACKET_TELEMETRY_ANG_POSITION, GetPositionmDeg());
@@ -42,7 +43,7 @@ void NextStateFromCAN(CANPacket *receivedPacket, CANPacket *packetToSend) {
     switch(packageID){
         case(ID_MOTOR_UNIT_MODE_SEL):
             if(GetModeFromPacket(receivedPacket) == MOTOR_UNIT_MODE_PWM) {
-                set_PWM(0, 0, 0);
+                set_speed(0, 0, 0);
                 SetModeTo(MOTOR_UNIT_MODE_PWM);
                 SetStateTo(CHECK_CAN);
             }

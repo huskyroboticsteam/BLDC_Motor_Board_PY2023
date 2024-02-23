@@ -85,7 +85,8 @@ uint8_t hall1State;
 uint8_t hall2State;
 uint8_t hall3State;
 
-uint8_t BLDC_state;
+struct CoilState BLDC_State;
+
 // FSM changing through states
 // "--state = X" means "don't-care"
 // Read the states
@@ -94,10 +95,13 @@ uint8_t BLDC_state;
 
 // add a method that stops this finite state machine
 
+
 void readHallState() {
     hall1State = HALL1_Read();
     hall2State = HALL2_Read();
     hall3State = HALL3_Read();
+    
+    
     
 	// State 1 (001)
 	if (~hall1State && ~hall2State && hall3State) {

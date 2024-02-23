@@ -15,6 +15,16 @@
     #define MotorDrive
 #endif
 
+struct CoilState
+{
+    uint8_t UH : 1;
+    uint8_t UL : 1;
+    uint8_t VH : 1;
+    uint8_t VL : 1;
+    uint8_t WH : 1;
+    uint8_t WL : 1;
+};
+
 void set_speed(int16_t speed, uint8_t disable_limit, uint8_t limitSW);
 int16_t GetCurrentSpeed();
 void readHallState();
