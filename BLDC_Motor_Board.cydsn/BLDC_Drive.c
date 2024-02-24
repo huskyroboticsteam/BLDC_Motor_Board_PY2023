@@ -18,6 +18,14 @@ extern char txData[TX_DATA_SIZE];
 
 int32_t currentSpeed = 0;
 int8_t currentDir = 0;
+uint8_t currentRotorState = 0;
+
+uint8_t rotorStates[6] = {0b001001,
+                          0b011000,
+                          0b010010,
+                          0b000110,
+                          0b100100,
+                          0b100001};
 
 #define MAX_RPM 1000
 
@@ -58,6 +66,8 @@ void set_speed(int16_t speed, uint8_t disable_limit) {
         // stop motor (stop state machine)
         
     }
+    
+    Timer_Rotor_Delay_WritePeriod(delay_ms); // convert to ticks
 }
 
 int16_t GetCurrentSpeed() {
@@ -76,23 +86,36 @@ struct HallState hallState = {0,0,0};
 // add a method that stops this finite state machine
 
 
-void readHallState() {
-    hallState.A = HALL1_Read();
-    hallState.B = HALL2_Read();
-    hallState.C = HALL3_Read();
+void updateRotorState() {
+    // make a state variable for direction and stop, direction - drive it backwards, stop - stop the 
     
-    coilState.UH = !hallState.B && hallState.C;
-	coilState.UL = !hallState.C && hallState.B;
-	coilState.VH = !hallState.C && hallState.A;
-	coilState.VL = !hallState.A && hallState.C;
-	coilState.WH = !hallState.A && hallState.B;
-	coilState.WL = !hallState.B && hallState.A;
+    // hallState.A = HALL1_Read();
+    // hallState.B = HALL2_Read();
+    // hallState.C = HALL3_Read();
+    // 
+    // // forward
+    // coilState.UH = !hallState.B && hallState.C;
+	// coilState.UL = !hallState.C && hallState.B;
+	// coilState.VH = !hallState.C && hallState.A;
+	// coilState.VL = !hallState.A && hallState.C;
+	// coilState.WH = !hallState.A && hallState.B;
+	// coilState.WL = !hallState.B && hallState.A;
+    
+    currentRotorState += currentDir;
+    
+    if (currentRotorState <= -1) {
+        currentRotorState = 5;
+    } else if (currentRotorState >= 6) {
+        currentRotorState = 0;
+    }
+    uint8_t state = rotorStates[currentRotorState];
+    
     
     // write registers in UVW
-    UH_Write(coilState.UH);
-    UL_Write(coilState.UL);
-    VH_Write(coilState.VH);
-    VL_Write(coilState.VL);
-    WH_Write(coilState.WH);
-    WL_Write(coilState.WL);
+    UH_Write(state & (1 << 0));
+    UL_Write(state & (1 << 1));
+    VH_Write(state & (1 << 2));
+    VL_Write(state & (1 << 3));
+    WH_Write(state & (1 << 4));
+    WL_Write(state & (1 << 5));
 }
