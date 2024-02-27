@@ -1,5 +1,5 @@
--- Project:   C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_Motor_Board.cyprj
--- Generated: 02/23/2024 15:34:08
+-- Project:   C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_Motor_Board.cyprj
+-- Generated: 02/26/2024 19:21:56
 -- PSoC Creator  4.4
 
 ENTITY BLDC_Motor_Board IS
@@ -33,7 +33,10 @@ ENTITY BLDC_Motor_Board IS
         FAULT(0)_PAD : IN std_ulogic;
         Cur_Alert_1(0)_PAD : IN std_ulogic;
         Cur_Alert_2(0)_PAD : IN std_ulogic;
-        Cur_Alert_3(0)_PAD : IN std_ulogic);
+        Cur_Alert_3(0)_PAD : IN std_ulogic;
+        DIP_2(0)_PAD : IN std_ulogic;
+        DIP_3(0)_PAD : IN std_ulogic;
+        DIP_4(0)_PAD : IN std_ulogic);
     ATTRIBUTE voltage_VDDIO_A_1 OF __DEFAULT__ : ENTITY IS 3.3e0;
     ATTRIBUTE voltage_VDDA_0 OF __DEFAULT__ : ENTITY IS 3.3e0;
     ATTRIBUTE voltage_VDDA_CTB OF __DEFAULT__ : ENTITY IS 3.3e0;
@@ -69,6 +72,9 @@ ARCHITECTURE __DEFAULT__ OF BLDC_Motor_Board IS
     SIGNAL Cur_Alert_3(0)__PA : bit;
     SIGNAL DEBUG_LED(0)__PA : bit;
     SIGNAL DIP_1(0)__PA : bit;
+    SIGNAL DIP_2(0)__PA : bit;
+    SIGNAL DIP_3(0)__PA : bit;
+    SIGNAL DIP_4(0)__PA : bit;
     SIGNAL DRV_EN(0)__PA : bit;
     SIGNAL ERROR_LED(0)__PA : bit;
     SIGNAL FAULT(0)__PA : bit;
@@ -77,19 +83,25 @@ ARCHITECTURE __DEFAULT__ OF BLDC_Motor_Board IS
     SIGNAL HALL3(0)__PA : bit;
     SIGNAL Net_11 : bit;
     SIGNAL Net_114 : bit;
-    ATTRIBUTE placement_force OF Net_114 : SIGNAL IS "U(0,2,B)0";
+    ATTRIBUTE placement_force OF Net_114 : SIGNAL IS "U(0,0,A)0";
+    SIGNAL Net_115 : bit;
+    ATTRIBUTE placement_force OF Net_115 : SIGNAL IS "U(0,0,B)3";
+    SIGNAL Net_116 : bit;
+    ATTRIBUTE placement_force OF Net_116 : SIGNAL IS "U(0,0,A)2";
+    SIGNAL Net_117 : bit;
+    ATTRIBUTE placement_force OF Net_117 : SIGNAL IS "U(0,0,B)0";
     SIGNAL Net_1363 : bit;
     SIGNAL Net_1365 : bit;
-    SIGNAL Net_1438 : bit;
-    SIGNAL Net_1439 : bit;
-    SIGNAL Net_1442 : bit;
     SIGNAL Net_1458 : bit;
-    ATTRIBUTE placement_force OF Net_1458 : SIGNAL IS "U(1,2,A)1";
+    ATTRIBUTE placement_force OF Net_1458 : SIGNAL IS "U(1,1,A)1";
     SIGNAL Net_1496_digital : bit;
     ATTRIBUTE udbclken_assigned OF Net_1496_digital : SIGNAL IS "True";
     ATTRIBUTE global_signal OF Net_1496_digital : SIGNAL IS true;
     SIGNAL Net_1598 : bit;
-    ATTRIBUTE placement_force OF Net_1598 : SIGNAL IS "U(1,1,B)0";
+    ATTRIBUTE placement_force OF Net_1598 : SIGNAL IS "U(1,0,B)2";
+    SIGNAL Net_1610 : bit;
+    SIGNAL Net_1611 : bit;
+    SIGNAL Net_1612 : bit;
     SIGNAL Net_266 : bit;
     SIGNAL Net_552 : bit;
     SIGNAL Net_561 : bit;
@@ -105,9 +117,9 @@ ARCHITECTURE __DEFAULT__ OF BLDC_Motor_Board IS
     SIGNAL Net_616 : bit;
     SIGNAL Net_617 : bit;
     SIGNAL Net_796_0 : bit;
-    ATTRIBUTE placement_force OF Net_796_0 : SIGNAL IS "U(0,0,A)0";
+    ATTRIBUTE placement_force OF Net_796_0 : SIGNAL IS "U(0,1,A)3";
     SIGNAL Net_796_1 : bit;
-    ATTRIBUTE placement_force OF Net_796_1 : SIGNAL IS "U(0,0,A)1";
+    ATTRIBUTE placement_force OF Net_796_1 : SIGNAL IS "U(0,1,B)1";
     SIGNAL Net_83 : bit;
     SIGNAL Net_883 : bit;
     SIGNAL Pin_Limit_1(0)__PA : bit;
@@ -163,7 +175,7 @@ ARCHITECTURE __DEFAULT__ OF BLDC_Motor_Board IS
     SIGNAL \Timer_Period_Reset:TimerUDB:status_2\ : bit;
     SIGNAL \Timer_Period_Reset:TimerUDB:status_3\ : bit;
     SIGNAL \Timer_Period_Reset:TimerUDB:status_tc\ : bit;
-    ATTRIBUTE placement_force OF \Timer_Period_Reset:TimerUDB:status_tc\ : SIGNAL IS "U(1,1,A)1";
+    ATTRIBUTE placement_force OF \Timer_Period_Reset:TimerUDB:status_tc\ : SIGNAL IS "U(1,0,B)1";
     SIGNAL \Timer_Rotor_Delay:TimerUDB:control_0\ : bit;
     SIGNAL \Timer_Rotor_Delay:TimerUDB:control_1\ : bit;
     SIGNAL \Timer_Rotor_Delay:TimerUDB:control_2\ : bit;
@@ -173,24 +185,10 @@ ARCHITECTURE __DEFAULT__ OF BLDC_Motor_Board IS
     SIGNAL \Timer_Rotor_Delay:TimerUDB:control_6\ : bit;
     SIGNAL \Timer_Rotor_Delay:TimerUDB:control_7\ : bit;
     SIGNAL \Timer_Rotor_Delay:TimerUDB:per_zero\ : bit;
-    SIGNAL \Timer_Rotor_Delay:TimerUDB:run_mode\ : bit;
-    ATTRIBUTE placement_force OF \Timer_Rotor_Delay:TimerUDB:run_mode\ : SIGNAL IS "U(1,0,B)0";
     SIGNAL \Timer_Rotor_Delay:TimerUDB:status_2\ : bit;
     SIGNAL \Timer_Rotor_Delay:TimerUDB:status_3\ : bit;
     SIGNAL \Timer_Rotor_Delay:TimerUDB:status_tc\ : bit;
-    ATTRIBUTE placement_force OF \Timer_Rotor_Delay:TimerUDB:status_tc\ : SIGNAL IS "U(1,2,A)0";
-    SIGNAL \Timer_Rotor_Delay:TimerUDB:timer_enable\ : bit;
-    ATTRIBUTE placement_force OF \Timer_Rotor_Delay:TimerUDB:timer_enable\ : SIGNAL IS "U(1,0,A)1";
-    SIGNAL \Timer_Rotor_Delay:TimerUDB:trig_disable\ : bit;
-    ATTRIBUTE placement_force OF \Timer_Rotor_Delay:TimerUDB:trig_disable\ : SIGNAL IS "U(1,0,B)3";
-    SIGNAL \Timer_Rotor_Delay:TimerUDB:trig_fall_detected\ : bit;
-    ATTRIBUTE placement_force OF \Timer_Rotor_Delay:TimerUDB:trig_fall_detected\ : SIGNAL IS "U(1,2,B)0";
-    SIGNAL \Timer_Rotor_Delay:TimerUDB:trig_last\ : bit;
-    ATTRIBUTE placement_force OF \Timer_Rotor_Delay:TimerUDB:trig_last\ : SIGNAL IS "U(1,2,A)3";
-    SIGNAL \Timer_Rotor_Delay:TimerUDB:trig_reg\ : bit;
-    ATTRIBUTE placement_force OF \Timer_Rotor_Delay:TimerUDB:trig_reg\ : SIGNAL IS "U(1,1,A)3";
-    SIGNAL \Timer_Rotor_Delay:TimerUDB:trig_rise_detected\ : bit;
-    ATTRIBUTE placement_force OF \Timer_Rotor_Delay:TimerUDB:trig_rise_detected\ : SIGNAL IS "U(1,1,A)0";
+    ATTRIBUTE placement_force OF \Timer_Rotor_Delay:TimerUDB:status_tc\ : SIGNAL IS "U(1,1,A)0";
     SIGNAL \UART:Net_847_ff4\ : bit;
     ATTRIBUTE global_signal OF \UART:Net_847_ff4\ : SIGNAL IS true;
     SIGNAL \UART:miso_s_wire\ : bit;
@@ -230,23 +228,23 @@ ARCHITECTURE __DEFAULT__ OF BLDC_Motor_Board IS
     ATTRIBUTE Location OF ClockGenBlock : LABEL IS "F(CLK_GEN,0)";
     ATTRIBUTE Location OF ClockBlock : LABEL IS "F(Clock,0)";
     ATTRIBUTE lib_model OF HALL1(0) : LABEL IS "iocell1";
-    ATTRIBUTE Location OF HALL1(0) : LABEL IS "P2[5]";
+    ATTRIBUTE Location OF HALL1(0) : LABEL IS "P2[4]";
     ATTRIBUTE lib_model OF UH(0) : LABEL IS "iocell2";
-    ATTRIBUTE Location OF UH(0) : LABEL IS "P1[1]";
+    ATTRIBUTE Location OF UH(0) : LABEL IS "P1[5]";
     ATTRIBUTE lib_model OF UL(0) : LABEL IS "iocell3";
-    ATTRIBUTE Location OF UL(0) : LABEL IS "P1[0]";
+    ATTRIBUTE Location OF UL(0) : LABEL IS "P1[4]";
     ATTRIBUTE lib_model OF VH(0) : LABEL IS "iocell4";
-    ATTRIBUTE Location OF VH(0) : LABEL IS "P5[5]";
+    ATTRIBUTE Location OF VH(0) : LABEL IS "P1[3]";
     ATTRIBUTE lib_model OF VL(0) : LABEL IS "iocell5";
-    ATTRIBUTE Location OF VL(0) : LABEL IS "P5[3]";
+    ATTRIBUTE Location OF VL(0) : LABEL IS "P1[2]";
     ATTRIBUTE lib_model OF WH(0) : LABEL IS "iocell6";
-    ATTRIBUTE Location OF WH(0) : LABEL IS "P5[2]";
+    ATTRIBUTE Location OF WH(0) : LABEL IS "P1[1]";
     ATTRIBUTE lib_model OF WL(0) : LABEL IS "iocell7";
-    ATTRIBUTE Location OF WL(0) : LABEL IS "P5[1]";
+    ATTRIBUTE Location OF WL(0) : LABEL IS "P1[0]";
     ATTRIBUTE lib_model OF HALL2(0) : LABEL IS "iocell8";
-    ATTRIBUTE Location OF HALL2(0) : LABEL IS "P2[6]";
+    ATTRIBUTE Location OF HALL2(0) : LABEL IS "P2[5]";
     ATTRIBUTE lib_model OF HALL3(0) : LABEL IS "iocell9";
-    ATTRIBUTE Location OF HALL3(0) : LABEL IS "P2[7]";
+    ATTRIBUTE Location OF HALL3(0) : LABEL IS "P2[6]";
     ATTRIBUTE lib_model OF RX_1(0) : LABEL IS "iocell10";
     ATTRIBUTE Location OF RX_1(0) : LABEL IS "P0[0]";
     ATTRIBUTE lib_model OF TX_1(0) : LABEL IS "iocell11";
@@ -256,17 +254,17 @@ ARCHITECTURE __DEFAULT__ OF BLDC_Motor_Board IS
     ATTRIBUTE lib_model OF \UART:rx(0)\ : LABEL IS "iocell13";
     ATTRIBUTE Location OF \UART:rx(0)\ : LABEL IS "P4[0]";
     ATTRIBUTE lib_model OF ERROR_LED(0) : LABEL IS "iocell14";
-    ATTRIBUTE Location OF ERROR_LED(0) : LABEL IS "P0[2]";
+    ATTRIBUTE Location OF ERROR_LED(0) : LABEL IS "P2[7]";
     ATTRIBUTE lib_model OF DEBUG_LED(0) : LABEL IS "iocell15";
-    ATTRIBUTE Location OF DEBUG_LED(0) : LABEL IS "P0[3]";
+    ATTRIBUTE Location OF DEBUG_LED(0) : LABEL IS "P6[5]";
     ATTRIBUTE lib_model OF \Current_Sensor_I2C:sda(0)\ : LABEL IS "iocell16";
-    ATTRIBUTE Location OF \Current_Sensor_I2C:sda(0)\ : LABEL IS "P6[1]";
+    ATTRIBUTE Location OF \Current_Sensor_I2C:sda(0)\ : LABEL IS "P5[1]";
     ATTRIBUTE lib_model OF \Current_Sensor_I2C:scl(0)\ : LABEL IS "iocell17";
-    ATTRIBUTE Location OF \Current_Sensor_I2C:scl(0)\ : LABEL IS "P6[0]";
+    ATTRIBUTE Location OF \Current_Sensor_I2C:scl(0)\ : LABEL IS "P5[0]";
     ATTRIBUTE lib_model OF CAN_LED(0) : LABEL IS "iocell18";
-    ATTRIBUTE Location OF CAN_LED(0) : LABEL IS "P0[4]";
+    ATTRIBUTE Location OF CAN_LED(0) : LABEL IS "P6[4]";
     ATTRIBUTE lib_model OF DRV_EN(0) : LABEL IS "iocell19";
-    ATTRIBUTE Location OF DRV_EN(0) : LABEL IS "P0[7]";
+    ATTRIBUTE Location OF DRV_EN(0) : LABEL IS "P5[2]";
     ATTRIBUTE lib_model OF \TMC6100_SPI:ss_s(0)\ : LABEL IS "iocell20";
     ATTRIBUTE Location OF \TMC6100_SPI:ss_s(0)\ : LABEL IS "P2[3]";
     ATTRIBUTE lib_model OF \TMC6100_SPI:miso_s(0)\ : LABEL IS "iocell21";
@@ -276,76 +274,74 @@ ARCHITECTURE __DEFAULT__ OF BLDC_Motor_Board IS
     ATTRIBUTE lib_model OF \TMC6100_SPI:mosi_s(0)\ : LABEL IS "iocell23";
     ATTRIBUTE Location OF \TMC6100_SPI:mosi_s(0)\ : LABEL IS "P2[0]";
     ATTRIBUTE lib_model OF DIP_1(0) : LABEL IS "iocell24";
-    ATTRIBUTE Location OF DIP_1(0) : LABEL IS "P4[6]";
+    ATTRIBUTE Location OF DIP_1(0) : LABEL IS "P3[4]";
     ATTRIBUTE lib_model OF Pin_Limit_2(0) : LABEL IS "iocell25";
     ATTRIBUTE Location OF Pin_Limit_2(0) : LABEL IS "P3[1]";
     ATTRIBUTE lib_model OF Pin_Limit_1(0) : LABEL IS "iocell26";
     ATTRIBUTE Location OF Pin_Limit_1(0) : LABEL IS "P3[0]";
     ATTRIBUTE lib_model OF FAULT(0) : LABEL IS "iocell27";
-    ATTRIBUTE Location OF FAULT(0) : LABEL IS "P5[0]";
+    ATTRIBUTE Location OF FAULT(0) : LABEL IS "P5[3]";
     ATTRIBUTE lib_model OF Cur_Alert_1(0) : LABEL IS "iocell28";
-    ATTRIBUTE Location OF Cur_Alert_1(0) : LABEL IS "P2[4]";
+    ATTRIBUTE Location OF Cur_Alert_1(0) : LABEL IS "P6[2]";
     ATTRIBUTE lib_model OF Cur_Alert_2(0) : LABEL IS "iocell29";
-    ATTRIBUTE Location OF Cur_Alert_2(0) : LABEL IS "P6[2]";
+    ATTRIBUTE Location OF Cur_Alert_2(0) : LABEL IS "P6[1]";
     ATTRIBUTE lib_model OF Cur_Alert_3(0) : LABEL IS "iocell30";
-    ATTRIBUTE Location OF Cur_Alert_3(0) : LABEL IS "P6[5]";
+    ATTRIBUTE Location OF Cur_Alert_3(0) : LABEL IS "P6[0]";
+    ATTRIBUTE lib_model OF DIP_2(0) : LABEL IS "iocell31";
+    ATTRIBUTE Location OF DIP_2(0) : LABEL IS "P3[5]";
+    ATTRIBUTE lib_model OF DIP_3(0) : LABEL IS "iocell32";
+    ATTRIBUTE Location OF DIP_3(0) : LABEL IS "P3[6]";
+    ATTRIBUTE lib_model OF DIP_4(0) : LABEL IS "iocell33";
+    ATTRIBUTE Location OF DIP_4(0) : LABEL IS "P3[7]";
     ATTRIBUTE lib_model OF Net_114 : LABEL IS "macrocell1";
-    ATTRIBUTE Location OF Net_114 : LABEL IS "U(0,2)";
+    ATTRIBUTE Location OF Net_114 : LABEL IS "U(0,0)";
     ATTRIBUTE lib_model OF \Timer_Rotor_Delay:TimerUDB:status_tc\ : LABEL IS "macrocell2";
-    ATTRIBUTE Location OF \Timer_Rotor_Delay:TimerUDB:status_tc\ : LABEL IS "U(1,2)";
-    ATTRIBUTE lib_model OF \Timer_Rotor_Delay:TimerUDB:trig_reg\ : LABEL IS "macrocell3";
-    ATTRIBUTE Location OF \Timer_Rotor_Delay:TimerUDB:trig_reg\ : LABEL IS "U(1,1)";
-    ATTRIBUTE lib_model OF \Timer_Period_Reset:TimerUDB:status_tc\ : LABEL IS "macrocell4";
-    ATTRIBUTE Location OF \Timer_Period_Reset:TimerUDB:status_tc\ : LABEL IS "U(1,1)";
+    ATTRIBUTE Location OF \Timer_Rotor_Delay:TimerUDB:status_tc\ : LABEL IS "U(1,1)";
+    ATTRIBUTE lib_model OF \Timer_Period_Reset:TimerUDB:status_tc\ : LABEL IS "macrocell3";
+    ATTRIBUTE Location OF \Timer_Period_Reset:TimerUDB:status_tc\ : LABEL IS "U(1,0)";
+    ATTRIBUTE lib_model OF Net_115 : LABEL IS "macrocell4";
+    ATTRIBUTE Location OF Net_115 : LABEL IS "U(0,0)";
+    ATTRIBUTE lib_model OF Net_116 : LABEL IS "macrocell5";
+    ATTRIBUTE Location OF Net_116 : LABEL IS "U(0,0)";
+    ATTRIBUTE lib_model OF Net_117 : LABEL IS "macrocell6";
+    ATTRIBUTE Location OF Net_117 : LABEL IS "U(0,0)";
     ATTRIBUTE Location OF \CAN:isr\ : LABEL IS "[IntrContainer=(0)][IntrId=(29)]";
     ATTRIBUTE Location OF \CAN:CanIP\ : LABEL IS "F(CAN,1)";
-    ATTRIBUTE Location OF ClockBlock_LFClk__SYNC_1 : LABEL IS "U(1,0)";
+    ATTRIBUTE Location OF ClockBlock_LFClk__SYNC_1 : LABEL IS "U(0,2)";
     ATTRIBUTE Location OF \UART:SCB\ : LABEL IS "F(SCB,0)";
-    ATTRIBUTE Location OF \Current_Sensor_I2C:SCB_IRQ\ : LABEL IS "[IntrContainer=(0)][IntrId=(12)]";
-    ATTRIBUTE Location OF \Current_Sensor_I2C:SCB\ : LABEL IS "F(SCB,3)";
+    ATTRIBUTE Location OF \Current_Sensor_I2C:SCB_IRQ\ : LABEL IS "[IntrContainer=(0)][IntrId=(11)]";
+    ATTRIBUTE Location OF \Current_Sensor_I2C:SCB\ : LABEL IS "F(SCB,2)";
     ATTRIBUTE lib_model OF \Address_Register:sts:sts_reg\ : LABEL IS "statuscell1";
-    ATTRIBUTE Location OF \Address_Register:sts:sts_reg\ : LABEL IS "U(0,2)";
+    ATTRIBUTE Location OF \Address_Register:sts:sts_reg\ : LABEL IS "U(0,0)";
     ATTRIBUTE Location OF \TMC6100_SPI:SCB\ : LABEL IS "F(SCB,1)";
     ATTRIBUTE lib_model OF \Timer_Rotor_Delay:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "controlcell1";
     ATTRIBUTE Location OF \Timer_Rotor_Delay:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "U(0,1)";
     ATTRIBUTE lib_model OF \Timer_Rotor_Delay:TimerUDB:rstSts:stsreg\ : LABEL IS "statusicell1";
-    ATTRIBUTE Location OF \Timer_Rotor_Delay:TimerUDB:rstSts:stsreg\ : LABEL IS "U(1,2)";
+    ATTRIBUTE Location OF \Timer_Rotor_Delay:TimerUDB:rstSts:stsreg\ : LABEL IS "U(1,1)";
     ATTRIBUTE lib_model OF \Timer_Rotor_Delay:TimerUDB:sT16:timerdp:u0\ : LABEL IS "datapathcell1";
     ATTRIBUTE Location OF \Timer_Rotor_Delay:TimerUDB:sT16:timerdp:u0\ : LABEL IS "U(0,1)";
     ATTRIBUTE lib_model OF \Timer_Rotor_Delay:TimerUDB:sT16:timerdp:u1\ : LABEL IS "datapathcell2";
     ATTRIBUTE Location OF \Timer_Rotor_Delay:TimerUDB:sT16:timerdp:u1\ : LABEL IS "U(1,1)";
     ATTRIBUTE Location OF isr_Hall : LABEL IS "[IntrContainer=(0)][IntrId=(0)]";
-    ATTRIBUTE Location OF ClockBlock_LFClk__SYNC : LABEL IS "U(1,0)";
+    ATTRIBUTE Location OF ClockBlock_LFClk__SYNC : LABEL IS "U(0,2)";
     ATTRIBUTE Location OF isr_Limit_1 : LABEL IS "[IntrContainer=(0)][IntrId=(1)]";
     ATTRIBUTE lib_model OF \Limit_Register:sts_intr:sts_reg\ : LABEL IS "statusicell2";
-    ATTRIBUTE Location OF \Limit_Register:sts_intr:sts_reg\ : LABEL IS "U(0,0)";
+    ATTRIBUTE Location OF \Limit_Register:sts_intr:sts_reg\ : LABEL IS "U(0,1)";
     ATTRIBUTE lib_model OF \Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "controlcell2";
-    ATTRIBUTE Location OF \Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "U(1,1)";
+    ATTRIBUTE Location OF \Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "U(1,0)";
     ATTRIBUTE lib_model OF \Timer_Period_Reset:TimerUDB:rstSts:stsreg\ : LABEL IS "statusicell3";
-    ATTRIBUTE Location OF \Timer_Period_Reset:TimerUDB:rstSts:stsreg\ : LABEL IS "U(1,1)";
+    ATTRIBUTE Location OF \Timer_Period_Reset:TimerUDB:rstSts:stsreg\ : LABEL IS "U(1,0)";
     ATTRIBUTE lib_model OF \Timer_Period_Reset:TimerUDB:sT8:timerdp:u0\ : LABEL IS "datapathcell3";
-    ATTRIBUTE Location OF \Timer_Period_Reset:TimerUDB:sT8:timerdp:u0\ : LABEL IS "U(1,2)";
+    ATTRIBUTE Location OF \Timer_Period_Reset:TimerUDB:sT8:timerdp:u0\ : LABEL IS "U(1,0)";
     ATTRIBUTE Location OF isr_Period_Reset : LABEL IS "[IntrContainer=(0)][IntrId=(2)]";
-    ATTRIBUTE lib_model OF Net_796_0 : LABEL IS "macrocell5";
-    ATTRIBUTE Location OF Net_796_0 : LABEL IS "U(0,0)";
-    ATTRIBUTE lib_model OF Net_796_1 : LABEL IS "macrocell6";
-    ATTRIBUTE Location OF Net_796_1 : LABEL IS "U(0,0)";
-    ATTRIBUTE lib_model OF \Timer_Rotor_Delay:TimerUDB:run_mode\ : LABEL IS "macrocell7";
-    ATTRIBUTE Location OF \Timer_Rotor_Delay:TimerUDB:run_mode\ : LABEL IS "U(1,0)";
-    ATTRIBUTE lib_model OF Net_1458 : LABEL IS "macrocell8";
-    ATTRIBUTE Location OF Net_1458 : LABEL IS "U(1,2)";
-    ATTRIBUTE lib_model OF \Timer_Rotor_Delay:TimerUDB:timer_enable\ : LABEL IS "macrocell9";
-    ATTRIBUTE Location OF \Timer_Rotor_Delay:TimerUDB:timer_enable\ : LABEL IS "U(1,0)";
-    ATTRIBUTE lib_model OF \Timer_Rotor_Delay:TimerUDB:trig_disable\ : LABEL IS "macrocell10";
-    ATTRIBUTE Location OF \Timer_Rotor_Delay:TimerUDB:trig_disable\ : LABEL IS "U(1,0)";
-    ATTRIBUTE lib_model OF \Timer_Rotor_Delay:TimerUDB:trig_last\ : LABEL IS "macrocell11";
-    ATTRIBUTE Location OF \Timer_Rotor_Delay:TimerUDB:trig_last\ : LABEL IS "U(1,2)";
-    ATTRIBUTE lib_model OF \Timer_Rotor_Delay:TimerUDB:trig_rise_detected\ : LABEL IS "macrocell12";
-    ATTRIBUTE Location OF \Timer_Rotor_Delay:TimerUDB:trig_rise_detected\ : LABEL IS "U(1,1)";
-    ATTRIBUTE lib_model OF \Timer_Rotor_Delay:TimerUDB:trig_fall_detected\ : LABEL IS "macrocell13";
-    ATTRIBUTE Location OF \Timer_Rotor_Delay:TimerUDB:trig_fall_detected\ : LABEL IS "U(1,2)";
-    ATTRIBUTE lib_model OF Net_1598 : LABEL IS "macrocell14";
-    ATTRIBUTE Location OF Net_1598 : LABEL IS "U(1,1)";
+    ATTRIBUTE lib_model OF Net_796_0 : LABEL IS "macrocell7";
+    ATTRIBUTE Location OF Net_796_0 : LABEL IS "U(0,1)";
+    ATTRIBUTE lib_model OF Net_796_1 : LABEL IS "macrocell8";
+    ATTRIBUTE Location OF Net_796_1 : LABEL IS "U(0,1)";
+    ATTRIBUTE lib_model OF Net_1458 : LABEL IS "macrocell9";
+    ATTRIBUTE Location OF Net_1458 : LABEL IS "U(1,1)";
+    ATTRIBUTE lib_model OF Net_1598 : LABEL IS "macrocell10";
+    ATTRIBUTE Location OF Net_1598 : LABEL IS "U(1,0)";
     COMPONENT cancell
         PORT (
             clock : IN std_ulogic;
@@ -767,9 +763,8 @@ BEGIN
             dsi_in_0 => ClockBlock_Routed1,
             ff_div_2 => \UART:Net_847_ff4\,
             ff_div_3 => \TMC6100_SPI:Net_847_ff2\,
-            ff_div_4 => open,
-            udb_div_0 => dclk_to_genclk,
-            ff_div_5 => \Current_Sensor_I2C:Net_847_ff3\);
+            ff_div_4 => \Current_Sensor_I2C:Net_847_ff3\,
+            udb_div_0 => dclk_to_genclk);
 
     HALL1:logicalport
         GENERIC MAP(
@@ -849,11 +844,10 @@ BEGIN
             oe_sync_mode => 0,
             logicalport => "HALL1",
             logicalport_pin_id => 0,
-            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
         PORT MAP(
             pa_out => HALL1(0)__PA,
             oe => open,
-            fb => Net_1438,
             pad_in => HALL1(0)_PAD,
             in_clock => open,
             in_clock_en => '1',
@@ -1480,11 +1474,10 @@ BEGIN
             oe_sync_mode => 0,
             logicalport => "HALL2",
             logicalport_pin_id => 0,
-            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
         PORT MAP(
             pa_out => HALL2(0)__PA,
             oe => open,
-            fb => Net_1439,
             pad_in => HALL2(0)_PAD,
             in_clock => open,
             in_clock_en => '1',
@@ -1571,11 +1564,10 @@ BEGIN
             oe_sync_mode => 0,
             logicalport => "HALL3",
             logicalport_pin_id => 0,
-            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
         PORT MAP(
             pa_out => HALL3(0)__PA,
             oe => open,
-            fb => Net_1442,
             pad_in => HALL3(0)_PAD,
             in_clock => open,
             in_clock_en => '1',
@@ -3492,6 +3484,279 @@ BEGIN
             out_clock_en => '1',
             out_reset => '0');
 
+    DIP_2:logicalport
+        GENERIC MAP(
+            drive_mode => "001",
+            ibuf_enabled => "1",
+            id => "9eb7ec56-2384-4261-9d2b-38e17e7fea2d",
+            init_dr_st => "0",
+            input_buffer_sel => "00",
+            input_clk_en => 0,
+            input_sync => "0",
+            input_sync_mode => "0",
+            intr_mode => "00",
+            invert_in_clock => 0,
+            invert_in_clock_en => 0,
+            invert_in_reset => 0,
+            invert_out_clock => 0,
+            invert_out_clock_en => 0,
+            invert_out_reset => 0,
+            io_voltage => "",
+            layout_mode => "CONTIGUOUS",
+            oe_conn => "0",
+            oe_reset => 0,
+            oe_sync => "0",
+            output_clk_en => 0,
+            output_clock_mode => "0",
+            output_conn => "0",
+            output_mode => "0",
+            output_reset => 0,
+            output_sync => "0",
+            ovt_hyst_trim => "0",
+            ovt_needed => "0",
+            ovt_slew_control => "00",
+            pa_in_clock => -1,
+            pa_in_clock_en => -1,
+            pa_in_reset => -1,
+            pa_out_clock => -1,
+            pa_out_clock_en => -1,
+            pa_out_reset => -1,
+            pin_aliases => "",
+            pin_mode => "I",
+            por_state => 4,
+            port_alias_group => "",
+            port_alias_required => 0,
+            sio_group_cnt => 0,
+            sio_hifreq => "00000000",
+            sio_hyst => "1",
+            sio_ibuf => "00000000",
+            sio_info => "00",
+            sio_obuf => "00000000",
+            sio_refsel => "00000000",
+            sio_vohsel => "00000000",
+            sio_vtrip => "00000000",
+            slew_rate => "0",
+            spanning => 0,
+            sw_only => 0,
+            use_annotation => "0",
+            vtrip => "00",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0)
+        PORT MAP(
+            in_clock_en => open,
+            in_reset => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    DIP_2(0):iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "DIP_2",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
+        PORT MAP(
+            pa_out => DIP_2(0)__PA,
+            oe => open,
+            fb => Net_1610,
+            pad_in => DIP_2(0)_PAD,
+            in_clock => open,
+            in_clock_en => '1',
+            in_reset => '0',
+            out_clock => open,
+            out_clock_en => '1',
+            out_reset => '0');
+
+    DIP_3:logicalport
+        GENERIC MAP(
+            drive_mode => "001",
+            ibuf_enabled => "1",
+            id => "22261c61-740f-4f38-bf79-acc049d487be",
+            init_dr_st => "0",
+            input_buffer_sel => "00",
+            input_clk_en => 0,
+            input_sync => "0",
+            input_sync_mode => "0",
+            intr_mode => "00",
+            invert_in_clock => 0,
+            invert_in_clock_en => 0,
+            invert_in_reset => 0,
+            invert_out_clock => 0,
+            invert_out_clock_en => 0,
+            invert_out_reset => 0,
+            io_voltage => "",
+            layout_mode => "CONTIGUOUS",
+            oe_conn => "0",
+            oe_reset => 0,
+            oe_sync => "0",
+            output_clk_en => 0,
+            output_clock_mode => "0",
+            output_conn => "0",
+            output_mode => "0",
+            output_reset => 0,
+            output_sync => "0",
+            ovt_hyst_trim => "0",
+            ovt_needed => "0",
+            ovt_slew_control => "00",
+            pa_in_clock => -1,
+            pa_in_clock_en => -1,
+            pa_in_reset => -1,
+            pa_out_clock => -1,
+            pa_out_clock_en => -1,
+            pa_out_reset => -1,
+            pin_aliases => "",
+            pin_mode => "I",
+            por_state => 4,
+            port_alias_group => "",
+            port_alias_required => 0,
+            sio_group_cnt => 0,
+            sio_hifreq => "00000000",
+            sio_hyst => "1",
+            sio_ibuf => "00000000",
+            sio_info => "00",
+            sio_obuf => "00000000",
+            sio_refsel => "00000000",
+            sio_vohsel => "00000000",
+            sio_vtrip => "00000000",
+            slew_rate => "0",
+            spanning => 0,
+            sw_only => 0,
+            use_annotation => "0",
+            vtrip => "00",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0)
+        PORT MAP(
+            in_clock_en => open,
+            in_reset => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    DIP_3(0):iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "DIP_3",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
+        PORT MAP(
+            pa_out => DIP_3(0)__PA,
+            oe => open,
+            fb => Net_1611,
+            pad_in => DIP_3(0)_PAD,
+            in_clock => open,
+            in_clock_en => '1',
+            in_reset => '0',
+            out_clock => open,
+            out_clock_en => '1',
+            out_reset => '0');
+
+    DIP_4:logicalport
+        GENERIC MAP(
+            drive_mode => "001",
+            ibuf_enabled => "1",
+            id => "563614e5-6ade-4974-a1fd-151adcff48f4",
+            init_dr_st => "0",
+            input_buffer_sel => "00",
+            input_clk_en => 0,
+            input_sync => "0",
+            input_sync_mode => "0",
+            intr_mode => "00",
+            invert_in_clock => 0,
+            invert_in_clock_en => 0,
+            invert_in_reset => 0,
+            invert_out_clock => 0,
+            invert_out_clock_en => 0,
+            invert_out_reset => 0,
+            io_voltage => "",
+            layout_mode => "CONTIGUOUS",
+            oe_conn => "0",
+            oe_reset => 0,
+            oe_sync => "0",
+            output_clk_en => 0,
+            output_clock_mode => "0",
+            output_conn => "0",
+            output_mode => "0",
+            output_reset => 0,
+            output_sync => "0",
+            ovt_hyst_trim => "0",
+            ovt_needed => "0",
+            ovt_slew_control => "00",
+            pa_in_clock => -1,
+            pa_in_clock_en => -1,
+            pa_in_reset => -1,
+            pa_out_clock => -1,
+            pa_out_clock_en => -1,
+            pa_out_reset => -1,
+            pin_aliases => "",
+            pin_mode => "I",
+            por_state => 4,
+            port_alias_group => "",
+            port_alias_required => 0,
+            sio_group_cnt => 0,
+            sio_hifreq => "00000000",
+            sio_hyst => "1",
+            sio_ibuf => "00000000",
+            sio_info => "00",
+            sio_obuf => "00000000",
+            sio_refsel => "00000000",
+            sio_vohsel => "00000000",
+            sio_vtrip => "00000000",
+            slew_rate => "0",
+            spanning => 0,
+            sw_only => 0,
+            use_annotation => "0",
+            vtrip => "00",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0)
+        PORT MAP(
+            in_clock_en => open,
+            in_reset => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    DIP_4(0):iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "DIP_4",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
+        PORT MAP(
+            pa_out => DIP_4(0)__PA,
+            oe => open,
+            fb => Net_1612,
+            pad_in => DIP_4(0)_PAD,
+            in_clock => open,
+            in_clock_en => '1',
+            in_reset => '0',
+            out_clock => open,
+            out_clock_en => '1',
+            out_reset => '0');
+
     Net_114:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0)",
@@ -3503,28 +3768,13 @@ BEGIN
 
     \Timer_Rotor_Delay:TimerUDB:status_tc\:macrocell
         GENERIC MAP(
-            eqn_main => "(main_0 * main_1 * main_2 * main_3) + (main_0 * main_1 * main_2 * main_4)",
+            eqn_main => "(main_0 * main_1)",
             regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => \Timer_Rotor_Delay:TimerUDB:status_tc\,
-            main_0 => \Timer_Rotor_Delay:TimerUDB:control_4\,
-            main_1 => \Timer_Rotor_Delay:TimerUDB:run_mode\,
-            main_2 => \Timer_Rotor_Delay:TimerUDB:per_zero\,
-            main_3 => \Timer_Rotor_Delay:TimerUDB:trig_rise_detected\,
-            main_4 => \Timer_Rotor_Delay:TimerUDB:trig_fall_detected\);
-
-    \Timer_Rotor_Delay:TimerUDB:trig_reg\:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0 * main_1 * main_2) + (main_0 * main_1 * main_3)",
-            regmode => 0,
-            clken_mode => 1)
-        PORT MAP(
-            q => \Timer_Rotor_Delay:TimerUDB:trig_reg\,
-            main_0 => \Timer_Rotor_Delay:TimerUDB:control_4\,
-            main_1 => \Timer_Rotor_Delay:TimerUDB:timer_enable\,
-            main_2 => \Timer_Rotor_Delay:TimerUDB:trig_rise_detected\,
-            main_3 => \Timer_Rotor_Delay:TimerUDB:trig_fall_detected\);
+            main_0 => \Timer_Rotor_Delay:TimerUDB:control_7\,
+            main_1 => \Timer_Rotor_Delay:TimerUDB:per_zero\);
 
     \Timer_Period_Reset:TimerUDB:status_tc\:macrocell
         GENERIC MAP(
@@ -3535,6 +3785,33 @@ BEGIN
             q => \Timer_Period_Reset:TimerUDB:status_tc\,
             main_0 => \Timer_Period_Reset:TimerUDB:control_7\,
             main_1 => \Timer_Period_Reset:TimerUDB:per_zero\);
+
+    Net_115:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0)",
+            regmode => 0,
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_115,
+            main_0 => Net_1610);
+
+    Net_116:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0)",
+            regmode => 0,
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_116,
+            main_0 => Net_1611);
+
+    Net_117:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0)",
+            regmode => 0,
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_117,
+            main_0 => Net_1612);
 
     \CAN:isr\:interrupt
         GENERIC MAP(
@@ -3634,9 +3911,9 @@ BEGIN
             status_6 => open,
             status_5 => open,
             status_4 => open,
-            status_3 => open,
-            status_2 => open,
-            status_1 => open,
+            status_3 => Net_117,
+            status_2 => Net_116,
+            status_1 => Net_115,
             status_0 => Net_114);
 
     \TMC6100_SPI:SCB\:m0s8scbcell
@@ -3736,7 +4013,7 @@ BEGIN
             clken_mode => 2)
         PORT MAP(
             clock => ClockBlock_HFClk,
-            cs_addr_1 => \Timer_Rotor_Delay:TimerUDB:trig_reg\,
+            cs_addr_1 => \Timer_Rotor_Delay:TimerUDB:control_7\,
             cs_addr_0 => \Timer_Rotor_Delay:TimerUDB:per_zero\,
             clk_en => ClockBlock_LFClk__SYNC_OUT,
             busclk => ClockBlock_HFClk,
@@ -3784,7 +4061,7 @@ BEGIN
             clken_mode => 2)
         PORT MAP(
             clock => ClockBlock_HFClk,
-            cs_addr_1 => \Timer_Rotor_Delay:TimerUDB:trig_reg\,
+            cs_addr_1 => \Timer_Rotor_Delay:TimerUDB:control_7\,
             cs_addr_0 => \Timer_Rotor_Delay:TimerUDB:per_zero\,
             z0_comb => \Timer_Rotor_Delay:TimerUDB:per_zero\,
             f0_bus_stat_comb => \Timer_Rotor_Delay:TimerUDB:status_3\,
@@ -3952,22 +4229,9 @@ BEGIN
             clock_0 => Net_1496_digital,
             main_0 => Net_1363);
 
-    \Timer_Rotor_Delay:TimerUDB:run_mode\:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0)",
-            regmode => 1,
-            clk_inv => '0',
-            clken_inv => '0',
-            clken_mode => 2)
-        PORT MAP(
-            q => \Timer_Rotor_Delay:TimerUDB:run_mode\,
-            clk_en => ClockBlock_LFClk__SYNC_OUT,
-            clock_0 => ClockBlock_HFClk,
-            main_0 => \Timer_Rotor_Delay:TimerUDB:control_7\);
-
     Net_1458:macrocell
         GENERIC MAP(
-            eqn_main => "(main_0 * main_1 * main_2 * main_3) + (main_0 * main_1 * main_2 * main_4)",
+            eqn_main => "(main_0 * main_1)",
             regmode => 1,
             clk_inv => '0',
             clken_inv => '0',
@@ -3976,103 +4240,8 @@ BEGIN
             q => Net_1458,
             clk_en => ClockBlock_LFClk__SYNC_OUT,
             clock_0 => ClockBlock_HFClk,
-            main_0 => \Timer_Rotor_Delay:TimerUDB:control_4\,
-            main_1 => \Timer_Rotor_Delay:TimerUDB:run_mode\,
-            main_2 => \Timer_Rotor_Delay:TimerUDB:per_zero\,
-            main_3 => \Timer_Rotor_Delay:TimerUDB:trig_rise_detected\,
-            main_4 => \Timer_Rotor_Delay:TimerUDB:trig_fall_detected\);
-
-    \Timer_Rotor_Delay:TimerUDB:timer_enable\:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0) + (!main_1) + (main_2 * main_3 * main_4) + (main_5) + (!main_6 * !main_7)",
-            regmode => 1,
-            clk_inv => '0',
-            clken_inv => '0',
-            clken_mode => 2)
-        PORT MAP(
-            q => \Timer_Rotor_Delay:TimerUDB:timer_enable\,
-            clk_en => ClockBlock_LFClk__SYNC_OUT,
-            clock_0 => ClockBlock_HFClk,
             main_0 => \Timer_Rotor_Delay:TimerUDB:control_7\,
-            main_1 => \Timer_Rotor_Delay:TimerUDB:control_4\,
-            main_2 => \Timer_Rotor_Delay:TimerUDB:timer_enable\,
-            main_3 => \Timer_Rotor_Delay:TimerUDB:run_mode\,
-            main_4 => \Timer_Rotor_Delay:TimerUDB:per_zero\,
-            main_5 => \Timer_Rotor_Delay:TimerUDB:trig_disable\,
-            main_6 => \Timer_Rotor_Delay:TimerUDB:trig_rise_detected\,
-            main_7 => \Timer_Rotor_Delay:TimerUDB:trig_fall_detected\);
-
-    \Timer_Rotor_Delay:TimerUDB:trig_disable\:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0 * main_1 * main_2 * main_3 * !main_4 * main_5) + (main_0 * main_1 * main_2 * main_3 * !main_4 * main_6)",
-            regmode => 2,
-            clk_inv => '0',
-            clken_inv => '0',
-            clken_mode => 2)
-        PORT MAP(
-            q => \Timer_Rotor_Delay:TimerUDB:trig_disable\,
-            clk_en => ClockBlock_LFClk__SYNC_OUT,
-            clock_0 => ClockBlock_HFClk,
-            main_0 => \Timer_Rotor_Delay:TimerUDB:control_4\,
-            main_1 => \Timer_Rotor_Delay:TimerUDB:timer_enable\,
-            main_2 => \Timer_Rotor_Delay:TimerUDB:run_mode\,
-            main_3 => \Timer_Rotor_Delay:TimerUDB:per_zero\,
-            main_4 => \Timer_Rotor_Delay:TimerUDB:trig_disable\,
-            main_5 => \Timer_Rotor_Delay:TimerUDB:trig_rise_detected\,
-            main_6 => \Timer_Rotor_Delay:TimerUDB:trig_fall_detected\);
-
-    \Timer_Rotor_Delay:TimerUDB:trig_last\:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1 * main_2) + (!main_0 * main_1 * !main_2) + (main_0 * !main_1 * !main_2) + (main_0 * main_1 * main_2)",
-            regmode => 1,
-            clk_inv => '0',
-            clken_inv => '0',
-            clken_mode => 2)
-        PORT MAP(
-            q => \Timer_Rotor_Delay:TimerUDB:trig_last\,
-            clk_en => ClockBlock_LFClk__SYNC_OUT,
-            clock_0 => ClockBlock_HFClk,
-            main_0 => Net_1438,
-            main_1 => Net_1439,
-            main_2 => Net_1442);
-
-    \Timer_Rotor_Delay:TimerUDB:trig_rise_detected\:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1 * main_2 * main_3 * main_4 * !main_5) + (!main_0 * main_1 * !main_2 * main_3 * main_4 * !main_5) + (main_0 * !main_1 * !main_2 * main_3 * main_4 * !main_5) + (main_0 * main_1 * main_2 * main_3 * main_4 * !main_5) + (main_3 * main_4 * main_6)",
-            regmode => 1,
-            clk_inv => '0',
-            clken_inv => '0',
-            clken_mode => 2)
-        PORT MAP(
-            q => \Timer_Rotor_Delay:TimerUDB:trig_rise_detected\,
-            clk_en => ClockBlock_LFClk__SYNC_OUT,
-            clock_0 => ClockBlock_HFClk,
-            main_0 => Net_1438,
-            main_1 => Net_1439,
-            main_2 => Net_1442,
-            main_3 => \Timer_Rotor_Delay:TimerUDB:control_7\,
-            main_4 => \Timer_Rotor_Delay:TimerUDB:control_4\,
-            main_5 => \Timer_Rotor_Delay:TimerUDB:trig_last\,
-            main_6 => \Timer_Rotor_Delay:TimerUDB:trig_rise_detected\);
-
-    \Timer_Rotor_Delay:TimerUDB:trig_fall_detected\:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1 * !main_2 * main_3 * main_4 * main_5) + (!main_0 * main_1 * main_2 * main_3 * main_4 * main_5) + (main_0 * !main_1 * main_2 * main_3 * main_4 * main_5) + (main_0 * main_1 * !main_2 * main_3 * main_4 * main_5) + (main_3 * main_4 * main_6)",
-            regmode => 1,
-            clk_inv => '0',
-            clken_inv => '0',
-            clken_mode => 2)
-        PORT MAP(
-            q => \Timer_Rotor_Delay:TimerUDB:trig_fall_detected\,
-            clk_en => ClockBlock_LFClk__SYNC_OUT,
-            clock_0 => ClockBlock_HFClk,
-            main_0 => Net_1438,
-            main_1 => Net_1439,
-            main_2 => Net_1442,
-            main_3 => \Timer_Rotor_Delay:TimerUDB:control_7\,
-            main_4 => \Timer_Rotor_Delay:TimerUDB:control_4\,
-            main_5 => \Timer_Rotor_Delay:TimerUDB:trig_last\,
-            main_6 => \Timer_Rotor_Delay:TimerUDB:trig_fall_detected\);
+            main_1 => \Timer_Rotor_Delay:TimerUDB:per_zero\);
 
     Net_1598:macrocell
         GENERIC MAP(

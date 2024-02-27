@@ -2,7 +2,7 @@
 --	Conversion of BLDC_Motor_Board.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Fri Feb 23 15:34:04 2024
+--	Mon Feb 26 19:21:50 2024
 --
 
 USE cypress.cypress.all;
@@ -202,8 +202,11 @@ SIGNAL Net_1554_1 : bit;
 SIGNAL Net_1553_1 : bit;
 SIGNAL \Address_Register:status_0\ : bit;
 SIGNAL \Address_Register:status_1\ : bit;
+SIGNAL Net_115 : bit;
 SIGNAL \Address_Register:status_2\ : bit;
+SIGNAL Net_116 : bit;
 SIGNAL \Address_Register:status_3\ : bit;
+SIGNAL Net_117 : bit;
 SIGNAL \Address_Register:status_4\ : bit;
 SIGNAL \Address_Register:status_5\ : bit;
 SIGNAL \Address_Register:status_6\ : bit;
@@ -299,24 +302,18 @@ SIGNAL \Timer_Rotor_Delay:TimerUDB:capture_last\ : bit;
 SIGNAL \Timer_Rotor_Delay:TimerUDB:capt_fifo_load\ : bit;
 SIGNAL \Timer_Rotor_Delay:TimerUDB:timer_enable\ : bit;
 SIGNAL \Timer_Rotor_Delay:TimerUDB:run_mode\ : bit;
-SIGNAL \Timer_Rotor_Delay:TimerUDB:hwEnable_reg\ : bit;
+SIGNAL \Timer_Rotor_Delay:TimerUDB:hwEnable\ : bit;
 SIGNAL \Timer_Rotor_Delay:TimerUDB:status_tc\ : bit;
 SIGNAL \Timer_Rotor_Delay:TimerUDB:trigger_enable\ : bit;
 SIGNAL \Timer_Rotor_Delay:TimerUDB:per_zero\ : bit;
 SIGNAL \Timer_Rotor_Delay:TimerUDB:tc_i\ : bit;
 SIGNAL \Timer_Rotor_Delay:TimerUDB:tc_reg_i\ : bit;
-SIGNAL \Timer_Rotor_Delay:TimerUDB:hwEnable\ : bit;
+SIGNAL \Timer_Rotor_Delay:TimerUDB:hwEnable_reg\ : bit;
 SIGNAL Net_1458 : bit;
 SIGNAL \Timer_Rotor_Delay:TimerUDB:capture_out_reg_i\ : bit;
 SIGNAL Net_1447 : bit;
 SIGNAL \Timer_Rotor_Delay:TimerUDB:capt_fifo_load_int\ : bit;
 SIGNAL \Timer_Rotor_Delay:TimerUDB:runmode_enable\ : bit;
-SIGNAL \Timer_Rotor_Delay:TimerUDB:trig_disable\ : bit;
-SIGNAL \Timer_Rotor_Delay:TimerUDB:trig_last\ : bit;
-SIGNAL Net_1460 : bit;
-SIGNAL \Timer_Rotor_Delay:TimerUDB:trig_rise_detected\ : bit;
-SIGNAL \Timer_Rotor_Delay:TimerUDB:trig_fall_detected\ : bit;
-SIGNAL \Timer_Rotor_Delay:TimerUDB:trigger_polarized\ : bit;
 SIGNAL \Timer_Rotor_Delay:TimerUDB:trig_reg\ : bit;
 SIGNAL \Timer_Rotor_Delay:TimerUDB:status_6\ : bit;
 SIGNAL \Timer_Rotor_Delay:TimerUDB:status_5\ : bit;
@@ -497,7 +494,6 @@ SIGNAL tmpFB_0__Cur_Alert_3_net_0 : bit;
 SIGNAL tmpIO_0__Cur_Alert_3_net_0 : bit;
 TERMINAL tmpSIOVREF__Cur_Alert_3_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__Cur_Alert_3_net_0 : bit;
-SIGNAL Net_1441 : bit;
 SIGNAL Net_883 : bit;
 SIGNAL \Limit_Register:status_7\ : bit;
 SIGNAL \Limit_Register:status_6\ : bit;
@@ -615,6 +611,21 @@ SIGNAL \Timer_Period_Reset:TimerUDB:sT8:timerdp:f1_bus_stat_reg\ : bit;
 ATTRIBUTE port_state_att of \Timer_Period_Reset:TimerUDB:sT8:timerdp:f1_bus_stat_reg\:SIGNAL IS 2;
 SIGNAL \Timer_Period_Reset:TimerUDB:sT8:timerdp:f1_blk_stat_reg\ : bit;
 ATTRIBUTE port_state_att of \Timer_Period_Reset:TimerUDB:sT8:timerdp:f1_blk_stat_reg\:SIGNAL IS 2;
+SIGNAL Net_1610 : bit;
+SIGNAL tmpOE__DIP_2_net_0 : bit;
+SIGNAL tmpIO_0__DIP_2_net_0 : bit;
+TERMINAL tmpSIOVREF__DIP_2_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__DIP_2_net_0 : bit;
+SIGNAL Net_1611 : bit;
+SIGNAL tmpOE__DIP_3_net_0 : bit;
+SIGNAL tmpIO_0__DIP_3_net_0 : bit;
+TERMINAL tmpSIOVREF__DIP_3_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__DIP_3_net_0 : bit;
+SIGNAL Net_1612 : bit;
+SIGNAL tmpOE__DIP_4_net_0 : bit;
+SIGNAL tmpIO_0__DIP_4_net_0 : bit;
+TERMINAL tmpSIOVREF__DIP_4_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__DIP_4_net_0 : bit;
 SIGNAL \Debouncer:DEBOUNCER[0]:d_sync_0\\D\ : bit;
 SIGNAL \Debouncer:DEBOUNCER[0]:d_sync_1\\D\ : bit;
 SIGNAL Net_1555_0D : bit;
@@ -626,14 +637,9 @@ SIGNAL Net_1555_1D : bit;
 SIGNAL Net_1554_1D : bit;
 SIGNAL Net_1553_1D : bit;
 SIGNAL \Timer_Rotor_Delay:TimerUDB:capture_last\\D\ : bit;
-SIGNAL \Timer_Rotor_Delay:TimerUDB:hwEnable_reg\\D\ : bit;
 SIGNAL \Timer_Rotor_Delay:TimerUDB:tc_reg_i\\D\ : bit;
+SIGNAL \Timer_Rotor_Delay:TimerUDB:hwEnable_reg\\D\ : bit;
 SIGNAL \Timer_Rotor_Delay:TimerUDB:capture_out_reg_i\\D\ : bit;
-SIGNAL \Timer_Rotor_Delay:TimerUDB:runmode_enable\\D\ : bit;
-SIGNAL \Timer_Rotor_Delay:TimerUDB:trig_disable\\D\ : bit;
-SIGNAL \Timer_Rotor_Delay:TimerUDB:trig_last\\D\ : bit;
-SIGNAL \Timer_Rotor_Delay:TimerUDB:trig_rise_detected\\D\ : bit;
-SIGNAL \Timer_Rotor_Delay:TimerUDB:trig_fall_detected\\D\ : bit;
 SIGNAL \Timer_Period_Reset:TimerUDB:capture_last\\D\ : bit;
 SIGNAL \Timer_Period_Reset:TimerUDB:tc_reg_i\\D\ : bit;
 SIGNAL \Timer_Period_Reset:TimerUDB:hwEnable_reg\\D\ : bit;
@@ -646,45 +652,19 @@ tmpOE__HALL1_net_0 <=  ('1') ;
 
 Net_114 <= (not Net_266);
 
-\Timer_Rotor_Delay:TimerUDB:status_tc\ <= ((\Timer_Rotor_Delay:TimerUDB:control_4\ and \Timer_Rotor_Delay:TimerUDB:run_mode\ and \Timer_Rotor_Delay:TimerUDB:per_zero\ and \Timer_Rotor_Delay:TimerUDB:trig_fall_detected\)
-	OR (\Timer_Rotor_Delay:TimerUDB:control_4\ and \Timer_Rotor_Delay:TimerUDB:run_mode\ and \Timer_Rotor_Delay:TimerUDB:per_zero\ and \Timer_Rotor_Delay:TimerUDB:trig_rise_detected\));
-
-\Timer_Rotor_Delay:TimerUDB:runmode_enable\\D\ <= ((not \Timer_Rotor_Delay:TimerUDB:per_zero\ and not \Timer_Rotor_Delay:TimerUDB:trig_disable\ and \Timer_Rotor_Delay:TimerUDB:control_7\ and \Timer_Rotor_Delay:TimerUDB:control_4\ and \Timer_Rotor_Delay:TimerUDB:trig_fall_detected\)
-	OR (not \Timer_Rotor_Delay:TimerUDB:run_mode\ and not \Timer_Rotor_Delay:TimerUDB:trig_disable\ and \Timer_Rotor_Delay:TimerUDB:control_7\ and \Timer_Rotor_Delay:TimerUDB:control_4\ and \Timer_Rotor_Delay:TimerUDB:trig_fall_detected\)
-	OR (not \Timer_Rotor_Delay:TimerUDB:timer_enable\ and not \Timer_Rotor_Delay:TimerUDB:trig_disable\ and \Timer_Rotor_Delay:TimerUDB:control_7\ and \Timer_Rotor_Delay:TimerUDB:control_4\ and \Timer_Rotor_Delay:TimerUDB:trig_fall_detected\)
-	OR (not \Timer_Rotor_Delay:TimerUDB:per_zero\ and not \Timer_Rotor_Delay:TimerUDB:trig_disable\ and \Timer_Rotor_Delay:TimerUDB:control_7\ and \Timer_Rotor_Delay:TimerUDB:control_4\ and \Timer_Rotor_Delay:TimerUDB:trig_rise_detected\)
-	OR (not \Timer_Rotor_Delay:TimerUDB:run_mode\ and not \Timer_Rotor_Delay:TimerUDB:trig_disable\ and \Timer_Rotor_Delay:TimerUDB:control_7\ and \Timer_Rotor_Delay:TimerUDB:control_4\ and \Timer_Rotor_Delay:TimerUDB:trig_rise_detected\)
-	OR (not \Timer_Rotor_Delay:TimerUDB:timer_enable\ and not \Timer_Rotor_Delay:TimerUDB:trig_disable\ and \Timer_Rotor_Delay:TimerUDB:control_7\ and \Timer_Rotor_Delay:TimerUDB:control_4\ and \Timer_Rotor_Delay:TimerUDB:trig_rise_detected\));
-
-\Timer_Rotor_Delay:TimerUDB:trig_disable\\D\ <= ((\Timer_Rotor_Delay:TimerUDB:control_4\ and \Timer_Rotor_Delay:TimerUDB:timer_enable\ and \Timer_Rotor_Delay:TimerUDB:run_mode\ and \Timer_Rotor_Delay:TimerUDB:per_zero\ and \Timer_Rotor_Delay:TimerUDB:trig_fall_detected\)
-	OR (\Timer_Rotor_Delay:TimerUDB:control_4\ and \Timer_Rotor_Delay:TimerUDB:timer_enable\ and \Timer_Rotor_Delay:TimerUDB:run_mode\ and \Timer_Rotor_Delay:TimerUDB:per_zero\ and \Timer_Rotor_Delay:TimerUDB:trig_rise_detected\)
-	OR \Timer_Rotor_Delay:TimerUDB:trig_disable\);
-
-\Timer_Rotor_Delay:TimerUDB:trig_rise_detected\\D\ <= ((not Net_1439 and not Net_1442 and not \Timer_Rotor_Delay:TimerUDB:trig_last\ and Net_1438 and \Timer_Rotor_Delay:TimerUDB:control_7\ and \Timer_Rotor_Delay:TimerUDB:control_4\)
-	OR (not Net_1438 and not Net_1442 and not \Timer_Rotor_Delay:TimerUDB:trig_last\ and Net_1439 and \Timer_Rotor_Delay:TimerUDB:control_7\ and \Timer_Rotor_Delay:TimerUDB:control_4\)
-	OR (not Net_1438 and not Net_1439 and not \Timer_Rotor_Delay:TimerUDB:trig_last\ and Net_1442 and \Timer_Rotor_Delay:TimerUDB:control_7\ and \Timer_Rotor_Delay:TimerUDB:control_4\)
-	OR (not \Timer_Rotor_Delay:TimerUDB:trig_last\ and Net_1438 and Net_1439 and Net_1442 and \Timer_Rotor_Delay:TimerUDB:control_7\ and \Timer_Rotor_Delay:TimerUDB:control_4\)
-	OR (\Timer_Rotor_Delay:TimerUDB:control_7\ and \Timer_Rotor_Delay:TimerUDB:control_4\ and \Timer_Rotor_Delay:TimerUDB:trig_rise_detected\));
-
-\Timer_Rotor_Delay:TimerUDB:trig_fall_detected\\D\ <= ((not Net_1438 and not Net_1439 and not Net_1442 and \Timer_Rotor_Delay:TimerUDB:control_7\ and \Timer_Rotor_Delay:TimerUDB:control_4\ and \Timer_Rotor_Delay:TimerUDB:trig_last\)
-	OR (not Net_1442 and Net_1438 and Net_1439 and \Timer_Rotor_Delay:TimerUDB:control_7\ and \Timer_Rotor_Delay:TimerUDB:control_4\ and \Timer_Rotor_Delay:TimerUDB:trig_last\)
-	OR (not Net_1439 and Net_1438 and Net_1442 and \Timer_Rotor_Delay:TimerUDB:control_7\ and \Timer_Rotor_Delay:TimerUDB:control_4\ and \Timer_Rotor_Delay:TimerUDB:trig_last\)
-	OR (not Net_1438 and Net_1439 and Net_1442 and \Timer_Rotor_Delay:TimerUDB:control_7\ and \Timer_Rotor_Delay:TimerUDB:control_4\ and \Timer_Rotor_Delay:TimerUDB:trig_last\)
-	OR (\Timer_Rotor_Delay:TimerUDB:control_7\ and \Timer_Rotor_Delay:TimerUDB:control_4\ and \Timer_Rotor_Delay:TimerUDB:trig_fall_detected\));
-
-\Timer_Rotor_Delay:TimerUDB:trig_reg\ <= ((\Timer_Rotor_Delay:TimerUDB:control_4\ and \Timer_Rotor_Delay:TimerUDB:timer_enable\ and \Timer_Rotor_Delay:TimerUDB:trig_fall_detected\)
-	OR (\Timer_Rotor_Delay:TimerUDB:control_4\ and \Timer_Rotor_Delay:TimerUDB:timer_enable\ and \Timer_Rotor_Delay:TimerUDB:trig_rise_detected\));
+\Timer_Rotor_Delay:TimerUDB:status_tc\ <= ((\Timer_Rotor_Delay:TimerUDB:control_7\ and \Timer_Rotor_Delay:TimerUDB:per_zero\));
 
 Net_1364_0 <= (not Net_1365);
 
 Net_1364_1 <= (not Net_1363);
 
-Net_1460 <= ((not Net_1439 and not Net_1442 and Net_1438)
-	OR (not Net_1438 and not Net_1442 and Net_1439)
-	OR (not Net_1438 and not Net_1439 and Net_1442)
-	OR (Net_1438 and Net_1439 and Net_1442));
-
 \Timer_Period_Reset:TimerUDB:status_tc\ <= ((\Timer_Period_Reset:TimerUDB:control_7\ and \Timer_Period_Reset:TimerUDB:per_zero\));
+
+Net_115 <= (not Net_1610);
+
+Net_116 <= (not Net_1611);
+
+Net_117 <= (not Net_1612);
 
 HALL1:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba",
@@ -2043,7 +2023,7 @@ CAN_LED:cy_psoc3_pins_v1_10
 	PORT MAP(reset=>zero,
 		clock=>Net_1496,
 		status=>(zero, zero, zero, zero,
-			zero, zero, zero, Net_114));
+			Net_117, Net_116, Net_115, Net_114));
 DRV_EN:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"29938f8e-7989-4f38-afcc-a0b03c6eb22d",
 		drive_mode=>"001",
@@ -2558,7 +2538,7 @@ timer_clock:cy_clock_v1_0
 		f1_blk_sync=>'1')
 	PORT MAP(reset=>zero,
 		clk=>\Timer_Rotor_Delay:TimerUDB:ClockOutFromEnBlock\,
-		cs_addr=>(zero, \Timer_Rotor_Delay:TimerUDB:trig_reg\, \Timer_Rotor_Delay:TimerUDB:per_zero\),
+		cs_addr=>(zero, \Timer_Rotor_Delay:TimerUDB:control_7\, \Timer_Rotor_Delay:TimerUDB:per_zero\),
 		route_si=>zero,
 		route_ci=>zero,
 		f0_load=>zero,
@@ -2644,7 +2624,7 @@ timer_clock:cy_clock_v1_0
 		f1_blk_sync=>'1')
 	PORT MAP(reset=>zero,
 		clk=>\Timer_Rotor_Delay:TimerUDB:ClockOutFromEnBlock\,
-		cs_addr=>(zero, \Timer_Rotor_Delay:TimerUDB:trig_reg\, \Timer_Rotor_Delay:TimerUDB:per_zero\),
+		cs_addr=>(zero, \Timer_Rotor_Delay:TimerUDB:control_7\, \Timer_Rotor_Delay:TimerUDB:per_zero\),
 		route_si=>zero,
 		route_ci=>zero,
 		f0_load=>zero,
@@ -3272,6 +3252,216 @@ isr_Period_Reset:cy_isr_v1_0
 	GENERIC MAP(int_type=>"00",
 		is_nmi=>'0')
 	PORT MAP(int_signal=>Net_1598);
+DIP_2:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"9eb7ec56-2384-4261-9d2b-38e17e7fea2d",
+		drive_mode=>"001",
+		ibuf_enabled=>"1",
+		init_dr_st=>"0",
+		input_sync=>"0",
+		input_clk_en=>'0',
+		input_sync_mode=>"0",
+		intr_mode=>"00",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>"",
+		layout_mode=>"CONTIGUOUS",
+		output_conn=>"0",
+		output_sync=>"0",
+		output_clk_en=>'0',
+		output_mode=>"0",
+		output_reset=>'0',
+		output_clock_mode=>"0",
+		oe_sync=>"0",
+		oe_conn=>"0",
+		oe_reset=>'0',
+		pin_aliases=>"",
+		pin_mode=>"I",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"00000000",
+		sio_hyst=>"1",
+		sio_ibuf=>"00000000",
+		sio_info=>"00",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		sio_vohsel=>"00000000",
+		slew_rate=>"0",
+		spanning=>'0',
+		sw_only=>'0',
+		vtrip=>"00",
+		width=>1,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"0",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1,
+		ovt_needed=>"0",
+		ovt_slew_control=>"00",
+		ovt_hyst_trim=>"0",
+		input_buffer_sel=>"00")
+	PORT MAP(oe=>(tmpOE__HALL1_net_0),
+		y=>(zero),
+		fb=>Net_1610,
+		analog=>(open),
+		io=>(tmpIO_0__DIP_2_net_0),
+		siovref=>(tmpSIOVREF__DIP_2_net_0),
+		annotation=>(open),
+		in_clock=>zero,
+		in_clock_en=>tmpOE__HALL1_net_0,
+		in_reset=>zero,
+		out_clock=>zero,
+		out_clock_en=>tmpOE__HALL1_net_0,
+		out_reset=>zero,
+		interrupt=>tmpINTERRUPT_0__DIP_2_net_0);
+DIP_3:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"22261c61-740f-4f38-bf79-acc049d487be",
+		drive_mode=>"001",
+		ibuf_enabled=>"1",
+		init_dr_st=>"0",
+		input_sync=>"0",
+		input_clk_en=>'0',
+		input_sync_mode=>"0",
+		intr_mode=>"00",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>"",
+		layout_mode=>"CONTIGUOUS",
+		output_conn=>"0",
+		output_sync=>"0",
+		output_clk_en=>'0',
+		output_mode=>"0",
+		output_reset=>'0',
+		output_clock_mode=>"0",
+		oe_sync=>"0",
+		oe_conn=>"0",
+		oe_reset=>'0',
+		pin_aliases=>"",
+		pin_mode=>"I",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"00000000",
+		sio_hyst=>"1",
+		sio_ibuf=>"00000000",
+		sio_info=>"00",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		sio_vohsel=>"00000000",
+		slew_rate=>"0",
+		spanning=>'0',
+		sw_only=>'0',
+		vtrip=>"00",
+		width=>1,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"0",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1,
+		ovt_needed=>"0",
+		ovt_slew_control=>"00",
+		ovt_hyst_trim=>"0",
+		input_buffer_sel=>"00")
+	PORT MAP(oe=>(tmpOE__HALL1_net_0),
+		y=>(zero),
+		fb=>Net_1611,
+		analog=>(open),
+		io=>(tmpIO_0__DIP_3_net_0),
+		siovref=>(tmpSIOVREF__DIP_3_net_0),
+		annotation=>(open),
+		in_clock=>zero,
+		in_clock_en=>tmpOE__HALL1_net_0,
+		in_reset=>zero,
+		out_clock=>zero,
+		out_clock_en=>tmpOE__HALL1_net_0,
+		out_reset=>zero,
+		interrupt=>tmpINTERRUPT_0__DIP_3_net_0);
+DIP_4:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"563614e5-6ade-4974-a1fd-151adcff48f4",
+		drive_mode=>"001",
+		ibuf_enabled=>"1",
+		init_dr_st=>"0",
+		input_sync=>"0",
+		input_clk_en=>'0',
+		input_sync_mode=>"0",
+		intr_mode=>"00",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>"",
+		layout_mode=>"CONTIGUOUS",
+		output_conn=>"0",
+		output_sync=>"0",
+		output_clk_en=>'0',
+		output_mode=>"0",
+		output_reset=>'0',
+		output_clock_mode=>"0",
+		oe_sync=>"0",
+		oe_conn=>"0",
+		oe_reset=>'0',
+		pin_aliases=>"",
+		pin_mode=>"I",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"00000000",
+		sio_hyst=>"1",
+		sio_ibuf=>"00000000",
+		sio_info=>"00",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		sio_vohsel=>"00000000",
+		slew_rate=>"0",
+		spanning=>'0',
+		sw_only=>'0',
+		vtrip=>"00",
+		width=>1,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"0",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1,
+		ovt_needed=>"0",
+		ovt_slew_control=>"00",
+		ovt_hyst_trim=>"0",
+		input_buffer_sel=>"00")
+	PORT MAP(oe=>(tmpOE__HALL1_net_0),
+		y=>(zero),
+		fb=>Net_1612,
+		analog=>(open),
+		io=>(tmpIO_0__DIP_4_net_0),
+		siovref=>(tmpSIOVREF__DIP_4_net_0),
+		annotation=>(open),
+		in_clock=>zero,
+		in_clock_en=>tmpOE__HALL1_net_0,
+		in_reset=>zero,
+		out_clock=>zero,
+		out_clock_en=>tmpOE__HALL1_net_0,
+		out_reset=>zero,
+		interrupt=>tmpINTERRUPT_0__DIP_4_net_0);
 \Debouncer:DEBOUNCER[0]:d_sync_0\:cy_dff
 	PORT MAP(d=>Net_1364_0,
 		clk=>\Debouncer:op_clk\,
@@ -3316,38 +3506,18 @@ Net_1553_1:cy_dff
 	PORT MAP(d=>zero,
 		clk=>\Timer_Rotor_Delay:TimerUDB:ClockOutFromEnBlock\,
 		q=>\Timer_Rotor_Delay:TimerUDB:capture_last\);
-\Timer_Rotor_Delay:TimerUDB:hwEnable_reg\:cy_dff
-	PORT MAP(d=>\Timer_Rotor_Delay:TimerUDB:control_7\,
-		clk=>\Timer_Rotor_Delay:TimerUDB:ClockOutFromEnBlock\,
-		q=>\Timer_Rotor_Delay:TimerUDB:run_mode\);
 \Timer_Rotor_Delay:TimerUDB:tc_reg_i\:cy_dff
 	PORT MAP(d=>\Timer_Rotor_Delay:TimerUDB:status_tc\,
 		clk=>\Timer_Rotor_Delay:TimerUDB:ClockOutFromEnBlock\,
 		q=>Net_1458);
+\Timer_Rotor_Delay:TimerUDB:hwEnable_reg\:cy_dff
+	PORT MAP(d=>\Timer_Rotor_Delay:TimerUDB:control_7\,
+		clk=>\Timer_Rotor_Delay:TimerUDB:ClockOutFromEnBlock\,
+		q=>\Timer_Rotor_Delay:TimerUDB:hwEnable_reg\);
 \Timer_Rotor_Delay:TimerUDB:capture_out_reg_i\:cy_dff
 	PORT MAP(d=>zero,
 		clk=>\Timer_Rotor_Delay:TimerUDB:ClockOutFromEnBlock\,
 		q=>\Timer_Rotor_Delay:TimerUDB:capture_out_reg_i\);
-\Timer_Rotor_Delay:TimerUDB:runmode_enable\:cy_dff
-	PORT MAP(d=>\Timer_Rotor_Delay:TimerUDB:runmode_enable\\D\,
-		clk=>\Timer_Rotor_Delay:TimerUDB:ClockOutFromEnBlock\,
-		q=>\Timer_Rotor_Delay:TimerUDB:timer_enable\);
-\Timer_Rotor_Delay:TimerUDB:trig_disable\:cy_dff
-	PORT MAP(d=>\Timer_Rotor_Delay:TimerUDB:trig_disable\\D\,
-		clk=>\Timer_Rotor_Delay:TimerUDB:ClockOutFromEnBlock\,
-		q=>\Timer_Rotor_Delay:TimerUDB:trig_disable\);
-\Timer_Rotor_Delay:TimerUDB:trig_last\:cy_dff
-	PORT MAP(d=>Net_1460,
-		clk=>\Timer_Rotor_Delay:TimerUDB:ClockOutFromEnBlock\,
-		q=>\Timer_Rotor_Delay:TimerUDB:trig_last\);
-\Timer_Rotor_Delay:TimerUDB:trig_rise_detected\:cy_dff
-	PORT MAP(d=>\Timer_Rotor_Delay:TimerUDB:trig_rise_detected\\D\,
-		clk=>\Timer_Rotor_Delay:TimerUDB:ClockOutFromEnBlock\,
-		q=>\Timer_Rotor_Delay:TimerUDB:trig_rise_detected\);
-\Timer_Rotor_Delay:TimerUDB:trig_fall_detected\:cy_dff
-	PORT MAP(d=>\Timer_Rotor_Delay:TimerUDB:trig_fall_detected\\D\,
-		clk=>\Timer_Rotor_Delay:TimerUDB:ClockOutFromEnBlock\,
-		q=>\Timer_Rotor_Delay:TimerUDB:trig_fall_detected\);
 \Timer_Period_Reset:TimerUDB:capture_last\:cy_dff
 	PORT MAP(d=>zero,
 		clk=>\Timer_Period_Reset:TimerUDB:ClockOutFromEnBlock\,

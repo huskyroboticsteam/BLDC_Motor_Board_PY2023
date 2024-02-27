@@ -42,9 +42,9 @@ extern uint8 Timer_Rotor_Delay_initVar;
 #define Timer_Rotor_Delay_SoftwareCaptureMode        0u
 #define Timer_Rotor_Delay_SoftwareTriggerMode        0u
 #define Timer_Rotor_Delay_UsingHWEnable              0u
-#define Timer_Rotor_Delay_EnableTriggerMode          1u
+#define Timer_Rotor_Delay_EnableTriggerMode          0u
 #define Timer_Rotor_Delay_InterruptOnCaptureCount    0u
-#define Timer_Rotor_Delay_RunModeUsed                1u
+#define Timer_Rotor_Delay_RunModeUsed                0u
 #define Timer_Rotor_Delay_ControlRegRemoved          0u
 
 #if defined(Timer_Rotor_Delay_TimerUDB_sCTRLReg_SyncCtl_ctrlreg__CONTROL_REG)
@@ -170,7 +170,7 @@ void Timer_Rotor_Delay_Wakeup(void)        ;
 
 #define Timer_Rotor_Delay_INIT_PERIOD             319u
 #define Timer_Rotor_Delay_INIT_CAPTURE_MODE       ((uint8)((uint8)0u << Timer_Rotor_Delay_CTRL_CAP_MODE_SHIFT))
-#define Timer_Rotor_Delay_INIT_TRIGGER_MODE       ((uint8)((uint8)3u << Timer_Rotor_Delay_CTRL_TRIG_MODE_SHIFT))
+#define Timer_Rotor_Delay_INIT_TRIGGER_MODE       ((uint8)((uint8)0u << Timer_Rotor_Delay_CTRL_TRIG_MODE_SHIFT))
 #if (Timer_Rotor_Delay_UsingFixedFunction)
     #define Timer_Rotor_Delay_INIT_INTERRUPT_MODE (((uint8)((uint8)0u << Timer_Rotor_Delay_STATUS_TC_INT_MASK_SHIFT)) | \
                                                   ((uint8)((uint8)0 << Timer_Rotor_Delay_STATUS_CAPTURE_INT_MASK_SHIFT)))
