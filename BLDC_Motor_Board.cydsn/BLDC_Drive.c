@@ -56,15 +56,23 @@ void set_speed(int16_t speed, uint8_t disable_limit) {
         currentSpeed = speed;
     } else { // set speed = 0; (special case
         currentSpeed = 0;
+        
     }
     
     if (currentSpeed != 0) {
+        Timer_Rotor_Delay_Start(); // resume timer
         delay_ms = (float)(1 << 15)*10000/currentSpeed/MAX_RPM;
     }
     else {
         delay_ms = 0;
         // stop motor (stop state machine)
-        
+        UH_Write(0);
+        UL_Write(0);
+        VH_Write(0);
+        VL_Write(0);
+        WH_Write(0);
+        WL_Write(0);
+        Timer_Rotor_Delay_Stop(); // pause timer
     }
     
     Timer_Rotor_Delay_WritePeriod(delay_ms); // convert to ticks
