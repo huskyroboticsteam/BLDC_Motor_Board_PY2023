@@ -9,15 +9,20 @@
  *
  * ========================================
 */
+#include <stdio.h>
 #include "main.h"
 #include "BLDC_Debug.h"
 #include "cyapicallbacks.h"
 #include "BLDC_Drive.h"
 #include "BLDC_CAN.h"
 #include "BLDC_FSM.h"
+#include "../HindsightCAN/CANLibrary.h"
 #include <math.h>
 
-
+// Side delay
+int16_t counter = 0;
+int16_t delay = 10;
+int16_t period = 3;
 
 //LED
 uint8_t Can_LED = 0;
@@ -92,11 +97,11 @@ CY_ISR(Pin_Limit_Handler){
     #endif
 
     if (bound_set1 && Pin_Limit_1_Read()) {
-        setEncoderAtLimit(enc_lim_1);
+        // setEncoderAtLimit(enc_lim_1);
         UART_UartPutString("Change limit 1\n\r");
     }
     if (bound_set2 && Pin_Limit_2_Read()){
-        setEncoderAtLimit(enc_lim_2);
+        // setEncoderAtLimit(enc_lim_2);
         UART_UartPutString("Change limit 2\n\r");
     }
 }
@@ -110,6 +115,10 @@ int main(void)
     
     for(;;)
     {
+        set_speed(1000*(1-cos(6.28 * delay * counter / 1000 / period)), 0);
+        counter++;
+        CyDelay(delay);
+        /*
         switch(GetState()) {
             case(UNINIT):
                 //idle animation
@@ -142,6 +151,7 @@ int main(void)
         if (UART_SpiUartGetRxBufferSize()) {
             DebugPrint(UART_UartGetByte());
         }
+        */
     }
 }
 
@@ -182,7 +192,7 @@ void Initialize(void) {
     isr_Limit_1_StartEx(Pin_Limit_Handler);
     isr_Period_Reset_StartEx(Period_Reset_Handler);
 }
-
+/*
 void DebugPrint(char input) {
     switch(input) {
         case 's':
@@ -211,6 +221,7 @@ void DebugPrint(char input) {
     }
     UART_UartPutString(txData);
 }
+*/
 
 void PrintCanPacket(CANPacket receivedPacket){
     for(int i = 0; i < receivedPacket.dlc; i++ ) {

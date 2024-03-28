@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 1
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccywhWMe.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 1
   28:Generated_Source\PSoC4/DEBUG_LED.c **** #else
   29:Generated_Source\PSoC4/DEBUG_LED.c ****     #if (CY_PSOC4_4200L)
   30:Generated_Source\PSoC4/DEBUG_LED.c ****         #define DEBUG_LED_SetP4PinDriveMode(shift, mode)  \
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 2
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccywhWMe.s 			page 2
 
 
   31:Generated_Source\PSoC4/DEBUG_LED.c ****         do { \
@@ -116,9 +116,9 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 1
   36 0002 1168     		ldr	r1, [r2]
   37 0004 034B     		ldr	r3, .L2+4
   38 0006 0B40     		ands	r3, r1
-  39 0008 4002     		lsls	r0, r0, #9
+  39 0008 C003     		lsls	r0, r0, #15
   40              	.LVL1:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 3
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccywhWMe.s 			page 3
 
 
   41 000a 1843     		orrs	r0, r3
@@ -130,8 +130,8 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 1
   46              	.L3:
   47              		.align	2
   48              	.L2:
-  49 0010 08000440 		.word	1074003976
-  50 0014 FFF1FFFF 		.word	-3585
+  49 0010 08060440 		.word	1074005512
+  50 0014 FF7FFCFF 		.word	-229377
   51              		.cfi_endproc
   52              	.LFE0:
   53              		.size	DEBUG_LED_SetDriveMode, .-DEBUG_LED_SetDriveMode
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 1
  108:Generated_Source\PSoC4/DEBUG_LED.c **** * \funcusage
  109:Generated_Source\PSoC4/DEBUG_LED.c **** *  \snippet DEBUG_LED_SUT.c usage_DEBUG_LED_Write
  110:Generated_Source\PSoC4/DEBUG_LED.c **** *******************************************************************************/
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 4
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccywhWMe.s 			page 4
 
 
  111:Generated_Source\PSoC4/DEBUG_LED.c **** void DEBUG_LED_Write(uint8 value)
@@ -194,12 +194,12 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 1
   69 0000 0449     		ldr	r1, .L5
   70 0002 0A68     		ldr	r2, [r1]
   71 0004 D2B2     		uxtb	r2, r2
-  72 0006 0823     		movs	r3, #8
+  72 0006 2023     		movs	r3, #32
   73 0008 9A43     		bics	r2, r3
   74              	.LVL3:
  114:Generated_Source\PSoC4/DEBUG_LED.c ****     drVal = (drVal | ((uint8)(value << DEBUG_LED_SHIFT) & DEBUG_LED_MASK));
   75              		.loc 1 114 0
-  76 000a C000     		lsls	r0, r0, #3
+  76 000a 4001     		lsls	r0, r0, #5
   77              	.LVL4:
   78 000c 1840     		ands	r0, r3
   79 000e 1043     		orrs	r0, r2
@@ -214,7 +214,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 1
   86              	.L6:
   87              		.align	2
   88              	.L5:
-  89 0014 00000440 		.word	1074003968
+  89 0014 00060440 		.word	1074005504
   90              		.cfi_endproc
   91              	.LFE1:
   92              		.size	DEBUG_LED_Write, .-DEBUG_LED_Write
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 1
  126:Generated_Source\PSoC4/DEBUG_LED.c **** *
  127:Generated_Source\PSoC4/DEBUG_LED.c **** * The pin's status register returns the current logic level present on the 
  128:Generated_Source\PSoC4/DEBUG_LED.c **** * physical pin.
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 5
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccywhWMe.s 			page 5
 
 
  129:Generated_Source\PSoC4/DEBUG_LED.c **** *
@@ -259,7 +259,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 1
  106              		.loc 1 138 0
  107 0000 024B     		ldr	r3, .L8
  108 0002 1868     		ldr	r0, [r3]
- 109 0004 C008     		lsrs	r0, r0, #3
+ 109 0004 4009     		lsrs	r0, r0, #5
  110 0006 0123     		movs	r3, #1
  111 0008 1840     		ands	r0, r3
  139:Generated_Source\PSoC4/DEBUG_LED.c **** }
@@ -269,7 +269,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 1
  115              	.L9:
  116              		.align	2
  117              	.L8:
- 118 000c 04000440 		.word	1074003972
+ 118 000c 04060440 		.word	1074005508
  119              		.cfi_endproc
  120              	.LFE2:
  121              		.size	DEBUG_LED_Read, .-DEBUG_LED_Read
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 1
  154:Generated_Source\PSoC4/DEBUG_LED.c **** * register. For output pins this is a useful function to determine the value 
  155:Generated_Source\PSoC4/DEBUG_LED.c **** * just written to the pin.
  156:Generated_Source\PSoC4/DEBUG_LED.c **** *
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 6
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccywhWMe.s 			page 6
 
 
  157:Generated_Source\PSoC4/DEBUG_LED.c **** * \return 
@@ -319,7 +319,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 1
  135              		.loc 1 166 0
  136 0000 024B     		ldr	r3, .L11
  137 0002 1868     		ldr	r0, [r3]
- 138 0004 C008     		lsrs	r0, r0, #3
+ 138 0004 4009     		lsrs	r0, r0, #5
  139 0006 0123     		movs	r3, #1
  140 0008 1840     		ands	r0, r3
  167:Generated_Source\PSoC4/DEBUG_LED.c **** }
@@ -329,7 +329,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 1
  144              	.L12:
  145              		.align	2
  146              	.L11:
- 147 000c 00000440 		.word	1074003968
+ 147 000c 00060440 		.word	1074005504
  148              		.cfi_endproc
  149              	.LFE3:
  150              		.size	DEBUG_LED_ReadDataReg, .-DEBUG_LED_ReadDataReg
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 1
  182:Generated_Source\PSoC4/DEBUG_LED.c **** *  The pin position as listed in the Pins component. You may OR these to be 
  183:Generated_Source\PSoC4/DEBUG_LED.c **** *  able to configure the interrupt mode of multiple pins within a Pins 
  184:Generated_Source\PSoC4/DEBUG_LED.c **** *  component. Or you may use DEBUG_LED_INTR_ALL to configure the
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 7
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccywhWMe.s 			page 7
 
 
  185:Generated_Source\PSoC4/DEBUG_LED.c **** *  interrupt mode of all the pins in the Pins component.       
@@ -412,13 +412,13 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 1
  178              	.L15:
  179 000e C046     		.align	2
  180              	.L14:
- 181 0010 0C000440 		.word	1074003980
+ 181 0010 0C060440 		.word	1074005516
  182              		.cfi_endproc
  183              	.LFE4:
  184              		.size	DEBUG_LED_SetInterruptMode, .-DEBUG_LED_SetInterruptMode
  185              		.section	.text.DEBUG_LED_ClearInterrupt,"ax",%progbits
  186              		.align	2
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 8
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccywhWMe.s 			page 8
 
 
  187              		.global	DEBUG_LED_ClearInterrupt
@@ -460,7 +460,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 1
  198              		.loc 1 238 0
  199 0000 034A     		ldr	r2, .L17
  200 0002 1068     		ldr	r0, [r2]
- 201 0004 0823     		movs	r3, #8
+ 201 0004 2023     		movs	r3, #32
  202 0006 1840     		ands	r0, r3
  203              	.LVL9:
  239:Generated_Source\PSoC4/DEBUG_LED.c **** 	DEBUG_LED_INTSTAT = maskedStatus;
@@ -468,7 +468,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 1
  205 0008 1060     		str	r0, [r2]
  240:Generated_Source\PSoC4/DEBUG_LED.c ****     return maskedStatus >> DEBUG_LED_SHIFT;
  206              		.loc 1 240 0
- 207 000a C008     		lsrs	r0, r0, #3
+ 207 000a 4009     		lsrs	r0, r0, #5
  208              	.LVL10:
  209 000c C0B2     		uxtb	r0, r0
  241:Generated_Source\PSoC4/DEBUG_LED.c **** }
@@ -478,10 +478,10 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 1
  213              	.L18:
  214              		.align	2
  215              	.L17:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 9
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccywhWMe.s 			page 9
 
 
- 216 0010 10000440 		.word	1074003984
+ 216 0010 10060440 		.word	1074005520
  217              		.cfi_endproc
  218              	.LFE5:
  219              		.size	DEBUG_LED_ClearInterrupt, .-DEBUG_LED_ClearInterrupt
@@ -495,83 +495,83 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 1
  227 0006 00000000 		.4byte	.Ldebug_abbrev0
  228 000a 04       		.byte	0x4
  229 000b 01       		.uleb128 0x1
- 230 000c 31010000 		.4byte	.LASF28
+ 230 000c 40010000 		.4byte	.LASF28
  231 0010 0C       		.byte	0xc
- 232 0011 D5010000 		.4byte	.LASF29
- 233 0015 94000000 		.4byte	.LASF30
+ 232 0011 E4010000 		.4byte	.LASF29
+ 233 0015 06000000 		.4byte	.LASF30
  234 0019 00000000 		.4byte	.Ldebug_ranges0+0
  235 001d 00000000 		.4byte	0
  236 0021 00000000 		.4byte	.Ldebug_line0
  237 0025 02       		.uleb128 0x2
  238 0026 01       		.byte	0x1
  239 0027 06       		.byte	0x6
- 240 0028 4A020000 		.4byte	.LASF0
+ 240 0028 59020000 		.4byte	.LASF0
  241 002c 02       		.uleb128 0x2
  242 002d 01       		.byte	0x1
  243 002e 08       		.byte	0x8
- 244 002f 22000000 		.4byte	.LASF1
+ 244 002f 86000000 		.4byte	.LASF1
  245 0033 02       		.uleb128 0x2
  246 0034 02       		.byte	0x2
  247 0035 05       		.byte	0x5
- 248 0036 18020000 		.4byte	.LASF2
+ 248 0036 27020000 		.4byte	.LASF2
  249 003a 02       		.uleb128 0x2
  250 003b 02       		.byte	0x2
  251 003c 07       		.byte	0x7
- 252 003d 7A000000 		.4byte	.LASF3
+ 252 003d DE000000 		.4byte	.LASF3
  253 0041 02       		.uleb128 0x2
  254 0042 04       		.byte	0x4
  255 0043 05       		.byte	0x5
- 256 0044 28020000 		.4byte	.LASF4
+ 256 0044 37020000 		.4byte	.LASF4
  257 0048 02       		.uleb128 0x2
  258 0049 04       		.byte	0x4
  259 004a 07       		.byte	0x7
- 260 004b 68000000 		.4byte	.LASF5
+ 260 004b CC000000 		.4byte	.LASF5
  261 004f 02       		.uleb128 0x2
  262 0050 08       		.byte	0x8
  263 0051 05       		.byte	0x5
- 264 0052 F8010000 		.4byte	.LASF6
+ 264 0052 07020000 		.4byte	.LASF6
  265 0056 02       		.uleb128 0x2
  266 0057 08       		.byte	0x8
  267 0058 07       		.byte	0x7
- 268 0059 15010000 		.4byte	.LASF7
+ 268 0059 24010000 		.4byte	.LASF7
  269 005d 03       		.uleb128 0x3
  270 005e 04       		.byte	0x4
  271 005f 05       		.byte	0x5
  272 0060 696E7400 		.ascii	"int\000"
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 10
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccywhWMe.s 			page 10
 
 
  273 0064 02       		.uleb128 0x2
  274 0065 04       		.byte	0x4
  275 0066 07       		.byte	0x7
- 276 0067 08010000 		.4byte	.LASF8
+ 276 0067 17010000 		.4byte	.LASF8
  277 006b 04       		.uleb128 0x4
- 278 006c 22020000 		.4byte	.LASF9
+ 278 006c 31020000 		.4byte	.LASF9
  279 0070 02       		.byte	0x2
  280 0071 FB01     		.2byte	0x1fb
  281 0073 2C000000 		.4byte	0x2c
  282 0077 04       		.uleb128 0x4
- 283 0078 E9000000 		.4byte	.LASF10
+ 283 0078 F8000000 		.4byte	.LASF10
  284 007c 02       		.byte	0x2
  285 007d FC01     		.2byte	0x1fc
  286 007f 3A000000 		.4byte	0x3a
  287 0083 04       		.uleb128 0x4
- 288 0084 F9000000 		.4byte	.LASF11
+ 288 0084 08010000 		.4byte	.LASF11
  289 0088 02       		.byte	0x2
  290 0089 FD01     		.2byte	0x1fd
  291 008b 48000000 		.4byte	0x48
  292 008f 02       		.uleb128 0x2
  293 0090 04       		.byte	0x4
  294 0091 04       		.byte	0x4
- 295 0092 0C000000 		.4byte	.LASF12
+ 295 0092 70000000 		.4byte	.LASF12
  296 0096 02       		.uleb128 0x2
  297 0097 08       		.byte	0x8
  298 0098 04       		.byte	0x4
- 299 0099 8D000000 		.4byte	.LASF13
+ 299 0099 F1000000 		.4byte	.LASF13
  300 009d 02       		.uleb128 0x2
  301 009e 01       		.byte	0x1
  302 009f 08       		.byte	0x8
- 303 00a0 13020000 		.4byte	.LASF14
+ 303 00a0 22020000 		.4byte	.LASF14
  304 00a4 04       		.uleb128 0x4
  305 00a5 00000000 		.4byte	.LASF15
  306 00a9 02       		.byte	0x2
@@ -580,7 +580,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 1
  309 00b0 05       		.uleb128 0x5
  310 00b1 83000000 		.4byte	0x83
  311 00b5 06       		.uleb128 0x6
- 312 00b6 51000000 		.4byte	.LASF16
+ 312 00b6 B5000000 		.4byte	.LASF16
  313 00ba 01       		.byte	0x1
  314 00bb 48       		.byte	0x48
  315 00bc 00000000 		.4byte	.LFB0
@@ -589,16 +589,16 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 1
  318 00c5 9C       		.byte	0x9c
  319 00c6 DA000000 		.4byte	0xda
  320 00ca 07       		.uleb128 0x7
- 321 00cb 2C010000 		.4byte	.LASF18
+ 321 00cb 3B010000 		.4byte	.LASF18
  322 00cf 01       		.byte	0x1
  323 00d0 48       		.byte	0x48
  324 00d1 6B000000 		.4byte	0x6b
  325 00d5 00000000 		.4byte	.LLST0
  326 00d9 00       		.byte	0
  327 00da 06       		.uleb128 0x6
- 328 00db 12000000 		.4byte	.LASF17
+ 328 00db 76000000 		.4byte	.LASF17
  329 00df 01       		.byte	0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 11
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccywhWMe.s 			page 11
 
 
  330 00e0 6F       		.byte	0x6f
@@ -608,20 +608,20 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 1
  334 00ea 9C       		.byte	0x9c
  335 00eb 0E010000 		.4byte	0x10e
  336 00ef 07       		.uleb128 0x7
- 337 00f0 06000000 		.4byte	.LASF19
+ 337 00f0 6A000000 		.4byte	.LASF19
  338 00f4 01       		.byte	0x1
  339 00f5 6F       		.byte	0x6f
  340 00f6 6B000000 		.4byte	0x6b
  341 00fa 21000000 		.4byte	.LLST1
  342 00fe 08       		.uleb128 0x8
- 343 00ff 4B000000 		.4byte	.LASF24
+ 343 00ff AF000000 		.4byte	.LASF24
  344 0103 01       		.byte	0x1
  345 0104 71       		.byte	0x71
  346 0105 6B000000 		.4byte	0x6b
  347 0109 42000000 		.4byte	.LLST2
  348 010d 00       		.byte	0
  349 010e 09       		.uleb128 0x9
- 350 010f 56020000 		.4byte	.LASF20
+ 350 010f 65020000 		.4byte	.LASF20
  351 0113 01       		.byte	0x1
  352 0114 88       		.byte	0x88
  353 0115 6B000000 		.4byte	0x6b
@@ -630,7 +630,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 1
  356 0121 01       		.uleb128 0x1
  357 0122 9C       		.byte	0x9c
  358 0123 09       		.uleb128 0x9
- 359 0124 BF010000 		.4byte	.LASF21
+ 359 0124 CE010000 		.4byte	.LASF21
  360 0128 01       		.byte	0x1
  361 0129 A4       		.byte	0xa4
  362 012a 6B000000 		.4byte	0x6b
@@ -639,7 +639,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 1
  365 0136 01       		.uleb128 0x1
  366 0137 9C       		.byte	0x9c
  367 0138 06       		.uleb128 0x6
- 368 0139 30000000 		.4byte	.LASF22
+ 368 0139 94000000 		.4byte	.LASF22
  369 013d 01       		.byte	0x1
  370 013e CF       		.byte	0xcf
  371 013f 00000000 		.4byte	.LFB4
@@ -648,23 +648,23 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 1
  374 0148 9C       		.byte	0x9c
  375 0149 77010000 		.4byte	0x177
  376 014d 07       		.uleb128 0x7
- 377 014e F0000000 		.4byte	.LASF23
+ 377 014e FF000000 		.4byte	.LASF23
  378 0152 01       		.byte	0x1
  379 0153 CF       		.byte	0xcf
  380 0154 77000000 		.4byte	0x77
  381 0158 60000000 		.4byte	.LLST3
  382 015c 0A       		.uleb128 0xa
- 383 015d 2C010000 		.4byte	.LASF18
+ 383 015d 3B010000 		.4byte	.LASF18
  384 0161 01       		.byte	0x1
  385 0162 CF       		.byte	0xcf
  386 0163 77000000 		.4byte	0x77
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 12
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccywhWMe.s 			page 12
 
 
  387 0167 01       		.uleb128 0x1
  388 0168 51       		.byte	0x51
  389 0169 0B       		.uleb128 0xb
- 390 016a 00010000 		.4byte	.LASF25
+ 390 016a 0F010000 		.4byte	.LASF25
  391 016e 01       		.byte	0x1
  392 016f D1       		.byte	0xd1
  393 0170 83000000 		.4byte	0x83
@@ -672,7 +672,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 1
  395 0175 53       		.byte	0x53
  396 0176 00       		.byte	0
  397 0177 0C       		.uleb128 0xc
- 398 0178 31020000 		.4byte	.LASF26
+ 398 0178 40020000 		.4byte	.LASF26
  399 017c 01       		.byte	0x1
  400 017d EC       		.byte	0xec
  401 017e 6B000000 		.4byte	0x6b
@@ -681,7 +681,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 1
  404 018a 01       		.uleb128 0x1
  405 018b 9C       		.byte	0x9c
  406 018c 08       		.uleb128 0x8
- 407 018d 06020000 		.4byte	.LASF27
+ 407 018d 15020000 		.4byte	.LASF27
  408 0191 01       		.byte	0x1
  409 0192 EE       		.byte	0xee
  410 0193 6B000000 		.4byte	0x6b
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 1
  441 0019 0B       		.uleb128 0xb
  442 001a 03       		.uleb128 0x3
  443 001b 0E       		.uleb128 0xe
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 13
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccywhWMe.s 			page 13
 
 
  444 001c 00       		.byte	0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 1
  498 0053 01       		.uleb128 0x1
  499 0054 13       		.uleb128 0x13
  500 0055 00       		.byte	0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 14
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccywhWMe.s 			page 14
 
 
  501 0056 00       		.byte	0
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 1
  555 008d 00       		.byte	0
  556 008e 00       		.byte	0
  557 008f 0A       		.uleb128 0xa
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 15
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccywhWMe.s 			page 15
 
 
  558 0090 05       		.uleb128 0x5
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 1
  612 00c7 00       		.byte	0
  613              		.section	.debug_loc,"",%progbits
  614              	.Ldebug_loc0:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 16
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccywhWMe.s 			page 16
 
 
  615              	.LLST0:
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 1
  669 0081 08000000 		.4byte	.LVL9
  670 0085 0C000000 		.4byte	.LVL10
  671 0089 0100     		.2byte	0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 17
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccywhWMe.s 			page 17
 
 
  672 008b 50       		.byte	0x50
@@ -1018,165 +1018,167 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 1
  722      01010101 
  723              	.LASF15:
  724 0000 72656733 		.ascii	"reg32\000"
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 18
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccywhWMe.s 			page 18
 
 
  724      3200
- 725              	.LASF19:
- 726 0006 76616C75 		.ascii	"value\000"
- 726      6500
- 727              	.LASF12:
- 728 000c 666C6F61 		.ascii	"float\000"
- 728      7400
- 729              	.LASF17:
- 730 0012 44454255 		.ascii	"DEBUG_LED_Write\000"
- 730      475F4C45 
- 730      445F5772 
- 730      69746500 
- 731              	.LASF1:
- 732 0022 756E7369 		.ascii	"unsigned char\000"
- 732      676E6564 
- 732      20636861 
- 732      7200
- 733              	.LASF22:
- 734 0030 44454255 		.ascii	"DEBUG_LED_SetInterruptMode\000"
+ 725              	.LASF30:
+ 726 0006 433A5C55 		.ascii	"C:\\Users\\M4rz4n\\Desktop\\Husky Robotics\\Firmwar"
+ 726      73657273 
+ 726      5C4D3472 
+ 726      7A346E5C 
+ 726      4465736B 
+ 727 0034 655C424C 		.ascii	"e\\BLDC\\BLDC_Motor_Board_PY2023\\BLDC_Motor_Board."
+ 727      44435C42 
+ 727      4C44435F 
+ 727      4D6F746F 
+ 727      725F426F 
+ 728 0064 63796473 		.ascii	"cydsn\000"
+ 728      6E00
+ 729              	.LASF19:
+ 730 006a 76616C75 		.ascii	"value\000"
+ 730      6500
+ 731              	.LASF12:
+ 732 0070 666C6F61 		.ascii	"float\000"
+ 732      7400
+ 733              	.LASF17:
+ 734 0076 44454255 		.ascii	"DEBUG_LED_Write\000"
  734      475F4C45 
- 734      445F5365 
- 734      74496E74 
- 734      65727275 
- 735              	.LASF24:
- 736 004b 64725661 		.ascii	"drVal\000"
- 736      6C00
- 737              	.LASF16:
- 738 0051 44454255 		.ascii	"DEBUG_LED_SetDriveMode\000"
+ 734      445F5772 
+ 734      69746500 
+ 735              	.LASF1:
+ 736 0086 756E7369 		.ascii	"unsigned char\000"
+ 736      676E6564 
+ 736      20636861 
+ 736      7200
+ 737              	.LASF22:
+ 738 0094 44454255 		.ascii	"DEBUG_LED_SetInterruptMode\000"
  738      475F4C45 
  738      445F5365 
- 738      74447269 
- 738      76654D6F 
- 739              	.LASF5:
- 740 0068 6C6F6E67 		.ascii	"long unsigned int\000"
- 740      20756E73 
- 740      69676E65 
- 740      6420696E 
- 740      7400
- 741              	.LASF3:
- 742 007a 73686F72 		.ascii	"short unsigned int\000"
- 742      7420756E 
- 742      7369676E 
- 742      65642069 
- 742      6E7400
- 743              	.LASF13:
- 744 008d 646F7562 		.ascii	"double\000"
- 744      6C6500
- 745              	.LASF30:
- 746 0094 433A5C55 		.ascii	"C:\\Users\\casey\\Desktop\\Robotics Stuff\\BLDC_Mot"
- 746      73657273 
- 746      5C636173 
- 746      65795C44 
- 746      65736B74 
- 747 00c2 6F725F42 		.ascii	"or_Board_PY2023\\BLDC_Motor_Board.cydsn\000"
- 747      6F617264 
- 747      5F505932 
- 747      3032335C 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 19
+ 738      74496E74 
+ 738      65727275 
+ 739              	.LASF24:
+ 740 00af 64725661 		.ascii	"drVal\000"
+ 740      6C00
+ 741              	.LASF16:
+ 742 00b5 44454255 		.ascii	"DEBUG_LED_SetDriveMode\000"
+ 742      475F4C45 
+ 742      445F5365 
+ 742      74447269 
+ 742      76654D6F 
+ 743              	.LASF5:
+ 744 00cc 6C6F6E67 		.ascii	"long unsigned int\000"
+ 744      20756E73 
+ 744      69676E65 
+ 744      6420696E 
+ 744      7400
+ 745              	.LASF3:
+ 746 00de 73686F72 		.ascii	"short unsigned int\000"
+ 746      7420756E 
+ 746      7369676E 
+ 746      65642069 
+ 746      6E7400
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccywhWMe.s 			page 19
 
 
- 747      424C4443 
- 748              	.LASF10:
- 749 00e9 75696E74 		.ascii	"uint16\000"
- 749      313600
- 750              	.LASF23:
- 751 00f0 706F7369 		.ascii	"position\000"
- 751      74696F6E 
- 751      00
- 752              	.LASF11:
- 753 00f9 75696E74 		.ascii	"uint32\000"
- 753      333200
- 754              	.LASF25:
- 755 0100 696E7472 		.ascii	"intrCfg\000"
- 755      43666700 
- 756              	.LASF8:
- 757 0108 756E7369 		.ascii	"unsigned int\000"
- 757      676E6564 
- 757      20696E74 
- 757      00
- 758              	.LASF7:
- 759 0115 6C6F6E67 		.ascii	"long long unsigned int\000"
- 759      206C6F6E 
- 759      6720756E 
- 759      7369676E 
- 759      65642069 
- 760              	.LASF18:
- 761 012c 6D6F6465 		.ascii	"mode\000"
- 761      00
- 762              	.LASF28:
- 763 0131 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 763      43313120 
- 763      352E342E 
- 763      31203230 
- 763      31363036 
- 764 0164 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 764      20726576 
- 764      6973696F 
- 764      6E203233 
- 764      37373135 
- 765 0197 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 765      66756E63 
- 765      74696F6E 
- 765      2D736563 
- 765      74696F6E 
- 766              	.LASF21:
- 767 01bf 44454255 		.ascii	"DEBUG_LED_ReadDataReg\000"
- 767      475F4C45 
- 767      445F5265 
- 767      61644461 
- 767      74615265 
- 768              	.LASF29:
- 769 01d5 47656E65 		.ascii	"Generated_Source\\PSoC4\\DEBUG_LED.c\000"
- 769      72617465 
- 769      645F536F 
- 769      75726365 
- 769      5C50536F 
- 770              	.LASF6:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccGTQIdz.s 			page 20
+ 747              	.LASF13:
+ 748 00f1 646F7562 		.ascii	"double\000"
+ 748      6C6500
+ 749              	.LASF10:
+ 750 00f8 75696E74 		.ascii	"uint16\000"
+ 750      313600
+ 751              	.LASF23:
+ 752 00ff 706F7369 		.ascii	"position\000"
+ 752      74696F6E 
+ 752      00
+ 753              	.LASF11:
+ 754 0108 75696E74 		.ascii	"uint32\000"
+ 754      333200
+ 755              	.LASF25:
+ 756 010f 696E7472 		.ascii	"intrCfg\000"
+ 756      43666700 
+ 757              	.LASF8:
+ 758 0117 756E7369 		.ascii	"unsigned int\000"
+ 758      676E6564 
+ 758      20696E74 
+ 758      00
+ 759              	.LASF7:
+ 760 0124 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 760      206C6F6E 
+ 760      6720756E 
+ 760      7369676E 
+ 760      65642069 
+ 761              	.LASF18:
+ 762 013b 6D6F6465 		.ascii	"mode\000"
+ 762      00
+ 763              	.LASF28:
+ 764 0140 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 764      43313120 
+ 764      352E342E 
+ 764      31203230 
+ 764      31363036 
+ 765 0173 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 765      20726576 
+ 765      6973696F 
+ 765      6E203233 
+ 765      37373135 
+ 766 01a6 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 766      66756E63 
+ 766      74696F6E 
+ 766      2D736563 
+ 766      74696F6E 
+ 767              	.LASF21:
+ 768 01ce 44454255 		.ascii	"DEBUG_LED_ReadDataReg\000"
+ 768      475F4C45 
+ 768      445F5265 
+ 768      61644461 
+ 768      74615265 
+ 769              	.LASF29:
+ 770 01e4 47656E65 		.ascii	"Generated_Source\\PSoC4\\DEBUG_LED.c\000"
+ 770      72617465 
+ 770      645F536F 
+ 770      75726365 
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccywhWMe.s 			page 20
 
 
- 771 01f8 6C6F6E67 		.ascii	"long long int\000"
- 771      206C6F6E 
- 771      6720696E 
- 771      7400
- 772              	.LASF27:
- 773 0206 6D61736B 		.ascii	"maskedStatus\000"
- 773      65645374 
- 773      61747573 
- 773      00
- 774              	.LASF14:
- 775 0213 63686172 		.ascii	"char\000"
- 775      00
- 776              	.LASF2:
- 777 0218 73686F72 		.ascii	"short int\000"
- 777      7420696E 
- 777      7400
- 778              	.LASF9:
- 779 0222 75696E74 		.ascii	"uint8\000"
- 779      3800
- 780              	.LASF4:
- 781 0228 6C6F6E67 		.ascii	"long int\000"
- 781      20696E74 
- 781      00
- 782              	.LASF26:
- 783 0231 44454255 		.ascii	"DEBUG_LED_ClearInterrupt\000"
- 783      475F4C45 
- 783      445F436C 
- 783      65617249 
- 783      6E746572 
- 784              	.LASF0:
- 785 024a 7369676E 		.ascii	"signed char\000"
- 785      65642063 
- 785      68617200 
- 786              	.LASF20:
- 787 0256 44454255 		.ascii	"DEBUG_LED_Read\000"
- 787      475F4C45 
- 787      445F5265 
- 787      616400
- 788              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 770      5C50536F 
+ 771              	.LASF6:
+ 772 0207 6C6F6E67 		.ascii	"long long int\000"
+ 772      206C6F6E 
+ 772      6720696E 
+ 772      7400
+ 773              	.LASF27:
+ 774 0215 6D61736B 		.ascii	"maskedStatus\000"
+ 774      65645374 
+ 774      61747573 
+ 774      00
+ 775              	.LASF14:
+ 776 0222 63686172 		.ascii	"char\000"
+ 776      00
+ 777              	.LASF2:
+ 778 0227 73686F72 		.ascii	"short int\000"
+ 778      7420696E 
+ 778      7400
+ 779              	.LASF9:
+ 780 0231 75696E74 		.ascii	"uint8\000"
+ 780      3800
+ 781              	.LASF4:
+ 782 0237 6C6F6E67 		.ascii	"long int\000"
+ 782      20696E74 
+ 782      00
+ 783              	.LASF26:
+ 784 0240 44454255 		.ascii	"DEBUG_LED_ClearInterrupt\000"
+ 784      475F4C45 
+ 784      445F436C 
+ 784      65617249 
+ 784      6E746572 
+ 785              	.LASF0:
+ 786 0259 7369676E 		.ascii	"signed char\000"
+ 786      65642063 
+ 786      68617200 
+ 787              	.LASF20:
+ 788 0265 44454255 		.ascii	"DEBUG_LED_Read\000"
+ 788      475F4C45 
+ 788      445F5265 
+ 788      616400
+ 789              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

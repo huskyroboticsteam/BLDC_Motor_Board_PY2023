@@ -18,7 +18,7 @@ extern char txData[TX_DATA_SIZE];
 
 int32_t currentSpeed = 0;
 int8_t currentDir = 0;
-uint8_t currentRotorState = 0;
+int8_t currentRotorState = 0;
 
 uint8_t rotorStates[6] = {0b001001,
                           0b011000,

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 1
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc3Plxmc.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 1
   28:Generated_Source\PSoC4/TMC6100_SPI_SCBCLK.c **** * Summary:
   29:Generated_Source\PSoC4/TMC6100_SPI_SCBCLK.c **** *  Starts the clock, aligned to the specified running clock.
   30:Generated_Source\PSoC4/TMC6100_SPI_SCBCLK.c **** *
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 2
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc3Plxmc.s 			page 2
 
 
   31:Generated_Source\PSoC4/TMC6100_SPI_SCBCLK.c **** * Parameters:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 1
   60              		.align	2
   61              		.global	TMC6100_SPI_SCBCLK_Stop
   62              		.code	16
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 3
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc3Plxmc.s 			page 3
 
 
   63              		.thumb_func
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 1
   72              	.L6:
   97:Generated_Source\PSoC4/TMC6100_SPI_SCBCLK.c **** #if defined CYREG_PERI_DIV_CMD
   98:Generated_Source\PSoC4/TMC6100_SPI_SCBCLK.c **** 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 4
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc3Plxmc.s 			page 4
 
 
   99:Generated_Source\PSoC4/TMC6100_SPI_SCBCLK.c ****     /* Make sure any previous start command has finished. */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 1
  125:Generated_Source\PSoC4/TMC6100_SPI_SCBCLK.c **** * Parameters:
  126:Generated_Source\PSoC4/TMC6100_SPI_SCBCLK.c **** *  clkDivider:  Divider register value (0-65535). This value is NOT the
  127:Generated_Source\PSoC4/TMC6100_SPI_SCBCLK.c **** *    divider; the clock hardware divides by clkDivider plus one. For example,
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 5
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc3Plxmc.s 			page 5
 
 
  128:Generated_Source\PSoC4/TMC6100_SPI_SCBCLK.c **** *    to divide the clock by 2, this parameter should be set to 1.
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 1
  151:Generated_Source\PSoC4/TMC6100_SPI_SCBCLK.c ****     maskVal = TMC6100_SPI_SCBCLK_DIV_REG & (uint32)(~(uint32)TMC6100_SPI_SCBCLK__DIVIDER_MASK);
  152:Generated_Source\PSoC4/TMC6100_SPI_SCBCLK.c ****     /* combine mask and new divider val into 32-bit value */
  153:Generated_Source\PSoC4/TMC6100_SPI_SCBCLK.c ****     regVal = clkDivider | maskVal;
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 6
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc3Plxmc.s 			page 6
 
 
  154:Generated_Source\PSoC4/TMC6100_SPI_SCBCLK.c ****     
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 1
  159 0006 80B2     		uxth	r0, r0
  179:Generated_Source\PSoC4/TMC6100_SPI_SCBCLK.c ****         >> TMC6100_SPI_SCBCLK_DIV_INT_SHIFT);
  180:Generated_Source\PSoC4/TMC6100_SPI_SCBCLK.c **** }
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 7
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc3Plxmc.s 			page 7
 
 
  160              		.loc 1 180 0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 1
  187              		.cfi_endproc
  188              	.LFE4:
  189              		.size	TMC6100_SPI_SCBCLK_GetFractionalDividerRegister, .-TMC6100_SPI_SCBCLK_GetFractionalDividerRe
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 8
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc3Plxmc.s 			page 8
 
 
  190              		.text
@@ -431,45 +431,45 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 1
  197 0006 00000000 		.4byte	.Ldebug_abbrev0
  198 000a 04       		.byte	0x4
  199 000b 01       		.uleb128 0x1
- 200 000c 72010000 		.4byte	.LASF25
+ 200 000c 81010000 		.4byte	.LASF25
  201 0010 0C       		.byte	0xc
- 202 0011 23020000 		.4byte	.LASF26
- 203 0015 D1000000 		.4byte	.LASF27
+ 202 0011 32020000 		.4byte	.LASF26
+ 203 0015 36000000 		.4byte	.LASF27
  204 0019 00000000 		.4byte	.Ldebug_ranges0+0
  205 001d 00000000 		.4byte	0
  206 0021 00000000 		.4byte	.Ldebug_line0
  207 0025 02       		.uleb128 0x2
  208 0026 01       		.byte	0x1
  209 0027 06       		.byte	0x6
- 210 0028 88020000 		.4byte	.LASF0
+ 210 0028 97020000 		.4byte	.LASF0
  211 002c 02       		.uleb128 0x2
  212 002d 01       		.byte	0x1
  213 002e 08       		.byte	0x8
- 214 002f 85000000 		.4byte	.LASF1
+ 214 002f E9000000 		.4byte	.LASF1
  215 0033 02       		.uleb128 0x2
  216 0034 02       		.byte	0x2
  217 0035 05       		.byte	0x5
- 218 0036 13020000 		.4byte	.LASF2
+ 218 0036 22020000 		.4byte	.LASF2
  219 003a 02       		.uleb128 0x2
  220 003b 02       		.byte	0x2
  221 003c 07       		.byte	0x7
- 222 003d A5000000 		.4byte	.LASF3
+ 222 003d 09010000 		.4byte	.LASF3
  223 0041 02       		.uleb128 0x2
  224 0042 04       		.byte	0x4
  225 0043 05       		.byte	0x5
- 226 0044 7F020000 		.4byte	.LASF4
+ 226 0044 8E020000 		.4byte	.LASF4
  227 0048 02       		.uleb128 0x2
  228 0049 04       		.byte	0x4
  229 004a 07       		.byte	0x7
- 230 004b 93000000 		.4byte	.LASF5
+ 230 004b F7000000 		.4byte	.LASF5
  231 004f 02       		.uleb128 0x2
  232 0050 08       		.byte	0x8
  233 0051 05       		.byte	0x5
- 234 0052 00020000 		.4byte	.LASF6
+ 234 0052 0F020000 		.4byte	.LASF6
  235 0056 02       		.uleb128 0x2
  236 0057 08       		.byte	0x8
  237 0058 07       		.byte	0x7
- 238 0059 4F010000 		.4byte	.LASF7
+ 238 0059 6A010000 		.4byte	.LASF7
  239 005d 03       		.uleb128 0x3
  240 005e 04       		.byte	0x4
  241 005f 05       		.byte	0x5
@@ -477,37 +477,37 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 1
  243 0064 02       		.uleb128 0x2
  244 0065 04       		.byte	0x4
  245 0066 07       		.byte	0x7
- 246 0067 42010000 		.4byte	.LASF8
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 9
+ 246 0067 5D010000 		.4byte	.LASF8
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc3Plxmc.s 			page 9
 
 
  247 006b 04       		.uleb128 0x4
- 248 006c 1D020000 		.4byte	.LASF9
+ 248 006c 2C020000 		.4byte	.LASF9
  249 0070 02       		.byte	0x2
  250 0071 FB01     		.2byte	0x1fb
  251 0073 2C000000 		.4byte	0x2c
  252 0077 04       		.uleb128 0x4
- 253 0078 34010000 		.4byte	.LASF10
+ 253 0078 4F010000 		.4byte	.LASF10
  254 007c 02       		.byte	0x2
  255 007d FC01     		.2byte	0x1fc
  256 007f 3A000000 		.4byte	0x3a
  257 0083 04       		.uleb128 0x4
- 258 0084 3B010000 		.4byte	.LASF11
+ 258 0084 56010000 		.4byte	.LASF11
  259 0088 02       		.byte	0x2
  260 0089 FD01     		.2byte	0x1fd
  261 008b 48000000 		.4byte	0x48
  262 008f 02       		.uleb128 0x2
  263 0090 04       		.byte	0x4
  264 0091 04       		.byte	0x4
- 265 0092 7F000000 		.4byte	.LASF12
+ 265 0092 E3000000 		.4byte	.LASF12
  266 0096 02       		.uleb128 0x2
  267 0097 08       		.byte	0x8
  268 0098 04       		.byte	0x4
- 269 0099 C3000000 		.4byte	.LASF13
+ 269 0099 27010000 		.4byte	.LASF13
  270 009d 02       		.uleb128 0x2
  271 009e 01       		.byte	0x1
  272 009f 08       		.byte	0x8
- 273 00a0 0E020000 		.4byte	.LASF14
+ 273 00a0 1D020000 		.4byte	.LASF14
  274 00a4 04       		.uleb128 0x4
  275 00a5 30000000 		.4byte	.LASF15
  276 00a9 02       		.byte	0x2
@@ -516,7 +516,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 1
  279 00b0 05       		.uleb128 0x5
  280 00b1 83000000 		.4byte	0x83
  281 00b5 06       		.uleb128 0x6
- 282 00b6 36000000 		.4byte	.LASF16
+ 282 00b6 9A000000 		.4byte	.LASF16
  283 00ba 01       		.byte	0x1
  284 00bb 27       		.byte	0x27
  285 00bc 00000000 		.4byte	.LFB0
@@ -525,20 +525,20 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 1
  288 00c5 9C       		.byte	0x9c
  289 00c6 DA000000 		.4byte	0xda
  290 00ca 07       		.uleb128 0x7
- 291 00cb 66010000 		.4byte	.LASF18
+ 291 00cb 35010000 		.4byte	.LASF18
  292 00cf 01       		.byte	0x1
  293 00d0 27       		.byte	0x27
  294 00d1 83000000 		.4byte	0x83
  295 00d5 00000000 		.4byte	.LLST0
  296 00d9 00       		.byte	0
  297 00da 08       		.uleb128 0x8
- 298 00db 94020000 		.4byte	.LASF28
+ 298 00db A3020000 		.4byte	.LASF28
  299 00df 01       		.byte	0x1
  300 00e0 5F       		.byte	0x5f
  301 00e1 00000000 		.4byte	.LFB1
  302 00e5 18000000 		.4byte	.LFE1-.LFB1
  303 00e9 01       		.uleb128 0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 10
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc3Plxmc.s 			page 10
 
 
  304 00ea 9C       		.byte	0x9c
@@ -552,25 +552,25 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 1
  312 00fb 9C       		.byte	0x9c
  313 00fc 3B010000 		.4byte	0x13b
  314 0100 07       		.uleb128 0x7
- 315 0101 B8000000 		.4byte	.LASF19
+ 315 0101 1C010000 		.4byte	.LASF19
  316 0105 01       		.byte	0x1
  317 0106 86       		.byte	0x86
  318 0107 77000000 		.4byte	0x77
  319 010b 21000000 		.4byte	.LLST1
  320 010f 07       		.uleb128 0x7
- 321 0110 26010000 		.4byte	.LASF20
+ 321 0110 41010000 		.4byte	.LASF20
  322 0114 01       		.byte	0x1
  323 0115 86       		.byte	0x86
  324 0116 6B000000 		.4byte	0x6b
  325 011a 42000000 		.4byte	.LLST2
  326 011e 09       		.uleb128 0x9
- 327 011f 51000000 		.4byte	.LASF21
+ 327 011f B5000000 		.4byte	.LASF21
  328 0123 01       		.byte	0x1
  329 0124 88       		.byte	0x88
  330 0125 83000000 		.4byte	0x83
  331 0129 63000000 		.4byte	.LLST3
  332 012d 0A       		.uleb128 0xa
- 333 012e CA000000 		.4byte	.LASF22
+ 333 012e 2E010000 		.4byte	.LASF22
  334 0132 01       		.byte	0x1
  335 0133 89       		.byte	0x89
  336 0134 83000000 		.4byte	0x83
@@ -578,7 +578,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 1
  338 0139 51       		.byte	0x51
  339 013a 00       		.byte	0
  340 013b 0B       		.uleb128 0xb
- 341 013c 59000000 		.4byte	.LASF23
+ 341 013c BD000000 		.4byte	.LASF23
  342 0140 01       		.byte	0x1
  343 0141 B0       		.byte	0xb0
  344 0142 77000000 		.4byte	0x77
@@ -587,7 +587,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 1
  347 014e 01       		.uleb128 0x1
  348 014f 9C       		.byte	0x9c
  349 0150 0B       		.uleb128 0xb
- 350 0151 4F020000 		.4byte	.LASF24
+ 350 0151 5E020000 		.4byte	.LASF24
  351 0155 01       		.byte	0x1
  352 0156 C6       		.byte	0xc6
  353 0157 6B000000 		.4byte	0x6b
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 1
  358 0165 00       		.byte	0
  359              		.section	.debug_abbrev,"",%progbits
  360              	.Ldebug_abbrev0:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 11
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc3Plxmc.s 			page 11
 
 
  361 0000 01       		.uleb128 0x1
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 1
  415 0036 05       		.uleb128 0x5
  416 0037 35       		.uleb128 0x35
  417 0038 00       		.byte	0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 12
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc3Plxmc.s 			page 12
 
 
  418 0039 49       		.uleb128 0x49
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 1
  472 0070 0B       		.uleb128 0xb
  473 0071 27       		.uleb128 0x27
  474 0072 19       		.uleb128 0x19
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 13
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc3Plxmc.s 			page 13
 
 
  475 0073 11       		.uleb128 0x11
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 1
  529 00aa 13       		.uleb128 0x13
  530 00ab 11       		.uleb128 0x11
  531 00ac 01       		.uleb128 0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 14
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc3Plxmc.s 			page 14
 
 
  532 00ad 12       		.uleb128 0x12
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 1
  586 0063 0A000000 		.4byte	.LVL3
  587 0067 10000000 		.4byte	.LVL5
  588 006b 0100     		.2byte	0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 15
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc3Plxmc.s 			page 15
 
 
  589 006d 53       		.byte	0x53
@@ -894,152 +894,154 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 1
  631              	.LASF15:
  632 0030 72656733 		.ascii	"reg32\000"
  632      3200
- 633              	.LASF16:
- 634 0036 544D4336 		.ascii	"TMC6100_SPI_SCBCLK_StartEx\000"
- 634      3130305F 
- 634      5350495F 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 16
+ 633              	.LASF27:
+ 634 0036 433A5C55 		.ascii	"C:\\Users\\M4rz4n\\Desktop\\Husky Robotics\\Firmwar"
+ 634      73657273 
+ 634      5C4D3472 
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc3Plxmc.s 			page 16
 
 
- 634      53434243 
- 634      4C4B5F53 
- 635              	.LASF21:
- 636 0051 6D61736B 		.ascii	"maskVal\000"
- 636      56616C00 
- 637              	.LASF23:
- 638 0059 544D4336 		.ascii	"TMC6100_SPI_SCBCLK_GetDividerRegister\000"
+ 634      7A346E5C 
+ 634      4465736B 
+ 635 0064 655C424C 		.ascii	"e\\BLDC\\BLDC_Motor_Board_PY2023\\BLDC_Motor_Board."
+ 635      44435C42 
+ 635      4C44435F 
+ 635      4D6F746F 
+ 635      725F426F 
+ 636 0094 63796473 		.ascii	"cydsn\000"
+ 636      6E00
+ 637              	.LASF16:
+ 638 009a 544D4336 		.ascii	"TMC6100_SPI_SCBCLK_StartEx\000"
  638      3130305F 
  638      5350495F 
  638      53434243 
- 638      4C4B5F47 
- 639              	.LASF12:
- 640 007f 666C6F61 		.ascii	"float\000"
- 640      7400
- 641              	.LASF1:
- 642 0085 756E7369 		.ascii	"unsigned char\000"
- 642      676E6564 
- 642      20636861 
- 642      7200
- 643              	.LASF5:
- 644 0093 6C6F6E67 		.ascii	"long unsigned int\000"
- 644      20756E73 
- 644      69676E65 
- 644      6420696E 
+ 638      4C4B5F53 
+ 639              	.LASF21:
+ 640 00b5 6D61736B 		.ascii	"maskVal\000"
+ 640      56616C00 
+ 641              	.LASF23:
+ 642 00bd 544D4336 		.ascii	"TMC6100_SPI_SCBCLK_GetDividerRegister\000"
+ 642      3130305F 
+ 642      5350495F 
+ 642      53434243 
+ 642      4C4B5F47 
+ 643              	.LASF12:
+ 644 00e3 666C6F61 		.ascii	"float\000"
  644      7400
- 645              	.LASF3:
- 646 00a5 73686F72 		.ascii	"short unsigned int\000"
- 646      7420756E 
- 646      7369676E 
- 646      65642069 
- 646      6E7400
- 647              	.LASF19:
- 648 00b8 636C6B44 		.ascii	"clkDivider\000"
- 648      69766964 
- 648      657200
- 649              	.LASF13:
- 650 00c3 646F7562 		.ascii	"double\000"
- 650      6C6500
- 651              	.LASF22:
- 652 00ca 72656756 		.ascii	"regVal\000"
- 652      616C00
- 653              	.LASF27:
- 654 00d1 433A5C55 		.ascii	"C:\\Users\\casey\\Desktop\\Robotics Stuff\\BLDC_Mot"
- 654      73657273 
- 654      5C636173 
- 654      65795C44 
- 654      65736B74 
- 655 00ff 6F725F42 		.ascii	"or_Board_PY2023\\BLDC_Motor_Board.cydsn\000"
- 655      6F617264 
- 655      5F505932 
- 655      3032335C 
- 655      424C4443 
- 656              	.LASF20:
- 657 0126 636C6B46 		.ascii	"clkFractional\000"
- 657      72616374 
- 657      696F6E61 
- 657      6C00
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 17
+ 645              	.LASF1:
+ 646 00e9 756E7369 		.ascii	"unsigned char\000"
+ 646      676E6564 
+ 646      20636861 
+ 646      7200
+ 647              	.LASF5:
+ 648 00f7 6C6F6E67 		.ascii	"long unsigned int\000"
+ 648      20756E73 
+ 648      69676E65 
+ 648      6420696E 
+ 648      7400
+ 649              	.LASF3:
+ 650 0109 73686F72 		.ascii	"short unsigned int\000"
+ 650      7420756E 
+ 650      7369676E 
+ 650      65642069 
+ 650      6E7400
+ 651              	.LASF19:
+ 652 011c 636C6B44 		.ascii	"clkDivider\000"
+ 652      69766964 
+ 652      657200
+ 653              	.LASF13:
+ 654 0127 646F7562 		.ascii	"double\000"
+ 654      6C6500
+ 655              	.LASF22:
+ 656 012e 72656756 		.ascii	"regVal\000"
+ 656      616C00
+ 657              	.LASF18:
+ 658 0135 616C6967 		.ascii	"alignClkDiv\000"
+ 658      6E436C6B 
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc3Plxmc.s 			page 17
 
 
- 658              	.LASF10:
- 659 0134 75696E74 		.ascii	"uint16\000"
- 659      313600
- 660              	.LASF11:
- 661 013b 75696E74 		.ascii	"uint32\000"
- 661      333200
- 662              	.LASF8:
- 663 0142 756E7369 		.ascii	"unsigned int\000"
- 663      676E6564 
- 663      20696E74 
- 663      00
- 664              	.LASF7:
- 665 014f 6C6F6E67 		.ascii	"long long unsigned int\000"
- 665      206C6F6E 
- 665      6720756E 
- 665      7369676E 
- 665      65642069 
- 666              	.LASF18:
- 667 0166 616C6967 		.ascii	"alignClkDiv\000"
- 667      6E436C6B 
- 667      44697600 
- 668              	.LASF25:
- 669 0172 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 669      43313120 
- 669      352E342E 
- 669      31203230 
- 669      31363036 
- 670 01a5 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 670      20726576 
- 670      6973696F 
- 670      6E203233 
- 670      37373135 
- 671 01d8 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 671      66756E63 
- 671      74696F6E 
- 671      2D736563 
- 671      74696F6E 
- 672              	.LASF6:
- 673 0200 6C6F6E67 		.ascii	"long long int\000"
- 673      206C6F6E 
- 673      6720696E 
- 673      7400
- 674              	.LASF14:
- 675 020e 63686172 		.ascii	"char\000"
- 675      00
- 676              	.LASF2:
- 677 0213 73686F72 		.ascii	"short int\000"
- 677      7420696E 
- 677      7400
- 678              	.LASF9:
- 679 021d 75696E74 		.ascii	"uint8\000"
- 679      3800
- 680              	.LASF26:
- 681 0223 47656E65 		.ascii	"Generated_Source\\PSoC4\\TMC6100_SPI_SCBCLK.c\000"
- 681      72617465 
- 681      645F536F 
- 681      75726365 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccrnrELI.s 			page 18
+ 658      44697600 
+ 659              	.LASF20:
+ 660 0141 636C6B46 		.ascii	"clkFractional\000"
+ 660      72616374 
+ 660      696F6E61 
+ 660      6C00
+ 661              	.LASF10:
+ 662 014f 75696E74 		.ascii	"uint16\000"
+ 662      313600
+ 663              	.LASF11:
+ 664 0156 75696E74 		.ascii	"uint32\000"
+ 664      333200
+ 665              	.LASF8:
+ 666 015d 756E7369 		.ascii	"unsigned int\000"
+ 666      676E6564 
+ 666      20696E74 
+ 666      00
+ 667              	.LASF7:
+ 668 016a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 668      206C6F6E 
+ 668      6720756E 
+ 668      7369676E 
+ 668      65642069 
+ 669              	.LASF25:
+ 670 0181 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 670      43313120 
+ 670      352E342E 
+ 670      31203230 
+ 670      31363036 
+ 671 01b4 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 671      20726576 
+ 671      6973696F 
+ 671      6E203233 
+ 671      37373135 
+ 672 01e7 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 672      66756E63 
+ 672      74696F6E 
+ 672      2D736563 
+ 672      74696F6E 
+ 673              	.LASF6:
+ 674 020f 6C6F6E67 		.ascii	"long long int\000"
+ 674      206C6F6E 
+ 674      6720696E 
+ 674      7400
+ 675              	.LASF14:
+ 676 021d 63686172 		.ascii	"char\000"
+ 676      00
+ 677              	.LASF2:
+ 678 0222 73686F72 		.ascii	"short int\000"
+ 678      7420696E 
+ 678      7400
+ 679              	.LASF9:
+ 680 022c 75696E74 		.ascii	"uint8\000"
+ 680      3800
+ 681              	.LASF26:
+ 682 0232 47656E65 		.ascii	"Generated_Source\\PSoC4\\TMC6100_SPI_SCBCLK.c\000"
+ 682      72617465 
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc3Plxmc.s 			page 18
 
 
- 681      5C50536F 
- 682              	.LASF24:
- 683 024f 544D4336 		.ascii	"TMC6100_SPI_SCBCLK_GetFractionalDividerRegister\000"
- 683      3130305F 
- 683      5350495F 
- 683      53434243 
- 683      4C4B5F47 
- 684              	.LASF4:
- 685 027f 6C6F6E67 		.ascii	"long int\000"
- 685      20696E74 
- 685      00
- 686              	.LASF0:
- 687 0288 7369676E 		.ascii	"signed char\000"
- 687      65642063 
- 687      68617200 
- 688              	.LASF28:
- 689 0294 544D4336 		.ascii	"TMC6100_SPI_SCBCLK_Stop\000"
- 689      3130305F 
- 689      5350495F 
- 689      53434243 
- 689      4C4B5F53 
- 690              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 682      645F536F 
+ 682      75726365 
+ 682      5C50536F 
+ 683              	.LASF24:
+ 684 025e 544D4336 		.ascii	"TMC6100_SPI_SCBCLK_GetFractionalDividerRegister\000"
+ 684      3130305F 
+ 684      5350495F 
+ 684      53434243 
+ 684      4C4B5F47 
+ 685              	.LASF4:
+ 686 028e 6C6F6E67 		.ascii	"long int\000"
+ 686      20696E74 
+ 686      00
+ 687              	.LASF0:
+ 688 0297 7369676E 		.ascii	"signed char\000"
+ 688      65642063 
+ 688      68617200 
+ 689              	.LASF28:
+ 690 02a3 544D4336 		.ascii	"TMC6100_SPI_SCBCLK_Stop\000"
+ 690      3130305F 
+ 690      5350495F 
+ 690      53434243 
+ 690      4C4B5F53 
+ 691              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

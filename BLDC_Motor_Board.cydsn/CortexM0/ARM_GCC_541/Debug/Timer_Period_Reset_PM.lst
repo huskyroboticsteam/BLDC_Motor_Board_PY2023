@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 1
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccc9ArZu.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 1
   28:Generated_Source\PSoC4/Timer_Period_Reset_PM.c **** * Summary:
   29:Generated_Source\PSoC4/Timer_Period_Reset_PM.c **** *     Save the current user configuration
   30:Generated_Source\PSoC4/Timer_Period_Reset_PM.c **** *
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 2
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccc9ArZu.s 			page 2
 
 
   31:Generated_Source\PSoC4/Timer_Period_Reset_PM.c **** * Parameters:
@@ -115,10 +115,10 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 1
   53              		.align	2
   54              	.L2:
   55 0018 00000000 		.word	.LANCHOR0
-  56 001c 85000F40 		.word	1074724997
+  56 001c 86000F40 		.word	1074724998
   57              		.cfi_endproc
   58              	.LFE1:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 3
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccc9ArZu.s 			page 3
 
 
   59              		.size	Timer_Period_Reset_SaveConfig, .-Timer_Period_Reset_SaveConfig
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 1
   85:Generated_Source\PSoC4/Timer_Period_Reset_PM.c ****         #endif /* Restore Capture counter register*/
   86:Generated_Source\PSoC4/Timer_Period_Reset_PM.c **** 
   87:Generated_Source\PSoC4/Timer_Period_Reset_PM.c ****         #if(!Timer_Period_Reset_UDB_CONTROL_REG_REMOVED)
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 4
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccc9ArZu.s 			page 4
 
 
   88:Generated_Source\PSoC4/Timer_Period_Reset_PM.c ****             Timer_Period_Reset_WriteControlRegister(Timer_Period_Reset_backup.TimerControlRegister)
@@ -196,7 +196,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 1
   93              		.align	2
   94              	.L5:
   95 0018 00000000 		.word	.LANCHOR0
-  96 001c 85000F40 		.word	1074724997
+  96 001c 86000F40 		.word	1074724998
   97              		.cfi_endproc
   98              	.LFE2:
   99              		.size	Timer_Period_Reset_RestoreConfig, .-Timer_Period_Reset_RestoreConfig
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 1
  113              		.cfi_def_cfa_offset 8
  114              		.cfi_offset 4, -8
  115              		.cfi_offset 14, -4
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 5
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccc9ArZu.s 			page 5
 
 
  114:Generated_Source\PSoC4/Timer_Period_Reset_PM.c ****     #if(!Timer_Period_Reset_UDB_CONTROL_REG_REMOVED)
@@ -286,7 +286,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 1
  142              	.L11:
  143              		.align	2
  144              	.L10:
- 145 0024 75000F40 		.word	1074724981
+ 145 0024 76000F40 		.word	1074724982
  146 0028 00000000 		.word	.LANCHOR0
  147              		.cfi_endproc
  148              	.LFE3:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 1
  154              		.thumb_func
  155              		.type	Timer_Period_Reset_Wakeup, %function
  156              	Timer_Period_Reset_Wakeup:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 6
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccc9ArZu.s 			page 6
 
 
  157              	.LFB4:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 1
  181              	.L15:
  182              		.align	2
  183              	.L14:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 7
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccc9ArZu.s 			page 7
 
 
  184 0014 00000000 		.word	.LANCHOR0
@@ -383,48 +383,48 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 1
  203 0006 00000000 		.4byte	.Ldebug_abbrev0
  204 000a 04       		.byte	0x4
  205 000b 01       		.uleb128 0x1
- 206 000c 10020000 		.4byte	.LASF31
+ 206 000c 1F020000 		.4byte	.LASF31
  207 0010 0C       		.byte	0xc
- 208 0011 BA020000 		.4byte	.LASF32
- 209 0015 3F010000 		.4byte	.LASF33
+ 208 0011 C9020000 		.4byte	.LASF32
+ 209 0015 31000000 		.4byte	.LASF33
  210 0019 00000000 		.4byte	.Ldebug_ranges0+0
  211 001d 00000000 		.4byte	0
  212 0021 00000000 		.4byte	.Ldebug_line0
  213 0025 02       		.uleb128 0x2
  214 0026 01       		.byte	0x1
  215 0027 06       		.byte	0x6
- 216 0028 28030000 		.4byte	.LASF0
+ 216 0028 37030000 		.4byte	.LASF0
  217 002c 02       		.uleb128 0x2
  218 002d 01       		.byte	0x1
  219 002e 08       		.byte	0x8
- 220 002f F3000000 		.4byte	.LASF1
+ 220 002f 57010000 		.4byte	.LASF1
  221 0033 02       		.uleb128 0x2
  222 0034 02       		.byte	0x2
  223 0035 05       		.byte	0x5
- 224 0036 E9020000 		.4byte	.LASF2
+ 224 0036 F8020000 		.4byte	.LASF2
  225 003a 02       		.uleb128 0x2
  226 003b 02       		.byte	0x2
  227 003c 07       		.byte	0x7
- 228 003d 91000000 		.4byte	.LASF3
+ 228 003d D7000000 		.4byte	.LASF3
  229 0041 02       		.uleb128 0x2
  230 0042 04       		.byte	0x4
  231 0043 05       		.byte	0x5
- 232 0044 13030000 		.4byte	.LASF4
+ 232 0044 22030000 		.4byte	.LASF4
  233 0048 02       		.uleb128 0x2
  234 0049 04       		.byte	0x4
  235 004a 07       		.byte	0x7
- 236 004b 20010000 		.4byte	.LASF5
+ 236 004b 84010000 		.4byte	.LASF5
  237 004f 02       		.uleb128 0x2
  238 0050 08       		.byte	0x8
  239 0051 05       		.byte	0x5
- 240 0052 A7020000 		.4byte	.LASF6
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 8
+ 240 0052 B6020000 		.4byte	.LASF6
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccc9ArZu.s 			page 8
 
 
  241 0056 02       		.uleb128 0x2
  242 0057 08       		.byte	0x8
  243 0058 07       		.byte	0x7
- 244 0059 E1010000 		.4byte	.LASF7
+ 244 0059 F0010000 		.4byte	.LASF7
  245 005d 03       		.uleb128 0x3
  246 005e 04       		.byte	0x4
  247 005f 05       		.byte	0x5
@@ -432,26 +432,26 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 1
  249 0064 02       		.uleb128 0x2
  250 0065 04       		.byte	0x4
  251 0066 07       		.byte	0x7
- 252 0067 D4010000 		.4byte	.LASF8
+ 252 0067 E3010000 		.4byte	.LASF8
  253 006b 04       		.uleb128 0x4
- 254 006c 32010000 		.4byte	.LASF12
+ 254 006c 96010000 		.4byte	.LASF12
  255 0070 02       		.byte	0x2
  256 0071 FB01     		.2byte	0x1fb
  257 0073 2C000000 		.4byte	0x2c
  258 0077 02       		.uleb128 0x2
  259 0078 04       		.byte	0x4
  260 0079 04       		.byte	0x4
- 261 007a ED000000 		.4byte	.LASF9
+ 261 007a 51010000 		.4byte	.LASF9
  262 007e 02       		.uleb128 0x2
  263 007f 08       		.byte	0x8
  264 0080 04       		.byte	0x4
- 265 0081 38010000 		.4byte	.LASF10
+ 265 0081 9C010000 		.4byte	.LASF10
  266 0085 02       		.uleb128 0x2
  267 0086 01       		.byte	0x1
  268 0087 08       		.byte	0x8
- 269 0088 B5020000 		.4byte	.LASF11
+ 269 0088 C4020000 		.4byte	.LASF11
  270 008c 04       		.uleb128 0x4
- 271 008d 1B010000 		.4byte	.LASF13
+ 271 008d 7F010000 		.4byte	.LASF13
  272 0091 02       		.byte	0x2
  273 0092 A502     		.2byte	0x2a5
  274 0094 98000000 		.4byte	0x98
@@ -460,11 +460,11 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 1
  277 009d 02       		.uleb128 0x2
  278 009e 08       		.byte	0x8
  279 009f 04       		.byte	0x4
- 280 00a0 1C030000 		.4byte	.LASF14
+ 280 00a0 2B030000 		.4byte	.LASF14
  281 00a4 02       		.uleb128 0x2
  282 00a5 04       		.byte	0x4
  283 00a6 07       		.byte	0x7
- 284 00a7 9E020000 		.4byte	.LASF15
+ 284 00a7 AD020000 		.4byte	.LASF15
  285 00ab 06       		.uleb128 0x6
  286 00ac 04       		.byte	0x4
  287 00ad 03       		.byte	0x3
@@ -477,8 +477,8 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 1
  294 00ba 6B000000 		.4byte	0x6b
  295 00be 00       		.byte	0
  296 00bf 07       		.uleb128 0x7
- 297 00c0 C3000000 		.4byte	.LASF17
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 9
+ 297 00c0 09010000 		.4byte	.LASF17
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccc9ArZu.s 			page 9
 
 
  298 00c4 03       		.byte	0x3
@@ -486,13 +486,13 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 1
  300 00c6 6B000000 		.4byte	0x6b
  301 00ca 01       		.byte	0x1
  302 00cb 07       		.uleb128 0x7
- 303 00cc 4E030000 		.4byte	.LASF18
+ 303 00cc 5D030000 		.4byte	.LASF18
  304 00d0 03       		.byte	0x3
  305 00d1 49       		.byte	0x49
  306 00d2 6B000000 		.4byte	0x6b
  307 00d6 02       		.byte	0x2
  308 00d7 07       		.uleb128 0x7
- 309 00d8 61030000 		.4byte	.LASF19
+ 309 00d8 70030000 		.4byte	.LASF19
  310 00dc 03       		.byte	0x3
  311 00dd 4F       		.byte	0x4f
  312 00de 6B000000 		.4byte	0x6b
@@ -504,7 +504,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 1
  318 00ea 53       		.byte	0x53
  319 00eb AB000000 		.4byte	0xab
  320 00ef 09       		.uleb128 0x9
- 321 00f0 31000000 		.4byte	.LASF21
+ 321 00f0 33010000 		.4byte	.LASF21
  322 00f4 01       		.byte	0x1
  323 00f5 2B       		.byte	0x2b
  324 00f6 00000000 		.4byte	.LFB1
@@ -520,7 +520,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 1
  334 0112 AB010000 		.4byte	0x1ab
  335 0116 00       		.byte	0
  336 0117 09       		.uleb128 0x9
- 337 0118 CC000000 		.4byte	.LASF22
+ 337 0118 12010000 		.4byte	.LASF22
  338 011c 01       		.byte	0x1
  339 011d 4D       		.byte	0x4d
  340 011e 00000000 		.4byte	.LFB2
@@ -536,9 +536,9 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 1
  350 013a C1010000 		.4byte	0x1c1
  351 013e 00       		.byte	0
  352 013f 09       		.uleb128 0x9
- 353 0140 94010000 		.4byte	.LASF23
+ 353 0140 A3010000 		.4byte	.LASF23
  354 0144 01       		.byte	0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 10
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccc9ArZu.s 			page 10
 
 
  355 0145 70       		.byte	0x70
@@ -555,7 +555,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 1
  366 0162 EF000000 		.4byte	0xef
  367 0166 00       		.byte	0
  368 0167 09       		.uleb128 0x9
- 369 0168 77000000 		.4byte	.LASF24
+ 369 0168 BD000000 		.4byte	.LASF24
  370 016c 01       		.byte	0x1
  371 016d 96       		.byte	0x96
  372 016e 00000000 		.4byte	.LFB4
@@ -571,7 +571,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 1
  382 018a D7010000 		.4byte	0x1d7
  383 018e 00       		.byte	0
  384 018f 0B       		.uleb128 0xb
- 385 0190 34030000 		.4byte	.LASF34
+ 385 0190 43030000 		.4byte	.LASF34
  386 0194 01       		.byte	0x1
  387 0195 15       		.byte	0x15
  388 0196 E4000000 		.4byte	0xe4
@@ -579,36 +579,36 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 1
  390 019b 03       		.byte	0x3
  391 019c 00000000 		.4byte	Timer_Period_Reset_backup
  392 01a0 0C       		.uleb128 0xc
- 393 01a1 A4000000 		.4byte	.LASF25
- 394 01a5 A4000000 		.4byte	.LASF25
+ 393 01a1 EA000000 		.4byte	.LASF25
+ 394 01a5 EA000000 		.4byte	.LASF25
  395 01a9 03       		.byte	0x3
  396 01aa 69       		.byte	0x69
  397 01ab 0C       		.uleb128 0xc
- 398 01ac AD010000 		.4byte	.LASF26
- 399 01b0 AD010000 		.4byte	.LASF26
+ 398 01ac BC010000 		.4byte	.LASF26
+ 399 01b0 BC010000 		.4byte	.LASF26
  400 01b4 03       		.byte	0x3
  401 01b5 63       		.byte	0x63
  402 01b6 0C       		.uleb128 0xc
- 403 01b7 F3020000 		.4byte	.LASF27
- 404 01bb F3020000 		.4byte	.LASF27
+ 403 01b7 02030000 		.4byte	.LASF27
+ 404 01bb 02030000 		.4byte	.LASF27
  405 01bf 03       		.byte	0x3
  406 01c0 6A       		.byte	0x6a
  407 01c1 0C       		.uleb128 0xc
- 408 01c2 4F000000 		.4byte	.LASF28
- 409 01c6 4F000000 		.4byte	.LASF28
+ 408 01c2 95000000 		.4byte	.LASF28
+ 409 01c6 95000000 		.4byte	.LASF28
  410 01ca 03       		.byte	0x3
  411 01cb 64       		.byte	0x64
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 11
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccc9ArZu.s 			page 11
 
 
  412 01cc 0C       		.uleb128 0xc
- 413 01cd F8010000 		.4byte	.LASF29
- 414 01d1 F8010000 		.4byte	.LASF29
+ 413 01cd 07020000 		.4byte	.LASF29
+ 414 01d1 07020000 		.4byte	.LASF29
  415 01d5 03       		.byte	0x3
  416 01d6 5B       		.byte	0x5b
  417 01d7 0C       		.uleb128 0xc
- 418 01d8 01010000 		.4byte	.LASF30
- 419 01dc 01010000 		.4byte	.LASF30
+ 418 01d8 65010000 		.4byte	.LASF30
+ 419 01dc 65010000 		.4byte	.LASF30
  420 01e0 03       		.byte	0x3
  421 01e1 8B       		.byte	0x8b
  422 01e2 00       		.byte	0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 1
  466 0029 04       		.uleb128 0x4
  467 002a 16       		.uleb128 0x16
  468 002b 00       		.byte	0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 12
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccc9ArZu.s 			page 12
 
 
  469 002c 03       		.uleb128 0x3
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 1
  523 0062 49       		.uleb128 0x49
  524 0063 13       		.uleb128 0x13
  525 0064 00       		.byte	0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 13
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccc9ArZu.s 			page 13
 
 
  526 0065 00       		.byte	0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 1
  580 009e 19       		.uleb128 0x19
  581 009f 3C       		.uleb128 0x3c
  582 00a0 19       		.uleb128 0x19
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 14
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccc9ArZu.s 			page 14
 
 
  583 00a1 6E       		.uleb128 0x6e
@@ -838,202 +838,204 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 1
  629              	.LASF20:
  630 0011 54696D65 		.ascii	"Timer_Period_Reset_backupStruct\000"
  630      725F5065 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 15
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccc9ArZu.s 			page 15
 
 
  630      72696F64 
  630      5F526573 
  630      65745F62 
- 631              	.LASF21:
- 632 0031 54696D65 		.ascii	"Timer_Period_Reset_SaveConfig\000"
- 632      725F5065 
- 632      72696F64 
- 632      5F526573 
- 632      65745F53 
- 633              	.LASF28:
- 634 004f 54696D65 		.ascii	"Timer_Period_Reset_WriteControlRegister\000"
- 634      725F5065 
- 634      72696F64 
- 634      5F526573 
- 634      65745F57 
- 635              	.LASF24:
- 636 0077 54696D65 		.ascii	"Timer_Period_Reset_Wakeup\000"
+ 631              	.LASF33:
+ 632 0031 433A5C55 		.ascii	"C:\\Users\\M4rz4n\\Desktop\\Husky Robotics\\Firmwar"
+ 632      73657273 
+ 632      5C4D3472 
+ 632      7A346E5C 
+ 632      4465736B 
+ 633 005f 655C424C 		.ascii	"e\\BLDC\\BLDC_Motor_Board_PY2023\\BLDC_Motor_Board."
+ 633      44435C42 
+ 633      4C44435F 
+ 633      4D6F746F 
+ 633      725F426F 
+ 634 008f 63796473 		.ascii	"cydsn\000"
+ 634      6E00
+ 635              	.LASF28:
+ 636 0095 54696D65 		.ascii	"Timer_Period_Reset_WriteControlRegister\000"
  636      725F5065 
  636      72696F64 
  636      5F526573 
  636      65745F57 
- 637              	.LASF3:
- 638 0091 73686F72 		.ascii	"short unsigned int\000"
- 638      7420756E 
- 638      7369676E 
- 638      65642069 
- 638      6E7400
- 639              	.LASF25:
- 640 00a4 54696D65 		.ascii	"Timer_Period_Reset_ReadCounter\000"
- 640      725F5065 
- 640      72696F64 
- 640      5F526573 
- 640      65745F52 
- 641              	.LASF17:
- 642 00c3 54696D65 		.ascii	"TimerUdb\000"
- 642      72556462 
- 642      00
- 643              	.LASF22:
- 644 00cc 54696D65 		.ascii	"Timer_Period_Reset_RestoreConfig\000"
- 644      725F5065 
- 644      72696F64 
- 644      5F526573 
- 644      65745F52 
- 645              	.LASF9:
- 646 00ed 666C6F61 		.ascii	"float\000"
- 646      7400
- 647              	.LASF1:
- 648 00f3 756E7369 		.ascii	"unsigned char\000"
- 648      676E6564 
- 648      20636861 
- 648      7200
- 649              	.LASF30:
- 650 0101 54696D65 		.ascii	"Timer_Period_Reset_Enable\000"
- 650      725F5065 
- 650      72696F64 
- 650      5F526573 
- 650      65745F45 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 16
+ 637              	.LASF24:
+ 638 00bd 54696D65 		.ascii	"Timer_Period_Reset_Wakeup\000"
+ 638      725F5065 
+ 638      72696F64 
+ 638      5F526573 
+ 638      65745F57 
+ 639              	.LASF3:
+ 640 00d7 73686F72 		.ascii	"short unsigned int\000"
+ 640      7420756E 
+ 640      7369676E 
+ 640      65642069 
+ 640      6E7400
+ 641              	.LASF25:
+ 642 00ea 54696D65 		.ascii	"Timer_Period_Reset_ReadCounter\000"
+ 642      725F5065 
+ 642      72696F64 
+ 642      5F526573 
+ 642      65745F52 
+ 643              	.LASF17:
+ 644 0109 54696D65 		.ascii	"TimerUdb\000"
+ 644      72556462 
+ 644      00
+ 645              	.LASF22:
+ 646 0112 54696D65 		.ascii	"Timer_Period_Reset_RestoreConfig\000"
+ 646      725F5065 
+ 646      72696F64 
+ 646      5F526573 
+ 646      65745F52 
+ 647              	.LASF21:
+ 648 0133 54696D65 		.ascii	"Timer_Period_Reset_SaveConfig\000"
+ 648      725F5065 
+ 648      72696F64 
+ 648      5F526573 
+ 648      65745F53 
+ 649              	.LASF9:
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccc9ArZu.s 			page 16
 
 
- 651              	.LASF13:
- 652 011b 72656738 		.ascii	"reg8\000"
- 652      00
- 653              	.LASF5:
- 654 0120 6C6F6E67 		.ascii	"long unsigned int\000"
- 654      20756E73 
- 654      69676E65 
- 654      6420696E 
- 654      7400
- 655              	.LASF12:
- 656 0132 75696E74 		.ascii	"uint8\000"
- 656      3800
- 657              	.LASF10:
- 658 0138 646F7562 		.ascii	"double\000"
- 658      6C6500
- 659              	.LASF33:
- 660 013f 433A5C55 		.ascii	"C:\\Users\\casey\\Desktop\\Robotics Stuff\\BLDC_Mot"
- 660      73657273 
- 660      5C636173 
- 660      65795C44 
- 660      65736B74 
- 661 016d 6F725F42 		.ascii	"or_Board_PY2023\\BLDC_Motor_Board.cydsn\000"
- 661      6F617264 
- 661      5F505932 
- 661      3032335C 
- 661      424C4443 
- 662              	.LASF23:
- 663 0194 54696D65 		.ascii	"Timer_Period_Reset_Sleep\000"
- 663      725F5065 
- 663      72696F64 
- 663      5F526573 
- 663      65745F53 
- 664              	.LASF26:
- 665 01ad 54696D65 		.ascii	"Timer_Period_Reset_ReadControlRegister\000"
- 665      725F5065 
- 665      72696F64 
- 665      5F526573 
- 665      65745F52 
- 666              	.LASF8:
- 667 01d4 756E7369 		.ascii	"unsigned int\000"
- 667      676E6564 
- 667      20696E74 
- 667      00
- 668              	.LASF7:
- 669 01e1 6C6F6E67 		.ascii	"long long unsigned int\000"
- 669      206C6F6E 
- 669      6720756E 
- 669      7369676E 
- 669      65642069 
- 670              	.LASF29:
- 671 01f8 54696D65 		.ascii	"Timer_Period_Reset_Stop\000"
- 671      725F5065 
- 671      72696F64 
- 671      5F526573 
- 671      65745F53 
- 672              	.LASF31:
- 673 0210 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 17
+ 650 0151 666C6F61 		.ascii	"float\000"
+ 650      7400
+ 651              	.LASF1:
+ 652 0157 756E7369 		.ascii	"unsigned char\000"
+ 652      676E6564 
+ 652      20636861 
+ 652      7200
+ 653              	.LASF30:
+ 654 0165 54696D65 		.ascii	"Timer_Period_Reset_Enable\000"
+ 654      725F5065 
+ 654      72696F64 
+ 654      5F526573 
+ 654      65745F45 
+ 655              	.LASF13:
+ 656 017f 72656738 		.ascii	"reg8\000"
+ 656      00
+ 657              	.LASF5:
+ 658 0184 6C6F6E67 		.ascii	"long unsigned int\000"
+ 658      20756E73 
+ 658      69676E65 
+ 658      6420696E 
+ 658      7400
+ 659              	.LASF12:
+ 660 0196 75696E74 		.ascii	"uint8\000"
+ 660      3800
+ 661              	.LASF10:
+ 662 019c 646F7562 		.ascii	"double\000"
+ 662      6C6500
+ 663              	.LASF23:
+ 664 01a3 54696D65 		.ascii	"Timer_Period_Reset_Sleep\000"
+ 664      725F5065 
+ 664      72696F64 
+ 664      5F526573 
+ 664      65745F53 
+ 665              	.LASF26:
+ 666 01bc 54696D65 		.ascii	"Timer_Period_Reset_ReadControlRegister\000"
+ 666      725F5065 
+ 666      72696F64 
+ 666      5F526573 
+ 666      65745F52 
+ 667              	.LASF8:
+ 668 01e3 756E7369 		.ascii	"unsigned int\000"
+ 668      676E6564 
+ 668      20696E74 
+ 668      00
+ 669              	.LASF7:
+ 670 01f0 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 670      206C6F6E 
+ 670      6720756E 
+ 670      7369676E 
+ 670      65642069 
+ 671              	.LASF29:
+ 672 0207 54696D65 		.ascii	"Timer_Period_Reset_Stop\000"
+ 672      725F5065 
+ 672      72696F64 
+ 672      5F526573 
+ 672      65745F53 
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccc9ArZu.s 			page 17
 
 
- 673      43313120 
- 673      352E342E 
- 673      31203230 
- 673      31363036 
- 674 0243 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 674      20726576 
- 674      6973696F 
- 674      6E203233 
- 674      37373135 
- 675 0276 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 675      66756E63 
- 675      74696F6E 
- 675      2D736563 
- 675      74696F6E 
- 676              	.LASF15:
- 677 029e 73697A65 		.ascii	"sizetype\000"
- 677      74797065 
- 677      00
- 678              	.LASF6:
- 679 02a7 6C6F6E67 		.ascii	"long long int\000"
- 679      206C6F6E 
- 679      6720696E 
- 679      7400
- 680              	.LASF11:
- 681 02b5 63686172 		.ascii	"char\000"
- 681      00
- 682              	.LASF32:
- 683 02ba 47656E65 		.ascii	"Generated_Source\\PSoC4\\Timer_Period_Reset_PM.c\000"
- 683      72617465 
- 683      645F536F 
- 683      75726365 
- 683      5C50536F 
- 684              	.LASF2:
- 685 02e9 73686F72 		.ascii	"short int\000"
- 685      7420696E 
- 685      7400
- 686              	.LASF27:
- 687 02f3 54696D65 		.ascii	"Timer_Period_Reset_WriteCounter\000"
- 687      725F5065 
- 687      72696F64 
- 687      5F526573 
- 687      65745F57 
- 688              	.LASF4:
- 689 0313 6C6F6E67 		.ascii	"long int\000"
- 689      20696E74 
- 689      00
- 690              	.LASF14:
- 691 031c 6C6F6E67 		.ascii	"long double\000"
- 691      20646F75 
- 691      626C6500 
- 692              	.LASF0:
- 693 0328 7369676E 		.ascii	"signed char\000"
- 693      65642063 
- 693      68617200 
- 694              	.LASF34:
- 695 0334 54696D65 		.ascii	"Timer_Period_Reset_backup\000"
- 695      725F5065 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMiRgRu.s 			page 18
+ 673              	.LASF31:
+ 674 021f 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 674      43313120 
+ 674      352E342E 
+ 674      31203230 
+ 674      31363036 
+ 675 0252 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 675      20726576 
+ 675      6973696F 
+ 675      6E203233 
+ 675      37373135 
+ 676 0285 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 676      66756E63 
+ 676      74696F6E 
+ 676      2D736563 
+ 676      74696F6E 
+ 677              	.LASF15:
+ 678 02ad 73697A65 		.ascii	"sizetype\000"
+ 678      74797065 
+ 678      00
+ 679              	.LASF6:
+ 680 02b6 6C6F6E67 		.ascii	"long long int\000"
+ 680      206C6F6E 
+ 680      6720696E 
+ 680      7400
+ 681              	.LASF11:
+ 682 02c4 63686172 		.ascii	"char\000"
+ 682      00
+ 683              	.LASF32:
+ 684 02c9 47656E65 		.ascii	"Generated_Source\\PSoC4\\Timer_Period_Reset_PM.c\000"
+ 684      72617465 
+ 684      645F536F 
+ 684      75726365 
+ 684      5C50536F 
+ 685              	.LASF2:
+ 686 02f8 73686F72 		.ascii	"short int\000"
+ 686      7420696E 
+ 686      7400
+ 687              	.LASF27:
+ 688 0302 54696D65 		.ascii	"Timer_Period_Reset_WriteCounter\000"
+ 688      725F5065 
+ 688      72696F64 
+ 688      5F526573 
+ 688      65745F57 
+ 689              	.LASF4:
+ 690 0322 6C6F6E67 		.ascii	"long int\000"
+ 690      20696E74 
+ 690      00
+ 691              	.LASF14:
+ 692 032b 6C6F6E67 		.ascii	"long double\000"
+ 692      20646F75 
+ 692      626C6500 
+ 693              	.LASF0:
+ 694 0337 7369676E 		.ascii	"signed char\000"
+ 694      65642063 
+ 694      68617200 
+ 695              	.LASF34:
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccc9ArZu.s 			page 18
 
 
- 695      72696F64 
- 695      5F526573 
- 695      65745F62 
- 696              	.LASF18:
- 697 034e 496E7465 		.ascii	"InterruptMaskValue\000"
- 697      72727570 
- 697      744D6173 
- 697      6B56616C 
- 697      756500
- 698              	.LASF19:
- 699 0361 54696D65 		.ascii	"TimerControlRegister\000"
- 699      72436F6E 
- 699      74726F6C 
- 699      52656769 
- 699      73746572 
- 700              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 696 0343 54696D65 		.ascii	"Timer_Period_Reset_backup\000"
+ 696      725F5065 
+ 696      72696F64 
+ 696      5F526573 
+ 696      65745F62 
+ 697              	.LASF18:
+ 698 035d 496E7465 		.ascii	"InterruptMaskValue\000"
+ 698      72727570 
+ 698      744D6173 
+ 698      6B56616C 
+ 698      756500
+ 699              	.LASF19:
+ 700 0370 54696D65 		.ascii	"TimerControlRegister\000"
+ 700      72436F6E 
+ 700      74726F6C 
+ 700      52656769 
+ 700      73746572 
+ 701              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

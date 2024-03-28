@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
   29:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** volatile uint16 Current_Sensor_I2C_mstrStatus;      /* Master Status byte  */
   30:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** volatile uint8  Current_Sensor_I2C_mstrControl;     /* Master Control byte */
   31:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 2
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 2
 
 
   32:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** /* Receive buffer variables */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
   86:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** *    the bus. The attempt has to be retried.
   87:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** *  - Current_Sensor_I2C_I2C_MSTR_NOT_READY - Master is not ready for to start
   88:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** *    transfer. A master still has not completed previous transaction or a
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 3
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 3
 
 
   89:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** *    slave operation is in progress (in multi-master-slave configuration).
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  143:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****         Current_Sensor_I2C_mstrControl       = (uint8) mode;
  144:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
  145:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****         slaveAddress = Current_Sensor_I2C_GET_I2C_8BIT_ADDRESS(slaveAddress);
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 4
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 4
 
 
  146:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  200:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** *  function for constants.
  201:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** *
  202:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** * \globalvars
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 5
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 5
 
 
  203:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** *  Current_Sensor_I2C_mstrStatus  - used to store current status of I2C Master.
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  257:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
  258:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****         Current_Sensor_I2C_ClearMasterInterruptSource(Current_Sensor_I2C_INTR_MASTER_ALL);
  259:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****         Current_Sensor_I2C_SetMasterInterruptMode    (Current_Sensor_I2C_I2C_INTR_MASTER_MASK);
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 6
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 6
 
 
  260:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  314:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** *
  315:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** * \param timeoutMs
  316:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** * Defines in milliseconds the time that this function can block for.
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 7
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 7
 
 
  317:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** * If that time expires, the function returns. If a zero is passed,
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  371:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
  372:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****             if(0u == bitRnW) /* Write direction */
  373:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****             {
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 8
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 8
 
 
  374:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****                 Current_Sensor_I2C_state = Current_Sensor_I2C_I2C_FSM_MSTR_WR_DATA;
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  428:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** *
  429:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** * \return
  430:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** * Error status.
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 9
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 9
 
 
  431:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** * See Current_Sensor_I2C_I2CMasterSendStart() function for constants.
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  485:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****     }
  486:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
  487:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****     return(errStatus);
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 10
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 10
 
 
  488:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** }
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  542:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****         while (0u == locStatus);
  543:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
  544:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****         /* Handle completion event and convert to status */
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 11
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 11
 
 
  545:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****         errStatus = Current_Sensor_I2C_I2CMasterHandleStatus(locStatus);
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  599:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****         }
  600:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****         while (0u == locStatus);
  601:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 12
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 12
 
 
  602:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****         /* Handle completion event and convert to status */
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  656:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
  657:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****     /* Check FSM state before read byte */
  658:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****     if(Current_Sensor_I2C_CHECK_I2C_MASTER_ACTIVE)
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 13
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 13
 
 
  659:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****     {
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  713:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** *  Current_Sensor_I2C_I2C_MSTAT_ERR_ARB_LOST or
  714:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** *  Current_Sensor_I2C_I2C_MSTAT_ERR_BUS_ERROR occurred while read transfer.
  715:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** *
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 14
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 14
 
 
  716:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** * \globalvars
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  770:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****     Current_Sensor_I2C_mstrRdBufIndex = 0u;
  771:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****     Current_Sensor_I2C_mstrStatus    &= (uint16) ~Current_Sensor_I2C_I2C_MSTAT_RD_CMPLT;
  772:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 15
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 15
 
 
  773:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****     Current_Sensor_I2C_EnableInt();   /* Release lock */
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  827:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** *    occurred during master transfer due to misplaced Start or Stop
  828:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** *    condition on the bus.
  829:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** *  - Current_Sensor_I2C_I2C_MSTAT_ERR_ABORT_XFER - Error condition: Slave was
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 16
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 16
 
 
  830:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** *    addressed by another master while master performed the start condition
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  884:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
  885:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****     Current_Sensor_I2C_EnableInt();   /* Release lock */
  886:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 17
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 17
 
 
  887:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****     return(status);
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  941:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****     if (timeout > 0u)
  942:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****     {
  943:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****         /* Refill timeout */
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 18
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 18
 
 
  944:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****         timeout = Current_Sensor_I2C_I2C_PHASE_GEN_TIMEOUT;
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  998:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****                 (Current_Sensor_I2C_I2C_MASTER_CMD_M_NACK) : (0u);
  999:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
 1000:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****     Current_Sensor_I2C_I2C_MASTER_CMD_REG = cmd;
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 19
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 19
 
 
 1001:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** #endif /* (Current_Sensor_I2C_CY_SCBIP_V1) */
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
 1055:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****     {
 1056:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****         retStatus  = Current_Sensor_I2C_I2C_MASTER_TIMEOUT;
 1057:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****         resetBlock = Current_Sensor_I2C_I2C_RESET_ERROR;
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 20
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 20
 
 
 1058:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****     }
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
 1112:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****                 Current_Sensor_I2C_state = (Current_Sensor_I2C_CHECK_I2C_FSM_RD) ?
 1113:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****                                           Current_Sensor_I2C_I2C_FSM_MSTR_RD_DATA : Current_Sensor_
 1114:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****             }
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 21
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 21
 
 
 1115:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****         }
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
   42              		.loc 1 1153 0
   43 000a 0120     		movs	r0, #1
   44              	.LVL2:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 22
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 22
 
 
   45 000c FFF7FEFF 		bl	CyDelayUs
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
   87 0000 10B5     		push	{r4, lr}
   88              		.cfi_def_cfa_offset 8
   89              		.cfi_offset 4, -8
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 23
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 23
 
 
   90              		.cfi_offset 14, -4
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  133              		.loc 1 1077 0
  134 0036 0123     		movs	r3, #1
  135              	.L9:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 24
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 24
 
 
  136              	.LVL13:
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  180              	.L11:
 1112:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****                                           Current_Sensor_I2C_I2C_FSM_MSTR_RD_DATA : Current_Sensor_
  181              		.loc 1 1112 0 is_stmt 0 discriminator 4
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 25
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 25
 
 
  182 0070 104B     		ldr	r3, .L21+4
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  224              	.LVL20:
  225              	.L6:
 1118:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****     {
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 26
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 26
 
 
  226              		.loc 1 1118 0
@@ -1528,11 +1528,11 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  247              	.L22:
  248 00ae C046     		.align	2
  249              	.L21:
- 250 00b0 68002740 		.word	1076297832
+ 250 00b0 68002640 		.word	1076232296
  251 00b4 00000000 		.word	Current_Sensor_I2C_state
- 252 00b8 60002740 		.word	1076297824
+ 252 00b8 60002640 		.word	1076232288
  253 00bc 17030000 		.word	791
- 254 00c0 000F2740 		.word	1076301568
+ 254 00c0 000F2640 		.word	1076236032
  255              		.cfi_endproc
  256              	.LFE15:
  257              		.size	Current_Sensor_I2C_I2CMasterHandleStatus, .-Current_Sensor_I2C_I2CMasterHandleStatus
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  276              		.cfi_offset 14, -4
  277 0002 82B0     		sub	sp, sp, #8
  278              		.cfi_def_cfa_offset 24
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 27
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 27
 
 
  279 0004 0400     		movs	r4, r0
@@ -1573,7 +1573,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  287 0010 40D1     		bne	.L29
  351:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
  288              		.loc 1 351 0
- 289 0012 0C20     		movs	r0, #12
+ 289 0012 0B20     		movs	r0, #11
  290              	.LVL28:
  291 0014 FFF7FEFF 		bl	CyIntDisable
  292              	.LVL29:
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  324 0040 002D     		cmp	r5, #0
  325 0042 03D1     		bne	.L26
  374:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****             }
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 28
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 28
 
 
  326              		.loc 1 374 0
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  373              	.LVL40:
  395:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
  374              		.loc 1 395 0 discriminator 1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 29
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 29
 
 
  375 0080 EED0     		beq	.L28
@@ -1699,7 +1699,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  388              	.L25:
  401:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****     }
  389              		.loc 1 401 0
- 390 008c 0C20     		movs	r0, #12
+ 390 008c 0B20     		movs	r0, #11
  391 008e FFF7FEFF 		bl	CyIntEnable
  392              	.LVL45:
  393 0092 00E0     		b	.L24
@@ -1722,15 +1722,15 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  408              		.align	2
  409              	.L31:
  410 009c 00000000 		.word	Current_Sensor_I2C_state
- 411 00a0 64002740 		.word	1076297828
- 412 00a4 080F2740 		.word	1076301576
+ 411 00a0 64002640 		.word	1076232292
+ 412 00a4 080F2640 		.word	1076236040
  413 00a8 17030000 		.word	791
- 414 00ac 000F2740 		.word	1076301568
+ 414 00ac 000F2640 		.word	1076236032
  415 00b0 ED0F0000 		.word	4077
- 416 00b4 C00F2740 		.word	1076301760
- 417 00b8 40022740 		.word	1076298304
- 418 00bc 68002740 		.word	1076297832
- 419 00c0 400F2740 		.word	1076301632
+ 416 00b4 C00F2640 		.word	1076236224
+ 417 00b8 40022640 		.word	1076232768
+ 418 00bc 68002640 		.word	1076232296
+ 419 00c0 400F2640 		.word	1076236096
  420              		.cfi_endproc
  421              	.LFE3:
  422              		.size	Current_Sensor_I2C_I2CMasterSendStart, .-Current_Sensor_I2C_I2CMasterSendStart
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  424              		.align	2
  425              		.global	Current_Sensor_I2C_I2CMasterSendStop
  426              		.code	16
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 30
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 30
 
 
  427              		.thumb_func
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  475 0030 0400     		movs	r4, r0
  476              	.LVL53:
  540:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****         }
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 31
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 31
 
 
  477              		.loc 1 540 0 discriminator 1
@@ -1833,9 +1833,9 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  502              		.align	2
  503              	.L39:
  504 0048 00000000 		.word	Current_Sensor_I2C_state
- 505 004c 64002740 		.word	1076297828
- 506 0050 68002740 		.word	1076297832
- 507 0054 000F2740 		.word	1076301568
+ 505 004c 64002640 		.word	1076232292
+ 506 0050 68002640 		.word	1076232296
+ 507 0054 000F2640 		.word	1076236032
  508              		.cfi_endproc
  509              	.LFE5:
  510              		.size	Current_Sensor_I2C_I2CMasterSendStop, .-Current_Sensor_I2C_I2CMasterSendStop
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  526              		.cfi_offset 4, -8
  527              		.cfi_offset 14, -4
  528 0002 82B0     		sub	sp, sp, #8
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 32
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 32
 
 
  529              		.cfi_def_cfa_offset 16
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  575              	.L42:
  607:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
  576              		.loc 1 607 0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 33
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 33
 
 
  577 0036 02B0     		add	sp, sp, #8
@@ -1928,8 +1928,8 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  581 003a C046     		.align	2
  582              	.L45:
  583 003c 00000000 		.word	Current_Sensor_I2C_state
- 584 0040 40022740 		.word	1076298304
- 585 0044 000F2740 		.word	1076301568
+ 584 0040 40022640 		.word	1076232768
+ 585 0044 000F2640 		.word	1076236032
  586              		.cfi_endproc
  587              	.LFE6:
  588              		.size	Current_Sensor_I2C_I2CMasterWriteByte, .-Current_Sensor_I2C_I2CMasterWriteByte
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  667:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****             rxNotEmpty = Current_Sensor_I2C_GetRxInterruptSource() & Current_Sensor_I2C_INTR_RX_NOT
  628              		.loc 1 667 0 discriminator 1
  629 0018 134B     		ldr	r3, .L53+4
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 34
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 34
 
 
  630 001a 1868     		ldr	r0, [r3]
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  674              		.loc 1 687 0
  675 0056 0422     		movs	r2, #4
  676 0058 074B     		ldr	r3, .L53+20
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 35
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 35
 
 
  677 005a 1A60     		str	r2, [r3]
@@ -2062,11 +2062,11 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  693              		.align	2
  694              	.L53:
  695 0064 00000000 		.word	Current_Sensor_I2C_state
- 696 0068 000F2740 		.word	1076301568
- 697 006c C00F2740 		.word	1076301760
- 698 0070 40032740 		.word	1076298560
+ 696 0068 000F2640 		.word	1076236032
+ 697 006c C00F2640 		.word	1076236224
+ 698 0070 40032640 		.word	1076233024
  699 0074 ED0F0000 		.word	4077
- 700 0078 68002740 		.word	1076297832
+ 700 0078 68002640 		.word	1076232296
  701              		.cfi_endproc
  702              	.LFE7:
  703              		.size	Current_Sensor_I2C_I2CMasterReadByte, .-Current_Sensor_I2C_I2CMasterReadByte
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  726 0008 00000000 		.word	Current_Sensor_I2C_mstrRdBufIndex
  727              		.cfi_endproc
  728              	.LFE8:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 36
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 36
 
 
  729              		.size	Current_Sensor_I2C_I2CMasterGetReadBufSize, .-Current_Sensor_I2C_I2CMasterGetReadBufSize
@@ -2150,7 +2150,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  771              		.cfi_offset 14, -4
  768:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
  772              		.loc 1 768 0
- 773 0002 0C20     		movs	r0, #12
+ 773 0002 0B20     		movs	r0, #11
  774 0004 FFF7FEFF 		bl	CyIntDisable
  775              	.LVL85:
  770:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****     Current_Sensor_I2C_mstrStatus    &= (uint16) ~Current_Sensor_I2C_I2C_MSTAT_RD_CMPLT;
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  777 0008 0022     		movs	r2, #0
  778 000a 054B     		ldr	r3, .L62
  779 000c 1A60     		str	r2, [r3]
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 37
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 37
 
 
  771:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
@@ -2170,7 +2170,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  785 0016 1380     		strh	r3, [r2]
  773:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** }
  786              		.loc 1 773 0
- 787 0018 0C20     		movs	r0, #12
+ 787 0018 0B20     		movs	r0, #11
  788 001a FFF7FEFF 		bl	CyIntEnable
  789              	.LVL86:
  774:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
@@ -2204,7 +2204,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  816              		.cfi_offset 14, -4
  791:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
  817              		.loc 1 791 0
- 818 0002 0C20     		movs	r0, #12
+ 818 0002 0B20     		movs	r0, #11
  819 0004 FFF7FEFF 		bl	CyIntDisable
  820              	.LVL87:
  793:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****     Current_Sensor_I2C_mstrStatus    &= (uint16) ~Current_Sensor_I2C_I2C_MSTAT_WR_CMPLT;
@@ -2218,13 +2218,13 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  827 0010 1388     		ldrh	r3, [r2]
  828 0012 0221     		movs	r1, #2
  829 0014 8B43     		bics	r3, r1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 38
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 38
 
 
  830 0016 1380     		strh	r3, [r2]
  796:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** }
  831              		.loc 1 796 0
- 832 0018 0C20     		movs	r0, #12
+ 832 0018 0B20     		movs	r0, #11
  833 001a FFF7FEFF 		bl	CyIntEnable
  834              	.LVL88:
  797:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
@@ -2258,7 +2258,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  861              		.cfi_offset 14, -4
  845:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
  862              		.loc 1 845 0
- 863 0002 0C20     		movs	r0, #12
+ 863 0002 0B20     		movs	r0, #11
  864 0004 FFF7FEFF 		bl	CyIntDisable
  865              	.LVL89:
  847:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  877              		.loc 1 852 0
  878 0018 0423     		movs	r3, #4
  879 001a 1A43     		orrs	r2, r3
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 39
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 39
 
 
  880              	.LVL91:
@@ -2287,7 +2287,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  883              	.L68:
  855:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
  884              		.loc 1 855 0
- 885 001e 0C20     		movs	r0, #12
+ 885 001e 0B20     		movs	r0, #11
  886 0020 FFF7FEFF 		bl	CyIntEnable
  887              	.LVL93:
  858:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
@@ -2323,7 +2323,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  916              		.cfi_offset 14, -4
  879:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
  917              		.loc 1 879 0
- 918 0002 0C20     		movs	r0, #12
+ 918 0002 0B20     		movs	r0, #11
  919 0004 FFF7FEFF 		bl	CyIntDisable
  920              	.LVL95:
  882:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****     Current_Sensor_I2C_mstrStatus = Current_Sensor_I2C_I2C_MSTAT_CLEAR;
@@ -2338,10 +2338,10 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  928 0010 1A80     		strh	r2, [r3]
  885:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
  929              		.loc 1 885 0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 40
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 40
 
 
- 930 0012 0C20     		movs	r0, #12
+ 930 0012 0B20     		movs	r0, #11
  931 0014 FFF7FEFF 		bl	CyIntEnable
  932              	.LVL97:
  888:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
@@ -2398,12 +2398,12 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  977 0014 7047     		bx	lr
  978              	.L77:
  979 0016 C046     		.align	2
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 41
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 41
 
 
  980              	.L76:
- 981 0018 64002740 		.word	1076297828
- 982 001c 68002740 		.word	1076297832
+ 981 0018 64002640 		.word	1076232292
+ 982 001c 68002640 		.word	1076232296
  983              		.cfi_endproc
  984              	.LFE14:
  985              		.size	Current_Sensor_I2C_I2CReStartGeneration, .-Current_Sensor_I2C_I2CReStartGeneration
@@ -2448,7 +2448,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1021 0016 08D1     		bne	.L80
  114:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
  1022              		.loc 1 114 0
- 1023 0018 0C20     		movs	r0, #12
+ 1023 0018 0B20     		movs	r0, #11
  1024              	.LVL104:
  1025 001a FFF7FEFF 		bl	CyIntDisable
  1026              	.LVL105:
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1029 0020 1B68     		ldr	r3, [r3]
  1030 0022 DB07     		lsls	r3, r3, #31
  1031 0024 0ED5     		bpl	.L84
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 42
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 42
 
 
  1032 0026 0826     		movs	r6, #8
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1077 0054 0023     		movs	r3, #0
  1078 0056 1C4A     		ldr	r2, .L86+12
  1079 0058 1360     		str	r3, [r2]
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 43
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 43
 
 
  140:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****         Current_Sensor_I2C_mstrWrBufSize     = cnt;
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1123              		.loc 1 159 0
  1124 0096 EB07     		lsls	r3, r5, #31
  1125 0098 04D5     		bpl	.L82
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 44
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 44
 
 
  161:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****             Current_Sensor_I2C_TX_FIFO_WR_REG = slaveAddress;
@@ -2604,7 +2604,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1142              	.L81:
  171:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
  1143              		.loc 1 171 0
- 1144 00ae 0C20     		movs	r0, #12
+ 1144 00ae 0B20     		movs	r0, #11
  1145 00b0 FFF7FEFF 		bl	CyIntEnable
  1146              	.LVL119:
  174:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
@@ -2620,25 +2620,25 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1156 00ba C046     		.align	2
  1157              	.L86:
  1158 00bc 00000000 		.word	Current_Sensor_I2C_state
- 1159 00c0 64002740 		.word	1076297828
+ 1159 00c0 64002640 		.word	1076232292
  1160 00c4 00000000 		.word	Current_Sensor_I2C_mstrStatus
  1161 00c8 00000000 		.word	Current_Sensor_I2C_mstrWrBufIndexTmp
  1162 00cc 00000000 		.word	Current_Sensor_I2C_mstrWrBufIndex
  1163 00d0 00000000 		.word	Current_Sensor_I2C_mstrWrBufSize
  1164 00d4 00000000 		.word	Current_Sensor_I2C_mstrWrBufPtr
  1165 00d8 00000000 		.word	Current_Sensor_I2C_mstrControl
- 1166 00dc 800F2740 		.word	1076301696
+ 1166 00dc 800F2640 		.word	1076236160
  1167 00e0 17030000 		.word	791
- 1168 00e4 000F2740 		.word	1076301568
- 1169 00e8 080F2740 		.word	1076301576
- 1170 00ec 880F2740 		.word	1076301704
- 1171 00f0 40022740 		.word	1076298304
- 1172 00f4 68002740 		.word	1076297832
+ 1168 00e4 000F2640 		.word	1076236032
+ 1169 00e8 080F2640 		.word	1076236040
+ 1170 00ec 880F2640 		.word	1076236168
+ 1171 00f0 40022640 		.word	1076232768
+ 1172 00f4 68002640 		.word	1076232296
  1173              		.cfi_endproc
  1174              	.LFE1:
  1175              		.size	Current_Sensor_I2C_I2CMasterWriteBuf, .-Current_Sensor_I2C_I2CMasterWriteBuf
  1176              		.section	.text.Current_Sensor_I2C_I2CMasterReadBuf,"ax",%progbits
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 45
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 45
 
 
  1177              		.align	2
@@ -2681,7 +2681,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1211 0016 08D1     		bne	.L90
  224:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
  1212              		.loc 1 224 0
- 1213 0018 0C20     		movs	r0, #12
+ 1213 0018 0B20     		movs	r0, #11
  1214              	.LVL126:
  1215 001a FFF7FEFF 		bl	CyIntDisable
  1216              	.LVL127:
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  230:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****         {
  1226              		.loc 1 230 0
  1227 002a 294B     		ldr	r3, .L98
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 46
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 46
 
 
  1228 002c 1B78     		ldrb	r3, [r3]
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  251:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****         Current_Sensor_I2C_mstrControl    = (uint8) mode;
  1273              		.loc 1 251 0
  1274 005e 214B     		ldr	r3, .L98+20
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 47
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 47
 
 
  1275 0060 1C60     		str	r4, [r3]
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  273:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c ****         }
  1321              		.loc 1 273 0
  1322 00a4 0822     		movs	r2, #8
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 48
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 48
 
 
  1323 00a6 144B     		ldr	r3, .L98+40
@@ -2851,7 +2851,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1345              	.L91:
  289:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
  1346              		.loc 1 289 0
- 1347 00c2 0C20     		movs	r0, #12
+ 1347 00c2 0B20     		movs	r0, #11
  1348 00c4 FFF7FEFF 		bl	CyIntEnable
  1349              	.LVL141:
  292:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
@@ -2867,22 +2867,22 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1359 00ce C046     		.align	2
  1360              	.L98:
  1361 00d0 00000000 		.word	Current_Sensor_I2C_state
- 1362 00d4 64002740 		.word	1076297828
+ 1362 00d4 64002640 		.word	1076232292
  1363 00d8 00000000 		.word	Current_Sensor_I2C_mstrStatus
  1364 00dc 00000000 		.word	Current_Sensor_I2C_mstrRdBufIndex
  1365 00e0 00000000 		.word	Current_Sensor_I2C_mstrRdBufSize
  1366 00e4 00000000 		.word	Current_Sensor_I2C_mstrRdBufPtr
  1367 00e8 00000000 		.word	Current_Sensor_I2C_mstrControl
  1368 00ec 17030000 		.word	791
- 1369 00f0 000F2740 		.word	1076301568
- 1370 00f4 080F2740 		.word	1076301576
- 1371 00f8 C80F2740 		.word	1076301768
- 1372 00fc 60002740 		.word	1076297824
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 49
+ 1369 00f0 000F2640 		.word	1076236032
+ 1370 00f4 080F2640 		.word	1076236040
+ 1371 00f8 C80F2640 		.word	1076236232
+ 1372 00fc 60002640 		.word	1076232288
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 49
 
 
- 1373 0100 40022740 		.word	1076298304
- 1374 0104 68002740 		.word	1076297832
+ 1373 0100 40022640 		.word	1076232768
+ 1374 0104 68002640 		.word	1076232296
  1375              		.cfi_endproc
  1376              	.LFE2:
  1377              		.size	Current_Sensor_I2C_I2CMasterReadBuf, .-Current_Sensor_I2C_I2CMasterReadBuf
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1421 0020 0E4B     		ldr	r3, .L106
  1422 0022 1A70     		strb	r2, [r3]
  1423 0024 04E0     		b	.L103
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 50
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 50
 
 
  1424              	.L102:
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1469              	.L101:
  488:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_MASTER.c **** 
  1470              		.loc 1 488 0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 51
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 51
 
 
  1471 0056 02B0     		add	sp, sp, #8
@@ -3008,8 +3008,8 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1475 005a C046     		.align	2
  1476              	.L106:
  1477 005c 00000000 		.word	Current_Sensor_I2C_state
- 1478 0060 40022740 		.word	1076298304
- 1479 0064 000F2740 		.word	1076301568
+ 1478 0060 40022640 		.word	1076232768
+ 1479 0064 000F2640 		.word	1076236032
  1480              		.cfi_endproc
  1481              	.LFE4:
  1482              		.size	Current_Sensor_I2C_I2CMasterSendRestart, .-Current_Sensor_I2C_I2CMasterSendRestart
@@ -3037,7 +3037,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1504 000c 41000000 		.4byte	.LASF65
  1505 0010 0C       		.byte	0xc
  1506 0011 FE020000 		.4byte	.LASF66
- 1507 0015 B1030000 		.4byte	.LASF67
+ 1507 0015 21040000 		.4byte	.LASF67
  1508 0019 00000000 		.4byte	.Ldebug_ranges0+0
  1509 001d 00000000 		.4byte	0
  1510 0021 00000000 		.4byte	.Ldebug_line0
@@ -3048,17 +3048,17 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1515 002c 02       		.uleb128 0x2
  1516 002d 01       		.byte	0x1
  1517 002e 08       		.byte	0x8
- 1518 002f 83040000 		.4byte	.LASF1
+ 1518 002f 92040000 		.4byte	.LASF1
  1519 0033 02       		.uleb128 0x2
  1520 0034 02       		.byte	0x2
  1521 0035 05       		.byte	0x5
- 1522 0036 91040000 		.4byte	.LASF2
+ 1522 0036 A0040000 		.4byte	.LASF2
  1523 003a 02       		.uleb128 0x2
  1524 003b 02       		.byte	0x2
  1525 003c 07       		.byte	0x7
  1526 003d A7020000 		.4byte	.LASF3
  1527 0041 02       		.uleb128 0x2
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 52
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 52
 
 
  1528 0042 04       		.byte	0x4
@@ -3102,7 +3102,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1566 008f 02       		.uleb128 0x2
  1567 0090 04       		.byte	0x4
  1568 0091 04       		.byte	0x4
- 1569 0092 06040000 		.4byte	.LASF12
+ 1569 0092 B1030000 		.4byte	.LASF12
  1570 0096 02       		.uleb128 0x2
  1571 0097 08       		.byte	0x8
  1572 0098 04       		.byte	0x4
@@ -3110,7 +3110,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1574 009d 02       		.uleb128 0x2
  1575 009e 01       		.byte	0x1
  1576 009f 08       		.byte	0x8
- 1577 00a0 F2040000 		.4byte	.LASF14
+ 1577 00a0 01050000 		.4byte	.LASF14
  1578 00a4 05       		.uleb128 0x5
  1579 00a5 6B000000 		.4byte	0x6b
  1580 00a9 05       		.uleb128 0x5
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1582 00ae 04       		.uleb128 0x4
  1583 00af 62030000 		.4byte	.LASF15
  1584 00b3 02       		.byte	0x2
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 53
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 53
 
 
  1585 00b4 A702     		.2byte	0x2a7
@@ -3134,7 +3134,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1595 00c8 07       		.byte	0x7
  1596 00c9 68030000 		.4byte	.LASF17
  1597 00cd 06       		.uleb128 0x6
- 1598 00ce 4E040000 		.4byte	.LASF20
+ 1598 00ce F9030000 		.4byte	.LASF20
  1599 00d2 01       		.byte	0x1
  1600 00d3 7904     		.2byte	0x479
  1601 00d5 83000000 		.4byte	0x83
@@ -3156,7 +3156,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1617 00ff 2A010000 		.4byte	0x12a
  1618 0103 01       		.byte	0x1
  1619 0104 09       		.uleb128 0x9
- 1620 0105 A7050000 		.4byte	.LASF19
+ 1620 0105 B6050000 		.4byte	.LASF19
  1621 0109 01       		.byte	0x1
  1622 010a 7C04     		.2byte	0x47c
  1623 010c 83000000 		.4byte	0x83
@@ -3177,8 +3177,8 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1638 012a 0D       		.uleb128 0xd
  1639 012b 77000000 		.4byte	0x77
  1640 012f 06       		.uleb128 0x6
- 1641 0130 48050000 		.4byte	.LASF21
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 54
+ 1641 0130 57050000 		.4byte	.LASF21
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 54
 
 
  1642 0134 01       		.byte	0x1
@@ -3190,13 +3190,13 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1648 0144 9C       		.byte	0x9c
  1649 0145 83010000 		.4byte	0x183
  1650 0149 07       		.uleb128 0x7
- 1651 014a A7050000 		.4byte	.LASF19
+ 1651 014a B6050000 		.4byte	.LASF19
  1652 014e 01       		.byte	0x1
  1653 014f 1904     		.2byte	0x419
  1654 0151 83000000 		.4byte	0x83
  1655 0155 61000000 		.4byte	.LLST2
  1656 0159 09       		.uleb128 0x9
- 1657 015a 16060000 		.4byte	.LASF23
+ 1657 015a 25060000 		.4byte	.LASF23
  1658 015e 01       		.byte	0x1
  1659 015f 1B04     		.2byte	0x41b
  1660 0161 83000000 		.4byte	0x83
@@ -3212,7 +3212,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1670 017e F1070000 		.4byte	0x7f1
  1671 0182 00       		.byte	0
  1672 0183 0F       		.uleb128 0xf
- 1673 0184 AE050000 		.4byte	.LASF30
+ 1673 0184 BD050000 		.4byte	.LASF30
  1674 0188 01       		.byte	0x1
  1675 0189 5901     		.2byte	0x159
  1676 018b 83000000 		.4byte	0x83
@@ -3222,7 +3222,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1680 0198 9C       		.byte	0x9c
  1681 0199 4A020000 		.4byte	0x24a
  1682 019d 07       		.uleb128 0x7
- 1683 019e 76040000 		.4byte	.LASF25
+ 1683 019e 85040000 		.4byte	.LASF25
  1684 01a2 01       		.byte	0x1
  1685 01a3 5901     		.2byte	0x159
  1686 01a5 83000000 		.4byte	0x83
@@ -3234,11 +3234,11 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1692 01b5 83000000 		.4byte	0x83
  1693 01b9 83010000 		.4byte	.LLST6
  1694 01bd 07       		.uleb128 0x7
- 1695 01be 96050000 		.4byte	.LASF27
+ 1695 01be A5050000 		.4byte	.LASF27
  1696 01c2 01       		.byte	0x1
  1697 01c3 5901     		.2byte	0x159
  1698 01c5 83000000 		.4byte	0x83
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 55
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 55
 
 
  1699 01c9 C5010000 		.4byte	.LLST7
@@ -3253,7 +3253,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1708 01e2 6A000000 		.4byte	.LBE2-.LBB2
  1709 01e6 27020000 		.4byte	0x227
  1710 01ea 09       		.uleb128 0x9
- 1711 01eb 9B040000 		.4byte	.LASF29
+ 1711 01eb AA040000 		.4byte	.LASF29
  1712 01ef 01       		.byte	0x1
  1713 01f0 6701     		.2byte	0x167
  1714 01f2 83000000 		.4byte	0x83
@@ -3289,7 +3289,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1744 0235 01       		.uleb128 0x1
  1745 0236 50       		.byte	0x50
  1746 0237 01       		.uleb128 0x1
- 1747 0238 3C       		.byte	0x3c
+ 1747 0238 3B       		.byte	0x3b
  1748 0239 00       		.byte	0
  1749 023a 0A       		.uleb128 0xa
  1750 023b 92000000 		.4byte	.LVL45
@@ -3298,14 +3298,14 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1753 0244 01       		.uleb128 0x1
  1754 0245 50       		.byte	0x50
  1755 0246 01       		.uleb128 0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 56
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 56
 
 
- 1756 0247 3C       		.byte	0x3c
+ 1756 0247 3B       		.byte	0x3b
  1757 0248 00       		.byte	0
  1758 0249 00       		.byte	0
  1759 024a 0F       		.uleb128 0xf
- 1760 024b 71050000 		.4byte	.LASF31
+ 1760 024b 80050000 		.4byte	.LASF31
  1761 024f 01       		.byte	0x1
  1762 0250 0B02     		.2byte	0x20b
  1763 0252 83000000 		.4byte	0x83
@@ -3315,7 +3315,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1767 025f 9C       		.byte	0x9c
  1768 0260 CB020000 		.4byte	0x2cb
  1769 0264 07       		.uleb128 0x7
- 1770 0265 96050000 		.4byte	.LASF27
+ 1770 0265 A5050000 		.4byte	.LASF27
  1771 0269 01       		.byte	0x1
  1772 026a 0B02     		.2byte	0x20b
  1773 026c 83000000 		.4byte	0x83
@@ -3330,7 +3330,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1782 0285 0C000000 		.4byte	.LBB3
  1783 0289 36000000 		.4byte	.LBE3-.LBB3
  1784 028d 09       		.uleb128 0x9
- 1785 028e 9B040000 		.4byte	.LASF29
+ 1785 028e AA040000 		.4byte	.LASF29
  1786 0292 01       		.byte	0x1
  1787 0293 1202     		.2byte	0x212
  1788 0295 83000000 		.4byte	0x83
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1810 02c1 40000000 		.4byte	.LVL57
  1811 02c5 2F010000 		.4byte	0x12f
  1812 02c9 00       		.byte	0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 57
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 57
 
 
  1813 02ca 00       		.byte	0
@@ -3373,13 +3373,13 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1822 02e0 9C       		.byte	0x9c
  1823 02e1 5C030000 		.4byte	0x35c
  1824 02e5 07       		.uleb128 0x7
- 1825 02e6 EB040000 		.4byte	.LASF33
+ 1825 02e6 FA040000 		.4byte	.LASF33
  1826 02ea 01       		.byte	0x1
  1827 02eb 4602     		.2byte	0x246
  1828 02ed 83000000 		.4byte	0x83
  1829 02f1 48030000 		.4byte	.LLST13
  1830 02f5 07       		.uleb128 0x7
- 1831 02f6 96050000 		.4byte	.LASF27
+ 1831 02f6 A5050000 		.4byte	.LASF27
  1832 02fa 01       		.byte	0x1
  1833 02fb 4602     		.2byte	0x246
  1834 02fd 83000000 		.4byte	0x83
@@ -3394,7 +3394,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1843 0316 0C000000 		.4byte	.LBB4
  1844 031a 28000000 		.4byte	.LBE4-.LBB4
  1845 031e 09       		.uleb128 0x9
- 1846 031f 9B040000 		.4byte	.LASF29
+ 1846 031f AA040000 		.4byte	.LASF29
  1847 0323 01       		.byte	0x1
  1848 0324 4D02     		.2byte	0x24d
  1849 0326 83000000 		.4byte	0x83
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1867 034e 91       		.byte	0x91
  1868 034f 74       		.sleb128 -12
  1869 0350 00       		.byte	0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 58
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 58
 
 
  1870 0351 0E       		.uleb128 0xe
@@ -3427,7 +3427,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1873 035a 00       		.byte	0
  1874 035b 00       		.byte	0
  1875 035c 0F       		.uleb128 0xf
- 1876 035d C6040000 		.4byte	.LASF34
+ 1876 035d D5040000 		.4byte	.LASF34
  1877 0361 01       		.byte	0x1
  1878 0362 8D02     		.2byte	0x28d
  1879 0364 83000000 		.4byte	0x83
@@ -3449,7 +3449,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1895 038e 0D040000 		.4byte	0x40d
  1896 0392 5D040000 		.4byte	.LLST18
  1897 0396 07       		.uleb128 0x7
- 1898 0397 96050000 		.4byte	.LASF27
+ 1898 0397 A5050000 		.4byte	.LASF27
  1899 039b 01       		.byte	0x1
  1900 039c 8D02     		.2byte	0x28d
  1901 039e 83000000 		.4byte	0x83
@@ -3464,7 +3464,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1910 03b7 10000000 		.4byte	.LBB5
  1911 03bb 4E000000 		.4byte	.LBE5-.LBB5
  1912 03bf 09       		.uleb128 0x9
- 1913 03c0 9B040000 		.4byte	.LASF29
+ 1913 03c0 AA040000 		.4byte	.LASF29
  1914 03c4 01       		.byte	0x1
  1915 03c5 9402     		.2byte	0x294
  1916 03c7 83000000 		.4byte	0x83
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1924 03df 11       		.uleb128 0x11
  1925 03e0 77020000 		.4byte	.LASF22
  1926 03e4 01       		.byte	0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 59
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 59
 
 
  1927 03e5 9602     		.2byte	0x296
@@ -3524,7 +3524,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1967 043d 01       		.uleb128 0x1
  1968 043e 9C       		.byte	0x9c
  1969 043f 15       		.uleb128 0x15
- 1970 0440 1F050000 		.4byte	.LASF40
+ 1970 0440 2E050000 		.4byte	.LASF40
  1971 0444 01       		.byte	0x1
  1972 0445 FE02     		.2byte	0x2fe
  1973 0447 00000000 		.4byte	.LFB10
@@ -3538,12 +3538,12 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1981 045e 68040000 		.4byte	0x468
  1982 0462 0B       		.uleb128 0xb
  1983 0463 01       		.uleb128 0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 60
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 60
 
 
  1984 0464 50       		.byte	0x50
  1985 0465 01       		.uleb128 0x1
- 1986 0466 3C       		.byte	0x3c
+ 1986 0466 3B       		.byte	0x3b
  1987 0467 00       		.byte	0
  1988 0468 0A       		.uleb128 0xa
  1989 0469 1E000000 		.4byte	.LVL86
@@ -3552,7 +3552,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  1992 0472 01       		.uleb128 0x1
  1993 0473 50       		.byte	0x50
  1994 0474 01       		.uleb128 0x1
- 1995 0475 3C       		.byte	0x3c
+ 1995 0475 3B       		.byte	0x3b
  1996 0476 00       		.byte	0
  1997 0477 00       		.byte	0
  1998 0478 15       		.uleb128 0x15
@@ -3572,7 +3572,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2012 049c 01       		.uleb128 0x1
  2013 049d 50       		.byte	0x50
  2014 049e 01       		.uleb128 0x1
- 2015 049f 3C       		.byte	0x3c
+ 2015 049f 3B       		.byte	0x3b
  2016 04a0 00       		.byte	0
  2017 04a1 0A       		.uleb128 0xa
  2018 04a2 1E000000 		.4byte	.LVL88
@@ -3581,11 +3581,11 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2021 04ab 01       		.uleb128 0x1
  2022 04ac 50       		.byte	0x50
  2023 04ad 01       		.uleb128 0x1
- 2024 04ae 3C       		.byte	0x3c
+ 2024 04ae 3B       		.byte	0x3b
  2025 04af 00       		.byte	0
  2026 04b0 00       		.byte	0
  2027 04b1 0F       		.uleb128 0xf
- 2028 04b2 FC040000 		.4byte	.LASF42
+ 2028 04b2 0B050000 		.4byte	.LASF42
  2029 04b6 01       		.byte	0x1
  2030 04b7 4903     		.2byte	0x349
  2031 04b9 83000000 		.4byte	0x83
@@ -3595,10 +3595,10 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2035 04c6 9C       		.byte	0x9c
  2036 04c7 FE040000 		.4byte	0x4fe
  2037 04cb 09       		.uleb128 0x9
- 2038 04cc A7050000 		.4byte	.LASF19
+ 2038 04cc B6050000 		.4byte	.LASF19
  2039 04d0 01       		.byte	0x1
  2040 04d1 4B03     		.2byte	0x34b
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 61
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 61
 
 
  2041 04d3 83000000 		.4byte	0x83
@@ -3611,7 +3611,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2048 04e9 01       		.uleb128 0x1
  2049 04ea 50       		.byte	0x50
  2050 04eb 01       		.uleb128 0x1
- 2051 04ec 3C       		.byte	0x3c
+ 2051 04ec 3B       		.byte	0x3b
  2052 04ed 00       		.byte	0
  2053 04ee 0A       		.uleb128 0xa
  2054 04ef 24000000 		.4byte	.LVL93
@@ -3620,7 +3620,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2057 04f8 01       		.uleb128 0x1
  2058 04f9 50       		.byte	0x50
  2059 04fa 01       		.uleb128 0x1
- 2060 04fb 3C       		.byte	0x3c
+ 2060 04fb 3B       		.byte	0x3b
  2061 04fc 00       		.byte	0
  2062 04fd 00       		.byte	0
  2063 04fe 0F       		.uleb128 0xf
@@ -3634,7 +3634,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2071 0513 9C       		.byte	0x9c
  2072 0514 4B050000 		.4byte	0x54b
  2073 0518 09       		.uleb128 0x9
- 2074 0519 A7050000 		.4byte	.LASF19
+ 2074 0519 B6050000 		.4byte	.LASF19
  2075 051d 01       		.byte	0x1
  2076 051e 6D03     		.2byte	0x36d
  2077 0520 83000000 		.4byte	0x83
@@ -3647,7 +3647,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2084 0536 01       		.uleb128 0x1
  2085 0537 50       		.byte	0x50
  2086 0538 01       		.uleb128 0x1
- 2087 0539 3C       		.byte	0x3c
+ 2087 0539 3B       		.byte	0x3b
  2088 053a 00       		.byte	0
  2089 053b 0A       		.uleb128 0xa
  2090 053c 18000000 		.4byte	.LVL97
@@ -3656,9 +3656,9 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2093 0545 01       		.uleb128 0x1
  2094 0546 50       		.byte	0x50
  2095 0547 01       		.uleb128 0x1
- 2096 0548 3C       		.byte	0x3c
+ 2096 0548 3B       		.byte	0x3b
  2097 0549 00       		.byte	0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 62
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 62
 
 
  2098 054a 00       		.byte	0
@@ -3689,13 +3689,13 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2123 0586 9C       		.byte	0x9c
  2124 0587 02060000 		.4byte	0x602
  2125 058b 18       		.uleb128 0x18
- 2126 058c 76040000 		.4byte	.LASF25
+ 2126 058c 85040000 		.4byte	.LASF25
  2127 0590 01       		.byte	0x1
  2128 0591 67       		.byte	0x67
  2129 0592 83000000 		.4byte	0x83
  2130 0596 B1050000 		.4byte	.LLST26
  2131 059a 18       		.uleb128 0x18
- 2132 059b A0050000 		.4byte	.LASF46
+ 2132 059b AF050000 		.4byte	.LASF46
  2133 059f 01       		.byte	0x1
  2134 05a0 67       		.byte	0x67
  2135 05a1 0D040000 		.4byte	0x40d
@@ -3707,7 +3707,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2141 05b0 83000000 		.4byte	0x83
  2142 05b4 86060000 		.4byte	.LLST28
  2143 05b8 18       		.uleb128 0x18
- 2144 05b9 F7040000 		.4byte	.LASF47
+ 2144 05b9 06050000 		.4byte	.LASF47
  2145 05bd 01       		.byte	0x1
  2146 05be 67       		.byte	0x67
  2147 05bf 83000000 		.4byte	0x83
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2152 05cd 69       		.byte	0x69
  2153 05ce 83000000 		.4byte	0x83
  2154 05d2 36070000 		.4byte	.LLST30
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 63
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 63
 
 
  2155 05d6 12       		.uleb128 0x12
@@ -3729,7 +3729,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2160 05e4 01       		.uleb128 0x1
  2161 05e5 50       		.byte	0x50
  2162 05e6 01       		.uleb128 0x1
- 2163 05e7 3C       		.byte	0x3c
+ 2163 05e7 3B       		.byte	0x3b
  2164 05e8 00       		.byte	0
  2165 05e9 0E       		.uleb128 0xe
  2166 05ea 9E000000 		.4byte	.LVL117
@@ -3741,7 +3741,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2172 05fc 01       		.uleb128 0x1
  2173 05fd 50       		.byte	0x50
  2174 05fe 01       		.uleb128 0x1
- 2175 05ff 3C       		.byte	0x3c
+ 2175 05ff 3B       		.byte	0x3b
  2176 0600 00       		.byte	0
  2177 0601 00       		.byte	0
  2178 0602 17       		.uleb128 0x17
@@ -3755,7 +3755,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2186 0616 9C       		.byte	0x9c
  2187 0617 92060000 		.4byte	0x692
  2188 061b 18       		.uleb128 0x18
- 2189 061c 76040000 		.4byte	.LASF25
+ 2189 061c 85040000 		.4byte	.LASF25
  2190 0620 01       		.byte	0x1
  2191 0621 D5       		.byte	0xd5
  2192 0622 83000000 		.4byte	0x83
@@ -3773,12 +3773,12 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2204 0640 83000000 		.4byte	0x83
  2205 0644 4D080000 		.4byte	.LLST33
  2206 0648 18       		.uleb128 0x18
- 2207 0649 F7040000 		.4byte	.LASF47
+ 2207 0649 06050000 		.4byte	.LASF47
  2208 064d 01       		.byte	0x1
  2209 064e D5       		.byte	0xd5
  2210 064f 83000000 		.4byte	0x83
  2211 0653 BB080000 		.4byte	.LLST34
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 64
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 64
 
 
  2212 0657 1A       		.uleb128 0x1a
@@ -3795,7 +3795,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2223 0674 01       		.uleb128 0x1
  2224 0675 50       		.byte	0x50
  2225 0676 01       		.uleb128 0x1
- 2226 0677 3C       		.byte	0x3c
+ 2226 0677 3B       		.byte	0x3b
  2227 0678 00       		.byte	0
  2228 0679 0E       		.uleb128 0xe
  2229 067a B2000000 		.4byte	.LVL139
@@ -3807,11 +3807,11 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2235 068c 01       		.uleb128 0x1
  2236 068d 50       		.byte	0x50
  2237 068e 01       		.uleb128 0x1
- 2238 068f 3C       		.byte	0x3c
+ 2238 068f 3B       		.byte	0x3b
  2239 0690 00       		.byte	0
  2240 0691 00       		.byte	0
  2241 0692 0F       		.uleb128 0xf
- 2242 0693 45060000 		.4byte	.LASF50
+ 2242 0693 54060000 		.4byte	.LASF50
  2243 0697 01       		.byte	0x1
  2244 0698 BC01     		.2byte	0x1bc
  2245 069a 83000000 		.4byte	0x83
@@ -3821,7 +3821,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2249 06a7 9C       		.byte	0x9c
  2250 06a8 3C070000 		.4byte	0x73c
  2251 06ac 07       		.uleb128 0x7
- 2252 06ad 76040000 		.4byte	.LASF25
+ 2252 06ad 85040000 		.4byte	.LASF25
  2253 06b1 01       		.byte	0x1
  2254 06b2 BC01     		.2byte	0x1bc
  2255 06b4 83000000 		.4byte	0x83
@@ -3833,12 +3833,12 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2261 06c4 83000000 		.4byte	0x83
  2262 06c8 76090000 		.4byte	.LLST37
  2263 06cc 07       		.uleb128 0x7
- 2264 06cd 96050000 		.4byte	.LASF27
+ 2264 06cd A5050000 		.4byte	.LASF27
  2265 06d1 01       		.byte	0x1
  2266 06d2 BC01     		.2byte	0x1bc
  2267 06d4 83000000 		.4byte	0x83
  2268 06d8 B0090000 		.4byte	.LLST38
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 65
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 65
 
 
  2269 06dc 09       		.uleb128 0x9
@@ -3851,7 +3851,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2276 06ed 0C000000 		.4byte	.LBB6
  2277 06f1 48000000 		.4byte	.LBE6-.LBB6
  2278 06f5 09       		.uleb128 0x9
- 2279 06f6 9B040000 		.4byte	.LASF29
+ 2279 06f6 AA040000 		.4byte	.LASF29
  2280 06fa 01       		.byte	0x1
  2281 06fb C301     		.2byte	0x1c3
  2282 06fd 83000000 		.4byte	0x83
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2323 0754 00000000 		.4byte	Current_Sensor_I2C_mstrStatus
  2324 0758 1C       		.uleb128 0x1c
  2325 0759 DF020000 		.4byte	.LASF53
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 66
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 66
 
 
  2326 075d 01       		.byte	0x1
@@ -3908,7 +3908,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2330 0764 03       		.byte	0x3
  2331 0765 00000000 		.4byte	Current_Sensor_I2C_mstrControl
  2332 0769 1C       		.uleb128 0x1c
- 2333 076a 0C040000 		.4byte	.LASF54
+ 2333 076a B7030000 		.4byte	.LASF54
  2334 076e 01       		.byte	0x1
  2335 076f 21       		.byte	0x21
  2336 0770 7A070000 		.4byte	0x77a
@@ -3927,7 +3927,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2349 078c 03       		.byte	0x3
  2350 078d 00000000 		.4byte	Current_Sensor_I2C_mstrRdBufSize
  2351 0791 1C       		.uleb128 0x1c
- 2352 0792 2C040000 		.4byte	.LASF56
+ 2352 0792 D7030000 		.4byte	.LASF56
  2353 0796 01       		.byte	0x1
  2354 0797 23       		.byte	0x23
  2355 0798 BA000000 		.4byte	0xba
@@ -3935,7 +3935,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2357 079d 03       		.byte	0x3
  2358 079e 00000000 		.4byte	Current_Sensor_I2C_mstrRdBufIndex
  2359 07a2 1C       		.uleb128 0x1c
- 2360 07a3 D4050000 		.4byte	.LASF57
+ 2360 07a3 E3050000 		.4byte	.LASF57
  2361 07a7 01       		.byte	0x1
  2362 07a8 26       		.byte	0x26
  2363 07a9 7A070000 		.4byte	0x77a
@@ -3943,7 +3943,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2365 07ae 03       		.byte	0x3
  2366 07af 00000000 		.4byte	Current_Sensor_I2C_mstrWrBufPtr
  2367 07b3 1C       		.uleb128 0x1c
- 2368 07b4 A5040000 		.4byte	.LASF58
+ 2368 07b4 B4040000 		.4byte	.LASF58
  2369 07b8 01       		.byte	0x1
  2370 07b9 27       		.byte	0x27
  2371 07ba BA000000 		.4byte	0xba
@@ -3951,18 +3951,18 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2373 07bf 03       		.byte	0x3
  2374 07c0 00000000 		.4byte	Current_Sensor_I2C_mstrWrBufSize
  2375 07c4 1C       		.uleb128 0x1c
- 2376 07c5 F4050000 		.4byte	.LASF59
+ 2376 07c5 03060000 		.4byte	.LASF59
  2377 07c9 01       		.byte	0x1
  2378 07ca 28       		.byte	0x28
  2379 07cb BA000000 		.4byte	0xba
  2380 07cf 05       		.uleb128 0x5
  2381 07d0 03       		.byte	0x3
  2382 07d1 00000000 		.4byte	Current_Sensor_I2C_mstrWrBufIndex
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 67
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 67
 
 
  2383 07d5 1C       		.uleb128 0x1c
- 2384 07d6 20060000 		.4byte	.LASF60
+ 2384 07d6 2F060000 		.4byte	.LASF60
  2385 07da 01       		.byte	0x1
  2386 07db 29       		.byte	0x29
  2387 07dc BA000000 		.4byte	0xba
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2437 0017 0B       		.uleb128 0xb
  2438 0018 3E       		.uleb128 0x3e
  2439 0019 0B       		.uleb128 0xb
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 68
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 68
 
 
  2440 001a 03       		.uleb128 0x3
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2494 0050 9742     		.uleb128 0x2117
  2495 0052 19       		.uleb128 0x19
  2496 0053 01       		.uleb128 0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 69
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 69
 
 
  2497 0054 13       		.uleb128 0x13
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2551 008c 13       		.uleb128 0x13
  2552 008d 00       		.byte	0
  2553 008e 00       		.byte	0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 70
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 70
 
 
  2554 008f 0B       		.uleb128 0xb
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2608 00ca 18       		.uleb128 0x18
  2609 00cb 9742     		.uleb128 0x2117
  2610 00cd 19       		.uleb128 0x19
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 71
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 71
 
 
  2611 00ce 01       		.uleb128 0x1
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2665 0106 19       		.uleb128 0x19
  2666 0107 03       		.uleb128 0x3
  2667 0108 0E       		.uleb128 0xe
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 72
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 72
 
 
  2668 0109 3A       		.uleb128 0x3a
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2722 0141 02       		.uleb128 0x2
  2723 0142 17       		.uleb128 0x17
  2724 0143 00       		.byte	0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 73
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 73
 
 
  2725 0144 00       		.byte	0
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2779 017b 02       		.uleb128 0x2
  2780 017c 17       		.uleb128 0x17
  2781 017d 00       		.byte	0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 74
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 74
 
 
  2782 017e 00       		.byte	0
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2836 01b4 19       		.uleb128 0x19
  2837 01b5 3C       		.uleb128 0x3c
  2838 01b6 19       		.uleb128 0x19
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 75
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 75
 
 
  2839 01b7 6E       		.uleb128 0x6e
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2893 0069 0100     		.2byte	0x1
  2894 006b 50       		.byte	0x50
  2895 006c A1000000 		.4byte	.LVL21-1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 76
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 76
 
 
  2896 0070 A4000000 		.4byte	.LVL22
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  2950 00f1 00000000 		.4byte	0
  2951              	.LLST4:
  2952 00f5 02000000 		.4byte	.LVL9
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 77
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 77
 
 
  2953 00f9 38000000 		.4byte	.LVL13
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  3007 0183 00000000 		.4byte	.LVL26
  3008 0187 17000000 		.4byte	.LVL29-1
  3009 018b 0100     		.2byte	0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 78
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 78
 
 
  3010 018d 51       		.byte	0x51
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  3064 0211 C4000000 		.4byte	.LFE3
  3065 0215 0400     		.2byte	0x4
  3066 0217 F3       		.byte	0xf3
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 79
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 79
 
 
  3067 0218 01       		.uleb128 0x1
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  3121 02a4 0100     		.2byte	0x1
  3122 02a6 50       		.byte	0x50
  3123 02a7 00000000 		.4byte	0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 80
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 80
 
 
  3124 02ab 00000000 		.4byte	0
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  3178 0332 0100     		.2byte	0x1
  3179 0334 54       		.byte	0x54
  3180 0335 3A000000 		.4byte	.LVL56
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 81
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 81
 
 
  3181 0339 3F000000 		.4byte	.LVL57-1
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  3235 03b8 00000000 		.4byte	0
  3236              	.LLST15:
  3237 03bc 04000000 		.4byte	.LVL61
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 82
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 82
 
 
  3238 03c0 32000000 		.4byte	.LVL68
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  3292 0451 F3       		.byte	0xf3
  3293 0452 01       		.uleb128 0x1
  3294 0453 50       		.byte	0x50
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 83
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 83
 
 
  3295 0454 9F       		.byte	0x9f
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  3349              	.LLST20:
  3350 04d9 08000000 		.4byte	.LVL72
  3351 04dd 4E000000 		.4byte	.LVL80
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 84
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 84
 
 
  3352 04e1 0200     		.2byte	0x2
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  3406 0570 00000000 		.4byte	0
  3407              	.LLST24:
  3408 0574 0E000000 		.4byte	.LVL96
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 85
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 85
 
 
  3409 0578 1A000000 		.4byte	.LVL98
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  3463 0605 00000000 		.4byte	0
  3464              	.LLST27:
  3465 0609 00000000 		.4byte	.LVL101
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 86
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 86
 
 
  3466 060d 1D000000 		.4byte	.LVL105-1
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  3520 069c 2A000000 		.4byte	.LVL106
  3521 06a0 34000000 		.4byte	.LVL107
  3522 06a4 0100     		.2byte	0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 87
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 87
 
 
  3523 06a6 52       		.byte	0x52
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  3577 072e 00000000 		.4byte	0
  3578 0732 00000000 		.4byte	0
  3579              	.LLST30:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 88
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 88
 
 
  3580 0736 0C000000 		.4byte	.LVL102
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  3634 07c1 C2000000 		.4byte	.LVL140
  3635 07c5 0100     		.2byte	0x1
  3636 07c7 54       		.byte	0x54
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 89
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 89
 
 
  3637 07c8 00000000 		.4byte	0
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  3691 0858 1D000000 		.4byte	.LVL127-1
  3692 085c 2A000000 		.4byte	.LVL128
  3693 0860 0100     		.2byte	0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 90
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 90
 
 
  3694 0862 57       		.byte	0x57
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  3748 08f1 F3       		.byte	0xf3
  3749 08f2 01       		.uleb128 0x1
  3750 08f3 53       		.byte	0x53
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 91
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 91
 
 
  3751 08f4 9F       		.byte	0x9f
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  3805 097e 0100     		.2byte	0x1
  3806 0980 51       		.byte	0x51
  3807 0981 33000000 		.4byte	.LVL151-1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 92
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 92
 
 
  3808 0985 54000000 		.4byte	.LVL158
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  3862 0a01 54000000 		.4byte	.LVL158
  3863 0a05 56000000 		.4byte	.LVL159
  3864 0a09 0200     		.2byte	0x2
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 93
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 93
 
 
  3865 0a0b 34       		.byte	0x34
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  3919 006c 20000000 		.4byte	.LFE13-.LFB13
  3920 0070 00000000 		.4byte	.LFB14
  3921 0074 20000000 		.4byte	.LFE14-.LFB14
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 94
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 94
 
 
  3922 0078 00000000 		.4byte	.LFB1
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  3971              	.LASF18:
  3972 0007 6F6E6555 		.ascii	"oneUnit\000"
  3972      6E697400 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 95
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 95
 
 
  3973              	.LASF36:
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  3992      65642063 
  3992      68617200 
  3993              	.LASF49:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 96
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 96
 
 
  3994 0159 72644461 		.ascii	"rdData\000"
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  4018      53656E73 
  4018      6F725F49 
  4018      32435F6D 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 97
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 97
 
 
  4019              	.LASF5:
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  4040              	.LASF26:
  4041 0335 62697452 		.ascii	"bitRnW\000"
  4041      6E5700
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 98
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 98
 
 
  4042              	.LASF32:
@@ -5848,149 +5848,151 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 1
  4053      53656E73 
  4053      6F725F49 
  4053      32435F49 
- 4054              	.LASF67:
- 4055 03b1 433A5C55 		.ascii	"C:\\Users\\casey\\Desktop\\Robotics Stuff\\BLDC_Mot"
- 4055      73657273 
- 4055      5C636173 
- 4055      65795C44 
- 4055      65736B74 
- 4056 03df 6F725F42 		.ascii	"or_Board_PY2023\\BLDC_Motor_Board.cydsn\000"
- 4056      6F617264 
- 4056      5F505932 
- 4056      3032335C 
- 4056      424C4443 
- 4057              	.LASF12:
- 4058 0406 666C6F61 		.ascii	"float\000"
- 4058      7400
- 4059              	.LASF54:
- 4060 040c 43757272 		.ascii	"Current_Sensor_I2C_mstrRdBufPtr\000"
- 4060      656E745F 
- 4060      53656E73 
- 4060      6F725F49 
- 4060      32435F6D 
- 4061              	.LASF56:
- 4062 042c 43757272 		.ascii	"Current_Sensor_I2C_mstrRdBufIndex\000"
- 4062      656E745F 
- 4062      53656E73 
- 4062      6F725F49 
- 4062      32435F6D 
- 4063              	.LASF20:
- 4064 044e 43757272 		.ascii	"Current_Sensor_I2C_I2CMasterWaitOneUnit\000"
- 4064      656E745F 
- 4064      53656E73 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 99
+ 4054              	.LASF12:
+ 4055 03b1 666C6F61 		.ascii	"float\000"
+ 4055      7400
+ 4056              	.LASF54:
+ 4057 03b7 43757272 		.ascii	"Current_Sensor_I2C_mstrRdBufPtr\000"
+ 4057      656E745F 
+ 4057      53656E73 
+ 4057      6F725F49 
+ 4057      32435F6D 
+ 4058              	.LASF56:
+ 4059 03d7 43757272 		.ascii	"Current_Sensor_I2C_mstrRdBufIndex\000"
+ 4059      656E745F 
+ 4059      53656E73 
+ 4059      6F725F49 
+ 4059      32435F6D 
+ 4060              	.LASF20:
+ 4061 03f9 43757272 		.ascii	"Current_Sensor_I2C_I2CMasterWaitOneUnit\000"
+ 4061      656E745F 
+ 4061      53656E73 
+ 4061      6F725F49 
+ 4061      32435F49 
+ 4062              	.LASF67:
+ 4063 0421 433A5C55 		.ascii	"C:\\Users\\M4rz4n\\Desktop\\Husky Robotics\\Firmwar"
+ 4063      73657273 
+ 4063      5C4D3472 
+ 4063      7A346E5C 
+ 4063      4465736B 
+ 4064 044f 655C424C 		.ascii	"e\\BLDC\\BLDC_Motor_Board_PY2023\\BLDC_Motor_Board."
+ 4064      44435C42 
+ 4064      4C44435F 
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 99
 
 
- 4064      6F725F49 
- 4064      32435F49 
- 4065              	.LASF25:
- 4066 0476 736C6176 		.ascii	"slaveAddress\000"
- 4066      65416464 
- 4066      72657373 
- 4066      00
- 4067              	.LASF1:
- 4068 0483 756E7369 		.ascii	"unsigned char\000"
- 4068      676E6564 
- 4068      20636861 
- 4068      7200
- 4069              	.LASF2:
- 4070 0491 73686F72 		.ascii	"short int\000"
- 4070      7420696E 
- 4070      7400
- 4071              	.LASF29:
- 4072 049b 6C6F6353 		.ascii	"locStatus\000"
- 4072      74617475 
- 4072      7300
- 4073              	.LASF58:
- 4074 04a5 43757272 		.ascii	"Current_Sensor_I2C_mstrWrBufSize\000"
- 4074      656E745F 
- 4074      53656E73 
- 4074      6F725F49 
- 4074      32435F6D 
- 4075              	.LASF34:
- 4076 04c6 43757272 		.ascii	"Current_Sensor_I2C_I2CMasterReadByte\000"
- 4076      656E745F 
- 4076      53656E73 
- 4076      6F725F49 
- 4076      32435F49 
- 4077              	.LASF33:
- 4078 04eb 77724279 		.ascii	"wrByte\000"
- 4078      746500
- 4079              	.LASF14:
- 4080 04f2 63686172 		.ascii	"char\000"
- 4080      00
- 4081              	.LASF47:
- 4082 04f7 6D6F6465 		.ascii	"mode\000"
- 4082      00
- 4083              	.LASF42:
- 4084 04fc 43757272 		.ascii	"Current_Sensor_I2C_I2CMasterStatus\000"
- 4084      656E745F 
- 4084      53656E73 
- 4084      6F725F49 
- 4084      32435F49 
- 4085              	.LASF40:
- 4086 051f 43757272 		.ascii	"Current_Sensor_I2C_I2CMasterClearReadBuf\000"
- 4086      656E745F 
- 4086      53656E73 
- 4086      6F725F49 
- 4086      32435F49 
- 4087              	.LASF21:
- 4088 0548 43757272 		.ascii	"Current_Sensor_I2C_I2CMasterHandleStatus\000"
- 4088      656E745F 
- 4088      53656E73 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccjTzy1l.s 			page 100
+ 4064      4D6F746F 
+ 4064      725F426F 
+ 4065 047f 63796473 		.ascii	"cydsn\000"
+ 4065      6E00
+ 4066              	.LASF25:
+ 4067 0485 736C6176 		.ascii	"slaveAddress\000"
+ 4067      65416464 
+ 4067      72657373 
+ 4067      00
+ 4068              	.LASF1:
+ 4069 0492 756E7369 		.ascii	"unsigned char\000"
+ 4069      676E6564 
+ 4069      20636861 
+ 4069      7200
+ 4070              	.LASF2:
+ 4071 04a0 73686F72 		.ascii	"short int\000"
+ 4071      7420696E 
+ 4071      7400
+ 4072              	.LASF29:
+ 4073 04aa 6C6F6353 		.ascii	"locStatus\000"
+ 4073      74617475 
+ 4073      7300
+ 4074              	.LASF58:
+ 4075 04b4 43757272 		.ascii	"Current_Sensor_I2C_mstrWrBufSize\000"
+ 4075      656E745F 
+ 4075      53656E73 
+ 4075      6F725F49 
+ 4075      32435F6D 
+ 4076              	.LASF34:
+ 4077 04d5 43757272 		.ascii	"Current_Sensor_I2C_I2CMasterReadByte\000"
+ 4077      656E745F 
+ 4077      53656E73 
+ 4077      6F725F49 
+ 4077      32435F49 
+ 4078              	.LASF33:
+ 4079 04fa 77724279 		.ascii	"wrByte\000"
+ 4079      746500
+ 4080              	.LASF14:
+ 4081 0501 63686172 		.ascii	"char\000"
+ 4081      00
+ 4082              	.LASF47:
+ 4083 0506 6D6F6465 		.ascii	"mode\000"
+ 4083      00
+ 4084              	.LASF42:
+ 4085 050b 43757272 		.ascii	"Current_Sensor_I2C_I2CMasterStatus\000"
+ 4085      656E745F 
+ 4085      53656E73 
+ 4085      6F725F49 
+ 4085      32435F49 
+ 4086              	.LASF40:
+ 4087 052e 43757272 		.ascii	"Current_Sensor_I2C_I2CMasterClearReadBuf\000"
+ 4087      656E745F 
+ 4087      53656E73 
+ 4087      6F725F49 
+ 4087      32435F49 
+ 4088              	.LASF21:
+ 4089 0557 43757272 		.ascii	"Current_Sensor_I2C_I2CMasterHandleStatus\000"
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccVd6T47.s 			page 100
 
 
- 4088      6F725F49 
- 4088      32435F49 
- 4089              	.LASF31:
- 4090 0571 43757272 		.ascii	"Current_Sensor_I2C_I2CMasterSendStop\000"
- 4090      656E745F 
- 4090      53656E73 
- 4090      6F725F49 
- 4090      32435F49 
- 4091              	.LASF27:
- 4092 0596 74696D65 		.ascii	"timeoutMs\000"
- 4092      6F75744D 
- 4092      7300
- 4093              	.LASF46:
- 4094 05a0 77724461 		.ascii	"wrData\000"
- 4094      746100
- 4095              	.LASF19:
- 4096 05a7 73746174 		.ascii	"status\000"
- 4096      757300
- 4097              	.LASF30:
- 4098 05ae 43757272 		.ascii	"Current_Sensor_I2C_I2CMasterSendStart\000"
- 4098      656E745F 
- 4098      53656E73 
- 4098      6F725F49 
- 4098      32435F49 
- 4099              	.LASF57:
- 4100 05d4 43757272 		.ascii	"Current_Sensor_I2C_mstrWrBufPtr\000"
- 4100      656E745F 
- 4100      53656E73 
- 4100      6F725F49 
- 4100      32435F6D 
- 4101              	.LASF59:
- 4102 05f4 43757272 		.ascii	"Current_Sensor_I2C_mstrWrBufIndex\000"
- 4102      656E745F 
- 4102      53656E73 
- 4102      6F725F49 
- 4102      32435F6D 
- 4103              	.LASF23:
- 4104 0616 72657453 		.ascii	"retStatus\000"
- 4104      74617475 
- 4104      7300
- 4105              	.LASF60:
- 4106 0620 43757272 		.ascii	"Current_Sensor_I2C_mstrWrBufIndexTmp\000"
- 4106      656E745F 
- 4106      53656E73 
- 4106      6F725F49 
- 4106      32435F6D 
- 4107              	.LASF50:
- 4108 0645 43757272 		.ascii	"Current_Sensor_I2C_I2CMasterSendRestart\000"
- 4108      656E745F 
- 4108      53656E73 
- 4108      6F725F49 
- 4108      32435F49 
- 4109              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 4089      656E745F 
+ 4089      53656E73 
+ 4089      6F725F49 
+ 4089      32435F49 
+ 4090              	.LASF31:
+ 4091 0580 43757272 		.ascii	"Current_Sensor_I2C_I2CMasterSendStop\000"
+ 4091      656E745F 
+ 4091      53656E73 
+ 4091      6F725F49 
+ 4091      32435F49 
+ 4092              	.LASF27:
+ 4093 05a5 74696D65 		.ascii	"timeoutMs\000"
+ 4093      6F75744D 
+ 4093      7300
+ 4094              	.LASF46:
+ 4095 05af 77724461 		.ascii	"wrData\000"
+ 4095      746100
+ 4096              	.LASF19:
+ 4097 05b6 73746174 		.ascii	"status\000"
+ 4097      757300
+ 4098              	.LASF30:
+ 4099 05bd 43757272 		.ascii	"Current_Sensor_I2C_I2CMasterSendStart\000"
+ 4099      656E745F 
+ 4099      53656E73 
+ 4099      6F725F49 
+ 4099      32435F49 
+ 4100              	.LASF57:
+ 4101 05e3 43757272 		.ascii	"Current_Sensor_I2C_mstrWrBufPtr\000"
+ 4101      656E745F 
+ 4101      53656E73 
+ 4101      6F725F49 
+ 4101      32435F6D 
+ 4102              	.LASF59:
+ 4103 0603 43757272 		.ascii	"Current_Sensor_I2C_mstrWrBufIndex\000"
+ 4103      656E745F 
+ 4103      53656E73 
+ 4103      6F725F49 
+ 4103      32435F6D 
+ 4104              	.LASF23:
+ 4105 0625 72657453 		.ascii	"retStatus\000"
+ 4105      74617475 
+ 4105      7300
+ 4106              	.LASF60:
+ 4107 062f 43757272 		.ascii	"Current_Sensor_I2C_mstrWrBufIndexTmp\000"
+ 4107      656E745F 
+ 4107      53656E73 
+ 4107      6F725F49 
+ 4107      32435F6D 
+ 4108              	.LASF50:
+ 4109 0654 43757272 		.ascii	"Current_Sensor_I2C_I2CMasterSendRestart\000"
+ 4109      656E745F 
+ 4109      53656E73 
+ 4109      6F725F49 
+ 4109      32435F49 
+ 4110              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

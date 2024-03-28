@@ -1,6 +1,6 @@
 // ======================================================================
 // BLDC_Motor_Board.v generated from TopDesign.cysch
-// 02/26/2024 at 19:21
+// 03/28/2024 at 13:08
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -1497,7 +1497,6 @@ module top ;
           wire  Net_1585;
           wire  Net_1584;
           wire  Net_883;
-          wire  Net_1460;
           wire  Net_401;
           wire  Net_1609;
           wire  Net_1458;
@@ -1587,9 +1586,6 @@ module top ;
           wire  Net_1612;
           wire  Net_1611;
           wire  Net_1610;
-          wire  Net_1438;
-          wire  Net_1439;
-          wire  Net_1442;
           wire  Net_266;
           wire  Net_114;
           wire  Net_115;
@@ -1598,7 +1594,6 @@ module top ;
           wire [1:0] Net_796;
           wire [1:0] Net_1364;
           wire  Net_1457;
-          wire  Net_1441;
           wire  Net_1365;
           wire  Net_1363;
           wire  Net_12;
@@ -1606,6 +1601,7 @@ module top ;
           wire  Net_1496;
 
 	wire [0:0] tmpOE__HALL1_net;
+	wire [0:0] tmpFB_0__HALL1_net;
 	wire [0:0] tmpIO_0__HALL1_net;
 	wire [0:0] tmpINTERRUPT_0__HALL1_net;
 	electrical [0:0] tmpSIOVREF__HALL1_net;
@@ -1666,7 +1662,7 @@ module top ;
 		HALL1
 		 (.oe(tmpOE__HALL1_net),
 		  .y({1'b0}),
-		  .fb({Net_1438}),
+		  .fb({tmpFB_0__HALL1_net[0:0]}),
 		  .io({tmpIO_0__HALL1_net[0:0]}),
 		  .siovref(tmpSIOVREF__HALL1_net),
 		  .interrupt({tmpINTERRUPT_0__HALL1_net[0:0]}),
@@ -2130,6 +2126,7 @@ module top ;
 	assign tmpOE__WL_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
 	wire [0:0] tmpOE__HALL2_net;
+	wire [0:0] tmpFB_0__HALL2_net;
 	wire [0:0] tmpIO_0__HALL2_net;
 	wire [0:0] tmpINTERRUPT_0__HALL2_net;
 	electrical [0:0] tmpSIOVREF__HALL2_net;
@@ -2190,7 +2187,7 @@ module top ;
 		HALL2
 		 (.oe(tmpOE__HALL2_net),
 		  .y({1'b0}),
-		  .fb({Net_1439}),
+		  .fb({tmpFB_0__HALL2_net[0:0]}),
 		  .io({tmpIO_0__HALL2_net[0:0]}),
 		  .siovref(tmpSIOVREF__HALL2_net),
 		  .interrupt({tmpINTERRUPT_0__HALL2_net[0:0]}),
@@ -2204,6 +2201,7 @@ module top ;
 	assign tmpOE__HALL2_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
 	wire [0:0] tmpOE__HALL3_net;
+	wire [0:0] tmpFB_0__HALL3_net;
 	wire [0:0] tmpIO_0__HALL3_net;
 	wire [0:0] tmpINTERRUPT_0__HALL3_net;
 	electrical [0:0] tmpSIOVREF__HALL3_net;
@@ -2264,7 +2262,7 @@ module top ;
 		HALL3
 		 (.oe(tmpOE__HALL3_net),
 		  .y({1'b0}),
-		  .fb({Net_1442}),
+		  .fb({tmpFB_0__HALL3_net[0:0]}),
 		  .io({tmpIO_0__HALL3_net[0:0]}),
 		  .siovref(tmpSIOVREF__HALL3_net),
 		  .interrupt({tmpINTERRUPT_0__HALL3_net[0:0]}),

@@ -1,6 +1,6 @@
-C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_Motor_Board.cyprj|70ec7624-16aa-4059-9103-b08f0ceb8851
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|cf58f8cf-95cf-4b5c-93da-59b80fb8ce37
-C:\Users\M4rz4n\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|9e566841-a3cf-4f43-af29-f842e54a0217
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|8832f853-fae8-4d79-9c05-28b16afb700e
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|a82dad39-a038-435c-9097-661fc12e60b9
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|34545dfe-d960-4ea5-a13f-058f5bd79672
+C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_Motor_Board.cyprj|e81c1bc8-09d4-490e-81fc-4d48ce66ac35
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|b1f1fc8a-32f0-4826-9ef0-ce0f4e6c4002
+C:\Users\M4rz4n\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|6e9a6993-4b94-4276-a425-1dd133aaa468
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|a2e4baba-40f2-49cd-bd49-4c6ec01f5700
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|de0374ad-239c-4818-9052-8bf11152edc8
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|11b20e6f-8c31-408b-90ad-60217988e83d

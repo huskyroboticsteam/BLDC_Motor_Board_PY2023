@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 1
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccTgOVfe.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 1
   28:Generated_Source\PSoC4/Current_Sensor_I2C_SCBCLK.c **** * Summary:
   29:Generated_Source\PSoC4/Current_Sensor_I2C_SCBCLK.c **** *  Starts the clock, aligned to the specified running clock.
   30:Generated_Source\PSoC4/Current_Sensor_I2C_SCBCLK.c **** *
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 2
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccTgOVfe.s 			page 2
 
 
   31:Generated_Source\PSoC4/Current_Sensor_I2C_SCBCLK.c **** * Parameters:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 1
   60              		.align	2
   61              		.global	Current_Sensor_I2C_SCBCLK_Stop
   62              		.code	16
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 3
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccTgOVfe.s 			page 3
 
 
   63              		.thumb_func
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 1
   72              	.L6:
   97:Generated_Source\PSoC4/Current_Sensor_I2C_SCBCLK.c **** #if defined CYREG_PERI_DIV_CMD
   98:Generated_Source\PSoC4/Current_Sensor_I2C_SCBCLK.c **** 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 4
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccTgOVfe.s 			page 4
 
 
   99:Generated_Source\PSoC4/Current_Sensor_I2C_SCBCLK.c ****     /* Make sure any previous start command has finished. */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 1
  125:Generated_Source\PSoC4/Current_Sensor_I2C_SCBCLK.c **** * Parameters:
  126:Generated_Source\PSoC4/Current_Sensor_I2C_SCBCLK.c **** *  clkDivider:  Divider register value (0-65535). This value is NOT the
  127:Generated_Source\PSoC4/Current_Sensor_I2C_SCBCLK.c **** *    divider; the clock hardware divides by clkDivider plus one. For example,
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 5
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccTgOVfe.s 			page 5
 
 
  128:Generated_Source\PSoC4/Current_Sensor_I2C_SCBCLK.c **** *    to divide the clock by 2, this parameter should be set to 1.
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 1
  151:Generated_Source\PSoC4/Current_Sensor_I2C_SCBCLK.c ****     maskVal = Current_Sensor_I2C_SCBCLK_DIV_REG & (uint32)(~(uint32)Current_Sensor_I2C_SCBCLK__DIVI
  152:Generated_Source\PSoC4/Current_Sensor_I2C_SCBCLK.c ****     /* combine mask and new divider val into 32-bit value */
  153:Generated_Source\PSoC4/Current_Sensor_I2C_SCBCLK.c ****     regVal = clkDivider | maskVal;
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 6
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccTgOVfe.s 			page 6
 
 
  154:Generated_Source\PSoC4/Current_Sensor_I2C_SCBCLK.c ****     
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 1
  159 0006 80B2     		uxth	r0, r0
  179:Generated_Source\PSoC4/Current_Sensor_I2C_SCBCLK.c ****         >> Current_Sensor_I2C_SCBCLK_DIV_INT_SHIFT);
  180:Generated_Source\PSoC4/Current_Sensor_I2C_SCBCLK.c **** }
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 7
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccTgOVfe.s 			page 7
 
 
  160              		.loc 1 180 0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 1
  187              		.cfi_endproc
  188              	.LFE4:
  189              		.size	Current_Sensor_I2C_SCBCLK_GetFractionalDividerRegister, .-Current_Sensor_I2C_SCBCLK_GetFract
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 8
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccTgOVfe.s 			page 8
 
 
  190              		.text
@@ -431,45 +431,45 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 1
  197 0006 00000000 		.4byte	.Ldebug_abbrev0
  198 000a 04       		.byte	0x4
  199 000b 01       		.uleb128 0x1
- 200 000c 8A010000 		.4byte	.LASF25
+ 200 000c 99010000 		.4byte	.LASF25
  201 0010 0C       		.byte	0xc
- 202 0011 7F000000 		.4byte	.LASF26
- 203 0015 E9000000 		.4byte	.LASF27
+ 202 0011 E3000000 		.4byte	.LASF26
+ 203 0015 06000000 		.4byte	.LASF27
  204 0019 00000000 		.4byte	.Ldebug_ranges0+0
  205 001d 00000000 		.4byte	0
  206 0021 00000000 		.4byte	.Ldebug_line0
  207 0025 02       		.uleb128 0x2
  208 0026 01       		.byte	0x1
  209 0027 06       		.byte	0x6
- 210 0028 66020000 		.4byte	.LASF0
+ 210 0028 75020000 		.4byte	.LASF0
  211 002c 02       		.uleb128 0x2
  212 002d 01       		.byte	0x1
  213 002e 08       		.byte	0x8
- 214 002f 71000000 		.4byte	.LASF1
+ 214 002f D5000000 		.4byte	.LASF1
  215 0033 02       		.uleb128 0x2
  216 0034 02       		.byte	0x2
  217 0035 05       		.byte	0x5
- 218 0036 2B020000 		.4byte	.LASF2
+ 218 0036 3A020000 		.4byte	.LASF2
  219 003a 02       		.uleb128 0x2
  220 003b 02       		.byte	0x2
  221 003c 07       		.byte	0x7
- 222 003d B2000000 		.4byte	.LASF3
+ 222 003d 16010000 		.4byte	.LASF3
  223 0041 02       		.uleb128 0x2
  224 0042 04       		.byte	0x4
  225 0043 05       		.byte	0x5
- 226 0044 5D020000 		.4byte	.LASF4
+ 226 0044 6C020000 		.4byte	.LASF4
  227 0048 02       		.uleb128 0x2
  228 0049 04       		.byte	0x4
  229 004a 07       		.byte	0x7
- 230 004b D0000000 		.4byte	.LASF5
+ 230 004b 34010000 		.4byte	.LASF5
  231 004f 02       		.uleb128 0x2
  232 0050 08       		.byte	0x8
  233 0051 05       		.byte	0x5
- 234 0052 18020000 		.4byte	.LASF6
+ 234 0052 27020000 		.4byte	.LASF6
  235 0056 02       		.uleb128 0x2
  236 0057 08       		.byte	0x8
  237 0058 07       		.byte	0x7
- 238 0059 67010000 		.4byte	.LASF7
+ 238 0059 82010000 		.4byte	.LASF7
  239 005d 03       		.uleb128 0x3
  240 005e 04       		.byte	0x4
  241 005f 05       		.byte	0x5
@@ -477,37 +477,37 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 1
  243 0064 02       		.uleb128 0x2
  244 0065 04       		.byte	0x4
  245 0066 07       		.byte	0x7
- 246 0067 5A010000 		.4byte	.LASF8
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 9
+ 246 0067 75010000 		.4byte	.LASF8
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccTgOVfe.s 			page 9
 
 
  247 006b 04       		.uleb128 0x4
- 248 006c 35020000 		.4byte	.LASF9
+ 248 006c 44020000 		.4byte	.LASF9
  249 0070 02       		.byte	0x2
  250 0071 FB01     		.2byte	0x1fb
  251 0073 2C000000 		.4byte	0x2c
  252 0077 04       		.uleb128 0x4
- 253 0078 4C010000 		.4byte	.LASF10
+ 253 0078 67010000 		.4byte	.LASF10
  254 007c 02       		.byte	0x2
  255 007d FC01     		.2byte	0x1fc
  256 007f 3A000000 		.4byte	0x3a
  257 0083 04       		.uleb128 0x4
- 258 0084 53010000 		.4byte	.LASF11
+ 258 0084 6E010000 		.4byte	.LASF11
  259 0088 02       		.byte	0x2
  260 0089 FD01     		.2byte	0x1fd
  261 008b 48000000 		.4byte	0x48
  262 008f 02       		.uleb128 0x2
  263 0090 04       		.byte	0x4
  264 0091 04       		.byte	0x4
- 265 0092 6B000000 		.4byte	.LASF12
+ 265 0092 CF000000 		.4byte	.LASF12
  266 0096 02       		.uleb128 0x2
  267 0097 08       		.byte	0x8
  268 0098 04       		.byte	0x4
- 269 0099 64000000 		.4byte	.LASF13
+ 269 0099 C8000000 		.4byte	.LASF13
  270 009d 02       		.uleb128 0x2
  271 009e 01       		.byte	0x1
  272 009f 08       		.byte	0x8
- 273 00a0 26020000 		.4byte	.LASF14
+ 273 00a0 35020000 		.4byte	.LASF14
  274 00a4 04       		.uleb128 0x4
  275 00a5 00000000 		.4byte	.LASF15
  276 00a9 02       		.byte	0x2
@@ -516,7 +516,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 1
  279 00b0 05       		.uleb128 0x5
  280 00b1 83000000 		.4byte	0x83
  281 00b5 06       		.uleb128 0x6
- 282 00b6 3B020000 		.4byte	.LASF16
+ 282 00b6 4A020000 		.4byte	.LASF16
  283 00ba 01       		.byte	0x1
  284 00bb 27       		.byte	0x27
  285 00bc 00000000 		.4byte	.LFB0
@@ -525,25 +525,25 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 1
  288 00c5 9C       		.byte	0x9c
  289 00c6 DA000000 		.4byte	0xda
  290 00ca 07       		.uleb128 0x7
- 291 00cb 7E010000 		.4byte	.LASF18
+ 291 00cb 4D010000 		.4byte	.LASF18
  292 00cf 01       		.byte	0x1
  293 00d0 27       		.byte	0x27
  294 00d1 83000000 		.4byte	0x83
  295 00d5 00000000 		.4byte	.LLST0
  296 00d9 00       		.byte	0
  297 00da 08       		.uleb128 0x8
- 298 00db 45000000 		.4byte	.LASF28
+ 298 00db A9000000 		.4byte	.LASF28
  299 00df 01       		.byte	0x1
  300 00e0 5F       		.byte	0x5f
  301 00e1 00000000 		.4byte	.LFB1
  302 00e5 18000000 		.4byte	.LFE1-.LFB1
  303 00e9 01       		.uleb128 0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 10
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccTgOVfe.s 			page 10
 
 
  304 00ea 9C       		.byte	0x9c
  305 00eb 06       		.uleb128 0x6
- 306 00ec 0E000000 		.4byte	.LASF17
+ 306 00ec 72000000 		.4byte	.LASF17
  307 00f0 01       		.byte	0x1
  308 00f1 86       		.byte	0x86
  309 00f2 00000000 		.4byte	.LFB2
@@ -552,25 +552,25 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 1
  312 00fb 9C       		.byte	0x9c
  313 00fc 3B010000 		.4byte	0x13b
  314 0100 07       		.uleb128 0x7
- 315 0101 C5000000 		.4byte	.LASF19
+ 315 0101 29010000 		.4byte	.LASF19
  316 0105 01       		.byte	0x1
  317 0106 86       		.byte	0x86
  318 0107 77000000 		.4byte	0x77
  319 010b 21000000 		.4byte	.LLST1
  320 010f 07       		.uleb128 0x7
- 321 0110 3E010000 		.4byte	.LASF20
+ 321 0110 59010000 		.4byte	.LASF20
  322 0114 01       		.byte	0x1
  323 0115 86       		.byte	0x86
  324 0116 6B000000 		.4byte	0x6b
  325 011a 42000000 		.4byte	.LLST2
  326 011e 09       		.uleb128 0x9
- 327 011f 06000000 		.4byte	.LASF21
+ 327 011f 6A000000 		.4byte	.LASF21
  328 0123 01       		.byte	0x1
  329 0124 88       		.byte	0x88
  330 0125 83000000 		.4byte	0x83
  331 0129 63000000 		.4byte	.LLST3
  332 012d 0A       		.uleb128 0xa
- 333 012e E2000000 		.4byte	.LASF22
+ 333 012e 46010000 		.4byte	.LASF22
  334 0132 01       		.byte	0x1
  335 0133 89       		.byte	0x89
  336 0134 83000000 		.4byte	0x83
@@ -578,7 +578,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 1
  338 0139 51       		.byte	0x51
  339 013a 00       		.byte	0
  340 013b 0B       		.uleb128 0xb
- 341 013c 72020000 		.4byte	.LASF23
+ 341 013c 81020000 		.4byte	.LASF23
  342 0140 01       		.byte	0x1
  343 0141 B0       		.byte	0xb0
  344 0142 77000000 		.4byte	0x77
@@ -587,7 +587,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 1
  347 014e 01       		.uleb128 0x1
  348 014f 9C       		.byte	0x9c
  349 0150 0B       		.uleb128 0xb
- 350 0151 9F020000 		.4byte	.LASF24
+ 350 0151 AE020000 		.4byte	.LASF24
  351 0155 01       		.byte	0x1
  352 0156 C6       		.byte	0xc6
  353 0157 6B000000 		.4byte	0x6b
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 1
  358 0165 00       		.byte	0
  359              		.section	.debug_abbrev,"",%progbits
  360              	.Ldebug_abbrev0:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 11
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccTgOVfe.s 			page 11
 
 
  361 0000 01       		.uleb128 0x1
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 1
  415 0036 05       		.uleb128 0x5
  416 0037 35       		.uleb128 0x35
  417 0038 00       		.byte	0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 12
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccTgOVfe.s 			page 12
 
 
  418 0039 49       		.uleb128 0x49
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 1
  472 0070 0B       		.uleb128 0xb
  473 0071 27       		.uleb128 0x27
  474 0072 19       		.uleb128 0x19
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 13
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccTgOVfe.s 			page 13
 
 
  475 0073 11       		.uleb128 0x11
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 1
  529 00aa 13       		.uleb128 0x13
  530 00ab 11       		.uleb128 0x11
  531 00ac 01       		.uleb128 0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 14
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccTgOVfe.s 			page 14
 
 
  532 00ad 12       		.uleb128 0x12
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 1
  586 0063 0A000000 		.4byte	.LVL3
  587 0067 10000000 		.4byte	.LVL5
  588 006b 0100     		.2byte	0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 15
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccTgOVfe.s 			page 15
 
 
  589 006d 53       		.byte	0x53
@@ -888,161 +888,163 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 1
  629              	.LASF15:
  630 0000 72656733 		.ascii	"reg32\000"
  630      3200
- 631              	.LASF21:
- 632 0006 6D61736B 		.ascii	"maskVal\000"
- 632      56616C00 
- 633              	.LASF17:
- 634 000e 43757272 		.ascii	"Current_Sensor_I2C_SCBCLK_SetFractionalDividerRegis"
- 634      656E745F 
- 634      53656E73 
- 634      6F725F49 
- 634      32435F53 
- 635 0041 74657200 		.ascii	"ter\000"
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 16
+ 631              	.LASF27:
+ 632 0006 433A5C55 		.ascii	"C:\\Users\\M4rz4n\\Desktop\\Husky Robotics\\Firmwar"
+ 632      73657273 
+ 632      5C4D3472 
+ 632      7A346E5C 
+ 632      4465736B 
+ 633 0034 655C424C 		.ascii	"e\\BLDC\\BLDC_Motor_Board_PY2023\\BLDC_Motor_Board."
+ 633      44435C42 
+ 633      4C44435F 
+ 633      4D6F746F 
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccTgOVfe.s 			page 16
 
 
- 636              	.LASF28:
- 637 0045 43757272 		.ascii	"Current_Sensor_I2C_SCBCLK_Stop\000"
- 637      656E745F 
- 637      53656E73 
- 637      6F725F49 
- 637      32435F53 
- 638              	.LASF13:
- 639 0064 646F7562 		.ascii	"double\000"
- 639      6C6500
- 640              	.LASF12:
- 641 006b 666C6F61 		.ascii	"float\000"
- 641      7400
- 642              	.LASF1:
- 643 0071 756E7369 		.ascii	"unsigned char\000"
- 643      676E6564 
- 643      20636861 
- 643      7200
- 644              	.LASF26:
- 645 007f 47656E65 		.ascii	"Generated_Source\\PSoC4\\Current_Sensor_I2C_SCBCLK."
- 645      72617465 
- 645      645F536F 
- 645      75726365 
- 645      5C50536F 
- 646 00b0 6300     		.ascii	"c\000"
- 647              	.LASF3:
- 648 00b2 73686F72 		.ascii	"short unsigned int\000"
- 648      7420756E 
- 648      7369676E 
- 648      65642069 
- 648      6E7400
- 649              	.LASF19:
- 650 00c5 636C6B44 		.ascii	"clkDivider\000"
- 650      69766964 
- 650      657200
- 651              	.LASF5:
- 652 00d0 6C6F6E67 		.ascii	"long unsigned int\000"
- 652      20756E73 
- 652      69676E65 
- 652      6420696E 
- 652      7400
- 653              	.LASF22:
- 654 00e2 72656756 		.ascii	"regVal\000"
- 654      616C00
- 655              	.LASF27:
- 656 00e9 433A5C55 		.ascii	"C:\\Users\\casey\\Desktop\\Robotics Stuff\\BLDC_Mot"
- 656      73657273 
- 656      5C636173 
- 656      65795C44 
- 656      65736B74 
- 657 0117 6F725F42 		.ascii	"or_Board_PY2023\\BLDC_Motor_Board.cydsn\000"
- 657      6F617264 
- 657      5F505932 
- 657      3032335C 
- 657      424C4443 
- 658              	.LASF20:
- 659 013e 636C6B46 		.ascii	"clkFractional\000"
- 659      72616374 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 17
+ 633      725F426F 
+ 634 0064 63796473 		.ascii	"cydsn\000"
+ 634      6E00
+ 635              	.LASF21:
+ 636 006a 6D61736B 		.ascii	"maskVal\000"
+ 636      56616C00 
+ 637              	.LASF17:
+ 638 0072 43757272 		.ascii	"Current_Sensor_I2C_SCBCLK_SetFractionalDividerRegis"
+ 638      656E745F 
+ 638      53656E73 
+ 638      6F725F49 
+ 638      32435F53 
+ 639 00a5 74657200 		.ascii	"ter\000"
+ 640              	.LASF28:
+ 641 00a9 43757272 		.ascii	"Current_Sensor_I2C_SCBCLK_Stop\000"
+ 641      656E745F 
+ 641      53656E73 
+ 641      6F725F49 
+ 641      32435F53 
+ 642              	.LASF13:
+ 643 00c8 646F7562 		.ascii	"double\000"
+ 643      6C6500
+ 644              	.LASF12:
+ 645 00cf 666C6F61 		.ascii	"float\000"
+ 645      7400
+ 646              	.LASF1:
+ 647 00d5 756E7369 		.ascii	"unsigned char\000"
+ 647      676E6564 
+ 647      20636861 
+ 647      7200
+ 648              	.LASF26:
+ 649 00e3 47656E65 		.ascii	"Generated_Source\\PSoC4\\Current_Sensor_I2C_SCBCLK."
+ 649      72617465 
+ 649      645F536F 
+ 649      75726365 
+ 649      5C50536F 
+ 650 0114 6300     		.ascii	"c\000"
+ 651              	.LASF3:
+ 652 0116 73686F72 		.ascii	"short unsigned int\000"
+ 652      7420756E 
+ 652      7369676E 
+ 652      65642069 
+ 652      6E7400
+ 653              	.LASF19:
+ 654 0129 636C6B44 		.ascii	"clkDivider\000"
+ 654      69766964 
+ 654      657200
+ 655              	.LASF5:
+ 656 0134 6C6F6E67 		.ascii	"long unsigned int\000"
+ 656      20756E73 
+ 656      69676E65 
+ 656      6420696E 
+ 656      7400
+ 657              	.LASF22:
+ 658 0146 72656756 		.ascii	"regVal\000"
+ 658      616C00
+ 659              	.LASF18:
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccTgOVfe.s 			page 17
 
 
- 659      696F6E61 
- 659      6C00
- 660              	.LASF10:
- 661 014c 75696E74 		.ascii	"uint16\000"
- 661      313600
- 662              	.LASF11:
- 663 0153 75696E74 		.ascii	"uint32\000"
- 663      333200
- 664              	.LASF8:
- 665 015a 756E7369 		.ascii	"unsigned int\000"
- 665      676E6564 
- 665      20696E74 
- 665      00
- 666              	.LASF7:
- 667 0167 6C6F6E67 		.ascii	"long long unsigned int\000"
- 667      206C6F6E 
- 667      6720756E 
- 667      7369676E 
- 667      65642069 
- 668              	.LASF18:
- 669 017e 616C6967 		.ascii	"alignClkDiv\000"
- 669      6E436C6B 
- 669      44697600 
- 670              	.LASF25:
- 671 018a 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 671      43313120 
- 671      352E342E 
- 671      31203230 
- 671      31363036 
- 672 01bd 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 672      20726576 
- 672      6973696F 
- 672      6E203233 
- 672      37373135 
- 673 01f0 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 673      66756E63 
- 673      74696F6E 
- 673      2D736563 
- 673      74696F6E 
- 674              	.LASF6:
- 675 0218 6C6F6E67 		.ascii	"long long int\000"
- 675      206C6F6E 
- 675      6720696E 
- 675      7400
- 676              	.LASF14:
- 677 0226 63686172 		.ascii	"char\000"
- 677      00
- 678              	.LASF2:
- 679 022b 73686F72 		.ascii	"short int\000"
- 679      7420696E 
- 679      7400
- 680              	.LASF9:
- 681 0235 75696E74 		.ascii	"uint8\000"
- 681      3800
- 682              	.LASF16:
- 683 023b 43757272 		.ascii	"Current_Sensor_I2C_SCBCLK_StartEx\000"
- 683      656E745F 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccSBOqiX.s 			page 18
+ 660 014d 616C6967 		.ascii	"alignClkDiv\000"
+ 660      6E436C6B 
+ 660      44697600 
+ 661              	.LASF20:
+ 662 0159 636C6B46 		.ascii	"clkFractional\000"
+ 662      72616374 
+ 662      696F6E61 
+ 662      6C00
+ 663              	.LASF10:
+ 664 0167 75696E74 		.ascii	"uint16\000"
+ 664      313600
+ 665              	.LASF11:
+ 666 016e 75696E74 		.ascii	"uint32\000"
+ 666      333200
+ 667              	.LASF8:
+ 668 0175 756E7369 		.ascii	"unsigned int\000"
+ 668      676E6564 
+ 668      20696E74 
+ 668      00
+ 669              	.LASF7:
+ 670 0182 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 670      206C6F6E 
+ 670      6720756E 
+ 670      7369676E 
+ 670      65642069 
+ 671              	.LASF25:
+ 672 0199 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 672      43313120 
+ 672      352E342E 
+ 672      31203230 
+ 672      31363036 
+ 673 01cc 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 673      20726576 
+ 673      6973696F 
+ 673      6E203233 
+ 673      37373135 
+ 674 01ff 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 674      66756E63 
+ 674      74696F6E 
+ 674      2D736563 
+ 674      74696F6E 
+ 675              	.LASF6:
+ 676 0227 6C6F6E67 		.ascii	"long long int\000"
+ 676      206C6F6E 
+ 676      6720696E 
+ 676      7400
+ 677              	.LASF14:
+ 678 0235 63686172 		.ascii	"char\000"
+ 678      00
+ 679              	.LASF2:
+ 680 023a 73686F72 		.ascii	"short int\000"
+ 680      7420696E 
+ 680      7400
+ 681              	.LASF9:
+ 682 0244 75696E74 		.ascii	"uint8\000"
+ 682      3800
+ 683              	.LASF16:
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccTgOVfe.s 			page 18
 
 
- 683      53656E73 
- 683      6F725F49 
- 683      32435F53 
- 684              	.LASF4:
- 685 025d 6C6F6E67 		.ascii	"long int\000"
- 685      20696E74 
- 685      00
- 686              	.LASF0:
- 687 0266 7369676E 		.ascii	"signed char\000"
- 687      65642063 
- 687      68617200 
- 688              	.LASF23:
- 689 0272 43757272 		.ascii	"Current_Sensor_I2C_SCBCLK_GetDividerRegister\000"
- 689      656E745F 
- 689      53656E73 
- 689      6F725F49 
- 689      32435F53 
- 690              	.LASF24:
- 691 029f 43757272 		.ascii	"Current_Sensor_I2C_SCBCLK_GetFractionalDividerRegis"
- 691      656E745F 
- 691      53656E73 
- 691      6F725F49 
- 691      32435F53 
- 692 02d2 74657200 		.ascii	"ter\000"
- 693              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 684 024a 43757272 		.ascii	"Current_Sensor_I2C_SCBCLK_StartEx\000"
+ 684      656E745F 
+ 684      53656E73 
+ 684      6F725F49 
+ 684      32435F53 
+ 685              	.LASF4:
+ 686 026c 6C6F6E67 		.ascii	"long int\000"
+ 686      20696E74 
+ 686      00
+ 687              	.LASF0:
+ 688 0275 7369676E 		.ascii	"signed char\000"
+ 688      65642063 
+ 688      68617200 
+ 689              	.LASF23:
+ 690 0281 43757272 		.ascii	"Current_Sensor_I2C_SCBCLK_GetDividerRegister\000"
+ 690      656E745F 
+ 690      53656E73 
+ 690      6F725F49 
+ 690      32435F53 
+ 691              	.LASF24:
+ 692 02ae 43757272 		.ascii	"Current_Sensor_I2C_SCBCLK_GetFractionalDividerRegis"
+ 692      656E745F 
+ 692      53656E73 
+ 692      6F725F49 
+ 692      32435F53 
+ 693 02e1 74657200 		.ascii	"ter\000"
+ 694              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

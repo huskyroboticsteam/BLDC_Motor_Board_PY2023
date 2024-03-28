@@ -6,8 +6,8 @@
     <Toolchain Name="ARM GCC Generic" Selected="True">
       <Tool Name="prebuild" Command="" Options="" />
       <Tool Name="assembler" Command="arm-none-eabi-as.exe" Options="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -alh=${OutputDir}/${CompileFile}.lst -g -W" />
-      <Tool Name="compiler" Command="arm-none-eabi-gcc.exe" Options="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
-      <Tool Name="linker" Command="arm-none-eabi-gcc.exe" Options="-mcpu=cortex-m0 -mthumb -L Generated_Source\PSoC4 -Wl,-Map,${OutputDir}/${ProjectShortName}.map -T Generated_Source\PSoC4\cm0gcc.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects" />
+      <Tool Name="compiler" Command="arm-none-eabi-gcc.exe" Options="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485" />
+      <Tool Name="linker" Command="arm-none-eabi-gcc.exe" Options="-mcpu=cortex-m0 -mthumb -l m -L Generated_Source\PSoC4 -Wl,-Map,${OutputDir}/${ProjectShortName}.map -T Generated_Source\PSoC4\cm0gcc.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects" />
       <Tool Name="postbuild" Command="" Options="" />
     </Toolchain>
     <Toolchain Name="ARM MDK Generic" Selected="False">
@@ -25,7 +25,7 @@
       <Tool Name="postbuild" Command="" Options="" />
     </Toolchain>
   </Toolchains>
-  <Project Name="BLDC_Motor_Board" Path="C:\Users\lucbu\OneDrive\Documents\GitHub\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn" Version="6.0" Type="Normal">
+  <Project Name="BLDC_Motor_Board" Path="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn" Version="6.0" Type="Normal">
     <CMSIS_SVD_File>BLDC_Motor_Board.svd</CMSIS_SVD_File>
     <Datasheet />
     <LinkerFiles>
@@ -34,16 +34,26 @@
       <LinkerFile Toolchain="ARM IAR Generic">.\Generated_Source\PSoC4\Cm0Iar.icf</LinkerFile>
     </LinkerFiles>
     <Folders>
-      <Folder BuildType="STRICT" Path="C:\Users\lucbu\OneDrive\Documents\GitHub\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn">
-        <Files Root="C:\Users\lucbu\OneDrive\Documents\GitHub\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn">
+        <Files Root="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn">
           <File BuildType="BUILD" Toolchain="">main.c</File>
-          <File BuildType="BUILD" Toolchain="">MotorBoardFSM.c</File>
+          <File BuildType="BUILD" Toolchain="">BLDC_FSM.c</File>
+          <File BuildType="BUILD" Toolchain="">BLDC_CAN.c</File>
+          <File BuildType="BUILD" Toolchain="">BLDC_Drive.c</File>
+          <File BuildType="BUILD" Toolchain="">BLDC_pid.c</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
-          <File BuildType="BUILD" Toolchain="">MotorBoardFSM.h</File>
+          <File BuildType="BUILD" Toolchain="">BLDC_FSM.h</File>
+          <File BuildType="BUILD" Toolchain="">main.h</File>
+          <File BuildType="BUILD" Toolchain="">BLDC_Debug.h</File>
+          <File BuildType="BUILD" Toolchain="">BLDC_Drive.h</File>
+          <File BuildType="BUILD" Toolchain="">BLDC_CAN.h</File>
+          <File BuildType="BUILD" Toolchain="">BLDC_pid.h</File>
+          <File BuildType="BUILD" Toolchain="">setInterrupt.h</File>
+          <File BuildType="BUILD" Toolchain="">HindsightCAN\PortFiles\PortPSOC_CY8C4248AZI_L485.c</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Users\lucbu\OneDrive\Documents\GitHub\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\Generated_Source\PSoC4">
-        <Files Root="C:\Users\lucbu\OneDrive\Documents\GitHub\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\Generated_Source\PSoC4">
+        <Files Root="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn">
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cyfitter_cfg.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cyfitter_cfg.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cymetadata.c</File>
@@ -190,8 +200,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\CAN_LED.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\CAN_LED_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\CAN_LED_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Status_Reg_1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Status_Reg_1.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\DRV_EN.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\DRV_EN.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\DRV_EN_aliases.h</File>
@@ -212,19 +220,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\DIP_1.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\DIP_1_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\DIP_1_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer_1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer_1.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer_1_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\isr_1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\isr_1.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\LimSW_Pin_1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\LimSW_Pin_1.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\LimSW_Pin_1_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\LimSW_Pin_1_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\LimSW_Pin_2.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\LimSW_Pin_2.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\LimSW_Pin_2_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\LimSW_Pin_2_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Clock_2.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Clock_2.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\FAULT.c</File>
@@ -273,37 +268,94 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\TMC6100_SPI_mosi_s.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\TMC6100_SPI_mosi_s_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\TMC6100_SPI_mosi_s_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\isr_Limit_1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\isr_Limit_1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Limit_2.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Limit_2.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Limit_2_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Limit_2_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Limit_1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Limit_1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Limit_1_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Limit_1_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer_Rotor_Delay.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer_Rotor_Delay.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer_Rotor_Delay_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\isr_Hall.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\isr_Hall.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Address_Register.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Address_Register.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Limit_Register.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Limit_Register.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer_Period_Reset.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer_Period_Reset.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer_Period_Reset_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\isr_Period_Reset.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\isr_Period_Reset.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\DIP_2.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\DIP_2.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\DIP_2_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\DIP_2_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\DIP_3.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\DIP_3.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\DIP_3_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\DIP_3_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\DIP_4.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\DIP_4.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\DIP_4_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\DIP_4_PM.c</File>
+        </Files>
+      </Folder>
+      <Folder BuildType="STRICT" Path="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn">
+        <Files Root="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn">
+          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANCommon.c</File>
+          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANCommon.h</File>
+          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANGPIO.c</File>
+          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANGPIO.h</File>
+          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANLibrary.h</File>
+          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANLocalization.c</File>
+          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANLocalization.h</File>
+          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANMotorUnit.c</File>
+          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANMotorUnit.h</File>
+          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANPacket.c</File>
+          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANPacket.h</File>
+          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANPower.c</File>
+          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANPower.h</File>
+          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANScience.c</File>
+          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANScience.h</File>
+          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANSerialNumbers.h</File>
+          <File BuildType="BUILD" Toolchain="">HindsightCAN\Port.h</File>
         </Files>
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\codegentemp">
-        <Files Root="C:\Users\lucbu\OneDrive\Documents\GitHub\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn" />
+        <Files Root="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_441">
-        <Files Root="C:\Users\lucbu\OneDrive\Documents\GitHub\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn" />
+        <Files Root="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_473">
-        <Files Root="C:\Users\lucbu\OneDrive\Documents\GitHub\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn" />
+        <Files Root="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051_Keil_952">
-        <Files Root="C:\Users\lucbu\OneDrive\Documents\GitHub\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn" />
+        <Files Root="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051">
-        <Files Root="C:\Users\lucbu\OneDrive\Documents\GitHub\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn" />
+        <Files Root="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM0">
-        <Files Root="C:\Users\lucbu\OneDrive\Documents\GitHub\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn" />
+        <Files Root="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM0p">
-        <Files Root="C:\Users\lucbu\OneDrive\Documents\GitHub\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn" />
+        <Files Root="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM3">
-        <Files Root="C:\Users\lucbu\OneDrive\Documents\GitHub\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn" />
+        <Files Root="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM4">
-        <Files Root="C:\Users\lucbu\OneDrive\Documents\GitHub\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn" />
+        <Files Root="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM7">
-        <Files Root="C:\Users\lucbu\OneDrive\Documents\GitHub\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn" />
+        <Files Root="C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn" />
       </Folder>
     </Folders>
   </Project>

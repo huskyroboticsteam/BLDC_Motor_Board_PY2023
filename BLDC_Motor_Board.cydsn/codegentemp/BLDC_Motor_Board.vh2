@@ -2,7 +2,7 @@
 --	Conversion of BLDC_Motor_Board.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Mon Feb 26 19:21:50 2024
+--	Thu Mar 28 13:08:49 2024
 --
 
 USE cypress.cypress.all;
@@ -14,7 +14,7 @@ END top_RTL;
 ARCHITECTURE R_T_L OF top_RTL IS
 SIGNAL tmpOE__HALL1_net_0 : bit;
 SIGNAL zero : bit;
-SIGNAL Net_1438 : bit;
+SIGNAL tmpFB_0__HALL1_net_0 : bit;
 SIGNAL tmpIO_0__HALL1_net_0 : bit;
 TERMINAL tmpSIOVREF__HALL1_net_0 : bit;
 SIGNAL one : bit;
@@ -50,12 +50,12 @@ SIGNAL tmpIO_0__WL_net_0 : bit;
 TERMINAL tmpSIOVREF__WL_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__WL_net_0 : bit;
 SIGNAL tmpOE__HALL2_net_0 : bit;
-SIGNAL Net_1439 : bit;
+SIGNAL tmpFB_0__HALL2_net_0 : bit;
 SIGNAL tmpIO_0__HALL2_net_0 : bit;
 TERMINAL tmpSIOVREF__HALL2_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__HALL2_net_0 : bit;
 SIGNAL tmpOE__HALL3_net_0 : bit;
-SIGNAL Net_1442 : bit;
+SIGNAL tmpFB_0__HALL3_net_0 : bit;
 SIGNAL tmpIO_0__HALL3_net_0 : bit;
 TERMINAL tmpSIOVREF__HALL3_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__HALL3_net_0 : bit;
@@ -724,7 +724,7 @@ HALL1:cy_psoc3_pins_v1_10
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(tmpOE__HALL1_net_0),
 		y=>(zero),
-		fb=>Net_1438,
+		fb=>(tmpFB_0__HALL1_net_0),
 		analog=>(open),
 		io=>(tmpIO_0__HALL1_net_0),
 		siovref=>(tmpSIOVREF__HALL1_net_0),
@@ -1214,7 +1214,7 @@ HALL2:cy_psoc3_pins_v1_10
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(tmpOE__HALL1_net_0),
 		y=>(zero),
-		fb=>Net_1439,
+		fb=>(tmpFB_0__HALL2_net_0),
 		analog=>(open),
 		io=>(tmpIO_0__HALL2_net_0),
 		siovref=>(tmpSIOVREF__HALL2_net_0),
@@ -1284,7 +1284,7 @@ HALL3:cy_psoc3_pins_v1_10
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(tmpOE__HALL1_net_0),
 		y=>(zero),
-		fb=>Net_1442,
+		fb=>(tmpFB_0__HALL3_net_0),
 		analog=>(open),
 		io=>(tmpIO_0__HALL3_net_0),
 		siovref=>(tmpSIOVREF__HALL3_net_0),
