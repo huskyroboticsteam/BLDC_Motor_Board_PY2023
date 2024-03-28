@@ -13,35 +13,18 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="BLDCWorkspace\BLDC_Motor_Board\Source Files\main.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="BLDCWorkspace\BLDC_Motor_Board\TopDesign">
 <ExpandedNodeIds>
 <v>BLDCWorkspace</v>
 <v>BLDCWorkspace\BLDC_Motor_Board</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\TopDesign</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\BLDC_Motor_Board.cydwr</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANCommon.c</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANCommon.h</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANGPIO.c</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANGPIO.h</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANLibrary.h</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANLocalization.c</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANLocalization.h</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANMotorUnit.c</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANMotorUnit.h</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANPacket.c</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANPacket.h</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANPower.c</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANPower.h</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANScience.c</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANScience.h</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANSerialNumbers.h</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\Port.h</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\PortPSOC_CY8C4248AZI_L485.c</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\Header Files</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\HindsightCAN</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\Source Files</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
+<v>BLDCWorkspace</v>
 <v>BLDCWorkspace\BLDC_Motor_Board</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\TopDesign</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\BLDC_Motor_Board.cydwr</v>
@@ -53,25 +36,6 @@
 <v>BLDCWorkspace\BLDC_Motor_Board\BLDC_Motor_Board.cydwr\System</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\BLDC_Motor_Board.cydwr\Directives</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\BLDC_Motor_Board.cydwr\Flash Security</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANCommon.c</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANCommon.h</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANGPIO.c</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANGPIO.h</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANLibrary.h</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANLocalization.c</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANLocalization.h</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANMotorUnit.c</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANMotorUnit.h</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANPacket.c</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANPacket.h</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANPower.c</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANPower.h</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANScience.c</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANScience.h</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\CANSerialNumbers.h</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\Port.h</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CAN Library\PortPSOC_CY8C4248AZI_L485.c</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\Header Files</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\Header Files\BLDC_CAN.h</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\Header Files\BLDC_Debug.h</v>
@@ -81,13 +45,31 @@
 <v>BLDCWorkspace\BLDC_Motor_Board\Header Files\cyapicallbacks.h</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\Header Files\main.h</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\Header Files\setInterrupt.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\HindsightCAN</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\HindsightCAN\CANCommon.c</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\HindsightCAN\CANCommon.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\HindsightCAN\CANGPIO.c</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\HindsightCAN\CANGPIO.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\HindsightCAN\CANLibrary.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\HindsightCAN\CANLocalization.c</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\HindsightCAN\CANLocalization.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\HindsightCAN\CANMotorUnit.c</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\HindsightCAN\CANMotorUnit.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\HindsightCAN\CANPacket.c</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\HindsightCAN\CANPacket.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\HindsightCAN\CANPower.c</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\HindsightCAN\CANPower.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\HindsightCAN\CANScience.c</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\HindsightCAN\CANScience.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\HindsightCAN\CANSerialNumbers.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\HindsightCAN\Port.h</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\HindsightCAN\PortPSOC_CY8C4248AZI_L485.c</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\Source Files</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\Source Files\BLDC_CAN.c</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\Source Files\BLDC_Drive.c</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\Source Files\BLDC_FSM.c</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\Source Files\BLDC_pid.c</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\Source Files\main.c</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\Source Files\setInterrupt.c</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\Generated_Source</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
@@ -165,6 +147,12 @@
 <v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\DEBUG_LED_PM.lst</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\DIP_1.lst</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\DIP_1_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\DIP_2.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\DIP_2_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\DIP_3.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\DIP_3_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\DIP_4.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\DIP_4_PM.lst</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\DRV_EN.lst</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\DRV_EN_PM.lst</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\ERROR_LED.lst</v>
@@ -189,7 +177,6 @@
 <v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\PortPSOC_CY8C4248AZI_L485.lst</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\RX_1.lst</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\RX_1_PM.lst</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\setInterrupt.lst</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Timer_Period_Reset.lst</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Timer_Period_Reset_PM.lst</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Timer_Rotor_Delay.lst</v>
@@ -288,6 +275,7 @@
 <v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_scl_PM.lst</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_sda.lst</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\Current_Sensor_I2C_sda_PM.lst</v>
+<v>BLDCWorkspace\BLDC_Motor_Board\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -320,8 +308,6 @@
 <v>BLDCWorkspace\BLDC_Motor_Board\SCB_P4_v4_0\SCB_P4_v4_0.pdf</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\Timer_v2_80</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\Timer_v2_80\Timer_v2_80.pdf</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\xor_v1_0</v>
-<v>BLDCWorkspace\BLDC_Motor_Board\xor_v1_0\xor_v1_0.pdf</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\ZeroTerminal</v>
 <v>BLDCWorkspace\BLDC_Motor_Board\ZeroTerminal\ZeroTerminal.pdf</v>
 </ExpandedNodeIds>
@@ -343,13 +329,15 @@
 <name v=".\BLDC_Motor_Board.cydsn\BLDC_CAN.h" />
 <name v=".\BLDC_Motor_Board.cydsn\BLDC_pid.c" />
 <name v=".\BLDC_Motor_Board.cydsn\BLDC_FSM.c" />
-<name v=".\BLDC_Motor_Board.cydsn\CANLib\PortFiles\PortPSOC_CY8C4248AZI_L485.c" />
-<name v=".\BLDC_Motor_Board.cydsn\CANLib\Port.h" />
 <name v=".\BLDC_Motor_Board.cydsn\main.c" />
 <name v=".\BLDC_Motor_Board.cydsn\BLDC_pid.h" />
 <name v=".\BLDC_Motor_Board.cydsn\BLDC_Drive.h" />
 <name v=".\BLDC_Motor_Board.cydsn\BLDC_CAN.c" />
 <name v=".\BLDC_Motor_Board.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\BLDC_Motor_Board.cydsn\HindsightCAN\CANGPIO.h" />
+<name v=".\BLDC_Motor_Board.cydsn\Generated_Source\PSoC4\CyBootAsmGnu.s" />
+<name v=".\BLDC_Motor_Board.cydsn\Generated_Source\PSoC4\CyLib.c" />
+<name v=".\BLDC_Motor_Board.cydsn\Generated_Source\PSoC4\UH.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -357,7 +345,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1568, 670" SelectedTabbedMdiWindow="b0418302-0465-45ce-b3c6-89c3b738d481"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="f9102868-88ca-4853-ab28-0a28d99070b3" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_Motor_Board.cydwr" Guid="686cbc1a-c4a5-4d28-8dcc-1807ad4fd4d0" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_Drive.c" Guid="c8c0e92b-508d-401b-9c12-ee2810c88d7c" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\main.h" Guid="eaee335c-4844-4438-ba9a-2ebb36aaf391" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_CAN.h" Guid="7c080575-b3bd-40c6-863b-65b6bcc006c9" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_pid.c" Guid="640f3fed-6e2f-459e-a85b-491bee955257" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_FSM.c" Guid="d2455f5a-8590-4cb9-a611-ff33a55baf0b" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\CANLib\PortFiles\PortPSOC_CY8C4248AZI_L485.c" Guid="460f65e4-3b3d-477d-ae4d-75584c55de87" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\CANLib\Port.h" Guid="e506b65d-e751-4f1b-9da4-de284929bfdb" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\main.c" Guid="b0418302-0465-45ce-b3c6-89c3b738d481" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_pid.h" Guid="750b1c99-0ae0-4204-b462-27580a8e831b" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_Drive.h" Guid="d4810c31-62fe-48d2-8d3b-25d94cc08cf8" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_CAN.c" Guid="21aa3795-42d6-47bf-9800-ae469557029e" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\TopDesign\TopDesign.cysch" Guid="671b1627-9b21-4208-8875-7c2ef860d93e" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1300, 617" SelectedTabbedMdiWindow="671b1627-9b21-4208-8875-7c2ef860d93e"><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_Motor_Board.cydwr" Guid="686cbc1a-c4a5-4d28-8dcc-1807ad4fd4d0" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_Drive.c" Guid="c8c0e92b-508d-401b-9c12-ee2810c88d7c" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\main.h" Guid="eaee335c-4844-4438-ba9a-2ebb36aaf391" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_CAN.h" Guid="7c080575-b3bd-40c6-863b-65b6bcc006c9" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_pid.c" Guid="640f3fed-6e2f-459e-a85b-491bee955257" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_FSM.c" Guid="d2455f5a-8590-4cb9-a611-ff33a55baf0b" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\main.c" Guid="b0418302-0465-45ce-b3c6-89c3b738d481" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_pid.h" Guid="750b1c99-0ae0-4204-b462-27580a8e831b" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_Drive.h" Guid="d4810c31-62fe-48d2-8d3b-25d94cc08cf8" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_CAN.c" Guid="21aa3795-42d6-47bf-9800-ae469557029e" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\TopDesign\TopDesign.cysch" Guid="671b1627-9b21-4208-8875-7c2ef860d93e" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\HindsightCAN\CANGPIO.h" Guid="80202d11-174e-45d6-bdf5-3a3005cba7fc" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\Generated_Source\PSoC4\CyBootAsmGnu.s" Guid="e840a89a-4220-497f-b9b1-7bcbadc45e84" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\Generated_Source\PSoC4\CyLib.c" Guid="369b2b44-0fc5-4da1-90e0-a38ddf32db96" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\Generated_Source\PSoC4\UH.c" Guid="36dd29b0-326a-4fb9-9389-e99dda2d7b70" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="f9102868-88ca-4853-ab28-0a28d99070b3" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

@@ -2,7 +2,7 @@
 --	Conversion of BLDC_Motor_Board.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Thu Mar 28 13:08:49 2024
+--	Thu Mar 28 14:46:21 2024
 --
 
 USE cypress.cypress.all;
@@ -668,7 +668,7 @@ Net_117 <= (not Net_1612);
 
 HALL1:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba",
-		drive_mode=>"001",
+		drive_mode=>"110",
 		ibuf_enabled=>"1",
 		init_dr_st=>"0",
 		input_sync=>"0",
@@ -1158,7 +1158,7 @@ WL:cy_psoc3_pins_v1_10
 		interrupt=>tmpINTERRUPT_0__WL_net_0);
 HALL2:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"caaf52a6-96dc-4b28-9b01-3e8b888c34d2",
-		drive_mode=>"001",
+		drive_mode=>"110",
 		ibuf_enabled=>"1",
 		init_dr_st=>"0",
 		input_sync=>"0",
@@ -1228,7 +1228,7 @@ HALL2:cy_psoc3_pins_v1_10
 		interrupt=>tmpINTERRUPT_0__HALL2_net_0);
 HALL3:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"19ff680e-e990-4992-bff9-b1ce656aacf4",
-		drive_mode=>"001",
+		drive_mode=>"110",
 		ibuf_enabled=>"1",
 		init_dr_st=>"0",
 		input_sync=>"0",

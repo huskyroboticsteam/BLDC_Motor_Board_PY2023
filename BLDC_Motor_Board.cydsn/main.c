@@ -16,7 +16,7 @@
 #include "BLDC_Drive.h"
 #include "BLDC_CAN.h"
 #include "BLDC_FSM.h"
-#include "../HindsightCAN/CANLibrary.h"
+#include "HindsightCAN/CANLibrary.h"
 #include <math.h>
 
 // Side delay
@@ -189,6 +189,7 @@ void Initialize(void) {
     Timer_Rotor_Delay_Start();   
     Timer_Period_Reset_Start();   
     
+    isr_Hall_StartEx(updateRotorState);
     isr_Limit_1_StartEx(Pin_Limit_Handler);
     isr_Period_Reset_StartEx(Period_Reset_Handler);
 }

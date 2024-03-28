@@ -1,5 +1,5 @@
--- Project:   C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_Motor_Board.cyprj
--- Generated: 03/28/2024 13:08:55
+-- Project:   C:\Users\casey\Desktop\Robotics Stuff\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_Motor_Board.cyprj
+-- Generated: 03/28/2024 14:46:28
 -- PSoC Creator  4.4
 
 ENTITY BLDC_Motor_Board IS
@@ -768,7 +768,7 @@ BEGIN
 
     HALL1:logicalport
         GENERIC MAP(
-            drive_mode => "001",
+            drive_mode => "110",
             ibuf_enabled => "1",
             id => "8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba",
             init_dr_st => "0",
@@ -1398,7 +1398,7 @@ BEGIN
 
     HALL2:logicalport
         GENERIC MAP(
-            drive_mode => "001",
+            drive_mode => "110",
             ibuf_enabled => "1",
             id => "caaf52a6-96dc-4b28-9b01-3e8b888c34d2",
             init_dr_st => "0",
@@ -1488,7 +1488,7 @@ BEGIN
 
     HALL3:logicalport
         GENERIC MAP(
-            drive_mode => "001",
+            drive_mode => "110",
             ibuf_enabled => "1",
             id => "19ff680e-e990-4992-bff9-b1ce656aacf4",
             init_dr_st => "0",

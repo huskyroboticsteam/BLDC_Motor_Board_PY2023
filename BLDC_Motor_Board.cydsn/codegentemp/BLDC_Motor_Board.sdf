@@ -1,6 +1,6 @@
 (DELAYFILE
  (SDFVERSION "IEEE 1497 4.0")
- (DATE "2024-03-28T20:08:55Z")
+ (DATE "2024-03-28T21:46:28Z")
  (DESIGN "BLDC_Motor_Board")
  (VENDOR "Cypress Semiconductor")
  (PROGRAM "PSoC Creator")

@@ -1,6 +1,6 @@
 // ======================================================================
 // BLDC_Motor_Board.v generated from TopDesign.cysch
-// 03/28/2024 at 13:08
+// 03/28/2024 at 14:46
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -1608,7 +1608,7 @@ module top ;
 
 	cy_psoc3_pins_v1_10
 		#(.id("8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba"),
-		  .drive_mode(3'b001),
+		  .drive_mode(3'b110),
 		  .ibuf_enabled(1'b1),
 		  .init_dr_st(1'b0),
 		  .input_clk_en(0),
@@ -2133,7 +2133,7 @@ module top ;
 
 	cy_psoc3_pins_v1_10
 		#(.id("caaf52a6-96dc-4b28-9b01-3e8b888c34d2"),
-		  .drive_mode(3'b001),
+		  .drive_mode(3'b110),
 		  .ibuf_enabled(1'b1),
 		  .init_dr_st(1'b0),
 		  .input_clk_en(0),
@@ -2208,7 +2208,7 @@ module top ;
 
 	cy_psoc3_pins_v1_10
 		#(.id("19ff680e-e990-4992-bff9-b1ce656aacf4"),
-		  .drive_mode(3'b001),
+		  .drive_mode(3'b110),
 		  .ibuf_enabled(1'b1),
 		  .init_dr_st(1'b0),
 		  .input_clk_en(0),

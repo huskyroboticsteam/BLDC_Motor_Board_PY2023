@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 1
 
 
    1              		.syntax unified
@@ -56,12 +56,11 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
   26:BLDC_CAN.c    **** extern char txData[TX_DATA_SIZE];
   27:BLDC_CAN.c    **** extern uint8 address;
   28:BLDC_CAN.c    **** 
-  29:BLDC_CAN.c    **** 
-  30:BLDC_CAN.c    **** void SendEncoderData (CANPacket *packetToSend){
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 2
+  29:BLDC_CAN.c    **** void SendEncoderData (CANPacket *packetToSend){
+  28              		.loc 1 29 0
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 2
 
 
-  28              		.loc 1 30 0
   29              		.cfi_startproc
   30              		@ args = 0, pretend = 0, frame = 0
   31              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -73,13 +72,13 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
   37 0002 82B0     		sub	sp, sp, #8
   38              		.cfi_def_cfa_offset 16
   39 0004 0400     		movs	r4, r0
-  31:BLDC_CAN.c    ****     AssembleTelemetryReportPacket(packetToSend, DEVICE_GROUP_JETSON, DEVICE_SERIAL_JETSON, 
-  32:BLDC_CAN.c    ****         PACKET_TELEMETRY_ANG_POSITION, GetPositionmDeg());
-  40              		.loc 1 32 0
+  30:BLDC_CAN.c    ****     AssembleTelemetryReportPacket(packetToSend, DEVICE_GROUP_JETSON, DEVICE_SERIAL_JETSON, 
+  31:BLDC_CAN.c    ****         PACKET_TELEMETRY_ANG_POSITION, GetPositionmDeg());
+  40              		.loc 1 31 0
   41 0006 FFF7FEFF 		bl	GetPositionmDeg
   42              	.LVL1:
-  31:BLDC_CAN.c    ****     AssembleTelemetryReportPacket(packetToSend, DEVICE_GROUP_JETSON, DEVICE_SERIAL_JETSON, 
-  43              		.loc 1 31 0
+  30:BLDC_CAN.c    ****     AssembleTelemetryReportPacket(packetToSend, DEVICE_GROUP_JETSON, DEVICE_SERIAL_JETSON, 
+  43              		.loc 1 30 0
   44 000a 0090     		str	r0, [sp]
   45 000c 0423     		movs	r3, #4
   46 000e 0122     		movs	r2, #1
@@ -87,13 +86,13 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
   48 0012 2000     		movs	r0, r4
   49 0014 FFF7FEFF 		bl	AssembleTelemetryReportPacket
   50              	.LVL2:
-  33:BLDC_CAN.c    ****     SendCANPacket(packetToSend);
-  51              		.loc 1 33 0
+  32:BLDC_CAN.c    ****     SendCANPacket(packetToSend);
+  51              		.loc 1 32 0
   52 0018 2000     		movs	r0, r4
   53 001a FFF7FEFF 		bl	SendCANPacket
   54              	.LVL3:
-  34:BLDC_CAN.c    **** }
-  55              		.loc 1 34 0
+  33:BLDC_CAN.c    **** }
+  55              		.loc 1 33 0
   56 001e 02B0     		add	sp, sp, #8
   57              		@ sp needed
   58              	.LVL4:
@@ -111,17 +110,17 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
   70              		.type	NextStateFromCAN, %function
   71              	NextStateFromCAN:
   72              	.LFB36:
-  35:BLDC_CAN.c    **** 
-  36:BLDC_CAN.c    **** //Reads from CAN FIFO and changes the state and mode accordingly
-  37:BLDC_CAN.c    **** void NextStateFromCAN(CANPacket *receivedPacket, CANPacket *packetToSend) {
-  73              		.loc 1 37 0
+  34:BLDC_CAN.c    **** 
+  35:BLDC_CAN.c    **** //Reads from CAN FIFO and changes the state and mode accordingly
+  36:BLDC_CAN.c    **** void NextStateFromCAN(CANPacket *receivedPacket, CANPacket *packetToSend) {
+  73              		.loc 1 36 0
   74              		.cfi_startproc
   75              		@ args = 0, pretend = 0, frame = 8
   76              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 3
-
-
   77              	.LVL5:
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 3
+
+
   78 0000 F0B5     		push	{r4, r5, r6, r7, lr}
   79              		.cfi_def_cfa_offset 20
   80              		.cfi_offset 4, -20
@@ -133,35 +132,35 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
   86              		.cfi_def_cfa_offset 40
   87 0004 0400     		movs	r4, r0
   88 0006 0D00     		movs	r5, r1
-  38:BLDC_CAN.c    ****     uint16_t packageID = ReadCAN(receivedPacket);
-  89              		.loc 1 38 0
+  37:BLDC_CAN.c    ****     uint16_t packageID = ReadCAN(receivedPacket);
+  89              		.loc 1 37 0
   90 0008 FFF7FEFF 		bl	ReadCAN
   91              	.LVL6:
   92 000c 0600     		movs	r6, r0
   93              	.LVL7:
-  39:BLDC_CAN.c    ****     uint8_t motor_serial = GetDeviceSerialNumber(receivedPacket); //get which motor
-  94              		.loc 1 39 0
+  38:BLDC_CAN.c    ****     uint8_t motor_serial = GetDeviceSerialNumber(receivedPacket); //get which motor
+  94              		.loc 1 38 0
   95 000e 2000     		movs	r0, r4
   96              	.LVL8:
   97 0010 FFF7FEFF 		bl	GetDeviceSerialNumber
   98              	.LVL9:
-  40:BLDC_CAN.c    ****     uint8_t sender_DG = GetSenderDeviceGroupCode(receivedPacket);
-  99              		.loc 1 40 0
+  39:BLDC_CAN.c    ****     uint8_t sender_DG = GetSenderDeviceGroupCode(receivedPacket);
+  99              		.loc 1 39 0
  100 0014 2000     		movs	r0, r4
  101 0016 FFF7FEFF 		bl	GetSenderDeviceGroupCode
  102              	.LVL10:
  103 001a 0390     		str	r0, [sp, #12]
  104              	.LVL11:
-  41:BLDC_CAN.c    ****     uint8_t sender_SN = GetSenderDeviceSerialNumber(receivedPacket);
- 105              		.loc 1 41 0
+  40:BLDC_CAN.c    ****     uint8_t sender_SN = GetSenderDeviceSerialNumber(receivedPacket);
+ 105              		.loc 1 40 0
  106 001c 2000     		movs	r0, r4
  107 001e FFF7FEFF 		bl	GetSenderDeviceSerialNumber
  108              	.LVL12:
  109 0022 0700     		movs	r7, r0
  110              	.LVL13:
-  42:BLDC_CAN.c    ****     
-  43:BLDC_CAN.c    ****     switch(packageID){
- 111              		.loc 1 43 0
+  41:BLDC_CAN.c    ****     
+  42:BLDC_CAN.c    ****     switch(packageID){
+ 111              		.loc 1 42 0
  112 0024 0A2E     		cmp	r6, #10
  113 0026 00D1     		bne	.LCB72
  114 0028 94E0     		b	.L4	@long jump
@@ -178,10 +177,10 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  125              	.L7:
  126 003c 062E     		cmp	r6, #6
  127 003e 59D0     		beq	.L10
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 4
-
-
  128 0040 4DD3     		bcc	.L11
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 4
+
+
  129 0042 072E     		cmp	r6, #7
  130 0044 61D0     		beq	.L12
  131 0046 33E1     		b	.L3
@@ -220,234 +219,234 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  164 0076 CFE0     		b	.L20
  165              	.L8:
  166              	.LBB2:
-  44:BLDC_CAN.c    ****         case(ID_MOTOR_UNIT_MODE_SEL):
-  45:BLDC_CAN.c    ****             if(GetModeFromPacket(receivedPacket) == MOTOR_UNIT_MODE_PWM) {
- 167              		.loc 1 45 0
+  43:BLDC_CAN.c    ****         case(ID_MOTOR_UNIT_MODE_SEL):
+  44:BLDC_CAN.c    ****             if(GetModeFromPacket(receivedPacket) == MOTOR_UNIT_MODE_PWM) {
+ 167              		.loc 1 44 0
  168 0078 2000     		movs	r0, r4
  169 007a FFF7FEFF 		bl	GetModeFromPacket
  170              	.LVL14:
  171 007e 0028     		cmp	r0, #0
  172 0080 09D1     		bne	.L21
-  46:BLDC_CAN.c    ****                 set_speed(0, 1);
- 173              		.loc 1 46 0
+  45:BLDC_CAN.c    ****                 set_speed(0, 1);
+ 173              		.loc 1 45 0
  174 0082 0121     		movs	r1, #1
  175 0084 FFF7FEFF 		bl	set_speed
  176              	.LVL15:
-  47:BLDC_CAN.c    ****                 SetModeTo(MOTOR_UNIT_MODE_PWM);
- 177              		.loc 1 47 0
+  46:BLDC_CAN.c    ****                 SetModeTo(MOTOR_UNIT_MODE_PWM);
+ 177              		.loc 1 46 0
  178 0088 0020     		movs	r0, #0
  179 008a FFF7FEFF 		bl	SetModeTo
  180              	.LVL16:
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 5
+  47:BLDC_CAN.c    ****                 SetStateTo(CHECK_CAN);
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 5
 
 
-  48:BLDC_CAN.c    ****                 SetStateTo(CHECK_CAN);
- 181              		.loc 1 48 0
+ 181              		.loc 1 47 0
  182 008e 0220     		movs	r0, #2
  183 0090 FFF7FEFF 		bl	SetStateTo
  184              	.LVL17:
  185 0094 24E1     		b	.L2
  186              	.L21:
-  49:BLDC_CAN.c    ****             }
-  50:BLDC_CAN.c    ****             else if (GetModeFromPacket(receivedPacket) == MOTOR_UNIT_MODE_PID) {
- 187              		.loc 1 50 0
+  48:BLDC_CAN.c    ****             }
+  49:BLDC_CAN.c    ****             else if (GetModeFromPacket(receivedPacket) == MOTOR_UNIT_MODE_PID) {
+ 187              		.loc 1 49 0
  188 0096 2000     		movs	r0, r4
  189 0098 FFF7FEFF 		bl	GetModeFromPacket
  190              	.LVL18:
  191 009c 0128     		cmp	r0, #1
  192 009e 08D1     		bne	.L23
  193              	.LBB3:
-  51:BLDC_CAN.c    ****                 InitializePID();
- 194              		.loc 1 51 0
+  50:BLDC_CAN.c    ****                 InitializePID();
+ 194              		.loc 1 50 0
  195 00a0 FFF7FEFF 		bl	InitializePID
  196              	.LVL19:
-  52:BLDC_CAN.c    ****                 SetModeTo(MOTOR_UNIT_MODE_PID);
- 197              		.loc 1 52 0
+  51:BLDC_CAN.c    ****                 SetModeTo(MOTOR_UNIT_MODE_PID);
+ 197              		.loc 1 51 0
  198 00a4 0120     		movs	r0, #1
  199 00a6 FFF7FEFF 		bl	SetModeTo
  200              	.LVL20:
-  53:BLDC_CAN.c    ****                 SetStateTo(CHECK_CAN);
- 201              		.loc 1 53 0
+  52:BLDC_CAN.c    ****                 SetStateTo(CHECK_CAN);
+ 201              		.loc 1 52 0
  202 00aa 0220     		movs	r0, #2
  203 00ac FFF7FEFF 		bl	SetStateTo
  204              	.LVL21:
  205              	.LBE3:
  206 00b0 16E1     		b	.L2
  207              	.L23:
-  54:BLDC_CAN.c    ****             } else {
-  55:BLDC_CAN.c    ****                 GotoUninitState();
- 208              		.loc 1 55 0
+  53:BLDC_CAN.c    ****             } else {
+  54:BLDC_CAN.c    ****                 GotoUninitState();
+ 208              		.loc 1 54 0
  209 00b2 FFF7FEFF 		bl	GotoUninitState
  210              	.LVL22:
  211 00b6 13E1     		b	.L2
  212              	.L9:
-  56:BLDC_CAN.c    ****             }
-  57:BLDC_CAN.c    ****             break;
-  58:BLDC_CAN.c    ****             
-  59:BLDC_CAN.c    ****         case(ID_MOTOR_UNIT_PWM_DIR_SET):
-  60:BLDC_CAN.c    ****             if(GetMode() == MOTOR_UNIT_MODE_PWM){
- 213              		.loc 1 60 0
+  55:BLDC_CAN.c    ****             }
+  56:BLDC_CAN.c    ****             break;
+  57:BLDC_CAN.c    ****             
+  58:BLDC_CAN.c    ****         case(ID_MOTOR_UNIT_PWM_DIR_SET):
+  59:BLDC_CAN.c    ****             if(GetMode() == MOTOR_UNIT_MODE_PWM){
+ 213              		.loc 1 59 0
  214 00b8 FFF7FEFF 		bl	GetMode
  215              	.LVL23:
  216 00bc 0028     		cmp	r0, #0
  217 00be 07D1     		bne	.L24
-  61:BLDC_CAN.c    ****                 SetStateTo(SET_PWM);
- 218              		.loc 1 61 0
+  60:BLDC_CAN.c    ****                 SetStateTo(SET_PWM);
+ 218              		.loc 1 60 0
  219 00c0 FFF7FEFF 		bl	SetStateTo
  220              	.LVL24:
-  62:BLDC_CAN.c    ****                 nextPWM = GetPWMFromPacket(receivedPacket);
- 221              		.loc 1 62 0
+  61:BLDC_CAN.c    ****                 nextPWM = GetPWMFromPacket(receivedPacket);
+ 221              		.loc 1 61 0
  222 00c4 2000     		movs	r0, r4
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 6
-
-
  223 00c6 FFF7FEFF 		bl	GetPWMFromPacket
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 6
+
+
  224              	.LVL25:
  225 00ca 864B     		ldr	r3, .L38
  226 00cc 1880     		strh	r0, [r3]
  227 00ce 07E1     		b	.L2
  228              	.L24:
-  63:BLDC_CAN.c    ****             } else {
-  64:BLDC_CAN.c    ****                 SetStateTo(QUEUE_ERROR);
- 229              		.loc 1 64 0
+  62:BLDC_CAN.c    ****             } else {
+  63:BLDC_CAN.c    ****                 SetStateTo(QUEUE_ERROR);
+ 229              		.loc 1 63 0
  230 00d0 0320     		movs	r0, #3
  231 00d2 FFF7FEFF 		bl	SetStateTo
  232              	.LVL26:
-  65:BLDC_CAN.c    ****                 DisplayErrorCode(MOTOR_ERROR_WRONG_MODE);
- 233              		.loc 1 65 0
+  64:BLDC_CAN.c    ****                 DisplayErrorCode(MOTOR_ERROR_WRONG_MODE);
+ 233              		.loc 1 64 0
  234 00d6 0120     		movs	r0, #1
  235 00d8 FFF7FEFF 		bl	DisplayErrorCode
  236              	.LVL27:
  237 00dc 00E1     		b	.L2
  238              	.L11:
-  66:BLDC_CAN.c    ****             }
-  67:BLDC_CAN.c    ****             break;
-  68:BLDC_CAN.c    ****             
-  69:BLDC_CAN.c    ****         case(ID_MOTOR_UNIT_PID_P_SET):
-  70:BLDC_CAN.c    ****             SetkPosition(GetPFromPacket(receivedPacket));
- 239              		.loc 1 70 0
+  65:BLDC_CAN.c    ****             }
+  66:BLDC_CAN.c    ****             break;
+  67:BLDC_CAN.c    ****             
+  68:BLDC_CAN.c    ****         case(ID_MOTOR_UNIT_PID_P_SET):
+  69:BLDC_CAN.c    ****             SetkPosition(GetPFromPacket(receivedPacket));
+ 239              		.loc 1 69 0
  240 00de 2000     		movs	r0, r4
  241 00e0 FFF7FEFF 		bl	GetPFromPacket
  242              	.LVL28:
  243 00e4 FFF7FEFF 		bl	SetkPosition
  244              	.LVL29:
-  71:BLDC_CAN.c    ****             PositionConstIsSet();
- 245              		.loc 1 71 0
+  70:BLDC_CAN.c    ****             PositionConstIsSet();
+ 245              		.loc 1 70 0
  246 00e8 FFF7FEFF 		bl	PositionConstIsSet
  247              	.LVL30:
-  72:BLDC_CAN.c    ****             SetStateTo(CHECK_CAN);
- 248              		.loc 1 72 0
+  71:BLDC_CAN.c    ****             SetStateTo(CHECK_CAN);
+ 248              		.loc 1 71 0
  249 00ec 0220     		movs	r0, #2
  250 00ee FFF7FEFF 		bl	SetStateTo
  251              	.LVL31:
-  73:BLDC_CAN.c    ****             break;
- 252              		.loc 1 73 0
+  72:BLDC_CAN.c    ****             break;
+ 252              		.loc 1 72 0
  253 00f2 F5E0     		b	.L2
  254              	.L10:
-  74:BLDC_CAN.c    ****         
-  75:BLDC_CAN.c    ****         case(ID_MOTOR_UNIT_PID_I_SET):
-  76:BLDC_CAN.c    ****             SetkIntegral(GetIFromPacket(receivedPacket));
- 255              		.loc 1 76 0
+  73:BLDC_CAN.c    ****         
+  74:BLDC_CAN.c    ****         case(ID_MOTOR_UNIT_PID_I_SET):
+  75:BLDC_CAN.c    ****             SetkIntegral(GetIFromPacket(receivedPacket));
+ 255              		.loc 1 75 0
  256 00f4 2000     		movs	r0, r4
  257 00f6 FFF7FEFF 		bl	GetIFromPacket
  258              	.LVL32:
  259 00fa FFF7FEFF 		bl	SetkIntegral
  260              	.LVL33:
-  77:BLDC_CAN.c    ****             IntegralConstIsSet();
- 261              		.loc 1 77 0
+  76:BLDC_CAN.c    ****             IntegralConstIsSet();
+ 261              		.loc 1 76 0
  262 00fe FFF7FEFF 		bl	IntegralConstIsSet
  263              	.LVL34:
-  78:BLDC_CAN.c    ****             SetStateTo(CHECK_CAN);
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 7
+  77:BLDC_CAN.c    ****             SetStateTo(CHECK_CAN);
+ 264              		.loc 1 77 0
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 7
 
 
- 264              		.loc 1 78 0
  265 0102 0220     		movs	r0, #2
  266 0104 FFF7FEFF 		bl	SetStateTo
  267              	.LVL35:
-  79:BLDC_CAN.c    ****             break;
- 268              		.loc 1 79 0
+  78:BLDC_CAN.c    ****             break;
+ 268              		.loc 1 78 0
  269 0108 EAE0     		b	.L2
  270              	.L12:
-  80:BLDC_CAN.c    ****         
-  81:BLDC_CAN.c    ****         case(ID_MOTOR_UNIT_PID_D_SET):
-  82:BLDC_CAN.c    ****             SetkDerivative(GetDFromPacket(receivedPacket));
- 271              		.loc 1 82 0
+  79:BLDC_CAN.c    ****         
+  80:BLDC_CAN.c    ****         case(ID_MOTOR_UNIT_PID_D_SET):
+  81:BLDC_CAN.c    ****             SetkDerivative(GetDFromPacket(receivedPacket));
+ 271              		.loc 1 81 0
  272 010a 2000     		movs	r0, r4
  273 010c FFF7FEFF 		bl	GetDFromPacket
  274              	.LVL36:
  275 0110 FFF7FEFF 		bl	SetkDerivative
  276              	.LVL37:
-  83:BLDC_CAN.c    ****             DerivativeConstIsSet();
- 277              		.loc 1 83 0
+  82:BLDC_CAN.c    ****             DerivativeConstIsSet();
+ 277              		.loc 1 82 0
  278 0114 FFF7FEFF 		bl	DerivativeConstIsSet
  279              	.LVL38:
-  84:BLDC_CAN.c    ****             SetStateTo(CHECK_CAN);
- 280              		.loc 1 84 0
+  83:BLDC_CAN.c    ****             SetStateTo(CHECK_CAN);
+ 280              		.loc 1 83 0
  281 0118 0220     		movs	r0, #2
  282 011a FFF7FEFF 		bl	SetStateTo
  283              	.LVL39:
-  85:BLDC_CAN.c    ****             break;
- 284              		.loc 1 85 0
+  84:BLDC_CAN.c    ****             break;
+ 284              		.loc 1 84 0
  285 011e DFE0     		b	.L2
  286              	.L6:
-  86:BLDC_CAN.c    ****         
-  87:BLDC_CAN.c    ****         case(ID_MOTOR_UNIT_PID_POS_TGT_SET):
-  88:BLDC_CAN.c    ****             if(GetMode() == MOTOR_UNIT_MODE_PID && PIDconstsSet()) {//&& PID values set
- 287              		.loc 1 88 0
+  85:BLDC_CAN.c    ****         
+  86:BLDC_CAN.c    ****         case(ID_MOTOR_UNIT_PID_POS_TGT_SET):
+  87:BLDC_CAN.c    ****             if(GetMode() == MOTOR_UNIT_MODE_PID && PIDconstsSet()) {//&& PID values set
+ 287              		.loc 1 87 0
  288 0120 FFF7FEFF 		bl	GetMode
  289              	.LVL40:
  290 0124 0128     		cmp	r0, #1
  291 0126 0ED1     		bne	.L25
- 292              		.loc 1 88 0 is_stmt 0 discriminator 1
+ 292              		.loc 1 87 0 is_stmt 0 discriminator 1
  293 0128 FFF7FEFF 		bl	PIDconstsSet
  294              	.LVL41:
  295 012c 0028     		cmp	r0, #0
  296 012e 0AD0     		beq	.L25
  297              	.LBB4:
-  89:BLDC_CAN.c    ****                 EnablePID();
- 298              		.loc 1 89 0 is_stmt 1
+  88:BLDC_CAN.c    ****                 EnablePID();
+ 298              		.loc 1 88 0 is_stmt 1
  299 0130 FFF7FEFF 		bl	EnablePID
  300              	.LVL42:
-  90:BLDC_CAN.c    ****                 millidegreeTarget = GetPIDTargetFromPacket(receivedPacket);
- 301              		.loc 1 90 0
+  89:BLDC_CAN.c    ****                 millidegreeTarget = GetPIDTargetFromPacket(receivedPacket);
+ 301              		.loc 1 89 0
  302 0134 2000     		movs	r0, r4
  303 0136 FFF7FEFF 		bl	GetPIDTargetFromPacket
  304              	.LVL43:
  305 013a 6B4B     		ldr	r3, .L38+4
  306 013c 1860     		str	r0, [r3]
-  91:BLDC_CAN.c    ****                 SetStateTo(CALC_PID);
- 307              		.loc 1 91 0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 8
-
-
+  90:BLDC_CAN.c    ****                 SetStateTo(CALC_PID);
+ 307              		.loc 1 90 0
  308 013e 0120     		movs	r0, #1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 8
+
+
  309 0140 FFF7FEFF 		bl	SetStateTo
  310              	.LVL44:
  311              	.LBE4:
-  88:BLDC_CAN.c    ****                 EnablePID();
- 312              		.loc 1 88 0
+  87:BLDC_CAN.c    ****                 EnablePID();
+ 312              		.loc 1 87 0
  313 0144 CCE0     		b	.L2
  314              	.L25:
-  92:BLDC_CAN.c    ****             } else {
-  93:BLDC_CAN.c    ****                 SetStateTo(QUEUE_ERROR);
- 315              		.loc 1 93 0
+  91:BLDC_CAN.c    ****             } else {
+  92:BLDC_CAN.c    ****                 SetStateTo(QUEUE_ERROR);
+ 315              		.loc 1 92 0
  316 0146 0320     		movs	r0, #3
  317 0148 FFF7FEFF 		bl	SetStateTo
  318              	.LVL45:
-  94:BLDC_CAN.c    ****                 DisplayErrorCode(MOTOR_ERROR_WRONG_MODE);
- 319              		.loc 1 94 0
+  93:BLDC_CAN.c    ****                 DisplayErrorCode(MOTOR_ERROR_WRONG_MODE);
+ 319              		.loc 1 93 0
  320 014c 0120     		movs	r0, #1
  321 014e FFF7FEFF 		bl	DisplayErrorCode
  322              	.LVL46:
  323 0152 C5E0     		b	.L2
  324              	.L4:
-  95:BLDC_CAN.c    ****             }
-  96:BLDC_CAN.c    ****             break;
-  97:BLDC_CAN.c    ****          
-  98:BLDC_CAN.c    ****         case(ID_MOTOR_UNIT_ENC_PPJR_SET):
-  99:BLDC_CAN.c    ****             SetConversion(360.0*1000/GetEncoderPPJRFromPacket(receivedPacket));
- 325              		.loc 1 99 0
+  94:BLDC_CAN.c    ****             }
+  95:BLDC_CAN.c    ****             break;
+  96:BLDC_CAN.c    ****          
+  97:BLDC_CAN.c    ****         case(ID_MOTOR_UNIT_ENC_PPJR_SET):
+  98:BLDC_CAN.c    ****             SetConversion(360.0*1000/GetEncoderPPJRFromPacket(receivedPacket));
+ 325              		.loc 1 98 0
  326 0154 2000     		movs	r0, r4
  327 0156 FFF7FEFF 		bl	GetEncoderPPJRFromPacket
  328              	.LVL47:
@@ -461,196 +460,196 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  336              	.LVL49:
  337 016a FFF7FEFF 		bl	SetConversion
  338              	.LVL50:
- 100:BLDC_CAN.c    ****             PPJRConstIsSet();
- 339              		.loc 1 100 0
+  99:BLDC_CAN.c    ****             PPJRConstIsSet();
+ 339              		.loc 1 99 0
  340 016e FFF7FEFF 		bl	PPJRConstIsSet
  341              	.LVL51:
- 101:BLDC_CAN.c    ****             SetStateTo(CHECK_CAN);
- 342              		.loc 1 101 0
+ 100:BLDC_CAN.c    ****             SetStateTo(CHECK_CAN);
+ 342              		.loc 1 100 0
  343 0172 0220     		movs	r0, #2
  344 0174 FFF7FEFF 		bl	SetStateTo
  345              	.LVL52:
- 102:BLDC_CAN.c    ****             break;
- 346              		.loc 1 102 0
+ 101:BLDC_CAN.c    ****             break;
+ 346              		.loc 1 101 0
  347 0178 B2E0     		b	.L2
  348              	.L16:
- 103:BLDC_CAN.c    ****         /*
- 104:BLDC_CAN.c    ****         case(ID_MOTOR_UNIT_MAX_JNT_REV_SET):
- 105:BLDC_CAN.c    ****             break;
- 106:BLDC_CAN.c    ****         */
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 9
+ 102:BLDC_CAN.c    ****         /*
+ 103:BLDC_CAN.c    ****         case(ID_MOTOR_UNIT_MAX_JNT_REV_SET):
+ 104:BLDC_CAN.c    ****             break;
+ 105:BLDC_CAN.c    ****         */
+ 106:BLDC_CAN.c    ****         case (ID_MOTOR_UNIT_POT_INIT_LO):
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 9
 
 
- 107:BLDC_CAN.c    ****         case (ID_MOTOR_UNIT_POT_INIT_LO):
- 108:BLDC_CAN.c    ****             //printf("pot init low: %0llX",(uint64_t) receivedPacket->data);
- 109:BLDC_CAN.c    ****             setTickMin(GetPotADCFromPacket(receivedPacket));
- 349              		.loc 1 109 0
+ 107:BLDC_CAN.c    ****             //printf("pot init low: %0llX",(uint64_t) receivedPacket->data);
+ 108:BLDC_CAN.c    ****             setTickMin(GetPotADCFromPacket(receivedPacket));
+ 349              		.loc 1 108 0
  350 017a 2000     		movs	r0, r4
  351 017c FFF7FEFF 		bl	GetPotADCFromPacket
  352              	.LVL53:
  353 0180 FFF7FEFF 		bl	setTickMin
  354              	.LVL54:
- 110:BLDC_CAN.c    ****             setmDegMin(GetPotmDegFromPacket(receivedPacket));
- 355              		.loc 1 110 0
+ 109:BLDC_CAN.c    ****             setmDegMin(GetPotmDegFromPacket(receivedPacket));
+ 355              		.loc 1 109 0
  356 0184 2000     		movs	r0, r4
  357 0186 FFF7FEFF 		bl	GetPotmDegFromPacket
  358              	.LVL55:
  359 018a FFF7FEFF 		bl	setmDegMin
  360              	.LVL56:
- 111:BLDC_CAN.c    ****             UpdateConversion();
- 361              		.loc 1 111 0
+ 110:BLDC_CAN.c    ****             UpdateConversion();
+ 361              		.loc 1 110 0
  362 018e FFF7FEFF 		bl	UpdateConversion
  363              	.LVL57:
- 112:BLDC_CAN.c    ****             setUsingPot(1);
- 364              		.loc 1 112 0
+ 111:BLDC_CAN.c    ****             setUsingPot(1);
+ 364              		.loc 1 111 0
  365 0192 0120     		movs	r0, #1
  366 0194 FFF7FEFF 		bl	setUsingPot
  367              	.LVL58:
- 113:BLDC_CAN.c    ****             SetStateTo(CHECK_CAN);
- 368              		.loc 1 113 0
+ 112:BLDC_CAN.c    ****             SetStateTo(CHECK_CAN);
+ 368              		.loc 1 112 0
  369 0198 0220     		movs	r0, #2
  370 019a FFF7FEFF 		bl	SetStateTo
  371              	.LVL59:
- 114:BLDC_CAN.c    ****             break;
- 372              		.loc 1 114 0
+ 113:BLDC_CAN.c    ****             break;
+ 372              		.loc 1 113 0
  373 019e 9FE0     		b	.L2
  374              	.L13:
- 115:BLDC_CAN.c    ****             
- 116:BLDC_CAN.c    ****         case (ID_MOTOR_UNIT_POT_INIT_HI):
- 117:BLDC_CAN.c    ****             //printf("pot init hi: %0llX",(uint64_t) receivedPacket->data);
- 118:BLDC_CAN.c    ****             setTickMax(GetPotADCFromPacket(receivedPacket));
- 375              		.loc 1 118 0
+ 114:BLDC_CAN.c    ****             
+ 115:BLDC_CAN.c    ****         case (ID_MOTOR_UNIT_POT_INIT_HI):
+ 116:BLDC_CAN.c    ****             //printf("pot init hi: %0llX",(uint64_t) receivedPacket->data);
+ 117:BLDC_CAN.c    ****             setTickMax(GetPotADCFromPacket(receivedPacket));
+ 375              		.loc 1 117 0
  376 01a0 2000     		movs	r0, r4
  377 01a2 FFF7FEFF 		bl	GetPotADCFromPacket
  378              	.LVL60:
  379 01a6 FFF7FEFF 		bl	setTickMax
  380              	.LVL61:
- 119:BLDC_CAN.c    ****             setmDegMax(GetPotmDegFromPacket(receivedPacket));
- 381              		.loc 1 119 0
+ 118:BLDC_CAN.c    ****             setmDegMax(GetPotmDegFromPacket(receivedPacket));
+ 381              		.loc 1 118 0
  382 01aa 2000     		movs	r0, r4
  383 01ac FFF7FEFF 		bl	GetPotmDegFromPacket
  384              	.LVL62:
  385 01b0 FFF7FEFF 		bl	setmDegMax
  386              	.LVL63:
- 120:BLDC_CAN.c    ****             UpdateConversion();
- 387              		.loc 1 120 0
+ 119:BLDC_CAN.c    ****             UpdateConversion();
+ 387              		.loc 1 119 0
  388 01b4 FFF7FEFF 		bl	UpdateConversion
  389              	.LVL64:
- 121:BLDC_CAN.c    ****             setUsingPot(1);
- 390              		.loc 1 121 0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 10
-
-
+ 120:BLDC_CAN.c    ****             setUsingPot(1);
+ 390              		.loc 1 120 0
  391 01b8 0120     		movs	r0, #1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 10
+
+
  392 01ba FFF7FEFF 		bl	setUsingPot
  393              	.LVL65:
- 122:BLDC_CAN.c    ****             SetStateTo(CHECK_CAN);
- 394              		.loc 1 122 0
+ 121:BLDC_CAN.c    ****             SetStateTo(CHECK_CAN);
+ 394              		.loc 1 121 0
  395 01be 0220     		movs	r0, #2
  396 01c0 FFF7FEFF 		bl	SetStateTo
  397              	.LVL66:
- 123:BLDC_CAN.c    ****             break;
- 398              		.loc 1 123 0
+ 122:BLDC_CAN.c    ****             break;
+ 398              		.loc 1 122 0
  399 01c4 8CE0     		b	.L2
  400              	.L17:
- 124:BLDC_CAN.c    ****         case(ID_MOTOR_UNIT_ENC_INIT):
- 125:BLDC_CAN.c    ****             setUsingPot(0);
- 401              		.loc 1 125 0
+ 123:BLDC_CAN.c    ****         case(ID_MOTOR_UNIT_ENC_INIT):
+ 124:BLDC_CAN.c    ****             setUsingPot(0);
+ 401              		.loc 1 124 0
  402 01c6 0020     		movs	r0, #0
  403 01c8 FFF7FEFF 		bl	setUsingPot
  404              	.LVL67:
- 126:BLDC_CAN.c    ****             if(GetMode() == MOTOR_UNIT_MODE_PID){ //turn off and clear PID Loop if encoder is reini
- 405              		.loc 1 126 0
+ 125:BLDC_CAN.c    ****             if(GetMode() == MOTOR_UNIT_MODE_PID){ //turn off and clear PID Loop if encoder is reini
+ 405              		.loc 1 125 0
  406 01cc FFF7FEFF 		bl	GetMode
  407              	.LVL68:
  408 01d0 0128     		cmp	r0, #1
  409 01d2 07D1     		bne	.L26
  410              	.LBB5:
- 127:BLDC_CAN.c    ****                 set_PWM(0, 1);
- 411              		.loc 1 127 0
+ 126:BLDC_CAN.c    ****                 set_PWM(0, 1);
+ 411              		.loc 1 126 0
  412 01d4 0121     		movs	r1, #1
  413 01d6 0020     		movs	r0, #0
  414 01d8 FFF7FEFF 		bl	set_PWM
  415              	.LVL69:
- 128:BLDC_CAN.c    ****                 ClearPIDProgress();
- 416              		.loc 1 128 0
+ 127:BLDC_CAN.c    ****                 ClearPIDProgress();
+ 416              		.loc 1 127 0
  417 01dc FFF7FEFF 		bl	ClearPIDProgress
  418              	.LVL70:
- 129:BLDC_CAN.c    ****                 DisablePID();
- 419              		.loc 1 129 0
+ 128:BLDC_CAN.c    ****                 DisablePID();
+ 419              		.loc 1 128 0
  420 01e0 FFF7FEFF 		bl	DisablePID
  421              	.LVL71:
  422              	.L26:
  423              	.LBE5:
- 130:BLDC_CAN.c    ****             }
- 131:BLDC_CAN.c    ****             if(GetEncoderZeroFromPacket(receivedPacket)) {
- 424              		.loc 1 131 0
+ 129:BLDC_CAN.c    ****             }
+ 130:BLDC_CAN.c    ****             if(GetEncoderZeroFromPacket(receivedPacket)) {
+ 424              		.loc 1 130 0
  425 01e4 2000     		movs	r0, r4
  426 01e6 FFF7FEFF 		bl	GetEncoderZeroFromPacket
  427              	.LVL72:
  428 01ea 0028     		cmp	r0, #0
  429 01ec 02D0     		beq	.L27
  430              	.LBB6:
- 132:BLDC_CAN.c    ****                 QuadDec_SetCounter(0);                        
- 431              		.loc 1 132 0
+ 131:BLDC_CAN.c    ****                 QuadDec_SetCounter(0);                        
+ 431              		.loc 1 131 0
  432 01ee 0020     		movs	r0, #0
  433 01f0 FFF7FEFF 		bl	QuadDec_SetCounter
  434              	.LVL73:
  435              	.L27:
  436              	.LBE6:
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 11
+ 132:BLDC_CAN.c    ****             }
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 11
 
 
- 133:BLDC_CAN.c    ****             }
- 134:BLDC_CAN.c    ****             SetEncoderDir(GetEncoderDirectionFromPacket(receivedPacket));
- 437              		.loc 1 134 0
+ 133:BLDC_CAN.c    ****             SetEncoderDir(GetEncoderDirectionFromPacket(receivedPacket));
+ 437              		.loc 1 133 0
  438 01f4 2000     		movs	r0, r4
  439 01f6 FFF7FEFF 		bl	GetEncoderDirectionFromPacket
  440              	.LVL74:
  441 01fa FFF7FEFF 		bl	SetEncoderDir
  442              	.LVL75:
- 135:BLDC_CAN.c    ****             SetStateTo(CHECK_CAN);
- 443              		.loc 1 135 0
+ 134:BLDC_CAN.c    ****             SetStateTo(CHECK_CAN);
+ 443              		.loc 1 134 0
  444 01fe 0220     		movs	r0, #2
  445 0200 FFF7FEFF 		bl	SetStateTo
  446              	.LVL76:
- 136:BLDC_CAN.c    ****             break;
- 447              		.loc 1 136 0
+ 135:BLDC_CAN.c    ****             break;
+ 447              		.loc 1 135 0
  448 0204 6CE0     		b	.L2
  449              	.L15:
- 137:BLDC_CAN.c    ****         case(ID_MOTOR_UNIT_MAX_PID_PWM):
- 138:BLDC_CAN.c    ****             SetMaxPIDPWM(GetMaxPIDPWMFromPacket(receivedPacket));
- 450              		.loc 1 138 0
+ 136:BLDC_CAN.c    ****         case(ID_MOTOR_UNIT_MAX_PID_PWM):
+ 137:BLDC_CAN.c    ****             SetMaxPIDPWM(GetMaxPIDPWMFromPacket(receivedPacket));
+ 450              		.loc 1 137 0
  451 0206 2000     		movs	r0, r4
  452 0208 FFF7FEFF 		bl	GetMaxPIDPWMFromPacket
  453              	.LVL77:
  454 020c FFF7FEFF 		bl	SetMaxPIDPWM
  455              	.LVL78:
- 139:BLDC_CAN.c    ****             SetStateTo(CHECK_CAN);
- 456              		.loc 1 139 0
+ 138:BLDC_CAN.c    ****             SetStateTo(CHECK_CAN);
+ 456              		.loc 1 138 0
  457 0210 0220     		movs	r0, #2
  458 0212 FFF7FEFF 		bl	SetStateTo
  459              	.LVL79:
- 140:BLDC_CAN.c    ****             break;    
- 460              		.loc 1 140 0
+ 139:BLDC_CAN.c    ****             break;    
+ 460              		.loc 1 139 0
  461 0216 63E0     		b	.L2
  462              	.L20:
- 141:BLDC_CAN.c    ****         
- 142:BLDC_CAN.c    ****         case(ID_MOTOR_UNIT_SET_ENCODER_BOUND):
- 143:BLDC_CAN.c    ****             if (GetLimSwNumFromPacket(receivedPacket)) { // Limit 2
- 463              		.loc 1 143 0
+ 140:BLDC_CAN.c    ****         
+ 141:BLDC_CAN.c    ****         case(ID_MOTOR_UNIT_SET_ENCODER_BOUND):
+ 142:BLDC_CAN.c    ****             if (GetLimSwNumFromPacket(receivedPacket)) { // Limit 2
+ 463              		.loc 1 142 0
  464 0218 2000     		movs	r0, r4
  465 021a FFF7FEFF 		bl	GetLimSwNumFromPacket
  466              	.LVL80:
  467 021e 0028     		cmp	r0, #0
  468 0220 08D0     		beq	.L28
- 144:BLDC_CAN.c    ****                 bound_set2 = 1;
- 469              		.loc 1 144 0
+ 143:BLDC_CAN.c    ****                 bound_set2 = 1;
+ 469              		.loc 1 143 0
  470 0222 0122     		movs	r2, #1
  471 0224 324B     		ldr	r3, .L38+12
  472 0226 1A70     		strb	r2, [r3]
- 145:BLDC_CAN.c    ****                 enc_lim_2 = GetEncoderValueFromPacket(receivedPacket);
- 473              		.loc 1 145 0
+ 144:BLDC_CAN.c    ****                 enc_lim_2 = GetEncoderValueFromPacket(receivedPacket);
+ 473              		.loc 1 144 0
  474 0228 2000     		movs	r0, r4
  475 022a FFF7FEFF 		bl	GetEncoderValueFromPacket
  476              	.LVL81:
@@ -658,81 +657,81 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  478 0230 1860     		str	r0, [r3]
  479 0232 07E0     		b	.L29
  480              	.L28:
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 12
+ 145:BLDC_CAN.c    ****             } else { // Limit 1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 12
 
 
- 146:BLDC_CAN.c    ****             } else { // Limit 1
- 147:BLDC_CAN.c    ****                 bound_set1 = 1;
- 481              		.loc 1 147 0
+ 146:BLDC_CAN.c    ****                 bound_set1 = 1;
+ 481              		.loc 1 146 0
  482 0234 0122     		movs	r2, #1
  483 0236 304B     		ldr	r3, .L38+20
  484 0238 1A70     		strb	r2, [r3]
- 148:BLDC_CAN.c    ****                 enc_lim_1 = GetEncoderValueFromPacket(receivedPacket);
- 485              		.loc 1 148 0
+ 147:BLDC_CAN.c    ****                 enc_lim_1 = GetEncoderValueFromPacket(receivedPacket);
+ 485              		.loc 1 147 0
  486 023a 2000     		movs	r0, r4
  487 023c FFF7FEFF 		bl	GetEncoderValueFromPacket
  488              	.LVL82:
  489 0240 2E4B     		ldr	r3, .L38+24
  490 0242 1860     		str	r0, [r3]
  491              	.L29:
- 149:BLDC_CAN.c    ****             }
- 150:BLDC_CAN.c    ****             
- 151:BLDC_CAN.c    ****             SetStateTo(CHECK_CAN);
- 492              		.loc 1 151 0
+ 148:BLDC_CAN.c    ****             }
+ 149:BLDC_CAN.c    ****             
+ 150:BLDC_CAN.c    ****             SetStateTo(CHECK_CAN);
+ 492              		.loc 1 150 0
  493 0244 0220     		movs	r0, #2
  494 0246 FFF7FEFF 		bl	SetStateTo
  495              	.LVL83:
- 152:BLDC_CAN.c    ****             break;
- 496              		.loc 1 152 0
+ 151:BLDC_CAN.c    ****             break;
+ 496              		.loc 1 151 0
  497 024a 49E0     		b	.L2
  498              	.L18:
- 153:BLDC_CAN.c    ****             
- 154:BLDC_CAN.c    ****         // Common Packets 
- 155:BLDC_CAN.c    ****         case(ID_ESTOP):
- 156:BLDC_CAN.c    ****             UART_UartPutString("\r\n\r\n\r\nSTOP\r\n\r\n\r\n");
- 499              		.loc 1 156 0
+ 152:BLDC_CAN.c    ****             
+ 153:BLDC_CAN.c    ****         // Common Packets 
+ 154:BLDC_CAN.c    ****         case(ID_ESTOP):
+ 155:BLDC_CAN.c    ****             UART_UartPutString("\r\n\r\n\r\nSTOP\r\n\r\n\r\n");
+ 499              		.loc 1 155 0
  500 024c 2C48     		ldr	r0, .L38+28
  501 024e FFF7FEFF 		bl	UART_UartPutString
  502              	.LVL84:
- 157:BLDC_CAN.c    ****             set_speed(0, 1);
- 503              		.loc 1 157 0
+ 156:BLDC_CAN.c    ****             set_speed(0, 1);
+ 503              		.loc 1 156 0
  504 0252 0121     		movs	r1, #1
  505 0254 0020     		movs	r0, #0
  506 0256 FFF7FEFF 		bl	set_speed
  507              	.LVL85:
- 158:BLDC_CAN.c    ****             GotoUninitState();
- 508              		.loc 1 158 0
+ 157:BLDC_CAN.c    ****             GotoUninitState();
+ 508              		.loc 1 157 0
  509 025a FFF7FEFF 		bl	GotoUninitState
  510              	.LVL86:
- 159:BLDC_CAN.c    ****             break;
- 511              		.loc 1 159 0
+ 158:BLDC_CAN.c    ****             break;
+ 511              		.loc 1 158 0
  512 025e 3FE0     		b	.L2
  513              	.L19:
- 160:BLDC_CAN.c    ****         
- 161:BLDC_CAN.c    ****         case(ID_TELEMETRY_PULL):
- 162:BLDC_CAN.c    ****             switch (DecodeTelemetryType(receivedPacket)) {
- 514              		.loc 1 162 0
+ 159:BLDC_CAN.c    ****         
+ 160:BLDC_CAN.c    ****         case(ID_TELEMETRY_PULL):
+ 161:BLDC_CAN.c    ****             switch (DecodeTelemetryType(receivedPacket)) {
+ 514              		.loc 1 161 0
  515 0260 2000     		movs	r0, r4
  516 0262 FFF7FEFF 		bl	DecodeTelemetryType
  517              	.LVL87:
  518 0266 0428     		cmp	r0, #4
  519 0268 02D0     		beq	.L31
  520 026a 0F28     		cmp	r0, #15
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 13
-
-
  521 026c 0AD0     		beq	.L32
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 13
+
+
  522 026e 13E0     		b	.L37
  523              	.L31:
  524              	.LBB7:
- 163:BLDC_CAN.c    ****                 case(PACKET_TELEMETRY_ANG_POSITION):
- 164:BLDC_CAN.c    ****                     AssembleTelemetryReportPacket(packetToSend, sender_DG, sender_SN, 
- 165:BLDC_CAN.c    ****                                                   PACKET_TELEMETRY_ANG_POSITION, GetPositionmDeg())
- 525              		.loc 1 165 0
+ 162:BLDC_CAN.c    ****                 case(PACKET_TELEMETRY_ANG_POSITION):
+ 163:BLDC_CAN.c    ****                     AssembleTelemetryReportPacket(packetToSend, sender_DG, sender_SN, 
+ 164:BLDC_CAN.c    ****                                                   PACKET_TELEMETRY_ANG_POSITION, GetPositionmDeg())
+ 525              		.loc 1 164 0
  526 0270 FFF7FEFF 		bl	GetPositionmDeg
  527              	.LVL88:
- 164:BLDC_CAN.c    ****                                                   PACKET_TELEMETRY_ANG_POSITION, GetPositionmDeg())
- 528              		.loc 1 164 0
+ 163:BLDC_CAN.c    ****                                                   PACKET_TELEMETRY_ANG_POSITION, GetPositionmDeg())
+ 528              		.loc 1 163 0
  529 0274 0090     		str	r0, [sp]
  530 0276 0423     		movs	r3, #4
  531 0278 3A00     		movs	r2, r7
@@ -740,18 +739,18 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  533 027c 2800     		movs	r0, r5
  534 027e FFF7FEFF 		bl	AssembleTelemetryReportPacket
  535              	.LVL89:
- 166:BLDC_CAN.c    ****                     break;
- 536              		.loc 1 166 0
+ 165:BLDC_CAN.c    ****                     break;
+ 536              		.loc 1 165 0
  537 0282 0EE0     		b	.L33
  538              	.L32:
- 167:BLDC_CAN.c    ****                 case(PACKET_TELEMETRY_ADC_RAW):
- 168:BLDC_CAN.c    ****                     AssembleTelemetryReportPacket(packetToSend, sender_DG, sender_SN, 
- 169:BLDC_CAN.c    ****                                                   PACKET_TELEMETRY_ADC_RAW, GetPotVal());
- 539              		.loc 1 169 0
+ 166:BLDC_CAN.c    ****                 case(PACKET_TELEMETRY_ADC_RAW):
+ 167:BLDC_CAN.c    ****                     AssembleTelemetryReportPacket(packetToSend, sender_DG, sender_SN, 
+ 168:BLDC_CAN.c    ****                                                   PACKET_TELEMETRY_ADC_RAW, GetPotVal());
+ 539              		.loc 1 168 0
  540 0284 FFF7FEFF 		bl	GetPotVal
  541              	.LVL90:
- 168:BLDC_CAN.c    ****                                                   PACKET_TELEMETRY_ADC_RAW, GetPotVal());
- 542              		.loc 1 168 0
+ 167:BLDC_CAN.c    ****                                                   PACKET_TELEMETRY_ADC_RAW, GetPotVal());
+ 542              		.loc 1 167 0
  543 0288 0090     		str	r0, [sp]
  544 028a 0F23     		movs	r3, #15
  545 028c 3A00     		movs	r2, r7
@@ -759,13 +758,13 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  547 0290 2800     		movs	r0, r5
  548 0292 FFF7FEFF 		bl	AssembleTelemetryReportPacket
  549              	.LVL91:
- 170:BLDC_CAN.c    ****                     break;
- 550              		.loc 1 170 0
+ 169:BLDC_CAN.c    ****                     break;
+ 550              		.loc 1 169 0
  551 0296 04E0     		b	.L33
  552              	.L37:
- 171:BLDC_CAN.c    ****                 default:
- 172:BLDC_CAN.c    ****                     AssembleChipTypeReportPacket(packetToSend, sender_DG, sender_SN);
- 553              		.loc 1 172 0
+ 170:BLDC_CAN.c    ****                 default:
+ 171:BLDC_CAN.c    ****                     AssembleChipTypeReportPacket(packetToSend, sender_DG, sender_SN);
+ 553              		.loc 1 171 0
  554 0298 3A00     		movs	r2, r7
  555 029a 0399     		ldr	r1, [sp, #12]
  556 029c 2800     		movs	r0, r5
@@ -773,89 +772,89 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  558              	.LVL92:
  559              	.L33:
  560              	.LBE7:
- 173:BLDC_CAN.c    ****                     break;
- 174:BLDC_CAN.c    ****             }
- 175:BLDC_CAN.c    ****             
- 176:BLDC_CAN.c    ****             SendCANPacket(packetToSend);
- 561              		.loc 1 176 0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 14
-
-
+ 172:BLDC_CAN.c    ****                     break;
+ 173:BLDC_CAN.c    ****             }
+ 174:BLDC_CAN.c    ****             
+ 175:BLDC_CAN.c    ****             SendCANPacket(packetToSend);
+ 561              		.loc 1 175 0
  562 02a2 2800     		movs	r0, r5
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 14
+
+
  563 02a4 FFF7FEFF 		bl	SendCANPacket
  564              	.LVL93:
- 177:BLDC_CAN.c    ****             SetStateTo(CHECK_CAN);
- 565              		.loc 1 177 0
+ 176:BLDC_CAN.c    ****             SetStateTo(CHECK_CAN);
+ 565              		.loc 1 176 0
  566 02a8 0220     		movs	r0, #2
  567 02aa FFF7FEFF 		bl	SetStateTo
  568              	.LVL94:
- 178:BLDC_CAN.c    ****             break;
- 569              		.loc 1 178 0
+ 177:BLDC_CAN.c    ****             break;
+ 569              		.loc 1 177 0
  570 02ae 17E0     		b	.L2
  571              	.L3:
- 179:BLDC_CAN.c    ****             
- 180:BLDC_CAN.c    ****             /*
- 181:BLDC_CAN.c    ****         case(ID_LED_COLOR):
- 182:BLDC_CAN.c    ****             break;
- 183:BLDC_CAN.c    ****             */
- 184:BLDC_CAN.c    ****             
- 185:BLDC_CAN.c    ****         default://for 0xFF/no packets or Non recognized Packets
- 186:BLDC_CAN.c    ****             
- 187:BLDC_CAN.c    ****             if(GetMode() == MOTOR_UNIT_MODE_PID){ //need to check if values set;
- 572              		.loc 1 187 0
+ 178:BLDC_CAN.c    ****             
+ 179:BLDC_CAN.c    ****             /*
+ 180:BLDC_CAN.c    ****         case(ID_LED_COLOR):
+ 181:BLDC_CAN.c    ****             break;
+ 182:BLDC_CAN.c    ****             */
+ 183:BLDC_CAN.c    ****             
+ 184:BLDC_CAN.c    ****         default://for 0xFF/no packets or Non recognized Packets
+ 185:BLDC_CAN.c    ****             
+ 186:BLDC_CAN.c    ****             if(GetMode() == MOTOR_UNIT_MODE_PID){ //need to check if values set;
+ 572              		.loc 1 186 0
  573 02b0 FFF7FEFF 		bl	GetMode
  574              	.LVL95:
  575 02b4 0128     		cmp	r0, #1
  576 02b6 02D1     		bne	.L34
- 188:BLDC_CAN.c    ****                 SetStateTo(CALC_PID);
- 577              		.loc 1 188 0
+ 187:BLDC_CAN.c    ****                 SetStateTo(CALC_PID);
+ 577              		.loc 1 187 0
  578 02b8 FFF7FEFF 		bl	SetStateTo
  579              	.LVL96:
  580 02bc 0AE0     		b	.L35
  581              	.L34:
- 189:BLDC_CAN.c    ****             } else if(GetMode() == MOTOR_UNIT_MODE_PWM){ //skips PWM state to not reset saftey time
- 582              		.loc 1 189 0
+ 188:BLDC_CAN.c    ****             } else if(GetMode() == MOTOR_UNIT_MODE_PWM){ //skips PWM state to not reset saftey time
+ 582              		.loc 1 188 0
  583 02be FFF7FEFF 		bl	GetMode
  584              	.LVL97:
  585 02c2 0028     		cmp	r0, #0
  586 02c4 03D1     		bne	.L36
- 190:BLDC_CAN.c    ****                 SetStateTo(CHECK_CAN);
- 587              		.loc 1 190 0
+ 189:BLDC_CAN.c    ****                 SetStateTo(CHECK_CAN);
+ 587              		.loc 1 189 0
  588 02c6 0230     		adds	r0, r0, #2
  589 02c8 FFF7FEFF 		bl	SetStateTo
  590              	.LVL98:
  591 02cc 02E0     		b	.L35
  592              	.L36:
- 191:BLDC_CAN.c    ****             } else {
- 192:BLDC_CAN.c    ****                 SetStateTo(CHECK_CAN);
- 593              		.loc 1 192 0
+ 190:BLDC_CAN.c    ****             } else {
+ 191:BLDC_CAN.c    ****                 SetStateTo(CHECK_CAN);
+ 593              		.loc 1 191 0
  594 02ce 0220     		movs	r0, #2
  595 02d0 FFF7FEFF 		bl	SetStateTo
  596              	.LVL99:
  597              	.L35:
- 193:BLDC_CAN.c    ****             }
- 194:BLDC_CAN.c    ****             
- 195:BLDC_CAN.c    ****             //recieved Packet with Non Valid ID
- 196:BLDC_CAN.c    ****             if(packageID != NO_NEW_CAN_PACKET) {
- 598              		.loc 1 196 0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 15
-
-
+ 192:BLDC_CAN.c    ****             }
+ 193:BLDC_CAN.c    ****             
+ 194:BLDC_CAN.c    ****             //recieved Packet with Non Valid ID
+ 195:BLDC_CAN.c    ****             if(packageID != NO_NEW_CAN_PACKET) {
+ 598              		.loc 1 195 0
  599 02d4 0B4B     		ldr	r3, .L38+32
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 15
+
+
  600 02d6 9E42     		cmp	r6, r3
  601 02d8 02D0     		beq	.L2
- 197:BLDC_CAN.c    ****                 DisplayErrorCode(MOTOR_ERROR_INVALID_PACKET);
- 602              		.loc 1 197 0
+ 196:BLDC_CAN.c    ****                 DisplayErrorCode(MOTOR_ERROR_INVALID_PACKET);
+ 602              		.loc 1 196 0
  603 02da 0020     		movs	r0, #0
  604 02dc FFF7FEFF 		bl	DisplayErrorCode
  605              	.LVL100:
  606              	.L2:
  607              	.LBE2:
- 198:BLDC_CAN.c    ****             }
- 199:BLDC_CAN.c    ****             break;
- 200:BLDC_CAN.c    ****     }
- 201:BLDC_CAN.c    **** }...
- 608              		.loc 1 201 0
+ 197:BLDC_CAN.c    ****             }
+ 198:BLDC_CAN.c    ****             break;
+ 199:BLDC_CAN.c    ****     }
+ 200:BLDC_CAN.c    **** }...
+ 608              		.loc 1 200 0
  609 02e0 05B0     		add	sp, sp, #20
  610              		@ sp needed
  611              	.LVL101:
@@ -890,86 +889,86 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  637              	.Letext0:
  638              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
  639              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
- 640              		.file 4 "../HindsightCAN/CANPacket.h"
- 641              		.file 5 "../HindsightCAN/CANCommon.h"
- 642              		.file 6 "../HindsightCAN/Port.h"
+ 640              		.file 4 "HindsightCAN/CANPacket.h"
+ 641              		.file 5 "HindsightCAN/CANCommon.h"
+ 642              		.file 6 "HindsightCAN/Port.h"
  643              		.file 7 "BLDC_FSM.h"
- 644              		.file 8 "../HindsightCAN/CANMotorUnit.h"
+ 644              		.file 8 "HindsightCAN/CANMotorUnit.h"
  645              		.file 9 "BLDC_Drive.h"
  646              		.file 10 "main.h"
  647              		.file 11 "Generated_Source\\PSoC4/UART_SPI_UART.h"
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 16
-
-
  648              		.section	.debug_info,"",%progbits
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 16
+
+
  649              	.Ldebug_info0:
  650 0000 020C0000 		.4byte	0xc02
  651 0004 0400     		.2byte	0x4
  652 0006 00000000 		.4byte	.Ldebug_abbrev0
  653 000a 04       		.byte	0x4
  654 000b 01       		.uleb128 0x1
- 655 000c EF040000 		.4byte	.LASF91
+ 655 000c E0040000 		.4byte	.LASF91
  656 0010 0C       		.byte	0xc
- 657 0011 9D030000 		.4byte	.LASF92
- 658 0015 76000000 		.4byte	.LASF93
+ 657 0011 8E030000 		.4byte	.LASF92
+ 658 0015 09010000 		.4byte	.LASF93
  659 0019 00000000 		.4byte	.Ldebug_ranges0+0
  660 001d 00000000 		.4byte	0
  661 0021 00000000 		.4byte	.Ldebug_line0
  662 0025 02       		.uleb128 0x2
  663 0026 01       		.byte	0x1
  664 0027 06       		.byte	0x6
- 665 0028 7A030000 		.4byte	.LASF0
+ 665 0028 6B030000 		.4byte	.LASF0
  666 002c 03       		.uleb128 0x3
- 667 002d A7020000 		.4byte	.LASF2
+ 667 002d 98020000 		.4byte	.LASF2
  668 0031 02       		.byte	0x2
  669 0032 1D       		.byte	0x1d
  670 0033 37000000 		.4byte	0x37
  671 0037 02       		.uleb128 0x2
  672 0038 01       		.byte	0x1
  673 0039 08       		.byte	0x8
- 674 003a C4020000 		.4byte	.LASF1
+ 674 003a B5020000 		.4byte	.LASF1
  675 003e 03       		.uleb128 0x3
- 676 003f C6040000 		.4byte	.LASF3
+ 676 003f B7040000 		.4byte	.LASF3
  677 0043 02       		.byte	0x2
  678 0044 29       		.byte	0x29
  679 0045 49000000 		.4byte	0x49
  680 0049 02       		.uleb128 0x2
  681 004a 02       		.byte	0x2
  682 004b 05       		.byte	0x5
- 683 004c DA000000 		.4byte	.LASF4
+ 683 004c 76000000 		.4byte	.LASF4
  684 0050 03       		.uleb128 0x3
- 685 0051 6D010000 		.4byte	.LASF5
+ 685 0051 5E010000 		.4byte	.LASF5
  686 0055 02       		.byte	0x2
  687 0056 2B       		.byte	0x2b
  688 0057 5B000000 		.4byte	0x5b
  689 005b 02       		.uleb128 0x2
  690 005c 02       		.byte	0x2
  691 005d 07       		.byte	0x7
- 692 005e D7030000 		.4byte	.LASF6
+ 692 005e C8030000 		.4byte	.LASF6
  693 0062 03       		.uleb128 0x3
- 694 0063 AA040000 		.4byte	.LASF7
+ 694 0063 9B040000 		.4byte	.LASF7
  695 0067 02       		.byte	0x2
  696 0068 3F       		.byte	0x3f
  697 0069 6D000000 		.4byte	0x6d
  698 006d 02       		.uleb128 0x2
  699 006e 04       		.byte	0x4
  700 006f 05       		.byte	0x5
- 701 0070 9E020000 		.4byte	.LASF8
+ 701 0070 8F020000 		.4byte	.LASF8
  702 0074 02       		.uleb128 0x2
  703 0075 04       		.byte	0x4
  704 0076 07       		.byte	0x7
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 17
+ 705 0077 6D040000 		.4byte	.LASF9
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 17
 
 
- 705 0077 7C040000 		.4byte	.LASF9
  706 007b 02       		.uleb128 0x2
  707 007c 08       		.byte	0x8
  708 007d 05       		.byte	0x5
- 709 007e 65020000 		.4byte	.LASF10
+ 709 007e 56020000 		.4byte	.LASF10
  710 0082 02       		.uleb128 0x2
  711 0083 08       		.byte	0x8
  712 0084 07       		.byte	0x7
- 713 0085 18010000 		.4byte	.LASF11
+ 713 0085 B4000000 		.4byte	.LASF11
  714 0089 04       		.uleb128 0x4
  715 008a 04       		.byte	0x4
  716 008b 05       		.byte	0x5
@@ -977,24 +976,24 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  718 0090 02       		.uleb128 0x2
  719 0091 04       		.byte	0x4
  720 0092 07       		.byte	0x7
- 721 0093 A8030000 		.4byte	.LASF12
+ 721 0093 99030000 		.4byte	.LASF12
  722 0097 03       		.uleb128 0x3
- 723 0098 EB010000 		.4byte	.LASF13
+ 723 0098 DC010000 		.4byte	.LASF13
  724 009c 03       		.byte	0x3
  725 009d 18       		.byte	0x18
  726 009e 2C000000 		.4byte	0x2c
  727 00a2 03       		.uleb128 0x3
- 728 00a3 3C040000 		.4byte	.LASF14
+ 728 00a3 2D040000 		.4byte	.LASF14
  729 00a7 03       		.byte	0x3
  730 00a8 20       		.byte	0x20
  731 00a9 3E000000 		.4byte	0x3e
  732 00ad 03       		.uleb128 0x3
- 733 00ae B5030000 		.4byte	.LASF15
+ 733 00ae A6030000 		.4byte	.LASF15
  734 00b2 03       		.byte	0x3
  735 00b3 24       		.byte	0x24
  736 00b4 50000000 		.4byte	0x50
  737 00b8 03       		.uleb128 0x3
- 738 00b9 29040000 		.4byte	.LASF16
+ 738 00b9 1A040000 		.4byte	.LASF16
  739 00bd 03       		.byte	0x3
  740 00be 2C       		.byte	0x2c
  741 00bf 62000000 		.4byte	0x62
@@ -1016,12 +1015,12 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  757 00dd 97000000 		.4byte	0x97
  758 00e1 02       		.byte	0x2
  759 00e2 07       		.uleb128 0x7
- 760 00e3 62040000 		.4byte	.LASF17
+ 760 00e3 53040000 		.4byte	.LASF17
  761 00e7 04       		.byte	0x4
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 18
-
-
  762 00e8 13       		.byte	0x13
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 18
+
+
  763 00e9 EF000000 		.4byte	0xef
  764 00ed 03       		.byte	0x3
  765 00ee 00       		.byte	0
@@ -1035,53 +1034,53 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  773 00ff 02       		.uleb128 0x2
  774 0100 04       		.byte	0x4
  775 0101 07       		.byte	0x7
- 776 0102 F3000000 		.4byte	.LASF18
+ 776 0102 8F000000 		.4byte	.LASF18
  777 0106 03       		.uleb128 0x3
- 778 0107 94020000 		.4byte	.LASF19
+ 778 0107 85020000 		.4byte	.LASF19
  779 010b 04       		.byte	0x4
  780 010c 14       		.byte	0x14
  781 010d C3000000 		.4byte	0xc3
  782 0111 02       		.uleb128 0x2
  783 0112 04       		.byte	0x4
  784 0113 04       		.byte	0x4
- 785 0114 5F020000 		.4byte	.LASF20
+ 785 0114 50020000 		.4byte	.LASF20
  786 0118 02       		.uleb128 0x2
  787 0119 08       		.byte	0x8
  788 011a 04       		.byte	0x4
- 789 011b F6050000 		.4byte	.LASF21
+ 789 011b E7050000 		.4byte	.LASF21
  790 011f 02       		.uleb128 0x2
  791 0120 01       		.byte	0x1
  792 0121 08       		.byte	0x8
- 793 0122 11040000 		.4byte	.LASF22
+ 793 0122 02040000 		.4byte	.LASF22
  794 0126 02       		.uleb128 0x2
  795 0127 08       		.byte	0x8
  796 0128 04       		.byte	0x4
- 797 0129 F0020000 		.4byte	.LASF23
+ 797 0129 E1020000 		.4byte	.LASF23
  798 012d 0A       		.uleb128 0xa
- 799 012e 57030000 		.4byte	.LASF24
+ 799 012e 48030000 		.4byte	.LASF24
  800 0132 01       		.byte	0x1
- 801 0133 1E       		.byte	0x1e
+ 801 0133 1D       		.byte	0x1d
  802 0134 00000000 		.4byte	.LFB35
  803 0138 22000000 		.4byte	.LFE35-.LFB35
  804 013c 01       		.uleb128 0x1
  805 013d 9C       		.byte	0x9c
  806 013e 9F010000 		.4byte	0x19f
  807 0142 0B       		.uleb128 0xb
- 808 0143 AF010000 		.4byte	.LASF26
+ 808 0143 A0010000 		.4byte	.LASF26
  809 0147 01       		.byte	0x1
- 810 0148 1E       		.byte	0x1e
+ 810 0148 1D       		.byte	0x1d
  811 0149 9F010000 		.4byte	0x19f
  812 014d 00000000 		.4byte	.LLST0
  813 0151 0C       		.uleb128 0xc
- 814 0152 3B030000 		.4byte	.LASF31
+ 814 0152 2C030000 		.4byte	.LASF31
  815 0156 01       		.byte	0x1
- 816 0157 20       		.byte	0x20
+ 816 0157 1F       		.byte	0x1f
  817 0158 89000000 		.4byte	0x89
  818 015c 62010000 		.4byte	0x162
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 19
-
-
  819 0160 0D       		.uleb128 0xd
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 19
+
+
  820 0161 00       		.byte	0
  821 0162 0E       		.uleb128 0xe
  822 0163 0A000000 		.4byte	.LVL1
@@ -1127,52 +1126,52 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  862 01a0 04       		.byte	0x4
  863 01a1 06010000 		.4byte	0x106
  864 01a5 13       		.uleb128 0x13
- 865 01a6 C6030000 		.4byte	.LASF25
+ 865 01a6 B7030000 		.4byte	.LASF25
  866 01aa 01       		.byte	0x1
- 867 01ab 25       		.byte	0x25
+ 867 01ab 24       		.byte	0x24
  868 01ac 00000000 		.4byte	.LFB36
  869 01b0 08030000 		.4byte	.LFE36-.LFB36
  870 01b4 01       		.uleb128 0x1
  871 01b5 9C       		.byte	0x9c
  872 01b6 70090000 		.4byte	0x970
  873 01ba 0B       		.uleb128 0xb
- 874 01bb FC000000 		.4byte	.LASF27
+ 874 01bb 98000000 		.4byte	.LASF27
  875 01bf 01       		.byte	0x1
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 20
+ 876 01c0 24       		.byte	0x24
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 20
 
 
- 876 01c0 25       		.byte	0x25
  877 01c1 9F010000 		.4byte	0x19f
  878 01c5 2C000000 		.4byte	.LLST1
  879 01c9 0B       		.uleb128 0xb
- 880 01ca AF010000 		.4byte	.LASF26
+ 880 01ca A0010000 		.4byte	.LASF26
  881 01ce 01       		.byte	0x1
- 882 01cf 25       		.byte	0x25
+ 882 01cf 24       		.byte	0x24
  883 01d0 9F010000 		.4byte	0x19f
  884 01d4 58000000 		.4byte	.LLST2
  885 01d8 14       		.uleb128 0x14
- 886 01d9 30060000 		.4byte	.LASF28
+ 886 01d9 21060000 		.4byte	.LASF28
  887 01dd 01       		.byte	0x1
- 888 01de 26       		.byte	0x26
+ 888 01de 25       		.byte	0x25
  889 01df AD000000 		.4byte	0xad
  890 01e3 84000000 		.4byte	.LLST3
  891 01e7 15       		.uleb128 0x15
- 892 01e8 23060000 		.4byte	.LASF94
+ 892 01e8 14060000 		.4byte	.LASF94
  893 01ec 01       		.byte	0x1
- 894 01ed 27       		.byte	0x27
+ 894 01ed 26       		.byte	0x26
  895 01ee 97000000 		.4byte	0x97
  896 01f2 16       		.uleb128 0x16
- 897 01f3 D0040000 		.4byte	.LASF29
+ 897 01f3 C1040000 		.4byte	.LASF29
  898 01f7 01       		.byte	0x1
- 899 01f8 28       		.byte	0x28
+ 899 01f8 27       		.byte	0x27
  900 01f9 97000000 		.4byte	0x97
  901 01fd 02       		.uleb128 0x2
  902 01fe 91       		.byte	0x91
  903 01ff 64       		.sleb128 -28
  904 0200 14       		.uleb128 0x14
- 905 0201 AF050000 		.4byte	.LASF30
+ 905 0201 A0050000 		.4byte	.LASF30
  906 0205 01       		.byte	0x1
- 907 0206 29       		.byte	0x29
+ 907 0206 28       		.byte	0x28
  908 0207 97000000 		.4byte	0x97
  909 020b A2000000 		.4byte	.LLST4
  910 020f 17       		.uleb128 0x17
@@ -1182,7 +1181,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  914 021c 0C       		.uleb128 0xc
  915 021d 1B000000 		.4byte	.LASF32
  916 0221 01       		.byte	0x1
- 917 0222 46       		.byte	0x46
+ 917 0222 45       		.byte	0x45
  918 0223 89000000 		.4byte	0x89
  919 0227 2D020000 		.4byte	0x22d
  920 022b 0D       		.uleb128 0xd
@@ -1190,58 +1189,58 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  922 022d 0C       		.uleb128 0xc
  923 022e 0E000000 		.4byte	.LASF33
  924 0232 01       		.byte	0x1
- 925 0233 4C       		.byte	0x4c
+ 925 0233 4B       		.byte	0x4b
  926 0234 89000000 		.4byte	0x89
  927 0238 3E020000 		.4byte	0x23e
  928 023c 0D       		.uleb128 0xd
  929 023d 00       		.byte	0
  930 023e 0C       		.uleb128 0xc
- 931 023f A0010000 		.4byte	.LASF34
+ 931 023f 91010000 		.4byte	.LASF34
  932 0243 01       		.byte	0x1
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 21
+ 933 0244 51       		.byte	0x51
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 21
 
 
- 933 0244 52       		.byte	0x52
  934 0245 89000000 		.4byte	0x89
  935 0249 4F020000 		.4byte	0x24f
  936 024d 0D       		.uleb128 0xd
  937 024e 00       		.byte	0
  938 024f 0C       		.uleb128 0xc
- 939 0250 9C040000 		.4byte	.LASF35
+ 939 0250 8D040000 		.4byte	.LASF35
  940 0254 01       		.byte	0x1
- 941 0255 63       		.byte	0x63
+ 941 0255 62       		.byte	0x62
  942 0256 89000000 		.4byte	0x89
  943 025a 60020000 		.4byte	0x260
  944 025e 0D       		.uleb128 0xd
  945 025f 00       		.byte	0
  946 0260 0C       		.uleb128 0xc
- 947 0261 B9020000 		.4byte	.LASF36
+ 947 0261 AA020000 		.4byte	.LASF36
  948 0265 01       		.byte	0x1
- 949 0266 6D       		.byte	0x6d
+ 949 0266 6C       		.byte	0x6c
  950 0267 89000000 		.4byte	0x89
  951 026b 71020000 		.4byte	0x271
  952 026f 0D       		.uleb128 0xd
  953 0270 00       		.byte	0
  954 0271 0C       		.uleb128 0xc
- 955 0272 78010000 		.4byte	.LASF37
+ 955 0272 69010000 		.4byte	.LASF37
  956 0276 01       		.byte	0x1
- 957 0277 6D       		.byte	0x6d
+ 957 0277 6C       		.byte	0x6c
  958 0278 89000000 		.4byte	0x89
  959 027c 82020000 		.4byte	0x282
  960 0280 0D       		.uleb128 0xd
  961 0281 00       		.byte	0
  962 0282 0C       		.uleb128 0xc
- 963 0283 71040000 		.4byte	.LASF38
+ 963 0283 62040000 		.4byte	.LASF38
  964 0287 01       		.byte	0x1
- 965 0288 6E       		.byte	0x6e
+ 965 0288 6D       		.byte	0x6d
  966 0289 89000000 		.4byte	0x89
  967 028d 93020000 		.4byte	0x293
  968 0291 0D       		.uleb128 0xd
  969 0292 00       		.byte	0
  970 0293 0C       		.uleb128 0xc
- 971 0294 DA040000 		.4byte	.LASF39
+ 971 0294 CB040000 		.4byte	.LASF39
  972 0298 01       		.byte	0x1
- 973 0299 6E       		.byte	0x6e
+ 973 0299 6D       		.byte	0x6d
  974 029a 89000000 		.4byte	0x89
  975 029e A4020000 		.4byte	0x2a4
  976 02a2 0D       		.uleb128 0xd
@@ -1249,50 +1248,50 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  978 02a4 0C       		.uleb128 0xc
  979 02a5 65000000 		.4byte	.LASF40
  980 02a9 01       		.byte	0x1
- 981 02aa 6F       		.byte	0x6f
+ 981 02aa 6E       		.byte	0x6e
  982 02ab 89000000 		.4byte	0x89
  983 02af B5020000 		.4byte	0x2b5
  984 02b3 0D       		.uleb128 0xd
  985 02b4 00       		.byte	0
  986 02b5 0C       		.uleb128 0xc
- 987 02b6 4B030000 		.4byte	.LASF41
+ 987 02b6 3C030000 		.4byte	.LASF41
  988 02ba 01       		.byte	0x1
- 989 02bb 70       		.byte	0x70
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 22
-
-
+ 989 02bb 6F       		.byte	0x6f
  990 02bc 89000000 		.4byte	0x89
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 22
+
+
  991 02c0 C6020000 		.4byte	0x2c6
  992 02c4 0D       		.uleb128 0xd
  993 02c5 00       		.byte	0
  994 02c6 0C       		.uleb128 0xc
- 995 02c7 31040000 		.4byte	.LASF42
+ 995 02c7 22040000 		.4byte	.LASF42
  996 02cb 01       		.byte	0x1
- 997 02cc 76       		.byte	0x76
+ 997 02cc 75       		.byte	0x75
  998 02cd 89000000 		.4byte	0x89
  999 02d1 D7020000 		.4byte	0x2d7
  1000 02d5 0D       		.uleb128 0xd
  1001 02d6 00       		.byte	0
  1002 02d7 0C       		.uleb128 0xc
- 1003 02d8 1E040000 		.4byte	.LASF43
+ 1003 02d8 0F040000 		.4byte	.LASF43
  1004 02dc 01       		.byte	0x1
- 1005 02dd 77       		.byte	0x77
+ 1005 02dd 76       		.byte	0x76
  1006 02de 89000000 		.4byte	0x89
  1007 02e2 E8020000 		.4byte	0x2e8
  1008 02e6 0D       		.uleb128 0xd
  1009 02e7 00       		.byte	0
  1010 02e8 0C       		.uleb128 0xc
- 1011 02e9 86020000 		.4byte	.LASF44
+ 1011 02e9 77020000 		.4byte	.LASF44
  1012 02ed 01       		.byte	0x1
- 1013 02ee 86       		.byte	0x86
+ 1013 02ee 85       		.byte	0x85
  1014 02ef 89000000 		.4byte	0x89
  1015 02f3 F9020000 		.4byte	0x2f9
  1016 02f7 0D       		.uleb128 0xd
  1017 02f8 00       		.byte	0
  1018 02f9 0C       		.uleb128 0xc
- 1019 02fa 0B010000 		.4byte	.LASF45
+ 1019 02fa A7000000 		.4byte	.LASF45
  1020 02fe 01       		.byte	0x1
- 1021 02ff 8A       		.byte	0x8a
+ 1021 02ff 89       		.byte	0x89
  1022 0300 89000000 		.4byte	0x89
  1023 0304 0A030000 		.4byte	0x30a
  1024 0308 0D       		.uleb128 0xd
@@ -1302,9 +1301,9 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  1028 030f 10000000 		.4byte	.LBE3-.LBB3
  1029 0313 54030000 		.4byte	0x354
  1030 0317 0C       		.uleb128 0xc
- 1031 0318 8E040000 		.4byte	.LASF46
+ 1031 0318 7F040000 		.4byte	.LASF46
  1032 031c 01       		.byte	0x1
- 1033 031d 33       		.byte	0x33
+ 1033 031d 32       		.byte	0x32
  1034 031e 89000000 		.4byte	0x89
  1035 0322 28030000 		.4byte	0x328
  1036 0326 0D       		.uleb128 0xd
@@ -1318,10 +1317,10 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  1044 033a 44030000 		.4byte	0x344
  1045 033e 10       		.uleb128 0x10
  1046 033f 01       		.uleb128 0x1
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 23
-
-
  1047 0340 50       		.byte	0x50
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 23
+
+
  1048 0341 01       		.uleb128 0x1
  1049 0342 31       		.byte	0x31
  1050 0343 00       		.byte	0
@@ -1340,9 +1339,9 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  1063 0359 14000000 		.4byte	.LBE4-.LBB4
  1064 035d 9F030000 		.4byte	0x39f
  1065 0361 0C       		.uleb128 0xc
- 1066 0362 EC050000 		.4byte	.LASF47
+ 1066 0362 DD050000 		.4byte	.LASF47
  1067 0366 01       		.byte	0x1
- 1068 0367 59       		.byte	0x59
+ 1068 0367 58       		.byte	0x58
  1069 0368 89000000 		.4byte	0x89
  1070 036c 72030000 		.4byte	0x372
  1071 0370 0D       		.uleb128 0xd
@@ -1376,28 +1375,28 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  1099 03a4 10000000 		.4byte	.LBE5-.LBB5
  1100 03a8 0A040000 		.4byte	0x40a
  1101 03ac 0C       		.uleb128 0xc
- 1102 03ad 45020000 		.4byte	.LASF48
+ 1102 03ad 36020000 		.4byte	.LASF48
  1103 03b1 01       		.byte	0x1
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 24
+ 1104 03b2 7E       		.byte	0x7e
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 24
 
 
- 1104 03b2 7F       		.byte	0x7f
  1105 03b3 89000000 		.4byte	0x89
  1106 03b7 BD030000 		.4byte	0x3bd
  1107 03bb 0D       		.uleb128 0xd
  1108 03bc 00       		.byte	0
  1109 03bd 0C       		.uleb128 0xc
- 1110 03be 2A030000 		.4byte	.LASF49
+ 1110 03be 1B030000 		.4byte	.LASF49
  1111 03c2 01       		.byte	0x1
- 1112 03c3 80       		.byte	0x80
+ 1112 03c3 7F       		.byte	0x7f
  1113 03c4 89000000 		.4byte	0x89
  1114 03c8 CE030000 		.4byte	0x3ce
  1115 03cc 0D       		.uleb128 0xd
  1116 03cd 00       		.byte	0
  1117 03ce 0C       		.uleb128 0xc
- 1118 03cf 3A020000 		.4byte	.LASF50
+ 1118 03cf 2B020000 		.4byte	.LASF50
  1119 03d3 01       		.byte	0x1
- 1120 03d4 81       		.byte	0x81
+ 1120 03d4 80       		.byte	0x80
  1121 03d5 89000000 		.4byte	0x89
  1122 03d9 DF030000 		.4byte	0x3df
  1123 03dd 0D       		.uleb128 0xd
@@ -1429,19 +1428,19 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  1149 040f 06000000 		.4byte	.LBE6-.LBB6
  1150 0413 38040000 		.4byte	0x438
  1151 0417 0C       		.uleb128 0xc
- 1152 0418 73020000 		.4byte	.LASF51
+ 1152 0418 64020000 		.4byte	.LASF51
  1153 041c 01       		.byte	0x1
- 1154 041d 84       		.byte	0x84
+ 1154 041d 83       		.byte	0x83
  1155 041e 89000000 		.4byte	0x89
  1156 0422 28040000 		.4byte	0x428
  1157 0426 0D       		.uleb128 0xd
  1158 0427 00       		.byte	0
  1159 0428 11       		.uleb128 0x11
  1160 0429 F4010000 		.4byte	.LVL73
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 25
-
-
  1161 042d 2B0A0000 		.4byte	0xa2b
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 25
+
+
  1162 0431 10       		.uleb128 0x10
  1163 0432 01       		.uleb128 0x1
  1164 0433 50       		.byte	0x50
@@ -1454,17 +1453,17 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  1171 043d 32000000 		.4byte	.LBE7-.LBB7
  1172 0441 E6040000 		.4byte	0x4e6
  1173 0445 0C       		.uleb128 0xc
- 1174 0446 3B030000 		.4byte	.LASF31
+ 1174 0446 2C030000 		.4byte	.LASF31
  1175 044a 01       		.byte	0x1
- 1176 044b 20       		.byte	0x20
+ 1176 044b 1F       		.byte	0x1f
  1177 044c 89000000 		.4byte	0x89
  1178 0450 56040000 		.4byte	0x456
  1179 0454 0D       		.uleb128 0xd
  1180 0455 00       		.byte	0
  1181 0456 0C       		.uleb128 0xc
- 1182 0457 EA030000 		.4byte	.LASF52
+ 1182 0457 DB030000 		.4byte	.LASF52
  1183 045b 01       		.byte	0x1
- 1184 045c A9       		.byte	0xa9
+ 1184 045c A8       		.byte	0xa8
  1185 045d 89000000 		.4byte	0x89
  1186 0461 67040000 		.4byte	0x467
  1187 0465 0D       		.uleb128 0xd
@@ -1498,10 +1497,10 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  1215 0490 00       		.sleb128 0
  1216 0491 10       		.uleb128 0x10
  1217 0492 01       		.uleb128 0x1
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 26
-
-
  1218 0493 53       		.byte	0x53
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 26
+
+
  1219 0494 01       		.uleb128 0x1
  1220 0495 34       		.byte	0x34
  1221 0496 00       		.byte	0
@@ -1558,10 +1557,10 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  1272 04de 10       		.uleb128 0x10
  1273 04df 01       		.uleb128 0x1
  1274 04e0 52       		.byte	0x52
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 27
-
-
  1275 04e1 02       		.uleb128 0x2
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 27
+
+
  1276 04e2 77       		.byte	0x77
  1277 04e3 00       		.sleb128 0
  1278 04e4 00       		.byte	0
@@ -1618,10 +1617,10 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  1329 0544 74       		.byte	0x74
  1330 0545 00       		.sleb128 0
  1331 0546 00       		.byte	0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 28
-
-
  1332 0547 0E       		.uleb128 0xe
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 28
+
+
  1333 0548 B6000000 		.4byte	.LVL22
  1334 054c 620A0000 		.4byte	0xa62
  1335 0550 0E       		.uleb128 0xe
@@ -1678,10 +1677,10 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  1386 05b9 0E       		.uleb128 0xe
  1387 05ba EC000000 		.4byte	.LVL30
  1388 05be A40A0000 		.4byte	0xaa4
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 29
-
-
  1389 05c2 0F       		.uleb128 0xf
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 29
+
+
  1390 05c3 F2000000 		.4byte	.LVL31
  1391 05c7 E9090000 		.4byte	0x9e9
  1392 05cb D5050000 		.4byte	0x5d5
@@ -1738,10 +1737,10 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  1443 0634 0F       		.uleb128 0xf
  1444 0635 1E010000 		.4byte	.LVL39
  1445 0639 E9090000 		.4byte	0x9e9
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 30
-
-
  1446 063d 47060000 		.4byte	0x647
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 30
+
+
  1447 0641 10       		.uleb128 0x10
  1448 0642 01       		.uleb128 0x1
  1449 0643 50       		.byte	0x50
@@ -1798,10 +1797,10 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  1500 06b2 10       		.uleb128 0x10
  1501 06b3 01       		.uleb128 0x1
  1502 06b4 50       		.byte	0x50
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 31
-
-
  1503 06b5 01       		.uleb128 0x1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 31
+
+
  1504 06b6 32       		.byte	0x32
  1505 06b7 00       		.byte	0
  1506 06b8 0F       		.uleb128 0xf
@@ -1858,10 +1857,10 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  1557 0721 0F       		.uleb128 0xf
  1558 0722 A6010000 		.4byte	.LVL60
  1559 0726 1D0B0000 		.4byte	0xb1d
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 32
-
-
  1560 072a 35070000 		.4byte	0x735
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 32
+
+
  1561 072e 10       		.uleb128 0x10
  1562 072f 01       		.uleb128 0x1
  1563 0730 50       		.byte	0x50
@@ -1918,10 +1917,10 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  1614 0799 50       		.byte	0x50
  1615 079a 01       		.uleb128 0x1
  1616 079b 30       		.byte	0x30
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 33
-
-
  1617 079c 00       		.byte	0
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 33
+
+
  1618 079d 0E       		.uleb128 0xe
  1619 079e D0010000 		.4byte	.LVL68
  1620 07a2 6D0A0000 		.4byte	0xa6d
@@ -1978,10 +1977,10 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  1671 0808 16020000 		.4byte	.LVL79
  1672 080c E9090000 		.4byte	0x9e9
  1673 0810 1A080000 		.4byte	0x81a
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 34
-
-
  1674 0814 10       		.uleb128 0x10
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 34
+
+
  1675 0815 01       		.uleb128 0x1
  1676 0816 50       		.byte	0x50
  1677 0817 01       		.uleb128 0x1
@@ -2038,10 +2037,10 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  1728 0877 01       		.uleb128 0x1
  1729 0878 50       		.byte	0x50
  1730 0879 05       		.uleb128 0x5
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 35
-
-
  1731 087a 03       		.byte	0x3
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 35
+
+
  1732 087b 00000000 		.4byte	.LC6
  1733 087f 00       		.byte	0
  1734 0880 0F       		.uleb128 0xf
@@ -2098,10 +2097,10 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  1785 08dd B4020000 		.4byte	.LVL95
  1786 08e1 6D0A0000 		.4byte	0xa6d
  1787 08e5 0E       		.uleb128 0xe
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 36
-
-
  1788 08e6 BC020000 		.4byte	.LVL96
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 36
+
+
  1789 08ea E9090000 		.4byte	0x9e9
  1790 08ee 0E       		.uleb128 0xe
  1791 08ef C2020000 		.4byte	.LVL97
@@ -2158,10 +2157,10 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  1842 0958 10       		.uleb128 0x10
  1843 0959 01       		.uleb128 0x1
  1844 095a 50       		.byte	0x50
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 37
-
-
  1845 095b 02       		.uleb128 0x2
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 37
+
+
  1846 095c 74       		.byte	0x74
  1847 095d 00       		.sleb128 0
  1848 095e 00       		.byte	0
@@ -2177,61 +2176,61 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  1858 096e 00       		.byte	0
  1859 096f 00       		.byte	0
  1860 0970 18       		.uleb128 0x18
- 1861 0971 B1020000 		.4byte	.LASF53
+ 1861 0971 A2020000 		.4byte	.LASF53
  1862 0975 01       		.byte	0x1
  1863 0976 12       		.byte	0x12
  1864 0977 A2000000 		.4byte	0xa2
  1865 097b 18       		.uleb128 0x18
- 1866 097c B4040000 		.4byte	.LASF54
+ 1866 097c A5040000 		.4byte	.LASF54
  1867 0980 01       		.byte	0x1
  1868 0981 13       		.byte	0x13
  1869 0982 B8000000 		.4byte	0xb8
  1870 0986 18       		.uleb128 0x18
- 1871 0987 7D050000 		.4byte	.LASF55
+ 1871 0987 6E050000 		.4byte	.LASF55
  1872 098b 01       		.byte	0x1
  1873 098c 15       		.byte	0x15
  1874 098d 97000000 		.4byte	0x97
  1875 0991 18       		.uleb128 0x18
- 1876 0992 88050000 		.4byte	.LASF56
+ 1876 0992 79050000 		.4byte	.LASF56
  1877 0996 01       		.byte	0x1
  1878 0997 16       		.byte	0x16
  1879 0998 97000000 		.4byte	0x97
  1880 099c 18       		.uleb128 0x18
- 1881 099d 2F010000 		.4byte	.LASF57
+ 1881 099d CB000000 		.4byte	.LASF57
  1882 09a1 01       		.byte	0x1
  1883 09a2 17       		.byte	0x17
  1884 09a3 B8000000 		.4byte	0xb8
  1885 09a7 18       		.uleb128 0x18
- 1886 09a8 39010000 		.4byte	.LASF58
+ 1886 09a8 D5000000 		.4byte	.LASF58
  1887 09ac 01       		.byte	0x1
  1888 09ad 18       		.byte	0x18
  1889 09ae B8000000 		.4byte	0xb8
  1890 09b2 19       		.uleb128 0x19
- 1891 09b3 3B030000 		.4byte	.LASF31
- 1892 09b7 3B030000 		.4byte	.LASF31
+ 1891 09b3 2C030000 		.4byte	.LASF31
+ 1892 09b7 2C030000 		.4byte	.LASF31
  1893 09bb 01       		.byte	0x1
- 1894 09bc 20       		.byte	0x20
+ 1894 09bc 1F       		.byte	0x1f
  1895 09bd 19       		.uleb128 0x19
- 1896 09be FC020000 		.4byte	.LASF59
- 1897 09c2 FC020000 		.4byte	.LASF59
+ 1896 09be ED020000 		.4byte	.LASF59
+ 1897 09c2 ED020000 		.4byte	.LASF59
  1898 09c6 05       		.byte	0x5
  1899 09c7 3C       		.byte	0x3c
  1900 09c8 19       		.uleb128 0x19
  1901 09c9 00000000 		.4byte	.LASF60
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 38
-
-
  1902 09cd 00000000 		.4byte	.LASF60
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 38
+
+
  1903 09d1 06       		.byte	0x6
  1904 09d2 1C       		.byte	0x1c
  1905 09d3 19       		.uleb128 0x19
- 1906 09d4 8E040000 		.4byte	.LASF46
- 1907 09d8 8E040000 		.4byte	.LASF46
+ 1906 09d4 7F040000 		.4byte	.LASF46
+ 1907 09d8 7F040000 		.4byte	.LASF46
  1908 09dc 01       		.byte	0x1
- 1909 09dd 33       		.byte	0x33
+ 1909 09dd 32       		.byte	0x32
  1910 09de 19       		.uleb128 0x19
- 1911 09df 67040000 		.4byte	.LASF61
- 1912 09e3 67040000 		.4byte	.LASF61
+ 1911 09df 58040000 		.4byte	.LASF61
+ 1912 09e3 58040000 		.4byte	.LASF61
  1913 09e7 07       		.byte	0x7
  1914 09e8 0E       		.byte	0xe
  1915 09e9 19       		.uleb128 0x19
@@ -2240,255 +2239,255 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  1918 09f2 07       		.byte	0x7
  1919 09f3 0D       		.byte	0xd
  1920 09f4 19       		.uleb128 0x19
- 1921 09f5 EC050000 		.4byte	.LASF47
- 1922 09f9 EC050000 		.4byte	.LASF47
+ 1921 09f5 DD050000 		.4byte	.LASF47
+ 1922 09f9 DD050000 		.4byte	.LASF47
  1923 09fd 01       		.byte	0x1
- 1924 09fe 59       		.byte	0x59
+ 1924 09fe 58       		.byte	0x58
  1925 09ff 19       		.uleb128 0x19
- 1926 0a00 FD050000 		.4byte	.LASF63
- 1927 0a04 FD050000 		.4byte	.LASF63
+ 1926 0a00 EE050000 		.4byte	.LASF63
+ 1927 0a04 EE050000 		.4byte	.LASF63
  1928 0a08 08       		.byte	0x8
  1929 0a09 22       		.byte	0x22
  1930 0a0a 19       		.uleb128 0x19
- 1931 0a0b 45020000 		.4byte	.LASF48
- 1932 0a0f 45020000 		.4byte	.LASF48
+ 1931 0a0b 36020000 		.4byte	.LASF48
+ 1932 0a0f 36020000 		.4byte	.LASF48
  1933 0a13 01       		.byte	0x1
- 1934 0a14 7F       		.byte	0x7f
+ 1934 0a14 7E       		.byte	0x7e
  1935 0a15 19       		.uleb128 0x19
- 1936 0a16 2A030000 		.4byte	.LASF49
- 1937 0a1a 2A030000 		.4byte	.LASF49
+ 1936 0a16 1B030000 		.4byte	.LASF49
+ 1937 0a1a 1B030000 		.4byte	.LASF49
  1938 0a1e 01       		.byte	0x1
- 1939 0a1f 80       		.byte	0x80
+ 1939 0a1f 7F       		.byte	0x7f
  1940 0a20 19       		.uleb128 0x19
- 1941 0a21 3A020000 		.4byte	.LASF50
- 1942 0a25 3A020000 		.4byte	.LASF50
+ 1941 0a21 2B020000 		.4byte	.LASF50
+ 1942 0a25 2B020000 		.4byte	.LASF50
  1943 0a29 01       		.byte	0x1
- 1944 0a2a 81       		.byte	0x81
+ 1944 0a2a 80       		.byte	0x80
  1945 0a2b 19       		.uleb128 0x19
- 1946 0a2c 73020000 		.4byte	.LASF51
- 1947 0a30 73020000 		.4byte	.LASF51
+ 1946 0a2c 64020000 		.4byte	.LASF51
+ 1947 0a30 64020000 		.4byte	.LASF51
  1948 0a34 01       		.byte	0x1
- 1949 0a35 84       		.byte	0x84
+ 1949 0a35 83       		.byte	0x83
  1950 0a36 19       		.uleb128 0x19
- 1951 0a37 EA030000 		.4byte	.LASF52
- 1952 0a3b EA030000 		.4byte	.LASF52
+ 1951 0a37 DB030000 		.4byte	.LASF52
+ 1952 0a3b DB030000 		.4byte	.LASF52
  1953 0a3f 01       		.byte	0x1
- 1954 0a40 A9       		.byte	0xa9
+ 1954 0a40 A8       		.byte	0xa8
  1955 0a41 19       		.uleb128 0x19
  1956 0a42 3D000000 		.4byte	.LASF64
  1957 0a46 3D000000 		.4byte	.LASF64
  1958 0a4a 05       		.byte	0x5
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 39
-
-
  1959 0a4b 2B       		.byte	0x2b
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 39
+
+
  1960 0a4c 19       		.uleb128 0x19
- 1961 0a4d 4D020000 		.4byte	.LASF65
- 1962 0a51 4D020000 		.4byte	.LASF65
+ 1961 0a4d 3E020000 		.4byte	.LASF65
+ 1962 0a51 3E020000 		.4byte	.LASF65
  1963 0a55 08       		.byte	0x8
  1964 0a56 13       		.byte	0x13
  1965 0a57 19       		.uleb128 0x19
- 1966 0a58 07040000 		.4byte	.LASF66
- 1967 0a5c 07040000 		.4byte	.LASF66
+ 1966 0a58 F8030000 		.4byte	.LASF66
+ 1967 0a5c F8030000 		.4byte	.LASF66
  1968 0a60 09       		.byte	0x9
  1969 0a61 25       		.byte	0x25
  1970 0a62 19       		.uleb128 0x19
- 1971 0a63 1A030000 		.4byte	.LASF67
- 1972 0a67 1A030000 		.4byte	.LASF67
+ 1971 0a63 0B030000 		.4byte	.LASF67
+ 1972 0a67 0B030000 		.4byte	.LASF67
  1973 0a6b 07       		.byte	0x7
  1974 0a6c 0C       		.byte	0xc
  1975 0a6d 19       		.uleb128 0x19
- 1976 0a6e BE030000 		.4byte	.LASF68
- 1977 0a72 BE030000 		.4byte	.LASF68
+ 1976 0a6e AF030000 		.4byte	.LASF68
+ 1977 0a72 AF030000 		.4byte	.LASF68
  1978 0a76 07       		.byte	0x7
  1979 0a77 10       		.byte	0x10
  1980 0a78 19       		.uleb128 0x19
- 1981 0a79 51040000 		.4byte	.LASF69
- 1982 0a7d 51040000 		.4byte	.LASF69
+ 1981 0a79 42040000 		.4byte	.LASF69
+ 1982 0a7d 42040000 		.4byte	.LASF69
  1983 0a81 08       		.byte	0x8
  1984 0a82 1A       		.byte	0x1a
  1985 0a83 19       		.uleb128 0x19
- 1986 0a84 5C010000 		.4byte	.LASF70
- 1987 0a88 5C010000 		.4byte	.LASF70
+ 1986 0a84 F8000000 		.4byte	.LASF70
+ 1987 0a88 F8000000 		.4byte	.LASF70
  1988 0a8c 0A       		.byte	0xa
  1989 0a8d 3A       		.byte	0x3a
  1990 0a8e 19       		.uleb128 0x19
- 1991 0a8f E4000000 		.4byte	.LASF71
- 1992 0a93 E4000000 		.4byte	.LASF71
+ 1991 0a8f 80000000 		.4byte	.LASF71
+ 1992 0a93 80000000 		.4byte	.LASF71
  1993 0a97 08       		.byte	0x8
  1994 0a98 29       		.byte	0x29
  1995 0a99 19       		.uleb128 0x19
  1996 0a9a 1B000000 		.4byte	.LASF32
  1997 0a9e 1B000000 		.4byte	.LASF32
  1998 0aa2 01       		.byte	0x1
- 1999 0aa3 46       		.byte	0x46
+ 1999 0aa3 45       		.byte	0x45
  2000 0aa4 19       		.uleb128 0x19
- 2001 0aa5 F4030000 		.4byte	.LASF72
- 2002 0aa9 F4030000 		.4byte	.LASF72
+ 2001 0aa5 E5030000 		.4byte	.LASF72
+ 2002 0aa9 E5030000 		.4byte	.LASF72
  2003 0aad 07       		.byte	0x7
  2004 0aae 12       		.byte	0x12
  2005 0aaf 19       		.uleb128 0x19
- 2006 0ab0 15020000 		.4byte	.LASF73
- 2007 0ab4 15020000 		.4byte	.LASF73
+ 2006 0ab0 06020000 		.4byte	.LASF73
+ 2007 0ab4 06020000 		.4byte	.LASF73
  2008 0ab8 08       		.byte	0x8
  2009 0ab9 30       		.byte	0x30
  2010 0aba 19       		.uleb128 0x19
  2011 0abb 0E000000 		.4byte	.LASF33
  2012 0abf 0E000000 		.4byte	.LASF33
  2013 0ac3 01       		.byte	0x1
- 2014 0ac4 4C       		.byte	0x4c
+ 2014 0ac4 4B       		.byte	0x4b
  2015 0ac5 19       		.uleb128 0x19
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 40
+ 2016 0ac6 58030000 		.4byte	.LASF74
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 40
 
 
- 2016 0ac6 67030000 		.4byte	.LASF74
- 2017 0aca 67030000 		.4byte	.LASF74
+ 2017 0aca 58030000 		.4byte	.LASF74
  2018 0ace 07       		.byte	0x7
  2019 0acf 13       		.byte	0x13
  2020 0ad0 19       		.uleb128 0x19
- 2021 0ad1 06020000 		.4byte	.LASF75
- 2022 0ad5 06020000 		.4byte	.LASF75
+ 2021 0ad1 F7010000 		.4byte	.LASF75
+ 2022 0ad5 F7010000 		.4byte	.LASF75
  2023 0ad9 08       		.byte	0x8
  2024 0ada 37       		.byte	0x37
  2025 0adb 19       		.uleb128 0x19
- 2026 0adc A0010000 		.4byte	.LASF34
- 2027 0ae0 A0010000 		.4byte	.LASF34
+ 2026 0adc 91010000 		.4byte	.LASF34
+ 2027 0ae0 91010000 		.4byte	.LASF34
  2028 0ae4 01       		.byte	0x1
- 2029 0ae5 52       		.byte	0x52
+ 2029 0ae5 51       		.byte	0x51
  2030 0ae6 19       		.uleb128 0x19
  2031 0ae7 28000000 		.4byte	.LASF76
  2032 0aeb 28000000 		.4byte	.LASF76
  2033 0aef 07       		.byte	0x7
  2034 0af0 14       		.byte	0x14
  2035 0af1 19       		.uleb128 0x19
- 2036 0af2 44040000 		.4byte	.LASF77
- 2037 0af6 44040000 		.4byte	.LASF77
+ 2036 0af2 35040000 		.4byte	.LASF77
+ 2037 0af6 35040000 		.4byte	.LASF77
  2038 0afa 07       		.byte	0x7
  2039 0afb 17       		.byte	0x17
  2040 0afc 19       		.uleb128 0x19
- 2041 0afd D3050000 		.4byte	.LASF78
- 2042 0b01 D3050000 		.4byte	.LASF78
+ 2041 0afd C4050000 		.4byte	.LASF78
+ 2042 0b01 C4050000 		.4byte	.LASF78
  2043 0b05 08       		.byte	0x8
  2044 0b06 4E       		.byte	0x4e
  2045 0b07 19       		.uleb128 0x19
- 2046 0b08 9C040000 		.4byte	.LASF35
- 2047 0b0c 9C040000 		.4byte	.LASF35
+ 2046 0b08 8D040000 		.4byte	.LASF35
+ 2047 0b0c 8D040000 		.4byte	.LASF35
  2048 0b10 01       		.byte	0x1
- 2049 0b11 63       		.byte	0x63
+ 2049 0b11 62       		.byte	0x62
  2050 0b12 19       		.uleb128 0x19
- 2051 0b13 14060000 		.4byte	.LASF79
- 2052 0b17 14060000 		.4byte	.LASF79
+ 2051 0b13 05060000 		.4byte	.LASF79
+ 2052 0b17 05060000 		.4byte	.LASF79
  2053 0b1b 07       		.byte	0x7
  2054 0b1c 15       		.byte	0x15
  2055 0b1d 19       		.uleb128 0x19
- 2056 0b1e 78010000 		.4byte	.LASF37
- 2057 0b22 78010000 		.4byte	.LASF37
+ 2056 0b1e 69010000 		.4byte	.LASF37
+ 2057 0b22 69010000 		.4byte	.LASF37
  2058 0b26 01       		.byte	0x1
- 2059 0b27 6D       		.byte	0x6d
+ 2059 0b27 6C       		.byte	0x6c
  2060 0b28 19       		.uleb128 0x19
- 2061 0b29 B9020000 		.4byte	.LASF36
- 2062 0b2d B9020000 		.4byte	.LASF36
+ 2061 0b29 AA020000 		.4byte	.LASF36
+ 2062 0b2d AA020000 		.4byte	.LASF36
  2063 0b31 01       		.byte	0x1
- 2064 0b32 6D       		.byte	0x6d
+ 2064 0b32 6C       		.byte	0x6c
  2065 0b33 19       		.uleb128 0x19
- 2066 0b34 DA040000 		.4byte	.LASF39
- 2067 0b38 DA040000 		.4byte	.LASF39
+ 2066 0b34 CB040000 		.4byte	.LASF39
+ 2067 0b38 CB040000 		.4byte	.LASF39
  2068 0b3c 01       		.byte	0x1
- 2069 0b3d 6E       		.byte	0x6e
+ 2069 0b3d 6D       		.byte	0x6d
  2070 0b3e 19       		.uleb128 0x19
- 2071 0b3f 71040000 		.4byte	.LASF38
- 2072 0b43 71040000 		.4byte	.LASF38
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 41
-
-
+ 2071 0b3f 62040000 		.4byte	.LASF38
+ 2072 0b43 62040000 		.4byte	.LASF38
  2073 0b47 01       		.byte	0x1
- 2074 0b48 6E       		.byte	0x6e
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 41
+
+
+ 2074 0b48 6D       		.byte	0x6d
  2075 0b49 19       		.uleb128 0x19
  2076 0b4a 65000000 		.4byte	.LASF40
  2077 0b4e 65000000 		.4byte	.LASF40
  2078 0b52 01       		.byte	0x1
- 2079 0b53 6F       		.byte	0x6f
+ 2079 0b53 6E       		.byte	0x6e
  2080 0b54 19       		.uleb128 0x19
- 2081 0b55 4B030000 		.4byte	.LASF41
- 2082 0b59 4B030000 		.4byte	.LASF41
+ 2081 0b55 3C030000 		.4byte	.LASF41
+ 2082 0b59 3C030000 		.4byte	.LASF41
  2083 0b5d 01       		.byte	0x1
- 2084 0b5e 70       		.byte	0x70
+ 2084 0b5e 6F       		.byte	0x6f
  2085 0b5f 19       		.uleb128 0x19
- 2086 0b60 31040000 		.4byte	.LASF42
- 2087 0b64 31040000 		.4byte	.LASF42
+ 2086 0b60 22040000 		.4byte	.LASF42
+ 2087 0b64 22040000 		.4byte	.LASF42
  2088 0b68 01       		.byte	0x1
- 2089 0b69 76       		.byte	0x76
+ 2089 0b69 75       		.byte	0x75
  2090 0b6a 19       		.uleb128 0x19
- 2091 0b6b 1E040000 		.4byte	.LASF43
- 2092 0b6f 1E040000 		.4byte	.LASF43
+ 2091 0b6b 0F040000 		.4byte	.LASF43
+ 2092 0b6f 0F040000 		.4byte	.LASF43
  2093 0b73 01       		.byte	0x1
- 2094 0b74 77       		.byte	0x77
+ 2094 0b74 76       		.byte	0x76
  2095 0b75 19       		.uleb128 0x19
- 2096 0b76 43010000 		.4byte	.LASF80
- 2097 0b7a 43010000 		.4byte	.LASF80
+ 2096 0b76 DF000000 		.4byte	.LASF80
+ 2097 0b7a DF000000 		.4byte	.LASF80
  2098 0b7e 08       		.byte	0x8
  2099 0b7f 9C       		.byte	0x9c
  2100 0b80 19       		.uleb128 0x19
- 2101 0b81 D2020000 		.4byte	.LASF81
- 2102 0b85 D2020000 		.4byte	.LASF81
+ 2101 0b81 C3020000 		.4byte	.LASF81
+ 2102 0b85 C3020000 		.4byte	.LASF81
  2103 0b89 08       		.byte	0x8
  2104 0b8a 9B       		.byte	0x9b
  2105 0b8b 19       		.uleb128 0x19
- 2106 0b8c 86020000 		.4byte	.LASF44
- 2107 0b90 86020000 		.4byte	.LASF44
+ 2106 0b8c 77020000 		.4byte	.LASF44
+ 2107 0b90 77020000 		.4byte	.LASF44
  2108 0b94 01       		.byte	0x1
- 2109 0b95 86       		.byte	0x86
+ 2109 0b95 85       		.byte	0x85
  2110 0b96 19       		.uleb128 0x19
- 2111 0b97 86030000 		.4byte	.LASF82
- 2112 0b9b 86030000 		.4byte	.LASF82
+ 2111 0b97 77030000 		.4byte	.LASF82
+ 2112 0b9b 77030000 		.4byte	.LASF82
  2113 0b9f 08       		.byte	0x8
  2114 0ba0 A2       		.byte	0xa2
  2115 0ba1 19       		.uleb128 0x19
- 2116 0ba2 0B010000 		.4byte	.LASF45
- 2117 0ba6 0B010000 		.4byte	.LASF45
+ 2116 0ba2 A7000000 		.4byte	.LASF45
+ 2117 0ba6 A7000000 		.4byte	.LASF45
  2118 0baa 01       		.byte	0x1
- 2119 0bab 8A       		.byte	0x8a
+ 2119 0bab 89       		.byte	0x89
  2120 0bac 19       		.uleb128 0x19
- 2121 0bad 24020000 		.4byte	.LASF83
- 2122 0bb1 24020000 		.4byte	.LASF83
+ 2121 0bad 15020000 		.4byte	.LASF83
+ 2122 0bb1 15020000 		.4byte	.LASF83
  2123 0bb5 08       		.byte	0x8
  2124 0bb6 EA       		.byte	0xea
  2125 0bb7 19       		.uleb128 0x19
- 2126 0bb8 B9050000 		.4byte	.LASF84
- 2127 0bbc B9050000 		.4byte	.LASF84
+ 2126 0bb8 AA050000 		.4byte	.LASF84
+ 2127 0bbc AA050000 		.4byte	.LASF84
  2128 0bc0 08       		.byte	0x8
  2129 0bc1 E0       		.byte	0xe0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 42
-
-
  2130 0bc2 1A       		.uleb128 0x1a
- 2131 0bc3 F3010000 		.4byte	.LASF85
- 2132 0bc7 F3010000 		.4byte	.LASF85
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 42
+
+
+ 2131 0bc3 E4010000 		.4byte	.LASF85
+ 2132 0bc7 E4010000 		.4byte	.LASF85
  2133 0bcb 0B       		.byte	0xb
  2134 0bcc 2A03     		.2byte	0x32a
  2135 0bce 19       		.uleb128 0x19
- 2136 0bcf 8C010000 		.4byte	.LASF86
- 2137 0bd3 8C010000 		.4byte	.LASF86
+ 2136 0bcf 7D010000 		.4byte	.LASF86
+ 2137 0bd3 7D010000 		.4byte	.LASF86
  2138 0bd7 05       		.byte	0x5
  2139 0bd8 44       		.byte	0x44
  2140 0bd9 19       		.uleb128 0x19
- 2141 0bda 16040000 		.4byte	.LASF87
- 2142 0bde 16040000 		.4byte	.LASF87
+ 2141 0bda 07040000 		.4byte	.LASF87
+ 2142 0bde 07040000 		.4byte	.LASF87
  2143 0be2 0A       		.byte	0xa
  2144 0be3 37       		.byte	0x37
  2145 0be4 19       		.uleb128 0x19
- 2146 0be5 BC010000 		.4byte	.LASF88
- 2147 0be9 BC010000 		.4byte	.LASF88
+ 2146 0be5 AD010000 		.4byte	.LASF88
+ 2147 0be9 AD010000 		.4byte	.LASF88
  2148 0bed 04       		.byte	0x4
  2149 0bee 20       		.byte	0x20
  2150 0bef 19       		.uleb128 0x19
- 2151 0bf0 D2010000 		.4byte	.LASF89
- 2152 0bf4 D2010000 		.4byte	.LASF89
+ 2151 0bf0 C3010000 		.4byte	.LASF89
+ 2152 0bf4 C3010000 		.4byte	.LASF89
  2153 0bf8 04       		.byte	0x4
  2154 0bf9 22       		.byte	0x22
  2155 0bfa 19       		.uleb128 0x19
- 2156 0bfb 93050000 		.4byte	.LASF90
- 2157 0bff 93050000 		.4byte	.LASF90
+ 2156 0bfb 84050000 		.4byte	.LASF90
+ 2157 0bff 84050000 		.4byte	.LASF90
  2158 0c03 04       		.byte	0x4
  2159 0c04 21       		.byte	0x21
  2160 0c05 00       		.byte	0
@@ -2518,10 +2517,10 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  2184 0015 00       		.byte	0
  2185 0016 0B       		.uleb128 0xb
  2186 0017 0B       		.uleb128 0xb
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 43
-
-
  2187 0018 3E       		.uleb128 0x3e
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 43
+
+
  2188 0019 0B       		.uleb128 0xb
  2189 001a 03       		.uleb128 0x3
  2190 001b 0E       		.uleb128 0xe
@@ -2578,10 +2577,10 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  2241 004e 38       		.uleb128 0x38
  2242 004f 0B       		.uleb128 0xb
  2243 0050 00       		.byte	0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 44
-
-
  2244 0051 00       		.byte	0
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 44
+
+
  2245 0052 07       		.uleb128 0x7
  2246 0053 0D       		.uleb128 0xd
  2247 0054 00       		.byte	0
@@ -2638,10 +2637,10 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  2298 0088 19       		.uleb128 0x19
  2299 0089 01       		.uleb128 0x1
  2300 008a 13       		.uleb128 0x13
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 45
-
-
  2301 008b 00       		.byte	0
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 45
+
+
  2302 008c 00       		.byte	0
  2303 008d 0B       		.uleb128 0xb
  2304 008e 05       		.uleb128 0x5
@@ -2698,10 +2697,10 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  2355 00c5 01       		.uleb128 0x1
  2356 00c6 31       		.uleb128 0x31
  2357 00c7 13       		.uleb128 0x13
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 46
-
-
  2358 00c8 01       		.uleb128 0x1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 46
+
+
  2359 00c9 13       		.uleb128 0x13
  2360 00ca 00       		.byte	0
  2361 00cb 00       		.byte	0
@@ -2758,10 +2757,10 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  2412 0104 00       		.byte	0
  2413 0105 00       		.byte	0
  2414 0106 14       		.uleb128 0x14
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 47
-
-
  2415 0107 34       		.uleb128 0x34
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 47
+
+
  2416 0108 00       		.byte	0
  2417 0109 03       		.uleb128 0x3
  2418 010a 0E       		.uleb128 0xe
@@ -2818,10 +2817,10 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  2469 013d 34       		.uleb128 0x34
  2470 013e 00       		.byte	0
  2471 013f 03       		.uleb128 0x3
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 48
-
-
  2472 0140 0E       		.uleb128 0xe
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 48
+
+
  2473 0141 3A       		.uleb128 0x3a
  2474 0142 0B       		.uleb128 0xb
  2475 0143 3B       		.uleb128 0x3b
@@ -2878,10 +2877,10 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  2526 000a 50       		.byte	0x50
  2527 000b 09000000 		.4byte	.LVL1-1
  2528 000f 20000000 		.4byte	.LVL4
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 49
-
-
  2529 0013 0100     		.2byte	0x1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 49
+
+
  2530 0015 54       		.byte	0x54
  2531 0016 20000000 		.4byte	.LVL4
  2532 001a 22000000 		.4byte	.LFE35
@@ -2938,10 +2937,10 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  2583 0097 0100     		.2byte	0x1
  2584 0099 56       		.byte	0x56
  2585 009a 00000000 		.4byte	0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 50
-
-
  2586 009e 00000000 		.4byte	0
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 50
+
+
  2587              	.LLST4:
  2588 00a2 24000000 		.4byte	.LVL13
  2589 00a6 E2020000 		.4byte	.LVL104
@@ -2973,8 +2972,8 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  2615 0014 00000000 		.4byte	0
  2616              		.section	.debug_line,"",%progbits
  2617              	.Ldebug_line0:
- 2618 0000 4E020000 		.section	.debug_str,"MS",%progbits,1
- 2618      0200BA01 
+ 2618 0000 4B020000 		.section	.debug_str,"MS",%progbits,1
+ 2618      0200B701 
  2618      00000201 
  2618      FB0E0D00 
  2618      01010101 
@@ -2998,10 +2997,10 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  2626      76617469 
  2626      7665436F 
  2626      6E737449 
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 51
-
-
  2626      73536574 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 51
+
+
  2627              	.LASF64:
  2628 003d 41737365 		.ascii	"AssembleChipTypeReportPacket\000"
  2628      6D626C65 
@@ -3018,460 +3017,458 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 1
  2632      6E766572 
  2632      73696F6E 
  2632      00
- 2633              	.LASF93:
- 2634 0076 433A5C55 		.ascii	"C:\\Users\\M4rz4n\\Desktop\\Husky Robotics\\Firmwar"
- 2634      73657273 
- 2634      5C4D3472 
- 2634      7A346E5C 
- 2634      4465736B 
- 2635 00a4 655C424C 		.ascii	"e\\BLDC\\BLDC_Motor_Board_PY2023\\BLDC_Motor_Board."
- 2635      44435C42 
- 2635      4C44435F 
- 2635      4D6F746F 
- 2635      725F426F 
- 2636 00d4 63796473 		.ascii	"cydsn\000"
- 2636      6E00
- 2637              	.LASF4:
- 2638 00da 73686F72 		.ascii	"short int\000"
- 2638      7420696E 
- 2638      7400
- 2639              	.LASF71:
- 2640 00e4 47657450 		.ascii	"GetPFromPacket\000"
- 2640      46726F6D 
+ 2633              	.LASF4:
+ 2634 0076 73686F72 		.ascii	"short int\000"
+ 2634      7420696E 
+ 2634      7400
+ 2635              	.LASF71:
+ 2636 0080 47657450 		.ascii	"GetPFromPacket\000"
+ 2636      46726F6D 
+ 2636      5061636B 
+ 2636      657400
+ 2637              	.LASF18:
+ 2638 008f 73697A65 		.ascii	"sizetype\000"
+ 2638      74797065 
+ 2638      00
+ 2639              	.LASF27:
+ 2640 0098 72656365 		.ascii	"receivedPacket\000"
+ 2640      69766564 
  2640      5061636B 
  2640      657400
- 2641              	.LASF18:
- 2642 00f3 73697A65 		.ascii	"sizetype\000"
- 2642      74797065 
+ 2641              	.LASF45:
+ 2642 00a7 5365744D 		.ascii	"SetMaxPIDPWM\000"
+ 2642      61785049 
+ 2642      4450574D 
  2642      00
- 2643              	.LASF27:
- 2644 00fc 72656365 		.ascii	"receivedPacket\000"
- 2644      69766564 
- 2644      5061636B 
- 2644      657400
- 2645              	.LASF45:
- 2646 010b 5365744D 		.ascii	"SetMaxPIDPWM\000"
- 2646      61785049 
- 2646      4450574D 
- 2646      00
- 2647              	.LASF11:
- 2648 0118 6C6F6E67 		.ascii	"long long unsigned int\000"
- 2648      206C6F6E 
- 2648      6720756E 
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 52
+ 2643              	.LASF11:
+ 2644 00b4 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2644      206C6F6E 
+ 2644      6720756E 
+ 2644      7369676E 
+ 2644      65642069 
+ 2645              	.LASF57:
+ 2646 00cb 656E635F 		.ascii	"enc_lim_1\000"
+ 2646      6C696D5F 
+ 2646      3100
+ 2647              	.LASF58:
+ 2648 00d5 656E635F 		.ascii	"enc_lim_2\000"
+ 2648      6C696D5F 
+ 2648      3200
+ 2649              	.LASF80:
+ 2650 00df 47657445 		.ascii	"GetEncoderZeroFromPacket\000"
+ 2650      6E636F64 
+ 2650      65725A65 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 52
 
 
- 2648      7369676E 
- 2648      65642069 
- 2649              	.LASF57:
- 2650 012f 656E635F 		.ascii	"enc_lim_1\000"
- 2650      6C696D5F 
- 2650      3100
- 2651              	.LASF58:
- 2652 0139 656E635F 		.ascii	"enc_lim_2\000"
- 2652      6C696D5F 
- 2652      3200
- 2653              	.LASF80:
- 2654 0143 47657445 		.ascii	"GetEncoderZeroFromPacket\000"
- 2654      6E636F64 
- 2654      65725A65 
- 2654      726F4672 
- 2654      6F6D5061 
- 2655              	.LASF70:
- 2656 015c 44697370 		.ascii	"DisplayErrorCode\000"
- 2656      6C617945 
- 2656      72726F72 
- 2656      436F6465 
- 2656      00
- 2657              	.LASF5:
- 2658 016d 5F5F7569 		.ascii	"__uint16_t\000"
- 2658      6E743136 
- 2658      5F7400
- 2659              	.LASF37:
- 2660 0178 47657450 		.ascii	"GetPotADCFromPacket\000"
- 2660      6F744144 
- 2660      4346726F 
- 2660      6D506163 
- 2660      6B657400 
- 2661              	.LASF86:
- 2662 018c 4465636F 		.ascii	"DecodeTelemetryType\000"
- 2662      64655465 
- 2662      6C656D65 
- 2662      74727954 
- 2662      79706500 
- 2663              	.LASF34:
- 2664 01a0 5365746B 		.ascii	"SetkDerivative\000"
- 2664      44657269 
- 2664      76617469 
- 2664      766500
- 2665              	.LASF26:
- 2666 01af 7061636B 		.ascii	"packetToSend\000"
- 2666      6574546F 
- 2666      53656E64 
- 2666      00
- 2667              	.LASF88:
- 2668 01bc 47657444 		.ascii	"GetDeviceSerialNumber\000"
- 2668      65766963 
- 2668      65536572 
- 2668      69616C4E 
- 2668      756D6265 
- 2669              	.LASF89:
- 2670 01d2 47657453 		.ascii	"GetSenderDeviceGroupCode\000"
- 2670      656E6465 
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 53
+ 2650      726F4672 
+ 2650      6F6D5061 
+ 2651              	.LASF70:
+ 2652 00f8 44697370 		.ascii	"DisplayErrorCode\000"
+ 2652      6C617945 
+ 2652      72726F72 
+ 2652      436F6465 
+ 2652      00
+ 2653              	.LASF93:
+ 2654 0109 433A5C55 		.ascii	"C:\\Users\\casey\\Desktop\\Robotics Stuff\\BLDC_Mot"
+ 2654      73657273 
+ 2654      5C636173 
+ 2654      65795C44 
+ 2654      65736B74 
+ 2655 0137 6F725F42 		.ascii	"or_Board_PY2023\\BLDC_Motor_Board.cydsn\000"
+ 2655      6F617264 
+ 2655      5F505932 
+ 2655      3032335C 
+ 2655      424C4443 
+ 2656              	.LASF5:
+ 2657 015e 5F5F7569 		.ascii	"__uint16_t\000"
+ 2657      6E743136 
+ 2657      5F7400
+ 2658              	.LASF37:
+ 2659 0169 47657450 		.ascii	"GetPotADCFromPacket\000"
+ 2659      6F744144 
+ 2659      4346726F 
+ 2659      6D506163 
+ 2659      6B657400 
+ 2660              	.LASF86:
+ 2661 017d 4465636F 		.ascii	"DecodeTelemetryType\000"
+ 2661      64655465 
+ 2661      6C656D65 
+ 2661      74727954 
+ 2661      79706500 
+ 2662              	.LASF34:
+ 2663 0191 5365746B 		.ascii	"SetkDerivative\000"
+ 2663      44657269 
+ 2663      76617469 
+ 2663      766500
+ 2664              	.LASF26:
+ 2665 01a0 7061636B 		.ascii	"packetToSend\000"
+ 2665      6574546F 
+ 2665      53656E64 
+ 2665      00
+ 2666              	.LASF88:
+ 2667 01ad 47657444 		.ascii	"GetDeviceSerialNumber\000"
+ 2667      65766963 
+ 2667      65536572 
+ 2667      69616C4E 
+ 2667      756D6265 
+ 2668              	.LASF89:
+ 2669 01c3 47657453 		.ascii	"GetSenderDeviceGroupCode\000"
+ 2669      656E6465 
+ 2669      72446576 
+ 2669      69636547 
+ 2669      726F7570 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 53
 
 
- 2670      72446576 
- 2670      69636547 
- 2670      726F7570 
- 2671              	.LASF13:
- 2672 01eb 75696E74 		.ascii	"uint8_t\000"
- 2672      385F7400 
- 2673              	.LASF85:
- 2674 01f3 55415254 		.ascii	"UART_UartPutString\000"
- 2674      5F556172 
- 2674      74507574 
- 2674      53747269 
- 2674      6E6700
- 2675              	.LASF75:
- 2676 0206 47657444 		.ascii	"GetDFromPacket\000"
- 2676      46726F6D 
- 2676      5061636B 
- 2676      657400
- 2677              	.LASF73:
- 2678 0215 47657449 		.ascii	"GetIFromPacket\000"
- 2678      46726F6D 
- 2678      5061636B 
- 2678      657400
- 2679              	.LASF83:
- 2680 0224 4765744C 		.ascii	"GetLimSwNumFromPacket\000"
- 2680      696D5377 
- 2680      4E756D46 
- 2680      726F6D50 
- 2680      61636B65 
- 2681              	.LASF50:
- 2682 023a 44697361 		.ascii	"DisablePID\000"
- 2682      626C6550 
- 2682      494400
- 2683              	.LASF48:
- 2684 0245 7365745F 		.ascii	"set_PWM\000"
- 2684      50574D00 
- 2685              	.LASF65:
- 2686 024d 4765744D 		.ascii	"GetModeFromPacket\000"
- 2686      6F646546 
- 2686      726F6D50 
- 2686      61636B65 
- 2686      7400
- 2687              	.LASF20:
- 2688 025f 666C6F61 		.ascii	"float\000"
- 2688      7400
- 2689              	.LASF10:
- 2690 0265 6C6F6E67 		.ascii	"long long int\000"
- 2690      206C6F6E 
- 2690      6720696E 
- 2690      7400
- 2691              	.LASF51:
- 2692 0273 51756164 		.ascii	"QuadDec_SetCounter\000"
- 2692      4465635F 
- 2692      53657443 
- 2692      6F756E74 
- 2692      657200
- 2693              	.LASF44:
- 2694 0286 53657445 		.ascii	"SetEncoderDir\000"
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 54
+ 2670              	.LASF13:
+ 2671 01dc 75696E74 		.ascii	"uint8_t\000"
+ 2671      385F7400 
+ 2672              	.LASF85:
+ 2673 01e4 55415254 		.ascii	"UART_UartPutString\000"
+ 2673      5F556172 
+ 2673      74507574 
+ 2673      53747269 
+ 2673      6E6700
+ 2674              	.LASF75:
+ 2675 01f7 47657444 		.ascii	"GetDFromPacket\000"
+ 2675      46726F6D 
+ 2675      5061636B 
+ 2675      657400
+ 2676              	.LASF73:
+ 2677 0206 47657449 		.ascii	"GetIFromPacket\000"
+ 2677      46726F6D 
+ 2677      5061636B 
+ 2677      657400
+ 2678              	.LASF83:
+ 2679 0215 4765744C 		.ascii	"GetLimSwNumFromPacket\000"
+ 2679      696D5377 
+ 2679      4E756D46 
+ 2679      726F6D50 
+ 2679      61636B65 
+ 2680              	.LASF50:
+ 2681 022b 44697361 		.ascii	"DisablePID\000"
+ 2681      626C6550 
+ 2681      494400
+ 2682              	.LASF48:
+ 2683 0236 7365745F 		.ascii	"set_PWM\000"
+ 2683      50574D00 
+ 2684              	.LASF65:
+ 2685 023e 4765744D 		.ascii	"GetModeFromPacket\000"
+ 2685      6F646546 
+ 2685      726F6D50 
+ 2685      61636B65 
+ 2685      7400
+ 2686              	.LASF20:
+ 2687 0250 666C6F61 		.ascii	"float\000"
+ 2687      7400
+ 2688              	.LASF10:
+ 2689 0256 6C6F6E67 		.ascii	"long long int\000"
+ 2689      206C6F6E 
+ 2689      6720696E 
+ 2689      7400
+ 2690              	.LASF51:
+ 2691 0264 51756164 		.ascii	"QuadDec_SetCounter\000"
+ 2691      4465635F 
+ 2691      53657443 
+ 2691      6F756E74 
+ 2691      657200
+ 2692              	.LASF44:
+ 2693 0277 53657445 		.ascii	"SetEncoderDir\000"
+ 2693      6E636F64 
+ 2693      65724469 
+ 2693      7200
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 54
 
 
- 2694      6E636F64 
- 2694      65724469 
- 2694      7200
- 2695              	.LASF19:
- 2696 0294 43414E50 		.ascii	"CANPacket\000"
- 2696      61636B65 
- 2696      7400
- 2697              	.LASF8:
- 2698 029e 6C6F6E67 		.ascii	"long int\000"
- 2698      20696E74 
- 2698      00
- 2699              	.LASF2:
- 2700 02a7 5F5F7569 		.ascii	"__uint8_t\000"
- 2700      6E74385F 
- 2700      7400
- 2701              	.LASF53:
- 2702 02b1 6E657874 		.ascii	"nextPWM\000"
- 2702      50574D00 
- 2703              	.LASF36:
- 2704 02b9 73657454 		.ascii	"setTickMin\000"
- 2704      69636B4D 
- 2704      696E00
- 2705              	.LASF1:
- 2706 02c4 756E7369 		.ascii	"unsigned char\000"
- 2706      676E6564 
- 2706      20636861 
- 2706      7200
- 2707              	.LASF81:
- 2708 02d2 47657445 		.ascii	"GetEncoderDirectionFromPacket\000"
- 2708      6E636F64 
- 2708      65724469 
- 2708      72656374 
- 2708      696F6E46 
- 2709              	.LASF23:
- 2710 02f0 6C6F6E67 		.ascii	"long double\000"
- 2710      20646F75 
- 2710      626C6500 
- 2711              	.LASF59:
- 2712 02fc 41737365 		.ascii	"AssembleTelemetryReportPacket\000"
- 2712      6D626C65 
- 2712      54656C65 
- 2712      6D657472 
- 2712      79526570 
- 2713              	.LASF67:
- 2714 031a 476F746F 		.ascii	"GotoUninitState\000"
- 2714      556E696E 
- 2714      69745374 
- 2714      61746500 
- 2715              	.LASF49:
- 2716 032a 436C6561 		.ascii	"ClearPIDProgress\000"
- 2716      72504944 
- 2716      50726F67 
- 2716      72657373 
- 2716      00
- 2717              	.LASF31:
- 2718 033b 47657450 		.ascii	"GetPositionmDeg\000"
- 2718      6F736974 
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 55
+ 2694              	.LASF19:
+ 2695 0285 43414E50 		.ascii	"CANPacket\000"
+ 2695      61636B65 
+ 2695      7400
+ 2696              	.LASF8:
+ 2697 028f 6C6F6E67 		.ascii	"long int\000"
+ 2697      20696E74 
+ 2697      00
+ 2698              	.LASF2:
+ 2699 0298 5F5F7569 		.ascii	"__uint8_t\000"
+ 2699      6E74385F 
+ 2699      7400
+ 2700              	.LASF53:
+ 2701 02a2 6E657874 		.ascii	"nextPWM\000"
+ 2701      50574D00 
+ 2702              	.LASF36:
+ 2703 02aa 73657454 		.ascii	"setTickMin\000"
+ 2703      69636B4D 
+ 2703      696E00
+ 2704              	.LASF1:
+ 2705 02b5 756E7369 		.ascii	"unsigned char\000"
+ 2705      676E6564 
+ 2705      20636861 
+ 2705      7200
+ 2706              	.LASF81:
+ 2707 02c3 47657445 		.ascii	"GetEncoderDirectionFromPacket\000"
+ 2707      6E636F64 
+ 2707      65724469 
+ 2707      72656374 
+ 2707      696F6E46 
+ 2708              	.LASF23:
+ 2709 02e1 6C6F6E67 		.ascii	"long double\000"
+ 2709      20646F75 
+ 2709      626C6500 
+ 2710              	.LASF59:
+ 2711 02ed 41737365 		.ascii	"AssembleTelemetryReportPacket\000"
+ 2711      6D626C65 
+ 2711      54656C65 
+ 2711      6D657472 
+ 2711      79526570 
+ 2712              	.LASF67:
+ 2713 030b 476F746F 		.ascii	"GotoUninitState\000"
+ 2713      556E696E 
+ 2713      69745374 
+ 2713      61746500 
+ 2714              	.LASF49:
+ 2715 031b 436C6561 		.ascii	"ClearPIDProgress\000"
+ 2715      72504944 
+ 2715      50726F67 
+ 2715      72657373 
+ 2715      00
+ 2716              	.LASF31:
+ 2717 032c 47657450 		.ascii	"GetPositionmDeg\000"
+ 2717      6F736974 
+ 2717      696F6E6D 
+ 2717      44656700 
+ 2718              	.LASF41:
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 55
 
 
- 2718      696F6E6D 
- 2718      44656700 
- 2719              	.LASF41:
- 2720 034b 73657455 		.ascii	"setUsingPot\000"
- 2720      73696E67 
- 2720      506F7400 
- 2721              	.LASF24:
- 2722 0357 53656E64 		.ascii	"SendEncoderData\000"
- 2722      456E636F 
- 2722      64657244 
- 2722      61746100 
- 2723              	.LASF74:
- 2724 0367 496E7465 		.ascii	"IntegralConstIsSet\000"
- 2724      6772616C 
- 2724      436F6E73 
- 2724      74497353 
- 2724      657400
- 2725              	.LASF0:
- 2726 037a 7369676E 		.ascii	"signed char\000"
- 2726      65642063 
- 2726      68617200 
- 2727              	.LASF82:
- 2728 0386 4765744D 		.ascii	"GetMaxPIDPWMFromPacket\000"
- 2728      61785049 
- 2728      4450574D 
- 2728      46726F6D 
- 2728      5061636B 
- 2729              	.LASF92:
- 2730 039d 424C4443 		.ascii	"BLDC_CAN.c\000"
- 2730      5F43414E 
- 2730      2E6300
- 2731              	.LASF12:
- 2732 03a8 756E7369 		.ascii	"unsigned int\000"
- 2732      676E6564 
- 2732      20696E74 
- 2732      00
- 2733              	.LASF15:
- 2734 03b5 75696E74 		.ascii	"uint16_t\000"
- 2734      31365F74 
- 2734      00
- 2735              	.LASF68:
- 2736 03be 4765744D 		.ascii	"GetMode\000"
- 2736      6F646500 
- 2737              	.LASF25:
- 2738 03c6 4E657874 		.ascii	"NextStateFromCAN\000"
- 2738      53746174 
- 2738      6546726F 
- 2738      6D43414E 
- 2738      00
- 2739              	.LASF6:
- 2740 03d7 73686F72 		.ascii	"short unsigned int\000"
- 2740      7420756E 
- 2740      7369676E 
- 2740      65642069 
- 2740      6E7400
- 2741              	.LASF52:
- 2742 03ea 47657450 		.ascii	"GetPotVal\000"
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 56
+ 2719 033c 73657455 		.ascii	"setUsingPot\000"
+ 2719      73696E67 
+ 2719      506F7400 
+ 2720              	.LASF24:
+ 2721 0348 53656E64 		.ascii	"SendEncoderData\000"
+ 2721      456E636F 
+ 2721      64657244 
+ 2721      61746100 
+ 2722              	.LASF74:
+ 2723 0358 496E7465 		.ascii	"IntegralConstIsSet\000"
+ 2723      6772616C 
+ 2723      436F6E73 
+ 2723      74497353 
+ 2723      657400
+ 2724              	.LASF0:
+ 2725 036b 7369676E 		.ascii	"signed char\000"
+ 2725      65642063 
+ 2725      68617200 
+ 2726              	.LASF82:
+ 2727 0377 4765744D 		.ascii	"GetMaxPIDPWMFromPacket\000"
+ 2727      61785049 
+ 2727      4450574D 
+ 2727      46726F6D 
+ 2727      5061636B 
+ 2728              	.LASF92:
+ 2729 038e 424C4443 		.ascii	"BLDC_CAN.c\000"
+ 2729      5F43414E 
+ 2729      2E6300
+ 2730              	.LASF12:
+ 2731 0399 756E7369 		.ascii	"unsigned int\000"
+ 2731      676E6564 
+ 2731      20696E74 
+ 2731      00
+ 2732              	.LASF15:
+ 2733 03a6 75696E74 		.ascii	"uint16_t\000"
+ 2733      31365F74 
+ 2733      00
+ 2734              	.LASF68:
+ 2735 03af 4765744D 		.ascii	"GetMode\000"
+ 2735      6F646500 
+ 2736              	.LASF25:
+ 2737 03b7 4E657874 		.ascii	"NextStateFromCAN\000"
+ 2737      53746174 
+ 2737      6546726F 
+ 2737      6D43414E 
+ 2737      00
+ 2738              	.LASF6:
+ 2739 03c8 73686F72 		.ascii	"short unsigned int\000"
+ 2739      7420756E 
+ 2739      7369676E 
+ 2739      65642069 
+ 2739      6E7400
+ 2740              	.LASF52:
+ 2741 03db 47657450 		.ascii	"GetPotVal\000"
+ 2741      6F745661 
+ 2741      6C00
+ 2742              	.LASF72:
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 56
 
 
- 2742      6F745661 
- 2742      6C00
- 2743              	.LASF72:
- 2744 03f4 506F7369 		.ascii	"PositionConstIsSet\000"
- 2744      74696F6E 
- 2744      436F6E73 
- 2744      74497353 
- 2744      657400
- 2745              	.LASF66:
- 2746 0407 7365745F 		.ascii	"set_speed\000"
- 2746      73706565 
- 2746      6400
- 2747              	.LASF22:
- 2748 0411 63686172 		.ascii	"char\000"
- 2748      00
- 2749              	.LASF87:
- 2750 0416 52656164 		.ascii	"ReadCAN\000"
- 2750      43414E00 
- 2751              	.LASF43:
- 2752 041e 7365746D 		.ascii	"setmDegMax\000"
- 2752      4465674D 
- 2752      617800
- 2753              	.LASF16:
- 2754 0429 696E7433 		.ascii	"int32_t\000"
- 2754      325F7400 
- 2755              	.LASF42:
- 2756 0431 73657454 		.ascii	"setTickMax\000"
- 2756      69636B4D 
- 2756      617800
- 2757              	.LASF14:
- 2758 043c 696E7431 		.ascii	"int16_t\000"
- 2758      365F7400 
- 2759              	.LASF77:
- 2760 0444 50494463 		.ascii	"PIDconstsSet\000"
- 2760      6F6E7374 
- 2760      73536574 
- 2760      00
- 2761              	.LASF69:
- 2762 0451 47657450 		.ascii	"GetPWMFromPacket\000"
- 2762      574D4672 
- 2762      6F6D5061 
- 2762      636B6574 
- 2762      00
- 2763              	.LASF17:
- 2764 0462 64617461 		.ascii	"data\000"
- 2764      00
- 2765              	.LASF61:
- 2766 0467 5365744D 		.ascii	"SetModeTo\000"
- 2766      6F646554 
- 2766      6F00
- 2767              	.LASF38:
- 2768 0471 7365746D 		.ascii	"setmDegMin\000"
- 2768      4465674D 
- 2768      696E00
- 2769              	.LASF9:
- 2770 047c 6C6F6E67 		.ascii	"long unsigned int\000"
- 2770      20756E73 
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 57
+ 2743 03e5 506F7369 		.ascii	"PositionConstIsSet\000"
+ 2743      74696F6E 
+ 2743      436F6E73 
+ 2743      74497353 
+ 2743      657400
+ 2744              	.LASF66:
+ 2745 03f8 7365745F 		.ascii	"set_speed\000"
+ 2745      73706565 
+ 2745      6400
+ 2746              	.LASF22:
+ 2747 0402 63686172 		.ascii	"char\000"
+ 2747      00
+ 2748              	.LASF87:
+ 2749 0407 52656164 		.ascii	"ReadCAN\000"
+ 2749      43414E00 
+ 2750              	.LASF43:
+ 2751 040f 7365746D 		.ascii	"setmDegMax\000"
+ 2751      4465674D 
+ 2751      617800
+ 2752              	.LASF16:
+ 2753 041a 696E7433 		.ascii	"int32_t\000"
+ 2753      325F7400 
+ 2754              	.LASF42:
+ 2755 0422 73657454 		.ascii	"setTickMax\000"
+ 2755      69636B4D 
+ 2755      617800
+ 2756              	.LASF14:
+ 2757 042d 696E7431 		.ascii	"int16_t\000"
+ 2757      365F7400 
+ 2758              	.LASF77:
+ 2759 0435 50494463 		.ascii	"PIDconstsSet\000"
+ 2759      6F6E7374 
+ 2759      73536574 
+ 2759      00
+ 2760              	.LASF69:
+ 2761 0442 47657450 		.ascii	"GetPWMFromPacket\000"
+ 2761      574D4672 
+ 2761      6F6D5061 
+ 2761      636B6574 
+ 2761      00
+ 2762              	.LASF17:
+ 2763 0453 64617461 		.ascii	"data\000"
+ 2763      00
+ 2764              	.LASF61:
+ 2765 0458 5365744D 		.ascii	"SetModeTo\000"
+ 2765      6F646554 
+ 2765      6F00
+ 2766              	.LASF38:
+ 2767 0462 7365746D 		.ascii	"setmDegMin\000"
+ 2767      4465674D 
+ 2767      696E00
+ 2768              	.LASF9:
+ 2769 046d 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2769      20756E73 
+ 2769      69676E65 
+ 2769      6420696E 
+ 2769      7400
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 57
 
 
- 2770      69676E65 
- 2770      6420696E 
- 2770      7400
- 2771              	.LASF46:
- 2772 048e 496E6974 		.ascii	"InitializePID\000"
- 2772      69616C69 
- 2772      7A655049 
- 2772      4400
- 2773              	.LASF35:
- 2774 049c 53657443 		.ascii	"SetConversion\000"
- 2774      6F6E7665 
- 2774      7273696F 
- 2774      6E00
- 2775              	.LASF7:
- 2776 04aa 5F5F696E 		.ascii	"__int32_t\000"
- 2776      7433325F 
- 2776      7400
- 2777              	.LASF54:
- 2778 04b4 6D696C6C 		.ascii	"millidegreeTarget\000"
- 2778      69646567 
- 2778      72656554 
- 2778      61726765 
- 2778      7400
- 2779              	.LASF3:
- 2780 04c6 5F5F696E 		.ascii	"__int16_t\000"
- 2780      7431365F 
- 2780      7400
- 2781              	.LASF29:
- 2782 04d0 73656E64 		.ascii	"sender_DG\000"
- 2782      65725F44 
- 2782      4700
- 2783              	.LASF39:
- 2784 04da 47657450 		.ascii	"GetPotmDegFromPacket\000"
- 2784      6F746D44 
- 2784      65674672 
- 2784      6F6D5061 
- 2784      636B6574 
- 2785              	.LASF91:
- 2786 04ef 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 2786      43313120 
- 2786      352E342E 
- 2786      31203230 
- 2786      31363036 
- 2787 0522 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 2787      20726576 
- 2787      6973696F 
- 2787      6E203233 
- 2787      37373135 
- 2788 0555 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 2788      66756E63 
- 2788      74696F6E 
- 2788      2D736563 
- 2788      74696F6E 
- 2789              	.LASF55:
- 2790 057d 626F756E 		.ascii	"bound_set1\000"
- 2790      645F7365 
- 2790      743100
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccOtzu5V.s 			page 58
+ 2770              	.LASF46:
+ 2771 047f 496E6974 		.ascii	"InitializePID\000"
+ 2771      69616C69 
+ 2771      7A655049 
+ 2771      4400
+ 2772              	.LASF35:
+ 2773 048d 53657443 		.ascii	"SetConversion\000"
+ 2773      6F6E7665 
+ 2773      7273696F 
+ 2773      6E00
+ 2774              	.LASF7:
+ 2775 049b 5F5F696E 		.ascii	"__int32_t\000"
+ 2775      7433325F 
+ 2775      7400
+ 2776              	.LASF54:
+ 2777 04a5 6D696C6C 		.ascii	"millidegreeTarget\000"
+ 2777      69646567 
+ 2777      72656554 
+ 2777      61726765 
+ 2777      7400
+ 2778              	.LASF3:
+ 2779 04b7 5F5F696E 		.ascii	"__int16_t\000"
+ 2779      7431365F 
+ 2779      7400
+ 2780              	.LASF29:
+ 2781 04c1 73656E64 		.ascii	"sender_DG\000"
+ 2781      65725F44 
+ 2781      4700
+ 2782              	.LASF39:
+ 2783 04cb 47657450 		.ascii	"GetPotmDegFromPacket\000"
+ 2783      6F746D44 
+ 2783      65674672 
+ 2783      6F6D5061 
+ 2783      636B6574 
+ 2784              	.LASF91:
+ 2785 04e0 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2785      43313120 
+ 2785      352E342E 
+ 2785      31203230 
+ 2785      31363036 
+ 2786 0513 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 2786      20726576 
+ 2786      6973696F 
+ 2786      6E203233 
+ 2786      37373135 
+ 2787 0546 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2787      66756E63 
+ 2787      74696F6E 
+ 2787      2D736563 
+ 2787      74696F6E 
+ 2788              	.LASF55:
+ 2789 056e 626F756E 		.ascii	"bound_set1\000"
+ 2789      645F7365 
+ 2789      743100
+ 2790              	.LASF56:
+ 2791 0579 626F756E 		.ascii	"bound_set2\000"
+ 2791      645F7365 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccnZ85xb.s 			page 58
 
 
- 2791              	.LASF56:
- 2792 0588 626F756E 		.ascii	"bound_set2\000"
- 2792      645F7365 
- 2792      743200
- 2793              	.LASF90:
- 2794 0593 47657453 		.ascii	"GetSenderDeviceSerialNumber\000"
- 2794      656E6465 
- 2794      72446576 
- 2794      69636553 
- 2794      65726961 
- 2795              	.LASF30:
- 2796 05af 73656E64 		.ascii	"sender_SN\000"
- 2796      65725F53 
- 2796      4E00
- 2797              	.LASF84:
- 2798 05b9 47657445 		.ascii	"GetEncoderValueFromPacket\000"
- 2798      6E636F64 
- 2798      65725661 
- 2798      6C756546 
- 2798      726F6D50 
- 2799              	.LASF78:
- 2800 05d3 47657445 		.ascii	"GetEncoderPPJRFromPacket\000"
- 2800      6E636F64 
- 2800      65725050 
- 2800      4A524672 
- 2800      6F6D5061 
- 2801              	.LASF47:
- 2802 05ec 456E6162 		.ascii	"EnablePID\000"
- 2802      6C655049 
- 2802      4400
- 2803              	.LASF21:
- 2804 05f6 646F7562 		.ascii	"double\000"
- 2804      6C6500
- 2805              	.LASF63:
- 2806 05fd 47657450 		.ascii	"GetPIDTargetFromPacket\000"
- 2806      49445461 
- 2806      72676574 
- 2806      46726F6D 
- 2806      5061636B 
- 2807              	.LASF79:
- 2808 0614 50504A52 		.ascii	"PPJRConstIsSet\000"
- 2808      436F6E73 
- 2808      74497353 
- 2808      657400
- 2809              	.LASF94:
- 2810 0623 6D6F746F 		.ascii	"motor_serial\000"
- 2810      725F7365 
- 2810      7269616C 
- 2810      00
- 2811              	.LASF28:
- 2812 0630 7061636B 		.ascii	"packageID\000"
- 2812      61676549 
- 2812      4400
- 2813              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 2791      743200
+ 2792              	.LASF90:
+ 2793 0584 47657453 		.ascii	"GetSenderDeviceSerialNumber\000"
+ 2793      656E6465 
+ 2793      72446576 
+ 2793      69636553 
+ 2793      65726961 
+ 2794              	.LASF30:
+ 2795 05a0 73656E64 		.ascii	"sender_SN\000"
+ 2795      65725F53 
+ 2795      4E00
+ 2796              	.LASF84:
+ 2797 05aa 47657445 		.ascii	"GetEncoderValueFromPacket\000"
+ 2797      6E636F64 
+ 2797      65725661 
+ 2797      6C756546 
+ 2797      726F6D50 
+ 2798              	.LASF78:
+ 2799 05c4 47657445 		.ascii	"GetEncoderPPJRFromPacket\000"
+ 2799      6E636F64 
+ 2799      65725050 
+ 2799      4A524672 
+ 2799      6F6D5061 
+ 2800              	.LASF47:
+ 2801 05dd 456E6162 		.ascii	"EnablePID\000"
+ 2801      6C655049 
+ 2801      4400
+ 2802              	.LASF21:
+ 2803 05e7 646F7562 		.ascii	"double\000"
+ 2803      6C6500
+ 2804              	.LASF63:
+ 2805 05ee 47657450 		.ascii	"GetPIDTargetFromPacket\000"
+ 2805      49445461 
+ 2805      72676574 
+ 2805      46726F6D 
+ 2805      5061636B 
+ 2806              	.LASF79:
+ 2807 0605 50504A52 		.ascii	"PPJRConstIsSet\000"
+ 2807      436F6E73 
+ 2807      74497353 
+ 2807      657400
+ 2808              	.LASF94:
+ 2809 0614 6D6F746F 		.ascii	"motor_serial\000"
+ 2809      725F7365 
+ 2809      7269616C 
+ 2809      00
+ 2810              	.LASF28:
+ 2811 0621 7061636B 		.ascii	"packageID\000"
+ 2811      61676549 
+ 2811      4400
+ 2812              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

@@ -26,7 +26,6 @@ extern int32_t enc_lim_2;
 extern char txData[TX_DATA_SIZE];
 extern uint8 address;
 
-
 void SendEncoderData (CANPacket *packetToSend){
     AssembleTelemetryReportPacket(packetToSend, DEVICE_GROUP_JETSON, DEVICE_SERIAL_JETSON, 
         PACKET_TELEMETRY_ANG_POSITION, GetPositionmDeg());

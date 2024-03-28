@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
   28:HindsightCAN\PortFiles/PortPSOC_CY8C4248AZI_L485.c **** #define STATUS_MAILBOX1 0x2
   29:HindsightCAN\PortFiles/PortPSOC_CY8C4248AZI_L485.c **** #define STATUS_MAILBOX2 0x4
   30:HindsightCAN\PortFiles/PortPSOC_CY8C4248AZI_L485.c **** #define STATUS_MAILBOX3 0x8
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 2
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 2
 
 
   31:HindsightCAN\PortFiles/PortPSOC_CY8C4248AZI_L485.c **** #define STATUS_MAILBOX4 0x10
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
   62              		.loc 1 50 0
   63 0020 8001     		lsls	r0, r0, #6
   64 0022 0843     		orrs	r0, r1
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 3
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 3
 
 
   65 0024 4005     		lsls	r0, r0, #21
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  104 005c A760     		str	r7, [r4, #8]
   66:HindsightCAN\PortFiles/PortPSOC_CY8C4248AZI_L485.c ****     rxMailbox.rxcmd = CAN_RX_CMD_REG(CAN_RX_MAILBOX_2);//need to know what this is
  105              		.loc 1 66 0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 4
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 4
 
 
  106 005e 0C4B     		ldr	r3, .L2+24
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  151 0000 10B5     		push	{r4, lr}
  152              		.cfi_def_cfa_offset 8
  153              		.cfi_offset 4, -8
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 5
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 5
 
 
  154              		.cfi_offset 14, -4
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  194 0034 0220     		movs	r0, #2
  195              	.LVL14:
  196 0036 00E0     		b	.L5
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 6
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 6
 
 
  197              	.L7:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  225              		@ sp needed
  226 0004 7047     		bx	lr
  227              	.L10:
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 7
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 7
 
 
  228 0006 C046     		.align	2
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  273              		.loc 1 123 0
  274 0000 0220     		movs	r0, #2
  275              		@ sp needed
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 8
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 8
 
 
  276 0002 7047     		bx	lr
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  320 002c 9A42     		cmp	r2, r3
  321 002e 07D9     		bls	.L16
  134:HindsightCAN\PortFiles/PortPSOC_CY8C4248AZI_L485.c ****         return (FIFO_SIZE - latestMessageHead) + latestMessageTail;
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 9
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 9
 
 
  322              		.loc 1 134 0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  366 000e 0F2B     		cmp	r3, #15
  367 0010 02D9     		bls	.L22
  144:HindsightCAN\PortFiles/PortPSOC_CY8C4248AZI_L485.c ****         latestMessageTail = 0;
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 10
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 10
 
 
  368              		.loc 1 144 0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  413              		.section	.text.CAN_FLAG_ISR,"ax",%progbits
  414              		.align	2
  415              		.global	CAN_FLAG_ISR
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 11
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 11
 
 
  416              		.code	16
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  178:HindsightCAN\PortFiles/PortPSOC_CY8C4248AZI_L485.c ****         mailbox = CAN_RX_MAILBOX_1;
  179:HindsightCAN\PortFiles/PortPSOC_CY8C4248AZI_L485.c ****     }    
  180:HindsightCAN\PortFiles/PortPSOC_CY8C4248AZI_L485.c ****     else if(statusReg & 0b100) { // mailbox2 is full (group broadcast)
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 12
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 12
 
 
  446              		.loc 1 180 0
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  490              		.loc 1 187 0 discriminator 2
  491 0048 6168     		ldr	r1, [r4, #4]
  492 004a C908     		lsrs	r1, r1, #3
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 13
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 13
 
 
  493 004c 89B2     		uxth	r1, r1
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  543 00a4 8D00     		lsls	r5, r1, #2
  544 00a6 5D19     		adds	r5, r3, r5
  545 00a8 6871     		strb	r0, [r5, #5]
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 14
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 14
 
 
  192:HindsightCAN\PortFiles/PortPSOC_CY8C4248AZI_L485.c ****     latestMessage[latestMessageTail].data[3] = CAN_RX_DATA_BYTE4(mailbox);
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  595 0102 9100     		lsls	r1, r2, #2
  596 0104 5B18     		adds	r3, r3, r1
  597 0106 9872     		strb	r0, [r3, #10]
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 15
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 15
 
 
  197:HindsightCAN\PortFiles/PortPSOC_CY8C4248AZI_L485.c ****     countAddFIFO();
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  644 000e 0133     		adds	r3, r3, #1
  645 0010 DBB2     		uxtb	r3, r3
  646 0012 5370     		strb	r3, [r2, #1]
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 16
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 16
 
 
  158:HindsightCAN\PortFiles/PortPSOC_CY8C4248AZI_L485.c ****             latestMessageHead = 0;
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  102:HindsightCAN\PortFiles/PortPSOC_CY8C4248AZI_L485.c ****     {
  695              		.loc 1 102 0
  696 0012 1B78     		ldrb	r3, [r3]
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 17
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 17
 
 
  697 0014 002B     		cmp	r3, #0
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  745              		.global	latestMessageTail
  746              		.global	latestMessageHead
  747              		.comm	latestMessage,192,4
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 18
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 18
 
 
  748              		.global	messageReadFlag
@@ -1061,63 +1061,63 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  785 0006 00000000 		.4byte	.Ldebug_abbrev0
  786 000a 04       		.byte	0x4
  787 000b 01       		.uleb128 0x1
- 788 000c 3D010000 		.4byte	.LASF73
+ 788 000c 2E010000 		.4byte	.LASF73
  789 0010 0C       		.byte	0xc
- 790 0011 D3010000 		.4byte	.LASF74
- 791 0015 4E000000 		.4byte	.LASF75
+ 790 0011 C4010000 		.4byte	.LASF74
+ 791 0015 B8000000 		.4byte	.LASF75
  792 0019 00000000 		.4byte	.Ldebug_ranges0+0
  793 001d 00000000 		.4byte	0
  794 0021 00000000 		.4byte	.Ldebug_line0
  795 0025 02       		.uleb128 0x2
  796 0026 01       		.byte	0x1
  797 0027 06       		.byte	0x6
- 798 0028 39020000 		.4byte	.LASF0
+ 798 0028 2A020000 		.4byte	.LASF0
  799 002c 03       		.uleb128 0x3
- 800 002d 8F020000 		.4byte	.LASF3
+ 800 002d 80020000 		.4byte	.LASF3
  801 0031 02       		.byte	0x2
  802 0032 1D       		.byte	0x1d
  803 0033 37000000 		.4byte	0x37
  804 0037 02       		.uleb128 0x2
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 19
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 19
 
 
  805 0038 01       		.byte	0x1
  806 0039 08       		.byte	0x8
- 807 003a D5020000 		.4byte	.LASF1
+ 807 003a C6020000 		.4byte	.LASF1
  808 003e 02       		.uleb128 0x2
  809 003f 02       		.byte	0x2
  810 0040 05       		.byte	0x5
- 811 0041 B2000000 		.4byte	.LASF2
+ 811 0041 4E000000 		.4byte	.LASF2
  812 0045 03       		.uleb128 0x3
- 813 0046 1C010000 		.4byte	.LASF4
+ 813 0046 0D010000 		.4byte	.LASF4
  814 004a 02       		.byte	0x2
  815 004b 2B       		.byte	0x2b
  816 004c 50000000 		.4byte	0x50
  817 0050 02       		.uleb128 0x2
  818 0051 02       		.byte	0x2
  819 0052 07       		.byte	0x7
- 820 0053 52030000 		.4byte	.LASF5
+ 820 0053 43030000 		.4byte	.LASF5
  821 0057 02       		.uleb128 0x2
  822 0058 04       		.byte	0x4
  823 0059 05       		.byte	0x5
- 824 005a 86020000 		.4byte	.LASF6
+ 824 005a 77020000 		.4byte	.LASF6
  825 005e 03       		.uleb128 0x3
- 826 005f 99020000 		.4byte	.LASF7
+ 826 005f 8A020000 		.4byte	.LASF7
  827 0063 02       		.byte	0x2
  828 0064 41       		.byte	0x41
  829 0065 69000000 		.4byte	0x69
  830 0069 02       		.uleb128 0x2
  831 006a 04       		.byte	0x4
  832 006b 07       		.byte	0x7
- 833 006c E5030000 		.4byte	.LASF8
+ 833 006c D6030000 		.4byte	.LASF8
  834 0070 02       		.uleb128 0x2
  835 0071 08       		.byte	0x8
  836 0072 05       		.byte	0x5
- 837 0073 4B020000 		.4byte	.LASF9
+ 837 0073 3C020000 		.4byte	.LASF9
  838 0077 02       		.uleb128 0x2
  839 0078 08       		.byte	0x8
  840 0079 07       		.byte	0x7
- 841 007a 03030000 		.4byte	.LASF10
+ 841 007a F4020000 		.4byte	.LASF10
  842 007e 04       		.uleb128 0x4
  843 007f 04       		.byte	0x4
  844 0080 05       		.byte	0x5
@@ -1125,20 +1125,20 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  846 0085 02       		.uleb128 0x2
  847 0086 04       		.byte	0x4
  848 0087 07       		.byte	0x7
- 849 0088 23030000 		.4byte	.LASF11
+ 849 0088 14030000 		.4byte	.LASF11
  850 008c 03       		.uleb128 0x3
- 851 008d CB010000 		.4byte	.LASF12
+ 851 008d BC010000 		.4byte	.LASF12
  852 0091 03       		.byte	0x3
  853 0092 18       		.byte	0x18
  854 0093 2C000000 		.4byte	0x2c
  855 0097 03       		.uleb128 0x3
- 856 0098 30030000 		.4byte	.LASF13
+ 856 0098 21030000 		.4byte	.LASF13
  857 009c 03       		.byte	0x3
  858 009d 24       		.byte	0x24
  859 009e 45000000 		.4byte	0x45
  860 00a2 03       		.uleb128 0x3
- 861 00a3 1A030000 		.4byte	.LASF14
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 20
+ 861 00a3 0B030000 		.4byte	.LASF14
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 20
 
 
  862 00a7 03       		.byte	0x3
@@ -1162,7 +1162,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  880 00c7 8C000000 		.4byte	0x8c
  881 00cb 02       		.byte	0x2
  882 00cc 07       		.uleb128 0x7
- 883 00cd D4030000 		.4byte	.LASF15
+ 883 00cd C5030000 		.4byte	.LASF15
  884 00d1 04       		.byte	0x4
  885 00d2 13       		.byte	0x13
  886 00d3 D9000000 		.4byte	0xd9
@@ -1178,46 +1178,46 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  896 00e9 02       		.uleb128 0x2
  897 00ea 04       		.byte	0x4
  898 00eb 07       		.byte	0x7
- 899 00ec BC000000 		.4byte	.LASF16
+ 899 00ec 58000000 		.4byte	.LASF16
  900 00f0 03       		.uleb128 0x3
- 901 00f1 64020000 		.4byte	.LASF17
+ 901 00f1 55020000 		.4byte	.LASF17
  902 00f5 04       		.byte	0x4
  903 00f6 14       		.byte	0x14
  904 00f7 AD000000 		.4byte	0xad
  905 00fb 0A       		.uleb128 0xa
- 906 00fc 06020000 		.4byte	.LASF18
+ 906 00fc F7010000 		.4byte	.LASF18
  907 0100 05       		.byte	0x5
  908 0101 FB01     		.2byte	0x1fb
  909 0103 37000000 		.4byte	0x37
  910 0107 0A       		.uleb128 0xa
- 911 0108 D9030000 		.4byte	.LASF19
+ 911 0108 CA030000 		.4byte	.LASF19
  912 010c 05       		.byte	0x5
  913 010d FD01     		.2byte	0x1fd
  914 010f 69000000 		.4byte	0x69
  915 0113 02       		.uleb128 0x2
  916 0114 04       		.byte	0x4
  917 0115 04       		.byte	0x4
- 918 0116 45020000 		.4byte	.LASF20
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 21
+ 918 0116 36020000 		.4byte	.LASF20
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 21
 
 
  919 011a 02       		.uleb128 0x2
  920 011b 08       		.byte	0x8
  921 011c 04       		.byte	0x4
- 922 011d 54040000 		.4byte	.LASF21
+ 922 011d 45040000 		.4byte	.LASF21
  923 0121 02       		.uleb128 0x2
  924 0122 01       		.byte	0x1
  925 0123 08       		.byte	0x8
- 926 0124 79030000 		.4byte	.LASF22
+ 926 0124 6A030000 		.4byte	.LASF22
  927 0128 0A       		.uleb128 0xa
- 928 0129 E0030000 		.4byte	.LASF23
+ 928 0129 D1030000 		.4byte	.LASF23
  929 012d 05       		.byte	0x5
  930 012e A502     		.2byte	0x2a5
  931 0130 34010000 		.4byte	0x134
  932 0134 0B       		.uleb128 0xb
  933 0135 FB000000 		.4byte	0xfb
  934 0139 0A       		.uleb128 0xa
- 935 013a 4C030000 		.4byte	.LASF24
+ 935 013a 3D030000 		.4byte	.LASF24
  936 013e 05       		.byte	0x5
  937 013f A702     		.2byte	0x2a7
  938 0141 45010000 		.4byte	0x145
@@ -1226,14 +1226,14 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  941 014a 02       		.uleb128 0x2
  942 014b 08       		.byte	0x8
  943 014c 04       		.byte	0x4
- 944 014d B4020000 		.4byte	.LASF25
+ 944 014d A5020000 		.4byte	.LASF25
  945 0151 05       		.uleb128 0x5
  946 0152 08       		.byte	0x8
  947 0153 06       		.byte	0x6
  948 0154 6F       		.byte	0x6f
  949 0155 66010000 		.4byte	0x166
  950 0159 07       		.uleb128 0x7
- 951 015a 27010000 		.4byte	.LASF26
+ 951 015a 18010000 		.4byte	.LASF26
  952 015e 06       		.byte	0x6
  953 015f 71       		.byte	0x71
  954 0160 66010000 		.4byte	0x166
@@ -1247,7 +1247,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  962 0174 07       		.byte	0x7
  963 0175 00       		.byte	0
  964 0176 03       		.uleb128 0x3
- 965 0177 39030000 		.4byte	.LASF27
+ 965 0177 2A030000 		.4byte	.LASF27
  966 017b 06       		.byte	0x6
  967 017c 72       		.byte	0x72
  968 017d 51010000 		.4byte	0x151
@@ -1257,8 +1257,8 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  972 0184 75       		.byte	0x75
  973 0185 96010000 		.4byte	0x196
  974 0189 07       		.uleb128 0x7
- 975 018a 27010000 		.4byte	.LASF26
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 22
+ 975 018a 18010000 		.4byte	.LASF26
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 22
 
 
  976 018e 06       		.byte	0x6
@@ -1286,7 +1286,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  998 01b9 7B       		.byte	0x7b
  999 01ba CB010000 		.4byte	0x1cb
  1000 01be 07       		.uleb128 0x7
- 1001 01bf 27010000 		.4byte	.LASF26
+ 1001 01bf 18010000 		.4byte	.LASF26
  1002 01c3 06       		.byte	0x6
  1003 01c4 7D       		.byte	0x7d
  1004 01c5 DB010000 		.4byte	0x1db
@@ -1302,7 +1302,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1014 01db 0B       		.uleb128 0xb
  1015 01dc CB010000 		.4byte	0x1cb
  1016 01e0 03       		.uleb128 0x3
- 1017 01e1 59020000 		.4byte	.LASF29
+ 1017 01e1 4A020000 		.4byte	.LASF29
  1018 01e5 06       		.byte	0x6
  1019 01e6 7E       		.byte	0x7e
  1020 01e7 B6010000 		.4byte	0x1b6
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1030 01f9 07010000 		.4byte	0x107
  1031 01fd 00       		.byte	0
  1032 01fe 06       		.uleb128 0x6
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 23
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 23
 
 
  1033 01ff 72747200 		.ascii	"rtr\000"
@@ -1361,7 +1361,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1070 0248 04       		.byte	0x4
  1071 0249 76010000 		.4byte	0x176
  1072 024d 03       		.uleb128 0x3
- 1073 024e F7030000 		.4byte	.LASF30
+ 1073 024e E8030000 		.4byte	.LASF30
  1074 0252 06       		.byte	0x6
  1075 0253 8C       		.byte	0x8c
  1076 0254 EB010000 		.4byte	0x1eb
@@ -1377,8 +1377,8 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1086 0267 FB000000 		.4byte	0xfb
  1087 026b 00       		.byte	0
  1088 026c 07       		.uleb128 0x7
- 1089 026d A9030000 		.4byte	.LASF32
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 24
+ 1089 026d 9A030000 		.4byte	.LASF32
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 24
 
 
  1090 0271 06       		.byte	0x6
@@ -1386,20 +1386,20 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1092 0273 07010000 		.4byte	0x107
  1093 0277 04       		.byte	0x4
  1094 0278 07       		.uleb128 0x7
- 1095 0279 75040000 		.4byte	.LASF33
+ 1095 0279 66040000 		.4byte	.LASF33
  1096 027d 06       		.byte	0x6
  1097 027e 93       		.byte	0x93
  1098 027f 07010000 		.4byte	0x107
  1099 0283 08       		.byte	0x8
  1100 0284 07       		.uleb128 0x7
- 1101 0285 33020000 		.4byte	.LASF34
+ 1101 0285 24020000 		.4byte	.LASF34
  1102 0289 06       		.byte	0x6
  1103 028a 94       		.byte	0x94
  1104 028b 07010000 		.4byte	0x107
  1105 028f 0C       		.byte	0xc
  1106 0290 00       		.byte	0
  1107 0291 03       		.uleb128 0x3
- 1108 0292 7B040000 		.4byte	.LASF35
+ 1108 0292 6C040000 		.4byte	.LASF35
  1109 0296 06       		.byte	0x6
  1110 0297 95       		.byte	0x95
  1111 0298 58020000 		.4byte	0x258
@@ -1409,58 +1409,58 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1115 029f A0       		.byte	0xa0
  1116 02a0 F9020000 		.4byte	0x2f9
  1117 02a4 07       		.uleb128 0x7
- 1118 02a5 A9030000 		.4byte	.LASF32
+ 1118 02a5 9A030000 		.4byte	.LASF32
  1119 02a9 06       		.byte	0x6
  1120 02aa A2       		.byte	0xa2
  1121 02ab E0010000 		.4byte	0x1e0
  1122 02af 00       		.byte	0
  1123 02b0 07       		.uleb128 0x7
- 1124 02b1 1E020000 		.4byte	.LASF36
+ 1124 02b1 0F020000 		.4byte	.LASF36
  1125 02b5 06       		.byte	0x6
  1126 02b6 A3       		.byte	0xa3
  1127 02b7 E0010000 		.4byte	0x1e0
  1128 02bb 04       		.byte	0x4
  1129 02bc 07       		.uleb128 0x7
- 1130 02bd 15010000 		.4byte	.LASF37
+ 1130 02bd B1000000 		.4byte	.LASF37
  1131 02c1 06       		.byte	0x6
  1132 02c2 A4       		.byte	0xa4
  1133 02c3 AB010000 		.4byte	0x1ab
  1134 02c7 08       		.byte	0x8
  1135 02c8 07       		.uleb128 0x7
- 1136 02c9 75040000 		.4byte	.LASF33
+ 1136 02c9 66040000 		.4byte	.LASF33
  1137 02cd 06       		.byte	0x6
  1138 02ce A5       		.byte	0xa5
  1139 02cf E0010000 		.4byte	0x1e0
  1140 02d3 10       		.byte	0x10
  1141 02d4 07       		.uleb128 0x7
- 1142 02d5 33020000 		.4byte	.LASF34
+ 1142 02d5 24020000 		.4byte	.LASF34
  1143 02d9 06       		.byte	0x6
  1144 02da A6       		.byte	0xa6
  1145 02db E0010000 		.4byte	0x1e0
  1146 02df 14       		.byte	0x14
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 25
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 25
 
 
  1147 02e0 07       		.uleb128 0x7
- 1148 02e1 C0020000 		.4byte	.LASF38
+ 1148 02e1 B1020000 		.4byte	.LASF38
  1149 02e5 06       		.byte	0x6
  1150 02e6 A7       		.byte	0xa7
  1151 02e7 E0010000 		.4byte	0x1e0
  1152 02eb 18       		.byte	0x18
  1153 02ec 07       		.uleb128 0x7
- 1154 02ed 72030000 		.4byte	.LASF39
+ 1154 02ed 63030000 		.4byte	.LASF39
  1155 02f1 06       		.byte	0x6
  1156 02f2 A8       		.byte	0xa8
  1157 02f3 E0010000 		.4byte	0x1e0
  1158 02f7 1C       		.byte	0x1c
  1159 02f8 00       		.byte	0
  1160 02f9 03       		.uleb128 0x3
- 1161 02fa 7E030000 		.4byte	.LASF40
+ 1161 02fa 6F030000 		.4byte	.LASF40
  1162 02fe 06       		.byte	0x6
  1163 02ff A9       		.byte	0xa9
  1164 0300 9C020000 		.4byte	0x29c
  1165 0304 0D       		.uleb128 0xd
- 1166 0305 03010000 		.4byte	.LASF50
+ 1166 0305 9F000000 		.4byte	.LASF50
  1167 0309 01       		.byte	0x1
  1168 030a 28       		.byte	0x28
  1169 030b 00000000 		.4byte	.LFB34
@@ -1469,7 +1469,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1172 0314 9C       		.byte	0x9c
  1173 0315 9E030000 		.4byte	0x39e
  1174 0319 0E       		.uleb128 0xe
- 1175 031a E6000000 		.4byte	.LASF41
+ 1175 031a 82000000 		.4byte	.LASF41
  1176 031e 01       		.byte	0x1
  1177 031f 28       		.byte	0x28
  1178 0320 7E000000 		.4byte	0x7e
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1201 0355 4C000000 		.4byte	.LVL5
  1202 0359 01060000 		.4byte	0x601
  1203 035d 68030000 		.4byte	0x368
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 26
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 26
 
 
  1204 0361 11       		.uleb128 0x11
@@ -1549,16 +1549,16 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1249 03b2 9C       		.byte	0x9c
  1250 03b3 15040000 		.4byte	0x415
  1251 03b7 0E       		.uleb128 0xe
- 1252 03b8 5B040000 		.4byte	.LASF43
+ 1252 03b8 4C040000 		.4byte	.LASF43
  1253 03bc 01       		.byte	0x1
  1254 03bd 4A       		.byte	0x4a
  1255 03be 15040000 		.4byte	0x415
  1256 03c2 58000000 		.4byte	.LLST2
  1257 03c6 14       		.uleb128 0x14
- 1258 03c7 F7000000 		.4byte	.LASF44
+ 1258 03c7 93000000 		.4byte	.LASF44
  1259 03cb 01       		.byte	0x1
  1260 03cc 4D       		.byte	0x4d
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 27
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 27
 
 
  1261 03cd 4D020000 		.4byte	0x24d
@@ -1566,7 +1566,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1263 03d2 91       		.byte	0x91
  1264 03d3 68       		.sleb128 -24
  1265 03d4 14       		.uleb128 0x14
- 1266 03d5 CB030000 		.4byte	.LASF45
+ 1266 03d5 BC030000 		.4byte	.LASF45
  1267 03d9 01       		.byte	0x1
  1268 03da 4E       		.byte	0x4e
  1269 03db 76010000 		.4byte	0x176
@@ -1613,19 +1613,19 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1310 0416 04       		.byte	0x4
  1311 0417 F0000000 		.4byte	0xf0
  1312 041b 15       		.uleb128 0x15
- 1313 041c 27040000 		.4byte	.LASF46
+ 1313 041c 18040000 		.4byte	.LASF46
  1314 0420 01       		.byte	0x1
  1315 0421 6F       		.byte	0x6f
  1316 0422 8C000000 		.4byte	0x8c
  1317 0426 00000000 		.4byte	.LFB37
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 28
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 28
 
 
  1318 042a 0C000000 		.4byte	.LFE37-.LFB37
  1319 042e 01       		.uleb128 0x1
  1320 042f 9C       		.byte	0x9c
  1321 0430 15       		.uleb128 0x15
- 1322 0431 86040000 		.4byte	.LASF47
+ 1322 0431 77040000 		.4byte	.LASF47
  1323 0435 01       		.byte	0x1
  1324 0436 73       		.byte	0x73
  1325 0437 8C000000 		.4byte	0x8c
@@ -1643,7 +1643,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1337 0458 01       		.uleb128 0x1
  1338 0459 9C       		.byte	0x9c
  1339 045a 16       		.uleb128 0x16
- 1340 045b 4B040000 		.4byte	.LASF76
+ 1340 045b 3C040000 		.4byte	.LASF76
  1341 045f 01       		.byte	0x1
  1342 0460 7E       		.byte	0x7e
  1343 0461 8C000000 		.4byte	0x8c
@@ -1652,7 +1652,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1346 046d 01       		.uleb128 0x1
  1347 046e 9C       		.byte	0x9c
  1348 046f 17       		.uleb128 0x17
- 1349 0470 65030000 		.4byte	.LASF49
+ 1349 0470 56030000 		.4byte	.LASF49
  1350 0474 01       		.byte	0x1
  1351 0475 8D       		.byte	0x8d
  1352 0476 00000000 		.4byte	.LFB41
@@ -1660,7 +1660,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1354 047e 01       		.uleb128 0x1
  1355 047f 9C       		.byte	0x9c
  1356 0480 0D       		.uleb128 0xd
- 1357 0481 68040000 		.4byte	.LASF51
+ 1357 0481 59040000 		.4byte	.LASF51
  1358 0485 01       		.byte	0x1
  1359 0486 A6       		.byte	0xa6
  1360 0487 00000000 		.4byte	.LFB43
@@ -1669,7 +1669,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1363 0490 9C       		.byte	0x9c
  1364 0491 BD040000 		.4byte	0x4bd
  1365 0495 18       		.uleb128 0x18
- 1366 0496 0B010000 		.4byte	.LASF52
+ 1366 0496 A7000000 		.4byte	.LASF52
  1367 049a 01       		.byte	0x1
  1368 049b AB       		.byte	0xab
  1369 049c A2000000 		.4byte	0xa2
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1372 04a5 37000000 		.4byte	.LASF53
  1373 04a9 01       		.byte	0x1
  1374 04aa AC       		.byte	0xac
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 29
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 29
 
 
  1375 04ab 8C000000 		.4byte	0x8c
@@ -1688,7 +1688,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1379 04b8 6F040000 		.4byte	0x46f
  1380 04bc 00       		.byte	0
  1381 04bd 0D       		.uleb128 0xd
- 1382 04be BB030000 		.4byte	.LASF54
+ 1382 04be AC030000 		.4byte	.LASF54
  1383 04c2 01       		.byte	0x1
  1384 04c3 9B       		.byte	0x9b
  1385 04c4 00000000 		.4byte	.LFB42
@@ -1701,7 +1701,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1392 04d7 5A040000 		.4byte	0x45a
  1393 04db 00       		.byte	0
  1394 04dc 13       		.uleb128 0x13
- 1395 04dd 6E020000 		.4byte	.LASF56
+ 1395 04dd 5F020000 		.4byte	.LASF56
  1396 04e1 01       		.byte	0x1
  1397 04e2 60       		.byte	0x60
  1398 04e3 7E000000 		.4byte	0x7e
@@ -1711,13 +1711,13 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1402 04f0 9C       		.byte	0x9c
  1403 04f1 3E050000 		.4byte	0x53e
  1404 04f5 0E       		.uleb128 0xe
- 1405 04f6 C5000000 		.4byte	.LASF57
+ 1405 04f6 61000000 		.4byte	.LASF57
  1406 04fa 01       		.byte	0x1
  1407 04fb 60       		.byte	0x60
  1408 04fc 15040000 		.4byte	0x415
  1409 0500 D0000000 		.4byte	.LLST5
  1410 0504 14       		.uleb128 0x14
- 1411 0505 22040000 		.4byte	.LASF58
+ 1411 0505 13040000 		.4byte	.LASF58
  1412 0509 01       		.byte	0x1
  1413 050a 65       		.byte	0x65
  1414 050b 3E050000 		.4byte	0x53e
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1429 052c 74       		.byte	0x74
  1430 052d 00       		.sleb128 0
  1431 052e 11       		.uleb128 0x11
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 30
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 30
 
 
  1432 052f 01       		.uleb128 0x1
@@ -1753,7 +1753,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1441 053e 0B       		.uleb128 0xb
  1442 053f 8C000000 		.4byte	0x8c
  1443 0543 19       		.uleb128 0x19
- 1444 0544 96030000 		.4byte	.LASF59
+ 1444 0544 87030000 		.4byte	.LASF59
  1445 0548 01       		.byte	0x1
  1446 0549 0F       		.byte	0xf
  1447 054a 3E050000 		.4byte	0x53e
@@ -1761,7 +1761,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1449 054f 03       		.byte	0x3
  1450 0550 00000000 		.4byte	messagePresentFlag
  1451 0554 19       		.uleb128 0x19
- 1452 0555 A4020000 		.4byte	.LASF60
+ 1452 0555 95020000 		.4byte	.LASF60
  1453 0559 01       		.byte	0x1
  1454 055a 10       		.byte	0x10
  1455 055b 3E050000 		.4byte	0x53e
@@ -1778,7 +1778,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1466 0575 0B       		.uleb128 0xb
  1467 0576 F0000000 		.4byte	0xf0
  1468 057a 19       		.uleb128 0x19
- 1469 057b E3020000 		.4byte	.LASF61
+ 1469 057b D4020000 		.4byte	.LASF61
  1470 057f 01       		.byte	0x1
  1471 0580 16       		.byte	0x16
  1472 0581 8B050000 		.4byte	0x58b
@@ -1788,7 +1788,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1476 058b 0B       		.uleb128 0xb
  1477 058c 65050000 		.4byte	0x565
  1478 0590 19       		.uleb128 0x19
- 1479 0591 F1020000 		.4byte	.LASF62
+ 1479 0591 E2020000 		.4byte	.LASF62
  1480 0595 01       		.byte	0x1
  1481 0596 17       		.byte	0x17
  1482 0597 3E050000 		.4byte	0x53e
@@ -1796,9 +1796,9 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1484 059c 03       		.byte	0x3
  1485 059d 00000000 		.4byte	latestMessageHead
  1486 05a1 19       		.uleb128 0x19
- 1487 05a2 0C020000 		.4byte	.LASF63
+ 1487 05a2 FD010000 		.4byte	.LASF63
  1488 05a6 01       		.byte	0x1
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 31
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 31
 
 
  1489 05a7 18       		.byte	0x18
@@ -1807,7 +1807,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1492 05ad 03       		.byte	0x3
  1493 05ae 00000000 		.4byte	latestMessageTail
  1494 05b2 19       		.uleb128 0x19
- 1495 05b3 D4000000 		.4byte	.LASF64
+ 1495 05b3 70000000 		.4byte	.LASF64
  1496 05b7 01       		.byte	0x1
  1497 05b8 19       		.byte	0x19
  1498 05b9 3E050000 		.4byte	0x53e
@@ -1815,7 +1815,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1500 05be 03       		.byte	0x3
  1501 05bf 00000000 		.4byte	latestMessageFull
  1502 05c3 19       		.uleb128 0x19
- 1503 05c4 C7020000 		.4byte	.LASF65
+ 1503 05c4 B8020000 		.4byte	.LASF65
  1504 05c8 01       		.byte	0x1
  1505 05c9 25       		.byte	0x25
  1506 05ca 7E000000 		.4byte	0x7e
@@ -1823,7 +1823,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1508 05cf 03       		.byte	0x3
  1509 05d0 00000000 		.4byte	deviceAddress
  1510 05d4 19       		.uleb128 0x19
- 1511 05d5 AF030000 		.4byte	.LASF66
+ 1511 05d5 A0030000 		.4byte	.LASF66
  1512 05d9 01       		.byte	0x1
  1513 05da 26       		.byte	0x26
  1514 05db 7E000000 		.4byte	0x7e
@@ -1831,7 +1831,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1516 05e0 03       		.byte	0x3
  1517 05e1 00000000 		.4byte	deviceGroup
  1518 05e5 19       		.uleb128 0x19
- 1519 05e6 8C030000 		.4byte	.LASF67
+ 1519 05e6 7D030000 		.4byte	.LASF67
  1520 05ea 01       		.byte	0x1
  1521 05eb 27       		.byte	0x27
  1522 05ec 91020000 		.4byte	0x291
@@ -1839,34 +1839,34 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1524 05f1 03       		.byte	0x3
  1525 05f2 00000000 		.4byte	rxMailbox
  1526 05f6 1A       		.uleb128 0x1a
- 1527 05f7 2C010000 		.4byte	.LASF68
- 1528 05fb 2C010000 		.4byte	.LASF68
+ 1527 05f7 1D010000 		.4byte	.LASF68
+ 1528 05fb 1D010000 		.4byte	.LASF68
  1529 05ff 06       		.byte	0x6
  1530 0600 C5       		.byte	0xc5
  1531 0601 1B       		.uleb128 0x1b
- 1532 0602 23020000 		.4byte	.LASF69
- 1533 0606 23020000 		.4byte	.LASF69
+ 1532 0602 14020000 		.4byte	.LASF69
+ 1533 0606 14020000 		.4byte	.LASF69
  1534 060a 06       		.byte	0x6
  1535 060b 1301     		.2byte	0x113
  1536 060d 1A       		.uleb128 0x1a
- 1537 060e 0E040000 		.4byte	.LASF70
- 1538 0612 0E040000 		.4byte	.LASF70
+ 1537 060e FF030000 		.4byte	.LASF70
+ 1538 0612 FF030000 		.4byte	.LASF70
  1539 0616 06       		.byte	0x6
  1540 0617 C8       		.byte	0xc8
  1541 0618 1A       		.uleb128 0x1a
- 1542 0619 3C040000 		.4byte	.LASF71
- 1543 061d 3C040000 		.4byte	.LASF71
+ 1542 0619 2D040000 		.4byte	.LASF71
+ 1543 061d 2D040000 		.4byte	.LASF71
  1544 0621 07       		.byte	0x7
  1545 0622 D0       		.byte	0xd0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 32
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 32
 
 
  1546 0623 1C       		.uleb128 0x1c
- 1547 0624 36010000 		.4byte	.LASF77
- 1548 0628 36010000 		.4byte	.LASF77
+ 1547 0624 27010000 		.4byte	.LASF77
+ 1548 0628 27010000 		.4byte	.LASF77
  1549 062c 1B       		.uleb128 0x1b
- 1550 062d 02040000 		.4byte	.LASF72
- 1551 0631 02040000 		.4byte	.LASF72
+ 1550 062d F3030000 		.4byte	.LASF72
+ 1551 0631 F3030000 		.4byte	.LASF72
  1552 0635 06       		.byte	0x6
  1553 0636 1801     		.2byte	0x118
  1554 0638 00       		.byte	0
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1600 002b 04       		.uleb128 0x4
  1601 002c 24       		.uleb128 0x24
  1602 002d 00       		.byte	0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 33
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 33
 
 
  1603 002e 0B       		.uleb128 0xb
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1657 0064 49       		.uleb128 0x49
  1658 0065 13       		.uleb128 0x13
  1659 0066 01       		.uleb128 0x1
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 34
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 34
 
 
  1660 0067 13       		.uleb128 0x13
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1714 009d 11       		.uleb128 0x11
  1715 009e 01       		.uleb128 0x1
  1716 009f 12       		.uleb128 0x12
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 35
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 35
 
 
  1717 00a0 06       		.uleb128 0x6
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1771 00de 898201   		.uleb128 0x4109
  1772 00e1 01       		.byte	0x1
  1773 00e2 11       		.uleb128 0x11
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 36
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 36
 
 
  1774 00e3 01       		.uleb128 0x1
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1828 011a 3A       		.uleb128 0x3a
  1829 011b 0B       		.uleb128 0xb
  1830 011c 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 37
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 37
 
 
  1831 011d 0B       		.uleb128 0xb
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1885 0155 06       		.uleb128 0x6
  1886 0156 40       		.uleb128 0x40
  1887 0157 18       		.uleb128 0x18
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 38
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 38
 
 
  1888 0158 9742     		.uleb128 0x2117
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1942 018f 2E       		.uleb128 0x2e
  1943 0190 00       		.byte	0
  1944 0191 3F       		.uleb128 0x3f
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 39
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 39
 
 
  1945 0192 19       		.uleb128 0x19
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  1999 003f 0100     		.2byte	0x1
  2000 0041 55       		.byte	0x55
  2001 0042 1E000000 		.4byte	.LVL3
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 40
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 40
 
 
  2002 0046 98000000 		.4byte	.LFE34
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  2056 00c7 54       		.byte	0x54
  2057 00c8 00000000 		.4byte	0
  2058 00cc 00000000 		.4byte	0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 41
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 41
 
 
  2059              	.LLST5:
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  2113 0060 00000000 		.4byte	0
  2114 0064 00000000 		.4byte	0
  2115              		.section	.debug_ranges,"",%progbits
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 42
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 42
 
 
  2116              	.Ldebug_ranges0:
@@ -2518,354 +2518,352 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 1
  2153      44415441 
  2153      5F425954 
  2153      455300
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 43
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 43
 
 
- 2154              	.LASF75:
- 2155 004e 433A5C55 		.ascii	"C:\\Users\\M4rz4n\\Desktop\\Husky Robotics\\Firmwar"
- 2155      73657273 
- 2155      5C4D3472 
- 2155      7A346E5C 
- 2155      4465736B 
- 2156 007c 655C424C 		.ascii	"e\\BLDC\\BLDC_Motor_Board_PY2023\\BLDC_Motor_Board."
- 2156      44435C42 
- 2156      4C44435F 
- 2156      4D6F746F 
- 2156      725F426F 
- 2157 00ac 63796473 		.ascii	"cydsn\000"
- 2157      6E00
- 2158              	.LASF2:
- 2159 00b2 73686F72 		.ascii	"short int\000"
- 2159      7420696E 
- 2159      7400
- 2160              	.LASF16:
- 2161 00bc 73697A65 		.ascii	"sizetype\000"
- 2161      74797065 
- 2161      00
- 2162              	.LASF57:
- 2163 00c5 72656365 		.ascii	"receivedPacket\000"
- 2163      69766564 
- 2163      5061636B 
- 2163      657400
- 2164              	.LASF64:
- 2165 00d4 6C617465 		.ascii	"latestMessageFull\000"
- 2165      73744D65 
- 2165      73736167 
- 2165      6546756C 
- 2165      6C00
- 2166              	.LASF41:
- 2167 00e6 64657669 		.ascii	"deviceGroupInput\000"
- 2167      63654772 
- 2167      6F757049 
- 2167      6E707574 
- 2167      00
- 2168              	.LASF44:
- 2169 00f7 50536F43 		.ascii	"PSoCMessage\000"
- 2169      4D657373 
- 2169      61676500 
- 2170              	.LASF50:
- 2171 0103 496E6974 		.ascii	"InitCAN\000"
- 2171      43414E00 
- 2172              	.LASF52:
- 2173 010b 73746174 		.ascii	"statusReg\000"
- 2173      75735265 
- 2173      6700
- 2174              	.LASF37:
- 2175 0115 72786461 		.ascii	"rxdata\000"
- 2175      746100
- 2176              	.LASF4:
- 2177 011c 5F5F7569 		.ascii	"__uint16_t\000"
- 2177      6E743136 
- 2177      5F7400
- 2178              	.LASF26:
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 44
+ 2154              	.LASF2:
+ 2155 004e 73686F72 		.ascii	"short int\000"
+ 2155      7420696E 
+ 2155      7400
+ 2156              	.LASF16:
+ 2157 0058 73697A65 		.ascii	"sizetype\000"
+ 2157      74797065 
+ 2157      00
+ 2158              	.LASF57:
+ 2159 0061 72656365 		.ascii	"receivedPacket\000"
+ 2159      69766564 
+ 2159      5061636B 
+ 2159      657400
+ 2160              	.LASF64:
+ 2161 0070 6C617465 		.ascii	"latestMessageFull\000"
+ 2161      73744D65 
+ 2161      73736167 
+ 2161      6546756C 
+ 2161      6C00
+ 2162              	.LASF41:
+ 2163 0082 64657669 		.ascii	"deviceGroupInput\000"
+ 2163      63654772 
+ 2163      6F757049 
+ 2163      6E707574 
+ 2163      00
+ 2164              	.LASF44:
+ 2165 0093 50536F43 		.ascii	"PSoCMessage\000"
+ 2165      4D657373 
+ 2165      61676500 
+ 2166              	.LASF50:
+ 2167 009f 496E6974 		.ascii	"InitCAN\000"
+ 2167      43414E00 
+ 2168              	.LASF52:
+ 2169 00a7 73746174 		.ascii	"statusReg\000"
+ 2169      75735265 
+ 2169      6700
+ 2170              	.LASF37:
+ 2171 00b1 72786461 		.ascii	"rxdata\000"
+ 2171      746100
+ 2172              	.LASF75:
+ 2173 00b8 433A5C55 		.ascii	"C:\\Users\\casey\\Desktop\\Robotics Stuff\\BLDC_Mot"
+ 2173      73657273 
+ 2173      5C636173 
+ 2173      65795C44 
+ 2173      65736B74 
+ 2174 00e6 6F725F42 		.ascii	"or_Board_PY2023\\BLDC_Motor_Board.cydsn\000"
+ 2174      6F617264 
+ 2174      5F505932 
+ 2174      3032335C 
+ 2174      424C4443 
+ 2175              	.LASF4:
+ 2176 010d 5F5F7569 		.ascii	"__uint16_t\000"
+ 2176      6E743136 
+ 2176      5F7400
+ 2177              	.LASF26:
+ 2178 0118 62797465 		.ascii	"byte\000"
+ 2178      00
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 44
 
 
- 2179 0127 62797465 		.ascii	"byte\000"
- 2179      00
- 2180              	.LASF68:
- 2181 012c 43414E5F 		.ascii	"CAN_Start\000"
- 2181      53746172 
- 2181      7400
- 2182              	.LASF77:
- 2183 0136 6D656D63 		.ascii	"memcpy\000"
- 2183      707900
- 2184              	.LASF73:
- 2185 013d 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 2185      43313120 
- 2185      352E342E 
- 2185      31203230 
- 2185      31363036 
- 2186 0170 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 2186      20726576 
- 2186      6973696F 
- 2186      6E203233 
- 2186      37373135 
- 2187 01a3 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 2187      66756E63 
- 2187      74696F6E 
- 2187      2D736563 
- 2187      74696F6E 
- 2188              	.LASF12:
- 2189 01cb 75696E74 		.ascii	"uint8_t\000"
- 2189      385F7400 
- 2190              	.LASF74:
- 2191 01d3 48696E64 		.ascii	"HindsightCAN\\PortFiles\\PortPSOC_CY8C4248AZI_L485."
- 2191      73696768 
- 2191      7443414E 
- 2191      5C506F72 
- 2191      7446696C 
- 2192 0204 6300     		.ascii	"c\000"
- 2193              	.LASF18:
- 2194 0206 75696E74 		.ascii	"uint8\000"
- 2194      3800
- 2195              	.LASF63:
- 2196 020c 6C617465 		.ascii	"latestMessageTail\000"
- 2196      73744D65 
- 2196      73736167 
- 2196      65546169 
- 2196      6C00
- 2197              	.LASF36:
- 2198 021e 72786964 		.ascii	"rxid\000"
- 2198      00
- 2199              	.LASF69:
- 2200 0223 43414E5F 		.ascii	"CAN_RxBufConfig\000"
- 2200      52784275 
- 2200      66436F6E 
- 2200      66696700 
- 2201              	.LASF34:
- 2202 0233 72786163 		.ascii	"rxacr\000"
- 2202      7200
- 2203              	.LASF0:
- 2204 0239 7369676E 		.ascii	"signed char\000"
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 45
+ 2179              	.LASF68:
+ 2180 011d 43414E5F 		.ascii	"CAN_Start\000"
+ 2180      53746172 
+ 2180      7400
+ 2181              	.LASF77:
+ 2182 0127 6D656D63 		.ascii	"memcpy\000"
+ 2182      707900
+ 2183              	.LASF73:
+ 2184 012e 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2184      43313120 
+ 2184      352E342E 
+ 2184      31203230 
+ 2184      31363036 
+ 2185 0161 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 2185      20726576 
+ 2185      6973696F 
+ 2185      6E203233 
+ 2185      37373135 
+ 2186 0194 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2186      66756E63 
+ 2186      74696F6E 
+ 2186      2D736563 
+ 2186      74696F6E 
+ 2187              	.LASF12:
+ 2188 01bc 75696E74 		.ascii	"uint8_t\000"
+ 2188      385F7400 
+ 2189              	.LASF74:
+ 2190 01c4 48696E64 		.ascii	"HindsightCAN\\PortFiles\\PortPSOC_CY8C4248AZI_L485."
+ 2190      73696768 
+ 2190      7443414E 
+ 2190      5C506F72 
+ 2190      7446696C 
+ 2191 01f5 6300     		.ascii	"c\000"
+ 2192              	.LASF18:
+ 2193 01f7 75696E74 		.ascii	"uint8\000"
+ 2193      3800
+ 2194              	.LASF63:
+ 2195 01fd 6C617465 		.ascii	"latestMessageTail\000"
+ 2195      73744D65 
+ 2195      73736167 
+ 2195      65546169 
+ 2195      6C00
+ 2196              	.LASF36:
+ 2197 020f 72786964 		.ascii	"rxid\000"
+ 2197      00
+ 2198              	.LASF69:
+ 2199 0214 43414E5F 		.ascii	"CAN_RxBufConfig\000"
+ 2199      52784275 
+ 2199      66436F6E 
+ 2199      66696700 
+ 2200              	.LASF34:
+ 2201 0224 72786163 		.ascii	"rxacr\000"
+ 2201      7200
+ 2202              	.LASF0:
+ 2203 022a 7369676E 		.ascii	"signed char\000"
+ 2203      65642063 
+ 2203      68617200 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 45
 
 
- 2204      65642063 
- 2204      68617200 
- 2205              	.LASF20:
- 2206 0245 666C6F61 		.ascii	"float\000"
- 2206      7400
- 2207              	.LASF9:
- 2208 024b 6C6F6E67 		.ascii	"long long int\000"
- 2208      206C6F6E 
- 2208      6720696E 
- 2208      7400
- 2209              	.LASF29:
- 2210 0259 43414E5F 		.ascii	"CAN_REG_32\000"
- 2210      5245475F 
- 2210      333200
- 2211              	.LASF17:
- 2212 0264 43414E50 		.ascii	"CANPacket\000"
- 2212      61636B65 
- 2212      7400
- 2213              	.LASF56:
- 2214 026e 506F6C6C 		.ascii	"PollAndReceiveCANPacket\000"
- 2214      416E6452 
- 2214      65636569 
- 2214      76654341 
- 2214      4E506163 
- 2215              	.LASF6:
- 2216 0286 6C6F6E67 		.ascii	"long int\000"
- 2216      20696E74 
- 2216      00
- 2217              	.LASF3:
- 2218 028f 5F5F7569 		.ascii	"__uint8_t\000"
- 2218      6E74385F 
- 2218      7400
- 2219              	.LASF7:
- 2220 0299 5F5F7569 		.ascii	"__uint32_t\000"
- 2220      6E743332 
- 2220      5F7400
- 2221              	.LASF60:
- 2222 02a4 6D657373 		.ascii	"messageReadFlag\000"
- 2222      61676552 
- 2222      65616446 
- 2222      6C616700 
- 2223              	.LASF25:
- 2224 02b4 6C6F6E67 		.ascii	"long double\000"
- 2224      20646F75 
- 2224      626C6500 
- 2225              	.LASF38:
- 2226 02c0 7278616D 		.ascii	"rxamrd\000"
- 2226      726400
- 2227              	.LASF65:
- 2228 02c7 64657669 		.ascii	"deviceAddress\000"
- 2228      63654164 
- 2228      64726573 
- 2228      7300
- 2229              	.LASF1:
- 2230 02d5 756E7369 		.ascii	"unsigned char\000"
- 2230      676E6564 
- 2230      20636861 
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 46
+ 2204              	.LASF20:
+ 2205 0236 666C6F61 		.ascii	"float\000"
+ 2205      7400
+ 2206              	.LASF9:
+ 2207 023c 6C6F6E67 		.ascii	"long long int\000"
+ 2207      206C6F6E 
+ 2207      6720696E 
+ 2207      7400
+ 2208              	.LASF29:
+ 2209 024a 43414E5F 		.ascii	"CAN_REG_32\000"
+ 2209      5245475F 
+ 2209      333200
+ 2210              	.LASF17:
+ 2211 0255 43414E50 		.ascii	"CANPacket\000"
+ 2211      61636B65 
+ 2211      7400
+ 2212              	.LASF56:
+ 2213 025f 506F6C6C 		.ascii	"PollAndReceiveCANPacket\000"
+ 2213      416E6452 
+ 2213      65636569 
+ 2213      76654341 
+ 2213      4E506163 
+ 2214              	.LASF6:
+ 2215 0277 6C6F6E67 		.ascii	"long int\000"
+ 2215      20696E74 
+ 2215      00
+ 2216              	.LASF3:
+ 2217 0280 5F5F7569 		.ascii	"__uint8_t\000"
+ 2217      6E74385F 
+ 2217      7400
+ 2218              	.LASF7:
+ 2219 028a 5F5F7569 		.ascii	"__uint32_t\000"
+ 2219      6E743332 
+ 2219      5F7400
+ 2220              	.LASF60:
+ 2221 0295 6D657373 		.ascii	"messageReadFlag\000"
+ 2221      61676552 
+ 2221      65616446 
+ 2221      6C616700 
+ 2222              	.LASF25:
+ 2223 02a5 6C6F6E67 		.ascii	"long double\000"
+ 2223      20646F75 
+ 2223      626C6500 
+ 2224              	.LASF38:
+ 2225 02b1 7278616D 		.ascii	"rxamrd\000"
+ 2225      726400
+ 2226              	.LASF65:
+ 2227 02b8 64657669 		.ascii	"deviceAddress\000"
+ 2227      63654164 
+ 2227      64726573 
+ 2227      7300
+ 2228              	.LASF1:
+ 2229 02c6 756E7369 		.ascii	"unsigned char\000"
+ 2229      676E6564 
+ 2229      20636861 
+ 2229      7200
+ 2230              	.LASF61:
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 46
 
 
- 2230      7200
- 2231              	.LASF61:
- 2232 02e3 6C617465 		.ascii	"latestMessage\000"
- 2232      73744D65 
- 2232      73736167 
- 2232      6500
- 2233              	.LASF62:
- 2234 02f1 6C617465 		.ascii	"latestMessageHead\000"
- 2234      73744D65 
- 2234      73736167 
- 2234      65486561 
- 2234      6400
- 2235              	.LASF10:
- 2236 0303 6C6F6E67 		.ascii	"long long unsigned int\000"
- 2236      206C6F6E 
- 2236      6720756E 
- 2236      7369676E 
- 2236      65642069 
- 2237              	.LASF14:
- 2238 031a 75696E74 		.ascii	"uint32_t\000"
- 2238      33325F74 
- 2238      00
- 2239              	.LASF11:
- 2240 0323 756E7369 		.ascii	"unsigned int\000"
- 2240      676E6564 
- 2240      20696E74 
- 2240      00
- 2241              	.LASF13:
- 2242 0330 75696E74 		.ascii	"uint16_t\000"
- 2242      31365F74 
- 2242      00
- 2243              	.LASF27:
- 2244 0339 43414E5F 		.ascii	"CAN_DATA_BYTES_MSG\000"
- 2244      44415441 
- 2244      5F425954 
- 2244      45535F4D 
- 2244      534700
- 2245              	.LASF24:
- 2246 034c 72656733 		.ascii	"reg32\000"
- 2246      3200
- 2247              	.LASF5:
- 2248 0352 73686F72 		.ascii	"short unsigned int\000"
- 2248      7420756E 
- 2248      7369676E 
- 2248      65642069 
- 2248      6E7400
- 2249              	.LASF49:
- 2250 0365 636F756E 		.ascii	"countAddFIFO\000"
- 2250      74416464 
- 2250      4649464F 
- 2250      00
- 2251              	.LASF39:
- 2252 0372 72786163 		.ascii	"rxacrd\000"
- 2252      726400
- 2253              	.LASF22:
- 2254 0379 63686172 		.ascii	"char\000"
- 2254      00
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 47
+ 2231 02d4 6C617465 		.ascii	"latestMessage\000"
+ 2231      73744D65 
+ 2231      73736167 
+ 2231      6500
+ 2232              	.LASF62:
+ 2233 02e2 6C617465 		.ascii	"latestMessageHead\000"
+ 2233      73744D65 
+ 2233      73736167 
+ 2233      65486561 
+ 2233      6400
+ 2234              	.LASF10:
+ 2235 02f4 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2235      206C6F6E 
+ 2235      6720756E 
+ 2235      7369676E 
+ 2235      65642069 
+ 2236              	.LASF14:
+ 2237 030b 75696E74 		.ascii	"uint32_t\000"
+ 2237      33325F74 
+ 2237      00
+ 2238              	.LASF11:
+ 2239 0314 756E7369 		.ascii	"unsigned int\000"
+ 2239      676E6564 
+ 2239      20696E74 
+ 2239      00
+ 2240              	.LASF13:
+ 2241 0321 75696E74 		.ascii	"uint16_t\000"
+ 2241      31365F74 
+ 2241      00
+ 2242              	.LASF27:
+ 2243 032a 43414E5F 		.ascii	"CAN_DATA_BYTES_MSG\000"
+ 2243      44415441 
+ 2243      5F425954 
+ 2243      45535F4D 
+ 2243      534700
+ 2244              	.LASF24:
+ 2245 033d 72656733 		.ascii	"reg32\000"
+ 2245      3200
+ 2246              	.LASF5:
+ 2247 0343 73686F72 		.ascii	"short unsigned int\000"
+ 2247      7420756E 
+ 2247      7369676E 
+ 2247      65642069 
+ 2247      6E7400
+ 2248              	.LASF49:
+ 2249 0356 636F756E 		.ascii	"countAddFIFO\000"
+ 2249      74416464 
+ 2249      4649464F 
+ 2249      00
+ 2250              	.LASF39:
+ 2251 0363 72786163 		.ascii	"rxacrd\000"
+ 2251      726400
+ 2252              	.LASF22:
+ 2253 036a 63686172 		.ascii	"char\000"
+ 2253      00
+ 2254              	.LASF40:
+ 2255 036f 43414E5F 		.ascii	"CAN_RX_STRUCT\000"
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 47
 
 
- 2255              	.LASF40:
- 2256 037e 43414E5F 		.ascii	"CAN_RX_STRUCT\000"
- 2256      52585F53 
- 2256      54525543 
- 2256      5400
- 2257              	.LASF67:
- 2258 038c 72784D61 		.ascii	"rxMailbox\000"
- 2258      696C626F 
- 2258      7800
- 2259              	.LASF59:
- 2260 0396 6D657373 		.ascii	"messagePresentFlag\000"
- 2260      61676550 
- 2260      72657365 
- 2260      6E74466C 
- 2260      616700
- 2261              	.LASF32:
- 2262 03a9 7278636D 		.ascii	"rxcmd\000"
- 2262      6400
- 2263              	.LASF66:
- 2264 03af 64657669 		.ascii	"deviceGroup\000"
- 2264      63654772 
- 2264      6F757000 
- 2265              	.LASF54:
- 2266 03bb 636F756E 		.ascii	"countRemoveFIFO\000"
- 2266      7452656D 
- 2266      6F766546 
- 2266      49464F00 
- 2267              	.LASF45:
- 2268 03cb 50536F43 		.ascii	"PSoCData\000"
- 2268      44617461 
- 2268      00
- 2269              	.LASF15:
- 2270 03d4 64617461 		.ascii	"data\000"
- 2270      00
- 2271              	.LASF19:
- 2272 03d9 75696E74 		.ascii	"uint32\000"
- 2272      333200
- 2273              	.LASF23:
- 2274 03e0 72656738 		.ascii	"reg8\000"
- 2274      00
- 2275              	.LASF8:
- 2276 03e5 6C6F6E67 		.ascii	"long unsigned int\000"
- 2276      20756E73 
- 2276      69676E65 
- 2276      6420696E 
- 2276      7400
- 2277              	.LASF30:
- 2278 03f7 43414E5F 		.ascii	"CAN_TX_MSG\000"
- 2278      54585F4D 
- 2278      534700
- 2279              	.LASF72:
- 2280 0402 43414E5F 		.ascii	"CAN_SendMsg\000"
- 2280      53656E64 
- 2280      4D736700 
- 2281              	.LASF70:
- 2282 040e 43414E5F 		.ascii	"CAN_GlobalIntEnable\000"
- 2282      476C6F62 
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccYzX53A.s 			page 48
+ 2255      52585F53 
+ 2255      54525543 
+ 2255      5400
+ 2256              	.LASF67:
+ 2257 037d 72784D61 		.ascii	"rxMailbox\000"
+ 2257      696C626F 
+ 2257      7800
+ 2258              	.LASF59:
+ 2259 0387 6D657373 		.ascii	"messagePresentFlag\000"
+ 2259      61676550 
+ 2259      72657365 
+ 2259      6E74466C 
+ 2259      616700
+ 2260              	.LASF32:
+ 2261 039a 7278636D 		.ascii	"rxcmd\000"
+ 2261      6400
+ 2262              	.LASF66:
+ 2263 03a0 64657669 		.ascii	"deviceGroup\000"
+ 2263      63654772 
+ 2263      6F757000 
+ 2264              	.LASF54:
+ 2265 03ac 636F756E 		.ascii	"countRemoveFIFO\000"
+ 2265      7452656D 
+ 2265      6F766546 
+ 2265      49464F00 
+ 2266              	.LASF45:
+ 2267 03bc 50536F43 		.ascii	"PSoCData\000"
+ 2267      44617461 
+ 2267      00
+ 2268              	.LASF15:
+ 2269 03c5 64617461 		.ascii	"data\000"
+ 2269      00
+ 2270              	.LASF19:
+ 2271 03ca 75696E74 		.ascii	"uint32\000"
+ 2271      333200
+ 2272              	.LASF23:
+ 2273 03d1 72656738 		.ascii	"reg8\000"
+ 2273      00
+ 2274              	.LASF8:
+ 2275 03d6 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2275      20756E73 
+ 2275      69676E65 
+ 2275      6420696E 
+ 2275      7400
+ 2276              	.LASF30:
+ 2277 03e8 43414E5F 		.ascii	"CAN_TX_MSG\000"
+ 2277      54585F4D 
+ 2277      534700
+ 2278              	.LASF72:
+ 2279 03f3 43414E5F 		.ascii	"CAN_SendMsg\000"
+ 2279      53656E64 
+ 2279      4D736700 
+ 2280              	.LASF70:
+ 2281 03ff 43414E5F 		.ascii	"CAN_GlobalIntEnable\000"
+ 2281      476C6F62 
+ 2281      616C496E 
+ 2281      74456E61 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccb8hbl5.s 			page 48
 
 
- 2282      616C496E 
- 2282      74456E61 
- 2282      626C6500 
- 2283              	.LASF58:
- 2284 0422 73697A65 		.ascii	"size\000"
- 2284      00
- 2285              	.LASF46:
- 2286 0427 6765744C 		.ascii	"getLocalDeviceSerial\000"
- 2286      6F63616C 
- 2286      44657669 
- 2286      63655365 
- 2286      7269616C 
- 2287              	.LASF71:
- 2288 043c 4379496E 		.ascii	"CyIntSetVector\000"
- 2288      74536574 
- 2288      56656374 
- 2288      6F7200
- 2289              	.LASF76:
- 2290 044b 4649464F 		.ascii	"FIFOSize\000"
- 2290      53697A65 
- 2290      00
- 2291              	.LASF21:
- 2292 0454 646F7562 		.ascii	"double\000"
- 2292      6C6500
- 2293              	.LASF43:
- 2294 045b 7061636B 		.ascii	"packetToSend\000"
- 2294      6574546F 
- 2294      53656E64 
- 2294      00
- 2295              	.LASF51:
- 2296 0468 43414E5F 		.ascii	"CAN_FLAG_ISR\000"
- 2296      464C4147 
- 2296      5F495352 
- 2296      00
- 2297              	.LASF33:
- 2298 0475 7278616D 		.ascii	"rxamr\000"
- 2298      7200
- 2299              	.LASF35:
- 2300 047b 43414E5F 		.ascii	"CAN_RX_CFG\000"
- 2300      52585F43 
- 2300      464700
- 2301              	.LASF47:
- 2302 0486 6765744C 		.ascii	"getLocalDeviceGroup\000"
- 2302      6F63616C 
- 2302      44657669 
- 2302      63654772 
- 2302      6F757000 
- 2303              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 2281      626C6500 
+ 2282              	.LASF58:
+ 2283 0413 73697A65 		.ascii	"size\000"
+ 2283      00
+ 2284              	.LASF46:
+ 2285 0418 6765744C 		.ascii	"getLocalDeviceSerial\000"
+ 2285      6F63616C 
+ 2285      44657669 
+ 2285      63655365 
+ 2285      7269616C 
+ 2286              	.LASF71:
+ 2287 042d 4379496E 		.ascii	"CyIntSetVector\000"
+ 2287      74536574 
+ 2287      56656374 
+ 2287      6F7200
+ 2288              	.LASF76:
+ 2289 043c 4649464F 		.ascii	"FIFOSize\000"
+ 2289      53697A65 
+ 2289      00
+ 2290              	.LASF21:
+ 2291 0445 646F7562 		.ascii	"double\000"
+ 2291      6C6500
+ 2292              	.LASF43:
+ 2293 044c 7061636B 		.ascii	"packetToSend\000"
+ 2293      6574546F 
+ 2293      53656E64 
+ 2293      00
+ 2294              	.LASF51:
+ 2295 0459 43414E5F 		.ascii	"CAN_FLAG_ISR\000"
+ 2295      464C4147 
+ 2295      5F495352 
+ 2295      00
+ 2296              	.LASF33:
+ 2297 0466 7278616D 		.ascii	"rxamr\000"
+ 2297      7200
+ 2298              	.LASF35:
+ 2299 046c 43414E5F 		.ascii	"CAN_RX_CFG\000"
+ 2299      52585F43 
+ 2299      464700
+ 2300              	.LASF47:
+ 2301 0477 6765744C 		.ascii	"getLocalDeviceGroup\000"
+ 2301      6F63616C 
+ 2301      44657669 
+ 2301      63654772 
+ 2301      6F757000 
+ 2302              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

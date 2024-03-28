@@ -631,7 +631,7 @@ void cyfitter_cfg(void)
 
 	/* IOPINS0_2 Starting address: CYDEV_GPIO_PRT2_BASE */
 	CY_SET_REG32((void *)(CYDEV_GPIO_PRT2_BASE), 0x00000082u);
-	CY_SET_REG32((void *)(CYREG_GPIO_PRT2_PC), 0x00C49271u);
+	CY_SET_REG32((void *)(CYREG_GPIO_PRT2_PC), 0x00DB6271u);
 	CY_SET_REG32((void *)(CYREG_GPIO_PRT2_PC2), 0x00000002u);
 
 	/* IOPINS0_3 Starting address: CYDEV_GPIO_PRT3_BASE */

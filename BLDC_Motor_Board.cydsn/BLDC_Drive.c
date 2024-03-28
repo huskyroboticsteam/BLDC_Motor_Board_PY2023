@@ -120,10 +120,10 @@ void updateRotorState() {
     
     
     // write registers in UVW
-    UH_Write(state & (1 << 0));
-    UL_Write(state & (1 << 1));
-    VH_Write(state & (1 << 2));
-    VL_Write(state & (1 << 3));
-    WH_Write(state & (1 << 4));
-    WL_Write(state & (1 << 5));
+    UH_Write((state & (1 << 0)) != 0);
+    UL_Write((state & (1 << 1)) != 0);
+    VH_Write((state & (1 << 2)) != 0);
+    VL_Write((state & (1 << 3)) != 0);
+    WH_Write((state & (1 << 4)) != 0);
+    WL_Write((state & (1 << 5)) != 0);
 }
