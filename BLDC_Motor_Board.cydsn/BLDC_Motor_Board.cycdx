@@ -5099,7 +5099,7 @@
       <field name="BREAK_DETECT" from="11" to="11" access="RW" resetVal="" desc="Logical and of corresponding request and mask bits" hidden="false" />
     </register>
   </block>
-  <block name="TMC6100_SPI" BASE="0x0" SIZE="0x0" desc="Serial Communication Block" visible="true" hidden="false">
+  <block name="TMC6100" BASE="0x0" SIZE="0x0" desc="Serial Communication Block" visible="true" hidden="false">
     <block name="clock_VM" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="rx_wake_VM" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="mosi_s_VM" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />

@@ -1,8 +1,8 @@
-C:/Users/M4rz4n/Desktop/Husky\ Robotics/Firmware/BLDC/BLDC_Motor_Board_PY2023/BLDC_Motor_Board.cydsn/CortexM0/ARM_GCC_541/Debug/CyBootAsmGnu.o : C:/Users/M4rz4n/Desktop/Husky\ Robotics/Firmware/BLDC/BLDC_Motor_Board_PY2023/BLDC_Motor_Board.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s C:/Users/M4rz4n/Desktop/Husky\ Robotics/Firmware/BLDC/BLDC_Motor_Board_PY2023/BLDC_Motor_Board.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc C:/Users/M4rz4n/Desktop/Husky\ Robotics/Firmware/BLDC/BLDC_Motor_Board_PY2023/BLDC_Motor_Board.cydsn/Generated_Source/PSoC4/cyfittergnu.inc 
+C:/Users/lucbu/DocumentStorage/GitHub/BLDC_Motor_Board_PY2023/BLDC_Motor_Board.cydsn/CortexM0/ARM_GCC_541/Debug/CyBootAsmGnu.o : C:/Users/lucbu/DocumentStorage/GitHub/BLDC_Motor_Board_PY2023/BLDC_Motor_Board.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s C:/Users/lucbu/DocumentStorage/GitHub/BLDC_Motor_Board_PY2023/BLDC_Motor_Board.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc C:/Users/lucbu/DocumentStorage/GitHub/BLDC_Motor_Board_PY2023/BLDC_Motor_Board.cydsn/Generated_Source/PSoC4/cyfittergnu.inc 
 
-C:/Users/M4rz4n/Desktop/Husky\ Robotics/Firmware/BLDC/BLDC_Motor_Board_PY2023/BLDC_Motor_Board.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s : 
+C:/Users/lucbu/DocumentStorage/GitHub/BLDC_Motor_Board_PY2023/BLDC_Motor_Board.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s : 
 
-C:/Users/M4rz4n/Desktop/Husky\ Robotics/Firmware/BLDC/BLDC_Motor_Board_PY2023/BLDC_Motor_Board.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc : 
+C:/Users/lucbu/DocumentStorage/GitHub/BLDC_Motor_Board_PY2023/BLDC_Motor_Board.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc : 
 
-C:/Users/M4rz4n/Desktop/Husky\ Robotics/Firmware/BLDC/BLDC_Motor_Board_PY2023/BLDC_Motor_Board.cydsn/Generated_Source/PSoC4/cyfittergnu.inc : 
+C:/Users/lucbu/DocumentStorage/GitHub/BLDC_Motor_Board_PY2023/BLDC_Motor_Board.cydsn/Generated_Source/PSoC4/cyfittergnu.inc : 
 

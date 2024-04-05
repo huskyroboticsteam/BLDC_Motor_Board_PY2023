@@ -26923,7 +26923,7 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>TMC6100_SPI</name>
+      <name>TMC6100</name>
       <description>Serial Communication Block</description>
       <baseAddress>0x0</baseAddress>
       <addressBlock>

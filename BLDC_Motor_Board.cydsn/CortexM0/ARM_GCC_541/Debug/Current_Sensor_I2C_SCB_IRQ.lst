@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccBBPSXm.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
   28:Generated_Source\PSoC4/Current_Sensor_I2C_SCB_IRQ.c **** ********************************************************************************/
   29:Generated_Source\PSoC4/Current_Sensor_I2C_SCB_IRQ.c **** /* `#START Current_Sensor_I2C_SCB_IRQ_intc` */
   30:Generated_Source\PSoC4/Current_Sensor_I2C_SCB_IRQ.c **** 
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 2
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccBBPSXm.s 			page 2
 
 
   31:Generated_Source\PSoC4/Current_Sensor_I2C_SCB_IRQ.c **** /* `#END` */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
   85:Generated_Source\PSoC4/Current_Sensor_I2C_SCB_IRQ.c **** *  Function definition example:
   86:Generated_Source\PSoC4/Current_Sensor_I2C_SCB_IRQ.c **** *   CY_ISR(MyISR)
   87:Generated_Source\PSoC4/Current_Sensor_I2C_SCB_IRQ.c **** *   {
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 3
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccBBPSXm.s 			page 3
 
 
   88:Generated_Source\PSoC4/Current_Sensor_I2C_SCB_IRQ.c **** *   }
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  142:Generated_Source\PSoC4/Current_Sensor_I2C_SCB_IRQ.c **** *
  143:Generated_Source\PSoC4/Current_Sensor_I2C_SCB_IRQ.c **** * Summary:
  144:Generated_Source\PSoC4/Current_Sensor_I2C_SCB_IRQ.c **** *   The default Interrupt Service Routine for Current_Sensor_I2C_SCB_IRQ.
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 4
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccBBPSXm.s 			page 4
 
 
  145:Generated_Source\PSoC4/Current_Sensor_I2C_SCB_IRQ.c **** *
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  180:Generated_Source\PSoC4/Current_Sensor_I2C_SCB_IRQ.c **** * 
  181:Generated_Source\PSoC4/Current_Sensor_I2C_SCB_IRQ.c **** *   When defining ISR functions, the CY_ISR and CY_ISR_PROTO macros should be 
  182:Generated_Source\PSoC4/Current_Sensor_I2C_SCB_IRQ.c **** *   used to provide consistent definition across compilers:
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 5
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccBBPSXm.s 			page 5
 
 
  183:Generated_Source\PSoC4/Current_Sensor_I2C_SCB_IRQ.c **** *
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  210:Generated_Source\PSoC4/Current_Sensor_I2C_SCB_IRQ.c **** *   Gets the "address" of the current ISR vector for the Interrupt.
  211:Generated_Source\PSoC4/Current_Sensor_I2C_SCB_IRQ.c **** *
  212:Generated_Source\PSoC4/Current_Sensor_I2C_SCB_IRQ.c **** * Parameters:
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 6
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccBBPSXm.s 			page 6
 
 
  213:Generated_Source\PSoC4/Current_Sensor_I2C_SCB_IRQ.c **** *   None
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  241:Generated_Source\PSoC4/Current_Sensor_I2C_SCB_IRQ.c **** *   priority: Priority of the interrupt, 0 being the highest priority
  242:Generated_Source\PSoC4/Current_Sensor_I2C_SCB_IRQ.c **** *             PSoC 3 and PSoC 5LP: Priority is from 0 to 7.
  243:Generated_Source\PSoC4/Current_Sensor_I2C_SCB_IRQ.c **** *             PSoC 4: Priority is from 0 to 3.
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 7
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccBBPSXm.s 			page 7
 
 
  244:Generated_Source\PSoC4/Current_Sensor_I2C_SCB_IRQ.c **** *
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  138              		.align	2
  139              		.global	Current_Sensor_I2C_SCB_IRQ_GetPriority
  140              		.code	16
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 8
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccBBPSXm.s 			page 8
 
 
  141              		.thumb_func
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  168              		.section	.text.Current_Sensor_I2C_SCB_IRQ_Enable,"ax",%progbits
  169              		.align	2
  170              		.global	Current_Sensor_I2C_SCB_IRQ_Enable
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 9
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccBBPSXm.s 			page 9
 
 
  171              		.code	16
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  202              	Current_Sensor_I2C_SCB_IRQ_GetState:
  203              	.LFB10:
  309:Generated_Source\PSoC4/Current_Sensor_I2C_SCB_IRQ.c **** 
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 10
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccBBPSXm.s 			page 10
 
 
  310:Generated_Source\PSoC4/Current_Sensor_I2C_SCB_IRQ.c **** 
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  331:Generated_Source\PSoC4/Current_Sensor_I2C_SCB_IRQ.c **** 
  332:Generated_Source\PSoC4/Current_Sensor_I2C_SCB_IRQ.c **** /*******************************************************************************
  333:Generated_Source\PSoC4/Current_Sensor_I2C_SCB_IRQ.c **** * Function Name: Current_Sensor_I2C_SCB_IRQ_Disable
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 11
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccBBPSXm.s 			page 11
 
 
  334:Generated_Source\PSoC4/Current_Sensor_I2C_SCB_IRQ.c **** ********************************************************************************
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
   59:Generated_Source\PSoC4/Current_Sensor_I2C_SCB_IRQ.c **** 
  273              		.loc 1 59 0
  274 0002 FFF7FEFF 		bl	Current_Sensor_I2C_SCB_IRQ_Disable
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 12
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccBBPSXm.s 			page 12
 
 
  275              	.LVL8:
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  108:Generated_Source\PSoC4/Current_Sensor_I2C_SCB_IRQ.c **** 
  322              		.loc 1 108 0
  323 000e 0320     		movs	r0, #3
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 13
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccBBPSXm.s 			page 13
 
 
  324 0010 FFF7FEFF 		bl	Current_Sensor_I2C_SCB_IRQ_SetPriority
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  372              		.code	16
  373              		.thumb_func
  374              		.type	Current_Sensor_I2C_SCB_IRQ_SetPending, %function
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 14
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccBBPSXm.s 			page 14
 
 
  375              	Current_Sensor_I2C_SCB_IRQ_SetPending:
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  403              	Current_Sensor_I2C_SCB_IRQ_ClearPending:
  404              	.LFB13:
  377:Generated_Source\PSoC4/Current_Sensor_I2C_SCB_IRQ.c **** 
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 15
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccBBPSXm.s 			page 15
 
 
  378:Generated_Source\PSoC4/Current_Sensor_I2C_SCB_IRQ.c **** 
@@ -896,40 +896,40 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  433 0006 00000000 		.4byte	.Ldebug_abbrev0
  434 000a 04       		.byte	0x4
  435 000b 01       		.uleb128 0x1
- 436 000c 65020000 		.4byte	.LASF36
+ 436 000c 56020000 		.4byte	.LASF36
  437 0010 0C       		.byte	0xc
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 16
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccBBPSXm.s 			page 16
 
 
- 438 0011 63030000 		.4byte	.LASF37
- 439 0015 14000000 		.4byte	.LASF38
+ 438 0011 54030000 		.4byte	.LASF37
+ 439 0015 F4010000 		.4byte	.LASF38
  440 0019 00000000 		.4byte	.Ldebug_ranges0+0
  441 001d 00000000 		.4byte	0
  442 0021 00000000 		.4byte	.Ldebug_line0
  443 0025 02       		.uleb128 0x2
  444 0026 01       		.byte	0x1
  445 0027 06       		.byte	0x6
- 446 0028 04040000 		.4byte	.LASF0
+ 446 0028 F5030000 		.4byte	.LASF0
  447 002c 02       		.uleb128 0x2
  448 002d 01       		.byte	0x1
  449 002e 08       		.byte	0x8
- 450 002f 5D010000 		.4byte	.LASF1
+ 450 002f F9000000 		.4byte	.LASF1
  451 0033 02       		.uleb128 0x2
  452 0034 02       		.byte	0x2
  453 0035 05       		.byte	0x5
- 454 0036 59030000 		.4byte	.LASF2
+ 454 0036 4A030000 		.4byte	.LASF2
  455 003a 02       		.uleb128 0x2
  456 003b 02       		.byte	0x2
  457 003c 07       		.byte	0x7
- 458 003d C9000000 		.4byte	.LASF3
+ 458 003d 65000000 		.4byte	.LASF3
  459 0041 02       		.uleb128 0x2
  460 0042 04       		.byte	0x4
  461 0043 05       		.byte	0x5
- 462 0044 CA030000 		.4byte	.LASF4
+ 462 0044 BB030000 		.4byte	.LASF4
  463 0048 02       		.uleb128 0x2
  464 0049 04       		.byte	0x4
  465 004a 07       		.byte	0x7
- 466 004b 7A010000 		.4byte	.LASF5
+ 466 004b 16010000 		.4byte	.LASF5
  467 004f 02       		.uleb128 0x2
  468 0050 08       		.byte	0x8
  469 0051 05       		.byte	0x5
@@ -937,7 +937,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  471 0056 02       		.uleb128 0x2
  472 0057 08       		.byte	0x8
  473 0058 07       		.byte	0x7
- 474 0059 23010000 		.4byte	.LASF7
+ 474 0059 BF000000 		.4byte	.LASF7
  475 005d 03       		.uleb128 0x3
  476 005e 04       		.byte	0x4
  477 005f 05       		.byte	0x5
@@ -945,32 +945,32 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  479 0064 02       		.uleb128 0x2
  480 0065 04       		.byte	0x4
  481 0066 07       		.byte	0x7
- 482 0067 2D020000 		.4byte	.LASF8
+ 482 0067 C9010000 		.4byte	.LASF8
  483 006b 04       		.uleb128 0x4
- 484 006c B1010000 		.4byte	.LASF9
+ 484 006c 4D010000 		.4byte	.LASF9
  485 0070 02       		.byte	0x2
  486 0071 FB01     		.2byte	0x1fb
  487 0073 2C000000 		.4byte	0x2c
  488 0077 04       		.uleb128 0x4
- 489 0078 0F020000 		.4byte	.LASF10
+ 489 0078 AB010000 		.4byte	.LASF10
  490 007c 02       		.byte	0x2
  491 007d FD01     		.2byte	0x1fd
  492 007f 48000000 		.4byte	0x48
  493 0083 02       		.uleb128 0x2
  494 0084 04       		.byte	0x4
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 17
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccBBPSXm.s 			page 17
 
 
  495 0085 04       		.byte	0x4
- 496 0086 A0000000 		.4byte	.LASF11
+ 496 0086 3C000000 		.4byte	.LASF11
  497 008a 02       		.uleb128 0x2
  498 008b 08       		.byte	0x8
  499 008c 04       		.byte	0x4
- 500 008d C0010000 		.4byte	.LASF12
+ 500 008d 5C010000 		.4byte	.LASF12
  501 0091 02       		.uleb128 0x2
  502 0092 01       		.byte	0x1
  503 0093 08       		.byte	0x8
- 504 0094 47030000 		.4byte	.LASF13
+ 504 0094 38030000 		.4byte	.LASF13
  505 0098 04       		.uleb128 0x4
  506 0099 0E000000 		.4byte	.LASF14
  507 009d 02       		.byte	0x2
@@ -979,7 +979,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  510 00a4 05       		.uleb128 0x5
  511 00a5 77000000 		.4byte	0x77
  512 00a9 04       		.uleb128 0x4
- 513 00aa 58020000 		.4byte	.LASF15
+ 513 00aa 49020000 		.4byte	.LASF15
  514 00ae 02       		.byte	0x2
  515 00af B702     		.2byte	0x2b7
  516 00b1 B5000000 		.4byte	0xb5
@@ -990,13 +990,13 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  521 00bc 02       		.uleb128 0x2
  522 00bd 08       		.byte	0x8
  523 00be 04       		.byte	0x4
- 524 00bf F8030000 		.4byte	.LASF16
+ 524 00bf E9030000 		.4byte	.LASF16
  525 00c3 02       		.uleb128 0x2
  526 00c4 04       		.byte	0x4
  527 00c5 07       		.byte	0x7
- 528 00c6 F3020000 		.4byte	.LASF17
+ 528 00c6 E4020000 		.4byte	.LASF17
  529 00ca 08       		.uleb128 0x8
- 530 00cb D3030000 		.4byte	.LASF24
+ 530 00cb C4030000 		.4byte	.LASF24
  531 00cf 01       		.byte	0x1
  532 00d0 9F       		.byte	0x9f
  533 00d1 00000000 		.4byte	.LFB4
@@ -1004,7 +1004,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  535 00d9 01       		.uleb128 0x1
  536 00da 9C       		.byte	0x9c
  537 00db 09       		.uleb128 0x9
- 538 00dc 8C010000 		.4byte	.LASF18
+ 538 00dc 28010000 		.4byte	.LASF18
  539 00e0 01       		.byte	0x1
  540 00e1 C7       		.byte	0xc7
  541 00e2 00000000 		.4byte	.LFB5
@@ -1013,18 +1013,18 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  544 00eb 9C       		.byte	0x9c
  545 00ec FE000000 		.4byte	0xfe
  546 00f0 0A       		.uleb128 0xa
- 547 00f1 3A020000 		.4byte	.LASF20
+ 547 00f1 D6010000 		.4byte	.LASF20
  548 00f5 01       		.byte	0x1
  549 00f6 C7       		.byte	0xc7
  550 00f7 A9000000 		.4byte	0xa9
  551 00fb 01       		.uleb128 0x1
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 18
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccBBPSXm.s 			page 18
 
 
  552 00fc 50       		.byte	0x50
  553 00fd 00       		.byte	0
  554 00fe 0B       		.uleb128 0xb
- 555 00ff 22030000 		.4byte	.LASF26
+ 555 00ff 13030000 		.4byte	.LASF26
  556 0103 01       		.byte	0x1
  557 0104 DB       		.byte	0xdb
  558 0105 A9000000 		.4byte	0xa9
@@ -1033,7 +1033,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  561 0111 01       		.uleb128 0x1
  562 0112 9C       		.byte	0x9c
  563 0113 09       		.uleb128 0x9
- 564 0114 C7010000 		.4byte	.LASF19
+ 564 0114 63010000 		.4byte	.LASF19
  565 0118 01       		.byte	0x1
  566 0119 F9       		.byte	0xf9
  567 011a 00000000 		.4byte	.LFB7
@@ -1042,19 +1042,19 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  570 0123 9C       		.byte	0x9c
  571 0124 65010000 		.4byte	0x165
  572 0128 0C       		.uleb128 0xc
- 573 0129 B7010000 		.4byte	.LASF21
+ 573 0129 53010000 		.4byte	.LASF21
  574 012d 01       		.byte	0x1
  575 012e F9       		.byte	0xf9
  576 012f 6B000000 		.4byte	0x6b
  577 0133 00000000 		.4byte	.LLST0
  578 0137 0D       		.uleb128 0xd
- 579 0138 6B010000 		.4byte	.LASF22
+ 579 0138 07010000 		.4byte	.LASF22
  580 013c 01       		.byte	0x1
  581 013d FB       		.byte	0xfb
  582 013e 6B000000 		.4byte	0x6b
  583 0142 21000000 		.4byte	.LLST1
  584 0146 0E       		.uleb128 0xe
- 585 0147 97030000 		.4byte	.LASF23
+ 585 0147 88030000 		.4byte	.LASF23
  586 014b 01       		.byte	0x1
  587 014c FC       		.byte	0xfc
  588 014d 77000000 		.4byte	0x77
@@ -1067,7 +1067,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  595 0160 F9020000 		.4byte	0x2f9
  596 0164 00       		.byte	0
  597 0165 10       		.uleb128 0x10
- 598 0166 DC000000 		.4byte	.LASF39
+ 598 0166 78000000 		.4byte	.LASF39
  599 016a 01       		.byte	0x1
  600 016b 1501     		.2byte	0x115
  601 016d 6B000000 		.4byte	0x6b
@@ -1077,8 +1077,8 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  605 017a 9C       		.byte	0x9c
  606 017b 9D010000 		.4byte	0x19d
  607 017f 11       		.uleb128 0x11
- 608 0180 B7010000 		.4byte	.LASF21
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 19
+ 608 0180 53010000 		.4byte	.LASF21
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccBBPSXm.s 			page 19
 
 
  609 0184 01       		.byte	0x1
@@ -1086,14 +1086,14 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  611 0187 77000000 		.4byte	0x77
  612 018b 34000000 		.4byte	.LLST2
  613 018f 12       		.uleb128 0x12
- 614 0190 97030000 		.4byte	.LASF23
+ 614 0190 88030000 		.4byte	.LASF23
  615 0194 01       		.byte	0x1
  616 0195 1801     		.2byte	0x118
  617 0197 77000000 		.4byte	0x77
  618 019b 1E       		.byte	0x1e
  619 019c 00       		.byte	0
  620 019d 13       		.uleb128 0x13
- 621 019e 10040000 		.4byte	.LASF25
+ 621 019e 01040000 		.4byte	.LASF25
  622 01a2 01       		.byte	0x1
  623 01a3 3001     		.2byte	0x130
  624 01a5 00000000 		.4byte	.LFB9
@@ -1101,7 +1101,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  626 01ad 01       		.uleb128 0x1
  627 01ae 9C       		.byte	0x9c
  628 01af 14       		.uleb128 0x14
- 629 01b0 A6030000 		.4byte	.LASF27
+ 629 01b0 97030000 		.4byte	.LASF27
  630 01b4 01       		.byte	0x1
  631 01b5 4501     		.2byte	0x145
  632 01b7 6B000000 		.4byte	0x6b
@@ -1110,7 +1110,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  635 01c3 01       		.uleb128 0x1
  636 01c4 9C       		.byte	0x9c
  637 01c5 13       		.uleb128 0x13
- 638 01c6 3A010000 		.4byte	.LASF28
+ 638 01c6 D6000000 		.4byte	.LASF28
  639 01ca 01       		.byte	0x1
  640 01cb 5A01     		.2byte	0x15a
  641 01cd 00000000 		.4byte	.LFB11
@@ -1118,7 +1118,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  643 01d5 01       		.uleb128 0x1
  644 01d6 9C       		.byte	0x9c
  645 01d7 09       		.uleb128 0x9
- 646 01d8 EE010000 		.4byte	.LASF29
+ 646 01d8 8A010000 		.4byte	.LASF29
  647 01dc 01       		.byte	0x1
  648 01dd 38       		.byte	0x38
  649 01de 00000000 		.4byte	.LFB1
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  663 0204 50       		.byte	0x50
  664 0205 05       		.uleb128 0x5
  665 0206 03       		.byte	0x3
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 20
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccBBPSXm.s 			page 20
 
 
  666 0207 00000000 		.4byte	Current_Sensor_I2C_SCB_IRQ_Interrupt
@@ -1158,7 +1158,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  680 0224 9D010000 		.4byte	0x19d
  681 0228 00       		.byte	0
  682 0229 09       		.uleb128 0x9
- 683 022a A6000000 		.4byte	.LASF30
+ 683 022a 42000000 		.4byte	.LASF30
  684 022e 01       		.byte	0x1
  685 022f 63       		.byte	0x63
  686 0230 00000000 		.4byte	.LFB2
@@ -1167,7 +1167,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  689 0239 9C       		.byte	0x9c
  690 023a 87020000 		.4byte	0x287
  691 023e 0C       		.uleb128 0xc
- 692 023f 3A020000 		.4byte	.LASF20
+ 692 023f D6010000 		.4byte	.LASF20
  693 0243 01       		.byte	0x1
  694 0244 63       		.byte	0x63
  695 0245 A9000000 		.4byte	0xa9
@@ -1198,13 +1198,13 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  720 027c 00       		.byte	0
  721 027d 0F       		.uleb128 0xf
  722 027e 18000000 		.4byte	.LVL16
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 21
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccBBPSXm.s 			page 21
 
 
  723 0282 9D010000 		.4byte	0x19d
  724 0286 00       		.byte	0
  725 0287 09       		.uleb128 0x9
- 726 0288 03010000 		.4byte	.LASF31
+ 726 0288 9F000000 		.4byte	.LASF31
  727 028c 01       		.byte	0x1
  728 028d 81       		.byte	0x81
  729 028e 00000000 		.4byte	.LFB3
@@ -1220,7 +1220,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  739 02aa DB000000 		.4byte	0xdb
  740 02ae 00       		.byte	0
  741 02af 13       		.uleb128 0x13
- 742 02b0 FC020000 		.4byte	.LASF32
+ 742 02b0 ED020000 		.4byte	.LASF32
  743 02b4 01       		.byte	0x1
  744 02b5 7501     		.2byte	0x175
  745 02b7 00000000 		.4byte	.LFB12
@@ -1228,7 +1228,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  747 02bf 01       		.uleb128 0x1
  748 02c0 9C       		.byte	0x9c
  749 02c1 13       		.uleb128 0x13
- 750 02c2 78000000 		.4byte	.LASF33
+ 750 02c2 14000000 		.4byte	.LASF33
  751 02c6 01       		.byte	0x1
  752 02c7 8E01     		.2byte	0x18e
  753 02c9 00000000 		.4byte	.LFB13
@@ -1243,22 +1243,22 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  762 02e1 2F       		.byte	0x2f
  763 02e2 00       		.byte	0
  764 02e3 19       		.uleb128 0x19
- 765 02e4 4C030000 		.4byte	.LASF40
+ 765 02e4 3D030000 		.4byte	.LASF40
  766 02e8 01       		.byte	0x1
  767 02e9 21       		.byte	0x21
  768 02ea D3020000 		.4byte	0x2d3
  769 02ee 1A       		.uleb128 0x1a
- 770 02ef 16020000 		.4byte	.LASF34
- 771 02f3 16020000 		.4byte	.LASF34
+ 770 02ef B2010000 		.4byte	.LASF34
+ 771 02f3 B2010000 		.4byte	.LASF34
  772 02f7 03       		.byte	0x3
  773 02f8 F8       		.byte	0xf8
  774 02f9 1A       		.uleb128 0x1a
- 775 02fa 42020000 		.4byte	.LASF35
- 776 02fe 42020000 		.4byte	.LASF35
+ 775 02fa DE010000 		.4byte	.LASF35
+ 776 02fe DE010000 		.4byte	.LASF35
  777 0302 03       		.byte	0x3
  778 0303 F9       		.byte	0xf9
  779 0304 00       		.byte	0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 22
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccBBPSXm.s 			page 22
 
 
  780              		.section	.debug_abbrev,"",%progbits
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  834 0034 00       		.byte	0
  835 0035 00       		.byte	0
  836 0036 05       		.uleb128 0x5
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 23
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccBBPSXm.s 			page 23
 
 
  837 0037 35       		.uleb128 0x35
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  891 006e 3B       		.uleb128 0x3b
  892 006f 0B       		.uleb128 0xb
  893 0070 27       		.uleb128 0x27
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 24
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccBBPSXm.s 			page 24
 
 
  894 0071 19       		.uleb128 0x19
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  948 00a9 05       		.uleb128 0x5
  949 00aa 00       		.byte	0
  950 00ab 03       		.uleb128 0x3
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 25
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccBBPSXm.s 			page 25
 
 
  951 00ac 0E       		.uleb128 0xe
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  1005 00e4 19       		.uleb128 0x19
  1006 00e5 03       		.uleb128 0x3
  1007 00e6 0E       		.uleb128 0xe
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 26
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccBBPSXm.s 			page 26
 
 
  1008 00e7 3A       		.uleb128 0x3a
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  1062 011e 19       		.uleb128 0x19
  1063 011f 03       		.uleb128 0x3
  1064 0120 0E       		.uleb128 0xe
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 27
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccBBPSXm.s 			page 27
 
 
  1065 0121 3A       		.uleb128 0x3a
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  1119 015d 00       		.byte	0
  1120 015e 02       		.uleb128 0x2
  1121 015f 18       		.uleb128 0x18
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 28
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccBBPSXm.s 			page 28
 
 
  1122 0160 9142     		.uleb128 0x2111
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  1176 0197 00       		.byte	0
  1177 0198 00       		.byte	0
  1178 0199 00       		.byte	0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 29
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccBBPSXm.s 			page 29
 
 
  1179              		.section	.debug_loc,"",%progbits
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  1233 007a 00000000 		.4byte	0
  1234 007e 00000000 		.4byte	0
  1235              		.section	.debug_aranges,"",%progbits
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 30
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccBBPSXm.s 			page 30
 
 
  1236 0000 7C000000 		.4byte	0x7c
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  1290 0044 1C000000 		.4byte	.LFE1
  1291 0048 00000000 		.4byte	.LFB2
  1292 004c 1A000000 		.4byte	.LFE2
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 31
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccBBPSXm.s 			page 31
 
 
  1293 0050 00000000 		.4byte	.LFB3
@@ -1824,232 +1824,230 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 1
  1306              	.LASF14:
  1307 000e 72656733 		.ascii	"reg32\000"
  1307      3200
- 1308              	.LASF38:
- 1309 0014 433A5C55 		.ascii	"C:\\Users\\M4rz4n\\Desktop\\Husky Robotics\\Firmwar"
- 1309      73657273 
- 1309      5C4D3472 
- 1309      7A346E5C 
- 1309      4465736B 
- 1310 0042 655C424C 		.ascii	"e\\BLDC\\BLDC_Motor_Board_PY2023\\BLDC_Motor_Board."
- 1310      44435C42 
- 1310      4C44435F 
- 1310      4D6F746F 
- 1310      725F426F 
- 1311 0072 63796473 		.ascii	"cydsn\000"
- 1311      6E00
- 1312              	.LASF33:
- 1313 0078 43757272 		.ascii	"Current_Sensor_I2C_SCB_IRQ_ClearPending\000"
+ 1308              	.LASF33:
+ 1309 0014 43757272 		.ascii	"Current_Sensor_I2C_SCB_IRQ_ClearPending\000"
+ 1309      656E745F 
+ 1309      53656E73 
+ 1309      6F725F49 
+ 1309      32435F53 
+ 1310              	.LASF11:
+ 1311 003c 666C6F61 		.ascii	"float\000"
+ 1311      7400
+ 1312              	.LASF30:
+ 1313 0042 43757272 		.ascii	"Current_Sensor_I2C_SCB_IRQ_StartEx\000"
  1313      656E745F 
  1313      53656E73 
  1313      6F725F49 
  1313      32435F53 
- 1314              	.LASF11:
- 1315 00a0 666C6F61 		.ascii	"float\000"
- 1315      7400
- 1316              	.LASF30:
- 1317 00a6 43757272 		.ascii	"Current_Sensor_I2C_SCB_IRQ_StartEx\000"
+ 1314              	.LASF3:
+ 1315 0065 73686F72 		.ascii	"short unsigned int\000"
+ 1315      7420756E 
+ 1315      7369676E 
+ 1315      65642069 
+ 1315      6E7400
+ 1316              	.LASF39:
+ 1317 0078 43757272 		.ascii	"Current_Sensor_I2C_SCB_IRQ_GetPriority\000"
  1317      656E745F 
  1317      53656E73 
  1317      6F725F49 
  1317      32435F53 
- 1318              	.LASF3:
- 1319 00c9 73686F72 		.ascii	"short unsigned int\000"
- 1319      7420756E 
- 1319      7369676E 
- 1319      65642069 
- 1319      6E7400
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 32
+ 1318              	.LASF31:
+ 1319 009f 43757272 		.ascii	"Current_Sensor_I2C_SCB_IRQ_Stop\000"
+ 1319      656E745F 
+ 1319      53656E73 
+ 1319      6F725F49 
+ 1319      32435F53 
+ 1320              	.LASF7:
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccBBPSXm.s 			page 32
 
 
- 1320              	.LASF39:
- 1321 00dc 43757272 		.ascii	"Current_Sensor_I2C_SCB_IRQ_GetPriority\000"
- 1321      656E745F 
- 1321      53656E73 
- 1321      6F725F49 
- 1321      32435F53 
- 1322              	.LASF31:
- 1323 0103 43757272 		.ascii	"Current_Sensor_I2C_SCB_IRQ_Stop\000"
+ 1321 00bf 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1321      206C6F6E 
+ 1321      6720756E 
+ 1321      7369676E 
+ 1321      65642069 
+ 1322              	.LASF28:
+ 1323 00d6 43757272 		.ascii	"Current_Sensor_I2C_SCB_IRQ_Disable\000"
  1323      656E745F 
  1323      53656E73 
  1323      6F725F49 
  1323      32435F53 
- 1324              	.LASF7:
- 1325 0123 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1325      206C6F6E 
- 1325      6720756E 
- 1325      7369676E 
- 1325      65642069 
- 1326              	.LASF28:
- 1327 013a 43757272 		.ascii	"Current_Sensor_I2C_SCB_IRQ_Disable\000"
- 1327      656E745F 
- 1327      53656E73 
- 1327      6F725F49 
- 1327      32435F53 
- 1328              	.LASF1:
- 1329 015d 756E7369 		.ascii	"unsigned char\000"
- 1329      676E6564 
- 1329      20636861 
- 1329      7200
- 1330              	.LASF22:
- 1331 016b 696E7465 		.ascii	"interruptState\000"
- 1331      72727570 
- 1331      74537461 
- 1331      746500
- 1332              	.LASF5:
- 1333 017a 6C6F6E67 		.ascii	"long unsigned int\000"
- 1333      20756E73 
- 1333      69676E65 
- 1333      6420696E 
- 1333      7400
- 1334              	.LASF18:
- 1335 018c 43757272 		.ascii	"Current_Sensor_I2C_SCB_IRQ_SetVector\000"
- 1335      656E745F 
- 1335      53656E73 
- 1335      6F725F49 
- 1335      32435F53 
- 1336              	.LASF9:
- 1337 01b1 75696E74 		.ascii	"uint8\000"
- 1337      3800
- 1338              	.LASF21:
- 1339 01b7 7072696F 		.ascii	"priority\000"
- 1339      72697479 
- 1339      00
- 1340              	.LASF12:
- 1341 01c0 646F7562 		.ascii	"double\000"
- 1341      6C6500
- 1342              	.LASF19:
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 33
+ 1324              	.LASF1:
+ 1325 00f9 756E7369 		.ascii	"unsigned char\000"
+ 1325      676E6564 
+ 1325      20636861 
+ 1325      7200
+ 1326              	.LASF22:
+ 1327 0107 696E7465 		.ascii	"interruptState\000"
+ 1327      72727570 
+ 1327      74537461 
+ 1327      746500
+ 1328              	.LASF5:
+ 1329 0116 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1329      20756E73 
+ 1329      69676E65 
+ 1329      6420696E 
+ 1329      7400
+ 1330              	.LASF18:
+ 1331 0128 43757272 		.ascii	"Current_Sensor_I2C_SCB_IRQ_SetVector\000"
+ 1331      656E745F 
+ 1331      53656E73 
+ 1331      6F725F49 
+ 1331      32435F53 
+ 1332              	.LASF9:
+ 1333 014d 75696E74 		.ascii	"uint8\000"
+ 1333      3800
+ 1334              	.LASF21:
+ 1335 0153 7072696F 		.ascii	"priority\000"
+ 1335      72697479 
+ 1335      00
+ 1336              	.LASF12:
+ 1337 015c 646F7562 		.ascii	"double\000"
+ 1337      6C6500
+ 1338              	.LASF19:
+ 1339 0163 43757272 		.ascii	"Current_Sensor_I2C_SCB_IRQ_SetPriority\000"
+ 1339      656E745F 
+ 1339      53656E73 
+ 1339      6F725F49 
+ 1339      32435F53 
+ 1340              	.LASF29:
+ 1341 018a 43757272 		.ascii	"Current_Sensor_I2C_SCB_IRQ_Start\000"
+ 1341      656E745F 
+ 1341      53656E73 
+ 1341      6F725F49 
+ 1341      32435F53 
+ 1342              	.LASF10:
+ 1343 01ab 75696E74 		.ascii	"uint32\000"
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccBBPSXm.s 			page 33
 
 
- 1343 01c7 43757272 		.ascii	"Current_Sensor_I2C_SCB_IRQ_SetPriority\000"
- 1343      656E745F 
- 1343      53656E73 
- 1343      6F725F49 
- 1343      32435F53 
- 1344              	.LASF29:
- 1345 01ee 43757272 		.ascii	"Current_Sensor_I2C_SCB_IRQ_Start\000"
- 1345      656E745F 
- 1345      53656E73 
- 1345      6F725F49 
- 1345      32435F53 
- 1346              	.LASF10:
- 1347 020f 75696E74 		.ascii	"uint32\000"
- 1347      333200
- 1348              	.LASF34:
- 1349 0216 4379456E 		.ascii	"CyEnterCriticalSection\000"
- 1349      74657243 
- 1349      72697469 
- 1349      63616C53 
- 1349      65637469 
- 1350              	.LASF8:
- 1351 022d 756E7369 		.ascii	"unsigned int\000"
- 1351      676E6564 
- 1351      20696E74 
- 1351      00
- 1352              	.LASF20:
- 1353 023a 61646472 		.ascii	"address\000"
- 1353      65737300 
- 1354              	.LASF35:
- 1355 0242 43794578 		.ascii	"CyExitCriticalSection\000"
- 1355      69744372 
- 1355      69746963 
- 1355      616C5365 
- 1355      6374696F 
- 1356              	.LASF15:
- 1357 0258 63796973 		.ascii	"cyisraddress\000"
- 1357      72616464 
- 1357      72657373 
- 1357      00
- 1358              	.LASF36:
- 1359 0265 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 1359      43313120 
- 1359      352E342E 
- 1359      31203230 
- 1359      31363036 
- 1360 0298 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 1360      20726576 
- 1360      6973696F 
- 1360      6E203233 
- 1360      37373135 
- 1361 02cb 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1361      66756E63 
- 1361      74696F6E 
- 1361      2D736563 
- 1361      74696F6E 
- 1362              	.LASF17:
- 1363 02f3 73697A65 		.ascii	"sizetype\000"
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 34
+ 1343      333200
+ 1344              	.LASF34:
+ 1345 01b2 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 1345      74657243 
+ 1345      72697469 
+ 1345      63616C53 
+ 1345      65637469 
+ 1346              	.LASF8:
+ 1347 01c9 756E7369 		.ascii	"unsigned int\000"
+ 1347      676E6564 
+ 1347      20696E74 
+ 1347      00
+ 1348              	.LASF20:
+ 1349 01d6 61646472 		.ascii	"address\000"
+ 1349      65737300 
+ 1350              	.LASF35:
+ 1351 01de 43794578 		.ascii	"CyExitCriticalSection\000"
+ 1351      69744372 
+ 1351      69746963 
+ 1351      616C5365 
+ 1351      6374696F 
+ 1352              	.LASF38:
+ 1353 01f4 433A5C55 		.ascii	"C:\\Users\\lucbu\\DocumentStorage\\GitHub\\BLDC_Mot"
+ 1353      73657273 
+ 1353      5C6C7563 
+ 1353      62755C44 
+ 1353      6F63756D 
+ 1354 0222 6F725F42 		.ascii	"or_Board_PY2023\\BLDC_Motor_Board.cydsn\000"
+ 1354      6F617264 
+ 1354      5F505932 
+ 1354      3032335C 
+ 1354      424C4443 
+ 1355              	.LASF15:
+ 1356 0249 63796973 		.ascii	"cyisraddress\000"
+ 1356      72616464 
+ 1356      72657373 
+ 1356      00
+ 1357              	.LASF36:
+ 1358 0256 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1358      43313120 
+ 1358      352E342E 
+ 1358      31203230 
+ 1358      31363036 
+ 1359 0289 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 1359      20726576 
+ 1359      6973696F 
+ 1359      6E203233 
+ 1359      37373135 
+ 1360 02bc 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1360      66756E63 
+ 1360      74696F6E 
+ 1360      2D736563 
+ 1360      74696F6E 
+ 1361              	.LASF17:
+ 1362 02e4 73697A65 		.ascii	"sizetype\000"
+ 1362      74797065 
+ 1362      00
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccBBPSXm.s 			page 34
 
 
- 1363      74797065 
- 1363      00
- 1364              	.LASF32:
- 1365 02fc 43757272 		.ascii	"Current_Sensor_I2C_SCB_IRQ_SetPending\000"
- 1365      656E745F 
- 1365      53656E73 
- 1365      6F725F49 
- 1365      32435F53 
- 1366              	.LASF26:
- 1367 0322 43757272 		.ascii	"Current_Sensor_I2C_SCB_IRQ_GetVector\000"
- 1367      656E745F 
- 1367      53656E73 
- 1367      6F725F49 
- 1367      32435F53 
- 1368              	.LASF13:
- 1369 0347 63686172 		.ascii	"char\000"
- 1369      00
- 1370              	.LASF40:
- 1371 034c 43795261 		.ascii	"CyRamVectors\000"
- 1371      6D566563 
- 1371      746F7273 
- 1371      00
- 1372              	.LASF2:
- 1373 0359 73686F72 		.ascii	"short int\000"
- 1373      7420696E 
- 1373      7400
- 1374              	.LASF37:
- 1375 0363 47656E65 		.ascii	"Generated_Source\\PSoC4\\Current_Sensor_I2C_SCB_IRQ"
- 1375      72617465 
- 1375      645F536F 
- 1375      75726365 
- 1375      5C50536F 
- 1376 0394 2E6300   		.ascii	".c\000"
- 1377              	.LASF23:
- 1378 0397 7072696F 		.ascii	"priorityOffset\000"
- 1378      72697479 
- 1378      4F666673 
- 1378      657400
- 1379              	.LASF27:
- 1380 03a6 43757272 		.ascii	"Current_Sensor_I2C_SCB_IRQ_GetState\000"
- 1380      656E745F 
- 1380      53656E73 
- 1380      6F725F49 
- 1380      32435F53 
- 1381              	.LASF4:
- 1382 03ca 6C6F6E67 		.ascii	"long int\000"
- 1382      20696E74 
- 1382      00
- 1383              	.LASF24:
- 1384 03d3 43757272 		.ascii	"Current_Sensor_I2C_SCB_IRQ_Interrupt\000"
- 1384      656E745F 
- 1384      53656E73 
- 1384      6F725F49 
- 1384      32435F53 
- 1385              	.LASF16:
- 1386 03f8 6C6F6E67 		.ascii	"long double\000"
- 1386      20646F75 
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccrsI2PZ.s 			page 35
+ 1363              	.LASF32:
+ 1364 02ed 43757272 		.ascii	"Current_Sensor_I2C_SCB_IRQ_SetPending\000"
+ 1364      656E745F 
+ 1364      53656E73 
+ 1364      6F725F49 
+ 1364      32435F53 
+ 1365              	.LASF26:
+ 1366 0313 43757272 		.ascii	"Current_Sensor_I2C_SCB_IRQ_GetVector\000"
+ 1366      656E745F 
+ 1366      53656E73 
+ 1366      6F725F49 
+ 1366      32435F53 
+ 1367              	.LASF13:
+ 1368 0338 63686172 		.ascii	"char\000"
+ 1368      00
+ 1369              	.LASF40:
+ 1370 033d 43795261 		.ascii	"CyRamVectors\000"
+ 1370      6D566563 
+ 1370      746F7273 
+ 1370      00
+ 1371              	.LASF2:
+ 1372 034a 73686F72 		.ascii	"short int\000"
+ 1372      7420696E 
+ 1372      7400
+ 1373              	.LASF37:
+ 1374 0354 47656E65 		.ascii	"Generated_Source\\PSoC4\\Current_Sensor_I2C_SCB_IRQ"
+ 1374      72617465 
+ 1374      645F536F 
+ 1374      75726365 
+ 1374      5C50536F 
+ 1375 0385 2E6300   		.ascii	".c\000"
+ 1376              	.LASF23:
+ 1377 0388 7072696F 		.ascii	"priorityOffset\000"
+ 1377      72697479 
+ 1377      4F666673 
+ 1377      657400
+ 1378              	.LASF27:
+ 1379 0397 43757272 		.ascii	"Current_Sensor_I2C_SCB_IRQ_GetState\000"
+ 1379      656E745F 
+ 1379      53656E73 
+ 1379      6F725F49 
+ 1379      32435F53 
+ 1380              	.LASF4:
+ 1381 03bb 6C6F6E67 		.ascii	"long int\000"
+ 1381      20696E74 
+ 1381      00
+ 1382              	.LASF24:
+ 1383 03c4 43757272 		.ascii	"Current_Sensor_I2C_SCB_IRQ_Interrupt\000"
+ 1383      656E745F 
+ 1383      53656E73 
+ 1383      6F725F49 
+ 1383      32435F53 
+ 1384              	.LASF16:
+ 1385 03e9 6C6F6E67 		.ascii	"long double\000"
+ 1385      20646F75 
+ 1385      626C6500 
+ 1386              	.LASF0:
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccBBPSXm.s 			page 35
 
 
- 1386      626C6500 
- 1387              	.LASF0:
- 1388 0404 7369676E 		.ascii	"signed char\000"
- 1388      65642063 
- 1388      68617200 
- 1389              	.LASF25:
- 1390 0410 43757272 		.ascii	"Current_Sensor_I2C_SCB_IRQ_Enable\000"
- 1390      656E745F 
- 1390      53656E73 
- 1390      6F725F49 
- 1390      32435F53 
- 1391              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 1387 03f5 7369676E 		.ascii	"signed char\000"
+ 1387      65642063 
+ 1387      68617200 
+ 1388              	.LASF25:
+ 1389 0401 43757272 		.ascii	"Current_Sensor_I2C_SCB_IRQ_Enable\000"
+ 1389      656E745F 
+ 1389      53656E73 
+ 1389      6F725F49 
+ 1389      32435F53 
+ 1390              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

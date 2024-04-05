@@ -16,6 +16,7 @@
 #include "BLDC_Drive.h"
 #include "BLDC_CAN.h"
 #include "BLDC_FSM.h"
+#include "BLDC_SPI.h"
 #include "HindsightCAN/CANLibrary.h"
 #include <math.h>
 
@@ -105,19 +106,33 @@ CY_ISR(Pin_Limit_Handler){
         UART_UartPutString("Change limit 2\n\r");
     }
 }
-
-
     
 
 int main(void)
 { 
     Initialize();
     
+    CyDelay(10);
+    uint8 data[5] = {1,0,0,0,0};
+    // set chip select high
+    TMC6100_SpiUartPutArray(data, 5);
+    // set chip select low
+    uint32 gstat = TMC6100_SpiUartReadRxData();
+    // PrintIntBinary(gstat);
+    
     for(;;)
     {
         set_speed(1000*(1-cos(6.28 * delay * counter / 1000 / period)), 0);
         counter++;
         CyDelay(delay);
+        
+        uint8 data[5] = {1,0,0,0,0};
+        // set chip select high
+        TMC6100_SpiUartPutArray(data, 5);
+        // set chip select low
+        uint32 gstat = TMC6100_SpiUartReadRxData();
+        
+        
         /*
         switch(GetState()) {
             case(UNINIT):
@@ -183,7 +198,7 @@ void Initialize(void) {
     
     // Initialize protocols
     InitCAN(0x4, (int)address);
-    TMC6100_SPI_Start();
+    TMC6100_Start();
     Current_Sensor_I2C_Start();
     UART_Start();
     Timer_Rotor_Delay_Start();   

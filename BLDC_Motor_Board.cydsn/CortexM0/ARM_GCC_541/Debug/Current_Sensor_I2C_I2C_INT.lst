@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
   28:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c **** *  Handles the Interrupt Service Routine for the SCB I2C mode.
   29:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c **** *
   30:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c **** *******************************************************************************/
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 2
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 2
 
 
   31:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c **** CY_ISR(Current_Sensor_I2C_I2C_ISR)
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
   55              	.L3:
   58:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****     }
   59:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c **** 
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 3
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 3
 
 
   60:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****     /* Master and Slave error tracking:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
   86:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****             */
   87:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****             if(Current_Sensor_I2C_CHECK_INTR_MASTER_MASKED(Current_Sensor_I2C_INTR_MASTER_I2C_ARB_L
   83              		.loc 1 87 0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 4
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 4
 
 
   84 003c A44A     		ldr	r2, .L41+16
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  106 0058 1278     		ldrb	r2, [r2]
  107 005a D207     		lsls	r2, r2, #31
  108 005c 01D5     		bpl	.L34
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 5
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 5
 
 
  109 005e 0122     		movs	r2, #1
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  164:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                             /* Set I2C_FSM_EXIT_IDLE for BUS_ERR and ARB_LOST (that is really bus e
  165:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                             Current_Sensor_I2C_state = Current_Sensor_I2C_I2C_FSM_EXIT_IDLE;
  166:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                         }
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 6
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 6
 
 
  167:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                     }
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  209:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c **** 
  210:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                 Current_Sensor_I2C_state = Current_Sensor_I2C_I2C_FSM_EXIT_IDLE;
  211:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****             }
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 7
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 7
 
 
  212:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****         }
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  161 00a2 1380     		strh	r3, [r2]
  235:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                 Current_Sensor_I2C_state       = Current_Sensor_I2C_I2C_FSM_IDLE;
  162              		.loc 1 235 0 is_stmt 1 discriminator 4
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 8
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 8
 
 
  163 00a4 1022     		movs	r2, #16
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  256:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                     *  - RX direction: the 1st byte is received, but there is no ACK permission,
  257:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                     *    the clock is stretched after 1 byte is received.
  258:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                     */
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 9
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 9
 
 
  259:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                     else
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  230              		.loc 1 279 0
  231 0100 724A     		ldr	r2, .L41+12
  232 0102 1278     		ldrb	r2, [r2]
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 10
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 10
 
 
  233 0104 D207     		lsls	r2, r2, #31
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  265 0132 0B40     		ands	r3, r1
  266 0134 1360     		str	r3, [r2]
  267              	.LVL18:
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 11
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 11
 
 
  301:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c **** 
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  306              	.L17:
  312:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                             }
  313:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                         }
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 12
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 12
 
 
  314:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                         /* INTR_RX_NOT_EMPTY:
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  333:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                         }
  334:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                         else
  335:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                         {
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 13
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 13
 
 
  336:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                             /* Do nothing */
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  375 01c2 1168     		ldr	r1, [r2]
  376 01c4 CB1A     		subs	r3, r1, r3
  377 01c6 1360     		str	r3, [r2]
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 14
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 14
 
 
  355:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c **** 
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  374:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                             {
  375:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                                 /* The temporary mstrWrBufIndexTmp is used because slave could NACK
  376:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                                 * roll-back required in this case. The mstrWrBufIndex is updated at
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 15
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 15
 
 
  377:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                                 */
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  449 0236 1160     		str	r1, [r2]
  450              	.L24:
  373:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                             {
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 16
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 16
 
 
  451              		.loc 1 373 0
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  477              		.loc 1 422 0
  478 025c 0123     		movs	r3, #1
  479              	.LVL30:
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 17
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 17
 
 
  480              	.L15:
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  511              	.L38:
  512 028a 0A23     		movs	r3, #10
  513              	.L30:
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 18
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 18
 
 
  443:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                                                                  Current_Sensor_I2C_GET_I2C_MSTAT_C
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  543              	.LVL33:
  544 02b2 1B78     		ldrb	r3, [r3]
  545 02b4 DB06     		lsls	r3, r3, #27
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 19
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 19
 
 
  546 02b6 01D4     		bmi	.L1
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  522:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                 /* Read bytes from RX FIFO when auto data ACK receive logic is enabled. Otherwise a
  523:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                 * were already read from the RX FIFO except for address byte which has to stay here
  524:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                 * I2C_ADDR_MATCH.
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 20
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 20
 
 
  525:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                 */
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  579:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****         #endif /* (Current_Sensor_I2C_I2C_CUSTOM_ADDRESS_HANDLER_CONST) */
  580:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****             {
  581:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                 /* Clear externally clocked address match interrupt source when internally clocked 
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 21
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 21
 
 
  582:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                 Current_Sensor_I2C_ClearI2CExtClkInterruptSource(Current_Sensor_I2C_INTR_I2C_EC_WAK
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  636:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                         /* Calculate available buffer size */
  637:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                         diffCount = (Current_Sensor_I2C_slWrBufSize - Current_Sensor_I2C_slWrBufInd
  638:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c **** 
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 22
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 22
 
 
  639:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                     #if (Current_Sensor_I2C_CY_SCBIP_V0)
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  693:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                         #endif
  694:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                     #endif /* (Current_Sensor_I2C_CY_SCBIP_V0) */
  695:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c **** 
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 23
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 23
 
 
  696:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                         /* Start master reading */
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  750:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                 Current_Sensor_I2C_ClearRxInterruptSource(Current_Sensor_I2C_INTR_RX_FULL);
  751:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****             }
  752:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****             /* Current_Sensor_I2C_INTR_RX_NOT_EMPTY:
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 24
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 24
 
 
  753:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****             * The buffer size is less than 8: it requires processing in byte-by-byte mode.
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  807:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                         {
  808:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                             /* Get counter in range of overflow. */
  809:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                             Current_Sensor_I2C_slOverFlowCount++;
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 25
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 25
 
 
  810:Generated_Source\PSoC4/Current_Sensor_I2C_I2C_INT.c ****                         }
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  566 02e4 CC0F2640 		.word	1076236236
  567 02e8 00000000 		.word	Current_Sensor_I2C_mstrRdBufSize
  568 02ec 08032640 		.word	1076232968
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 26
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 26
 
 
  569 02f0 00000000 		.word	Current_Sensor_I2C_mstrRdBufIndex
@@ -1536,48 +1536,48 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  601 0006 00000000 		.4byte	.Ldebug_abbrev0
  602 000a 04       		.byte	0x4
  603 000b 01       		.uleb128 0x1
- 604 000c 90020000 		.4byte	.LASF32
+ 604 000c 81020000 		.4byte	.LASF32
  605 0010 0C       		.byte	0xc
- 606 0011 3A030000 		.4byte	.LASF33
- 607 0015 27000000 		.4byte	.LASF34
+ 606 0011 2B030000 		.4byte	.LASF33
+ 607 0015 B9010000 		.4byte	.LASF34
  608 0019 00000000 		.4byte	.Ldebug_ranges0+0
  609 001d 00000000 		.4byte	0
  610 0021 00000000 		.4byte	.Ldebug_line0
  611 0025 02       		.uleb128 0x2
  612 0026 01       		.byte	0x1
  613 0027 06       		.byte	0x6
- 614 0028 A6030000 		.4byte	.LASF0
+ 614 0028 97030000 		.4byte	.LASF0
  615 002c 02       		.uleb128 0x2
  616 002d 01       		.byte	0x1
  617 002e 08       		.byte	0x8
- 618 002f 7C010000 		.4byte	.LASF1
+ 618 002f 18010000 		.4byte	.LASF1
  619 0033 02       		.uleb128 0x2
  620 0034 02       		.byte	0x2
  621 0035 05       		.byte	0x5
- 622 0036 87030000 		.4byte	.LASF2
+ 622 0036 78030000 		.4byte	.LASF2
  623 003a 02       		.uleb128 0x2
  624 003b 02       		.byte	0x2
  625 003c 07       		.byte	0x7
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 27
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 27
 
 
- 626 003d CB000000 		.4byte	.LASF3
+ 626 003d 67000000 		.4byte	.LASF3
  627 0041 02       		.uleb128 0x2
  628 0042 04       		.byte	0x4
  629 0043 05       		.byte	0x5
- 630 0044 91030000 		.4byte	.LASF4
+ 630 0044 82030000 		.4byte	.LASF4
  631 0048 02       		.uleb128 0x2
  632 0049 04       		.byte	0x4
  633 004a 07       		.byte	0x7
- 634 004b 8A010000 		.4byte	.LASF5
+ 634 004b 26010000 		.4byte	.LASF5
  635 004f 02       		.uleb128 0x2
  636 0050 08       		.byte	0x8
  637 0051 05       		.byte	0x5
- 638 0052 27030000 		.4byte	.LASF6
+ 638 0052 18030000 		.4byte	.LASF6
  639 0056 02       		.uleb128 0x2
  640 0057 08       		.byte	0x8
  641 0058 07       		.byte	0x7
- 642 0059 06020000 		.4byte	.LASF7
+ 642 0059 A2010000 		.4byte	.LASF7
  643 005d 03       		.uleb128 0x3
  644 005e 04       		.byte	0x4
  645 005f 05       		.byte	0x5
@@ -1585,40 +1585,40 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  647 0064 02       		.uleb128 0x2
  648 0065 04       		.byte	0x4
  649 0066 07       		.byte	0x7
- 650 0067 EA000000 		.4byte	.LASF8
+ 650 0067 86000000 		.4byte	.LASF8
  651 006b 04       		.uleb128 0x4
- 652 006c A6010000 		.4byte	.LASF9
+ 652 006c 42010000 		.4byte	.LASF9
  653 0070 02       		.byte	0x2
  654 0071 FB01     		.2byte	0x1fb
  655 0073 2C000000 		.4byte	0x2c
  656 0077 04       		.uleb128 0x4
- 657 0078 D3010000 		.4byte	.LASF10
+ 657 0078 6F010000 		.4byte	.LASF10
  658 007c 02       		.byte	0x2
  659 007d FC01     		.2byte	0x1fc
  660 007f 3A000000 		.4byte	0x3a
  661 0083 04       		.uleb128 0x4
- 662 0084 DA010000 		.4byte	.LASF11
+ 662 0084 76010000 		.4byte	.LASF11
  663 0088 02       		.byte	0x2
  664 0089 FD01     		.2byte	0x1fd
  665 008b 48000000 		.4byte	0x48
  666 008f 02       		.uleb128 0x2
  667 0090 04       		.byte	0x4
  668 0091 04       		.byte	0x4
- 669 0092 37010000 		.4byte	.LASF12
+ 669 0092 D3000000 		.4byte	.LASF12
  670 0096 02       		.uleb128 0x2
  671 0097 08       		.byte	0x8
  672 0098 04       		.byte	0x4
- 673 0099 AC010000 		.4byte	.LASF13
+ 673 0099 48010000 		.4byte	.LASF13
  674 009d 02       		.uleb128 0x2
  675 009e 01       		.byte	0x1
  676 009f 08       		.byte	0x8
- 677 00a0 35030000 		.4byte	.LASF14
+ 677 00a0 26030000 		.4byte	.LASF14
  678 00a4 05       		.uleb128 0x5
  679 00a5 6B000000 		.4byte	0x6b
  680 00a9 05       		.uleb128 0x5
  681 00aa 77000000 		.4byte	0x77
  682 00ae 04       		.uleb128 0x4
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 28
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 28
 
 
  683 00af 21000000 		.4byte	.LASF15
@@ -1628,7 +1628,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  687 00ba 05       		.uleb128 0x5
  688 00bb 83000000 		.4byte	0x83
  689 00bf 04       		.uleb128 0x4
- 690 00c0 60020000 		.4byte	.LASF16
+ 690 00c0 51020000 		.4byte	.LASF16
  691 00c4 02       		.byte	0x2
  692 00c5 B702     		.2byte	0x2b7
  693 00c7 CB000000 		.4byte	0xcb
@@ -1639,13 +1639,13 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  698 00d2 02       		.uleb128 0x2
  699 00d3 08       		.byte	0x8
  700 00d4 04       		.byte	0x4
- 701 00d5 9A030000 		.4byte	.LASF17
+ 701 00d5 8B030000 		.4byte	.LASF17
  702 00d9 02       		.uleb128 0x2
  703 00da 04       		.byte	0x4
  704 00db 07       		.byte	0x7
- 705 00dc 1E030000 		.4byte	.LASF18
+ 705 00dc 0F030000 		.4byte	.LASF18
  706 00e0 08       		.uleb128 0x8
- 707 00e1 F7000000 		.4byte	.LASF35
+ 707 00e1 93000000 		.4byte	.LASF35
  708 00e5 01       		.byte	0x1
  709 00e6 1F       		.byte	0x1f
  710 00e7 00000000 		.4byte	.LFB1
@@ -1654,13 +1654,13 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  713 00f0 9C       		.byte	0x9c
  714 00f1 1D010000 		.4byte	0x11d
  715 00f5 09       		.uleb128 0x9
- 716 00f6 9C010000 		.4byte	.LASF19
+ 716 00f6 38010000 		.4byte	.LASF19
  717 00fa 01       		.byte	0x1
  718 00fb 21       		.byte	0x21
  719 00fc 83000000 		.4byte	0x83
  720 0100 00000000 		.4byte	.LLST0
  721 0104 09       		.uleb128 0x9
- 722 0105 DE000000 		.4byte	.LASF20
+ 722 0105 7A000000 		.4byte	.LASF20
  723 0109 01       		.byte	0x1
  724 010a 22       		.byte	0x22
  725 010b 83000000 		.4byte	0x83
@@ -1670,30 +1670,30 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  729 0118 9C010000 		.4byte	0x19c
  730 011c 00       		.byte	0
  731 011d 0B       		.uleb128 0xb
- 732 011e E1010000 		.4byte	.LASF21
+ 732 011e 7D010000 		.4byte	.LASF21
  733 0122 03       		.byte	0x3
  734 0123 3B       		.byte	0x3b
  735 0124 BF000000 		.4byte	0xbf
  736 0128 0B       		.uleb128 0xb
- 737 0129 6E030000 		.4byte	.LASF22
+ 737 0129 5F030000 		.4byte	.LASF22
  738 012d 04       		.byte	0x4
  739 012e 1E       		.byte	0x1e
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 29
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 29
 
 
  740 012f A4000000 		.4byte	0xa4
  741 0133 0B       		.uleb128 0xb
- 742 0134 8B000000 		.4byte	.LASF23
+ 742 0134 27000000 		.4byte	.LASF23
  743 0138 04       		.byte	0x4
  744 0139 31       		.byte	0x31
  745 013a A9000000 		.4byte	0xa9
  746 013e 0B       		.uleb128 0xb
- 747 013f 5D010000 		.4byte	.LASF24
+ 747 013f F9000000 		.4byte	.LASF24
  748 0143 04       		.byte	0x4
  749 0144 32       		.byte	0x32
  750 0145 A4000000 		.4byte	0xa4
  751 0149 0B       		.uleb128 0xb
- 752 014a 3D010000 		.4byte	.LASF25
+ 752 014a D9000000 		.4byte	.LASF25
  753 014e 04       		.byte	0x4
  754 014f 35       		.byte	0x35
  755 0150 54010000 		.4byte	0x154
@@ -1701,17 +1701,17 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  757 0155 04       		.byte	0x4
  758 0156 A4000000 		.4byte	0xa4
  759 015a 0B       		.uleb128 0xb
- 760 015b 3F020000 		.4byte	.LASF26
+ 760 015b 30020000 		.4byte	.LASF26
  761 015f 04       		.byte	0x4
  762 0160 36       		.byte	0x36
  763 0161 BA000000 		.4byte	0xba
  764 0165 0B       		.uleb128 0xb
- 765 0166 1D020000 		.4byte	.LASF27
+ 765 0166 0E020000 		.4byte	.LASF27
  766 016a 04       		.byte	0x4
  767 016b 37       		.byte	0x37
  768 016c BA000000 		.4byte	0xba
  769 0170 0B       		.uleb128 0xb
- 770 0171 B3010000 		.4byte	.LASF28
+ 770 0171 4F010000 		.4byte	.LASF28
  771 0175 04       		.byte	0x4
  772 0176 3A       		.byte	0x3a
  773 0177 54010000 		.4byte	0x154
@@ -1721,24 +1721,24 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  777 0181 3B       		.byte	0x3b
  778 0182 BA000000 		.4byte	0xba
  779 0186 0B       		.uleb128 0xb
- 780 0187 A9000000 		.4byte	.LASF30
+ 780 0187 45000000 		.4byte	.LASF30
  781 018b 04       		.byte	0x4
  782 018c 3C       		.byte	0x3c
  783 018d BA000000 		.4byte	0xba
  784 0191 0B       		.uleb128 0xb
- 785 0192 12010000 		.4byte	.LASF31
+ 785 0192 AE000000 		.4byte	.LASF31
  786 0196 04       		.byte	0x4
  787 0197 3D       		.byte	0x3d
  788 0198 BA000000 		.4byte	0xba
  789 019c 0C       		.uleb128 0xc
- 790 019d 6D020000 		.4byte	.LASF36
- 791 01a1 6D020000 		.4byte	.LASF36
+ 790 019d 5E020000 		.4byte	.LASF36
+ 791 01a1 5E020000 		.4byte	.LASF36
  792 01a5 04       		.byte	0x4
  793 01a6 4D       		.byte	0x4d
  794 01a7 00       		.byte	0
  795              		.section	.debug_abbrev,"",%progbits
  796              	.Ldebug_abbrev0:
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 30
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 30
 
 
  797 0000 01       		.uleb128 0x1
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  851 0036 05       		.uleb128 0x5
  852 0037 35       		.uleb128 0x35
  853 0038 00       		.byte	0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 31
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 31
 
 
  854 0039 49       		.uleb128 0x49
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  908 0070 49       		.uleb128 0x49
  909 0071 13       		.uleb128 0x13
  910 0072 02       		.uleb128 0x2
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 32
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 32
 
 
  911 0073 17       		.uleb128 0x17
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  965 000b 36010000 		.4byte	.LVL18
  966 000f 3C010000 		.4byte	.LVL19
  967 0013 0200     		.2byte	0x2
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 33
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 33
 
 
  968 0015 38       		.byte	0x38
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  1022 009d CE000000 		.4byte	.LVL13
  1023 00a1 D2000000 		.4byte	.LVL14
  1024 00a5 0200     		.2byte	0x2
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 34
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 34
 
 
  1025 00a7 31       		.byte	0x31
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  1079 0004 40030000 		.4byte	.LFE1
  1080 0008 00000000 		.4byte	0
  1081 000c 00000000 		.4byte	0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 35
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 35
 
 
  1082              		.section	.debug_line,"",%progbits
@@ -2057,205 +2057,203 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 1
  1087              	.LASF15:
  1088 0021 72656733 		.ascii	"reg32\000"
  1088      3200
- 1089              	.LASF34:
- 1090 0027 433A5C55 		.ascii	"C:\\Users\\M4rz4n\\Desktop\\Husky Robotics\\Firmwar"
- 1090      73657273 
- 1090      5C4D3472 
- 1090      7A346E5C 
- 1090      4465736B 
- 1091 0055 655C424C 		.ascii	"e\\BLDC\\BLDC_Motor_Board_PY2023\\BLDC_Motor_Board."
- 1091      44435C42 
- 1091      4C44435F 
- 1091      4D6F746F 
- 1091      725F426F 
- 1092 0085 63796473 		.ascii	"cydsn\000"
- 1092      6E00
- 1093              	.LASF23:
- 1094 008b 43757272 		.ascii	"Current_Sensor_I2C_mstrStatus\000"
- 1094      656E745F 
- 1094      53656E73 
- 1094      6F725F49 
- 1094      32435F6D 
- 1095              	.LASF30:
- 1096 00a9 43757272 		.ascii	"Current_Sensor_I2C_mstrWrBufIndex\000"
- 1096      656E745F 
- 1096      53656E73 
- 1096      6F725F49 
- 1096      32435F6D 
- 1097              	.LASF3:
- 1098 00cb 73686F72 		.ascii	"short unsigned int\000"
- 1098      7420756E 
- 1098      7369676E 
- 1098      65642069 
- 1098      6E7400
- 1099              	.LASF20:
- 1100 00de 656E6454 		.ascii	"endTransfer\000"
- 1100      72616E73 
- 1100      66657200 
- 1101              	.LASF8:
- 1102 00ea 756E7369 		.ascii	"unsigned int\000"
- 1102      676E6564 
- 1102      20696E74 
- 1102      00
- 1103              	.LASF35:
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 36
+ 1089              	.LASF23:
+ 1090 0027 43757272 		.ascii	"Current_Sensor_I2C_mstrStatus\000"
+ 1090      656E745F 
+ 1090      53656E73 
+ 1090      6F725F49 
+ 1090      32435F6D 
+ 1091              	.LASF30:
+ 1092 0045 43757272 		.ascii	"Current_Sensor_I2C_mstrWrBufIndex\000"
+ 1092      656E745F 
+ 1092      53656E73 
+ 1092      6F725F49 
+ 1092      32435F6D 
+ 1093              	.LASF3:
+ 1094 0067 73686F72 		.ascii	"short unsigned int\000"
+ 1094      7420756E 
+ 1094      7369676E 
+ 1094      65642069 
+ 1094      6E7400
+ 1095              	.LASF20:
+ 1096 007a 656E6454 		.ascii	"endTransfer\000"
+ 1096      72616E73 
+ 1096      66657200 
+ 1097              	.LASF8:
+ 1098 0086 756E7369 		.ascii	"unsigned int\000"
+ 1098      676E6564 
+ 1098      20696E74 
+ 1098      00
+ 1099              	.LASF35:
+ 1100 0093 43757272 		.ascii	"Current_Sensor_I2C_I2C_ISR\000"
+ 1100      656E745F 
+ 1100      53656E73 
+ 1100      6F725F49 
+ 1100      32435F49 
+ 1101              	.LASF31:
+ 1102 00ae 43757272 		.ascii	"Current_Sensor_I2C_mstrWrBufIndexTmp\000"
+ 1102      656E745F 
+ 1102      53656E73 
+ 1102      6F725F49 
+ 1102      32435F6D 
+ 1103              	.LASF12:
+ 1104 00d3 666C6F61 		.ascii	"float\000"
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 36
 
 
- 1104 00f7 43757272 		.ascii	"Current_Sensor_I2C_I2C_ISR\000"
- 1104      656E745F 
- 1104      53656E73 
- 1104      6F725F49 
- 1104      32435F49 
- 1105              	.LASF31:
- 1106 0112 43757272 		.ascii	"Current_Sensor_I2C_mstrWrBufIndexTmp\000"
+ 1104      7400
+ 1105              	.LASF25:
+ 1106 00d9 43757272 		.ascii	"Current_Sensor_I2C_mstrRdBufPtr\000"
  1106      656E745F 
  1106      53656E73 
  1106      6F725F49 
  1106      32435F6D 
- 1107              	.LASF12:
- 1108 0137 666C6F61 		.ascii	"float\000"
- 1108      7400
- 1109              	.LASF25:
- 1110 013d 43757272 		.ascii	"Current_Sensor_I2C_mstrRdBufPtr\000"
- 1110      656E745F 
- 1110      53656E73 
- 1110      6F725F49 
- 1110      32435F6D 
- 1111              	.LASF24:
- 1112 015d 43757272 		.ascii	"Current_Sensor_I2C_mstrControl\000"
- 1112      656E745F 
- 1112      53656E73 
- 1112      6F725F49 
- 1112      32435F6D 
- 1113              	.LASF1:
- 1114 017c 756E7369 		.ascii	"unsigned char\000"
- 1114      676E6564 
- 1114      20636861 
- 1114      7200
- 1115              	.LASF5:
- 1116 018a 6C6F6E67 		.ascii	"long unsigned int\000"
- 1116      20756E73 
- 1116      69676E65 
- 1116      6420696E 
- 1116      7400
- 1117              	.LASF19:
- 1118 019c 64696666 		.ascii	"diffCount\000"
- 1118      436F756E 
- 1118      7400
- 1119              	.LASF9:
- 1120 01a6 75696E74 		.ascii	"uint8\000"
- 1120      3800
- 1121              	.LASF13:
- 1122 01ac 646F7562 		.ascii	"double\000"
- 1122      6C6500
- 1123              	.LASF28:
- 1124 01b3 43757272 		.ascii	"Current_Sensor_I2C_mstrWrBufPtr\000"
- 1124      656E745F 
- 1124      53656E73 
- 1124      6F725F49 
- 1124      32435F6D 
- 1125              	.LASF10:
- 1126 01d3 75696E74 		.ascii	"uint16\000"
- 1126      313600
- 1127              	.LASF11:
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 37
+ 1107              	.LASF24:
+ 1108 00f9 43757272 		.ascii	"Current_Sensor_I2C_mstrControl\000"
+ 1108      656E745F 
+ 1108      53656E73 
+ 1108      6F725F49 
+ 1108      32435F6D 
+ 1109              	.LASF1:
+ 1110 0118 756E7369 		.ascii	"unsigned char\000"
+ 1110      676E6564 
+ 1110      20636861 
+ 1110      7200
+ 1111              	.LASF5:
+ 1112 0126 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1112      20756E73 
+ 1112      69676E65 
+ 1112      6420696E 
+ 1112      7400
+ 1113              	.LASF19:
+ 1114 0138 64696666 		.ascii	"diffCount\000"
+ 1114      436F756E 
+ 1114      7400
+ 1115              	.LASF9:
+ 1116 0142 75696E74 		.ascii	"uint8\000"
+ 1116      3800
+ 1117              	.LASF13:
+ 1118 0148 646F7562 		.ascii	"double\000"
+ 1118      6C6500
+ 1119              	.LASF28:
+ 1120 014f 43757272 		.ascii	"Current_Sensor_I2C_mstrWrBufPtr\000"
+ 1120      656E745F 
+ 1120      53656E73 
+ 1120      6F725F49 
+ 1120      32435F6D 
+ 1121              	.LASF10:
+ 1122 016f 75696E74 		.ascii	"uint16\000"
+ 1122      313600
+ 1123              	.LASF11:
+ 1124 0176 75696E74 		.ascii	"uint32\000"
+ 1124      333200
+ 1125              	.LASF21:
+ 1126 017d 43757272 		.ascii	"Current_Sensor_I2C_customIntrHandler\000"
+ 1126      656E745F 
+ 1126      53656E73 
+ 1126      6F725F49 
+ 1126      32435F63 
+ 1127              	.LASF7:
+ 1128 01a2 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1128      206C6F6E 
+ 1128      6720756E 
+ 1128      7369676E 
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 37
 
 
- 1128 01da 75696E74 		.ascii	"uint32\000"
- 1128      333200
- 1129              	.LASF21:
- 1130 01e1 43757272 		.ascii	"Current_Sensor_I2C_customIntrHandler\000"
- 1130      656E745F 
- 1130      53656E73 
- 1130      6F725F49 
- 1130      32435F63 
- 1131              	.LASF7:
- 1132 0206 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1132      206C6F6E 
- 1132      6720756E 
- 1132      7369676E 
- 1132      65642069 
- 1133              	.LASF27:
- 1134 021d 43757272 		.ascii	"Current_Sensor_I2C_mstrRdBufIndex\000"
- 1134      656E745F 
- 1134      53656E73 
- 1134      6F725F49 
- 1134      32435F6D 
- 1135              	.LASF26:
- 1136 023f 43757272 		.ascii	"Current_Sensor_I2C_mstrRdBufSize\000"
- 1136      656E745F 
- 1136      53656E73 
- 1136      6F725F49 
- 1136      32435F6D 
- 1137              	.LASF16:
- 1138 0260 63796973 		.ascii	"cyisraddress\000"
- 1138      72616464 
- 1138      72657373 
- 1138      00
- 1139              	.LASF36:
- 1140 026d 43757272 		.ascii	"Current_Sensor_I2C_I2CFwBlockReset\000"
- 1140      656E745F 
- 1140      53656E73 
- 1140      6F725F49 
- 1140      32435F49 
- 1141              	.LASF32:
- 1142 0290 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 1142      43313120 
- 1142      352E342E 
- 1142      31203230 
- 1142      31363036 
- 1143 02c3 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 1143      20726576 
- 1143      6973696F 
- 1143      6E203233 
- 1143      37373135 
- 1144 02f6 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1144      66756E63 
- 1144      74696F6E 
- 1144      2D736563 
- 1144      74696F6E 
- 1145              	.LASF18:
- 1146 031e 73697A65 		.ascii	"sizetype\000"
- 1146      74797065 
- 1146      00
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccHmsQ0w.s 			page 38
+ 1128      65642069 
+ 1129              	.LASF34:
+ 1130 01b9 433A5C55 		.ascii	"C:\\Users\\lucbu\\DocumentStorage\\GitHub\\BLDC_Mot"
+ 1130      73657273 
+ 1130      5C6C7563 
+ 1130      62755C44 
+ 1130      6F63756D 
+ 1131 01e7 6F725F42 		.ascii	"or_Board_PY2023\\BLDC_Motor_Board.cydsn\000"
+ 1131      6F617264 
+ 1131      5F505932 
+ 1131      3032335C 
+ 1131      424C4443 
+ 1132              	.LASF27:
+ 1133 020e 43757272 		.ascii	"Current_Sensor_I2C_mstrRdBufIndex\000"
+ 1133      656E745F 
+ 1133      53656E73 
+ 1133      6F725F49 
+ 1133      32435F6D 
+ 1134              	.LASF26:
+ 1135 0230 43757272 		.ascii	"Current_Sensor_I2C_mstrRdBufSize\000"
+ 1135      656E745F 
+ 1135      53656E73 
+ 1135      6F725F49 
+ 1135      32435F6D 
+ 1136              	.LASF16:
+ 1137 0251 63796973 		.ascii	"cyisraddress\000"
+ 1137      72616464 
+ 1137      72657373 
+ 1137      00
+ 1138              	.LASF36:
+ 1139 025e 43757272 		.ascii	"Current_Sensor_I2C_I2CFwBlockReset\000"
+ 1139      656E745F 
+ 1139      53656E73 
+ 1139      6F725F49 
+ 1139      32435F49 
+ 1140              	.LASF32:
+ 1141 0281 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1141      43313120 
+ 1141      352E342E 
+ 1141      31203230 
+ 1141      31363036 
+ 1142 02b4 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 1142      20726576 
+ 1142      6973696F 
+ 1142      6E203233 
+ 1142      37373135 
+ 1143 02e7 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1143      66756E63 
+ 1143      74696F6E 
+ 1143      2D736563 
+ 1143      74696F6E 
+ 1144              	.LASF18:
+ 1145 030f 73697A65 		.ascii	"sizetype\000"
+ 1145      74797065 
+ 1145      00
+ 1146              	.LASF6:
+ 1147 0318 6C6F6E67 		.ascii	"long long int\000"
+ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccyfG0a3.s 			page 38
 
 
- 1147              	.LASF6:
- 1148 0327 6C6F6E67 		.ascii	"long long int\000"
- 1148      206C6F6E 
- 1148      6720696E 
- 1148      7400
- 1149              	.LASF14:
- 1150 0335 63686172 		.ascii	"char\000"
- 1150      00
- 1151              	.LASF33:
- 1152 033a 47656E65 		.ascii	"Generated_Source\\PSoC4\\Current_Sensor_I2C_I2C_INT"
- 1152      72617465 
- 1152      645F536F 
- 1152      75726365 
- 1152      5C50536F 
- 1153 036b 2E6300   		.ascii	".c\000"
- 1154              	.LASF22:
- 1155 036e 43757272 		.ascii	"Current_Sensor_I2C_state\000"
- 1155      656E745F 
- 1155      53656E73 
- 1155      6F725F49 
- 1155      32435F73 
- 1156              	.LASF2:
- 1157 0387 73686F72 		.ascii	"short int\000"
- 1157      7420696E 
- 1157      7400
- 1158              	.LASF4:
- 1159 0391 6C6F6E67 		.ascii	"long int\000"
- 1159      20696E74 
- 1159      00
- 1160              	.LASF17:
- 1161 039a 6C6F6E67 		.ascii	"long double\000"
- 1161      20646F75 
- 1161      626C6500 
- 1162              	.LASF0:
- 1163 03a6 7369676E 		.ascii	"signed char\000"
- 1163      65642063 
- 1163      68617200 
- 1164              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 1147      206C6F6E 
+ 1147      6720696E 
+ 1147      7400
+ 1148              	.LASF14:
+ 1149 0326 63686172 		.ascii	"char\000"
+ 1149      00
+ 1150              	.LASF33:
+ 1151 032b 47656E65 		.ascii	"Generated_Source\\PSoC4\\Current_Sensor_I2C_I2C_INT"
+ 1151      72617465 
+ 1151      645F536F 
+ 1151      75726365 
+ 1151      5C50536F 
+ 1152 035c 2E6300   		.ascii	".c\000"
+ 1153              	.LASF22:
+ 1154 035f 43757272 		.ascii	"Current_Sensor_I2C_state\000"
+ 1154      656E745F 
+ 1154      53656E73 
+ 1154      6F725F49 
+ 1154      32435F73 
+ 1155              	.LASF2:
+ 1156 0378 73686F72 		.ascii	"short int\000"
+ 1156      7420696E 
+ 1156      7400
+ 1157              	.LASF4:
+ 1158 0382 6C6F6E67 		.ascii	"long int\000"
+ 1158      20696E74 
+ 1158      00
+ 1159              	.LASF17:
+ 1160 038b 6C6F6E67 		.ascii	"long double\000"
+ 1160      20646F75 
+ 1160      626C6500 
+ 1161              	.LASF0:
+ 1162 0397 7369676E 		.ascii	"signed char\000"
+ 1162      65642063 
+ 1162      68617200 
+ 1163              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

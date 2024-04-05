@@ -6,7 +6,7 @@
 
 #Build Date:         Sep  9 2019 11:47:43
 
-#File Generated:     Mar 28 2024 14:46:24
+#File Generated:     Apr 4 2024 19:50:27
 
 #Purpose:            
 
@@ -87,8 +87,8 @@ Clock: CyIMO                | Frequency: N/A       | Target:  48.0 MHz
 Clock: CyLFClk              | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyRouted1            | Frequency: N/A       | Target:  40.0 MHz
 Clock: CySysClk             | Frequency: N/A       | Target:  40.0 MHz
-Clock: TMC6100_SPI_SCBCLK   | Frequency: N/A       | Target:  20.0 MHz
-Clock: TMC6100_SPI_SCBCLK(FFB) | Frequency: N/A       | Target:  20.0 MHz
+Clock: TMC6100_SCBCLK       | Frequency: N/A       | Target:  20.0 MHz
+Clock: TMC6100_SCBCLK(FFB)  | Frequency: N/A       | Target:  20.0 MHz
 Clock: UART_SCBCLK          | Frequency: N/A       | Target:   1.4 MHz
 Clock: UART_SCBCLK(FFB)     | Frequency: N/A       | Target:   1.4 MHz
 
@@ -113,8 +113,8 @@ Clock: CyIMO                | Frequency: N/A       | Target:  48.0 MHz
 Clock: CyLFClk              | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyRouted1            | Frequency: N/A       | Target:  40.0 MHz
 Clock: CySysClk             | Frequency: N/A       | Target:  40.0 MHz
-Clock: TMC6100_SPI_SCBCLK   | Frequency: N/A       | Target:  20.0 MHz
-Clock: TMC6100_SPI_SCBCLK(FFB) | Frequency: N/A       | Target:  20.0 MHz
+Clock: TMC6100_SCBCLK       | Frequency: N/A       | Target:  20.0 MHz
+Clock: TMC6100_SCBCLK(FFB)  | Frequency: N/A       | Target:  20.0 MHz
 Clock: UART_SCBCLK          | Frequency: N/A       | Target:   1.4 MHz
 Clock: UART_SCBCLK(FFB)     | Frequency: N/A       | Target:   1.4 MHz
 
@@ -162,8 +162,8 @@ Clock: CyIMO                | Frequency: N/A       | Target:  48.0 MHz
 Clock: CyLFClk              | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyRouted1            | Frequency: N/A       | Target:  40.0 MHz
 Clock: CySysClk             | Frequency: N/A       | Target:  40.0 MHz
-Clock: TMC6100_SPI_SCBCLK   | Frequency: N/A       | Target:  20.0 MHz
-Clock: TMC6100_SPI_SCBCLK(FFB) | Frequency: N/A       | Target:  20.0 MHz
+Clock: TMC6100_SCBCLK       | Frequency: N/A       | Target:  20.0 MHz
+Clock: TMC6100_SCBCLK(FFB)  | Frequency: N/A       | Target:  20.0 MHz
 Clock: UART_SCBCLK          | Frequency: N/A       | Target:   1.4 MHz
 Clock: UART_SCBCLK(FFB)     | Frequency: N/A       | Target:   1.4 MHz
 
