@@ -61,7 +61,7 @@ void set_speed(int16_t speed, uint8_t disable_limit) {
     
     if (currentSpeed != 0) {
         Timer_Rotor_Delay_Start(); // resume timer
-        delay_ms = (float)(1 << 15)*10000/currentSpeed/MAX_RPM;
+        delay_ms = (float)(1 << 15)*10000/currentSpeed/MAX_RPM; //TODO: FIX THIS
     }
     else {
         delay_ms = 0;

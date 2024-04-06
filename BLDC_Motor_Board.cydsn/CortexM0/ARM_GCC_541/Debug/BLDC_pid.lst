@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
   28:BLDC_pid.c    **** extern uint8_t ignoreLimSw;
   29:BLDC_pid.c    **** extern char txData[TX_DATA_SIZE];
   30:BLDC_pid.c    **** 
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 2
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 2
 
 
   31:BLDC_pid.c    **** void ClearPIDProgress() {
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
   75              		.size	DisablePID, .-DisablePID
   76              		.section	.text.EnablePID,"ax",%progbits
   77              		.align	2
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 3
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 3
 
 
   78              		.global	EnablePID
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  126              		.cfi_endproc
  127              	.LFE38:
  128              		.size	PIDIsEnabled, .-PIDIsEnabled
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 4
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 4
 
 
  129              		.section	.text.InitializePID,"ax",%progbits
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  175              		.loc 1 51 0
  176              		.cfi_startproc
  177              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 5
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 5
 
 
  178              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  227              		.size	UpdateConversion, .-UpdateConversion
  228              		.section	.text.GetMaxPIDSpeed,"ax",%progbits
  229              		.align	2
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 6
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 6
 
 
  230              		.global	GetMaxPIDSpeed
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  281              		.code	16
  282              		.thumb_func
  283              		.type	GetkIntegral, %function
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 7
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 7
 
 
  284              	GetkIntegral:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
   61:BLDC_pid.c    **** double GetConversion(){ return mDegPerTick; }
  336              		.loc 1 61 0
  337              		.cfi_startproc
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 8
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 8
 
 
  338              		@ args = 0, pretend = 0, frame = 0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  390              		@ frame_needed = 0, uses_anonymous_args = 0
  391              		@ link register save eliminated.
  392              		.loc 1 63 0
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 9
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 9
 
 
  393 0000 014B     		ldr	r3, .L40
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  445              		@ sp needed
  446 0004 7047     		bx	lr
  447              	.L47:
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 10
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 10
 
 
  448 0006 C046     		.align	2
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  499              	.L53:
  500 0006 C046     		.align	2
  501              	.L52:
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 11
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 11
 
 
  502 0008 00000000 		.word	.LANCHOR0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  554 0008 00000000 		.word	.LANCHOR0
  555              		.cfi_endproc
  556              	.LFE53:
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 12
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 12
 
 
  557              		.size	SetkDerivative, .-SetkDerivative
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  609              		.size	setTickMax, .-setTickMax
  610              		.section	.text.setmDegMin,"ax",%progbits
  611              		.align	2
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 13
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 13
 
 
  612              		.global	setmDegMin
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  664              		.global	SetConversion
  665              		.code	16
  666              		.thumb_func
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 14
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 14
 
 
  667              		.type	SetConversion, %function
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  705 0002 7047     		bx	lr
  706              		.cfi_endproc
  707              	.LFE59:
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 15
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 15
 
 
  708              		.size	GetPositionmDeg, .-GetPositionmDeg
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  746 0016 2AD9     		bls	.L81
  107:BLDC_pid.c    ****       return(0);
  108:BLDC_pid.c    ****     }
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 16
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 16
 
 
  109:BLDC_pid.c    ****     
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  788 0052 0A21     		movs	r1, #10
  789 0054 FFF7FEFF 		bl	__aeabi_idiv
  790              	.LVL22:
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 17
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 17
 
 
  791 0058 3618     		adds	r6, r6, r0
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  833              		.loc 1 92 0
  834              		.cfi_startproc
  835              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 18
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 18
 
 
  836              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  888 0008 E8030000 		.word	1000
  889              		.bss
  890              		.align	3
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 19
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 19
 
 
  891              		.set	.LANCHOR0,. + 0
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  944              		.section	.debug_info,"",%progbits
  945              	.Ldebug_info0:
  946 0000 41050000 		.4byte	0x541
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 20
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 20
 
 
  947 0004 0400     		.2byte	0x4
@@ -1147,15 +1147,15 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  950 000b 01       		.uleb128 0x1
  951 000c E7000000 		.4byte	.LASF71
  952 0010 0C       		.byte	0xc
- 953 0011 D5030000 		.4byte	.LASF72
- 954 0015 19020000 		.4byte	.LASF73
+ 953 0011 E4030000 		.4byte	.LASF72
+ 954 0015 48020000 		.4byte	.LASF73
  955 0019 00000000 		.4byte	.Ldebug_ranges0+0
  956 001d 00000000 		.4byte	0
  957 0021 00000000 		.4byte	.Ldebug_line0
  958 0025 02       		.uleb128 0x2
  959 0026 01       		.byte	0x1
  960 0027 06       		.byte	0x6
- 961 0028 9D020000 		.4byte	.LASF0
+ 961 0028 AC020000 		.4byte	.LASF0
  962 002c 03       		.uleb128 0x3
  963 002d E2010000 		.4byte	.LASF3
  964 0031 02       		.byte	0x2
@@ -1164,7 +1164,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  967 0037 02       		.uleb128 0x2
  968 0038 01       		.byte	0x1
  969 0039 08       		.byte	0x8
- 970 003a 6E020000 		.4byte	.LASF1
+ 970 003a 19020000 		.4byte	.LASF1
  971 003e 02       		.uleb128 0x2
  972 003f 02       		.byte	0x2
  973 0040 05       		.byte	0x5
@@ -1177,9 +1177,9 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  980 0050 02       		.uleb128 0x2
  981 0051 02       		.byte	0x2
  982 0052 07       		.byte	0x7
- 983 0053 02030000 		.4byte	.LASF5
+ 983 0053 11030000 		.4byte	.LASF5
  984 0057 03       		.uleb128 0x3
- 985 0058 E0030000 		.4byte	.LASF6
+ 985 0058 EF030000 		.4byte	.LASF6
  986 005c 02       		.byte	0x2
  987 005d 3F       		.byte	0x3f
  988 005e 62000000 		.4byte	0x62
@@ -1188,17 +1188,17 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  991 0064 05       		.byte	0x5
  992 0065 D0010000 		.4byte	.LASF7
  993 0069 03       		.uleb128 0x3
- 994 006a 79030000 		.4byte	.LASF8
+ 994 006a 88030000 		.4byte	.LASF8
  995 006e 02       		.byte	0x2
  996 006f 41       		.byte	0x41
  997 0070 74000000 		.4byte	0x74
  998 0074 02       		.uleb128 0x2
  999 0075 04       		.byte	0x4
  1000 0076 07       		.byte	0x7
- 1001 0077 A0030000 		.4byte	.LASF9
+ 1001 0077 AF030000 		.4byte	.LASF9
  1002 007b 02       		.uleb128 0x2
  1003 007c 08       		.byte	0x8
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 21
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 21
 
 
  1004 007d 05       		.byte	0x5
@@ -1206,7 +1206,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1006 0082 02       		.uleb128 0x2
  1007 0083 08       		.byte	0x8
  1008 0084 07       		.byte	0x7
- 1009 0085 A9020000 		.4byte	.LASF11
+ 1009 0085 B8020000 		.4byte	.LASF11
  1010 0089 04       		.uleb128 0x4
  1011 008a 04       		.byte	0x4
  1012 008b 05       		.byte	0x5
@@ -1214,29 +1214,29 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1014 0090 02       		.uleb128 0x2
  1015 0091 04       		.byte	0x4
  1016 0092 07       		.byte	0x7
- 1017 0093 C9020000 		.4byte	.LASF12
+ 1017 0093 D8020000 		.4byte	.LASF12
  1018 0097 03       		.uleb128 0x3
  1019 0098 75010000 		.4byte	.LASF13
  1020 009c 03       		.byte	0x3
  1021 009d 18       		.byte	0x18
  1022 009e 2C000000 		.4byte	0x2c
  1023 00a2 03       		.uleb128 0x3
- 1024 00a3 D6020000 		.4byte	.LASF14
+ 1024 00a3 E5020000 		.4byte	.LASF14
  1025 00a7 03       		.byte	0x3
  1026 00a8 24       		.byte	0x24
  1027 00a9 45000000 		.4byte	0x45
  1028 00ad 03       		.uleb128 0x3
- 1029 00ae 4D030000 		.4byte	.LASF15
+ 1029 00ae 5C030000 		.4byte	.LASF15
  1030 00b2 03       		.byte	0x3
  1031 00b3 2C       		.byte	0x2c
  1032 00b4 57000000 		.4byte	0x57
  1033 00b8 03       		.uleb128 0x3
- 1034 00b9 C0020000 		.4byte	.LASF16
+ 1034 00b9 CF020000 		.4byte	.LASF16
  1035 00bd 03       		.byte	0x3
  1036 00be 30       		.byte	0x30
  1037 00bf 69000000 		.4byte	0x69
  1038 00c3 05       		.uleb128 0x5
- 1039 00c4 B2030000 		.4byte	.LASF17
+ 1039 00c4 C1030000 		.4byte	.LASF17
  1040 00c8 04       		.byte	0x4
  1041 00c9 0002     		.2byte	0x200
  1042 00cb 62000000 		.4byte	0x62
@@ -1247,24 +1247,24 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1047 00d6 02       		.uleb128 0x2
  1048 00d7 08       		.byte	0x8
  1049 00d8 04       		.byte	0x4
- 1050 00d9 FA030000 		.4byte	.LASF19
+ 1050 00d9 09040000 		.4byte	.LASF19
  1051 00dd 02       		.uleb128 0x2
  1052 00de 01       		.byte	0x1
  1053 00df 08       		.byte	0x8
- 1054 00e0 34030000 		.4byte	.LASF20
+ 1054 00e0 43030000 		.4byte	.LASF20
  1055 00e4 02       		.uleb128 0x2
  1056 00e5 08       		.byte	0x8
  1057 00e6 04       		.byte	0x4
  1058 00e7 0D020000 		.4byte	.LASF21
  1059 00eb 02       		.uleb128 0x2
  1060 00ec 04       		.byte	0x4
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 22
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 22
 
 
  1061 00ed 07       		.byte	0x7
  1062 00ee 90000000 		.4byte	.LASF22
  1063 00f2 06       		.uleb128 0x6
- 1064 00f3 7C020000 		.4byte	.LASF23
+ 1064 00f3 27020000 		.4byte	.LASF23
  1065 00f7 01       		.byte	0x1
  1066 00f8 1F       		.byte	0x1f
  1067 00f9 00000000 		.4byte	.LFB35
@@ -1280,7 +1280,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1077 0112 01       		.uleb128 0x1
  1078 0113 9C       		.byte	0x9c
  1079 0114 06       		.uleb128 0x6
- 1080 0115 F0030000 		.4byte	.LASF25
+ 1080 0115 FF030000 		.4byte	.LASF25
  1081 0119 01       		.byte	0x1
  1082 011a 26       		.byte	0x26
  1083 011b 00000000 		.4byte	.LFB37
@@ -1288,7 +1288,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1085 0123 01       		.uleb128 0x1
  1086 0124 9C       		.byte	0x9c
  1087 0125 07       		.uleb128 0x7
- 1088 0126 DF020000 		.4byte	.LASF26
+ 1088 0126 EE020000 		.4byte	.LASF26
  1089 012a 01       		.byte	0x1
  1090 012b 29       		.byte	0x29
  1091 012c 97000000 		.4byte	0x97
@@ -1318,14 +1318,14 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1115 0168 33       		.byte	0x33
  1116 0169 D6000000 		.4byte	0xd6
  1117 016d 00000000 		.4byte	.LFB40
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 23
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 23
 
 
  1118 0171 40000000 		.4byte	.LFE40-.LFB40
  1119 0175 01       		.uleb128 0x1
  1120 0176 9C       		.byte	0x9c
  1121 0177 07       		.uleb128 0x7
- 1122 0178 01040000 		.4byte	.LASF28
+ 1122 0178 10040000 		.4byte	.LASF28
  1123 017c 01       		.byte	0x1
  1124 017d 39       		.byte	0x39
  1125 017e AD000000 		.4byte	0xad
@@ -1343,7 +1343,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1137 019f 01       		.uleb128 0x1
  1138 01a0 9C       		.byte	0x9c
  1139 01a1 07       		.uleb128 0x7
- 1140 01a2 15030000 		.4byte	.LASF30
+ 1140 01a2 24030000 		.4byte	.LASF30
  1141 01a6 01       		.byte	0x1
  1142 01a7 3B       		.byte	0x3b
  1143 01a8 AD000000 		.4byte	0xad
@@ -1352,7 +1352,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1146 01b4 01       		.uleb128 0x1
  1147 01b5 9C       		.byte	0x9c
  1148 01b6 07       		.uleb128 0x7
- 1149 01b7 10040000 		.4byte	.LASF31
+ 1149 01b7 1F040000 		.4byte	.LASF31
  1150 01bb 01       		.byte	0x1
  1151 01bc 3C       		.byte	0x3c
  1152 01bd AD000000 		.4byte	0xad
@@ -1361,7 +1361,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1155 01c9 01       		.uleb128 0x1
  1156 01ca 9C       		.byte	0x9c
  1157 01cb 07       		.uleb128 0x7
- 1158 01cc EC020000 		.4byte	.LASF32
+ 1158 01cc FB020000 		.4byte	.LASF32
  1159 01d0 01       		.byte	0x1
  1160 01d1 3D       		.byte	0x3d
  1161 01d2 D6000000 		.4byte	0xd6
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1172 01ef 0C000000 		.4byte	.LFE46-.LFB46
  1173 01f3 01       		.uleb128 0x1
  1174 01f4 9C       		.byte	0x9c
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 24
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 24
 
 
  1175 01f5 07       		.uleb128 0x7
@@ -1391,7 +1391,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1182 0208 01       		.uleb128 0x1
  1183 0209 9C       		.byte	0x9c
  1184 020a 07       		.uleb128 0x7
- 1185 020b 1F040000 		.4byte	.LASF35
+ 1185 020b 2E040000 		.4byte	.LASF35
  1186 020f 01       		.byte	0x1
  1187 0210 40       		.byte	0x40
  1188 0211 AD000000 		.4byte	0xad
@@ -1409,7 +1409,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1200 0232 01       		.uleb128 0x1
  1201 0233 9C       		.byte	0x9c
  1202 0234 0B       		.uleb128 0xb
- 1203 0235 60030000 		.4byte	.LASF37
+ 1203 0235 6F030000 		.4byte	.LASF37
  1204 0239 01       		.byte	0x1
  1205 023a 43       		.byte	0x43
  1206 023b 00000000 		.4byte	.LFB50
@@ -1418,7 +1418,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1209 0244 9C       		.byte	0x9c
  1210 0245 57020000 		.4byte	0x257
  1211 0249 0C       		.uleb128 0xc
- 1212 024a 39030000 		.4byte	.LASF39
+ 1212 024a 48030000 		.4byte	.LASF39
  1213 024e 01       		.byte	0x1
  1214 024f 43       		.byte	0x43
  1215 0250 A2000000 		.4byte	0xa2
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1229 026d 6B5000   		.ascii	"kP\000"
  1230 0270 01       		.byte	0x1
  1231 0271 44       		.byte	0x44
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 25
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 25
 
 
  1232 0272 AD000000 		.4byte	0xad
@@ -1497,8 +1497,8 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1285 02de 50       		.byte	0x50
  1286 02df 00       		.byte	0
  1287 02e0 0B       		.uleb128 0xb
- 1288 02e1 55030000 		.4byte	.LASF43
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 26
+ 1288 02e1 64030000 		.4byte	.LASF43
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 26
 
 
  1289 02e5 01       		.byte	0x1
@@ -1517,7 +1517,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1302 0301 50       		.byte	0x50
  1303 0302 00       		.byte	0
  1304 0303 0B       		.uleb128 0xb
- 1305 0304 95030000 		.4byte	.LASF44
+ 1305 0304 A4030000 		.4byte	.LASF44
  1306 0308 01       		.byte	0x1
  1307 0309 49       		.byte	0x49
  1308 030a 00000000 		.4byte	.LFB56
@@ -1534,7 +1534,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1319 0324 50       		.byte	0x50
  1320 0325 00       		.byte	0
  1321 0326 0B       		.uleb128 0xb
- 1322 0327 42030000 		.4byte	.LASF45
+ 1322 0327 51030000 		.4byte	.LASF45
  1323 032b 01       		.byte	0x1
  1324 032c 4A       		.byte	0x4a
  1325 032d 00000000 		.4byte	.LFB57
@@ -1551,14 +1551,14 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1336 0347 50       		.byte	0x50
  1337 0348 00       		.byte	0
  1338 0349 0B       		.uleb128 0xb
- 1339 034a C0030000 		.4byte	.LASF46
+ 1339 034a CF030000 		.4byte	.LASF46
  1340 034e 01       		.byte	0x1
  1341 034f 4B       		.byte	0x4b
  1342 0350 00000000 		.4byte	.LFB58
  1343 0354 0C000000 		.4byte	.LFE58-.LFB58
  1344 0358 01       		.uleb128 0x1
  1345 0359 9C       		.byte	0x9c
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 27
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 27
 
 
  1346 035a 71030000 		.4byte	0x371
@@ -1576,7 +1576,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1358 036f 04       		.uleb128 0x4
  1359 0370 00       		.byte	0
  1360 0371 07       		.uleb128 0x7
- 1361 0372 8D020000 		.4byte	.LASF48
+ 1361 0372 38020000 		.4byte	.LASF48
  1362 0376 01       		.byte	0x1
  1363 0377 55       		.byte	0x55
  1364 0378 AD000000 		.4byte	0xad
@@ -1601,13 +1601,13 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1383 03a6 C3000000 		.4byte	0xc3
  1384 03aa 00000000 		.4byte	.LLST0
  1385 03ae 10       		.uleb128 0x10
- 1386 03af FA020000 		.4byte	.LASF50
+ 1386 03af 09030000 		.4byte	.LASF50
  1387 03b3 01       		.byte	0x1
  1388 03b4 66       		.byte	0x66
  1389 03b5 C3000000 		.4byte	0xc3
  1390 03b9 45000000 		.4byte	.LLST1
  1391 03bd 10       		.uleb128 0x10
- 1392 03be EA030000 		.4byte	.LASF51
+ 1392 03be F9030000 		.4byte	.LASF51
  1393 03c2 01       		.byte	0x1
  1394 03c3 67       		.byte	0x67
  1395 03c4 C3000000 		.4byte	0xc3
@@ -1618,11 +1618,11 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1400 03d2 78       		.byte	0x78
  1401 03d3 89000000 		.4byte	0x89
  1402 03d7 81000000 		.4byte	.LLST3
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 28
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 28
 
 
  1403 03db 10       		.uleb128 0x10
- 1404 03dc CE030000 		.4byte	.LASF53
+ 1404 03dc DD030000 		.4byte	.LASF53
  1405 03e0 01       		.byte	0x1
  1406 03e1 79       		.byte	0x79
  1407 03e2 89000000 		.4byte	0x89
@@ -1674,11 +1674,11 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1453 044c 03       		.byte	0x3
  1454 044d 00000000 		.4byte	delayTime
  1455 0451 13       		.uleb128 0x13
- 1456 0452 6F030000 		.4byte	.LASF57
+ 1456 0452 7E030000 		.4byte	.LASF57
  1457 0456 01       		.byte	0x1
  1458 0457 0D       		.byte	0xd
  1459 0458 AD000000 		.4byte	0xad
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 29
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 29
 
 
  1460 045c 05       		.uleb128 0x5
@@ -1701,7 +1701,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1477 047f 03       		.byte	0x3
  1478 0480 00000000 		.4byte	kDerivative
  1479 0484 13       		.uleb128 0x13
- 1480 0485 22030000 		.4byte	.LASF60
+ 1480 0485 31030000 		.4byte	.LASF60
  1481 0489 01       		.byte	0x1
  1482 048a 0E       		.byte	0xe
  1483 048b AD000000 		.4byte	0xad
@@ -1709,7 +1709,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1485 0490 03       		.byte	0x3
  1486 0491 00000000 		.4byte	tickMax
  1487 0495 13       		.uleb128 0x13
- 1488 0496 84030000 		.4byte	.LASF61
+ 1488 0496 93030000 		.4byte	.LASF61
  1489 049a 01       		.byte	0x1
  1490 049b 0E       		.byte	0xe
  1491 049c AD000000 		.4byte	0xad
@@ -1725,7 +1725,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1501 04b2 03       		.byte	0x3
  1502 04b3 00000000 		.4byte	mDegMax
  1503 04b7 13       		.uleb128 0x13
- 1504 04b8 B8030000 		.4byte	.LASF63
+ 1504 04b8 C7030000 		.4byte	.LASF63
  1505 04bc 01       		.byte	0x1
  1506 04bd 0E       		.byte	0xe
  1507 04be AD000000 		.4byte	0xad
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1514 04ce 0F       		.byte	0xf
  1515 04cf D6000000 		.4byte	0xd6
  1516 04d3 05       		.uleb128 0x5
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 30
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 30
 
 
  1517 04d4 03       		.byte	0x3
@@ -1776,7 +1776,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1549 0518 03       		.byte	0x3
  1550 0519 00000000 		.4byte	enabledPID
  1551 051d 13       		.uleb128 0x13
- 1552 051e 8C030000 		.4byte	.LASF69
+ 1552 051e 9B030000 		.4byte	.LASF69
  1553 0522 01       		.byte	0x1
  1554 0523 1A       		.byte	0x1a
  1555 0524 B8000000 		.4byte	0xb8
@@ -1789,8 +1789,8 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1562 0534 1C       		.byte	0x1c
  1563 0535 97000000 		.4byte	0x97
  1564 0539 15       		.uleb128 0x15
- 1565 053a 2A030000 		.4byte	.LASF76
- 1566 053e 2A030000 		.4byte	.LASF76
+ 1565 053a 39030000 		.4byte	.LASF76
+ 1566 053e 39030000 		.4byte	.LASF76
  1567 0542 05       		.byte	0x5
  1568 0543 25       		.byte	0x25
  1569 0544 00       		.byte	0
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1571              	.Ldebug_abbrev0:
  1572 0000 01       		.uleb128 0x1
  1573 0001 11       		.uleb128 0x11
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 31
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 31
 
 
  1574 0002 01       		.byte	0x1
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1628 0038 00       		.byte	0
  1629 0039 03       		.uleb128 0x3
  1630 003a 0E       		.uleb128 0xe
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 32
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 32
 
 
  1631 003b 3A       		.uleb128 0x3a
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1685 0073 01       		.byte	0x1
  1686 0074 3F       		.uleb128 0x3f
  1687 0075 19       		.uleb128 0x19
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 33
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 33
 
 
  1688 0076 03       		.uleb128 0x3
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1742 00b0 19       		.uleb128 0x19
  1743 00b1 03       		.uleb128 0x3
  1744 00b2 0E       		.uleb128 0xe
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 34
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 34
 
 
  1745 00b3 3A       		.uleb128 0x3a
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1799 00ea 0E       		.uleb128 0xe
  1800 00eb 3A       		.uleb128 0x3a
  1801 00ec 0B       		.uleb128 0xb
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 35
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 35
 
 
  1802 00ed 3B       		.uleb128 0x3b
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1856 0126 13       		.uleb128 0x13
  1857 0127 01       		.uleb128 0x1
  1858 0128 13       		.uleb128 0x13
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 36
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 36
 
 
  1859 0129 00       		.byte	0
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1913 0162 03       		.uleb128 0x3
  1914 0163 0E       		.uleb128 0xe
  1915 0164 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 37
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 37
 
 
  1916 0165 0B       		.uleb128 0xb
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  1970 0072 70000000 		.4byte	.LVL27
  1971 0076 0100     		.2byte	0x1
  1972 0078 54       		.byte	0x54
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 38
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 38
 
 
  1973 0079 00000000 		.4byte	0
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  2027 002c 0C000000 		.4byte	.LFE38-.LFB38
  2028 0030 00000000 		.4byte	.LFB39
  2029 0034 18000000 		.4byte	.LFE39-.LFB39
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 39
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 39
 
 
  2030 0038 00000000 		.4byte	.LFB40
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  2084 0018 00000000 		.4byte	.LFB38
  2085 001c 0C000000 		.4byte	.LFE38
  2086 0020 00000000 		.4byte	.LFB39
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 40
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 40
 
 
  2087 0024 18000000 		.4byte	.LFE39
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  2137              	.LASF33:
  2138 0000 47657454 		.ascii	"GetTickMax\000"
  2138      69636B4D 
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 41
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 41
 
 
  2138      617800
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  2163              	.LASF64:
  2164 0099 6D446567 		.ascii	"mDegPerTick\000"
  2164      50657254 
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 42
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 42
 
 
  2164      69636B00 
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  2188      7400
  2189              	.LASF47:
  2190 0196 636F6E76 		.ascii	"conv\000"
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 43
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 43
 
 
  2190      00
@@ -2569,188 +2569,190 @@ ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 1
  2212 020d 6C6F6E67 		.ascii	"long double\000"
  2212      20646F75 
  2212      626C6500 
- 2213              	.LASF73:
- 2214 0219 433A5C55 		.ascii	"C:\\Users\\lucbu\\DocumentStorage\\GitHub\\BLDC_Mot"
- 2214      73657273 
- 2214      5C6C7563 
- 2214      62755C44 
- 2214      6F63756D 
- 2215 0247 6F725F42 		.ascii	"or_Board_PY2023\\BLDC_Motor_Board.cydsn\000"
- 2215      6F617264 
- 2215      5F505932 
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 44
+ 2213              	.LASF1:
+ 2214 0219 756E7369 		.ascii	"unsigned char\000"
+ 2214      676E6564 
+ 2214      20636861 
+ 2214      7200
+ 2215              	.LASF23:
+ 2216 0227 436C6561 		.ascii	"ClearPIDProgress\000"
+ 2216      72504944 
+ 2216      50726F67 
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 44
 
 
- 2215      3032335C 
- 2215      424C4443 
- 2216              	.LASF1:
- 2217 026e 756E7369 		.ascii	"unsigned char\000"
- 2217      676E6564 
- 2217      20636861 
- 2217      7200
- 2218              	.LASF23:
- 2219 027c 436C6561 		.ascii	"ClearPIDProgress\000"
- 2219      72504944 
- 2219      50726F67 
- 2219      72657373 
- 2219      00
- 2220              	.LASF48:
- 2221 028d 47657450 		.ascii	"GetPositionmDeg\000"
- 2221      6F736974 
- 2221      696F6E6D 
- 2221      44656700 
- 2222              	.LASF0:
- 2223 029d 7369676E 		.ascii	"signed char\000"
- 2223      65642063 
- 2223      68617200 
- 2224              	.LASF11:
- 2225 02a9 6C6F6E67 		.ascii	"long long unsigned int\000"
- 2225      206C6F6E 
- 2225      6720756E 
- 2225      7369676E 
- 2225      65642069 
- 2226              	.LASF16:
- 2227 02c0 75696E74 		.ascii	"uint32_t\000"
- 2227      33325F74 
- 2227      00
- 2228              	.LASF12:
- 2229 02c9 756E7369 		.ascii	"unsigned int\000"
- 2229      676E6564 
- 2229      20696E74 
- 2229      00
- 2230              	.LASF14:
- 2231 02d6 75696E74 		.ascii	"uint16_t\000"
- 2231      31365F74 
- 2231      00
- 2232              	.LASF26:
- 2233 02df 50494449 		.ascii	"PIDIsEnabled\000"
- 2233      73456E61 
- 2233      626C6564 
- 2233      00
- 2234              	.LASF32:
- 2235 02ec 47657443 		.ascii	"GetConversion\000"
- 2235      6F6E7665 
- 2235      7273696F 
- 2235      6E00
- 2236              	.LASF50:
- 2237 02fa 63757272 		.ascii	"current\000"
- 2237      656E7400 
- 2238              	.LASF5:
- 2239 0302 73686F72 		.ascii	"short unsigned int\000"
- 2239      7420756E 
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 45
+ 2216      72657373 
+ 2216      00
+ 2217              	.LASF48:
+ 2218 0238 47657450 		.ascii	"GetPositionmDeg\000"
+ 2218      6F736974 
+ 2218      696F6E6D 
+ 2218      44656700 
+ 2219              	.LASF73:
+ 2220 0248 433A5C55 		.ascii	"C:\\Users\\M4rz4n\\Desktop\\Husky Robotics\\Firmwar"
+ 2220      73657273 
+ 2220      5C4D3472 
+ 2220      7A346E5C 
+ 2220      4465736B 
+ 2221 0276 655C424C 		.ascii	"e\\BLDC\\BLDC_Motor_Board_PY2023\\BLDC_Motor_Board."
+ 2221      44435C42 
+ 2221      4C44435F 
+ 2221      4D6F746F 
+ 2221      725F426F 
+ 2222 02a6 63796473 		.ascii	"cydsn\000"
+ 2222      6E00
+ 2223              	.LASF0:
+ 2224 02ac 7369676E 		.ascii	"signed char\000"
+ 2224      65642063 
+ 2224      68617200 
+ 2225              	.LASF11:
+ 2226 02b8 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2226      206C6F6E 
+ 2226      6720756E 
+ 2226      7369676E 
+ 2226      65642069 
+ 2227              	.LASF16:
+ 2228 02cf 75696E74 		.ascii	"uint32_t\000"
+ 2228      33325F74 
+ 2228      00
+ 2229              	.LASF12:
+ 2230 02d8 756E7369 		.ascii	"unsigned int\000"
+ 2230      676E6564 
+ 2230      20696E74 
+ 2230      00
+ 2231              	.LASF14:
+ 2232 02e5 75696E74 		.ascii	"uint16_t\000"
+ 2232      31365F74 
+ 2232      00
+ 2233              	.LASF26:
+ 2234 02ee 50494449 		.ascii	"PIDIsEnabled\000"
+ 2234      73456E61 
+ 2234      626C6564 
+ 2234      00
+ 2235              	.LASF32:
+ 2236 02fb 47657443 		.ascii	"GetConversion\000"
+ 2236      6F6E7665 
+ 2236      7273696F 
+ 2236      6E00
+ 2237              	.LASF50:
+ 2238 0309 63757272 		.ascii	"current\000"
+ 2238      656E7400 
+ 2239              	.LASF5:
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 45
 
 
- 2239      7369676E 
- 2239      65642069 
- 2239      6E7400
- 2240              	.LASF30:
- 2241 0315 4765746B 		.ascii	"GetkIntegral\000"
- 2241      496E7465 
- 2241      6772616C 
- 2241      00
- 2242              	.LASF60:
- 2243 0322 7469636B 		.ascii	"tickMax\000"
- 2243      4D617800 
- 2244              	.LASF76:
- 2245 032a 7365745F 		.ascii	"set_speed\000"
- 2245      73706565 
- 2245      6400
- 2246              	.LASF20:
- 2247 0334 63686172 		.ascii	"char\000"
- 2247      00
- 2248              	.LASF39:
- 2249 0339 73657456 		.ascii	"setValue\000"
- 2249      616C7565 
- 2249      00
- 2250              	.LASF45:
- 2251 0342 7365746D 		.ascii	"setmDegMax\000"
- 2251      4465674D 
- 2251      617800
- 2252              	.LASF15:
- 2253 034d 696E7433 		.ascii	"int32_t\000"
- 2253      325F7400 
- 2254              	.LASF43:
- 2255 0355 73657454 		.ascii	"setTickMax\000"
- 2255      69636B4D 
- 2255      617800
- 2256              	.LASF37:
- 2257 0360 5365744D 		.ascii	"SetMaxPIDSpeed\000"
- 2257      61785049 
- 2257      44537065 
- 2257      656400
- 2258              	.LASF57:
- 2259 036f 6B506F73 		.ascii	"kPosition\000"
- 2259      6974696F 
- 2259      6E00
- 2260              	.LASF8:
- 2261 0379 5F5F7569 		.ascii	"__uint32_t\000"
- 2261      6E743332 
- 2261      5F7400
- 2262              	.LASF61:
- 2263 0384 7469636B 		.ascii	"tickMin\000"
- 2263      4D696E00 
- 2264              	.LASF69:
- 2265 038c 6D617853 		.ascii	"maxSpeed\000"
- 2265      70656564 
- 2265      00
- 2266              	.LASF44:
- 2267 0395 7365746D 		.ascii	"setmDegMin\000"
- 2267      4465674D 
- 2267      696E00
-ARM GAS  C:\Users\lucbu\AppData\Local\Temp\ccIKo4VT.s 			page 46
+ 2240 0311 73686F72 		.ascii	"short unsigned int\000"
+ 2240      7420756E 
+ 2240      7369676E 
+ 2240      65642069 
+ 2240      6E7400
+ 2241              	.LASF30:
+ 2242 0324 4765746B 		.ascii	"GetkIntegral\000"
+ 2242      496E7465 
+ 2242      6772616C 
+ 2242      00
+ 2243              	.LASF60:
+ 2244 0331 7469636B 		.ascii	"tickMax\000"
+ 2244      4D617800 
+ 2245              	.LASF76:
+ 2246 0339 7365745F 		.ascii	"set_speed\000"
+ 2246      73706565 
+ 2246      6400
+ 2247              	.LASF20:
+ 2248 0343 63686172 		.ascii	"char\000"
+ 2248      00
+ 2249              	.LASF39:
+ 2250 0348 73657456 		.ascii	"setValue\000"
+ 2250      616C7565 
+ 2250      00
+ 2251              	.LASF45:
+ 2252 0351 7365746D 		.ascii	"setmDegMax\000"
+ 2252      4465674D 
+ 2252      617800
+ 2253              	.LASF15:
+ 2254 035c 696E7433 		.ascii	"int32_t\000"
+ 2254      325F7400 
+ 2255              	.LASF43:
+ 2256 0364 73657454 		.ascii	"setTickMax\000"
+ 2256      69636B4D 
+ 2256      617800
+ 2257              	.LASF37:
+ 2258 036f 5365744D 		.ascii	"SetMaxPIDSpeed\000"
+ 2258      61785049 
+ 2258      44537065 
+ 2258      656400
+ 2259              	.LASF57:
+ 2260 037e 6B506F73 		.ascii	"kPosition\000"
+ 2260      6974696F 
+ 2260      6E00
+ 2261              	.LASF8:
+ 2262 0388 5F5F7569 		.ascii	"__uint32_t\000"
+ 2262      6E743332 
+ 2262      5F7400
+ 2263              	.LASF61:
+ 2264 0393 7469636B 		.ascii	"tickMin\000"
+ 2264      4D696E00 
+ 2265              	.LASF69:
+ 2266 039b 6D617853 		.ascii	"maxSpeed\000"
+ 2266      70656564 
+ 2266      00
+ 2267              	.LASF44:
+ 2268 03a4 7365746D 		.ascii	"setmDegMin\000"
+ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\cc28mgbk.s 			page 46
 
 
- 2268              	.LASF9:
- 2269 03a0 6C6F6E67 		.ascii	"long unsigned int\000"
- 2269      20756E73 
- 2269      69676E65 
- 2269      6420696E 
- 2269      7400
- 2270              	.LASF17:
- 2271 03b2 696E7433 		.ascii	"int32\000"
- 2271      3200
- 2272              	.LASF63:
- 2273 03b8 6D446567 		.ascii	"mDegMin\000"
- 2273      4D696E00 
- 2274              	.LASF46:
- 2275 03c0 53657443 		.ascii	"SetConversion\000"
- 2275      6F6E7665 
- 2275      7273696F 
- 2275      6E00
- 2276              	.LASF53:
- 2277 03ce 50574D4F 		.ascii	"PWMOut\000"
- 2277      757400
- 2278              	.LASF72:
- 2279 03d5 424C4443 		.ascii	"BLDC_pid.c\000"
- 2279      5F706964 
- 2279      2E6300
- 2280              	.LASF6:
- 2281 03e0 5F5F696E 		.ascii	"__int32_t\000"
- 2281      7433325F 
- 2281      7400
- 2282              	.LASF51:
- 2283 03ea 6572726F 		.ascii	"error\000"
- 2283      7200
- 2284              	.LASF25:
- 2285 03f0 456E6162 		.ascii	"EnablePID\000"
- 2285      6C655049 
- 2285      4400
- 2286              	.LASF19:
- 2287 03fa 646F7562 		.ascii	"double\000"
- 2287      6C6500
- 2288              	.LASF28:
- 2289 0401 4765744D 		.ascii	"GetMaxPIDSpeed\000"
- 2289      61785049 
- 2289      44537065 
- 2289      656400
- 2290              	.LASF31:
- 2291 0410 4765746B 		.ascii	"GetkDerivative\000"
- 2291      44657269 
- 2291      76617469 
- 2291      766500
- 2292              	.LASF35:
- 2293 041f 4765746D 		.ascii	"GetmDegMax\000"
- 2293      4465674D 
- 2293      617800
- 2294              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 2268      4465674D 
+ 2268      696E00
+ 2269              	.LASF9:
+ 2270 03af 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2270      20756E73 
+ 2270      69676E65 
+ 2270      6420696E 
+ 2270      7400
+ 2271              	.LASF17:
+ 2272 03c1 696E7433 		.ascii	"int32\000"
+ 2272      3200
+ 2273              	.LASF63:
+ 2274 03c7 6D446567 		.ascii	"mDegMin\000"
+ 2274      4D696E00 
+ 2275              	.LASF46:
+ 2276 03cf 53657443 		.ascii	"SetConversion\000"
+ 2276      6F6E7665 
+ 2276      7273696F 
+ 2276      6E00
+ 2277              	.LASF53:
+ 2278 03dd 50574D4F 		.ascii	"PWMOut\000"
+ 2278      757400
+ 2279              	.LASF72:
+ 2280 03e4 424C4443 		.ascii	"BLDC_pid.c\000"
+ 2280      5F706964 
+ 2280      2E6300
+ 2281              	.LASF6:
+ 2282 03ef 5F5F696E 		.ascii	"__int32_t\000"
+ 2282      7433325F 
+ 2282      7400
+ 2283              	.LASF51:
+ 2284 03f9 6572726F 		.ascii	"error\000"
+ 2284      7200
+ 2285              	.LASF25:
+ 2286 03ff 456E6162 		.ascii	"EnablePID\000"
+ 2286      6C655049 
+ 2286      4400
+ 2287              	.LASF19:
+ 2288 0409 646F7562 		.ascii	"double\000"
+ 2288      6C6500
+ 2289              	.LASF28:
+ 2290 0410 4765744D 		.ascii	"GetMaxPIDSpeed\000"
+ 2290      61785049 
+ 2290      44537065 
+ 2290      656400
+ 2291              	.LASF31:
+ 2292 041f 4765746B 		.ascii	"GetkDerivative\000"
+ 2292      44657269 
+ 2292      76617469 
+ 2292      766500
+ 2293              	.LASF35:
+ 2294 042e 4765746D 		.ascii	"GetmDegMax\000"
+ 2294      4465674D 
+ 2294      617800
+ 2295              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

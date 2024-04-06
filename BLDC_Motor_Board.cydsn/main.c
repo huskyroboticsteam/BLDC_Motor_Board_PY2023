@@ -64,7 +64,7 @@ CY_ISR(Period_Reset_Handler) {
     Debug_LED++; // do I need this?
 
     if(invalidate >= 20){
-        set_speed(0, 1);   
+        //set_speed(0, 1);   
     }
     if(Error_LED >= 3) {
         #ifdef ERROR_LED
@@ -122,16 +122,52 @@ int main(void)
     
     for(;;)
     {
-        set_speed(1000*(1-cos(6.28 * delay * counter / 1000 / period)), 0);
+        //set_speed(1000*(1-cos(6.28 * delay * counter / 1000 / period)), 0);
+        //set_speed(0, 0);
+        /*
+        UH_Write(0);
+        UL_Write(0);
+        VH_Write(1);
+        VL_Write(0);
+        WH_Write(0);
+        WL_Write(1);
+        */
+        /*UH_Write(0);
+        UL_Write(1);
+        VH_Write(1);
+        VL_Write(0);
+        WH_Write(0);
+        WL_Write(0); // not work
+*/
+        //                     WL,WH,VL,VH,UL,UH
+/*        uint8_t rotorStates[6] = {0b001001, 
+                                  0b011000, 
+                                  0b010010,
+                                  0b000110, // not work?
+                                  0b100100, // work? not work?
+                                  0b100001};
+
+        uint8_t state = rotorStates[4];
+    
+        // write registers in UVW
+        UH_Write((state & (1 << 0)) != 0);
+        UL_Write((state & (1 << 1)) != 0);
+        VH_Write((state & (1 << 2)) != 0);
+        VL_Write((state & (1 << 3)) != 0);
+        WH_Write((state & (1 << 4)) != 0);
+        WL_Write((state & (1 << 5)) != 0);
+        */
+        
         counter++;
         CyDelay(delay);
-        
+        ERROR_LED_Write(FAULT_Read());
+        /*
         uint8 data[5] = {1,0,0,0,0};
         // set chip select high
         TMC6100_SpiUartPutArray(data, 5);
         // set chip select low
         uint32 gstat = TMC6100_SpiUartReadRxData();
-        
+        */
         
         /*
         switch(GetState()) {
