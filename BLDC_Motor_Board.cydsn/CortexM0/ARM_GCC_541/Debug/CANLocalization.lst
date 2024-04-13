@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccEylcI0.s 			page 1
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccViZzvB.s 			page 1
 
 
    1              		.syntax unified
@@ -27,46 +27,46 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccEylcI0.s 			page 1
   24 0006 00000000 		.4byte	.Ldebug_abbrev0
   25 000a 04       		.byte	0x4
   26 000b 01       		.uleb128 0x1
-  27 000c 02010000 		.4byte	.LASF10
+  27 000c 7E000000 		.4byte	.LASF10
   28 0010 0C       		.byte	0xc
-  29 0011 AC000000 		.4byte	.LASF11
-  30 0015 00000000 		.4byte	.LASF12
+  29 0011 48000000 		.4byte	.LASF11
+  30 0015 2C010000 		.4byte	.LASF12
   31 0019 00000000 		.4byte	.Ldebug_line0
   32 001d 02       		.uleb128 0x2
   33 001e 01       		.byte	0x1
   34 001f 06       		.byte	0x6
-  35 0020 83000000 		.4byte	.LASF0
+  35 0020 1F000000 		.4byte	.LASF0
   36 0024 02       		.uleb128 0x2
   37 0025 01       		.byte	0x1
   38 0026 08       		.byte	0x8
-  39 0027 E2000000 		.4byte	.LASF1
+  39 0027 0C010000 		.4byte	.LASF1
   40 002b 02       		.uleb128 0x2
   41 002c 02       		.byte	0x2
   42 002d 05       		.byte	0x5
-  43 002e A2000000 		.4byte	.LASF2
+  43 002e 3E000000 		.4byte	.LASF2
   44 0032 02       		.uleb128 0x2
   45 0033 02       		.byte	0x2
   46 0034 07       		.byte	0x7
-  47 0035 8F000000 		.4byte	.LASF3
+  47 0035 2B000000 		.4byte	.LASF3
   48 0039 02       		.uleb128 0x2
   49 003a 04       		.byte	0x4
   50 003b 05       		.byte	0x5
-  51 003c F0000000 		.4byte	.LASF4
+  51 003c 1A010000 		.4byte	.LASF4
   52 0040 02       		.uleb128 0x2
   53 0041 04       		.byte	0x4
   54 0042 07       		.byte	0x7
-  55 0043 71000000 		.4byte	.LASF5
+  55 0043 0D000000 		.4byte	.LASF5
   56 0047 02       		.uleb128 0x2
   57 0048 08       		.byte	0x8
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccEylcI0.s 			page 2
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccViZzvB.s 			page 2
 
 
   58 0049 05       		.byte	0x5
-  59 004a 90010000 		.4byte	.LASF6
+  59 004a 81010000 		.4byte	.LASF6
   60 004e 02       		.uleb128 0x2
   61 004f 08       		.byte	0x8
   62 0050 07       		.byte	0x7
-  63 0051 CB000000 		.4byte	.LASF7
+  63 0051 67000000 		.4byte	.LASF7
   64 0055 03       		.uleb128 0x3
   65 0056 04       		.byte	0x4
   66 0057 05       		.byte	0x5
@@ -74,11 +74,11 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccEylcI0.s 			page 1
   68 005c 02       		.uleb128 0x2
   69 005d 04       		.byte	0x4
   70 005e 07       		.byte	0x7
-  71 005f 64000000 		.4byte	.LASF8
+  71 005f 00000000 		.4byte	.LASF8
   72 0063 02       		.uleb128 0x2
   73 0064 04       		.byte	0x4
   74 0065 07       		.byte	0x7
-  75 0066 F9000000 		.4byte	.LASF9
+  75 0066 23010000 		.4byte	.LASF9
   76 006a 00       		.byte	0
   77              		.section	.debug_abbrev,"",%progbits
   78              	.Ldebug_abbrev0:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccEylcI0.s 			page 1
  112 0021 03       		.uleb128 0x3
  113 0022 08       		.uleb128 0x8
  114 0023 00       		.byte	0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccEylcI0.s 			page 3
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccViZzvB.s 			page 3
 
 
  115 0024 00       		.byte	0
@@ -140,91 +140,89 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccEylcI0.s 			page 1
  129      00000201 
  129      FB0E0D00 
  129      01010101 
- 130              	.LASF12:
- 131 0000 433A5C55 		.ascii	"C:\\Users\\M4rz4n\\Desktop\\Husky Robotics\\Firmwar"
- 131      73657273 
- 131      5C4D3472 
- 131      7A346E5C 
- 131      4465736B 
- 132 002e 655C424C 		.ascii	"e\\BLDC\\BLDC_Motor_Board_PY2023\\BLDC_Motor_Board."
- 132      44435C42 
- 132      4C44435F 
- 132      4D6F746F 
- 132      725F426F 
- 133 005e 63796473 		.ascii	"cydsn\000"
- 133      6E00
- 134              	.LASF8:
- 135 0064 756E7369 		.ascii	"unsigned int\000"
- 135      676E6564 
- 135      20696E74 
- 135      00
- 136              	.LASF5:
- 137 0071 6C6F6E67 		.ascii	"long unsigned int\000"
- 137      20756E73 
- 137      69676E65 
- 137      6420696E 
- 137      7400
- 138              	.LASF0:
- 139 0083 7369676E 		.ascii	"signed char\000"
- 139      65642063 
- 139      68617200 
- 140              	.LASF3:
- 141 008f 73686F72 		.ascii	"short unsigned int\000"
- 141      7420756E 
- 141      7369676E 
- 141      65642069 
- 141      6E7400
- 142              	.LASF2:
- 143 00a2 73686F72 		.ascii	"short int\000"
- 143      7420696E 
- 143      7400
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccEylcI0.s 			page 4
+ 130              	.LASF8:
+ 131 0000 756E7369 		.ascii	"unsigned int\000"
+ 131      676E6564 
+ 131      20696E74 
+ 131      00
+ 132              	.LASF5:
+ 133 000d 6C6F6E67 		.ascii	"long unsigned int\000"
+ 133      20756E73 
+ 133      69676E65 
+ 133      6420696E 
+ 133      7400
+ 134              	.LASF0:
+ 135 001f 7369676E 		.ascii	"signed char\000"
+ 135      65642063 
+ 135      68617200 
+ 136              	.LASF3:
+ 137 002b 73686F72 		.ascii	"short unsigned int\000"
+ 137      7420756E 
+ 137      7369676E 
+ 137      65642069 
+ 137      6E7400
+ 138              	.LASF2:
+ 139 003e 73686F72 		.ascii	"short int\000"
+ 139      7420696E 
+ 139      7400
+ 140              	.LASF11:
+ 141 0048 48696E64 		.ascii	"HindsightCAN\\CANLocalization.c\000"
+ 141      73696768 
+ 141      7443414E 
+ 141      5C43414E 
+ 141      4C6F6361 
+ 142              	.LASF7:
+ 143 0067 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 143      206C6F6E 
+ 143      6720756E 
+ 143      7369676E 
+ 143      65642069 
+ 144              	.LASF10:
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccViZzvB.s 			page 4
 
 
- 144              	.LASF11:
- 145 00ac 48696E64 		.ascii	"HindsightCAN\\CANLocalization.c\000"
- 145      73696768 
- 145      7443414E 
- 145      5C43414E 
- 145      4C6F6361 
- 146              	.LASF7:
- 147 00cb 6C6F6E67 		.ascii	"long long unsigned int\000"
- 147      206C6F6E 
- 147      6720756E 
- 147      7369676E 
- 147      65642069 
+ 145 007e 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 145      43313120 
+ 145      352E342E 
+ 145      31203230 
+ 145      31363036 
+ 146 00b1 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 146      20726576 
+ 146      6973696F 
+ 146      6E203233 
+ 146      37373135 
+ 147 00e4 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 147      66756E63 
+ 147      74696F6E 
+ 147      2D736563 
+ 147      74696F6E 
  148              	.LASF1:
- 149 00e2 756E7369 		.ascii	"unsigned char\000"
+ 149 010c 756E7369 		.ascii	"unsigned char\000"
  149      676E6564 
  149      20636861 
  149      7200
  150              	.LASF4:
- 151 00f0 6C6F6E67 		.ascii	"long int\000"
+ 151 011a 6C6F6E67 		.ascii	"long int\000"
  151      20696E74 
  151      00
  152              	.LASF9:
- 153 00f9 73697A65 		.ascii	"sizetype\000"
+ 153 0123 73697A65 		.ascii	"sizetype\000"
  153      74797065 
  153      00
- 154              	.LASF10:
- 155 0102 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 155      43313120 
- 155      352E342E 
- 155      31203230 
- 155      31363036 
- 156 0135 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 156      20726576 
- 156      6973696F 
- 156      6E203233 
- 156      37373135 
- 157 0168 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 157      66756E63 
- 157      74696F6E 
- 157      2D736563 
- 157      74696F6E 
- 158              	.LASF6:
- 159 0190 6C6F6E67 		.ascii	"long long int\000"
- 159      206C6F6E 
- 159      6720696E 
- 159      7400
- 160              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 154              	.LASF12:
+ 155 012c 433A5C55 		.ascii	"C:\\Users\\davis\\Documents\\PSoC Creator\\BLDC_Mot"
+ 155      73657273 
+ 155      5C646176 
+ 155      69735C44 
+ 155      6F63756D 
+ 156 015a 6F725F42 		.ascii	"or_Board_PY2023\\BLDC_Motor_Board.cydsn\000"
+ 156      6F617264 
+ 156      5F505932 
+ 156      3032335C 
+ 156      424C4443 
+ 157              	.LASF6:
+ 158 0181 6C6F6E67 		.ascii	"long long int\000"
+ 158      206C6F6E 
+ 158      6720696E 
+ 158      7400
+ 159              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

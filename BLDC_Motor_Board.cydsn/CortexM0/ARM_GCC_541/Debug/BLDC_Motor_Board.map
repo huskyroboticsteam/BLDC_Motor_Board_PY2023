@@ -5,17 +5,17 @@ Archive member included to satisfy reference by file (symbol)
 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLFClk.o)
                               .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o) (CySysClkWcoEnabled)
 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UH.o)
-                              .\CortexM0\ARM_GCC_541\Debug\main.o (UH_Write)
+                              .\CortexM0\ARM_GCC_541\Debug\BLDC_Drive.o (UH_Write)
 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UL.o)
-                              .\CortexM0\ARM_GCC_541\Debug\main.o (UL_Write)
+                              .\CortexM0\ARM_GCC_541\Debug\BLDC_Drive.o (UL_Write)
 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(VH.o)
-                              .\CortexM0\ARM_GCC_541\Debug\main.o (VH_Write)
+                              .\CortexM0\ARM_GCC_541\Debug\BLDC_Drive.o (VH_Write)
 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(VL.o)
-                              .\CortexM0\ARM_GCC_541\Debug\main.o (VL_Write)
+                              .\CortexM0\ARM_GCC_541\Debug\BLDC_Drive.o (VL_Write)
 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(WH.o)
-                              .\CortexM0\ARM_GCC_541\Debug\main.o (WH_Write)
+                              .\CortexM0\ARM_GCC_541\Debug\BLDC_Drive.o (WH_Write)
 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(WL.o)
-                              .\CortexM0\ARM_GCC_541\Debug\main.o (WL_Write)
+                              .\CortexM0\ARM_GCC_541\Debug\BLDC_Drive.o (WL_Write)
 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
                               .\CortexM0\ARM_GCC_541\Debug\PortPSOC_CY8C4248AZI_L485.o (CAN_GlobalIntEnable)
 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_INT.o)
@@ -36,6 +36,8 @@ Archive member included to satisfy reference by file (symbol)
                               .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C.o) (Current_Sensor_I2C_mstrRdBufIndex)
 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_LED.o)
                               .\CortexM0\ARM_GCC_541\Debug\main.o (CAN_LED_Write)
+.\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(DRV_EN.o)
+                              .\CortexM0\ARM_GCC_541\Debug\main.o (DRV_EN_Write)
 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(FAULT.o)
                               .\CortexM0\ARM_GCC_541\Debug\main.o (FAULT_Read)
 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Limit_1.o)
@@ -61,7 +63,11 @@ Archive member included to satisfy reference by file (symbol)
 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI_UART.o)
                               .\CortexM0\ARM_GCC_541\Debug\main.o (TMC6100_SpiUartReadRxData)
 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI.o)
-                              .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100.o) (TMC6100_SpiInit)
+                              .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100.o) (TMC6100_SpiPostEnable)
+.\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_sclk_m.o)
+                              .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI.o) (TMC6100_sclk_m_Write)
+.\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_ss0_m.o)
+                              .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI.o) (TMC6100_ss0_m_Write)
 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyBootAsmGnu.o)
                               .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o) (CyDelayCycles)
 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyFlash.o)
@@ -110,12 +116,16 @@ c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.
                               c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-exit.o) (_global_impure_ptr)
 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
                               c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m/crt0.o (__libc_init_array)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-itoa.o)
+                              .\CortexM0\ARM_GCC_541\Debug\main.o (itoa)
 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memcpy-stub.o)
                               .\CortexM0\ARM_GCC_541\Debug\PortPSOC_CY8C4248AZI_L485.o (memcpy)
 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
                               c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m/crt0.o (memset)
 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sprintf.o)
                               .\CortexM0\ARM_GCC_541\Debug\main.o (sprintf)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-utoa.o)
+                              c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-itoa.o) (__utoa)
 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-svfprintf.o)
                               c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sprintf.o) (_svfprintf_r)
 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
@@ -971,6 +981,19 @@ Discarded input sections
                 0x00000000       0x14 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_LED.o)
  .text.CAN_LED_ClearInterrupt
                 0x00000000       0x14 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_LED.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(DRV_EN.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(DRV_EN.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(DRV_EN.o)
+ .text.DRV_EN_SetDriveMode
+                0x00000000       0x18 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(DRV_EN.o)
+ .text.DRV_EN_Read
+                0x00000000       0x10 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(DRV_EN.o)
+ .text.DRV_EN_ReadDataReg
+                0x00000000       0x10 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(DRV_EN.o)
+ .text.DRV_EN_SetInterruptMode
+                0x00000000       0x14 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(DRV_EN.o)
+ .text.DRV_EN_ClearInterrupt
+                0x00000000       0x14 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(DRV_EN.o)
  .text          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(FAULT.o)
  .data          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(FAULT.o)
  .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(FAULT.o)
@@ -1142,9 +1165,37 @@ Discarded input sections
  .data          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI.o)
  .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI.o)
  .text.TMC6100_SpiStop
-                0x00000000       0x18 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI.o)
- .text.TMC6100_SpiSetSlaveSelectPolarity
-                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI.o)
+                0x00000000       0x60 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_sclk_m.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_sclk_m.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_sclk_m.o)
+ .text.TMC6100_sclk_m_SetDriveMode
+                0x00000000       0x18 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_sclk_m.o)
+ .text.TMC6100_sclk_m_Write
+                0x00000000       0x18 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_sclk_m.o)
+ .text.TMC6100_sclk_m_Read
+                0x00000000       0x10 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_sclk_m.o)
+ .text.TMC6100_sclk_m_ReadDataReg
+                0x00000000       0x10 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_sclk_m.o)
+ .text.TMC6100_sclk_m_SetInterruptMode
+                0x00000000       0x14 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_sclk_m.o)
+ .text.TMC6100_sclk_m_ClearInterrupt
+                0x00000000       0x14 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_sclk_m.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_ss0_m.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_ss0_m.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_ss0_m.o)
+ .text.TMC6100_ss0_m_SetDriveMode
+                0x00000000       0x18 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_ss0_m.o)
+ .text.TMC6100_ss0_m_Write
+                0x00000000       0x18 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_ss0_m.o)
+ .text.TMC6100_ss0_m_Read
+                0x00000000       0x10 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_ss0_m.o)
+ .text.TMC6100_ss0_m_ReadDataReg
+                0x00000000       0x10 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_ss0_m.o)
+ .text.TMC6100_ss0_m_SetInterruptMode
+                0x00000000       0x14 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_ss0_m.o)
+ .text.TMC6100_ss0_m_ClearInterrupt
+                0x00000000       0x14 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_ss0_m.o)
  .data          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyBootAsmGnu.o)
  .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyBootAsmGnu.o)
  .text          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyFlash.o)
@@ -1180,13 +1231,11 @@ Discarded input sections
  .text          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_INT.o)
  .data          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_INT.o)
  .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_INT.o)
- .text          0x00000000      0x114 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_udivsi3.o)
  .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_udivsi3.o)
  .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_udivsi3.o)
  .text          0x00000000      0x1d4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_divsi3.o)
  .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_divsi3.o)
  .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_divsi3.o)
- .text          0x00000000        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_dvmd_tls.o)
  .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_dvmd_tls.o)
  .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_dvmd_tls.o)
  .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_fixunssfsi.o)
@@ -1234,10 +1283,12 @@ Discarded input sections
  .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
  .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
  .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-itoa.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-itoa.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-itoa.o)
  .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memcpy-stub.o)
  .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memcpy-stub.o)
  .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memcpy-stub.o)
- .text.memcpy   0x00000000       0x12 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memcpy-stub.o)
  .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
  .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
  .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
@@ -1247,6 +1298,10 @@ Discarded input sections
  .text._sprintf_r
                 0x00000000       0x40 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sprintf.o)
  .text.sprintf  0x00000000       0x44 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sprintf.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-utoa.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-utoa.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-utoa.o)
+ .text.utoa     0x00000000        0x8 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-utoa.o)
  .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-svfprintf.o)
  .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-svfprintf.o)
  .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-svfprintf.o)
@@ -1394,7 +1449,7 @@ END GROUP
                 0x00000001                cy_project_type_bootloader = (appl_start == 0x0)?0x1:0x0
                 0x00000000                cy_project_type_app_for_stack_and_copier = (CY_APP_FOR_STACK_AND_COPIER == 0x1)?0x1:0x0
 
-.text           0x00000000     0x289c
+.text           0x00000000     0x2b28
  CREATE_OBJECT_SYMBOLS
                 0x00000000                PROVIDE (__cy_interrupt_vector, RomVectors)
  *(.romvectors)
@@ -1408,512 +1463,537 @@ END GROUP
                 0x00000010                Reset
                 0x00000001                ASSERT ((. != __cy_reset), No reset code)
  *(.psocinit)
- .psocinit      0x00000018      0x29c .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .psocinit      0x00000018      0x2a0 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
                 0x00000100                cyfitter_cfg
-                0x000002b4                . = MAX (., 0x100)
+                0x000002b8                . = MAX (., 0x100)
  *(.text .text.* .gnu.linkonce.t.*)
- .text          0x000002b4       0x60 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
+ .text          0x000002b8       0x60 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
  .text.Period_Reset_Handler
-                0x00000314       0x48 .\CortexM0\ARM_GCC_541\Debug\main.o
-                0x00000314                Period_Reset_Handler
+                0x00000318       0x48 .\CortexM0\ARM_GCC_541\Debug\main.o
+                0x00000318                Period_Reset_Handler
  .text.Pin_Limit_Handler
-                0x0000035c       0x5c .\CortexM0\ARM_GCC_541\Debug\main.o
-                0x0000035c                Pin_Limit_Handler
+                0x00000360       0x5c .\CortexM0\ARM_GCC_541\Debug\main.o
+                0x00000360                Pin_Limit_Handler
  .text.Initialize
-                0x000003b8       0x6c .\CortexM0\ARM_GCC_541\Debug\main.o
-                0x000003b8                Initialize
- .text.main     0x00000424       0x74 .\CortexM0\ARM_GCC_541\Debug\main.o
-                0x00000424                main
+                0x000003bc       0x70 .\CortexM0\ARM_GCC_541\Debug\main.o
+                0x000003bc                Initialize
+ .text.main     0x0000042c       0xa4 .\CortexM0\ARM_GCC_541\Debug\main.o
+                0x0000042c                main
  .text.set_speed
-                0x00000498       0xb8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Drive.o
-                0x00000498                set_speed
+                0x000004d0       0xb8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Drive.o
+                0x000004d0                set_speed
  .text.GetCurrentSpeed
-                0x00000550        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Drive.o
-                0x00000550                GetCurrentSpeed
+                0x00000588        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Drive.o
+                0x00000588                GetCurrentSpeed
  .text.updateRotorState
-                0x0000055c       0x6c .\CortexM0\ARM_GCC_541\Debug\BLDC_Drive.o
-                0x0000055c                updateRotorState
- .text.InitCAN  0x000005c8       0x98 .\CortexM0\ARM_GCC_541\Debug\PortPSOC_CY8C4248AZI_L485.o
-                0x000005c8                InitCAN
+                0x00000594       0x6c .\CortexM0\ARM_GCC_541\Debug\BLDC_Drive.o
+                0x00000594                updateRotorState
+ .text.InitCAN  0x00000600       0x98 .\CortexM0\ARM_GCC_541\Debug\PortPSOC_CY8C4248AZI_L485.o
+                0x00000600                InitCAN
  .text.countAddFIFO
-                0x00000660       0x50 .\CortexM0\ARM_GCC_541\Debug\PortPSOC_CY8C4248AZI_L485.o
-                0x00000660                countAddFIFO
+                0x00000698       0x50 .\CortexM0\ARM_GCC_541\Debug\PortPSOC_CY8C4248AZI_L485.o
+                0x00000698                countAddFIFO
  .text.CAN_FLAG_ISR
-                0x000006b0      0x12c .\CortexM0\ARM_GCC_541\Debug\PortPSOC_CY8C4248AZI_L485.o
-                0x000006b0                CAN_FLAG_ISR
+                0x000006e8      0x12c .\CortexM0\ARM_GCC_541\Debug\PortPSOC_CY8C4248AZI_L485.o
+                0x000006e8                CAN_FLAG_ISR
  .text.cfg_write_bytes32
-                0x000007dc       0x34 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x00000814       0x34 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
  .text.AnalogSetDefault
-                0x00000810       0x20 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x00000848       0x20 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
  .text.CYMEMZERO
-                0x00000830        0xc .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x00000868        0xc .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
  .text.IntDefaultHandler
-                0x0000083c       0x10 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
-                0x0000083c                IntDefaultHandler
- .text.Start_c  0x0000084c       0x48 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
-                0x0000084c                Start_c
+                0x00000874       0x10 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+                0x00000874                IntDefaultHandler
+ .text.Start_c  0x00000884       0x48 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+                0x00000884                Start_c
  .text.initialize_psoc
-                0x00000894       0x4c .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
-                0x00000894                initialize_psoc
+                0x000008cc       0x4c .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+                0x000008cc                initialize_psoc
  .text.CySysClkImoSetPwrBgTrim5
-                0x000008e0       0x30 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
+                0x00000918       0x30 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
  .text.CySysClkImoSetImoTrims
-                0x00000910       0xb0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
+                0x00000948       0xb0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
  .text.CySysClkImoDisableWcoLock
-                0x000009c0       0x54 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
-                0x000009c0                CySysClkImoDisableWcoLock
+                0x000009f8       0x54 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
+                0x000009f8                CySysClkImoDisableWcoLock
  .text.CySysClkImoGetWcoLock
-                0x00000a14       0x14 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
-                0x00000a14                CySysClkImoGetWcoLock
+                0x00000a4c       0x14 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
+                0x00000a4c                CySysClkImoGetWcoLock
  .text.CySysClkImoEnableUsbLock
-                0x00000a28       0x44 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
-                0x00000a28                CySysClkImoEnableUsbLock
+                0x00000a60       0x44 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
+                0x00000a60                CySysClkImoEnableUsbLock
  .text.CySysClkImoDisableUsbLock
-                0x00000a6c       0x74 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
-                0x00000a6c                CySysClkImoDisableUsbLock
+                0x00000aa4       0x74 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
+                0x00000aa4                CySysClkImoDisableUsbLock
  .text.CySysClkImoGetUsbLock
-                0x00000ae0       0x14 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
-                0x00000ae0                CySysClkImoGetUsbLock
+                0x00000b18       0x14 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
+                0x00000b18                CySysClkImoGetUsbLock
  .text.CyIntEnable
-                0x00000af4       0x14 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
-                0x00000af4                CyIntEnable
+                0x00000b2c       0x14 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
+                0x00000b2c                CyIntEnable
  .text.CyIntDisable
-                0x00000b08       0x14 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
-                0x00000b08                CyIntDisable
- .text.CyHalt   0x00000b1c        0x4 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
-                0x00000b1c                CyHalt
+                0x00000b40       0x14 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
+                0x00000b40                CyIntDisable
+ .text.CyHalt   0x00000b54        0x4 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
+                0x00000b54                CyHalt
  .text.CyIntSetVector
-                0x00000b20       0x24 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
-                0x00000b20                CyIntSetVector
+                0x00000b58       0x24 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
+                0x00000b58                CyIntSetVector
  .text.CyIntSetPriority
-                0x00000b44       0x4c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
-                0x00000b44                CyIntSetPriority
- .text.CyDelay  0x00000b90       0x30 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
-                0x00000b90                CyDelay
+                0x00000b7c       0x4c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
+                0x00000b7c                CyIntSetPriority
+ .text.CyDelay  0x00000bc8       0x30 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
+                0x00000bc8                CyDelay
  .text.CySysClkImoEnableWcoLock
-                0x00000bc0      0x104 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
-                0x00000bc0                CySysClkImoEnableWcoLock
+                0x00000bf8      0x104 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
+                0x00000bf8                CySysClkImoEnableWcoLock
  .text.CyDelayUs
-                0x00000cc4       0x14 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
-                0x00000cc4                CyDelayUs
+                0x00000cfc       0x14 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
+                0x00000cfc                CyDelayUs
  .text.CySysClkWriteImoFreq
-                0x00000cd8      0x1bc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
-                0x00000cd8                CySysClkWriteImoFreq
+                0x00000d10      0x1bc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
+                0x00000d10                CySysClkWriteImoFreq
  .text.CySysWdtLocked
-                0x00000e94       0x14 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLFClk.o)
+                0x00000ecc       0x14 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLFClk.o)
  .text.CySysClkWcoEnabled
-                0x00000ea8       0x14 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLFClk.o)
-                0x00000ea8                CySysClkWcoEnabled
+                0x00000ee0       0x14 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLFClk.o)
+                0x00000ee0                CySysClkWcoEnabled
  .text.CySysWdtLock
-                0x00000ebc       0x1c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLFClk.o)
-                0x00000ebc                CySysWdtLock
+                0x00000ef4       0x1c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLFClk.o)
+                0x00000ef4                CySysWdtLock
  .text.CySysWdtUnlock
-                0x00000ed8       0x30 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLFClk.o)
-                0x00000ed8                CySysWdtUnlock
+                0x00000f10       0x30 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLFClk.o)
+                0x00000f10                CySysWdtUnlock
  .text.CySysWdtClearInterrupt
-                0x00000f08       0x4c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLFClk.o)
-                0x00000f08                CySysWdtClearInterrupt
+                0x00000f40       0x4c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLFClk.o)
+                0x00000f40                CySysWdtClearInterrupt
  .text.CySysWdtIsr
-                0x00000f54       0xa4 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLFClk.o)
-                0x00000f54                CySysWdtIsr
+                0x00000f8c       0xa4 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLFClk.o)
+                0x00000f8c                CySysWdtIsr
  .text.UH_Write
-                0x00000ff8       0x18 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UH.o)
-                0x00000ff8                UH_Write
+                0x00001030       0x18 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UH.o)
+                0x00001030                UH_Write
  .text.UL_Write
-                0x00001010       0x18 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UL.o)
-                0x00001010                UL_Write
+                0x00001048       0x18 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UL.o)
+                0x00001048                UL_Write
  .text.VH_Write
-                0x00001028       0x18 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(VH.o)
-                0x00001028                VH_Write
+                0x00001060       0x18 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(VH.o)
+                0x00001060                VH_Write
  .text.VL_Write
-                0x00001040       0x18 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(VL.o)
-                0x00001040                VL_Write
+                0x00001078       0x18 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(VL.o)
+                0x00001078                VL_Write
  .text.WH_Write
-                0x00001058       0x18 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(WH.o)
-                0x00001058                WH_Write
+                0x00001090       0x18 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(WH.o)
+                0x00001090                WH_Write
  .text.WL_Write
-                0x00001070       0x18 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(WL.o)
-                0x00001070                WL_Write
+                0x000010a8       0x18 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(WL.o)
+                0x000010a8                WL_Write
  .text.CAN_GlobalIntEnable
-                0x00001088       0x1c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
-                0x00001088                CAN_GlobalIntEnable
+                0x000010c0       0x1c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
+                0x000010c0                CAN_GlobalIntEnable
  .text.CAN_Enable
-                0x000010a4       0x48 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
-                0x000010a4                CAN_Enable
+                0x000010dc       0x48 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
+                0x000010dc                CAN_Enable
  .text.CAN_SetPreScaler
-                0x000010ec       0x38 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
-                0x000010ec                CAN_SetPreScaler
+                0x00001124       0x38 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
+                0x00001124                CAN_SetPreScaler
  .text.CAN_SetArbiter
-                0x00001124       0x40 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
-                0x00001124                CAN_SetArbiter
+                0x0000115c       0x40 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
+                0x0000115c                CAN_SetArbiter
  .text.CAN_SetTsegSample
-                0x00001164       0xa0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
-                0x00001164                CAN_SetTsegSample
+                0x0000119c       0xa0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
+                0x0000119c                CAN_SetTsegSample
  .text.CAN_SetRestartType
-                0x00001204       0x38 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
-                0x00001204                CAN_SetRestartType
- .text.CAN_SetEdgeMode
                 0x0000123c       0x38 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
-                0x0000123c                CAN_SetEdgeMode
+                0x0000123c                CAN_SetRestartType
+ .text.CAN_SetEdgeMode
+                0x00001274       0x38 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
+                0x00001274                CAN_SetEdgeMode
  .text.CAN_SetIrqMask
-                0x00001274       0x1c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
-                0x00001274                CAN_SetIrqMask
+                0x000012ac       0x1c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
+                0x000012ac                CAN_SetIrqMask
  .text.CAN_RxBufConfig
-                0x00001290       0x98 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
-                0x00001290                CAN_RxBufConfig
+                0x000012c8       0x98 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
+                0x000012c8                CAN_RxBufConfig
  .text.CAN_TxBufConfig
-                0x00001328       0x58 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
-                0x00001328                CAN_TxBufConfig
+                0x00001360       0x58 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
+                0x00001360                CAN_TxBufConfig
  .text.CAN_RxTxBuffersConfig
-                0x00001380       0x54 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
-                0x00001380                CAN_RxTxBuffersConfig
+                0x000013b8       0x54 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
+                0x000013b8                CAN_RxTxBuffersConfig
  .text.CAN_SetSwapDataEndianness
-                0x000013d4       0x40 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
-                0x000013d4                CAN_SetSwapDataEndianness
+                0x0000140c       0x40 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
+                0x0000140c                CAN_SetSwapDataEndianness
  .text.CAN_Init
-                0x00001414       0xe4 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
-                0x00001414                CAN_Init
+                0x0000144c       0xe4 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
+                0x0000144c                CAN_Init
  .text.CAN_Start
-                0x000014f8       0x28 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
-                0x000014f8                CAN_Start
- .text.CAN_ISR  0x00001520        0x4 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_INT.o)
-                0x00001520                CAN_ISR
+                0x00001530       0x28 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
+                0x00001530                CAN_Start
+ .text.CAN_ISR  0x00001558        0x4 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_INT.o)
+                0x00001558                CAN_ISR
  .text.UART_ScbModePostEnable
-                0x00001524        0x8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART.o)
+                0x0000155c        0x8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART.o)
  .text.UART_Init
-                0x0000152c        0x8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART.o)
-                0x0000152c                UART_Init
+                0x00001564        0x8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART.o)
+                0x00001564                UART_Init
  .text.UART_Enable
-                0x00001534       0x18 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART.o)
-                0x00001534                UART_Enable
+                0x0000156c       0x18 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART.o)
+                0x0000156c                UART_Enable
  .text.UART_Start
-                0x0000154c       0x20 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART.o)
-                0x0000154c                UART_Start
+                0x00001584       0x20 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART.o)
+                0x00001584                UART_Start
  .text.UART_UartInit
-                0x0000156c       0xa8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_UART.o)
-                0x0000156c                UART_UartInit
+                0x000015a4       0xa8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_UART.o)
+                0x000015a4                UART_UartInit
  .text.UART_UartPostEnable
-                0x00001614       0x24 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_UART.o)
-                0x00001614                UART_UartPostEnable
+                0x0000164c       0x24 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_UART.o)
+                0x0000164c                UART_UartPostEnable
  .text.UART_UartPutString
-                0x00001638       0x18 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_UART.o)
-                0x00001638                UART_UartPutString
+                0x00001670       0x18 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_UART.o)
+                0x00001670                UART_UartPutString
  .text.ERROR_LED_Write
-                0x00001650       0x18 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(ERROR_LED.o)
-                0x00001650                ERROR_LED_Write
+                0x00001688       0x18 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(ERROR_LED.o)
+                0x00001688                ERROR_LED_Write
  .text.Current_Sensor_I2C_ScbEnableIntr
-                0x00001668        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C.o)
+                0x000016a0        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C.o)
  .text.Current_Sensor_I2C_Init
-                0x00001674        0x8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C.o)
-                0x00001674                Current_Sensor_I2C_Init
+                0x000016ac        0x8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C.o)
+                0x000016ac                Current_Sensor_I2C_Init
  .text.Current_Sensor_I2C_Enable
-                0x0000167c       0x18 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C.o)
-                0x0000167c                Current_Sensor_I2C_Enable
+                0x000016b4       0x18 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C.o)
+                0x000016b4                Current_Sensor_I2C_Enable
  .text.Current_Sensor_I2C_Start
-                0x00001694       0x20 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C.o)
-                0x00001694                Current_Sensor_I2C_Start
+                0x000016cc       0x20 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C.o)
+                0x000016cc                Current_Sensor_I2C_Start
  .text.Current_Sensor_I2C_I2CInit
-                0x000016b4       0xb8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C.o)
-                0x000016b4                Current_Sensor_I2C_I2CInit
+                0x000016ec       0xb8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C.o)
+                0x000016ec                Current_Sensor_I2C_I2CInit
  .text.Current_Sensor_I2C_I2CFwBlockReset
-                0x0000176c       0x5c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C.o)
-                0x0000176c                Current_Sensor_I2C_I2CFwBlockReset
+                0x000017a4       0x5c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C.o)
+                0x000017a4                Current_Sensor_I2C_I2CFwBlockReset
  .text.CAN_LED_Write
-                0x000017c8       0x18 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_LED.o)
-                0x000017c8                CAN_LED_Write
+                0x00001800       0x18 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_LED.o)
+                0x00001800                CAN_LED_Write
+ .text.DRV_EN_Write
+                0x00001818       0x18 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(DRV_EN.o)
+                0x00001818                DRV_EN_Write
  .text.FAULT_Read
-                0x000017e0       0x10 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(FAULT.o)
-                0x000017e0                FAULT_Read
+                0x00001830       0x10 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(FAULT.o)
+                0x00001830                FAULT_Read
  .text.isr_Limit_1_SetVector
-                0x000017f0        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Limit_1.o)
-                0x000017f0                isr_Limit_1_SetVector
+                0x00001840        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Limit_1.o)
+                0x00001840                isr_Limit_1_SetVector
  .text.isr_Limit_1_SetPriority
-                0x000017fc       0x24 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Limit_1.o)
-                0x000017fc                isr_Limit_1_SetPriority
+                0x0000184c       0x24 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Limit_1.o)
+                0x0000184c                isr_Limit_1_SetPriority
  .text.isr_Limit_1_Enable
-                0x00001820        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Limit_1.o)
-                0x00001820                isr_Limit_1_Enable
+                0x00001870        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Limit_1.o)
+                0x00001870                isr_Limit_1_Enable
  .text.isr_Limit_1_Disable
-                0x0000182c        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Limit_1.o)
-                0x0000182c                isr_Limit_1_Disable
+                0x0000187c        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Limit_1.o)
+                0x0000187c                isr_Limit_1_Disable
  .text.isr_Limit_1_StartEx
-                0x00001838       0x1c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Limit_1.o)
-                0x00001838                isr_Limit_1_StartEx
+                0x00001888       0x1c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Limit_1.o)
+                0x00001888                isr_Limit_1_StartEx
  .text.Pin_Limit_2_Read
-                0x00001854       0x10 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_2.o)
-                0x00001854                Pin_Limit_2_Read
+                0x000018a4       0x10 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_2.o)
+                0x000018a4                Pin_Limit_2_Read
  .text.Pin_Limit_1_Read
-                0x00001864       0x10 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_1.o)
-                0x00001864                Pin_Limit_1_Read
+                0x000018b4       0x10 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_1.o)
+                0x000018b4                Pin_Limit_1_Read
  .text.Timer_Rotor_Delay_Enable
-                0x00001874       0x14 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
-                0x00001874                Timer_Rotor_Delay_Enable
+                0x000018c4       0x14 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
+                0x000018c4                Timer_Rotor_Delay_Enable
  .text.Timer_Rotor_Delay_Stop
-                0x00001888       0x10 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
-                0x00001888                Timer_Rotor_Delay_Stop
+                0x000018d8       0x10 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
+                0x000018d8                Timer_Rotor_Delay_Stop
  .text.Timer_Rotor_Delay_SetInterruptMode
-                0x00001898        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
-                0x00001898                Timer_Rotor_Delay_SetInterruptMode
+                0x000018e8        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
+                0x000018e8                Timer_Rotor_Delay_SetInterruptMode
  .text.Timer_Rotor_Delay_ReadStatusRegister
-                0x000018a4        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
-                0x000018a4                Timer_Rotor_Delay_ReadStatusRegister
+                0x000018f4        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
+                0x000018f4                Timer_Rotor_Delay_ReadStatusRegister
  .text.Timer_Rotor_Delay_WritePeriod
-                0x000018b0        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
-                0x000018b0                Timer_Rotor_Delay_WritePeriod
+                0x00001900        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
+                0x00001900                Timer_Rotor_Delay_WritePeriod
  .text.Timer_Rotor_Delay_ReadCapture
-                0x000018bc        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
-                0x000018bc                Timer_Rotor_Delay_ReadCapture
+                0x0000190c        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
+                0x0000190c                Timer_Rotor_Delay_ReadCapture
  .text.Timer_Rotor_Delay_WriteCounter
-                0x000018c8        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
-                0x000018c8                Timer_Rotor_Delay_WriteCounter
+                0x00001918        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
+                0x00001918                Timer_Rotor_Delay_WriteCounter
  .text.Timer_Rotor_Delay_ClearFIFO
-                0x000018d4       0x14 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
-                0x000018d4                Timer_Rotor_Delay_ClearFIFO
+                0x00001924       0x14 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
+                0x00001924                Timer_Rotor_Delay_ClearFIFO
  .text.Timer_Rotor_Delay_Init
-                0x000018e8       0x38 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
-                0x000018e8                Timer_Rotor_Delay_Init
+                0x00001938       0x38 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
+                0x00001938                Timer_Rotor_Delay_Init
  .text.Timer_Rotor_Delay_Start
-                0x00001920       0x20 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
-                0x00001920                Timer_Rotor_Delay_Start
+                0x00001970       0x20 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
+                0x00001970                Timer_Rotor_Delay_Start
  .text.isr_Hall_SetVector
-                0x00001940        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Hall.o)
-                0x00001940                isr_Hall_SetVector
+                0x00001990        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Hall.o)
+                0x00001990                isr_Hall_SetVector
  .text.isr_Hall_SetPriority
-                0x0000194c       0x20 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Hall.o)
-                0x0000194c                isr_Hall_SetPriority
+                0x0000199c       0x20 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Hall.o)
+                0x0000199c                isr_Hall_SetPriority
  .text.isr_Hall_Enable
-                0x0000196c        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Hall.o)
-                0x0000196c                isr_Hall_Enable
+                0x000019bc        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Hall.o)
+                0x000019bc                isr_Hall_Enable
  .text.isr_Hall_Disable
-                0x00001978        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Hall.o)
-                0x00001978                isr_Hall_Disable
+                0x000019c8        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Hall.o)
+                0x000019c8                isr_Hall_Disable
  .text.isr_Hall_StartEx
-                0x00001984       0x1c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Hall.o)
-                0x00001984                isr_Hall_StartEx
+                0x000019d4       0x1c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Hall.o)
+                0x000019d4                isr_Hall_StartEx
  .text.Address_Register_Read
-                0x000019a0        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Address_Register.o)
-                0x000019a0                Address_Register_Read
+                0x000019f0        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Address_Register.o)
+                0x000019f0                Address_Register_Read
  .text.Limit_Register_Read
-                0x000019ac        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Limit_Register.o)
-                0x000019ac                Limit_Register_Read
+                0x000019fc        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Limit_Register.o)
+                0x000019fc                Limit_Register_Read
  .text.Limit_Register_InterruptEnable
-                0x000019b8       0x1c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Limit_Register.o)
-                0x000019b8                Limit_Register_InterruptEnable
+                0x00001a08       0x1c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Limit_Register.o)
+                0x00001a08                Limit_Register_InterruptEnable
  .text.Timer_Period_Reset_Enable
-                0x000019d4       0x14 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Period_Reset.o)
-                0x000019d4                Timer_Period_Reset_Enable
- .text.Timer_Period_Reset_SetInterruptMode
-                0x000019e8        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Period_Reset.o)
-                0x000019e8                Timer_Period_Reset_SetInterruptMode
- .text.Timer_Period_Reset_ReadStatusRegister
-                0x000019f4        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Period_Reset.o)
-                0x000019f4                Timer_Period_Reset_ReadStatusRegister
- .text.Timer_Period_Reset_WritePeriod
-                0x00001a00        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Period_Reset.o)
-                0x00001a00                Timer_Period_Reset_WritePeriod
- .text.Timer_Period_Reset_ReadCapture
-                0x00001a0c        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Period_Reset.o)
-                0x00001a0c                Timer_Period_Reset_ReadCapture
- .text.Timer_Period_Reset_WriteCounter
-                0x00001a18        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Period_Reset.o)
-                0x00001a18                Timer_Period_Reset_WriteCounter
- .text.Timer_Period_Reset_ClearFIFO
                 0x00001a24       0x14 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Period_Reset.o)
-                0x00001a24                Timer_Period_Reset_ClearFIFO
+                0x00001a24                Timer_Period_Reset_Enable
+ .text.Timer_Period_Reset_SetInterruptMode
+                0x00001a38        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Period_Reset.o)
+                0x00001a38                Timer_Period_Reset_SetInterruptMode
+ .text.Timer_Period_Reset_ReadStatusRegister
+                0x00001a44        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Period_Reset.o)
+                0x00001a44                Timer_Period_Reset_ReadStatusRegister
+ .text.Timer_Period_Reset_WritePeriod
+                0x00001a50        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Period_Reset.o)
+                0x00001a50                Timer_Period_Reset_WritePeriod
+ .text.Timer_Period_Reset_ReadCapture
+                0x00001a5c        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Period_Reset.o)
+                0x00001a5c                Timer_Period_Reset_ReadCapture
+ .text.Timer_Period_Reset_WriteCounter
+                0x00001a68        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Period_Reset.o)
+                0x00001a68                Timer_Period_Reset_WriteCounter
+ .text.Timer_Period_Reset_ClearFIFO
+                0x00001a74       0x14 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Period_Reset.o)
+                0x00001a74                Timer_Period_Reset_ClearFIFO
  .text.Timer_Period_Reset_Init
-                0x00001a38       0x34 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Period_Reset.o)
-                0x00001a38                Timer_Period_Reset_Init
+                0x00001a88       0x34 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Period_Reset.o)
+                0x00001a88                Timer_Period_Reset_Init
  .text.Timer_Period_Reset_Start
-                0x00001a6c       0x20 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Period_Reset.o)
-                0x00001a6c                Timer_Period_Reset_Start
+                0x00001abc       0x20 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Period_Reset.o)
+                0x00001abc                Timer_Period_Reset_Start
  .text.isr_Period_Reset_SetVector
-                0x00001a8c        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Period_Reset.o)
-                0x00001a8c                isr_Period_Reset_SetVector
+                0x00001adc        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Period_Reset.o)
+                0x00001adc                isr_Period_Reset_SetVector
  .text.isr_Period_Reset_SetPriority
-                0x00001a98       0x24 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Period_Reset.o)
-                0x00001a98                isr_Period_Reset_SetPriority
+                0x00001ae8       0x24 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Period_Reset.o)
+                0x00001ae8                isr_Period_Reset_SetPriority
  .text.isr_Period_Reset_Enable
-                0x00001abc        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Period_Reset.o)
-                0x00001abc                isr_Period_Reset_Enable
+                0x00001b0c        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Period_Reset.o)
+                0x00001b0c                isr_Period_Reset_Enable
  .text.isr_Period_Reset_Disable
-                0x00001ac8        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Period_Reset.o)
-                0x00001ac8                isr_Period_Reset_Disable
+                0x00001b18        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Period_Reset.o)
+                0x00001b18                isr_Period_Reset_Disable
  .text.isr_Period_Reset_StartEx
-                0x00001ad4       0x1c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Period_Reset.o)
-                0x00001ad4                isr_Period_Reset_StartEx
+                0x00001b24       0x1c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Period_Reset.o)
+                0x00001b24                isr_Period_Reset_StartEx
  .text.TMC6100_ScbModePostEnable
-                0x00001af0        0x8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100.o)
+                0x00001b40        0x8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100.o)
  .text.TMC6100_Init
-                0x00001af8        0x8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100.o)
-                0x00001af8                TMC6100_Init
+                0x00001b48        0x8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100.o)
+                0x00001b48                TMC6100_Init
  .text.TMC6100_Enable
-                0x00001b00       0x18 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100.o)
-                0x00001b00                TMC6100_Enable
+                0x00001b50       0x18 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100.o)
+                0x00001b50                TMC6100_Enable
  .text.TMC6100_Start
-                0x00001b18       0x20 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100.o)
-                0x00001b18                TMC6100_Start
+                0x00001b68       0x20 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100.o)
+                0x00001b68                TMC6100_Start
  .text.TMC6100_SpiUartReadRxData
-                0x00001b38        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI_UART.o)
-                0x00001b38                TMC6100_SpiUartReadRxData
+                0x00001b88        0xc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI_UART.o)
+                0x00001b88                TMC6100_SpiUartReadRxData
  .text.TMC6100_SpiUartWriteTxData
-                0x00001b44       0x1c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI_UART.o)
-                0x00001b44                TMC6100_SpiUartWriteTxData
+                0x00001b94       0x1c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI_UART.o)
+                0x00001b94                TMC6100_SpiUartWriteTxData
  .text.TMC6100_SpiUartPutArray
-                0x00001b60       0x18 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI_UART.o)
-                0x00001b60                TMC6100_SpiUartPutArray
- .text.TMC6100_SpiInit
-                0x00001b78       0x80 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI.o)
-                0x00001b78                TMC6100_SpiInit
+                0x00001bb0       0x18 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI_UART.o)
+                0x00001bb0                TMC6100_SpiUartPutArray
  .text.TMC6100_SpiPostEnable
-                0x00001bf8       0x14 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI.o)
-                0x00001bf8                TMC6100_SpiPostEnable
- *fill*         0x00001c0c        0x4 
- .text          0x00001c10       0x20 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyBootAsmGnu.o)
-                0x00001c10                CyDelayCycles
-                0x00001c22                CyEnterCriticalSection
-                0x00001c2a                CyExitCriticalSection
+                0x00001bc8       0x2c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI.o)
+                0x00001bc8                TMC6100_SpiPostEnable
+ .text.TMC6100_SpiSetActiveSlaveSelect
+                0x00001bf4       0x20 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI.o)
+                0x00001bf4                TMC6100_SpiSetActiveSlaveSelect
+ .text.TMC6100_SpiInit
+                0x00001c14       0x8c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI.o)
+                0x00001c14                TMC6100_SpiInit
+ .text.TMC6100_SpiSetSlaveSelectPolarity
+                0x00001ca0       0x28 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI.o)
+                0x00001ca0                TMC6100_SpiSetSlaveSelectPolarity
+ .text          0x00001cc8       0x20 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyBootAsmGnu.o)
+                0x00001cc8                CyDelayCycles
+                0x00001cda                CyEnterCriticalSection
+                0x00001ce2                CyExitCriticalSection
  .text.CySysFlashSetWaitCycles
-                0x00001c30       0x54 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyFlash.o)
-                0x00001c30                CySysFlashSetWaitCycles
+                0x00001ce8       0x54 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyFlash.o)
+                0x00001ce8                CySysFlashSetWaitCycles
  .text.UART_SpiUartWriteTxData
-                0x00001c84       0x1c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_SPI_UART.o)
-                0x00001c84                UART_SpiUartWriteTxData
+                0x00001d3c       0x1c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_SPI_UART.o)
+                0x00001d3c                UART_SpiUartWriteTxData
  .text.Current_Sensor_I2C_I2C_ISR
-                0x00001ca0      0x340 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_INT.o)
-                0x00001ca0                Current_Sensor_I2C_I2C_ISR
- .text          0x00001fe0       0x30 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_fixunssfsi.o)
-                0x00001fe0                __fixunssfsi
-                0x00001fe0                __aeabi_f2uiz
- .text          0x00002010      0x234 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(divsf3.o)
-                0x00002010                __aeabi_fdiv
- .text          0x00002244      0x30c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(subsf3.o)
-                0x00002244                __aeabi_fsub
- .text          0x00002550       0x44 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(fixsfsi.o)
-                0x00002550                __aeabi_f2iz
- .text          0x00002594       0x90 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatsisf.o)
-                0x00002594                __aeabi_i2f
- .text          0x00002624       0x74 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_arm_cmpsf2.o)
-                0x00002624                __aeabi_cfrcmple
-                0x0000262c                __aeabi_cfcmpeq
-                0x0000262c                __aeabi_cfcmple
-                0x0000263c                __aeabi_fcmpeq
-                0x00002648                __aeabi_fcmplt
-                0x0000265c                __aeabi_fcmple
-                0x00002670                __aeabi_fcmpgt
-                0x00002684                __aeabi_fcmpge
- .text          0x00002698       0x3c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_clzsi2.o)
-                0x00002698                __clzsi2
- .text          0x000026d4       0x50 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(eqsf2.o)
-                0x000026d4                __eqsf2
-                0x000026d4                __nesf2
- .text          0x00002724       0x88 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(gesf2.o)
-                0x00002724                __gesf2
-                0x00002724                __gtsf2
- .text          0x000027ac       0x88 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(lesf2.o)
-                0x000027ac                __ltsf2
-                0x000027ac                __lesf2
- .text.__errno  0x00002834        0xc c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
-                0x00002834                __errno
+                0x00001d58      0x340 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_INT.o)
+                0x00001d58                Current_Sensor_I2C_I2C_ISR
+ .text          0x00002098      0x114 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_udivsi3.o)
+                0x00002098                __aeabi_uidiv
+                0x00002098                __udivsi3
+                0x000021a4                __aeabi_uidivmod
+ .text          0x000021ac        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_dvmd_tls.o)
+                0x000021ac                __aeabi_idiv0
+                0x000021ac                __aeabi_ldiv0
+ .text          0x000021b0       0x30 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_fixunssfsi.o)
+                0x000021b0                __fixunssfsi
+                0x000021b0                __aeabi_f2uiz
+ .text          0x000021e0      0x234 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(divsf3.o)
+                0x000021e0                __aeabi_fdiv
+ .text          0x00002414      0x30c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(subsf3.o)
+                0x00002414                __aeabi_fsub
+ .text          0x00002720       0x44 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(fixsfsi.o)
+                0x00002720                __aeabi_f2iz
+ .text          0x00002764       0x90 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatsisf.o)
+                0x00002764                __aeabi_i2f
+ .text          0x000027f4       0x74 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_arm_cmpsf2.o)
+                0x000027f4                __aeabi_cfrcmple
+                0x000027fc                __aeabi_cfcmpeq
+                0x000027fc                __aeabi_cfcmple
+                0x0000280c                __aeabi_fcmpeq
+                0x00002818                __aeabi_fcmplt
+                0x0000282c                __aeabi_fcmple
+                0x00002840                __aeabi_fcmpgt
+                0x00002854                __aeabi_fcmpge
+ .text          0x00002868       0x3c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_clzsi2.o)
+                0x00002868                __clzsi2
+ .text          0x000028a4       0x50 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(eqsf2.o)
+                0x000028a4                __eqsf2
+                0x000028a4                __nesf2
+ .text          0x000028f4       0x88 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(gesf2.o)
+                0x000028f4                __gesf2
+                0x000028f4                __gtsf2
+ .text          0x0000297c       0x88 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(lesf2.o)
+                0x0000297c                __ltsf2
+                0x0000297c                __lesf2
+ .text.__errno  0x00002a04        0xc c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
+                0x00002a04                __errno
  .text.__libc_init_array
-                0x00002840       0x4c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
-                0x00002840                __libc_init_array
- .text.memset   0x0000288c       0x10 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
-                0x0000288c                memset
+                0x00002a10       0x4c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
+                0x00002a10                __libc_init_array
+ .text.__itoa   0x00002a5c       0x2e c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-itoa.o)
+                0x00002a5c                __itoa
+ .text.itoa     0x00002a8a        0x8 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-itoa.o)
+                0x00002a8a                itoa
+ .text.memcpy   0x00002a92       0x12 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memcpy-stub.o)
+                0x00002a92                memcpy
+ .text.memset   0x00002aa4       0x10 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
+                0x00002aa4                memset
+ .text.__utoa   0x00002ab4       0x74 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-utoa.o)
+                0x00002ab4                __utoa
  *(.plt)
  *(.gnu.warning)
  *(.glue_7t)
- .glue_7t       0x0000289c        0x0 linker stubs
+ .glue_7t       0x00002b28        0x0 linker stubs
  *(.glue_7)
- .glue_7        0x0000289c        0x0 linker stubs
+ .glue_7        0x00002b28        0x0 linker stubs
  *(.vfp11_veneer)
- .vfp11_veneer  0x0000289c        0x0 linker stubs
+ .vfp11_veneer  0x00002b28        0x0 linker stubs
  *(.bootloader)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
  *(.gcc_except_table)
 
-.v4_bx          0x0000289c        0x0
- .v4_bx         0x0000289c        0x0 linker stubs
+.v4_bx          0x00002b28        0x0
+ .v4_bx         0x00002b28        0x0 linker stubs
 
-.iplt           0x0000289c        0x0
- .iplt          0x0000289c        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
+.iplt           0x00002b28        0x0
+ .iplt          0x00002b28        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
 
 .eh_frame_hdr
  *(.eh_frame_hdr)
 
-.eh_frame       0x0000289c        0x4
+.eh_frame       0x00002b28        0x4
  *(.eh_frame)
- .eh_frame      0x0000289c        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
- .eh_frame      0x0000289c        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtend.o
+ .eh_frame      0x00002b28        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
+ .eh_frame      0x00002b28        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtend.o
                 [!provide]                PROVIDE (__exidx_start, .)
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x000028a0                __exidx_end = .
+                0x00002b2c                __exidx_end = .
 
-.rodata         0x000028a0      0x4b0
+.rodata         0x00002b2c      0x4d4
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  .rodata.str1.4
-                0x000028a0       0x54 .\CortexM0\ARM_GCC_541\Debug\main.o
+                0x00002b2c       0x54 .\CortexM0\ARM_GCC_541\Debug\main.o
                                  0x52 (size before relaxing)
- .rodata        0x000028f4      0x210 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
- .rodata        0x00002b04       0x2e .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
-                0x00002b04                cyImoFreqMhz2Reg
- *fill*         0x00002b32        0x2 
- .rodata        0x00002b34      0x160 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
- .rodata        0x00002c94       0x80 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(divsf3.o)
+ .rodata        0x00002b80      0x210 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .rodata        0x00002d90       0x2e .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
+                0x00002d90                cyImoFreqMhz2Reg
+ *fill*         0x00002dbe        0x2 
+ .rodata        0x00002dc0      0x160 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
+ .rodata        0x00002f20       0x80 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(divsf3.o)
  .rodata.str1.1
-                0x00002d14        0x2 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
-                0x00002d18                . = ALIGN (0x4)
- *fill*         0x00002d16        0x2 
+                0x00002fa0        0x2 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
+ .rodata.str1.1
+                0x00002fa2       0x25 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-utoa.o)
+                0x00002fc8                . = ALIGN (0x4)
+ *fill*         0x00002fc7        0x1 
  *(.init)
- .init          0x00002d18        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crti.o
-                0x00002d18                _init
- .init          0x00002d1c        0x8 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtn.o
-                0x00002d24                . = ALIGN (0x4)
-                0x00002d24                __preinit_array_start = .
+ .init          0x00002fc8        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crti.o
+                0x00002fc8                _init
+ .init          0x00002fcc        0x8 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtn.o
+                0x00002fd4                . = ALIGN (0x4)
+                0x00002fd4                __preinit_array_start = .
  *(.preinit_array)
-                0x00002d24                __preinit_array_end = .
-                0x00002d24                . = ALIGN (0x4)
-                0x00002d24                __init_array_start = .
+                0x00002fd4                __preinit_array_end = .
+                0x00002fd4                . = ALIGN (0x4)
+                0x00002fd4                __init_array_start = .
  *(SORT(.init_array.*))
  *(.init_array)
- .init_array    0x00002d24        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
- .init_array    0x00002d28        0x4 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
-                0x00002d2c                __init_array_end = .
-                0x00002d2c                . = ALIGN (0x4)
+ .init_array    0x00002fd4        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
+ .init_array    0x00002fd8        0x4 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+                0x00002fdc                __init_array_end = .
+                0x00002fdc                . = ALIGN (0x4)
  *(.fini)
- .fini          0x00002d2c        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crti.o
-                0x00002d2c                _fini
- .fini          0x00002d30        0x8 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtn.o
-                0x00002d38                . = ALIGN (0x4)
-                0x00002d38                __fini_array_start = .
+ .fini          0x00002fdc        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crti.o
+                0x00002fdc                _fini
+ .fini          0x00002fe0        0x8 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtn.o
+                0x00002fe8                . = ALIGN (0x4)
+                0x00002fe8                __fini_array_start = .
  *(.fini_array)
- .fini_array    0x00002d38        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
+ .fini_array    0x00002fe8        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
  *(SORT(.fini_array.*))
-                0x00002d3c                __fini_array_end = .
-                0x00002d3c                . = ALIGN (0x4)
+                0x00002fec                __fini_array_end = .
+                0x00002fec                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *crtend.o(.ctors)
-                0x00002d3c                . = ALIGN (0x4)
+                0x00002fec                . = ALIGN (0x4)
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *crtend.o(.dtors)
-                0x00002d3c                . = ALIGN (0x4)
-                0x00002d3c                __cy_regions = .
-                0x00002d3c        0x4 LONG 0x2d50 __cy_region_init_ram
-                0x00002d40        0x4 LONG 0x200000c0 __cy_region_start_data
-                0x00002d44        0x4 LONG 0x90 __cy_region_init_size_ram
-                0x00002d48        0x4 LONG 0x238 __cy_region_zero_size_ram
-                0x00002d4c                __cy_regions_end = .
-                0x00002d50                . = ALIGN (0x8)
- *fill*         0x00002d4c        0x4 
-                0x00002d50                _etext = .
+                0x00002fec                . = ALIGN (0x4)
+                0x00002fec                __cy_regions = .
+                0x00002fec        0x4 LONG 0x3000 __cy_region_init_ram
+                0x00002ff0        0x4 LONG 0x200000c0 __cy_region_start_data
+                0x00002ff4        0x4 LONG 0x90 __cy_region_init_size_ram
+                0x00002ff8        0x4 LONG 0x238 __cy_region_zero_size_ram
+                0x00002ffc                __cy_regions_end = .
+                0x00003000                . = ALIGN (0x8)
+ *fill*         0x00002ffc        0x4 
+                0x00003000                _etext = .
 
 .cy_checksum_exclude
-                0x00002d50        0x0
+                0x00003000        0x0
  *(.cy_checksum_exclude)
 
 .ramvectors     0x20000000       0xc0
@@ -1925,7 +2005,7 @@ END GROUP
 .noinit
  *(.noinit)
 
-.data           0x200000c0       0x90 load address 0x00002d50
+.data           0x200000c0       0x90 load address 0x00003000
                 0x200000c0                __cy_region_start_data = .
  *(.jcr)
  .jcr           0x200000c0        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
@@ -1956,10 +2036,10 @@ END GROUP
  *(.ram)
                 0x20000150                _edata = .
 
-.igot.plt       0x20000150        0x0 load address 0x00002de0
+.igot.plt       0x20000150        0x0 load address 0x00003090
  .igot.plt      0x20000150        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
 
-.bss            0x20000150      0x238 load address 0x00002de0
+.bss            0x20000150      0x238 load address 0x00003090
                 0x20000150                PROVIDE (__bss_start__, .)
  *(.shbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
@@ -2049,11 +2129,11 @@ END GROUP
                 0x20000388                __end = .
                 0x20000388                PROVIDE (end, .)
                 0x20000388                PROVIDE (__bss_end__, .)
-                0x00002d50                __cy_region_init_ram = LOADADDR (.data)
+                0x00003000                __cy_region_init_ram = LOADADDR (.data)
                 0x00000090                __cy_region_init_size_ram = (_edata - ADDR (.data))
                 0x00000238                __cy_region_zero_size_ram = (_end - _edata)
 
-.heap           0x20000388       0x80 load address 0x00002de0
+.heap           0x20000388       0x80 load address 0x00003090
                 0x20000388                . = _end
                 0x20000408                . = (. + 0x80)
  *fill*         0x20000388       0x80 
@@ -2093,8 +2173,8 @@ END GROUP
                 0x90600000        0x1 .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
                 0x90600000                cy_meta_chipprotect
 
-.rel.dyn        0x00002de0        0x0 load address 0x90600004
- .rel.iplt      0x00002de0        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
+.rel.dyn        0x00003090        0x0 load address 0x90600004
+ .rel.iplt      0x00003090        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
 
 .stab
  *(.stab)
@@ -2114,7 +2194,7 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000     0x1660
+.debug_aranges  0x00000000     0x1740
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x50 .\CortexM0\ARM_GCC_541\Debug\main.o
@@ -2187,209 +2267,224 @@ END GROUP
  .debug_aranges
                 0x00001050       0x48 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_LED.o)
  .debug_aranges
-                0x00001098       0x48 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(FAULT.o)
+                0x00001098       0x48 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(DRV_EN.o)
  .debug_aranges
-                0x000010e0       0x80 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Limit_1.o)
+                0x000010e0       0x48 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(FAULT.o)
  .debug_aranges
-                0x00001160       0x48 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_2.o)
+                0x00001128       0x80 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Limit_1.o)
  .debug_aranges
-                0x000011a8       0x48 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_1.o)
+                0x000011a8       0x48 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_2.o)
  .debug_aranges
-                0x000011f0       0x90 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
+                0x000011f0       0x48 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_1.o)
  .debug_aranges
-                0x00001280       0x80 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Hall.o)
+                0x00001238       0x90 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
  .debug_aranges
-                0x00001300       0x40 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Address_Register.o)
+                0x000012c8       0x80 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Hall.o)
  .debug_aranges
-                0x00001340       0x40 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Limit_Register.o)
+                0x00001348       0x40 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Address_Register.o)
  .debug_aranges
-                0x00001380       0x90 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Period_Reset.o)
+                0x00001388       0x40 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Limit_Register.o)
  .debug_aranges
-                0x00001410       0x80 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Period_Reset.o)
+                0x000013c8       0x90 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Period_Reset.o)
  .debug_aranges
-                0x00001490       0x58 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100.o)
+                0x00001458       0x80 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Period_Reset.o)
  .debug_aranges
-                0x000014e8       0x60 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI_UART.o)
+                0x000014d8       0x58 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100.o)
  .debug_aranges
-                0x00001548       0x38 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI.o)
+                0x00001530       0x60 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI_UART.o)
  .debug_aranges
-                0x00001580       0x20 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyBootAsmGnu.o)
+                0x00001590       0x40 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI.o)
  .debug_aranges
-                0x000015a0       0x40 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyFlash.o)
+                0x000015d0       0x48 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_sclk_m.o)
  .debug_aranges
-                0x000015e0       0x60 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_SPI_UART.o)
+                0x00001618       0x48 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_ss0_m.o)
  .debug_aranges
-                0x00001640       0x20 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_INT.o)
+                0x00001660       0x20 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyBootAsmGnu.o)
+ .debug_aranges
+                0x00001680       0x40 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyFlash.o)
+ .debug_aranges
+                0x000016c0       0x60 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_SPI_UART.o)
+ .debug_aranges
+                0x00001720       0x20 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_INT.o)
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0xd66c
+.debug_info     0x00000000     0xdc72
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000      0x823 .\CortexM0\ARM_GCC_541\Debug\main.o
- .debug_info    0x00000823      0x1ed .\CortexM0\ARM_GCC_541\Debug\BLDC_FSM.o
- .debug_info    0x00000a10      0xc06 .\CortexM0\ARM_GCC_541\Debug\BLDC_CAN.o
- .debug_info    0x00001616      0x454 .\CortexM0\ARM_GCC_541\Debug\BLDC_Drive.o
- .debug_info    0x00001a6a      0x545 .\CortexM0\ARM_GCC_541\Debug\BLDC_pid.o
- .debug_info    0x00001faf       0xdc .\CortexM0\ARM_GCC_541\Debug\BLDC_SPI.o
- .debug_info    0x0000208b      0xa46 .\CortexM0\ARM_GCC_541\Debug\CANCommon.o
- .debug_info    0x00002ad1      0x60d .\CortexM0\ARM_GCC_541\Debug\CANGPIO.o
- .debug_info    0x000030de       0x6b .\CortexM0\ARM_GCC_541\Debug\CANLocalization.o
- .debug_info    0x00003149     0x10ba .\CortexM0\ARM_GCC_541\Debug\CANMotorUnit.o
- .debug_info    0x00004203      0x641 .\CortexM0\ARM_GCC_541\Debug\CANPacket.o
- .debug_info    0x00004844      0x2ff .\CortexM0\ARM_GCC_541\Debug\CANPower.o
- .debug_info    0x00004b43      0x353 .\CortexM0\ARM_GCC_541\Debug\CANScience.o
- .debug_info    0x00004e96      0x639 .\CortexM0\ARM_GCC_541\Debug\PortPSOC_CY8C4248AZI_L485.o
- .debug_info    0x000054cf      0x3cd .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_info    0x0000589c       0xf8 .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
- .debug_info    0x00005994      0x3a2 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
- .debug_info    0x00005d36     0x17e4 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
- .debug_info    0x0000751a     0x1058 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLFClk.o)
- .debug_info    0x00008572      0x19d .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UH.o)
- .debug_info    0x0000870f      0x19d .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UL.o)
- .debug_info    0x000088ac      0x19d .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(VH.o)
- .debug_info    0x00008a49      0x19d .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(VL.o)
- .debug_info    0x00008be6      0x19d .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(WH.o)
- .debug_info    0x00008d83      0x19b .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(WL.o)
- .debug_info    0x00008f1e      0x9c6 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
- .debug_info    0x000098e4       0xa0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_INT.o)
- .debug_info    0x00009984      0x37e .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_TX_RX_func.o)
- .debug_info    0x00009d02      0x23a .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART.o)
- .debug_info    0x00009f3c      0x3b5 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_UART.o)
- .debug_info    0x0000a2f1      0x19d .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(ERROR_LED.o)
- .debug_info    0x0000a48e      0x298 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C.o)
- .debug_info    0x0000a726      0x195 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C.o)
- .debug_info    0x0000a8bb      0x813 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_MASTER.o)
- .debug_info    0x0000b0ce      0x19d .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_LED.o)
- .debug_info    0x0000b26b      0x19d .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(FAULT.o)
- .debug_info    0x0000b408      0x305 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Limit_1.o)
- .debug_info    0x0000b70d      0x19d .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_2.o)
- .debug_info    0x0000b8aa      0x19b .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_1.o)
- .debug_info    0x0000ba45      0x2ee .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
- .debug_info    0x0000bd33      0x305 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Hall.o)
- .debug_info    0x0000c038      0x17f .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Address_Register.o)
- .debug_info    0x0000c1b7      0x17f .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Limit_Register.o)
- .debug_info    0x0000c336      0x2cf .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Period_Reset.o)
- .debug_info    0x0000c605      0x305 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Period_Reset.o)
- .debug_info    0x0000c90a      0x23a .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100.o)
- .debug_info    0x0000cb44      0x220 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI_UART.o)
- .debug_info    0x0000cd64      0x13c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI.o)
- .debug_info    0x0000cea0       0xb2 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyBootAsmGnu.o)
- .debug_info    0x0000cf52      0x352 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyFlash.o)
- .debug_info    0x0000d2a4      0x220 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_SPI_UART.o)
- .debug_info    0x0000d4c4      0x1a8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_INT.o)
+ .debug_info    0x00000000      0x8e9 .\CortexM0\ARM_GCC_541\Debug\main.o
+ .debug_info    0x000008e9      0x1ed .\CortexM0\ARM_GCC_541\Debug\BLDC_FSM.o
+ .debug_info    0x00000ad6      0xc06 .\CortexM0\ARM_GCC_541\Debug\BLDC_CAN.o
+ .debug_info    0x000016dc      0x454 .\CortexM0\ARM_GCC_541\Debug\BLDC_Drive.o
+ .debug_info    0x00001b30      0x545 .\CortexM0\ARM_GCC_541\Debug\BLDC_pid.o
+ .debug_info    0x00002075       0xdc .\CortexM0\ARM_GCC_541\Debug\BLDC_SPI.o
+ .debug_info    0x00002151      0xa46 .\CortexM0\ARM_GCC_541\Debug\CANCommon.o
+ .debug_info    0x00002b97      0x60d .\CortexM0\ARM_GCC_541\Debug\CANGPIO.o
+ .debug_info    0x000031a4       0x6b .\CortexM0\ARM_GCC_541\Debug\CANLocalization.o
+ .debug_info    0x0000320f     0x10ba .\CortexM0\ARM_GCC_541\Debug\CANMotorUnit.o
+ .debug_info    0x000042c9      0x641 .\CortexM0\ARM_GCC_541\Debug\CANPacket.o
+ .debug_info    0x0000490a      0x2ff .\CortexM0\ARM_GCC_541\Debug\CANPower.o
+ .debug_info    0x00004c09      0x353 .\CortexM0\ARM_GCC_541\Debug\CANScience.o
+ .debug_info    0x00004f5c      0x639 .\CortexM0\ARM_GCC_541\Debug\PortPSOC_CY8C4248AZI_L485.o
+ .debug_info    0x00005595      0x3cd .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_info    0x00005962       0xf8 .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
+ .debug_info    0x00005a5a      0x3a2 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+ .debug_info    0x00005dfc     0x17e4 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
+ .debug_info    0x000075e0     0x1058 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLFClk.o)
+ .debug_info    0x00008638      0x19d .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UH.o)
+ .debug_info    0x000087d5      0x19d .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UL.o)
+ .debug_info    0x00008972      0x19d .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(VH.o)
+ .debug_info    0x00008b0f      0x19d .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(VL.o)
+ .debug_info    0x00008cac      0x19d .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(WH.o)
+ .debug_info    0x00008e49      0x19b .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(WL.o)
+ .debug_info    0x00008fe4      0x9c6 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
+ .debug_info    0x000099aa       0xa0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_INT.o)
+ .debug_info    0x00009a4a      0x37e .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_TX_RX_func.o)
+ .debug_info    0x00009dc8      0x23a .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART.o)
+ .debug_info    0x0000a002      0x3b5 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_UART.o)
+ .debug_info    0x0000a3b7      0x19d .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(ERROR_LED.o)
+ .debug_info    0x0000a554      0x298 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C.o)
+ .debug_info    0x0000a7ec      0x195 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C.o)
+ .debug_info    0x0000a981      0x813 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_MASTER.o)
+ .debug_info    0x0000b194      0x19d .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_LED.o)
+ .debug_info    0x0000b331      0x19d .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(DRV_EN.o)
+ .debug_info    0x0000b4ce      0x19d .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(FAULT.o)
+ .debug_info    0x0000b66b      0x305 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Limit_1.o)
+ .debug_info    0x0000b970      0x19d .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_2.o)
+ .debug_info    0x0000bb0d      0x19b .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_1.o)
+ .debug_info    0x0000bca8      0x2ee .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
+ .debug_info    0x0000bf96      0x305 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Hall.o)
+ .debug_info    0x0000c29b      0x17f .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Address_Register.o)
+ .debug_info    0x0000c41a      0x17f .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Limit_Register.o)
+ .debug_info    0x0000c599      0x2cf .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Period_Reset.o)
+ .debug_info    0x0000c868      0x305 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Period_Reset.o)
+ .debug_info    0x0000cb6d      0x23a .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100.o)
+ .debug_info    0x0000cda7      0x220 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI_UART.o)
+ .debug_info    0x0000cfc7      0x1b4 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI.o)
+ .debug_info    0x0000d17b      0x19d .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_sclk_m.o)
+ .debug_info    0x0000d318      0x19d .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_ss0_m.o)
+ .debug_info    0x0000d4b5       0xa3 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyBootAsmGnu.o)
+ .debug_info    0x0000d558      0x352 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyFlash.o)
+ .debug_info    0x0000d8aa      0x220 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_SPI_UART.o)
+ .debug_info    0x0000daca      0x1a8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_INT.o)
 
-.debug_abbrev   0x00000000     0x39c6
+.debug_abbrev   0x00000000     0x3c62
  *(.debug_abbrev)
- .debug_abbrev  0x00000000      0x1d6 .\CortexM0\ARM_GCC_541\Debug\main.o
- .debug_abbrev  0x000001d6       0xd3 .\CortexM0\ARM_GCC_541\Debug\BLDC_FSM.o
- .debug_abbrev  0x000002a9      0x170 .\CortexM0\ARM_GCC_541\Debug\BLDC_CAN.o
- .debug_abbrev  0x00000419      0x15c .\CortexM0\ARM_GCC_541\Debug\BLDC_Drive.o
- .debug_abbrev  0x00000575      0x16b .\CortexM0\ARM_GCC_541\Debug\BLDC_pid.o
- .debug_abbrev  0x000006e0       0x88 .\CortexM0\ARM_GCC_541\Debug\BLDC_SPI.o
- .debug_abbrev  0x00000768      0x149 .\CortexM0\ARM_GCC_541\Debug\CANCommon.o
- .debug_abbrev  0x000008b1      0x106 .\CortexM0\ARM_GCC_541\Debug\CANGPIO.o
- .debug_abbrev  0x000009b7       0x26 .\CortexM0\ARM_GCC_541\Debug\CANLocalization.o
- .debug_abbrev  0x000009dd      0x19d .\CortexM0\ARM_GCC_541\Debug\CANMotorUnit.o
- .debug_abbrev  0x00000b7a      0x16f .\CortexM0\ARM_GCC_541\Debug\CANPacket.o
- .debug_abbrev  0x00000ce9      0x124 .\CortexM0\ARM_GCC_541\Debug\CANPower.o
- .debug_abbrev  0x00000e0d       0xfe .\CortexM0\ARM_GCC_541\Debug\CANScience.o
- .debug_abbrev  0x00000f0b      0x1ad .\CortexM0\ARM_GCC_541\Debug\PortPSOC_CY8C4248AZI_L485.o
- .debug_abbrev  0x000010b8      0x1af .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_abbrev  0x00001267       0x5d .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
- .debug_abbrev  0x000012c4      0x1d7 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
- .debug_abbrev  0x0000149b      0x293 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
- .debug_abbrev  0x0000172e      0x248 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLFClk.o)
- .debug_abbrev  0x00001976       0xc8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UH.o)
- .debug_abbrev  0x00001a3e       0xc8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UL.o)
- .debug_abbrev  0x00001b06       0xc8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(VH.o)
- .debug_abbrev  0x00001bce       0xc8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(VL.o)
- .debug_abbrev  0x00001c96       0xc8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(WH.o)
- .debug_abbrev  0x00001d5e       0xc8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(WL.o)
- .debug_abbrev  0x00001e26      0x186 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
- .debug_abbrev  0x00001fac       0x42 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_INT.o)
- .debug_abbrev  0x00001fee      0x159 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_TX_RX_func.o)
- .debug_abbrev  0x00002147       0xd5 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART.o)
- .debug_abbrev  0x0000221c      0x132 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_UART.o)
- .debug_abbrev  0x0000234e       0xc8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(ERROR_LED.o)
- .debug_abbrev  0x00002416      0x118 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C.o)
- .debug_abbrev  0x0000252e       0xc7 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C.o)
- .debug_abbrev  0x000025f5      0x1c2 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_MASTER.o)
- .debug_abbrev  0x000027b7       0xc8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_LED.o)
- .debug_abbrev  0x0000287f       0xc8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(FAULT.o)
- .debug_abbrev  0x00002947      0x19a .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Limit_1.o)
- .debug_abbrev  0x00002ae1       0xc8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_2.o)
- .debug_abbrev  0x00002ba9       0xc8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_1.o)
- .debug_abbrev  0x00002c71      0x12b .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
- .debug_abbrev  0x00002d9c      0x19a .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Hall.o)
- .debug_abbrev  0x00002f36       0xac .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Address_Register.o)
- .debug_abbrev  0x00002fe2       0xac .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Limit_Register.o)
- .debug_abbrev  0x0000308e      0x12b .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Period_Reset.o)
- .debug_abbrev  0x000031b9      0x19a .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Period_Reset.o)
- .debug_abbrev  0x00003353       0xd5 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100.o)
- .debug_abbrev  0x00003428      0x14f .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI_UART.o)
- .debug_abbrev  0x00003577       0xc6 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI.o)
- .debug_abbrev  0x0000363d       0x14 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyBootAsmGnu.o)
- .debug_abbrev  0x00003651      0x182 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyFlash.o)
- .debug_abbrev  0x000037d3      0x14f .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_SPI_UART.o)
- .debug_abbrev  0x00003922       0xa4 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_INT.o)
+ .debug_abbrev  0x00000000      0x1e5 .\CortexM0\ARM_GCC_541\Debug\main.o
+ .debug_abbrev  0x000001e5       0xd3 .\CortexM0\ARM_GCC_541\Debug\BLDC_FSM.o
+ .debug_abbrev  0x000002b8      0x170 .\CortexM0\ARM_GCC_541\Debug\BLDC_CAN.o
+ .debug_abbrev  0x00000428      0x15c .\CortexM0\ARM_GCC_541\Debug\BLDC_Drive.o
+ .debug_abbrev  0x00000584      0x16b .\CortexM0\ARM_GCC_541\Debug\BLDC_pid.o
+ .debug_abbrev  0x000006ef       0x88 .\CortexM0\ARM_GCC_541\Debug\BLDC_SPI.o
+ .debug_abbrev  0x00000777      0x149 .\CortexM0\ARM_GCC_541\Debug\CANCommon.o
+ .debug_abbrev  0x000008c0      0x106 .\CortexM0\ARM_GCC_541\Debug\CANGPIO.o
+ .debug_abbrev  0x000009c6       0x26 .\CortexM0\ARM_GCC_541\Debug\CANLocalization.o
+ .debug_abbrev  0x000009ec      0x19d .\CortexM0\ARM_GCC_541\Debug\CANMotorUnit.o
+ .debug_abbrev  0x00000b89      0x16f .\CortexM0\ARM_GCC_541\Debug\CANPacket.o
+ .debug_abbrev  0x00000cf8      0x124 .\CortexM0\ARM_GCC_541\Debug\CANPower.o
+ .debug_abbrev  0x00000e1c       0xfe .\CortexM0\ARM_GCC_541\Debug\CANScience.o
+ .debug_abbrev  0x00000f1a      0x1ad .\CortexM0\ARM_GCC_541\Debug\PortPSOC_CY8C4248AZI_L485.o
+ .debug_abbrev  0x000010c7      0x1af .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_abbrev  0x00001276       0x5d .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
+ .debug_abbrev  0x000012d3      0x1d7 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+ .debug_abbrev  0x000014aa      0x293 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
+ .debug_abbrev  0x0000173d      0x248 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLFClk.o)
+ .debug_abbrev  0x00001985       0xc8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UH.o)
+ .debug_abbrev  0x00001a4d       0xc8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UL.o)
+ .debug_abbrev  0x00001b15       0xc8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(VH.o)
+ .debug_abbrev  0x00001bdd       0xc8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(VL.o)
+ .debug_abbrev  0x00001ca5       0xc8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(WH.o)
+ .debug_abbrev  0x00001d6d       0xc8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(WL.o)
+ .debug_abbrev  0x00001e35      0x186 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
+ .debug_abbrev  0x00001fbb       0x42 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_INT.o)
+ .debug_abbrev  0x00001ffd      0x159 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_TX_RX_func.o)
+ .debug_abbrev  0x00002156       0xd5 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART.o)
+ .debug_abbrev  0x0000222b      0x132 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_UART.o)
+ .debug_abbrev  0x0000235d       0xc8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(ERROR_LED.o)
+ .debug_abbrev  0x00002425      0x118 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C.o)
+ .debug_abbrev  0x0000253d       0xc7 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C.o)
+ .debug_abbrev  0x00002604      0x1c2 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_MASTER.o)
+ .debug_abbrev  0x000027c6       0xc8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_LED.o)
+ .debug_abbrev  0x0000288e       0xc8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(DRV_EN.o)
+ .debug_abbrev  0x00002956       0xc8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(FAULT.o)
+ .debug_abbrev  0x00002a1e      0x19a .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Limit_1.o)
+ .debug_abbrev  0x00002bb8       0xc8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_2.o)
+ .debug_abbrev  0x00002c80       0xc8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_1.o)
+ .debug_abbrev  0x00002d48      0x12b .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
+ .debug_abbrev  0x00002e73      0x19a .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Hall.o)
+ .debug_abbrev  0x0000300d       0xac .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Address_Register.o)
+ .debug_abbrev  0x000030b9       0xac .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Limit_Register.o)
+ .debug_abbrev  0x00003165      0x12b .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Period_Reset.o)
+ .debug_abbrev  0x00003290      0x19a .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Period_Reset.o)
+ .debug_abbrev  0x0000342a       0xd5 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100.o)
+ .debug_abbrev  0x000034ff      0x14f .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI_UART.o)
+ .debug_abbrev  0x0000364e       0xfb .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI.o)
+ .debug_abbrev  0x00003749       0xc8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_sclk_m.o)
+ .debug_abbrev  0x00003811       0xc8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_ss0_m.o)
+ .debug_abbrev  0x000038d9       0x14 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyBootAsmGnu.o)
+ .debug_abbrev  0x000038ed      0x182 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyFlash.o)
+ .debug_abbrev  0x00003a6f      0x14f .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_SPI_UART.o)
+ .debug_abbrev  0x00003bbe       0xa4 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_INT.o)
 
-.debug_line     0x00000000     0x5a74
+.debug_line     0x00000000     0x5cf7
  *(.debug_line)
- .debug_line    0x00000000      0x455 .\CortexM0\ARM_GCC_541\Debug\main.o
- .debug_line    0x00000455      0x205 .\CortexM0\ARM_GCC_541\Debug\BLDC_FSM.o
- .debug_line    0x0000065a      0x24f .\CortexM0\ARM_GCC_541\Debug\BLDC_CAN.o
- .debug_line    0x000008a9      0x23d .\CortexM0\ARM_GCC_541\Debug\BLDC_Drive.o
- .debug_line    0x00000ae6      0x33b .\CortexM0\ARM_GCC_541\Debug\BLDC_pid.o
- .debug_line    0x00000e21       0x69 .\CortexM0\ARM_GCC_541\Debug\BLDC_SPI.o
- .debug_line    0x00000e8a      0x2f6 .\CortexM0\ARM_GCC_541\Debug\CANCommon.o
- .debug_line    0x00001180      0x251 .\CortexM0\ARM_GCC_541\Debug\CANGPIO.o
- .debug_line    0x000013d1       0x1d .\CortexM0\ARM_GCC_541\Debug\CANLocalization.o
- .debug_line    0x000013ee      0x41a .\CortexM0\ARM_GCC_541\Debug\CANMotorUnit.o
- .debug_line    0x00001808      0x2df .\CortexM0\ARM_GCC_541\Debug\CANPacket.o
- .debug_line    0x00001ae7      0x1a0 .\CortexM0\ARM_GCC_541\Debug\CANPower.o
- .debug_line    0x00001c87      0x1c8 .\CortexM0\ARM_GCC_541\Debug\CANScience.o
- .debug_line    0x00001e4f      0x2f9 .\CortexM0\ARM_GCC_541\Debug\PortPSOC_CY8C4248AZI_L485.o
- .debug_line    0x00002148      0x196 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_line    0x000022de      0x141 .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
- .debug_line    0x0000241f      0x236 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
- .debug_line    0x00002655      0x8ef .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
- .debug_line    0x00002f44      0x5d1 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLFClk.o)
- .debug_line    0x00003515       0xba .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UH.o)
- .debug_line    0x000035cf       0xba .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UL.o)
- .debug_line    0x00003689       0xba .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(VH.o)
- .debug_line    0x00003743       0xba .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(VL.o)
- .debug_line    0x000037fd       0xba .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(WH.o)
- .debug_line    0x000038b7       0xb9 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(WL.o)
- .debug_line    0x00003970      0x3e7 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
- .debug_line    0x00003d57       0x53 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_INT.o)
- .debug_line    0x00003daa       0xfc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_TX_RX_func.o)
- .debug_line    0x00003ea6      0x108 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART.o)
- .debug_line    0x00003fae      0x1cf .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_UART.o)
- .debug_line    0x0000417d       0xc1 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(ERROR_LED.o)
- .debug_line    0x0000423e      0x142 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C.o)
- .debug_line    0x00004380       0xe0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C.o)
- .debug_line    0x00004460      0x31a .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_MASTER.o)
- .debug_line    0x0000477a       0xbf .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_LED.o)
- .debug_line    0x00004839       0xbd .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(FAULT.o)
- .debug_line    0x000048f6      0x157 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Limit_1.o)
- .debug_line    0x00004a4d       0xc3 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_2.o)
- .debug_line    0x00004b10       0xc2 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_1.o)
- .debug_line    0x00004bd2      0x185 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
- .debug_line    0x00004d57      0x150 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Hall.o)
- .debug_line    0x00004ea7       0xbf .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Address_Register.o)
- .debug_line    0x00004f66       0xbd .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Limit_Register.o)
- .debug_line    0x00005023      0x186 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Period_Reset.o)
- .debug_line    0x000051a9      0x15c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Period_Reset.o)
- .debug_line    0x00005305      0x110 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100.o)
- .debug_line    0x00005415      0x11d .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI_UART.o)
- .debug_line    0x00005532       0xc4 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI.o)
- .debug_line    0x000055f6       0x68 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyBootAsmGnu.o)
- .debug_line    0x0000565e      0x173 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyFlash.o)
- .debug_line    0x000057d1      0x11a .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_SPI_UART.o)
- .debug_line    0x000058eb      0x189 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_INT.o)
+ .debug_line    0x00000000      0x44a .\CortexM0\ARM_GCC_541\Debug\main.o
+ .debug_line    0x0000044a      0x205 .\CortexM0\ARM_GCC_541\Debug\BLDC_FSM.o
+ .debug_line    0x0000064f      0x24f .\CortexM0\ARM_GCC_541\Debug\BLDC_CAN.o
+ .debug_line    0x0000089e      0x23d .\CortexM0\ARM_GCC_541\Debug\BLDC_Drive.o
+ .debug_line    0x00000adb      0x33b .\CortexM0\ARM_GCC_541\Debug\BLDC_pid.o
+ .debug_line    0x00000e16       0x69 .\CortexM0\ARM_GCC_541\Debug\BLDC_SPI.o
+ .debug_line    0x00000e7f      0x2f6 .\CortexM0\ARM_GCC_541\Debug\CANCommon.o
+ .debug_line    0x00001175      0x251 .\CortexM0\ARM_GCC_541\Debug\CANGPIO.o
+ .debug_line    0x000013c6       0x1d .\CortexM0\ARM_GCC_541\Debug\CANLocalization.o
+ .debug_line    0x000013e3      0x41a .\CortexM0\ARM_GCC_541\Debug\CANMotorUnit.o
+ .debug_line    0x000017fd      0x2df .\CortexM0\ARM_GCC_541\Debug\CANPacket.o
+ .debug_line    0x00001adc      0x1a0 .\CortexM0\ARM_GCC_541\Debug\CANPower.o
+ .debug_line    0x00001c7c      0x1c8 .\CortexM0\ARM_GCC_541\Debug\CANScience.o
+ .debug_line    0x00001e44      0x2f9 .\CortexM0\ARM_GCC_541\Debug\PortPSOC_CY8C4248AZI_L485.o
+ .debug_line    0x0000213d      0x196 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_line    0x000022d3      0x141 .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
+ .debug_line    0x00002414      0x236 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+ .debug_line    0x0000264a      0x8ef .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
+ .debug_line    0x00002f39      0x5d1 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLFClk.o)
+ .debug_line    0x0000350a       0xba .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UH.o)
+ .debug_line    0x000035c4       0xba .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UL.o)
+ .debug_line    0x0000367e       0xba .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(VH.o)
+ .debug_line    0x00003738       0xba .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(VL.o)
+ .debug_line    0x000037f2       0xba .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(WH.o)
+ .debug_line    0x000038ac       0xb9 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(WL.o)
+ .debug_line    0x00003965      0x3e7 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
+ .debug_line    0x00003d4c       0x53 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_INT.o)
+ .debug_line    0x00003d9f       0xfc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_TX_RX_func.o)
+ .debug_line    0x00003e9b      0x108 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART.o)
+ .debug_line    0x00003fa3      0x1cf .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_UART.o)
+ .debug_line    0x00004172       0xc1 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(ERROR_LED.o)
+ .debug_line    0x00004233      0x142 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C.o)
+ .debug_line    0x00004375       0xe0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C.o)
+ .debug_line    0x00004455      0x31a .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_MASTER.o)
+ .debug_line    0x0000476f       0xbf .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_LED.o)
+ .debug_line    0x0000482e       0xbe .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(DRV_EN.o)
+ .debug_line    0x000048ec       0xbd .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(FAULT.o)
+ .debug_line    0x000049a9      0x157 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Limit_1.o)
+ .debug_line    0x00004b00       0xc3 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_2.o)
+ .debug_line    0x00004bc3       0xc2 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_1.o)
+ .debug_line    0x00004c85      0x185 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
+ .debug_line    0x00004e0a      0x150 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Hall.o)
+ .debug_line    0x00004f5a       0xbf .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Address_Register.o)
+ .debug_line    0x00005019       0xbd .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Limit_Register.o)
+ .debug_line    0x000050d6      0x186 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Period_Reset.o)
+ .debug_line    0x0000525c      0x15c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Period_Reset.o)
+ .debug_line    0x000053b8      0x110 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100.o)
+ .debug_line    0x000054c8      0x11d .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI_UART.o)
+ .debug_line    0x000055e5      0x109 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI.o)
+ .debug_line    0x000056ee       0xc6 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_sclk_m.o)
+ .debug_line    0x000057b4       0xc5 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_ss0_m.o)
+ .debug_line    0x00005879       0x68 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyBootAsmGnu.o)
+ .debug_line    0x000058e1      0x173 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyFlash.o)
+ .debug_line    0x00005a54      0x11a .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_SPI_UART.o)
+ .debug_line    0x00005b6e      0x189 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_INT.o)
 
-.debug_frame    0x00000000     0x398c
+.debug_frame    0x00000000     0x3b90
  *(.debug_frame)
  .debug_frame   0x00000000       0xdc .\CortexM0\ARM_GCC_541\Debug\main.o
  .debug_frame   0x000000dc       0xdc .\CortexM0\ARM_GCC_541\Debug\BLDC_FSM.o
@@ -2424,211 +2519,225 @@ END GROUP
  .debug_frame   0x00002648       0x58 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C.o)
  .debug_frame   0x000026a0      0x1d8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_MASTER.o)
  .debug_frame   0x00002878       0x70 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_LED.o)
- .debug_frame   0x000028e8       0x70 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(FAULT.o)
- .debug_frame   0x00002958      0x110 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Limit_1.o)
- .debug_frame   0x00002a68       0x70 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_2.o)
- .debug_frame   0x00002ad8       0x70 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_1.o)
- .debug_frame   0x00002b48      0x124 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
- .debug_frame   0x00002c6c      0x110 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Hall.o)
- .debug_frame   0x00002d7c       0x78 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Address_Register.o)
- .debug_frame   0x00002df4       0x78 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Limit_Register.o)
- .debug_frame   0x00002e6c      0x124 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Period_Reset.o)
- .debug_frame   0x00002f90      0x110 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Period_Reset.o)
- .debug_frame   0x000030a0       0xd8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100.o)
- .debug_frame   0x00003178       0xb0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI_UART.o)
- .debug_frame   0x00003228       0x50 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI.o)
- .debug_frame   0x00003278       0x90 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyFlash.o)
- .debug_frame   0x00003308       0xb0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_SPI_UART.o)
- .debug_frame   0x000033b8       0x2c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_INT.o)
- .debug_frame   0x000033e4       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_udivsi3.o)
- .debug_frame   0x00003404       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_divsi3.o)
- .debug_frame   0x00003424       0x28 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_fixunssfsi.o)
- .debug_frame   0x0000344c       0x3c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(divsf3.o)
- .debug_frame   0x00003488       0x30 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(subsf3.o)
- .debug_frame   0x000034b8       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(fixsfsi.o)
- .debug_frame   0x000034d8       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatsisf.o)
- .debug_frame   0x00003504       0x3c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(divdf3.o)
- .debug_frame   0x00003540       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatsidf.o)
- .debug_frame   0x0000356c       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatunsidf.o)
- .debug_frame   0x00003598       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(eqsf2.o)
- .debug_frame   0x000035c4       0x30 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(gesf2.o)
- .debug_frame   0x000035f4       0x30 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(lesf2.o)
- .debug_frame   0x00003624       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
- .debug_frame   0x00003644       0x28 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-exit.o)
- .debug_frame   0x0000366c       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
- .debug_frame   0x00003698       0x28 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memcpy-stub.o)
- .debug_frame   0x000036c0       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
- .debug_frame   0x000036e0       0x50 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sprintf.o)
- .debug_frame   0x00003730       0x74 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-svfprintf.o)
- .debug_frame   0x000037a4       0x54 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
- .debug_frame   0x000037f8       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memchr-stub.o)
- .debug_frame   0x00003818       0x28 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memmove.o)
- .debug_frame   0x00003840       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-freer.o)
- .debug_frame   0x0000386c       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-mallocr.o)
- .debug_frame   0x00003898       0x30 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-reallocr.o)
- .debug_frame   0x000038c8       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sbrkr.o)
- .debug_frame   0x000038f4       0x30 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mlock.o)
- .debug_frame   0x00003924       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-msizer.o)
- .debug_frame   0x00003944       0x48 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-reent.o)
+ .debug_frame   0x000028e8       0x70 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(DRV_EN.o)
+ .debug_frame   0x00002958       0x70 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(FAULT.o)
+ .debug_frame   0x000029c8      0x110 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Limit_1.o)
+ .debug_frame   0x00002ad8       0x70 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_2.o)
+ .debug_frame   0x00002b48       0x70 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_1.o)
+ .debug_frame   0x00002bb8      0x124 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
+ .debug_frame   0x00002cdc      0x110 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Hall.o)
+ .debug_frame   0x00002dec       0x78 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Address_Register.o)
+ .debug_frame   0x00002e64       0x78 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Limit_Register.o)
+ .debug_frame   0x00002edc      0x124 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Period_Reset.o)
+ .debug_frame   0x00003000      0x110 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Period_Reset.o)
+ .debug_frame   0x00003110       0xd8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100.o)
+ .debug_frame   0x000031e8       0xb0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI_UART.o)
+ .debug_frame   0x00003298       0x7c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI.o)
+ .debug_frame   0x00003314       0x70 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_sclk_m.o)
+ .debug_frame   0x00003384       0x70 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_ss0_m.o)
+ .debug_frame   0x000033f4       0x90 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyFlash.o)
+ .debug_frame   0x00003484       0xb0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_SPI_UART.o)
+ .debug_frame   0x00003534       0x2c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_INT.o)
+ .debug_frame   0x00003560       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_udivsi3.o)
+ .debug_frame   0x00003580       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_divsi3.o)
+ .debug_frame   0x000035a0       0x28 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_fixunssfsi.o)
+ .debug_frame   0x000035c8       0x3c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(divsf3.o)
+ .debug_frame   0x00003604       0x30 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(subsf3.o)
+ .debug_frame   0x00003634       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(fixsfsi.o)
+ .debug_frame   0x00003654       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatsisf.o)
+ .debug_frame   0x00003680       0x3c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(divdf3.o)
+ .debug_frame   0x000036bc       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatsidf.o)
+ .debug_frame   0x000036e8       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatunsidf.o)
+ .debug_frame   0x00003714       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(eqsf2.o)
+ .debug_frame   0x00003740       0x30 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(gesf2.o)
+ .debug_frame   0x00003770       0x30 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(lesf2.o)
+ .debug_frame   0x000037a0       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
+ .debug_frame   0x000037c0       0x28 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-exit.o)
+ .debug_frame   0x000037e8       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
+ .debug_frame   0x00003814       0x40 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-itoa.o)
+ .debug_frame   0x00003854       0x28 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x0000387c       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
+ .debug_frame   0x0000389c       0x50 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sprintf.o)
+ .debug_frame   0x000038ec       0x48 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-utoa.o)
+ .debug_frame   0x00003934       0x74 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-svfprintf.o)
+ .debug_frame   0x000039a8       0x54 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+ .debug_frame   0x000039fc       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memchr-stub.o)
+ .debug_frame   0x00003a1c       0x28 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memmove.o)
+ .debug_frame   0x00003a44       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-freer.o)
+ .debug_frame   0x00003a70       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x00003a9c       0x30 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-reallocr.o)
+ .debug_frame   0x00003acc       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sbrkr.o)
+ .debug_frame   0x00003af8       0x30 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mlock.o)
+ .debug_frame   0x00003b28       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-msizer.o)
+ .debug_frame   0x00003b48       0x48 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-reent.o)
 
-.debug_str      0x00000000     0x4b5f
+.debug_str      0x00000000     0x4d40
  *(.debug_str)
- .debug_str     0x00000000      0x4d9 .\CortexM0\ARM_GCC_541\Debug\main.o
-                                0x55d (size before relaxing)
- .debug_str     0x000004d9       0xe8 .\CortexM0\ARM_GCC_541\Debug\BLDC_FSM.o
-                                0x2ae (size before relaxing)
- .debug_str     0x000005c1      0x326 .\CortexM0\ARM_GCC_541\Debug\BLDC_CAN.o
-                                0x63a (size before relaxing)
- .debug_str     0x000008e7       0xfc .\CortexM0\ARM_GCC_541\Debug\BLDC_Drive.o
-                                0x35b (size before relaxing)
- .debug_str     0x000009e3      0x151 .\CortexM0\ARM_GCC_541\Debug\BLDC_pid.o
-                                0x439 (size before relaxing)
- .debug_str     0x00000b34       0x1f .\CortexM0\ARM_GCC_541\Debug\BLDC_SPI.o
-                                0x1cb (size before relaxing)
- .debug_str     0x00000b53      0x39f .\CortexM0\ARM_GCC_541\Debug\CANCommon.o
-                                0x5c8 (size before relaxing)
- .debug_str     0x00000ef2      0x1ff .\CortexM0\ARM_GCC_541\Debug\CANGPIO.o
-                                0x451 (size before relaxing)
- .debug_str     0x000010f1       0x1f .\CortexM0\ARM_GCC_541\Debug\CANLocalization.o
-                                0x19e (size before relaxing)
- .debug_str     0x00001110      0x32a .\CortexM0\ARM_GCC_541\Debug\CANMotorUnit.o
-                                0x6f7 (size before relaxing)
- .debug_str     0x0000143a      0x14f .\CortexM0\ARM_GCC_541\Debug\CANPacket.o
-                                0x450 (size before relaxing)
- .debug_str     0x00001589       0xbf .\CortexM0\ARM_GCC_541\Debug\CANPower.o
-                                0x336 (size before relaxing)
- .debug_str     0x00001648      0x11d .\CortexM0\ARM_GCC_541\Debug\CANScience.o
-                                0x358 (size before relaxing)
- .debug_str     0x00001765      0x21b .\CortexM0\ARM_GCC_541\Debug\PortPSOC_CY8C4248AZI_L485.o
-                                0x49a (size before relaxing)
- .debug_str     0x00001980      0x117 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
-                                0x2fe (size before relaxing)
- .debug_str     0x00001a97       0xae .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
+ .debug_str     0x00000000      0x4cd .\CortexM0\ARM_GCC_541\Debug\main.o
+                                0x551 (size before relaxing)
+ .debug_str     0x000004cd       0xe8 .\CortexM0\ARM_GCC_541\Debug\BLDC_FSM.o
+                                0x29f (size before relaxing)
+ .debug_str     0x000005b5      0x326 .\CortexM0\ARM_GCC_541\Debug\BLDC_CAN.o
+                                0x62b (size before relaxing)
+ .debug_str     0x000008db      0x132 .\CortexM0\ARM_GCC_541\Debug\BLDC_Drive.o
+                                0x34c (size before relaxing)
+ .debug_str     0x00000a0d      0x151 .\CortexM0\ARM_GCC_541\Debug\BLDC_pid.o
+                                0x42a (size before relaxing)
+ .debug_str     0x00000b5e       0x1f .\CortexM0\ARM_GCC_541\Debug\BLDC_SPI.o
+                                0x1bc (size before relaxing)
+ .debug_str     0x00000b7d      0x39f .\CortexM0\ARM_GCC_541\Debug\CANCommon.o
+                                0x5b9 (size before relaxing)
+ .debug_str     0x00000f1c      0x1ff .\CortexM0\ARM_GCC_541\Debug\CANGPIO.o
+                                0x442 (size before relaxing)
+ .debug_str     0x0000111b       0x1f .\CortexM0\ARM_GCC_541\Debug\CANLocalization.o
+                                0x18f (size before relaxing)
+ .debug_str     0x0000113a      0x32a .\CortexM0\ARM_GCC_541\Debug\CANMotorUnit.o
+                                0x6e8 (size before relaxing)
+ .debug_str     0x00001464      0x14f .\CortexM0\ARM_GCC_541\Debug\CANPacket.o
+                                0x441 (size before relaxing)
+ .debug_str     0x000015b3       0xbf .\CortexM0\ARM_GCC_541\Debug\CANPower.o
+                                0x327 (size before relaxing)
+ .debug_str     0x00001672      0x11d .\CortexM0\ARM_GCC_541\Debug\CANScience.o
+                                0x349 (size before relaxing)
+ .debug_str     0x0000178f      0x21b .\CortexM0\ARM_GCC_541\Debug\PortPSOC_CY8C4248AZI_L485.o
+                                0x48b (size before relaxing)
+ .debug_str     0x000019aa      0x117 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+                                0x2ef (size before relaxing)
+ .debug_str     0x00001ac1       0x59 .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
                                 0x1db (size before relaxing)
- .debug_str     0x00001b45      0x134 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
-                                0x323 (size before relaxing)
- .debug_str     0x00001c79      0x91b .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
-                                0xb6a (size before relaxing)
- .debug_str     0x00002594      0x6dc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLFClk.o)
-                                0x93f (size before relaxing)
- .debug_str     0x00002c70       0x84 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UH.o)
-                                0x243 (size before relaxing)
- .debug_str     0x00002cf4       0x69 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UL.o)
-                                0x243 (size before relaxing)
- .debug_str     0x00002d5d       0x69 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(VH.o)
-                                0x243 (size before relaxing)
- .debug_str     0x00002dc6       0x69 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(VL.o)
-                                0x243 (size before relaxing)
- .debug_str     0x00002e2f       0x69 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(WH.o)
-                                0x243 (size before relaxing)
- .debug_str     0x00002e98       0x69 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(WL.o)
-                                0x243 (size before relaxing)
- .debug_str     0x00002f01      0x2bb .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
-                                0x558 (size before relaxing)
- .debug_str     0x000031bc       0x29 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_INT.o)
-                                0x1c6 (size before relaxing)
- .debug_str     0x000031e5       0x63 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_TX_RX_func.o)
-                                0x2eb (size before relaxing)
- .debug_str     0x00003248       0xf7 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART.o)
-                                0x2b9 (size before relaxing)
- .debug_str     0x0000333f      0x1d8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_UART.o)
-                                0x3ea (size before relaxing)
- .debug_str     0x00003517       0x93 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(ERROR_LED.o)
-                                0x274 (size before relaxing)
- .debug_str     0x000035aa      0x1a2 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C.o)
-                                0x3b2 (size before relaxing)
- .debug_str     0x0000374c       0xce .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C.o)
-                                0x2e8 (size before relaxing)
- .debug_str     0x0000381a      0x3f0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_MASTER.o)
-                                0x67c (size before relaxing)
- .debug_str     0x00003c0a       0x87 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_LED.o)
-                                0x266 (size before relaxing)
- .debug_str     0x00003c91       0x7c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(FAULT.o)
-                                0x258 (size before relaxing)
- .debug_str     0x00003d0d      0x135 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Limit_1.o)
-                                0x360 (size before relaxing)
- .debug_str     0x00003e42       0xa0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_2.o)
-                                0x282 (size before relaxing)
- .debug_str     0x00003ee2       0xa0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_1.o)
-                                0x282 (size before relaxing)
- .debug_str     0x00003f82      0x1f7 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
-                                0x435 (size before relaxing)
- .debug_str     0x00004179       0xff .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Hall.o)
-                                0x336 (size before relaxing)
- .debug_str     0x00004278       0xa2 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Address_Register.o)
-                                0x2a1 (size before relaxing)
- .debug_str     0x0000431a       0x79 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Limit_Register.o)
-                                0x295 (size before relaxing)
- .debug_str     0x00004393      0x227 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Period_Reset.o)
-                                0x43a (size before relaxing)
- .debug_str     0x000045ba      0x167 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Period_Reset.o)
-                                0x3a6 (size before relaxing)
- .debug_str     0x00004721       0xff .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100.o)
-                                0x2e0 (size before relaxing)
- .debug_str     0x00004820      0x113 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI_UART.o)
-                                0x30e (size before relaxing)
- .debug_str     0x00004933       0x5e .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI.o)
-                                0x261 (size before relaxing)
- .debug_str     0x00004991       0xab .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyFlash.o)
-                                0x2d2 (size before relaxing)
- .debug_str     0x00004a3c       0xbe .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_SPI_UART.o)
-                                0x2f0 (size before relaxing)
- .debug_str     0x00004afa       0x65 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_INT.o)
-                                0x3b2 (size before relaxing)
+ .debug_str     0x00001b1a      0x134 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+                                0x314 (size before relaxing)
+ .debug_str     0x00001c4e      0x91b .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
+                                0xb5b (size before relaxing)
+ .debug_str     0x00002569      0x6dc .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLFClk.o)
+                                0x930 (size before relaxing)
+ .debug_str     0x00002c45       0x84 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UH.o)
+                                0x234 (size before relaxing)
+ .debug_str     0x00002cc9       0x69 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UL.o)
+                                0x234 (size before relaxing)
+ .debug_str     0x00002d32       0x69 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(VH.o)
+                                0x234 (size before relaxing)
+ .debug_str     0x00002d9b       0x69 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(VL.o)
+                                0x234 (size before relaxing)
+ .debug_str     0x00002e04       0x69 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(WH.o)
+                                0x234 (size before relaxing)
+ .debug_str     0x00002e6d       0x69 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(WL.o)
+                                0x234 (size before relaxing)
+ .debug_str     0x00002ed6      0x2bb .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
+                                0x549 (size before relaxing)
+ .debug_str     0x00003191       0x29 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_INT.o)
+                                0x1b7 (size before relaxing)
+ .debug_str     0x000031ba       0x63 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_TX_RX_func.o)
+                                0x2dc (size before relaxing)
+ .debug_str     0x0000321d       0xf7 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART.o)
+                                0x2aa (size before relaxing)
+ .debug_str     0x00003314      0x1d8 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_UART.o)
+                                0x3db (size before relaxing)
+ .debug_str     0x000034ec       0x93 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(ERROR_LED.o)
+                                0x265 (size before relaxing)
+ .debug_str     0x0000357f      0x1a2 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C.o)
+                                0x3a3 (size before relaxing)
+ .debug_str     0x00003721       0xce .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C.o)
+                                0x2d9 (size before relaxing)
+ .debug_str     0x000037ef      0x3f0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_MASTER.o)
+                                0x66d (size before relaxing)
+ .debug_str     0x00003bdf       0x87 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_LED.o)
+                                0x257 (size before relaxing)
+ .debug_str     0x00003c66       0x81 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(DRV_EN.o)
+                                0x250 (size before relaxing)
+ .debug_str     0x00003ce7       0x7c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(FAULT.o)
+                                0x249 (size before relaxing)
+ .debug_str     0x00003d63      0x135 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Limit_1.o)
+                                0x351 (size before relaxing)
+ .debug_str     0x00003e98       0xa0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_2.o)
+                                0x273 (size before relaxing)
+ .debug_str     0x00003f38       0xa0 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_1.o)
+                                0x273 (size before relaxing)
+ .debug_str     0x00003fd8      0x1f7 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
+                                0x426 (size before relaxing)
+ .debug_str     0x000041cf       0xff .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Hall.o)
+                                0x327 (size before relaxing)
+ .debug_str     0x000042ce       0xa2 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Address_Register.o)
+                                0x292 (size before relaxing)
+ .debug_str     0x00004370       0x79 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Limit_Register.o)
+                                0x286 (size before relaxing)
+ .debug_str     0x000043e9      0x227 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Period_Reset.o)
+                                0x42b (size before relaxing)
+ .debug_str     0x00004610      0x167 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Period_Reset.o)
+                                0x397 (size before relaxing)
+ .debug_str     0x00004777       0xff .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100.o)
+                                0x2d1 (size before relaxing)
+ .debug_str     0x00004876      0x113 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI_UART.o)
+                                0x2ff (size before relaxing)
+ .debug_str     0x00004989       0x8d .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI.o)
+                                0x2a3 (size before relaxing)
+ .debug_str     0x00004a16       0xb1 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_sclk_m.o)
+                                0x288 (size before relaxing)
+ .debug_str     0x00004ac7       0xab .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_ss0_m.o)
+                                0x281 (size before relaxing)
+ .debug_str     0x00004b72       0xab .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyFlash.o)
+                                0x2c3 (size before relaxing)
+ .debug_str     0x00004c1d       0xbe .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_SPI_UART.o)
+                                0x2e1 (size before relaxing)
+ .debug_str     0x00004cdb       0x65 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_INT.o)
+                                0x3a3 (size before relaxing)
 
-.debug_loc      0x00000000     0x7bda
+.debug_loc      0x00000000     0x7e1d
  *(.debug_loc)
- .debug_loc     0x00000000       0x8f .\CortexM0\ARM_GCC_541\Debug\main.o
- .debug_loc     0x0000008f       0xb5 .\CortexM0\ARM_GCC_541\Debug\BLDC_CAN.o
- .debug_loc     0x00000144       0xa5 .\CortexM0\ARM_GCC_541\Debug\BLDC_Drive.o
- .debug_loc     0x000001e9       0xd8 .\CortexM0\ARM_GCC_541\Debug\BLDC_pid.o
- .debug_loc     0x000002c1       0x21 .\CortexM0\ARM_GCC_541\Debug\BLDC_SPI.o
- .debug_loc     0x000002e2      0x926 .\CortexM0\ARM_GCC_541\Debug\CANCommon.o
- .debug_loc     0x00000c08      0x620 .\CortexM0\ARM_GCC_541\Debug\CANGPIO.o
- .debug_loc     0x00001228      0xf44 .\CortexM0\ARM_GCC_541\Debug\CANMotorUnit.o
- .debug_loc     0x0000216c      0x540 .\CortexM0\ARM_GCC_541\Debug\CANPacket.o
- .debug_loc     0x000026ac      0x1bb .\CortexM0\ARM_GCC_541\Debug\CANPower.o
- .debug_loc     0x00002867      0x289 .\CortexM0\ARM_GCC_541\Debug\CANScience.o
- .debug_loc     0x00002af0      0x112 .\CortexM0\ARM_GCC_541\Debug\PortPSOC_CY8C4248AZI_L485.o
- .debug_loc     0x00002c02      0x118 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_loc     0x00002d1a      0x14f .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
- .debug_loc     0x00002e69     0x18f5 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
- .debug_loc     0x0000475e      0xdb7 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLFClk.o)
- .debug_loc     0x00005515       0xa2 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UH.o)
- .debug_loc     0x000055b7       0xa2 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UL.o)
- .debug_loc     0x00005659       0xa2 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(VH.o)
- .debug_loc     0x000056fb       0xa2 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(VL.o)
- .debug_loc     0x0000579d       0xa2 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(WH.o)
- .debug_loc     0x0000583f       0x81 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(WL.o)
- .debug_loc     0x000058c0      0xa5e .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
- .debug_loc     0x0000631e      0x17f .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_TX_RX_func.o)
- .debug_loc     0x0000649d       0x7e .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART.o)
- .debug_loc     0x0000651b      0x223 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_UART.o)
- .debug_loc     0x0000673e       0xa2 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(ERROR_LED.o)
- .debug_loc     0x000067e0       0x7e .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C.o)
- .debug_loc     0x0000685e      0xa49 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_MASTER.o)
- .debug_loc     0x000072a7       0xa2 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_LED.o)
- .debug_loc     0x00007349       0xa2 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(FAULT.o)
- .debug_loc     0x000073eb       0x82 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Limit_1.o)
- .debug_loc     0x0000746d       0xa2 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_2.o)
- .debug_loc     0x0000750f       0x81 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_1.o)
- .debug_loc     0x00007590       0x13 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
- .debug_loc     0x000075a3       0x82 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Hall.o)
- .debug_loc     0x00007625       0x44 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Address_Register.o)
- .debug_loc     0x00007669       0x44 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Limit_Register.o)
- .debug_loc     0x000076ad       0x13 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Period_Reset.o)
- .debug_loc     0x000076c0       0x82 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Period_Reset.o)
- .debug_loc     0x00007742       0x7e .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100.o)
- .debug_loc     0x000077c0       0x96 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI_UART.o)
- .debug_loc     0x00007856       0x82 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI.o)
- .debug_loc     0x000078d8      0x160 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyFlash.o)
- .debug_loc     0x00007a38       0x96 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_SPI_UART.o)
- .debug_loc     0x00007ace      0x10c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_INT.o)
+ .debug_loc     0x00000000       0xad .\CortexM0\ARM_GCC_541\Debug\main.o
+ .debug_loc     0x000000ad       0xb5 .\CortexM0\ARM_GCC_541\Debug\BLDC_CAN.o
+ .debug_loc     0x00000162       0xa5 .\CortexM0\ARM_GCC_541\Debug\BLDC_Drive.o
+ .debug_loc     0x00000207       0xd8 .\CortexM0\ARM_GCC_541\Debug\BLDC_pid.o
+ .debug_loc     0x000002df       0x21 .\CortexM0\ARM_GCC_541\Debug\BLDC_SPI.o
+ .debug_loc     0x00000300      0x926 .\CortexM0\ARM_GCC_541\Debug\CANCommon.o
+ .debug_loc     0x00000c26      0x620 .\CortexM0\ARM_GCC_541\Debug\CANGPIO.o
+ .debug_loc     0x00001246      0xf44 .\CortexM0\ARM_GCC_541\Debug\CANMotorUnit.o
+ .debug_loc     0x0000218a      0x540 .\CortexM0\ARM_GCC_541\Debug\CANPacket.o
+ .debug_loc     0x000026ca      0x1bb .\CortexM0\ARM_GCC_541\Debug\CANPower.o
+ .debug_loc     0x00002885      0x289 .\CortexM0\ARM_GCC_541\Debug\CANScience.o
+ .debug_loc     0x00002b0e      0x112 .\CortexM0\ARM_GCC_541\Debug\PortPSOC_CY8C4248AZI_L485.o
+ .debug_loc     0x00002c20      0x118 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_loc     0x00002d38      0x14f .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+ .debug_loc     0x00002e87     0x18f5 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLib.o)
+ .debug_loc     0x0000477c      0xdb7 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyLFClk.o)
+ .debug_loc     0x00005533       0xa2 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UH.o)
+ .debug_loc     0x000055d5       0xa2 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UL.o)
+ .debug_loc     0x00005677       0xa2 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(VH.o)
+ .debug_loc     0x00005719       0xa2 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(VL.o)
+ .debug_loc     0x000057bb       0xa2 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(WH.o)
+ .debug_loc     0x0000585d       0x81 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(WL.o)
+ .debug_loc     0x000058de      0xa5e .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN.o)
+ .debug_loc     0x0000633c      0x17f .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_TX_RX_func.o)
+ .debug_loc     0x000064bb       0x7e .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART.o)
+ .debug_loc     0x00006539      0x223 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_UART.o)
+ .debug_loc     0x0000675c       0xa2 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(ERROR_LED.o)
+ .debug_loc     0x000067fe       0x7e .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C.o)
+ .debug_loc     0x0000687c      0xa49 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_MASTER.o)
+ .debug_loc     0x000072c5       0xa2 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_LED.o)
+ .debug_loc     0x00007367       0xa2 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(DRV_EN.o)
+ .debug_loc     0x00007409       0xa2 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(FAULT.o)
+ .debug_loc     0x000074ab       0x82 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Limit_1.o)
+ .debug_loc     0x0000752d       0xa2 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_2.o)
+ .debug_loc     0x000075cf       0x81 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_1.o)
+ .debug_loc     0x00007650       0x13 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
+ .debug_loc     0x00007663       0x82 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Hall.o)
+ .debug_loc     0x000076e5       0x44 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Address_Register.o)
+ .debug_loc     0x00007729       0x44 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Limit_Register.o)
+ .debug_loc     0x0000776d       0x13 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Period_Reset.o)
+ .debug_loc     0x00007780       0x82 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Period_Reset.o)
+ .debug_loc     0x00007802       0x7e .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100.o)
+ .debug_loc     0x00007880       0x96 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI_UART.o)
+ .debug_loc     0x00007916       0xc1 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI.o)
+ .debug_loc     0x000079d7       0xa2 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_sclk_m.o)
+ .debug_loc     0x00007a79       0xa2 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_ss0_m.o)
+ .debug_loc     0x00007b1b      0x160 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyFlash.o)
+ .debug_loc     0x00007c7b       0x96 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_SPI_UART.o)
+ .debug_loc     0x00007d11      0x10c .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_INT.o)
 
 .debug_macinfo
  *(.debug_macinfo)
 
-.debug_ranges   0x00000000     0x1330
+.debug_ranges   0x00000000     0x13e0
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x40 .\CortexM0\ARM_GCC_541\Debug\main.o
  .debug_ranges  0x00000040       0x68 .\CortexM0\ARM_GCC_541\Debug\BLDC_FSM.o
@@ -2663,22 +2772,25 @@ END GROUP
  .debug_ranges  0x00000da8       0x20 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C.o)
  .debug_ranges  0x00000dc8       0x88 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_MASTER.o)
  .debug_ranges  0x00000e50       0x38 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_LED.o)
- .debug_ranges  0x00000e88       0x38 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(FAULT.o)
- .debug_ranges  0x00000ec0       0x70 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Limit_1.o)
- .debug_ranges  0x00000f30       0x38 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_2.o)
- .debug_ranges  0x00000f68       0x38 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_1.o)
- .debug_ranges  0x00000fa0       0x80 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
- .debug_ranges  0x00001020       0x70 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Hall.o)
- .debug_ranges  0x00001090       0x30 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Address_Register.o)
- .debug_ranges  0x000010c0       0x30 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Limit_Register.o)
- .debug_ranges  0x000010f0       0x80 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Period_Reset.o)
- .debug_ranges  0x00001170       0x70 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Period_Reset.o)
- .debug_ranges  0x000011e0       0x48 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100.o)
- .debug_ranges  0x00001228       0x50 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI_UART.o)
- .debug_ranges  0x00001278       0x28 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI.o)
- .debug_ranges  0x000012a0       0x30 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyFlash.o)
- .debug_ranges  0x000012d0       0x50 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_SPI_UART.o)
- .debug_ranges  0x00001320       0x10 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_INT.o)
+ .debug_ranges  0x00000e88       0x38 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(DRV_EN.o)
+ .debug_ranges  0x00000ec0       0x38 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(FAULT.o)
+ .debug_ranges  0x00000ef8       0x70 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Limit_1.o)
+ .debug_ranges  0x00000f68       0x38 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_2.o)
+ .debug_ranges  0x00000fa0       0x38 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_1.o)
+ .debug_ranges  0x00000fd8       0x80 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
+ .debug_ranges  0x00001058       0x70 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Hall.o)
+ .debug_ranges  0x000010c8       0x30 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Address_Register.o)
+ .debug_ranges  0x000010f8       0x30 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Limit_Register.o)
+ .debug_ranges  0x00001128       0x80 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Period_Reset.o)
+ .debug_ranges  0x000011a8       0x70 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Period_Reset.o)
+ .debug_ranges  0x00001218       0x48 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100.o)
+ .debug_ranges  0x00001260       0x50 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI_UART.o)
+ .debug_ranges  0x000012b0       0x30 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI.o)
+ .debug_ranges  0x000012e0       0x38 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_sclk_m.o)
+ .debug_ranges  0x00001318       0x38 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_ss0_m.o)
+ .debug_ranges  0x00001350       0x30 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyFlash.o)
+ .debug_ranges  0x00001380       0x50 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_SPI_UART.o)
+ .debug_ranges  0x000013d0       0x10 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_INT.o)
 
 .comment        0x00000000       0x6e
  .comment       0x00000000       0x6e .\CortexM0\ARM_GCC_541\Debug\main.o
@@ -2717,6 +2829,7 @@ END GROUP
  .comment       0x0000006e       0x6f .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C.o)
  .comment       0x0000006e       0x6f .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_MASTER.o)
  .comment       0x0000006e       0x6f .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_LED.o)
+ .comment       0x0000006e       0x6f .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(DRV_EN.o)
  .comment       0x0000006e       0x6f .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(FAULT.o)
  .comment       0x0000006e       0x6f .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Limit_1.o)
  .comment       0x0000006e       0x6f .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_2.o)
@@ -2730,6 +2843,8 @@ END GROUP
  .comment       0x0000006e       0x6f .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100.o)
  .comment       0x0000006e       0x6f .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI_UART.o)
  .comment       0x0000006e       0x6f .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI.o)
+ .comment       0x0000006e       0x6f .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_sclk_m.o)
+ .comment       0x0000006e       0x6f .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_ss0_m.o)
  .comment       0x0000006e       0x6f .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyFlash.o)
  .comment       0x0000006e       0x6f .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_SPI_UART.o)
  .comment       0x0000006e       0x6f .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_INT.o)
@@ -2829,112 +2944,122 @@ END GROUP
  .ARM.attributes
                 0x000006e7       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CAN_LED.o)
  .ARM.attributes
-                0x00000718       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(FAULT.o)
+                0x00000718       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(DRV_EN.o)
  .ARM.attributes
-                0x00000749       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Limit_1.o)
+                0x00000749       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(FAULT.o)
  .ARM.attributes
-                0x0000077a       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_2.o)
+                0x0000077a       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Limit_1.o)
  .ARM.attributes
-                0x000007ab       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_1.o)
+                0x000007ab       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_2.o)
  .ARM.attributes
-                0x000007dc       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
+                0x000007dc       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Pin_Limit_1.o)
  .ARM.attributes
-                0x0000080d       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Hall.o)
+                0x0000080d       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Rotor_Delay.o)
  .ARM.attributes
-                0x0000083e       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Address_Register.o)
+                0x0000083e       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Hall.o)
  .ARM.attributes
-                0x0000086f       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Limit_Register.o)
+                0x0000086f       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Address_Register.o)
  .ARM.attributes
-                0x000008a0       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Period_Reset.o)
+                0x000008a0       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Limit_Register.o)
  .ARM.attributes
-                0x000008d1       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Period_Reset.o)
+                0x000008d1       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Timer_Period_Reset.o)
  .ARM.attributes
-                0x00000902       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100.o)
+                0x00000902       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(isr_Period_Reset.o)
  .ARM.attributes
-                0x00000933       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI_UART.o)
+                0x00000933       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100.o)
  .ARM.attributes
-                0x00000964       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI.o)
+                0x00000964       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI_UART.o)
  .ARM.attributes
-                0x00000995       0x21 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyBootAsmGnu.o)
+                0x00000995       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_SPI.o)
  .ARM.attributes
-                0x000009b6       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyFlash.o)
+                0x000009c6       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_sclk_m.o)
  .ARM.attributes
-                0x000009e7       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_SPI_UART.o)
+                0x000009f7       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(TMC6100_ss0_m.o)
  .ARM.attributes
-                0x00000a18       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_INT.o)
+                0x00000a28       0x21 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyBootAsmGnu.o)
  .ARM.attributes
-                0x00000a49       0x1e c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_udivsi3.o)
+                0x00000a49       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(CyFlash.o)
  .ARM.attributes
-                0x00000a67       0x1e c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_divsi3.o)
+                0x00000a7a       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(UART_SPI_UART.o)
  .ARM.attributes
-                0x00000a85       0x1e c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_dvmd_tls.o)
+                0x00000aab       0x31 .\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.a(Current_Sensor_I2C_I2C_INT.o)
  .ARM.attributes
-                0x00000aa3       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_fixunssfsi.o)
+                0x00000adc       0x1e c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_udivsi3.o)
  .ARM.attributes
-                0x00000acf       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(divsf3.o)
+                0x00000afa       0x1e c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_divsi3.o)
  .ARM.attributes
-                0x00000afb       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(subsf3.o)
+                0x00000b18       0x1e c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_dvmd_tls.o)
  .ARM.attributes
-                0x00000b27       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(fixsfsi.o)
+                0x00000b36       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_fixunssfsi.o)
  .ARM.attributes
-                0x00000b53       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatsisf.o)
+                0x00000b62       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(divsf3.o)
  .ARM.attributes
-                0x00000b7f       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(divdf3.o)
+                0x00000b8e       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(subsf3.o)
  .ARM.attributes
-                0x00000bab       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatsidf.o)
+                0x00000bba       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(fixsfsi.o)
  .ARM.attributes
-                0x00000bd7       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatunsidf.o)
+                0x00000be6       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatsisf.o)
  .ARM.attributes
-                0x00000c03       0x1e c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_arm_cmpsf2.o)
+                0x00000c12       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(divdf3.o)
  .ARM.attributes
-                0x00000c21       0x1e c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_clzsi2.o)
+                0x00000c3e       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatsidf.o)
  .ARM.attributes
-                0x00000c3f       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(eqsf2.o)
+                0x00000c6a       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatunsidf.o)
  .ARM.attributes
-                0x00000c6b       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(gesf2.o)
+                0x00000c96       0x1e c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_arm_cmpsf2.o)
  .ARM.attributes
-                0x00000c97       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(lesf2.o)
+                0x00000cb4       0x1e c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_clzsi2.o)
  .ARM.attributes
-                0x00000cc3       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
+                0x00000cd2       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(eqsf2.o)
  .ARM.attributes
-                0x00000cef       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-exit.o)
+                0x00000cfe       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(gesf2.o)
  .ARM.attributes
-                0x00000d1b       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
+                0x00000d2a       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(lesf2.o)
  .ARM.attributes
-                0x00000d47       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
+                0x00000d56       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
  .ARM.attributes
-                0x00000d73       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memcpy-stub.o)
+                0x00000d82       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-exit.o)
  .ARM.attributes
-                0x00000d9f       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
+                0x00000dae       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
  .ARM.attributes
-                0x00000dcb       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sprintf.o)
+                0x00000dda       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
  .ARM.attributes
-                0x00000df7       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-svfprintf.o)
+                0x00000e06       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-itoa.o)
  .ARM.attributes
-                0x00000e23       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x00000e32       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memcpy-stub.o)
  .ARM.attributes
-                0x00000e4f       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memchr-stub.o)
+                0x00000e5e       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
  .ARM.attributes
-                0x00000e7b       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memmove.o)
+                0x00000e8a       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sprintf.o)
  .ARM.attributes
-                0x00000ea7       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-freer.o)
+                0x00000eb6       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-utoa.o)
  .ARM.attributes
-                0x00000ed3       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-mallocr.o)
+                0x00000ee2       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-svfprintf.o)
  .ARM.attributes
-                0x00000eff       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-reallocr.o)
+                0x00000f0e       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
  .ARM.attributes
-                0x00000f2b       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sbrkr.o)
+                0x00000f3a       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memchr-stub.o)
  .ARM.attributes
-                0x00000f57       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mlock.o)
+                0x00000f66       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memmove.o)
  .ARM.attributes
-                0x00000f83       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-msizer.o)
+                0x00000f92       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-freer.o)
  .ARM.attributes
-                0x00000faf       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-reent.o)
+                0x00000fbe       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-mallocr.o)
  .ARM.attributes
-                0x00000fdb       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtend.o
+                0x00000fea       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-reallocr.o)
  .ARM.attributes
-                0x00001007       0x1e c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtn.o
+                0x00001016       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sbrkr.o)
+ .ARM.attributes
+                0x00001042       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mlock.o)
+ .ARM.attributes
+                0x0000106e       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-msizer.o)
+ .ARM.attributes
+                0x0000109a       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-reent.o)
+ .ARM.attributes
+                0x000010c6       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtend.o
+ .ARM.attributes
+                0x000010f2       0x1e c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtn.o
 
 /DISCARD/
  *(.note.GNU-stack)
-OUTPUT(C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.elf elf32-littlearm)
+OUTPUT(C:\Users\davis\Documents\PSoC Creator\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\CortexM0\ARM_GCC_541\Debug\BLDC_Motor_Board.elf elf32-littlearm)

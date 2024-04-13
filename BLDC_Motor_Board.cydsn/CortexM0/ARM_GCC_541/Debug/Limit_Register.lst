@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 1
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cc4pwXMg.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 1
   28:Generated_Source\PSoC4/Limit_Register.c **** *  Reads the current value assigned to the Status Register.
   29:Generated_Source\PSoC4/Limit_Register.c **** *
   30:Generated_Source\PSoC4/Limit_Register.c **** * Parameters:
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 2
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cc4pwXMg.s 			page 2
 
 
   31:Generated_Source\PSoC4/Limit_Register.c **** *  None.
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 1
   58:Generated_Source\PSoC4/Limit_Register.c **** {
   55              		.loc 1 58 0
   56              		.cfi_startproc
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 3
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cc4pwXMg.s 			page 3
 
 
   57              		@ args = 0, pretend = 0, frame = 0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 1
   76:Generated_Source\PSoC4/Limit_Register.c **** * Return:
   77:Generated_Source\PSoC4/Limit_Register.c **** *  None.
   78:Generated_Source\PSoC4/Limit_Register.c **** *
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 4
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cc4pwXMg.s 			page 4
 
 
   79:Generated_Source\PSoC4/Limit_Register.c **** *******************************************************************************/
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 1
   95:Generated_Source\PSoC4/Limit_Register.c **** *
   96:Generated_Source\PSoC4/Limit_Register.c **** * Parameters:
   97:Generated_Source\PSoC4/Limit_Register.c **** *  mask:  Value to write into the mask register.
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 5
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cc4pwXMg.s 			page 5
 
 
   98:Generated_Source\PSoC4/Limit_Register.c **** *
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 1
  121:Generated_Source\PSoC4/Limit_Register.c **** *
  122:Generated_Source\PSoC4/Limit_Register.c **** * Return:
  123:Generated_Source\PSoC4/Limit_Register.c **** *  The value of the interrupt mask of the Status Register.
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 6
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cc4pwXMg.s 			page 6
 
 
  124:Generated_Source\PSoC4/Limit_Register.c **** *
@@ -337,40 +337,40 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 1
  190 0006 00000000 		.4byte	.Ldebug_abbrev0
  191 000a 04       		.byte	0x4
  192 000b 01       		.uleb128 0x1
- 193 000c 90010000 		.4byte	.LASF24
+ 193 000c 7C010000 		.4byte	.LASF24
  194 0010 0C       		.byte	0xc
- 195 0011 17010000 		.4byte	.LASF25
- 196 0015 1B000000 		.4byte	.LASF26
+ 195 0011 08010000 		.4byte	.LASF25
+ 196 0015 A0000000 		.4byte	.LASF26
  197 0019 00000000 		.4byte	.Ldebug_ranges0+0
  198 001d 00000000 		.4byte	0
  199 0021 00000000 		.4byte	.Ldebug_line0
  200 0025 02       		.uleb128 0x2
  201 0026 01       		.byte	0x1
  202 0027 06       		.byte	0x6
- 203 0028 31020000 		.4byte	.LASF0
+ 203 0028 1D020000 		.4byte	.LASF0
  204 002c 02       		.uleb128 0x2
  205 002d 01       		.byte	0x1
  206 002e 08       		.byte	0x8
- 207 002f 09010000 		.4byte	.LASF1
+ 207 002f FA000000 		.4byte	.LASF1
  208 0033 02       		.uleb128 0x2
  209 0034 02       		.byte	0x2
  210 0035 05       		.byte	0x5
- 211 0036 5F020000 		.4byte	.LASF2
+ 211 0036 4B020000 		.4byte	.LASF2
  212 003a 02       		.uleb128 0x2
  213 003b 02       		.byte	0x2
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 7
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cc4pwXMg.s 			page 7
 
 
  214 003c 07       		.byte	0x7
- 215 003d 1E020000 		.4byte	.LASF3
+ 215 003d 0A020000 		.4byte	.LASF3
  216 0041 02       		.uleb128 0x2
  217 0042 04       		.byte	0x4
  218 0043 05       		.byte	0x5
- 219 0044 87010000 		.4byte	.LASF4
+ 219 0044 4D010000 		.4byte	.LASF4
  220 0048 02       		.uleb128 0x2
  221 0049 04       		.byte	0x4
  222 004a 07       		.byte	0x7
- 223 004b B5000000 		.4byte	.LASF5
+ 223 004b 51000000 		.4byte	.LASF5
  224 004f 02       		.uleb128 0x2
  225 0050 08       		.byte	0x8
  226 0051 05       		.byte	0x5
@@ -378,7 +378,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 1
  228 0056 02       		.uleb128 0x2
  229 0057 08       		.byte	0x8
  230 0058 07       		.byte	0x7
- 231 0059 C7000000 		.4byte	.LASF7
+ 231 0059 63000000 		.4byte	.LASF7
  232 005d 03       		.uleb128 0x3
  233 005e 04       		.byte	0x4
  234 005f 05       		.byte	0x5
@@ -388,24 +388,24 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 1
  238 0066 07       		.byte	0x7
  239 0067 0E000000 		.4byte	.LASF8
  240 006b 04       		.uleb128 0x4
- 241 006c AF000000 		.4byte	.LASF12
+ 241 006c 4B000000 		.4byte	.LASF12
  242 0070 02       		.byte	0x2
  243 0071 FB01     		.2byte	0x1fb
  244 0073 2C000000 		.4byte	0x2c
  245 0077 02       		.uleb128 0x2
  246 0078 04       		.byte	0x4
  247 0079 04       		.byte	0x4
- 248 007a DE000000 		.4byte	.LASF9
+ 248 007a 7A000000 		.4byte	.LASF9
  249 007e 02       		.uleb128 0x2
  250 007f 08       		.byte	0x8
  251 0080 04       		.byte	0x4
- 252 0081 80010000 		.4byte	.LASF10
+ 252 0081 75010000 		.4byte	.LASF10
  253 0085 02       		.uleb128 0x2
  254 0086 01       		.byte	0x1
  255 0087 08       		.byte	0x8
- 256 0088 3F010000 		.4byte	.LASF11
+ 256 0088 30010000 		.4byte	.LASF11
  257 008c 04       		.uleb128 0x4
- 258 008d 5C010000 		.4byte	.LASF13
+ 258 008d 55020000 		.4byte	.LASF13
  259 0091 02       		.byte	0x2
  260 0092 A502     		.2byte	0x2a5
  261 0094 98000000 		.4byte	0x98
@@ -414,16 +414,16 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 1
  264 009d 02       		.uleb128 0x2
  265 009e 08       		.byte	0x8
  266 009f 04       		.byte	0x4
- 267 00a0 53020000 		.4byte	.LASF14
+ 267 00a0 3F020000 		.4byte	.LASF14
  268 00a4 02       		.uleb128 0x2
  269 00a5 04       		.byte	0x4
  270 00a6 07       		.byte	0x7
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 8
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cc4pwXMg.s 			page 8
 
 
- 271 00a7 7D020000 		.4byte	.LASF15
+ 271 00a7 6E020000 		.4byte	.LASF15
  272 00ab 06       		.uleb128 0x6
- 273 00ac 69020000 		.4byte	.LASF20
+ 273 00ac 5A020000 		.4byte	.LASF20
  274 00b0 01       		.byte	0x1
  275 00b1 25       		.byte	0x25
  276 00b2 6B000000 		.4byte	0x6b
@@ -432,7 +432,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 1
  279 00be 01       		.uleb128 0x1
  280 00bf 9C       		.byte	0x9c
  281 00c0 07       		.uleb128 0x7
- 282 00c1 61010000 		.4byte	.LASF16
+ 282 00c1 56010000 		.4byte	.LASF16
  283 00c5 01       		.byte	0x1
  284 00c6 39       		.byte	0x39
  285 00c7 00000000 		.4byte	.LFB2
@@ -441,7 +441,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 1
  288 00d0 9C       		.byte	0x9c
  289 00d1 F7000000 		.4byte	0xf7
  290 00d5 08       		.uleb128 0x8
- 291 00d6 86020000 		.4byte	.LASF18
+ 291 00d6 77020000 		.4byte	.LASF18
  292 00da 01       		.byte	0x1
  293 00db 3B       		.byte	0x3b
  294 00dc 6B000000 		.4byte	0x6b
@@ -454,7 +454,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 1
  301 00f2 73010000 		.4byte	0x173
  302 00f6 00       		.byte	0
  303 00f7 07       		.uleb128 0x7
- 304 00f8 E4000000 		.4byte	.LASF17
+ 304 00f8 80000000 		.4byte	.LASF17
  305 00fc 01       		.byte	0x1
  306 00fd 50       		.byte	0x50
  307 00fe 00000000 		.4byte	.LFB3
@@ -463,7 +463,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 1
  310 0107 9C       		.byte	0x9c
  311 0108 2E010000 		.4byte	0x12e
  312 010c 08       		.uleb128 0x8
- 313 010d 86020000 		.4byte	.LASF18
+ 313 010d 77020000 		.4byte	.LASF18
  314 0111 01       		.byte	0x1
  315 0112 52       		.byte	0x52
  316 0113 6B000000 		.4byte	0x6b
@@ -476,9 +476,9 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 1
  323 0129 73010000 		.4byte	0x173
  324 012d 00       		.byte	0
  325 012e 07       		.uleb128 0x7
- 326 012f 7F000000 		.4byte	.LASF19
+ 326 012f 1B000000 		.4byte	.LASF19
  327 0133 01       		.byte	0x1
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 9
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cc4pwXMg.s 			page 9
 
 
  328 0134 67       		.byte	0x67
@@ -488,14 +488,14 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 1
  332 013e 9C       		.byte	0x9c
  333 013f 53010000 		.4byte	0x153
  334 0143 0A       		.uleb128 0xa
- 335 0144 04010000 		.4byte	.LASF27
+ 335 0144 F5000000 		.4byte	.LASF27
  336 0148 01       		.byte	0x1
  337 0149 67       		.byte	0x67
  338 014a 6B000000 		.4byte	0x6b
  339 014e 26000000 		.4byte	.LLST2
  340 0152 00       		.byte	0
  341 0153 06       		.uleb128 0x6
- 342 0154 44010000 		.4byte	.LASF21
+ 342 0154 35010000 		.4byte	.LASF21
  343 0158 01       		.byte	0x1
  344 0159 7E       		.byte	0x7e
  345 015a 6B000000 		.4byte	0x6b
@@ -504,13 +504,13 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 1
  348 0166 01       		.uleb128 0x1
  349 0167 9C       		.byte	0x9c
  350 0168 0B       		.uleb128 0xb
- 351 0169 98000000 		.4byte	.LASF22
- 352 016d 98000000 		.4byte	.LASF22
+ 351 0169 34000000 		.4byte	.LASF22
+ 352 016d 34000000 		.4byte	.LASF22
  353 0171 03       		.byte	0x3
  354 0172 F8       		.byte	0xf8
  355 0173 0B       		.uleb128 0xb
- 356 0174 3D020000 		.4byte	.LASF23
- 357 0178 3D020000 		.4byte	.LASF23
+ 356 0174 29020000 		.4byte	.LASF23
+ 357 0178 29020000 		.4byte	.LASF23
  358 017c 03       		.byte	0x3
  359 017d F9       		.byte	0xf9
  360 017e 00       		.byte	0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 1
  382 0013 02       		.uleb128 0x2
  383 0014 24       		.uleb128 0x24
  384 0015 00       		.byte	0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 10
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cc4pwXMg.s 			page 10
 
 
  385 0016 0B       		.uleb128 0xb
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 1
  439 004c 11       		.uleb128 0x11
  440 004d 01       		.uleb128 0x1
  441 004e 12       		.uleb128 0x12
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 11
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cc4pwXMg.s 			page 11
 
 
  442 004f 06       		.uleb128 0x6
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 1
  496 0089 00       		.byte	0
  497 008a 00       		.byte	0
  498 008b 0A       		.uleb128 0xa
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 12
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cc4pwXMg.s 			page 12
 
 
  499 008c 05       		.uleb128 0x5
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 1
  553 0035 10000000 		.4byte	.LFE4
  554 0039 0100     		.2byte	0x1
  555 003b 50       		.byte	0x50
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 13
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cc4pwXMg.s 			page 13
 
 
  556 003c 00000000 		.4byte	0
@@ -774,156 +774,154 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 1
  598      676E6564 
  598      20696E74 
  598      00
- 599              	.LASF26:
- 600 001b 433A5C55 		.ascii	"C:\\Users\\M4rz4n\\Desktop\\Husky Robotics\\Firmwar"
- 600      73657273 
- 600      5C4D3472 
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 14
+ 599              	.LASF19:
+ 600 001b 4C696D69 		.ascii	"Limit_Register_WriteMask\000"
+ 600      745F5265 
+ 600      67697374 
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cc4pwXMg.s 			page 14
 
 
- 600      7A346E5C 
- 600      4465736B 
- 601 0049 655C424C 		.ascii	"e\\BLDC\\BLDC_Motor_Board_PY2023\\BLDC_Motor_Board."
- 601      44435C42 
- 601      4C44435F 
- 601      4D6F746F 
- 601      725F426F 
- 602 0079 63796473 		.ascii	"cydsn\000"
- 602      6E00
- 603              	.LASF19:
- 604 007f 4C696D69 		.ascii	"Limit_Register_WriteMask\000"
- 604      745F5265 
- 604      67697374 
- 604      65725F57 
- 604      72697465 
- 605              	.LASF22:
- 606 0098 4379456E 		.ascii	"CyEnterCriticalSection\000"
- 606      74657243 
- 606      72697469 
- 606      63616C53 
- 606      65637469 
- 607              	.LASF12:
- 608 00af 75696E74 		.ascii	"uint8\000"
- 608      3800
- 609              	.LASF5:
- 610 00b5 6C6F6E67 		.ascii	"long unsigned int\000"
- 610      20756E73 
- 610      69676E65 
- 610      6420696E 
+ 600      65725F57 
+ 600      72697465 
+ 601              	.LASF22:
+ 602 0034 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 602      74657243 
+ 602      72697469 
+ 602      63616C53 
+ 602      65637469 
+ 603              	.LASF12:
+ 604 004b 75696E74 		.ascii	"uint8\000"
+ 604      3800
+ 605              	.LASF5:
+ 606 0051 6C6F6E67 		.ascii	"long unsigned int\000"
+ 606      20756E73 
+ 606      69676E65 
+ 606      6420696E 
+ 606      7400
+ 607              	.LASF7:
+ 608 0063 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 608      206C6F6E 
+ 608      6720756E 
+ 608      7369676E 
+ 608      65642069 
+ 609              	.LASF9:
+ 610 007a 666C6F61 		.ascii	"float\000"
  610      7400
- 611              	.LASF7:
- 612 00c7 6C6F6E67 		.ascii	"long long unsigned int\000"
- 612      206C6F6E 
- 612      6720756E 
- 612      7369676E 
- 612      65642069 
- 613              	.LASF9:
- 614 00de 666C6F61 		.ascii	"float\000"
- 614      7400
- 615              	.LASF17:
- 616 00e4 4C696D69 		.ascii	"Limit_Register_InterruptDisable\000"
- 616      745F5265 
- 616      67697374 
- 616      65725F49 
- 616      6E746572 
- 617              	.LASF27:
- 618 0104 6D61736B 		.ascii	"mask\000"
- 618      00
- 619              	.LASF1:
- 620 0109 756E7369 		.ascii	"unsigned char\000"
- 620      676E6564 
- 620      20636861 
- 620      7200
- 621              	.LASF25:
- 622 0117 47656E65 		.ascii	"Generated_Source\\PSoC4\\Limit_Register.c\000"
- 622      72617465 
- 622      645F536F 
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 15
+ 611              	.LASF17:
+ 612 0080 4C696D69 		.ascii	"Limit_Register_InterruptDisable\000"
+ 612      745F5265 
+ 612      67697374 
+ 612      65725F49 
+ 612      6E746572 
+ 613              	.LASF26:
+ 614 00a0 433A5C55 		.ascii	"C:\\Users\\davis\\Documents\\PSoC Creator\\BLDC_Mot"
+ 614      73657273 
+ 614      5C646176 
+ 614      69735C44 
+ 614      6F63756D 
+ 615 00ce 6F725F42 		.ascii	"or_Board_PY2023\\BLDC_Motor_Board.cydsn\000"
+ 615      6F617264 
+ 615      5F505932 
+ 615      3032335C 
+ 615      424C4443 
+ 616              	.LASF27:
+ 617 00f5 6D61736B 		.ascii	"mask\000"
+ 617      00
+ 618              	.LASF1:
+ 619 00fa 756E7369 		.ascii	"unsigned char\000"
+ 619      676E6564 
+ 619      20636861 
+ 619      7200
+ 620              	.LASF25:
+ 621 0108 47656E65 		.ascii	"Generated_Source\\PSoC4\\Limit_Register.c\000"
+ 621      72617465 
+ 621      645F536F 
+ 621      75726365 
+ 621      5C50536F 
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cc4pwXMg.s 			page 15
 
 
- 622      75726365 
- 622      5C50536F 
- 623              	.LASF11:
- 624 013f 63686172 		.ascii	"char\000"
- 624      00
- 625              	.LASF21:
- 626 0144 4C696D69 		.ascii	"Limit_Register_ReadMask\000"
- 626      745F5265 
- 626      67697374 
- 626      65725F52 
- 626      6561644D 
- 627              	.LASF13:
- 628 015c 72656738 		.ascii	"reg8\000"
- 628      00
- 629              	.LASF16:
- 630 0161 4C696D69 		.ascii	"Limit_Register_InterruptEnable\000"
- 630      745F5265 
- 630      67697374 
- 630      65725F49 
- 630      6E746572 
- 631              	.LASF10:
- 632 0180 646F7562 		.ascii	"double\000"
- 632      6C6500
- 633              	.LASF4:
- 634 0187 6C6F6E67 		.ascii	"long int\000"
- 634      20696E74 
- 634      00
- 635              	.LASF24:
- 636 0190 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 636      43313120 
- 636      352E342E 
- 636      31203230 
- 636      31363036 
- 637 01c3 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 637      20726576 
- 637      6973696F 
- 637      6E203233 
- 637      37373135 
- 638 01f6 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 638      66756E63 
- 638      74696F6E 
- 638      2D736563 
- 638      74696F6E 
- 639              	.LASF3:
- 640 021e 73686F72 		.ascii	"short unsigned int\000"
- 640      7420756E 
- 640      7369676E 
- 640      65642069 
- 640      6E7400
- 641              	.LASF0:
- 642 0231 7369676E 		.ascii	"signed char\000"
- 642      65642063 
- 642      68617200 
- 643              	.LASF23:
- 644 023d 43794578 		.ascii	"CyExitCriticalSection\000"
- 644      69744372 
- 644      69746963 
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccimAW02.s 			page 16
+ 622              	.LASF11:
+ 623 0130 63686172 		.ascii	"char\000"
+ 623      00
+ 624              	.LASF21:
+ 625 0135 4C696D69 		.ascii	"Limit_Register_ReadMask\000"
+ 625      745F5265 
+ 625      67697374 
+ 625      65725F52 
+ 625      6561644D 
+ 626              	.LASF4:
+ 627 014d 6C6F6E67 		.ascii	"long int\000"
+ 627      20696E74 
+ 627      00
+ 628              	.LASF16:
+ 629 0156 4C696D69 		.ascii	"Limit_Register_InterruptEnable\000"
+ 629      745F5265 
+ 629      67697374 
+ 629      65725F49 
+ 629      6E746572 
+ 630              	.LASF10:
+ 631 0175 646F7562 		.ascii	"double\000"
+ 631      6C6500
+ 632              	.LASF24:
+ 633 017c 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 633      43313120 
+ 633      352E342E 
+ 633      31203230 
+ 633      31363036 
+ 634 01af 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 634      20726576 
+ 634      6973696F 
+ 634      6E203233 
+ 634      37373135 
+ 635 01e2 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 635      66756E63 
+ 635      74696F6E 
+ 635      2D736563 
+ 635      74696F6E 
+ 636              	.LASF3:
+ 637 020a 73686F72 		.ascii	"short unsigned int\000"
+ 637      7420756E 
+ 637      7369676E 
+ 637      65642069 
+ 637      6E7400
+ 638              	.LASF0:
+ 639 021d 7369676E 		.ascii	"signed char\000"
+ 639      65642063 
+ 639      68617200 
+ 640              	.LASF23:
+ 641 0229 43794578 		.ascii	"CyExitCriticalSection\000"
+ 641      69744372 
+ 641      69746963 
+ 641      616C5365 
+ 641      6374696F 
+ 642              	.LASF14:
+ 643 023f 6C6F6E67 		.ascii	"long double\000"
+ 643      20646F75 
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cc4pwXMg.s 			page 16
 
 
- 644      616C5365 
- 644      6374696F 
- 645              	.LASF14:
- 646 0253 6C6F6E67 		.ascii	"long double\000"
- 646      20646F75 
- 646      626C6500 
- 647              	.LASF2:
- 648 025f 73686F72 		.ascii	"short int\000"
- 648      7420696E 
- 648      7400
- 649              	.LASF20:
- 650 0269 4C696D69 		.ascii	"Limit_Register_Read\000"
- 650      745F5265 
- 650      67697374 
- 650      65725F52 
- 650      65616400 
- 651              	.LASF15:
- 652 027d 73697A65 		.ascii	"sizetype\000"
- 652      74797065 
- 652      00
- 653              	.LASF18:
- 654 0286 696E7465 		.ascii	"interruptState\000"
- 654      72727570 
- 654      74537461 
- 654      746500
- 655              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 643      626C6500 
+ 644              	.LASF2:
+ 645 024b 73686F72 		.ascii	"short int\000"
+ 645      7420696E 
+ 645      7400
+ 646              	.LASF13:
+ 647 0255 72656738 		.ascii	"reg8\000"
+ 647      00
+ 648              	.LASF20:
+ 649 025a 4C696D69 		.ascii	"Limit_Register_Read\000"
+ 649      745F5265 
+ 649      67697374 
+ 649      65725F52 
+ 649      65616400 
+ 650              	.LASF15:
+ 651 026e 73697A65 		.ascii	"sizetype\000"
+ 651      74797065 
+ 651      00
+ 652              	.LASF18:
+ 653 0277 696E7465 		.ascii	"interruptState\000"
+ 653      72727570 
+ 653      74537461 
+ 653      746500
+ 654              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

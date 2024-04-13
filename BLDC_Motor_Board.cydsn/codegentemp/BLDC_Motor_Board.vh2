@@ -2,7 +2,7 @@
 --	Conversion of BLDC_Motor_Board.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Sat Apr 06 13:49:00 2024
+--	Sat Apr 13 12:58:21 2024
 --
 
 USE cypress.cypress.all;
@@ -217,47 +217,47 @@ SIGNAL tmpIO_0__DRV_EN_net_0 : bit;
 TERMINAL tmpSIOVREF__DRV_EN_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__DRV_EN_net_0 : bit;
 SIGNAL \TMC6100:Net_847\ : bit;
-SIGNAL \TMC6100:tmpOE__ss_s_net_0\ : bit;
-SIGNAL \TMC6100:Net_1297\ : bit;
-SIGNAL \TMC6100:tmpIO_0__ss_s_net_0\ : bit;
-TERMINAL \TMC6100:tmpSIOVREF__ss_s_net_0\ : bit;
-SIGNAL \TMC6100:tmpINTERRUPT_0__ss_s_net_0\ : bit;
 SIGNAL \TMC6100:select_s_wire\ : bit;
 SIGNAL \TMC6100:rx_wire\ : bit;
 SIGNAL \TMC6100:Net_1257\ : bit;
 SIGNAL \TMC6100:uncfg_rx_irq\ : bit;
 SIGNAL \TMC6100:Net_1170\ : bit;
 SIGNAL \TMC6100:sclk_s_wire\ : bit;
-SIGNAL \TMC6100:Net_1320\ : bit;
 SIGNAL \TMC6100:mosi_s_wire\ : bit;
-SIGNAL \TMC6100:Net_252\ : bit;
 SIGNAL \TMC6100:miso_m_wire\ : bit;
-SIGNAL \TMC6100:tmpOE__miso_s_net_0\ : bit;
-SIGNAL \TMC6100:miso_s_wire\ : bit;
-SIGNAL \TMC6100:tmpFB_0__miso_s_net_0\ : bit;
-SIGNAL \TMC6100:tmpIO_0__miso_s_net_0\ : bit;
-TERMINAL \TMC6100:tmpSIOVREF__miso_s_net_0\ : bit;
-SIGNAL \TMC6100:tmpINTERRUPT_0__miso_s_net_0\ : bit;
+SIGNAL \TMC6100:Net_467\ : bit;
 SIGNAL \TMC6100:Net_1099\ : bit;
 SIGNAL \TMC6100:Net_1258\ : bit;
-SIGNAL \TMC6100:tmpOE__sclk_s_net_0\ : bit;
-SIGNAL \TMC6100:tmpIO_0__sclk_s_net_0\ : bit;
-TERMINAL \TMC6100:tmpSIOVREF__sclk_s_net_0\ : bit;
-SIGNAL \TMC6100:tmpINTERRUPT_0__sclk_s_net_0\ : bit;
-SIGNAL \TMC6100:tmpOE__mosi_s_net_0\ : bit;
-SIGNAL \TMC6100:tmpIO_0__mosi_s_net_0\ : bit;
-TERMINAL \TMC6100:tmpSIOVREF__mosi_s_net_0\ : bit;
-SIGNAL \TMC6100:tmpINTERRUPT_0__mosi_s_net_0\ : bit;
+SIGNAL \TMC6100:tmpOE__sclk_m_net_0\ : bit;
+SIGNAL \TMC6100:sclk_m_wire\ : bit;
+SIGNAL \TMC6100:tmpFB_0__sclk_m_net_0\ : bit;
+SIGNAL \TMC6100:tmpIO_0__sclk_m_net_0\ : bit;
+TERMINAL \TMC6100:tmpSIOVREF__sclk_m_net_0\ : bit;
+SIGNAL \TMC6100:tmpINTERRUPT_0__sclk_m_net_0\ : bit;
+SIGNAL \TMC6100:tmpOE__miso_m_net_0\ : bit;
+SIGNAL \TMC6100:tmpIO_0__miso_m_net_0\ : bit;
+TERMINAL \TMC6100:tmpSIOVREF__miso_m_net_0\ : bit;
+SIGNAL \TMC6100:tmpINTERRUPT_0__miso_m_net_0\ : bit;
+SIGNAL \TMC6100:tmpOE__mosi_m_net_0\ : bit;
+SIGNAL \TMC6100:mosi_m_wire\ : bit;
+SIGNAL \TMC6100:tmpFB_0__mosi_m_net_0\ : bit;
+SIGNAL \TMC6100:tmpIO_0__mosi_m_net_0\ : bit;
+TERMINAL \TMC6100:tmpSIOVREF__mosi_m_net_0\ : bit;
+SIGNAL \TMC6100:tmpINTERRUPT_0__mosi_m_net_0\ : bit;
+SIGNAL \TMC6100:tmpOE__ss0_m_net_0\ : bit;
+SIGNAL \TMC6100:select_m_wire_0\ : bit;
+SIGNAL \TMC6100:tmpFB_0__ss0_m_net_0\ : bit;
+SIGNAL \TMC6100:tmpIO_0__ss0_m_net_0\ : bit;
+TERMINAL \TMC6100:tmpSIOVREF__ss0_m_net_0\ : bit;
+SIGNAL \TMC6100:tmpINTERRUPT_0__ss0_m_net_0\ : bit;
 SIGNAL \TMC6100:cts_wire\ : bit;
 SIGNAL Net_574 : bit;
 SIGNAL \TMC6100:tx_wire\ : bit;
 SIGNAL \TMC6100:rts_wire\ : bit;
-SIGNAL \TMC6100:mosi_m_wire\ : bit;
 SIGNAL \TMC6100:select_m_wire_3\ : bit;
 SIGNAL \TMC6100:select_m_wire_2\ : bit;
 SIGNAL \TMC6100:select_m_wire_1\ : bit;
-SIGNAL \TMC6100:select_m_wire_0\ : bit;
-SIGNAL \TMC6100:sclk_m_wire\ : bit;
+SIGNAL \TMC6100:miso_s_wire\ : bit;
 SIGNAL Net_590 : bit;
 SIGNAL Net_591 : bit;
 SIGNAL Net_592 : bit;
@@ -2026,10 +2026,10 @@ CAN_LED:cy_psoc3_pins_v1_10
 			Net_117, Net_116, Net_115, Net_114));
 DRV_EN:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"29938f8e-7989-4f38-afcc-a0b03c6eb22d",
-		drive_mode=>"001",
+		drive_mode=>"110",
 		ibuf_enabled=>"1",
 		init_dr_st=>"1",
-		input_sync=>"0",
+		input_sync=>"1",
 		input_clk_en=>'0',
 		input_sync_mode=>"0",
 		intr_mode=>"00",
@@ -2051,7 +2051,7 @@ DRV_EN:cy_psoc3_pins_v1_10
 		oe_conn=>"0",
 		oe_reset=>'0',
 		pin_aliases=>"",
-		pin_mode=>"I",
+		pin_mode=>"O",
 		por_state=>4,
 		sio_group_cnt=>0,
 		sio_hifreq=>"00000000",
@@ -2065,7 +2065,7 @@ DRV_EN:cy_psoc3_pins_v1_10
 		slew_rate=>"0",
 		spanning=>'0',
 		sw_only=>'0',
-		vtrip=>"00",
+		vtrip=>"10",
 		width=>1,
 		port_alias_required=>'0',
 		port_alias_group=>"",
@@ -2104,78 +2104,8 @@ DRV_EN:cy_psoc3_pins_v1_10
 		is_digital=>'0')
 	PORT MAP(clock_out=>\TMC6100:Net_847\,
 		dig_domain_out=>open);
-\TMC6100:ss_s\:cy_psoc3_pins_v1_10
-	GENERIC MAP(id=>"8c8734ef-3644-4eed-bc55-360072b94fff/3446580a-3b9d-491c-8730-f7ea34ca86e3",
-		drive_mode=>"001",
-		ibuf_enabled=>"1",
-		init_dr_st=>"0",
-		input_sync=>"0",
-		input_clk_en=>'0',
-		input_sync_mode=>"0",
-		intr_mode=>"00",
-		invert_in_clock=>'0',
-		invert_in_clock_en=>'0',
-		invert_in_reset=>'0',
-		invert_out_clock=>'0',
-		invert_out_clock_en=>'0',
-		invert_out_reset=>'0',
-		io_voltage=>"",
-		layout_mode=>"CONTIGUOUS",
-		output_conn=>"0",
-		output_sync=>"0",
-		output_clk_en=>'0',
-		output_mode=>"0",
-		output_reset=>'0',
-		output_clock_mode=>"0",
-		oe_sync=>"0",
-		oe_conn=>"0",
-		oe_reset=>'0',
-		pin_aliases=>"",
-		pin_mode=>"I",
-		por_state=>4,
-		sio_group_cnt=>0,
-		sio_hifreq=>"00000000",
-		sio_hyst=>"1",
-		sio_ibuf=>"00000000",
-		sio_info=>"00",
-		sio_obuf=>"00000000",
-		sio_refsel=>"00000000",
-		sio_vtrip=>"00000000",
-		sio_vohsel=>"00000000",
-		slew_rate=>"0",
-		spanning=>'0',
-		sw_only=>'0',
-		vtrip=>"00",
-		width=>1,
-		port_alias_required=>'0',
-		port_alias_group=>"",
-		use_annotation=>"0",
-		pa_in_clock=>-1,
-		pa_in_clock_en=>-1,
-		pa_in_reset=>-1,
-		pa_out_clock=>-1,
-		pa_out_clock_en=>-1,
-		pa_out_reset=>-1,
-		ovt_needed=>"0",
-		ovt_slew_control=>"00",
-		ovt_hyst_trim=>"0",
-		input_buffer_sel=>"00")
-	PORT MAP(oe=>(tmpOE__HALL1_net_0),
-		y=>(zero),
-		fb=>\TMC6100:Net_1297\,
-		analog=>(open),
-		io=>(\TMC6100:tmpIO_0__ss_s_net_0\),
-		siovref=>(\TMC6100:tmpSIOVREF__ss_s_net_0\),
-		annotation=>(open),
-		in_clock=>zero,
-		in_clock_en=>tmpOE__HALL1_net_0,
-		in_reset=>zero,
-		out_clock=>zero,
-		out_clock_en=>tmpOE__HALL1_net_0,
-		out_reset=>zero,
-		interrupt=>\TMC6100:tmpINTERRUPT_0__ss_s_net_0\);
-\TMC6100:miso_s\:cy_psoc3_pins_v1_10
-	GENERIC MAP(id=>"8c8734ef-3644-4eed-bc55-360072b94fff/52f31aa9-2f0a-497d-9a1f-1424095e13e6",
+\TMC6100:sclk_m\:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"8c8734ef-3644-4eed-bc55-360072b94fff/38438ec5-732c-47a6-9805-e2b697fb82a2",
 		drive_mode=>"110",
 		ibuf_enabled=>"0",
 		init_dr_st=>"1",
@@ -2231,11 +2161,11 @@ DRV_EN:cy_psoc3_pins_v1_10
 		ovt_hyst_trim=>"0",
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(tmpOE__HALL1_net_0),
-		y=>\TMC6100:miso_s_wire\,
-		fb=>(\TMC6100:tmpFB_0__miso_s_net_0\),
+		y=>\TMC6100:sclk_m_wire\,
+		fb=>(\TMC6100:tmpFB_0__sclk_m_net_0\),
 		analog=>(open),
-		io=>(\TMC6100:tmpIO_0__miso_s_net_0\),
-		siovref=>(\TMC6100:tmpSIOVREF__miso_s_net_0\),
+		io=>(\TMC6100:tmpIO_0__sclk_m_net_0\),
+		siovref=>(\TMC6100:tmpSIOVREF__sclk_m_net_0\),
 		annotation=>(open),
 		in_clock=>zero,
 		in_clock_en=>tmpOE__HALL1_net_0,
@@ -2243,9 +2173,9 @@ DRV_EN:cy_psoc3_pins_v1_10
 		out_clock=>zero,
 		out_clock_en=>tmpOE__HALL1_net_0,
 		out_reset=>zero,
-		interrupt=>\TMC6100:tmpINTERRUPT_0__miso_s_net_0\);
-\TMC6100:sclk_s\:cy_psoc3_pins_v1_10
-	GENERIC MAP(id=>"8c8734ef-3644-4eed-bc55-360072b94fff/4c15b41e-e284-4978-99e7-5aaee19bd0ce",
+		interrupt=>\TMC6100:tmpINTERRUPT_0__sclk_m_net_0\);
+\TMC6100:miso_m\:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"8c8734ef-3644-4eed-bc55-360072b94fff/1425177d-0d0e-4468-8bcc-e638e5509a9b",
 		drive_mode=>"001",
 		ibuf_enabled=>"1",
 		init_dr_st=>"0",
@@ -2302,10 +2232,10 @@ DRV_EN:cy_psoc3_pins_v1_10
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(tmpOE__HALL1_net_0),
 		y=>(zero),
-		fb=>\TMC6100:sclk_s_wire\,
+		fb=>\TMC6100:miso_m_wire\,
 		analog=>(open),
-		io=>(\TMC6100:tmpIO_0__sclk_s_net_0\),
-		siovref=>(\TMC6100:tmpSIOVREF__sclk_s_net_0\),
+		io=>(\TMC6100:tmpIO_0__miso_m_net_0\),
+		siovref=>(\TMC6100:tmpSIOVREF__miso_m_net_0\),
 		annotation=>(open),
 		in_clock=>zero,
 		in_clock_en=>tmpOE__HALL1_net_0,
@@ -2313,12 +2243,12 @@ DRV_EN:cy_psoc3_pins_v1_10
 		out_clock=>zero,
 		out_clock_en=>tmpOE__HALL1_net_0,
 		out_reset=>zero,
-		interrupt=>\TMC6100:tmpINTERRUPT_0__sclk_s_net_0\);
-\TMC6100:mosi_s\:cy_psoc3_pins_v1_10
-	GENERIC MAP(id=>"8c8734ef-3644-4eed-bc55-360072b94fff/5e2b647c-52cb-4f09-80bd-87ed9563ab24",
-		drive_mode=>"001",
-		ibuf_enabled=>"1",
-		init_dr_st=>"0",
+		interrupt=>\TMC6100:tmpINTERRUPT_0__miso_m_net_0\);
+\TMC6100:mosi_m\:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"8c8734ef-3644-4eed-bc55-360072b94fff/ed092b9b-d398-4703-be89-cebf998501f6",
+		drive_mode=>"110",
+		ibuf_enabled=>"0",
+		init_dr_st=>"1",
 		input_sync=>"0",
 		input_clk_en=>'0',
 		input_sync_mode=>"0",
@@ -2331,7 +2261,7 @@ DRV_EN:cy_psoc3_pins_v1_10
 		invert_out_reset=>'0',
 		io_voltage=>"",
 		layout_mode=>"CONTIGUOUS",
-		output_conn=>"0",
+		output_conn=>"1",
 		output_sync=>"0",
 		output_clk_en=>'0',
 		output_mode=>"0",
@@ -2341,7 +2271,7 @@ DRV_EN:cy_psoc3_pins_v1_10
 		oe_conn=>"0",
 		oe_reset=>'0',
 		pin_aliases=>"",
-		pin_mode=>"I",
+		pin_mode=>"B",
 		por_state=>4,
 		sio_group_cnt=>0,
 		sio_hifreq=>"00000000",
@@ -2371,11 +2301,11 @@ DRV_EN:cy_psoc3_pins_v1_10
 		ovt_hyst_trim=>"0",
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(tmpOE__HALL1_net_0),
-		y=>(zero),
-		fb=>\TMC6100:mosi_s_wire\,
+		y=>\TMC6100:mosi_m_wire\,
+		fb=>(\TMC6100:tmpFB_0__mosi_m_net_0\),
 		analog=>(open),
-		io=>(\TMC6100:tmpIO_0__mosi_s_net_0\),
-		siovref=>(\TMC6100:tmpSIOVREF__mosi_s_net_0\),
+		io=>(\TMC6100:tmpIO_0__mosi_m_net_0\),
+		siovref=>(\TMC6100:tmpSIOVREF__mosi_m_net_0\),
 		annotation=>(open),
 		in_clock=>zero,
 		in_clock_en=>tmpOE__HALL1_net_0,
@@ -2383,7 +2313,77 @@ DRV_EN:cy_psoc3_pins_v1_10
 		out_clock=>zero,
 		out_clock_en=>tmpOE__HALL1_net_0,
 		out_reset=>zero,
-		interrupt=>\TMC6100:tmpINTERRUPT_0__mosi_s_net_0\);
+		interrupt=>\TMC6100:tmpINTERRUPT_0__mosi_m_net_0\);
+\TMC6100:ss0_m\:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"8c8734ef-3644-4eed-bc55-360072b94fff/9613317f-9767-4872-a15a-e07325d93413",
+		drive_mode=>"110",
+		ibuf_enabled=>"0",
+		init_dr_st=>"1",
+		input_sync=>"0",
+		input_clk_en=>'0',
+		input_sync_mode=>"0",
+		intr_mode=>"00",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>"",
+		layout_mode=>"CONTIGUOUS",
+		output_conn=>"1",
+		output_sync=>"0",
+		output_clk_en=>'0',
+		output_mode=>"0",
+		output_reset=>'0',
+		output_clock_mode=>"0",
+		oe_sync=>"0",
+		oe_conn=>"0",
+		oe_reset=>'0',
+		pin_aliases=>"",
+		pin_mode=>"B",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"00000000",
+		sio_hyst=>"1",
+		sio_ibuf=>"00000000",
+		sio_info=>"00",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		sio_vohsel=>"00000000",
+		slew_rate=>"0",
+		spanning=>'0',
+		sw_only=>'0',
+		vtrip=>"00",
+		width=>1,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"0",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1,
+		ovt_needed=>"0",
+		ovt_slew_control=>"00",
+		ovt_hyst_trim=>"0",
+		input_buffer_sel=>"00")
+	PORT MAP(oe=>(tmpOE__HALL1_net_0),
+		y=>\TMC6100:select_m_wire_0\,
+		fb=>(\TMC6100:tmpFB_0__ss0_m_net_0\),
+		analog=>(open),
+		io=>(\TMC6100:tmpIO_0__ss0_m_net_0\),
+		siovref=>(\TMC6100:tmpSIOVREF__ss0_m_net_0\),
+		annotation=>(open),
+		in_clock=>zero,
+		in_clock_en=>tmpOE__HALL1_net_0,
+		in_reset=>zero,
+		out_clock=>zero,
+		out_clock_en=>tmpOE__HALL1_net_0,
+		out_reset=>zero,
+		interrupt=>\TMC6100:tmpINTERRUPT_0__ss0_m_net_0\);
 \TMC6100:SCB\:cy_m0s8_scb_v2_0
 	GENERIC MAP(cy_registers=>"",
 		scb_mode=>1)
@@ -2394,13 +2394,13 @@ DRV_EN:cy_psoc3_pins_v1_10
 		cts=>zero,
 		rts=>\TMC6100:rts_wire\,
 		mosi_m=>\TMC6100:mosi_m_wire\,
-		miso_m=>zero,
+		miso_m=>\TMC6100:miso_m_wire\,
 		select_m=>(\TMC6100:select_m_wire_3\, \TMC6100:select_m_wire_2\, \TMC6100:select_m_wire_1\, \TMC6100:select_m_wire_0\),
 		sclk_m=>\TMC6100:sclk_m_wire\,
-		mosi_s=>\TMC6100:mosi_s_wire\,
+		mosi_s=>zero,
 		miso_s=>\TMC6100:miso_s_wire\,
-		select_s=>\TMC6100:Net_1297\,
-		sclk_s=>\TMC6100:sclk_s_wire\,
+		select_s=>zero,
+		sclk_s=>zero,
 		scl=>Net_590,
 		sda=>Net_591,
 		tx_req=>Net_592,

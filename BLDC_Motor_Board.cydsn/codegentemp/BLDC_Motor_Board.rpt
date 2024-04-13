@@ -1,13 +1,13 @@
-Loading plugins phase: Elapsed time ==> 0s.120ms
+Loading plugins phase: Elapsed time ==> 0s.114ms
 <CYPRESSTAG name="CyDsfit arguments...">
-cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_Motor_Board.cyprj -d CY8C4248AZI-L485 -s C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\davis\Documents\PSoC Creator\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_Motor_Board.cyprj -d CY8C4248AZI-L485 -s C:\Users\davis\Documents\PSoC Creator\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 </CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 1s.511ms
+Elaboration phase: Elapsed time ==> 1s.363ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.070ms
+HDL generation phase: Elapsed time ==> 0s.054ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -25,23 +25,23 @@ HDL generation phase: Elapsed time ==> 0s.070ms
 ======================================================================
 Compiling:  BLDC_Motor_Board.v
 Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_Motor_Board.cyprj -dcpsoc3 BLDC_Motor_Board.v -verilog
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\davis\Documents\PSoC Creator\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_Motor_Board.cyprj -dcpsoc3 BLDC_Motor_Board.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  BLDC_Motor_Board.v
 Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_Motor_Board.cyprj -dcpsoc3 BLDC_Motor_Board.v -verilog
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\davis\Documents\PSoC Creator\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_Motor_Board.cyprj -dcpsoc3 BLDC_Motor_Board.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  BLDC_Motor_Board.v
 Program  :   vlogfe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_Motor_Board.cyprj -dcpsoc3 -verilog BLDC_Motor_Board.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\davis\Documents\PSoC Creator\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_Motor_Board.cyprj -dcpsoc3 -verilog BLDC_Motor_Board.v
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Sat Apr 06 13:48:59 2024
+Sat Apr 13 12:58:21 2024
 
 
 ======================================================================
@@ -51,7 +51,7 @@ Options  :    -yv2 -q10 BLDC_Motor_Board.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Sat Apr 06 13:48:59 2024
+Sat Apr 13 12:58:21 2024
 
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'
@@ -91,11 +91,11 @@ vlogfe:  No errors.
 ======================================================================
 Compiling:  BLDC_Motor_Board.v
 Program  :   tovif
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_Motor_Board.cyprj -dcpsoc3 -verilog BLDC_Motor_Board.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\davis\Documents\PSoC Creator\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_Motor_Board.cyprj -dcpsoc3 -verilog BLDC_Motor_Board.v
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Sat Apr 06 13:48:59 2024
+Sat Apr 13 12:58:21 2024
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -106,9 +106,9 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\c
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\BLDC_Motor_Board.ctl'.
+Linking 'C:\Users\davis\Documents\PSoC Creator\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\BLDC_Motor_Board.ctl'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'.
-Linking 'C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\BLDC_Motor_Board.v'.
+Linking 'C:\Users\davis\Documents\PSoC Creator\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\BLDC_Motor_Board.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\not_v1_0\not_v1_0.v'.
@@ -126,11 +126,11 @@ tovif:  No errors.
 ======================================================================
 Compiling:  BLDC_Motor_Board.v
 Program  :   topld
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_Motor_Board.cyprj -dcpsoc3 -verilog BLDC_Motor_Board.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\davis\Documents\PSoC Creator\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_Motor_Board.cyprj -dcpsoc3 -verilog BLDC_Motor_Board.v
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Sat Apr 06 13:48:59 2024
+Sat Apr 13 12:58:21 2024
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -141,9 +141,9 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\c
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\BLDC_Motor_Board.ctl'.
+Linking 'C:\Users\davis\Documents\PSoC Creator\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\BLDC_Motor_Board.ctl'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'.
-Linking 'C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\BLDC_Motor_Board.v'.
+Linking 'C:\Users\davis\Documents\PSoC Creator\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\codegentemp\BLDC_Motor_Board.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\not_v1_0\not_v1_0.v'.
@@ -263,12 +263,14 @@ Aliasing \Address_Register:status_5\ to zero
 Aliasing \Address_Register:status_6\ to zero
 Aliasing \Address_Register:status_7\ to zero
 Aliasing tmpOE__DRV_EN_net_0 to tmpOE__HALL1_net_0
-Aliasing \TMC6100:tmpOE__ss_s_net_0\ to tmpOE__HALL1_net_0
+Aliasing \TMC6100:select_s_wire\ to zero
 Aliasing \TMC6100:rx_wire\ to zero
-Aliasing \TMC6100:miso_m_wire\ to zero
-Aliasing \TMC6100:tmpOE__miso_s_net_0\ to tmpOE__HALL1_net_0
-Aliasing \TMC6100:tmpOE__sclk_s_net_0\ to tmpOE__HALL1_net_0
-Aliasing \TMC6100:tmpOE__mosi_s_net_0\ to tmpOE__HALL1_net_0
+Aliasing \TMC6100:sclk_s_wire\ to zero
+Aliasing \TMC6100:mosi_s_wire\ to zero
+Aliasing \TMC6100:tmpOE__sclk_m_net_0\ to tmpOE__HALL1_net_0
+Aliasing \TMC6100:tmpOE__miso_m_net_0\ to tmpOE__HALL1_net_0
+Aliasing \TMC6100:tmpOE__mosi_m_net_0\ to tmpOE__HALL1_net_0
+Aliasing \TMC6100:tmpOE__ss0_m_net_0\ to tmpOE__HALL1_net_0
 Aliasing \TMC6100:cts_wire\ to zero
 Aliasing tmpOE__DIP_1_net_0 to tmpOE__HALL1_net_0
 Aliasing Net_12 to zero
@@ -356,17 +358,17 @@ Removing Lhs of wire \Address_Register:status_5\[223] = zero[2]
 Removing Lhs of wire \Address_Register:status_6\[224] = zero[2]
 Removing Lhs of wire \Address_Register:status_7\[225] = zero[2]
 Removing Lhs of wire tmpOE__DRV_EN_net_0[228] = tmpOE__HALL1_net_0[1]
-Removing Lhs of wire \TMC6100:tmpOE__ss_s_net_0\[236] = tmpOE__HALL1_net_0[1]
-Removing Lhs of wire \TMC6100:select_s_wire\[241] = \TMC6100:Net_1297\[237]
-Removing Lhs of wire \TMC6100:rx_wire\[242] = zero[2]
-Removing Lhs of wire \TMC6100:Net_1170\[245] = \TMC6100:Net_847\[234]
-Removing Rhs of wire \TMC6100:sclk_s_wire\[246] = \TMC6100:Net_1320\[247]
-Removing Rhs of wire \TMC6100:mosi_s_wire\[248] = \TMC6100:Net_252\[249]
-Removing Lhs of wire \TMC6100:miso_m_wire\[250] = zero[2]
-Removing Lhs of wire \TMC6100:tmpOE__miso_s_net_0\[252] = tmpOE__HALL1_net_0[1]
-Removing Lhs of wire \TMC6100:tmpOE__sclk_s_net_0\[261] = tmpOE__HALL1_net_0[1]
-Removing Lhs of wire \TMC6100:tmpOE__mosi_s_net_0\[266] = tmpOE__HALL1_net_0[1]
-Removing Lhs of wire \TMC6100:cts_wire\[270] = zero[2]
+Removing Lhs of wire \TMC6100:select_s_wire\[235] = zero[2]
+Removing Lhs of wire \TMC6100:rx_wire\[236] = zero[2]
+Removing Lhs of wire \TMC6100:Net_1170\[239] = \TMC6100:Net_847\[234]
+Removing Lhs of wire \TMC6100:sclk_s_wire\[240] = zero[2]
+Removing Lhs of wire \TMC6100:mosi_s_wire\[241] = zero[2]
+Removing Rhs of wire \TMC6100:miso_m_wire\[242] = \TMC6100:Net_467\[243]
+Removing Lhs of wire \TMC6100:tmpOE__sclk_m_net_0\[247] = tmpOE__HALL1_net_0[1]
+Removing Lhs of wire \TMC6100:tmpOE__miso_m_net_0\[254] = tmpOE__HALL1_net_0[1]
+Removing Lhs of wire \TMC6100:tmpOE__mosi_m_net_0\[259] = tmpOE__HALL1_net_0[1]
+Removing Lhs of wire \TMC6100:tmpOE__ss0_m_net_0\[266] = tmpOE__HALL1_net_0[1]
+Removing Lhs of wire \TMC6100:cts_wire\[272] = zero[2]
 Removing Lhs of wire tmpOE__DIP_1_net_0[297] = tmpOE__HALL1_net_0[1]
 Removing Lhs of wire Net_12[303] = zero[2]
 Removing Lhs of wire \Timer_Rotor_Delay:TimerUDB:ctrl_enable\[317] = \Timer_Rotor_Delay:TimerUDB:control_7\[309]
@@ -522,16 +524,16 @@ topld:  No errors.
 
 CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
-Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_Motor_Board.cyprj" -dcpsoc3 BLDC_Motor_Board.v -verilog
+Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\davis\Documents\PSoC Creator\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_Motor_Board.cyprj" -dcpsoc3 BLDC_Motor_Board.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 0s.864ms
+Warp synthesis phase: Elapsed time ==> 0s.684ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V4.4.0.80, Family: PSoC3, Started at: Saturday, 06 April 2024 13:49:00
-Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_Motor_Board.cyprj -d CY8C4248AZI-L485 BLDC_Motor_Board.v -verilog
+cyp3fit: V4.4.0.80, Family: PSoC3, Started at: Saturday, 13 April 2024 12:58:21
+Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\davis\Documents\PSoC Creator\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_Motor_Board.cyprj -d CY8C4248AZI-L485 BLDC_Motor_Board.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.019ms
+Design parsing phase: Elapsed time ==> 0s.011ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech Mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
@@ -1311,12 +1313,12 @@ Design Equations
     Pin : Name = DRV_EN(0)
         Attributes:
             In Group/Port: True
-            In Sync Option: NOSYNC
-            Out Sync Option: AUTO
+            In Sync Option: AUTO
+            Out Sync Option: NOSYNC
             Interrupt generated: False
             Interrupt mode: NONE
-            Drive mode: HI_Z_DIGITAL
-            VTrip: CMOS
+            Drive mode: CMOS_OUT
+            VTrip: EITHER
             Slew: FAST
             Input Sync needed: False
             Output Sync needed: False
@@ -1347,47 +1349,7 @@ Design Equations
         {
         }
 
-    Pin : Name = \TMC6100:ss_s(0)\
-        Attributes:
-            In Group/Port: True
-            In Sync Option: NOSYNC
-            Out Sync Option: AUTO
-            Interrupt generated: False
-            Interrupt mode: NONE
-            Drive mode: HI_Z_DIGITAL
-            VTrip: CMOS
-            Slew: FAST
-            Input Sync needed: False
-            Output Sync needed: False
-            SC shield enabled: False
-            POR State: ANY
-            LCD Mode: COMMON
-            Register Mode: RegComb
-            CaSense Mode: NEITHER
-            Treat as pin: True
-            Is OE Registered: False
-            Uses Analog: False
-            Can contain Digital: True
-            Is SIO: False
-            SIO Output Buf: NONREGULATED
-            SIO Input Buf: SINGLE_ENDED
-            SIO HiFreq: LOW
-            SIO Hyst: DISABLED
-            SIO Vtrip: MULTIPLIER_0_5
-            SIO Multiplier Index: 0
-            SIO RefSel: VCC_IO
-            Required Capabilities: DIGITAL
-            Initial Value: 0
-            IO Voltage: 0
-        PORT MAP (
-            pa_out => \TMC6100:ss_s(0)\__PA ,
-            fb => \TMC6100:Net_1297\ ,
-            pad => \TMC6100:ss_s(0)_PAD\ );
-        Properties:
-        {
-        }
-
-    Pin : Name = \TMC6100:miso_s(0)\
+    Pin : Name = \TMC6100:sclk_m(0)\
         Attributes:
             In Group/Port: True
             In Sync Option: NOSYNC
@@ -1420,14 +1382,14 @@ Design Equations
             Initial Value: 1
             IO Voltage: 0
         PORT MAP (
-            pa_out => \TMC6100:miso_s(0)\__PA ,
-            pin_input => \TMC6100:miso_s_wire\ ,
-            pad => \TMC6100:miso_s(0)_PAD\ );
+            pa_out => \TMC6100:sclk_m(0)\__PA ,
+            pin_input => \TMC6100:sclk_m_wire\ ,
+            pad => \TMC6100:sclk_m(0)_PAD\ );
         Properties:
         {
         }
 
-    Pin : Name = \TMC6100:sclk_s(0)\
+    Pin : Name = \TMC6100:miso_m(0)\
         Attributes:
             In Group/Port: True
             In Sync Option: NOSYNC
@@ -1460,21 +1422,21 @@ Design Equations
             Initial Value: 0
             IO Voltage: 0
         PORT MAP (
-            pa_out => \TMC6100:sclk_s(0)\__PA ,
-            fb => \TMC6100:sclk_s_wire\ ,
-            pad => \TMC6100:sclk_s(0)_PAD\ );
+            pa_out => \TMC6100:miso_m(0)\__PA ,
+            fb => \TMC6100:miso_m_wire\ ,
+            pad => \TMC6100:miso_m(0)_PAD\ );
         Properties:
         {
         }
 
-    Pin : Name = \TMC6100:mosi_s(0)\
+    Pin : Name = \TMC6100:mosi_m(0)\
         Attributes:
             In Group/Port: True
             In Sync Option: NOSYNC
-            Out Sync Option: AUTO
+            Out Sync Option: NOSYNC
             Interrupt generated: False
             Interrupt mode: NONE
-            Drive mode: HI_Z_DIGITAL
+            Drive mode: CMOS_OUT
             VTrip: CMOS
             Slew: FAST
             Input Sync needed: False
@@ -1497,12 +1459,52 @@ Design Equations
             SIO Multiplier Index: 0
             SIO RefSel: VCC_IO
             Required Capabilities: DIGITAL
-            Initial Value: 0
+            Initial Value: 1
             IO Voltage: 0
         PORT MAP (
-            pa_out => \TMC6100:mosi_s(0)\__PA ,
-            fb => \TMC6100:mosi_s_wire\ ,
-            pad => \TMC6100:mosi_s(0)_PAD\ );
+            pa_out => \TMC6100:mosi_m(0)\__PA ,
+            pin_input => \TMC6100:mosi_m_wire\ ,
+            pad => \TMC6100:mosi_m(0)_PAD\ );
+        Properties:
+        {
+        }
+
+    Pin : Name = \TMC6100:ss0_m(0)\
+        Attributes:
+            In Group/Port: True
+            In Sync Option: NOSYNC
+            Out Sync Option: NOSYNC
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: CMOS_OUT
+            VTrip: CMOS
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO Multiplier Index: 0
+            SIO RefSel: VCC_IO
+            Required Capabilities: DIGITAL
+            Initial Value: 1
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => \TMC6100:ss0_m(0)\__PA ,
+            pin_input => \TMC6100:select_m_wire_0\ ,
+            pad => \TMC6100:ss0_m(0)_PAD\ );
         Properties:
         {
         }
@@ -2371,8 +2373,8 @@ DAC                           :      :      :      :
   7-bit IDAC                  :    0 :    2 :    2 :  0.00 %
   8-bit IDAC                  :    0 :    2 :    2 :  0.00 %
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 0s.241ms
-Tech Mapping phase: Elapsed time ==> 0s.281ms
+Technology Mapping: Elapsed time ==> 0s.081ms
+Tech Mapping phase: Elapsed time ==> 0s.106ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 <CYPRESSTAG name="FFB & IO Pre Placement">
@@ -2399,10 +2401,10 @@ DEBUG_LED(0)                        : [IOP=(6)][IoId=(5)]
 \Current_Sensor_I2C:scl(0)\         : [IOP=(5)][IoId=(0)]                
 CAN_LED(0)                          : [IOP=(6)][IoId=(4)]                
 DRV_EN(0)                           : [IOP=(5)][IoId=(2)]                
-\TMC6100:ss_s(0)\                   : [IOP=(2)][IoId=(3)]                
-\TMC6100:miso_s(0)\                 : [IOP=(2)][IoId=(1)]                
-\TMC6100:sclk_s(0)\                 : [IOP=(2)][IoId=(2)]                
-\TMC6100:mosi_s(0)\                 : [IOP=(2)][IoId=(0)]                
+\TMC6100:sclk_m(0)\                 : [IOP=(2)][IoId=(2)]                
+\TMC6100:miso_m(0)\                 : [IOP=(2)][IoId=(1)]                
+\TMC6100:mosi_m(0)\                 : [IOP=(2)][IoId=(0)]                
+\TMC6100:ss0_m(0)\                  : [IOP=(2)][IoId=(3)]                
 DIP_1(0)                            : [IOP=(3)][IoId=(4)]                
 Pin_Limit_2(0)                      : [IOP=(3)][IoId=(1)]                
 Pin_Limit_1(0)                      : [IOP=(3)][IoId=(0)]                
@@ -2422,15 +2424,15 @@ ClockGenBlock                       : CLK_GEN_[FFB(CLK_GEN,0)]
 </CYPRESSTAG>
 </CYPRESSTAG>
 <CYPRESSTAG name="Real Analog Placement">
-Elapsed time ==> 0.3053860s
+Elapsed time ==> 0.2798148s
 </CYPRESSTAG>
-Analog Placement phase: Elapsed time ==> 0s.673ms
+Analog Placement phase: Elapsed time ==> 0s.646ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
 <CYPRESSTAG name="Analog Routing">
-Route success=True, Iterations=1 Elapsed=0.0008272 secs
+Route success=True, Iterations=1 Elapsed=0.0007859 secs
 </CYPRESSTAG>
-Analog Routing phase: Elapsed time ==> 0s.000ms
+Analog Routing phase: Elapsed time ==> 0s.002ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Code Generation">
 ============ Analog Final Answer Routes ============
@@ -2441,11 +2443,11 @@ Map of item to net {
 }
 Mux Info {
 }
-Analog Code Generation phase: Elapsed time ==> 0s.020ms
+Analog Code Generation phase: Elapsed time ==> 0s.011ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
-I2076: Total run-time: 0.5 sec.
+I2076: Total run-time: 0.3 sec.
 
 </CYPRESSTAG>
 <CYPRESSTAG name="PLD Packing">
@@ -2476,7 +2478,7 @@ PLD Packing: Elapsed time ==> 0s.000ms
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-Partitioning: Elapsed time ==> 0s.040ms
+Partitioning: Elapsed time ==> 0s.027ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Final Placement Summary">
 
@@ -3284,48 +3286,7 @@ Pin : Name = UH(0)
 
 Port 2 contains the following IO cells:
 [IoId=0]: 
-Pin : Name = \TMC6100:mosi_s(0)\
-    Attributes:
-        In Group/Port: True
-        In Sync Option: NOSYNC
-        Out Sync Option: AUTO
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: HI_Z_DIGITAL
-        VTrip: CMOS
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: False
-        Can contain Digital: True
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilities: DIGITAL
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => \TMC6100:mosi_s(0)\__PA ,
-        fb => \TMC6100:mosi_s_wire\ ,
-        pad => \TMC6100:mosi_s(0)_PAD\ );
-    Properties:
-    {
-    }
-
-[IoId=1]: 
-Pin : Name = \TMC6100:miso_s(0)\
+Pin : Name = \TMC6100:mosi_m(0)\
     Attributes:
         In Group/Port: True
         In Sync Option: NOSYNC
@@ -3358,22 +3319,63 @@ Pin : Name = \TMC6100:miso_s(0)\
         Initial Value: 1
         IO Voltage: 0
     PORT MAP (
-        pa_out => \TMC6100:miso_s(0)\__PA ,
-        pin_input => \TMC6100:miso_s_wire\ ,
-        pad => \TMC6100:miso_s(0)_PAD\ );
+        pa_out => \TMC6100:mosi_m(0)\__PA ,
+        pin_input => \TMC6100:mosi_m_wire\ ,
+        pad => \TMC6100:mosi_m(0)_PAD\ );
+    Properties:
+    {
+    }
+
+[IoId=1]: 
+Pin : Name = \TMC6100:miso_m(0)\
+    Attributes:
+        In Group/Port: True
+        In Sync Option: NOSYNC
+        Out Sync Option: AUTO
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: HI_Z_DIGITAL
+        VTrip: CMOS
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => \TMC6100:miso_m(0)\__PA ,
+        fb => \TMC6100:miso_m_wire\ ,
+        pad => \TMC6100:miso_m(0)_PAD\ );
     Properties:
     {
     }
 
 [IoId=2]: 
-Pin : Name = \TMC6100:sclk_s(0)\
+Pin : Name = \TMC6100:sclk_m(0)\
     Attributes:
         In Group/Port: True
         In Sync Option: NOSYNC
-        Out Sync Option: AUTO
+        Out Sync Option: NOSYNC
         Interrupt generated: False
         Interrupt mode: NONE
-        Drive mode: HI_Z_DIGITAL
+        Drive mode: CMOS_OUT
         VTrip: CMOS
         Slew: FAST
         Input Sync needed: False
@@ -3396,25 +3398,25 @@ Pin : Name = \TMC6100:sclk_s(0)\
         SIO Multiplier Index: 0
         SIO RefSel: VCC_IO
         Required Capabilities: DIGITAL
-        Initial Value: 0
+        Initial Value: 1
         IO Voltage: 0
     PORT MAP (
-        pa_out => \TMC6100:sclk_s(0)\__PA ,
-        fb => \TMC6100:sclk_s_wire\ ,
-        pad => \TMC6100:sclk_s(0)_PAD\ );
+        pa_out => \TMC6100:sclk_m(0)\__PA ,
+        pin_input => \TMC6100:sclk_m_wire\ ,
+        pad => \TMC6100:sclk_m(0)_PAD\ );
     Properties:
     {
     }
 
 [IoId=3]: 
-Pin : Name = \TMC6100:ss_s(0)\
+Pin : Name = \TMC6100:ss0_m(0)\
     Attributes:
         In Group/Port: True
         In Sync Option: NOSYNC
-        Out Sync Option: AUTO
+        Out Sync Option: NOSYNC
         Interrupt generated: False
         Interrupt mode: NONE
-        Drive mode: HI_Z_DIGITAL
+        Drive mode: CMOS_OUT
         VTrip: CMOS
         Slew: FAST
         Input Sync needed: False
@@ -3437,12 +3439,12 @@ Pin : Name = \TMC6100:ss_s(0)\
         SIO Multiplier Index: 0
         SIO RefSel: VCC_IO
         Required Capabilities: DIGITAL
-        Initial Value: 0
+        Initial Value: 1
         IO Voltage: 0
     PORT MAP (
-        pa_out => \TMC6100:ss_s(0)\__PA ,
-        fb => \TMC6100:Net_1297\ ,
-        pad => \TMC6100:ss_s(0)_PAD\ );
+        pa_out => \TMC6100:ss0_m(0)\__PA ,
+        pin_input => \TMC6100:select_m_wire_0\ ,
+        pad => \TMC6100:ss0_m(0)_PAD\ );
     Properties:
     {
     }
@@ -4024,12 +4026,12 @@ Pin : Name = \Current_Sensor_I2C:sda(0)\
 Pin : Name = DRV_EN(0)
     Attributes:
         In Group/Port: True
-        In Sync Option: NOSYNC
-        Out Sync Option: AUTO
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
         Interrupt generated: False
         Interrupt mode: NONE
-        Drive mode: HI_Z_DIGITAL
-        VTrip: CMOS
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
         Slew: FAST
         Input Sync needed: False
         Output Sync needed: False
@@ -4374,15 +4376,13 @@ SCB group 0:
             uart_tx => \TMC6100:tx_wire\ ,
             uart_rts => \TMC6100:rts_wire\ ,
             mosi_m => \TMC6100:mosi_m_wire\ ,
+            miso_m => \TMC6100:miso_m_wire\ ,
             select_m_3 => \TMC6100:select_m_wire_3\ ,
             select_m_2 => \TMC6100:select_m_wire_2\ ,
             select_m_1 => \TMC6100:select_m_wire_1\ ,
             select_m_0 => \TMC6100:select_m_wire_0\ ,
             sclk_m => \TMC6100:sclk_m_wire\ ,
-            mosi_s => \TMC6100:mosi_s_wire\ ,
             miso_s => \TMC6100:miso_s_wire\ ,
-            select_s => \TMC6100:Net_1297\ ,
-            sclk_s => \TMC6100:sclk_s_wire\ ,
             tr_tx_req => Net_592 ,
             tr_rx_req => Net_583 );
         Properties:
@@ -4445,77 +4445,77 @@ Port Configuration report
 ------------------------------------------------------------
      |     |       | Interrupt |                  |                             | 
 Port | Pin | Fixed |      Type |       Drive Mode |                        Name | Connections
------+-----+-------+-----------+------------------+-----------------------------+--------------------------
+-----+-----+-------+-----------+------------------+-----------------------------+------------------------------
    0 |   0 |     * |      NONE |     HI_Z_DIGITAL |                     RX_1(0) | FB(Net_11)
      |   1 |     * |      NONE |         CMOS_OUT |                     TX_1(0) | In(Net_83)
------+-----+-------+-----------+------------------+-----------------------------+--------------------------
+-----+-----+-------+-----------+------------------+-----------------------------+------------------------------
    1 |   0 |     * |      NONE |         CMOS_OUT |                       WL(0) | 
      |   1 |     * |      NONE |         CMOS_OUT |                       WH(0) | 
      |   2 |     * |      NONE |         CMOS_OUT |                       VL(0) | 
      |   3 |     * |      NONE |         CMOS_OUT |                       VH(0) | 
      |   4 |     * |      NONE |         CMOS_OUT |                       UL(0) | 
      |   5 |     * |      NONE |         CMOS_OUT |                       UH(0) | 
------+-----+-------+-----------+------------------+-----------------------------+--------------------------
-   2 |   0 |     * |      NONE |     HI_Z_DIGITAL |         \TMC6100:mosi_s(0)\ | FB(\TMC6100:mosi_s_wire\)
-     |   1 |     * |      NONE |         CMOS_OUT |         \TMC6100:miso_s(0)\ | In(\TMC6100:miso_s_wire\)
-     |   2 |     * |      NONE |     HI_Z_DIGITAL |         \TMC6100:sclk_s(0)\ | FB(\TMC6100:sclk_s_wire\)
-     |   3 |     * |      NONE |     HI_Z_DIGITAL |           \TMC6100:ss_s(0)\ | FB(\TMC6100:Net_1297\)
+-----+-----+-------+-----------+------------------+-----------------------------+------------------------------
+   2 |   0 |     * |      NONE |         CMOS_OUT |         \TMC6100:mosi_m(0)\ | In(\TMC6100:mosi_m_wire\)
+     |   1 |     * |      NONE |     HI_Z_DIGITAL |         \TMC6100:miso_m(0)\ | FB(\TMC6100:miso_m_wire\)
+     |   2 |     * |      NONE |         CMOS_OUT |         \TMC6100:sclk_m(0)\ | In(\TMC6100:sclk_m_wire\)
+     |   3 |     * |      NONE |         CMOS_OUT |          \TMC6100:ss0_m(0)\ | In(\TMC6100:select_m_wire_0\)
      |   4 |     * |      NONE |         CMOS_OUT |                    HALL1(0) | 
      |   5 |     * |      NONE |         CMOS_OUT |                    HALL2(0) | 
      |   6 |     * |      NONE |         CMOS_OUT |                    HALL3(0) | 
      |   7 |     * |      NONE |         CMOS_OUT |                ERROR_LED(0) | 
------+-----+-------+-----------+------------------+-----------------------------+--------------------------
+-----+-----+-------+-----------+------------------+-----------------------------+------------------------------
    3 |   0 |     * |      NONE |      RES_PULL_UP |              Pin_Limit_1(0) | FB(Net_1365)
      |   1 |     * |      NONE |      RES_PULL_UP |              Pin_Limit_2(0) | FB(Net_1363)
      |   4 |     * |      NONE |     HI_Z_DIGITAL |                    DIP_1(0) | FB(Net_266)
      |   5 |     * |      NONE |     HI_Z_DIGITAL |                    DIP_2(0) | FB(Net_1610)
      |   6 |     * |      NONE |     HI_Z_DIGITAL |                    DIP_3(0) | FB(Net_1611)
      |   7 |     * |      NONE |     HI_Z_DIGITAL |                    DIP_4(0) | FB(Net_1612)
------+-----+-------+-----------+------------------+-----------------------------+--------------------------
+-----+-----+-------+-----------+------------------+-----------------------------+------------------------------
    4 |   0 |     * |      NONE |     HI_Z_DIGITAL |                \UART:rx(0)\ | FB(\UART:rx_wire\)
      |   1 |     * |      NONE |         CMOS_OUT |                \UART:tx(0)\ | In(\UART:tx_wire\)
------+-----+-------+-----------+------------------+-----------------------------+--------------------------
+-----+-----+-------+-----------+------------------+-----------------------------+------------------------------
    5 |   0 |     * |      NONE |    OPEN_DRAIN_LO | \Current_Sensor_I2C:scl(0)\ | FB(Net_568)
      |   1 |     * |      NONE |    OPEN_DRAIN_LO | \Current_Sensor_I2C:sda(0)\ | FB(Net_569)
-     |   2 |     * |      NONE |     HI_Z_DIGITAL |                   DRV_EN(0) | 
+     |   2 |     * |      NONE |         CMOS_OUT |                   DRV_EN(0) | 
      |   3 |     * |      NONE |     HI_Z_DIGITAL |                    FAULT(0) | 
------+-----+-------+-----------+------------------+-----------------------------+--------------------------
+-----+-----+-------+-----------+------------------+-----------------------------+------------------------------
    6 |   0 |     * |      NONE |     HI_Z_DIGITAL |              Cur_Alert_3(0) | 
      |   1 |     * |      NONE |     HI_Z_DIGITAL |              Cur_Alert_2(0) | 
      |   2 |     * |      NONE |     HI_Z_DIGITAL |              Cur_Alert_1(0) | 
      |   4 |     * |      NONE |         CMOS_OUT |                  CAN_LED(0) | 
      |   5 |     * |      NONE |         CMOS_OUT |                DEBUG_LED(0) | 
------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 </CYPRESSTAG>
 </CYPRESSTAG>
 </CYPRESSTAG>
-Digital component placer commit/Report: Elapsed time ==> 0s.170ms
-Digital Placement phase: Elapsed time ==> 1s.858ms
+Digital component placer commit/Report: Elapsed time ==> 0s.042ms
+Digital Placement phase: Elapsed time ==> 0s.513ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\bin/sjrouter.exe" --xml-path "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc4/2/route_arch-rrg.cydata" --vh2-path "BLDC_Motor_Board_r.vh2" --pcf-path "BLDC_Motor_Board.pco" --des-name "BLDC_Motor_Board" --dsf-path "BLDC_Motor_Board.dsf" --sdc-path "BLDC_Motor_Board.sdc" --lib-path "BLDC_Motor_Board_r.lib"
 Routing successful.
-Digital Routing phase: Elapsed time ==> 1s.948ms
+Digital Routing phase: Elapsed time ==> 0s.736ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Generation">
-Bitstream Generation phase: Elapsed time ==> 0s.260ms
+Bitstream Generation phase: Elapsed time ==> 0s.215ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Verification">
-Bitstream Verification phase: Elapsed time ==> 0s.030ms
+Bitstream Verification phase: Elapsed time ==> 0s.015ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in BLDC_Motor_Board_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.974ms
+Static timing analysis phase: Elapsed time ==> 0s.175ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
 Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.150ms
+Design database save phase: Elapsed time ==> 0s.149ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 6s.228ms
+cydsfit: Elapsed time ==> 2s.642ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 6s.228ms
-API generation phase: Elapsed time ==> 2s.958ms
-Dependency generation phase: Elapsed time ==> 0s.010ms
-Cleanup phase: Elapsed time ==> 0s.000ms
+Fitter phase: Elapsed time ==> 2s.643ms
+API generation phase: Elapsed time ==> 2s.604ms
+Dependency generation phase: Elapsed time ==> 0s.012ms
+Cleanup phase: Elapsed time ==> 0s.001ms

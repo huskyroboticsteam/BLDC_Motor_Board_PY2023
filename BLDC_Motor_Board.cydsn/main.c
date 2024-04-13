@@ -19,6 +19,7 @@
 #include "BLDC_SPI.h"
 #include "HindsightCAN/CANLibrary.h"
 #include <math.h>
+#include <stdlib.h>
 
 // Side delay
 int16_t counter = 0;
@@ -55,6 +56,11 @@ CANPacket can_recieve;
 CANPacket can_send;
 
 uint8_t address = 0;
+
+#define Print(message) UART_UartPutString(message)
+#define PrintChar(character) UART_UartPutChar(character)
+#define PrintInt(integer) UART_UartPutString(itoa(integer, txData, 10))
+#define PrintIntBin(integer) UART_UartPutString(itoa(integer, txData, 2))
 
 CY_ISR(Period_Reset_Handler) {
     invalidate++;
@@ -113,25 +119,35 @@ int main(void)
     Initialize();
     
     CyDelay(10);
-    uint8 data[5] = {1,0,0,0,0};
-    // set chip select high
-    TMC6100_SpiUartPutArray(data, 5);
+    
     // set chip select low
+    TMC6100_SpiSetSlaveSelectPolarity(0, 0);
+    
+    // send message 0x0000 to addr 1
+    uint8 data[4] = {0,0,0,0};
+    uint8 addr[1] = {1};
+    TMC6100_SpiUartPutArray(addr, 1);
+    TMC6100_SpiUartPutArray(data, 4);
+    CyDelay(10);
+    // read response
     uint32 gstat = TMC6100_SpiUartReadRxData();
-    // PrintIntBinary(gstat);
+    
+    // set chip select high
+    TMC6100_SpiSetSlaveSelectPolarity(0, 1);
+    PrintIntBin(gstat);
     
     for(;;)
     {
         //set_speed(1000*(1-cos(6.28 * delay * counter / 1000 / period)), 0);
         //set_speed(0, 0);
-        /*
-        UH_Write(0);
+        
+        /*UH_Write(1);
         UL_Write(0);
-        VH_Write(1);
-        VL_Write(0);
+        VH_Write(0);
+        VL_Write(1);
         WH_Write(0);
-        WL_Write(1);
-        */
+        WL_Write(0);*/
+        
         /*UH_Write(0);
         UL_Write(1);
         VH_Write(1);
@@ -140,14 +156,22 @@ int main(void)
         WL_Write(0); // not work
 */
         //                     WL,WH,VL,VH,UL,UH
-/*        uint8_t rotorStates[6] = {0b001001, 
+        // none work
+        /*uint8_t rotorStates[6] = {0b001001, 
                                   0b011000, 
                                   0b010010,
-                                  0b000110, // not work?
-                                  0b100100, // work? not work?
+                                  0b000110,
+                                  0b100100,
+                                  0b100001};
+        
+        uint8_t rotorStates[6] = {0b100100, 
+                                  0b000110, 
+                                  0b010010,
+                                  0b011000,
+                                  0b001001,
                                   0b100001};
 
-        uint8_t state = rotorStates[4];
+        uint8_t state = rotorStates[0];
     
         // write registers in UVW
         UH_Write((state & (1 << 0)) != 0);
@@ -155,8 +179,20 @@ int main(void)
         VH_Write((state & (1 << 2)) != 0);
         VL_Write((state & (1 << 3)) != 0);
         WH_Write((state & (1 << 4)) != 0);
-        WL_Write((state & (1 << 5)) != 0);
-        */
+        WL_Write((state & (1 << 5)) != 0);*/
+        
+        
+            TMC6100_SpiSetSlaveSelectPolarity(0, 0);
+    
+    // send message 0x0000 to addr 1
+    uint8 data[4] = {0,0,0,0};
+    uint8 addr[1] = {1};
+    TMC6100_SpiUartPutArray(addr, 1);
+    TMC6100_SpiUartPutArray(data, 4);
+    CyDelay(10);
+    // read response
+    uint32 gstat = TMC6100_SpiUartReadRxData();
+        
         
         counter++;
         CyDelay(delay);
@@ -235,6 +271,7 @@ void Initialize(void) {
     // Initialize protocols
     InitCAN(0x4, (int)address);
     TMC6100_Start();
+    DRV_EN_Write(255);
     Current_Sensor_I2C_Start();
     UART_Start();
     Timer_Rotor_Delay_Start();   

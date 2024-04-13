@@ -26,7 +26,7 @@
 *   SPI Initial Parameter Constants
 ****************************************/
 
-#define TMC6100_SPI_MODE                   (0u)
+#define TMC6100_SPI_MODE                   (1u)
 #define TMC6100_SPI_SUB_MODE               (0u)
 #define TMC6100_SPI_CLOCK_MODE             (0u)
 #define TMC6100_SPI_OVS_FACTOR             (16u)

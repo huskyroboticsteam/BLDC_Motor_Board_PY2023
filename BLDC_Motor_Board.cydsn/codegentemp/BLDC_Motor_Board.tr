@@ -31,8 +31,8 @@ Clock: CyIMO                           | N/A                   | Target: 48.00 M
 Clock: CyLFClk                         | N/A                   | Target: 0.03 MHz   | 
 Clock: CyRouted1                       | N/A                   | Target: 40.00 MHz  | 
 Clock: CySysClk                        | N/A                   | Target: 40.00 MHz  | 
-Clock: TMC6100_SCBCLK                  | N/A                   | Target: 20.00 MHz  | 
-Clock: TMC6100_SCBCLK(FFB)             | N/A                   | Target: 20.00 MHz  | 
+Clock: TMC6100_SCBCLK                  | N/A                   | Target: 13.33 MHz  | 
+Clock: TMC6100_SCBCLK(FFB)             | N/A                   | Target: 13.33 MHz  | 
 Clock: UART_SCBCLK                     | N/A                   | Target: 1.38 MHz   | 
 Clock: UART_SCBCLK(FFB)                | N/A                   | Target: 1.38 MHz   | 
 

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
   33 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
   34              		.cfi_def_cfa_offset 24
   35              		.cfi_offset 3, -24
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 2
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 2
 
 
   36              		.cfi_offset 4, -20
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
   81              		.global	GetGPIOPWMChannelFromPacket
   82              		.code	16
   83              		.thumb_func
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 3
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 3
 
 
   84              		.type	GetGPIOPWMChannelFromPacket, %function
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  127              		.loc 1 42 0
  128              		@ sp needed
  129 000e 10BD     		pop	{r4, pc}
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 4
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 4
 
 
  130              		.cfi_endproc
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
   59:HindsightCAN/CANGPIO.c ****     int nextByte = WritePacketIDOnly(packetToAssemble->data, ID_GPIO_PWM_DUTY_CYCLE);
  168              		.loc 1 59 0
  169 0016 E51C     		adds	r5, r4, #3
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 5
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 5
 
 
  170 0018 0121     		movs	r1, #1
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  216 000c 80B2     		uxth	r0, r0
   68:HindsightCAN/CANGPIO.c **** }
  217              		.loc 1 68 0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 6
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 6
 
 
  218              		@ sp needed
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
   85:HindsightCAN/CANGPIO.c **** 
   86:HindsightCAN/CANGPIO.c ****     int nextByte = WritePacketIDOnly(packetToAssemble->data, ID_GPIO_ADC_STATE);
  256              		.loc 1 86 0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 7
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 7
 
 
  257 0016 E01C     		adds	r0, r4, #3
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  303              		.thumb_func
  304              		.type	GetGPIOADCStateFromPacket, %function
  305              	GetGPIOADCStateFromPacket:
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 8
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 8
 
 
  306              	.LFB7:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  340              		.cfi_offset 6, -12
  341              		.cfi_offset 7, -8
  342              		.cfi_offset 14, -4
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 9
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 9
 
 
  343 0002 0400     		movs	r4, r0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  387              		.align	2
  388              		.global	GetGPIORegisterFromPacket
  389              		.code	16
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 10
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 10
 
 
  390              		.thumb_func
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  434              		.global	GetGPIOBitConfigFromPacket
  435              		.code	16
  436              		.thumb_func
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 11
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 11
 
 
  437              		.type	GetGPIOBitConfigFromPacket, %function
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  471              		.cfi_offset 4, -20
  472              		.cfi_offset 5, -16
  473              		.cfi_offset 6, -12
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 12
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 12
 
 
  474              		.cfi_offset 7, -8
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  518              		.size	AssembleGPIOWrite, .-AssembleGPIOWrite
  519              		.section	.text.GetGPIOWriteValuesFromPacket,"ax",%progbits
  520              		.align	2
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 13
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 13
 
 
  521              		.global	GetGPIOWriteValuesFromPacket
@@ -762,15 +762,15 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  553 000b 01       		.uleb128 0x1
  554 000c 75000000 		.4byte	.LASF48
  555 0010 0C       		.byte	0xc
- 556 0011 30040000 		.4byte	.LASF49
- 557 0015 D4020000 		.4byte	.LASF50
+ 556 0011 21040000 		.4byte	.LASF49
+ 557 0015 17020000 		.4byte	.LASF50
  558 0019 00000000 		.4byte	.Ldebug_ranges0+0
  559 001d 00000000 		.4byte	0
  560 0021 00000000 		.4byte	.Ldebug_line0
  561 0025 02       		.uleb128 0x2
  562 0026 01       		.byte	0x1
  563 0027 06       		.byte	0x6
- 564 0028 17020000 		.4byte	.LASF0
+ 564 0028 6C020000 		.4byte	.LASF0
  565 002c 03       		.uleb128 0x3
  566 002d E2010000 		.4byte	.LASF3
  567 0031 02       		.byte	0x2
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  569 0033 37000000 		.4byte	0x37
  570 0037 02       		.uleb128 0x2
  571 0038 01       		.byte	0x1
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 14
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 14
 
 
  572 0039 08       		.byte	0x8
@@ -795,7 +795,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  583 0050 02       		.uleb128 0x2
  584 0051 02       		.byte	0x2
  585 0052 07       		.byte	0x7
- 586 0053 99020000 		.4byte	.LASF5
+ 586 0053 EE020000 		.4byte	.LASF5
  587 0057 02       		.uleb128 0x2
  588 0058 04       		.byte	0x4
  589 0059 05       		.byte	0x5
@@ -803,7 +803,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  591 005e 02       		.uleb128 0x2
  592 005f 04       		.byte	0x4
  593 0060 07       		.byte	0x7
- 594 0061 4F030000 		.4byte	.LASF7
+ 594 0061 40030000 		.4byte	.LASF7
  595 0065 02       		.uleb128 0x2
  596 0066 08       		.byte	0x8
  597 0067 05       		.byte	0x5
@@ -811,7 +811,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  599 006c 02       		.uleb128 0x2
  600 006d 08       		.byte	0x8
  601 006e 07       		.byte	0x7
- 602 006f 23020000 		.4byte	.LASF9
+ 602 006f 78020000 		.4byte	.LASF9
  603 0073 04       		.uleb128 0x4
  604 0074 04       		.byte	0x4
  605 0075 05       		.byte	0x5
@@ -819,14 +819,14 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  607 007a 02       		.uleb128 0x2
  608 007b 04       		.byte	0x4
  609 007c 07       		.byte	0x7
- 610 007d 5D020000 		.4byte	.LASF10
+ 610 007d B2020000 		.4byte	.LASF10
  611 0081 03       		.uleb128 0x3
  612 0082 03010000 		.4byte	.LASF11
  613 0086 03       		.byte	0x3
  614 0087 18       		.byte	0x18
  615 0088 2C000000 		.4byte	0x2c
  616 008c 03       		.uleb128 0x3
- 617 008d 6A020000 		.4byte	.LASF12
+ 617 008d BF020000 		.4byte	.LASF12
  618 0091 03       		.byte	0x3
  619 0092 24       		.byte	0x24
  620 0093 45000000 		.4byte	0x45
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  626 009f 06       		.uleb128 0x6
  627 00a0 696400   		.ascii	"id\000"
  628 00a3 04       		.byte	0x4
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 15
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 15
 
 
  629 00a4 11       		.byte	0x11
@@ -851,7 +851,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  636 00b1 81000000 		.4byte	0x81
  637 00b5 02       		.byte	0x2
  638 00b6 07       		.uleb128 0x7
- 639 00b7 38030000 		.4byte	.LASF13
+ 639 00b7 29030000 		.4byte	.LASF13
  640 00bb 04       		.byte	0x4
  641 00bc 13       		.byte	0x13
  642 00bd C3000000 		.4byte	0xc3
@@ -889,16 +889,16 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  674 0101 97010000 		.4byte	0x197
  675 0105 00000000 		.4byte	.LLST0
  676 0109 0B       		.uleb128 0xb
- 677 010a 73020000 		.4byte	.LASF17
+ 677 010a C8020000 		.4byte	.LASF17
  678 010e 01       		.byte	0x1
  679 010f 13       		.byte	0x13
  680 0110 81000000 		.4byte	0x81
  681 0114 39000000 		.4byte	.LLST1
  682 0118 0B       		.uleb128 0xb
- 683 0119 B7020000 		.4byte	.LASF18
+ 683 0119 0C030000 		.4byte	.LASF18
  684 011d 01       		.byte	0x1
  685 011e 14       		.byte	0x14
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 16
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 16
 
 
  686 011f 81000000 		.4byte	0x81
@@ -910,7 +910,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  692 012e 81000000 		.4byte	0x81
  693 0132 7B000000 		.4byte	.LLST3
  694 0136 0B       		.uleb128 0xb
- 695 0137 D7030000 		.4byte	.LASF20
+ 695 0137 C8030000 		.4byte	.LASF20
  696 013b 01       		.byte	0x1
  697 013c 16       		.byte	0x16
  698 013d 8C000000 		.4byte	0x8c
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  740 018e 00       		.sleb128 0
  741 018f 0E       		.uleb128 0xe
  742 0190 01       		.uleb128 0x1
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 17
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 17
 
 
  743 0191 51       		.byte	0x51
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  797 0200 0E       		.uleb128 0xe
  798 0201 01       		.uleb128 0x1
  799 0202 51       		.byte	0x51
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 18
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 18
 
 
  800 0203 01       		.uleb128 0x1
@@ -1031,7 +1031,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  807 020a 00       		.byte	0
  808 020b 00       		.byte	0
  809 020c 0A       		.uleb128 0xa
- 810 020d B5030000 		.4byte	.LASF25
+ 810 020d A6030000 		.4byte	.LASF25
  811 0211 01       		.byte	0x1
  812 0212 32       		.byte	0x32
  813 0213 00000000 		.4byte	.LFB3
@@ -1046,13 +1046,13 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  822 0228 97010000 		.4byte	0x197
  823 022c 35010000 		.4byte	.LLST8
  824 0230 0B       		.uleb128 0xb
- 825 0231 73020000 		.4byte	.LASF17
+ 825 0231 C8020000 		.4byte	.LASF17
  826 0235 01       		.byte	0x1
  827 0236 33       		.byte	0x33
  828 0237 81000000 		.4byte	0x81
  829 023b 6E010000 		.4byte	.LLST9
  830 023f 0B       		.uleb128 0xb
- 831 0240 B7020000 		.4byte	.LASF18
+ 831 0240 0C030000 		.4byte	.LASF18
  832 0244 01       		.byte	0x1
  833 0245 34       		.byte	0x34
  834 0246 81000000 		.4byte	0x81
@@ -1064,7 +1064,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  840 0255 81000000 		.4byte	0x81
  841 0259 B0010000 		.4byte	.LLST11
  842 025d 0B       		.uleb128 0xb
- 843 025e CA020000 		.4byte	.LASF26
+ 843 025e 1F030000 		.4byte	.LASF26
  844 0262 01       		.byte	0x1
  845 0263 36       		.byte	0x36
  846 0264 8C000000 		.4byte	0x8c
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  854 027b 0D       		.uleb128 0xd
  855 027c 10000000 		.4byte	.LVL17
  856 0280 E0050000 		.4byte	0x5e0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 19
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 19
 
 
  857 0284 8E020000 		.4byte	0x28e
@@ -1122,7 +1122,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  895 02bc 00       		.byte	0
  896 02bd 00       		.byte	0
  897 02be 11       		.uleb128 0x11
- 898 02bf 85020000 		.4byte	.LASF28
+ 898 02bf DA020000 		.4byte	.LASF28
  899 02c3 01       		.byte	0x1
  900 02c4 42       		.byte	0x42
  901 02c5 8C000000 		.4byte	0x8c
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  911 02de 97010000 		.4byte	0x197
  912 02e2 1B020000 		.4byte	.LLST14
  913 02e6 0F       		.uleb128 0xf
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 20
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 20
 
 
  914 02e7 0C000000 		.4byte	.LVL25
@@ -1165,7 +1165,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  935 0302 00       		.byte	0
  936 0303 00       		.byte	0
  937 0304 0A       		.uleb128 0xa
- 938 0305 0B040000 		.4byte	.LASF29
+ 938 0305 FC030000 		.4byte	.LASF29
  939 0309 01       		.byte	0x1
  940 030a 4D       		.byte	0x4d
  941 030b 00000000 		.4byte	.LFB5
@@ -1180,25 +1180,25 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  950 0320 97010000 		.4byte	0x197
  951 0324 49020000 		.4byte	.LLST15
  952 0328 0B       		.uleb128 0xb
- 953 0329 73020000 		.4byte	.LASF17
+ 953 0329 C8020000 		.4byte	.LASF17
  954 032d 01       		.byte	0x1
  955 032e 4E       		.byte	0x4e
  956 032f 81000000 		.4byte	0x81
  957 0333 75020000 		.4byte	.LLST16
  958 0337 0B       		.uleb128 0xb
- 959 0338 B7020000 		.4byte	.LASF18
+ 959 0338 0C030000 		.4byte	.LASF18
  960 033c 01       		.byte	0x1
  961 033d 4F       		.byte	0x4f
  962 033e 81000000 		.4byte	0x81
  963 0342 96020000 		.4byte	.LLST17
  964 0346 0B       		.uleb128 0xb
- 965 0347 AC020000 		.4byte	.LASF30
+ 965 0347 01030000 		.4byte	.LASF30
  966 034b 01       		.byte	0x1
  967 034c 50       		.byte	0x50
  968 034d 81000000 		.4byte	0x81
  969 0351 B7020000 		.4byte	.LLST18
  970 0355 0B       		.uleb128 0xb
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 21
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 21
 
 
  971 0356 2F000000 		.4byte	.LASF31
@@ -1239,7 +1239,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  1006 039a 00       		.byte	0
  1007 039b 00       		.byte	0
  1008 039c 11       		.uleb128 0x11
- 1009 039d 99030000 		.4byte	.LASF32
+ 1009 039d 8A030000 		.4byte	.LASF32
  1010 03a1 01       		.byte	0x1
  1011 03a2 5C       		.byte	0x5c
  1012 03a3 81000000 		.4byte	0x81
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  1025 03c5 11       		.uleb128 0x11
  1026 03c6 C8010000 		.4byte	.LASF33
  1027 03ca 01       		.byte	0x1
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 22
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 22
 
 
  1028 03cb 61       		.byte	0x61
@@ -1276,7 +1276,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  1040 03e9 43030000 		.4byte	.LLST22
  1041 03ed 00       		.byte	0
  1042 03ee 0A       		.uleb128 0xa
- 1043 03ef 3A020000 		.4byte	.LASF34
+ 1043 03ef 8F020000 		.4byte	.LASF34
  1044 03f3 01       		.byte	0x1
  1045 03f4 6D       		.byte	0x6d
  1046 03f5 00000000 		.4byte	.LFB8
@@ -1291,13 +1291,13 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  1055 040a 97010000 		.4byte	0x197
  1056 040e 64030000 		.4byte	.LLST23
  1057 0412 0B       		.uleb128 0xb
- 1058 0413 73020000 		.4byte	.LASF17
+ 1058 0413 C8020000 		.4byte	.LASF17
  1059 0417 01       		.byte	0x1
  1060 0418 6E       		.byte	0x6e
  1061 0419 81000000 		.4byte	0x81
  1062 041d 90030000 		.4byte	.LLST24
  1063 0421 0B       		.uleb128 0xb
- 1064 0422 B7020000 		.4byte	.LASF18
+ 1064 0422 0C030000 		.4byte	.LASF18
  1065 0426 01       		.byte	0x1
  1066 0427 6F       		.byte	0x6f
  1067 0428 81000000 		.4byte	0x81
@@ -1309,7 +1309,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  1073 0437 81000000 		.4byte	0x81
  1074 043b D2030000 		.4byte	.LLST26
  1075 043f 0B       		.uleb128 0xb
- 1076 0440 47040000 		.4byte	.LASF36
+ 1076 0440 38040000 		.4byte	.LASF36
  1077 0444 01       		.byte	0x1
  1078 0445 71       		.byte	0x71
  1079 0446 81000000 		.4byte	0x81
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  1082 044f 27010000 		.4byte	.LASF37
  1083 0453 01       		.byte	0x1
  1084 0454 72       		.byte	0x72
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 23
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 23
 
 
  1085 0455 81000000 		.4byte	0x81
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  1139 04c4 84       		.byte	0x84
  1140 04c5 81000000 		.4byte	0x81
  1141 04c9 00000000 		.4byte	.LFB10
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 24
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 24
 
 
  1142 04cd 04000000 		.4byte	.LFE10-.LFB10
@@ -1393,7 +1393,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  1151 04e2 A1040000 		.4byte	.LLST31
  1152 04e6 00       		.byte	0
  1153 04e7 11       		.uleb128 0x11
- 1154 04e8 61030000 		.4byte	.LASF40
+ 1154 04e8 52030000 		.4byte	.LASF40
  1155 04ec 01       		.byte	0x1
  1156 04ed 89       		.byte	0x89
  1157 04ee 81000000 		.4byte	0x81
@@ -1410,7 +1410,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  1168 050b C2040000 		.4byte	.LLST32
  1169 050f 00       		.byte	0
  1170 0510 0A       		.uleb128 0xa
- 1171 0511 E1030000 		.4byte	.LASF41
+ 1171 0511 D2030000 		.4byte	.LASF41
  1172 0515 01       		.byte	0x1
  1173 0516 95       		.byte	0x95
  1174 0517 00000000 		.4byte	.LFB12
@@ -1425,20 +1425,20 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  1183 052c 97010000 		.4byte	0x197
  1184 0530 E3040000 		.4byte	.LLST33
  1185 0534 0B       		.uleb128 0xb
- 1186 0535 73020000 		.4byte	.LASF17
+ 1186 0535 C8020000 		.4byte	.LASF17
  1187 0539 01       		.byte	0x1
  1188 053a 96       		.byte	0x96
  1189 053b 81000000 		.4byte	0x81
  1190 053f 0F050000 		.4byte	.LLST34
  1191 0543 0B       		.uleb128 0xb
- 1192 0544 B7020000 		.4byte	.LASF18
+ 1192 0544 0C030000 		.4byte	.LASF18
  1193 0548 01       		.byte	0x1
  1194 0549 97       		.byte	0x97
  1195 054a 81000000 		.4byte	0x81
  1196 054e 30050000 		.4byte	.LLST35
  1197 0552 0B       		.uleb128 0xb
  1198 0553 9A010000 		.4byte	.LASF35
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 25
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 25
 
 
  1199 0557 01       		.byte	0x1
@@ -1446,7 +1446,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  1201 0559 81000000 		.4byte	0x81
  1202 055d 51050000 		.4byte	.LLST36
  1203 0561 0B       		.uleb128 0xb
- 1204 0562 47040000 		.4byte	.LASF36
+ 1204 0562 38040000 		.4byte	.LASF36
  1205 0566 01       		.byte	0x1
  1206 0567 99       		.byte	0x99
  1207 0568 81000000 		.4byte	0x81
@@ -1490,7 +1490,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  1245 05b5 00       		.byte	0
  1246 05b6 00       		.byte	0
  1247 05b7 11       		.uleb128 0x11
- 1248 05b8 7C030000 		.4byte	.LASF43
+ 1248 05b8 6D030000 		.4byte	.LASF43
  1249 05bc 01       		.byte	0x1
  1250 05bd A8       		.byte	0xa8
  1251 05be 81000000 		.4byte	0x81
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  1253 05c6 04000000 		.4byte	.LFE13-.LFB13
  1254 05ca 01       		.uleb128 0x1
  1255 05cb 9C       		.byte	0x9c
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 26
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 26
 
 
  1256 05cc E0050000 		.4byte	0x5e0
@@ -1515,13 +1515,13 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  1267 05e9 04       		.byte	0x4
  1268 05ea 17       		.byte	0x17
  1269 05eb 12       		.uleb128 0x12
- 1270 05ec 3D030000 		.4byte	.LASF45
- 1271 05f0 3D030000 		.4byte	.LASF45
+ 1270 05ec 2E030000 		.4byte	.LASF45
+ 1271 05f0 2E030000 		.4byte	.LASF45
  1272 05f4 04       		.byte	0x4
  1273 05f5 1B       		.byte	0x1b
  1274 05f6 12       		.uleb128 0x12
- 1275 05f7 F3030000 		.4byte	.LASF46
- 1276 05fb F3030000 		.4byte	.LASF46
+ 1275 05f7 E4030000 		.4byte	.LASF46
+ 1276 05fb E4030000 		.4byte	.LASF46
  1277 05ff 04       		.byte	0x4
  1278 0600 2C       		.byte	0x2c
  1279 0601 12       		.uleb128 0x12
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  1310 0017 0B       		.uleb128 0xb
  1311 0018 3E       		.uleb128 0x3e
  1312 0019 0B       		.uleb128 0xb
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 27
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 27
 
 
  1313 001a 03       		.uleb128 0x3
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  1367 0050 00       		.byte	0
  1368 0051 00       		.byte	0
  1369 0052 07       		.uleb128 0x7
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 28
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 28
 
 
  1370 0053 0D       		.uleb128 0xd
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  1424 008a 13       		.uleb128 0x13
  1425 008b 00       		.byte	0
  1426 008c 00       		.byte	0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 29
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 29
 
 
  1427 008d 0B       		.uleb128 0xb
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  1481 00ca 01       		.uleb128 0x1
  1482 00cb 31       		.uleb128 0x31
  1483 00cc 13       		.uleb128 0x13
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 30
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 30
 
 
  1484 00cd 00       		.byte	0
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  1538 0104 00       		.byte	0
  1539 0105 00       		.byte	0
  1540              		.section	.debug_loc,"",%progbits
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 31
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 31
 
 
  1541              	.Ldebug_loc0:
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  1595 007b 00000000 		.4byte	.LVL0
  1596 007f 08000000 		.4byte	.LVL1
  1597 0083 0100     		.2byte	0x1
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 32
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 32
 
 
  1598 0085 53       		.byte	0x53
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  1652 0107 00000000 		.4byte	.LVL11
  1653 010b 04000000 		.4byte	.LVL12
  1654 010f 0100     		.2byte	0x1
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 33
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 33
 
 
  1655 0111 50       		.byte	0x50
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  1709              	.LLST10:
  1710 018f 00000000 		.4byte	.LVL14
  1711 0193 0F000000 		.4byte	.LVL17-1
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 34
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 34
 
 
  1712 0197 0100     		.2byte	0x1
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  1766              	.LLST14:
  1767 021b 00000000 		.4byte	.LVL23
  1768 021f 04000000 		.4byte	.LVL24
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 35
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 35
 
 
  1769 0223 0100     		.2byte	0x1
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  1823 02a1 0F000000 		.4byte	.LVL29-1
  1824 02a5 2A000000 		.4byte	.LFE5
  1825 02a9 0400     		.2byte	0x4
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 36
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 36
 
 
  1826 02ab F3       		.byte	0xf3
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  1880 032d 02000000 		.4byte	.LVL34
  1881 0331 04000000 		.4byte	.LFE6
  1882 0335 0400     		.2byte	0x4
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 37
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 37
 
 
  1883 0337 F3       		.byte	0xf3
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  1937 03b5 13000000 		.4byte	.LVL41-1
  1938 03b9 0100     		.2byte	0x1
  1939 03bb 52       		.byte	0x52
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 38
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 38
 
 
  1940 03bc 13000000 		.4byte	.LVL41-1
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  1994 043f 0200     		.2byte	0x2
  1995 0441 73       		.byte	0x73
  1996 0442 00       		.sleb128 0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 39
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 39
 
 
  1997 0443 13000000 		.4byte	.LVL41-1
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  2051 04cc 50       		.byte	0x50
  2052 04cd 02000000 		.4byte	.LVL52
  2053 04d1 04000000 		.4byte	.LFE11
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 40
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 40
 
 
  2054 04d5 0400     		.2byte	0x4
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  2108 0551 00000000 		.4byte	.LVL53
  2109 0555 08000000 		.4byte	.LVL54
  2110 0559 0100     		.2byte	0x1
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 41
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 41
 
 
  2111 055b 53       		.byte	0x53
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  2165 05de 0100     		.2byte	0x1
  2166 05e0 50       		.byte	0x50
  2167 05e1 24000000 		.4byte	.LVL59
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 42
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 42
 
 
  2168 05e5 2A000000 		.4byte	.LVL60
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  2222 006c 04000000 		.4byte	.LFE11-.LFB11
  2223 0070 00000000 		.4byte	.LFB12
  2224 0074 34000000 		.4byte	.LFE12-.LFB12
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 43
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 43
 
 
  2225 0078 00000000 		.4byte	.LFB13
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  2267      6E637946 
  2268              	.LASF31:
  2269 002f 73746174 		.ascii	"state\000"
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 44
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 44
 
 
  2269      6500
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  2291      657400
  2292              	.LASF19:
  2293 0138 70776D43 		.ascii	"pwmChannel\000"
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 45
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 45
 
 
  2293      68616E6E 
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  2315 01fa 436F6E73 		.ascii	"ConstructCANID\000"
  2315      74727563 
  2315      7443414E 
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 46
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 46
 
 
  2315      494400
@@ -2707,151 +2707,149 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 1
  2317      676E6564 
  2317      20636861 
  2317      7200
- 2318              	.LASF0:
- 2319 0217 7369676E 		.ascii	"signed char\000"
- 2319      65642063 
- 2319      68617200 
- 2320              	.LASF9:
- 2321 0223 6C6F6E67 		.ascii	"long long unsigned int\000"
- 2321      206C6F6E 
- 2321      6720756E 
- 2321      7369676E 
- 2321      65642069 
- 2322              	.LASF34:
- 2323 023a 41737365 		.ascii	"AssembleGPIOSetConfigurationPacket\000"
- 2323      6D626C65 
- 2323      4750494F 
- 2323      53657443 
- 2323      6F6E6669 
- 2324              	.LASF10:
- 2325 025d 756E7369 		.ascii	"unsigned int\000"
- 2325      676E6564 
- 2325      20696E74 
- 2325      00
- 2326              	.LASF12:
- 2327 026a 75696E74 		.ascii	"uint16_t\000"
- 2327      31365F74 
- 2327      00
- 2328              	.LASF17:
- 2329 0273 74617267 		.ascii	"targetDeviceGroup\000"
- 2329      65744465 
- 2329      76696365 
- 2329      47726F75 
- 2329      7000
- 2330              	.LASF28:
- 2331 0285 47657447 		.ascii	"GetGPIOPWMDutyCycle\000"
- 2331      50494F50 
- 2331      574D4475 
- 2331      74794379 
- 2331      636C6500 
- 2332              	.LASF5:
- 2333 0299 73686F72 		.ascii	"short unsigned int\000"
- 2333      7420756E 
- 2333      7369676E 
- 2333      65642069 
- 2333      6E7400
- 2334              	.LASF30:
- 2335 02ac 41444343 		.ascii	"ADCChannel\000"
- 2335      68616E6E 
- 2335      656C00
- 2336              	.LASF18:
- 2337 02b7 74617267 		.ascii	"targetDeviceSerial\000"
- 2337      65744465 
- 2337      76696365 
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 47
+ 2318              	.LASF50:
+ 2319 0217 433A5C55 		.ascii	"C:\\Users\\davis\\Documents\\PSoC Creator\\BLDC_Mot"
+ 2319      73657273 
+ 2319      5C646176 
+ 2319      69735C44 
+ 2319      6F63756D 
+ 2320 0245 6F725F42 		.ascii	"or_Board_PY2023\\BLDC_Motor_Board.cydsn\000"
+ 2320      6F617264 
+ 2320      5F505932 
+ 2320      3032335C 
+ 2320      424C4443 
+ 2321              	.LASF0:
+ 2322 026c 7369676E 		.ascii	"signed char\000"
+ 2322      65642063 
+ 2322      68617200 
+ 2323              	.LASF9:
+ 2324 0278 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2324      206C6F6E 
+ 2324      6720756E 
+ 2324      7369676E 
+ 2324      65642069 
+ 2325              	.LASF34:
+ 2326 028f 41737365 		.ascii	"AssembleGPIOSetConfigurationPacket\000"
+ 2326      6D626C65 
+ 2326      4750494F 
+ 2326      53657443 
+ 2326      6F6E6669 
+ 2327              	.LASF10:
+ 2328 02b2 756E7369 		.ascii	"unsigned int\000"
+ 2328      676E6564 
+ 2328      20696E74 
+ 2328      00
+ 2329              	.LASF12:
+ 2330 02bf 75696E74 		.ascii	"uint16_t\000"
+ 2330      31365F74 
+ 2330      00
+ 2331              	.LASF17:
+ 2332 02c8 74617267 		.ascii	"targetDeviceGroup\000"
+ 2332      65744465 
+ 2332      76696365 
+ 2332      47726F75 
+ 2332      7000
+ 2333              	.LASF28:
+ 2334 02da 47657447 		.ascii	"GetGPIOPWMDutyCycle\000"
+ 2334      50494F50 
+ 2334      574D4475 
+ 2334      74794379 
+ 2334      636C6500 
+ 2335              	.LASF5:
+ 2336 02ee 73686F72 		.ascii	"short unsigned int\000"
+ 2336      7420756E 
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 47
 
 
- 2337      53657269 
- 2337      616C00
- 2338              	.LASF26:
- 2339 02ca 64757479 		.ascii	"dutyCycle\000"
- 2339      4379636C 
- 2339      6500
- 2340              	.LASF50:
- 2341 02d4 433A5C55 		.ascii	"C:\\Users\\M4rz4n\\Desktop\\Husky Robotics\\Firmwar"
- 2341      73657273 
- 2341      5C4D3472 
- 2341      7A346E5C 
- 2341      4465736B 
- 2342 0302 655C424C 		.ascii	"e\\BLDC\\BLDC_Motor_Board_PY2023\\BLDC_Motor_Board."
- 2342      44435C42 
- 2342      4C44435F 
- 2342      4D6F746F 
- 2342      725F426F 
- 2343 0332 63796473 		.ascii	"cydsn\000"
- 2343      6E00
- 2344              	.LASF13:
- 2345 0338 64617461 		.ascii	"data\000"
- 2345      00
- 2346              	.LASF45:
- 2347 033d 57726974 		.ascii	"WritePacketIDOnly\000"
- 2347      65506163 
- 2347      6B657449 
- 2347      444F6E6C 
- 2347      7900
- 2348              	.LASF7:
- 2349 034f 6C6F6E67 		.ascii	"long unsigned int\000"
- 2349      20756E73 
- 2349      69676E65 
- 2349      6420696E 
- 2349      7400
- 2350              	.LASF40:
- 2351 0361 47657447 		.ascii	"GetGPIOBitConfigFromPacket\000"
- 2351      50494F42 
- 2351      6974436F 
- 2351      6E666967 
- 2351      46726F6D 
- 2352              	.LASF43:
- 2353 037c 47657447 		.ascii	"GetGPIOWriteValuesFromPacket\000"
- 2353      50494F57 
- 2353      72697465 
- 2353      56616C75 
- 2353      65734672 
- 2354              	.LASF32:
- 2355 0399 47657447 		.ascii	"GetGPIOADCChannelFromPacket\000"
- 2355      50494F41 
- 2355      44434368 
- 2355      616E6E65 
- 2355      6C46726F 
- 2356              	.LASF25:
- 2357 03b5 41737365 		.ascii	"AssembleGPIOSetPWMDutyCyclePacket\000"
- 2357      6D626C65 
- 2357      4750494F 
- 2357      53657450 
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccIsve1R.s 			page 48
+ 2336      7369676E 
+ 2336      65642069 
+ 2336      6E7400
+ 2337              	.LASF30:
+ 2338 0301 41444343 		.ascii	"ADCChannel\000"
+ 2338      68616E6E 
+ 2338      656C00
+ 2339              	.LASF18:
+ 2340 030c 74617267 		.ascii	"targetDeviceSerial\000"
+ 2340      65744465 
+ 2340      76696365 
+ 2340      53657269 
+ 2340      616C00
+ 2341              	.LASF26:
+ 2342 031f 64757479 		.ascii	"dutyCycle\000"
+ 2342      4379636C 
+ 2342      6500
+ 2343              	.LASF13:
+ 2344 0329 64617461 		.ascii	"data\000"
+ 2344      00
+ 2345              	.LASF45:
+ 2346 032e 57726974 		.ascii	"WritePacketIDOnly\000"
+ 2346      65506163 
+ 2346      6B657449 
+ 2346      444F6E6C 
+ 2346      7900
+ 2347              	.LASF7:
+ 2348 0340 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2348      20756E73 
+ 2348      69676E65 
+ 2348      6420696E 
+ 2348      7400
+ 2349              	.LASF40:
+ 2350 0352 47657447 		.ascii	"GetGPIOBitConfigFromPacket\000"
+ 2350      50494F42 
+ 2350      6974436F 
+ 2350      6E666967 
+ 2350      46726F6D 
+ 2351              	.LASF43:
+ 2352 036d 47657447 		.ascii	"GetGPIOWriteValuesFromPacket\000"
+ 2352      50494F57 
+ 2352      72697465 
+ 2352      56616C75 
+ 2352      65734672 
+ 2353              	.LASF32:
+ 2354 038a 47657447 		.ascii	"GetGPIOADCChannelFromPacket\000"
+ 2354      50494F41 
+ 2354      44434368 
+ 2354      616E6E65 
+ 2354      6C46726F 
+ 2355              	.LASF25:
+ 2356 03a6 41737365 		.ascii	"AssembleGPIOSetPWMDutyCyclePacket\000"
+ 2356      6D626C65 
+ 2356      4750494F 
+ 2356      53657450 
+ 2356      574D4475 
+ 2357              	.LASF20:
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccNuLoGu.s 			page 48
 
 
- 2357      574D4475 
- 2358              	.LASF20:
- 2359 03d7 66726571 		.ascii	"frequency\000"
- 2359      75656E63 
- 2359      7900
- 2360              	.LASF41:
- 2361 03e1 41737365 		.ascii	"AssembleGPIOWrite\000"
- 2361      6D626C65 
- 2361      4750494F 
- 2361      57726974 
- 2361      6500
- 2362              	.LASF46:
- 2363 03f3 5061636B 		.ascii	"PackIntIntoDataMSBFirst\000"
- 2363      496E7449 
- 2363      6E746F44 
- 2363      6174614D 
- 2363      53424669 
- 2364              	.LASF29:
- 2365 040b 41737365 		.ascii	"AssembleGPIOSetADCStateConfiguration\000"
- 2365      6D626C65 
- 2365      4750494F 
- 2365      53657441 
- 2365      44435374 
- 2366              	.LASF49:
- 2367 0430 48696E64 		.ascii	"HindsightCAN\\CANGPIO.c\000"
- 2367      73696768 
- 2367      7443414E 
- 2367      5C43414E 
- 2367      4750494F 
- 2368              	.LASF36:
- 2369 0447 6269744E 		.ascii	"bitNumber\000"
- 2369      756D6265 
- 2369      7200
- 2370              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 2358 03c8 66726571 		.ascii	"frequency\000"
+ 2358      75656E63 
+ 2358      7900
+ 2359              	.LASF41:
+ 2360 03d2 41737365 		.ascii	"AssembleGPIOWrite\000"
+ 2360      6D626C65 
+ 2360      4750494F 
+ 2360      57726974 
+ 2360      6500
+ 2361              	.LASF46:
+ 2362 03e4 5061636B 		.ascii	"PackIntIntoDataMSBFirst\000"
+ 2362      496E7449 
+ 2362      6E746F44 
+ 2362      6174614D 
+ 2362      53424669 
+ 2363              	.LASF29:
+ 2364 03fc 41737365 		.ascii	"AssembleGPIOSetADCStateConfiguration\000"
+ 2364      6D626C65 
+ 2364      4750494F 
+ 2364      53657441 
+ 2364      44435374 
+ 2365              	.LASF49:
+ 2366 0421 48696E64 		.ascii	"HindsightCAN\\CANGPIO.c\000"
+ 2366      73696768 
+ 2366      7443414E 
+ 2366      5C43414E 
+ 2366      4750494F 
+ 2367              	.LASF36:
+ 2368 0438 6269744E 		.ascii	"bitNumber\000"
+ 2368      756D6265 
+ 2368      7200
+ 2369              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

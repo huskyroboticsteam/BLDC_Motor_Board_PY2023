@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccjh7FTq.s 			page 1
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccyEyIBx.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccjh7FTq.s 			page 1
   42              	.LVL2:
   14:BLDC_SPI.c    ****     // TMC6100_SPI_Stop();
   15:BLDC_SPI.c    **** }...
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccjh7FTq.s 			page 2
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccyEyIBx.s 			page 2
 
 
   43              		.loc 1 15 0
@@ -78,37 +78,37 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccjh7FTq.s 			page 1
   57 0006 00000000 		.4byte	.Ldebug_abbrev0
   58 000a 04       		.byte	0x4
   59 000b 01       		.uleb128 0x1
-  60 000c E5000000 		.4byte	.LASF14
+  60 000c D6000000 		.4byte	.LASF14
   61 0010 0C       		.byte	0xc
-  62 0011 9E010000 		.4byte	.LASF15
-  63 0015 22000000 		.4byte	.LASF16
+  62 0011 8F010000 		.4byte	.LASF15
+  63 0015 53000000 		.4byte	.LASF16
   64 0019 00000000 		.4byte	.Ldebug_ranges0+0
   65 001d 00000000 		.4byte	0
   66 0021 00000000 		.4byte	.Ldebug_line0
   67 0025 02       		.uleb128 0x2
   68 0026 01       		.byte	0x1
   69 0027 06       		.byte	0x6
-  70 0028 86010000 		.4byte	.LASF0
+  70 0028 77010000 		.4byte	.LASF0
   71 002c 02       		.uleb128 0x2
   72 002d 01       		.byte	0x1
   73 002e 08       		.byte	0x8
-  74 002f B7000000 		.4byte	.LASF1
+  74 002f A8000000 		.4byte	.LASF1
   75 0033 02       		.uleb128 0x2
   76 0034 02       		.byte	0x2
   77 0035 05       		.byte	0x5
-  78 0036 AF010000 		.4byte	.LASF2
+  78 0036 A0010000 		.4byte	.LASF2
   79 003a 02       		.uleb128 0x2
   80 003b 02       		.byte	0x2
   81 003c 07       		.byte	0x7
-  82 003d 73010000 		.4byte	.LASF3
+  82 003d 64010000 		.4byte	.LASF3
   83 0041 02       		.uleb128 0x2
   84 0042 04       		.byte	0x4
   85 0043 05       		.byte	0x5
-  86 0044 CA000000 		.4byte	.LASF4
+  86 0044 BB000000 		.4byte	.LASF4
   87 0048 02       		.uleb128 0x2
   88 0049 04       		.byte	0x4
   89 004a 07       		.byte	0x7
-  90 004b 8E000000 		.4byte	.LASF5
+  90 004b 2A000000 		.4byte	.LASF5
   91 004f 02       		.uleb128 0x2
   92 0050 08       		.byte	0x8
   93 0051 05       		.byte	0x5
@@ -116,9 +116,9 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccjh7FTq.s 			page 1
   95 0056 02       		.uleb128 0x2
   96 0057 08       		.byte	0x8
   97 0058 07       		.byte	0x7
-  98 0059 A0000000 		.4byte	.LASF7
+  98 0059 3C000000 		.4byte	.LASF7
   99 005d 03       		.uleb128 0x3
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccjh7FTq.s 			page 3
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccyEyIBx.s 			page 3
 
 
  100 005e 04       		.byte	0x4
@@ -136,25 +136,25 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccjh7FTq.s 			page 1
  112 0077 02       		.uleb128 0x2
  113 0078 04       		.byte	0x4
  114 0079 04       		.byte	0x4
- 115 007a A9010000 		.4byte	.LASF9
+ 115 007a 9A010000 		.4byte	.LASF9
  116 007e 02       		.uleb128 0x2
  117 007f 08       		.byte	0x8
  118 0080 04       		.byte	0x4
- 119 0081 D3000000 		.4byte	.LASF10
+ 119 0081 C4000000 		.4byte	.LASF10
  120 0085 02       		.uleb128 0x2
  121 0086 01       		.byte	0x1
  122 0087 08       		.byte	0x8
- 123 0088 C5000000 		.4byte	.LASF11
+ 123 0088 B6000000 		.4byte	.LASF11
  124 008c 02       		.uleb128 0x2
  125 008d 08       		.byte	0x8
  126 008e 04       		.byte	0x4
- 127 008f 92010000 		.4byte	.LASF12
+ 127 008f 83010000 		.4byte	.LASF12
  128 0093 02       		.uleb128 0x2
  129 0094 04       		.byte	0x4
  130 0095 07       		.byte	0x7
- 131 0096 C2010000 		.4byte	.LASF13
+ 131 0096 B3010000 		.4byte	.LASF13
  132 009a 05       		.uleb128 0x5
- 133 009b B9010000 		.4byte	.LASF18
+ 133 009b AA010000 		.4byte	.LASF18
  134 009f 01       		.byte	0x1
  135 00a0 07       		.byte	0x7
  136 00a1 00000000 		.4byte	.LFB34
@@ -163,7 +163,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccjh7FTq.s 			page 1
  139 00aa 9C       		.byte	0x9c
  140 00ab D0000000 		.4byte	0xd0
  141 00af 06       		.uleb128 0x6
- 142 00b0 DA000000 		.4byte	.LASF19
+ 142 00b0 CB000000 		.4byte	.LASF19
  143 00b4 01       		.byte	0x1
  144 00b5 07       		.byte	0x7
  145 00b6 6B000000 		.4byte	0x6b
@@ -178,13 +178,13 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccjh7FTq.s 			page 1
  154 00cb 0A       		.byte	0xa
  155 00cc E803     		.2byte	0x3e8
  156 00ce 00       		.byte	0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccjh7FTq.s 			page 4
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccyEyIBx.s 			page 4
 
 
  157 00cf 00       		.byte	0
  158 00d0 09       		.uleb128 0x9
- 159 00d1 86000000 		.4byte	.LASF20
- 160 00d5 86000000 		.4byte	.LASF20
+ 159 00d1 22000000 		.4byte	.LASF20
+ 160 00d5 22000000 		.4byte	.LASF20
  161 00d9 03       		.byte	0x3
  162 00da EC       		.byte	0xec
  163 00db 00       		.byte	0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccjh7FTq.s 			page 1
  211 002d 0E       		.uleb128 0xe
  212 002e 3A       		.uleb128 0x3a
  213 002f 0B       		.uleb128 0xb
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccjh7FTq.s 			page 5
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccyEyIBx.s 			page 5
 
 
  214 0030 3B       		.uleb128 0x3b
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccjh7FTq.s 			page 1
  268 0069 00       		.byte	0
  269 006a 08       		.uleb128 0x8
  270 006b 8A8201   		.uleb128 0x410a
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccjh7FTq.s 			page 6
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccyEyIBx.s 			page 6
 
 
  271 006e 00       		.byte	0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccjh7FTq.s 			page 1
  325              	.Ldebug_ranges0:
  326 0000 00000000 		.4byte	.LFB34
  327 0004 0C000000 		.4byte	.LFE34
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccjh7FTq.s 			page 7
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccyEyIBx.s 			page 7
 
 
  328 0008 00000000 		.4byte	0
@@ -383,106 +383,104 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccjh7FTq.s 			page 1
  338      676E6564 
  338      20696E74 
  338      00
- 339              	.LASF16:
- 340 0022 433A5C55 		.ascii	"C:\\Users\\M4rz4n\\Desktop\\Husky Robotics\\Firmwar"
- 340      73657273 
- 340      5C4D3472 
- 340      7A346E5C 
- 340      4465736B 
- 341 0050 655C424C 		.ascii	"e\\BLDC\\BLDC_Motor_Board_PY2023\\BLDC_Motor_Board."
- 341      44435C42 
- 341      4C44435F 
- 341      4D6F746F 
- 341      725F426F 
- 342 0080 63796473 		.ascii	"cydsn\000"
- 342      6E00
- 343              	.LASF20:
- 344 0086 43794465 		.ascii	"CyDelay\000"
- 344      6C617900 
- 345              	.LASF5:
- 346 008e 6C6F6E67 		.ascii	"long unsigned int\000"
- 346      20756E73 
- 346      69676E65 
- 346      6420696E 
- 346      7400
- 347              	.LASF7:
- 348 00a0 6C6F6E67 		.ascii	"long long unsigned int\000"
- 348      206C6F6E 
- 348      6720756E 
- 348      7369676E 
- 348      65642069 
- 349              	.LASF1:
- 350 00b7 756E7369 		.ascii	"unsigned char\000"
- 350      676E6564 
- 350      20636861 
- 350      7200
- 351              	.LASF11:
- 352 00c5 63686172 		.ascii	"char\000"
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccjh7FTq.s 			page 8
+ 339              	.LASF20:
+ 340 0022 43794465 		.ascii	"CyDelay\000"
+ 340      6C617900 
+ 341              	.LASF5:
+ 342 002a 6C6F6E67 		.ascii	"long unsigned int\000"
+ 342      20756E73 
+ 342      69676E65 
+ 342      6420696E 
+ 342      7400
+ 343              	.LASF7:
+ 344 003c 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 344      206C6F6E 
+ 344      6720756E 
+ 344      7369676E 
+ 344      65642069 
+ 345              	.LASF16:
+ 346 0053 433A5C55 		.ascii	"C:\\Users\\davis\\Documents\\PSoC Creator\\BLDC_Mot"
+ 346      73657273 
+ 346      5C646176 
+ 346      69735C44 
+ 346      6F63756D 
+ 347 0081 6F725F42 		.ascii	"or_Board_PY2023\\BLDC_Motor_Board.cydsn\000"
+ 347      6F617264 
+ 347      5F505932 
+ 347      3032335C 
+ 347      424C4443 
+ 348              	.LASF1:
+ 349 00a8 756E7369 		.ascii	"unsigned char\000"
+ 349      676E6564 
+ 349      20636861 
+ 349      7200
+ 350              	.LASF11:
+ 351 00b6 63686172 		.ascii	"char\000"
+ 351      00
+ 352              	.LASF4:
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccyEyIBx.s 			page 8
 
 
- 352      00
- 353              	.LASF4:
- 354 00ca 6C6F6E67 		.ascii	"long int\000"
- 354      20696E74 
- 354      00
- 355              	.LASF10:
- 356 00d3 646F7562 		.ascii	"double\000"
- 356      6C6500
- 357              	.LASF19:
- 358 00da 64617461 		.ascii	"dataToSend\000"
- 358      546F5365 
- 358      6E6400
- 359              	.LASF14:
- 360 00e5 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 360      43313120 
- 360      352E342E 
- 360      31203230 
- 360      31363036 
- 361 0118 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 361      20726576 
- 361      6973696F 
- 361      6E203233 
- 361      37373135 
- 362 014b 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 362      66756E63 
- 362      74696F6E 
- 362      2D736563 
- 362      74696F6E 
- 363              	.LASF3:
- 364 0173 73686F72 		.ascii	"short unsigned int\000"
- 364      7420756E 
- 364      7369676E 
- 364      65642069 
- 364      6E7400
- 365              	.LASF0:
- 366 0186 7369676E 		.ascii	"signed char\000"
- 366      65642063 
- 366      68617200 
- 367              	.LASF12:
- 368 0192 6C6F6E67 		.ascii	"long double\000"
- 368      20646F75 
- 368      626C6500 
- 369              	.LASF15:
- 370 019e 424C4443 		.ascii	"BLDC_SPI.c\000"
- 370      5F535049 
- 370      2E6300
- 371              	.LASF9:
- 372 01a9 666C6F61 		.ascii	"float\000"
- 372      7400
- 373              	.LASF2:
- 374 01af 73686F72 		.ascii	"short int\000"
- 374      7420696E 
- 374      7400
- 375              	.LASF18:
- 376 01b9 72656164 		.ascii	"read_spi\000"
- 376      5F737069 
- 376      00
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccjh7FTq.s 			page 9
+ 353 00bb 6C6F6E67 		.ascii	"long int\000"
+ 353      20696E74 
+ 353      00
+ 354              	.LASF10:
+ 355 00c4 646F7562 		.ascii	"double\000"
+ 355      6C6500
+ 356              	.LASF19:
+ 357 00cb 64617461 		.ascii	"dataToSend\000"
+ 357      546F5365 
+ 357      6E6400
+ 358              	.LASF14:
+ 359 00d6 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 359      43313120 
+ 359      352E342E 
+ 359      31203230 
+ 359      31363036 
+ 360 0109 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 360      20726576 
+ 360      6973696F 
+ 360      6E203233 
+ 360      37373135 
+ 361 013c 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 361      66756E63 
+ 361      74696F6E 
+ 361      2D736563 
+ 361      74696F6E 
+ 362              	.LASF3:
+ 363 0164 73686F72 		.ascii	"short unsigned int\000"
+ 363      7420756E 
+ 363      7369676E 
+ 363      65642069 
+ 363      6E7400
+ 364              	.LASF0:
+ 365 0177 7369676E 		.ascii	"signed char\000"
+ 365      65642063 
+ 365      68617200 
+ 366              	.LASF12:
+ 367 0183 6C6F6E67 		.ascii	"long double\000"
+ 367      20646F75 
+ 367      626C6500 
+ 368              	.LASF15:
+ 369 018f 424C4443 		.ascii	"BLDC_SPI.c\000"
+ 369      5F535049 
+ 369      2E6300
+ 370              	.LASF9:
+ 371 019a 666C6F61 		.ascii	"float\000"
+ 371      7400
+ 372              	.LASF2:
+ 373 01a0 73686F72 		.ascii	"short int\000"
+ 373      7420696E 
+ 373      7400
+ 374              	.LASF18:
+ 375 01aa 72656164 		.ascii	"read_spi\000"
+ 375      5F737069 
+ 375      00
+ 376              	.LASF13:
+ 377 01b3 73697A65 		.ascii	"sizetype\000"
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccyEyIBx.s 			page 9
 
 
- 377              	.LASF13:
- 378 01c2 73697A65 		.ascii	"sizetype\000"
- 378      74797065 
- 378      00
- 379              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 377      74797065 
+ 377      00
+ 378              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

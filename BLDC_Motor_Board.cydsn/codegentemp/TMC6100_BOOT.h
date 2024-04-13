@@ -214,7 +214,7 @@
 * data rate configuration, can be defined in project if required.
 */
 #ifndef TMC6100_SPI_BYTE_TO_BYTE
-    #define TMC6100_SPI_BYTE_TO_BYTE   (16u)
+    #define TMC6100_SPI_BYTE_TO_BYTE   (20u)
 #endif
 
 /* Byte to byte time interval: calculated basing on current component

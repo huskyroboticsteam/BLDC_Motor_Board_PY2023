@@ -6,7 +6,7 @@
 
 #Build Date:         Sep  9 2019 11:47:43
 
-#File Generated:     Apr 6 2024 13:49:02
+#File Generated:     Apr 13 2024 12:58:22
 
 #Purpose:            
 
@@ -87,8 +87,8 @@ Clock: CyIMO                | Frequency: N/A       | Target:  48.0 MHz
 Clock: CyLFClk              | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyRouted1            | Frequency: N/A       | Target:  40.0 MHz
 Clock: CySysClk             | Frequency: N/A       | Target:  40.0 MHz
-Clock: TMC6100_SCBCLK       | Frequency: N/A       | Target:  20.0 MHz
-Clock: TMC6100_SCBCLK(FFB)  | Frequency: N/A       | Target:  20.0 MHz
+Clock: TMC6100_SCBCLK       | Frequency: N/A       | Target:  13.3 MHz
+Clock: TMC6100_SCBCLK(FFB)  | Frequency: N/A       | Target:  13.3 MHz
 Clock: UART_SCBCLK          | Frequency: N/A       | Target:   1.4 MHz
 Clock: UART_SCBCLK(FFB)     | Frequency: N/A       | Target:   1.4 MHz
 
@@ -113,15 +113,15 @@ Clock: CyIMO                | Frequency: N/A       | Target:  48.0 MHz
 Clock: CyLFClk              | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyRouted1            | Frequency: N/A       | Target:  40.0 MHz
 Clock: CySysClk             | Frequency: N/A       | Target:  40.0 MHz
-Clock: TMC6100_SCBCLK       | Frequency: N/A       | Target:  20.0 MHz
-Clock: TMC6100_SCBCLK(FFB)  | Frequency: N/A       | Target:  20.0 MHz
+Clock: TMC6100_SCBCLK       | Frequency: N/A       | Target:  13.3 MHz
+Clock: TMC6100_SCBCLK(FFB)  | Frequency: N/A       | Target:  13.3 MHz
 Clock: UART_SCBCLK          | Frequency: N/A       | Target:   1.4 MHz
 Clock: UART_SCBCLK(FFB)     | Frequency: N/A       | Target:   1.4 MHz
 
 ======================================================================
                      End of Clock Summary
 ######################################################################
-D2088: Phase 7, elapsed time : 0.1 (sec)
+D2088: Phase 7, elapsed time : 0.0 (sec)
 
 Final Design Statistics
     Number of Combinational MCs 	:	6
@@ -162,8 +162,8 @@ Clock: CyIMO                | Frequency: N/A       | Target:  48.0 MHz
 Clock: CyLFClk              | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyRouted1            | Frequency: N/A       | Target:  40.0 MHz
 Clock: CySysClk             | Frequency: N/A       | Target:  40.0 MHz
-Clock: TMC6100_SCBCLK       | Frequency: N/A       | Target:  20.0 MHz
-Clock: TMC6100_SCBCLK(FFB)  | Frequency: N/A       | Target:  20.0 MHz
+Clock: TMC6100_SCBCLK       | Frequency: N/A       | Target:  13.3 MHz
+Clock: TMC6100_SCBCLK(FFB)  | Frequency: N/A       | Target:  13.3 MHz
 Clock: UART_SCBCLK          | Frequency: N/A       | Target:   1.4 MHz
 Clock: UART_SCBCLK(FFB)     | Frequency: N/A       | Target:   1.4 MHz
 
@@ -176,5 +176,5 @@ D2088: Phase 8, elapsed time : 0.0 (sec)
 
 D2054: Placement of the design completed successfully
 
-I2076: Total run-time: 0.5 sec.
+I2076: Total run-time: 0.3 sec.
 

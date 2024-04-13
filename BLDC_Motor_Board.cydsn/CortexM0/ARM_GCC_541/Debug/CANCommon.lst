@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
   32              	.LVL0:
   33 0000 70B5     		push	{r4, r5, r6, lr}
   34              		.cfi_def_cfa_offset 16
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 2
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 2
 
 
   35              		.cfi_offset 4, -16
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
   39:HindsightCAN/CANCommon.c **** {
   74              		.loc 1 39 0
   75              		.cfi_startproc
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 3
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 3
 
 
   76              		@ args = 0, pretend = 0, frame = 0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
   52:HindsightCAN/CANCommon.c **** }
  118              		.loc 1 52 0
  119              		@ sp needed
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 4
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 4
 
 
  120 000a 10BD     		pop	{r4, pc}
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  162 0016 C046     		.section	.text.GetHeartbeatTimeStamp,"ax",%progbits
  163              		.align	2
  164              		.global	GetHeartbeatTimeStamp
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 5
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 5
 
 
  165              		.code	16
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  189 0010 0006     		lsls	r0, r0, #24
  190              	.LVL17:
   95:HindsightCAN/CANCommon.c ****         time |= ((uint32_t)packet->data[4] << 16);
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 6
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 6
 
 
  191              		.loc 1 95 0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  238              		.cfi_offset 14, -4
  239 0002 0400     		movs	r4, r0
  240 0004 0D00     		movs	r5, r1
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 7
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 7
 
 
   75:HindsightCAN/CANCommon.c ****     {
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  283              		.cfi_offset 14, -4
  284 0002 0400     		movs	r4, r0
  110:HindsightCAN/CANCommon.c ****     if (PacketIsOfID(packet, ID_HEARTBEAT))
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 8
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 8
 
 
  285              		.loc 1 110 0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  320              		.cfi_offset 3, -24
  321              		.cfi_offset 4, -20
  322              		.cfi_offset 5, -16
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 9
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 9
 
 
  323              		.cfi_offset 6, -12
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  368 003c 2800     		movs	r0, r5
  369              	.LVL40:
  370 003e FFF7FEFF 		bl	PackIntIntoDataMSBFirst
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 10
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 10
 
 
  371              	.LVL41:
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  149:HindsightCAN/CANCommon.c ****     packetToAssemble->data[nextByte] = failedPacketID;
  415              		.loc 1 149 0
  416 001a 2418     		adds	r4, r4, r0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 11
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 11
 
 
  417              	.LVL48:
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  458              		@ sp needed
  459              	.LVL53:
  460 0018 10BD     		pop	{r4, pc}
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 12
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 12
 
 
  461              		.cfi_endproc
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  172:HindsightCAN/CANCommon.c **** }
  506              		.loc 1 172 0
  507              		@ sp needed
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 13
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 13
 
 
  508              	.LVL61:
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  553              	.LVL68:
  554 0020 E070     		strb	r0, [r4, #3]
  182:HindsightCAN/CANCommon.c **** }
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 14
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 14
 
 
  555              		.loc 1 182 0
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  597              	.LVL72:
  598 0000 70B5     		push	{r4, r5, r6, lr}
  599              		.cfi_def_cfa_offset 16
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 15
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 15
 
 
  600              		.cfi_offset 4, -16
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  202:HindsightCAN/CANCommon.c **** {
  203:HindsightCAN/CANCommon.c ****     return DecodeTelemetryDataUnsigned(packetToAssemble);
  204:HindsightCAN/CANCommon.c **** }
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 16
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 16
 
 
  205:HindsightCAN/CANCommon.c **** 
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  690              	AssembleTelemetryReportPacket:
  691              	.LFB16:
  216:HindsightCAN/CANCommon.c **** 
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 17
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 17
 
 
  217:HindsightCAN/CANCommon.c **** void AssembleTelemetryReportPacket(CANPacket *packetToAssemble, 
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  734 002a 70BD     		pop	{r4, r5, r6, pc}
  735              		.cfi_endproc
  736              	.LFE16:
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 18
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 18
 
 
  737              		.size	AssembleTelemetryReportPacket, .-AssembleTelemetryReportPacket
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  783              		.cfi_offset 4, -8
  784              		.cfi_offset 14, -4
  237:HindsightCAN/CANCommon.c ****     return (uint32_t) DecodeTelemetryDataSigned(packet);
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 19
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 19
 
 
  785              		.loc 1 237 0
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  832              		@ link register save eliminated.
  833              	.LVL100:
  242:HindsightCAN/CANCommon.c ****     return packet->data[3];
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 20
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 20
 
 
  834              		.loc 1 242 0
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  878              	.LVL106:
  879 0016 1E78     		ldrb	r6, [r3]
  253:HindsightCAN/CANCommon.c ****     packetToAssemble->id = ConstructCANID(PACKET_PRIORITY_NORMAL, targetGroup, targetSerial);
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 21
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 21
 
 
  880              		.loc 1 253 0
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  927              		.section	.debug_info,"",%progbits
  928              	.Ldebug_info0:
  929 0000 420A0000 		.4byte	0xa42
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 22
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 22
 
 
  930 0004 0400     		.2byte	0x4
@@ -1267,15 +1267,15 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  933 000b 01       		.uleb128 0x1
  934 000c 3D010000 		.4byte	.LASF67
  935 0010 0C       		.byte	0xc
- 936 0011 3C040000 		.4byte	.LASF68
- 937 0015 BA030000 		.4byte	.LASF69
+ 936 0011 2D040000 		.4byte	.LASF68
+ 937 0015 D1020000 		.4byte	.LASF69
  938 0019 00000000 		.4byte	.Ldebug_ranges0+0
  939 001d 00000000 		.4byte	0
  940 0021 00000000 		.4byte	.Ldebug_line0
  941 0025 02       		.uleb128 0x2
  942 0026 01       		.byte	0x1
  943 0027 06       		.byte	0x6
- 944 0028 EE020000 		.4byte	.LASF0
+ 944 0028 43030000 		.4byte	.LASF0
  945 002c 03       		.uleb128 0x3
  946 002d 64020000 		.4byte	.LASF3
  947 0031 02       		.byte	0x2
@@ -1297,9 +1297,9 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  963 0050 02       		.uleb128 0x2
  964 0051 02       		.byte	0x2
  965 0052 07       		.byte	0x7
- 966 0053 8C030000 		.4byte	.LASF5
+ 966 0053 E1030000 		.4byte	.LASF5
  967 0057 03       		.uleb128 0x3
- 968 0058 83040000 		.4byte	.LASF6
+ 968 0058 74040000 		.4byte	.LASF6
  969 005c 02       		.byte	0x2
  970 005d 3F       		.byte	0x3f
  971 005e 62000000 		.4byte	0x62
@@ -1315,10 +1315,10 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  981 0074 02       		.uleb128 0x2
  982 0075 04       		.byte	0x4
  983 0076 07       		.byte	0x7
- 984 0077 67040000 		.4byte	.LASF9
+ 984 0077 58040000 		.4byte	.LASF9
  985 007b 02       		.uleb128 0x2
  986 007c 08       		.byte	0x8
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 23
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 23
 
 
  987 007d 05       		.byte	0x5
@@ -1326,7 +1326,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  989 0082 02       		.uleb128 0x2
  990 0083 08       		.byte	0x8
  991 0084 07       		.byte	0x7
- 992 0085 FA020000 		.4byte	.LASF11
+ 992 0085 4F030000 		.4byte	.LASF11
  993 0089 04       		.uleb128 0x4
  994 008a 04       		.byte	0x4
  995 008b 05       		.byte	0x5
@@ -1334,24 +1334,24 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  997 0090 02       		.uleb128 0x2
  998 0091 04       		.byte	0x4
  999 0092 07       		.byte	0x7
- 1000 0093 1A030000 		.4byte	.LASF12
+ 1000 0093 6F030000 		.4byte	.LASF12
  1001 0097 03       		.uleb128 0x3
  1002 0098 DC010000 		.4byte	.LASF13
  1003 009c 03       		.byte	0x3
  1004 009d 18       		.byte	0x18
  1005 009e 2C000000 		.4byte	0x2c
  1006 00a2 03       		.uleb128 0x3
- 1007 00a3 27030000 		.4byte	.LASF14
+ 1007 00a3 7C030000 		.4byte	.LASF14
  1008 00a7 03       		.byte	0x3
  1009 00a8 24       		.byte	0x24
  1010 00a9 45000000 		.4byte	0x45
  1011 00ad 03       		.uleb128 0x3
- 1012 00ae B2030000 		.4byte	.LASF15
+ 1012 00ae 07040000 		.4byte	.LASF15
  1013 00b2 03       		.byte	0x3
  1014 00b3 2C       		.byte	0x2c
  1015 00b4 57000000 		.4byte	0x57
  1016 00b8 03       		.uleb128 0x3
- 1017 00b9 11030000 		.4byte	.LASF16
+ 1017 00b9 66030000 		.4byte	.LASF16
  1018 00bd 03       		.byte	0x3
  1019 00be 30       		.byte	0x30
  1020 00bf 69000000 		.4byte	0x69
@@ -1373,12 +1373,12 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  1036 00dd 97000000 		.4byte	0x97
  1037 00e1 02       		.byte	0x2
  1038 00e2 07       		.uleb128 0x7
- 1039 00e3 1E040000 		.4byte	.LASF17
+ 1039 00e3 0F040000 		.4byte	.LASF17
  1040 00e7 04       		.byte	0x4
  1041 00e8 13       		.byte	0x13
  1042 00e9 EF000000 		.4byte	0xef
  1043 00ed 03       		.byte	0x3
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 24
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 24
 
 
  1044 00ee 00       		.byte	0
@@ -1399,7 +1399,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  1059 010c 14       		.byte	0x14
  1060 010d C3000000 		.4byte	0xc3
  1061 0111 0A       		.uleb128 0xa
- 1062 0112 FB040000 		.4byte	.LASF24
+ 1062 0112 EC040000 		.4byte	.LASF24
  1063 0116 01       		.byte	0x1
  1064 0117 13       		.byte	0x13
  1065 0118 00000000 		.4byte	.LFB0
@@ -1414,7 +1414,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  1074 012d 99010000 		.4byte	0x199
  1075 0131 00000000 		.4byte	.LLST0
  1076 0135 0B       		.uleb128 0xb
- 1077 0136 30030000 		.4byte	.LASF21
+ 1077 0136 85030000 		.4byte	.LASF21
  1078 013a 01       		.byte	0x1
  1079 013b 14       		.byte	0x14
  1080 013c 97000000 		.4byte	0x97
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  1098 0169 89000000 		.4byte	0x89
  1099 016d 01       		.uleb128 0x1
  1100 016e 50       		.byte	0x50
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 25
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 25
 
 
  1101 016f 0D       		.uleb128 0xd
@@ -1487,7 +1487,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  1144 01bb 99010000 		.4byte	0x199
  1145 01bf 8F000000 		.4byte	.LLST4
  1146 01c3 0B       		.uleb128 0xb
- 1147 01c4 79040000 		.4byte	.LASF26
+ 1147 01c4 6A040000 		.4byte	.LASF26
  1148 01c8 01       		.byte	0x1
  1149 01c9 25       		.byte	0x25
  1150 01ca 97000000 		.4byte	0x97
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  1155 01d8 26       		.byte	0x26
  1156 01d9 97000000 		.4byte	0x97
  1157 01dd D1000000 		.4byte	.LLST6
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 26
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 26
 
 
  1158 01e1 0F       		.uleb128 0xf
@@ -1519,7 +1519,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  1173 01f6 00       		.byte	0
  1174 01f7 00       		.byte	0
  1175 01f8 0A       		.uleb128 0xa
- 1176 01f9 A4050000 		.4byte	.LASF27
+ 1176 01f9 95050000 		.4byte	.LASF27
  1177 01fd 01       		.byte	0x1
  1178 01fe 30       		.byte	0x30
  1179 01ff 00000000 		.4byte	.LFB2
@@ -1557,8 +1557,8 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  1211 0240 00       		.byte	0
  1212 0241 00       		.byte	0
  1213 0242 11       		.uleb128 0x11
- 1214 0243 50050000 		.4byte	.LASF28
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 27
+ 1214 0243 41050000 		.4byte	.LASF28
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 27
 
 
  1215 0247 01       		.byte	0x1
@@ -1593,7 +1593,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  1244 027f 00       		.byte	0
  1245 0280 00       		.byte	0
  1246 0281 11       		.uleb128 0x11
- 1247 0282 8E050000 		.4byte	.LASF29
+ 1247 0282 7F050000 		.4byte	.LASF29
  1248 0286 01       		.byte	0x1
  1249 0287 5A       		.byte	0x5a
  1250 0288 B8000000 		.4byte	0xb8
@@ -1613,12 +1613,12 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  1264 02ae 16000000 		.4byte	.LBE2-.LBB2
  1265 02b2 C6020000 		.4byte	0x2c6
  1266 02b6 13       		.uleb128 0x13
- 1267 02b7 4F030000 		.4byte	.LASF31
+ 1267 02b7 A4030000 		.4byte	.LASF31
  1268 02bb 01       		.byte	0x1
  1269 02bc 5E       		.byte	0x5e
  1270 02bd B8000000 		.4byte	0xb8
  1271 02c1 8C010000 		.4byte	.LLST11
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 28
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 28
 
 
  1272 02c5 00       		.byte	0
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  1326 032b 09       		.byte	0x9
  1327 032c F1       		.byte	0xf1
  1328 032d 00       		.byte	0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 29
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 29
 
 
  1329 032e 0F       		.uleb128 0xf
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  1383 0394 0C000000 		.4byte	.LASF36
  1384 0398 01       		.byte	0x1
  1385 0399 7D       		.byte	0x7d
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 30
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 30
 
 
  1386 039a 99010000 		.4byte	0x199
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  1440 040c 30       		.byte	0x30
  1441 040d 0E       		.uleb128 0xe
  1442 040e 01       		.uleb128 0x1
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 31
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 31
 
 
  1443 040f 51       		.byte	0x51
@@ -1845,7 +1845,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  1484 0447 00       		.byte	0
  1485 0448 00       		.byte	0
  1486 0449 0A       		.uleb128 0xa
- 1487 044a 23040000 		.4byte	.LASF40
+ 1487 044a 14040000 		.4byte	.LASF40
  1488 044e 01       		.byte	0x1
  1489 044f 8D       		.byte	0x8d
  1490 0450 00000000 		.4byte	.LFB8
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  1497 0463 01       		.byte	0x1
  1498 0464 8D       		.byte	0x8d
  1499 0465 99010000 		.4byte	0x199
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 32
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 32
 
 
  1500 0469 F5020000 		.4byte	.LLST20
@@ -1869,13 +1869,13 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  1505 0474 97000000 		.4byte	0x97
  1506 0478 21030000 		.4byte	.LLST21
  1507 047c 0B       		.uleb128 0xb
- 1508 047d 42030000 		.4byte	.LASF42
+ 1508 047d 97030000 		.4byte	.LASF42
  1509 0481 01       		.byte	0x1
  1510 0482 8F       		.byte	0x8f
  1511 0483 97000000 		.4byte	0x97
  1512 0487 42030000 		.4byte	.LLST22
  1513 048b 0B       		.uleb128 0xb
- 1514 048c 29050000 		.4byte	.LASF43
+ 1514 048c 1A050000 		.4byte	.LASF43
  1515 0490 01       		.byte	0x1
  1516 0491 90       		.byte	0x90
  1517 0492 97000000 		.4byte	0x97
@@ -1915,10 +1915,10 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  1551 04cf 00       		.byte	0
  1552 04d0 00       		.byte	0
  1553 04d1 0A       		.uleb128 0xa
- 1554 04d2 C3040000 		.4byte	.LASF44
+ 1554 04d2 B4040000 		.4byte	.LASF44
  1555 04d6 01       		.byte	0x1
  1556 04d7 9D       		.byte	0x9d
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 33
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 33
 
 
  1557 04d8 00000000 		.4byte	.LFB9
@@ -1939,7 +1939,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  1572 04fc 97000000 		.4byte	0x97
  1573 0500 B0030000 		.4byte	.LLST25
  1574 0504 0B       		.uleb128 0xb
- 1575 0505 42030000 		.4byte	.LASF42
+ 1575 0505 97030000 		.4byte	.LASF42
  1576 0509 01       		.byte	0x1
  1577 050a 9D       		.byte	0x9d
  1578 050b 97000000 		.4byte	0x97
@@ -1972,13 +1972,13 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  1605 053b 00       		.byte	0
  1606 053c 00       		.byte	0
  1607 053d 0A       		.uleb128 0xa
- 1608 053e 71030000 		.4byte	.LASF45
+ 1608 053e C6030000 		.4byte	.LASF45
  1609 0542 01       		.byte	0x1
  1610 0543 A4       		.byte	0xa4
  1611 0544 00000000 		.4byte	.LFB10
  1612 0548 24000000 		.4byte	.LFE10-.LFB10
  1613 054c 01       		.uleb128 0x1
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 34
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 34
 
 
  1614 054d 9C       		.byte	0x9c
@@ -1990,13 +1990,13 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  1620 0559 99010000 		.4byte	0x199
  1621 055d F2030000 		.4byte	.LLST27
  1622 0561 0B       		.uleb128 0xb
- 1623 0562 30030000 		.4byte	.LASF21
+ 1623 0562 85030000 		.4byte	.LASF21
  1624 0566 01       		.byte	0x1
  1625 0567 A5       		.byte	0xa5
  1626 0568 97000000 		.4byte	0x97
  1627 056c 1E040000 		.4byte	.LLST28
  1628 0570 0B       		.uleb128 0xb
- 1629 0571 9F030000 		.4byte	.LASF46
+ 1629 0571 F4030000 		.4byte	.LASF46
  1630 0575 01       		.byte	0x1
  1631 0576 A6       		.byte	0xa6
  1632 0577 97000000 		.4byte	0x97
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  1668 05bc 1E000000 		.4byte	.LVL59
  1669 05c0 2F0A0000 		.4byte	0xa2f
  1670 05c4 00       		.byte	0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 35
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 35
 
 
  1671 05c5 0A       		.uleb128 0xa
@@ -2057,13 +2057,13 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  1684 05e1 99010000 		.4byte	0x199
  1685 05e5 7E040000 		.4byte	.LLST31
  1686 05e9 0B       		.uleb128 0xb
- 1687 05ea 30030000 		.4byte	.LASF21
+ 1687 05ea 85030000 		.4byte	.LASF21
  1688 05ee 01       		.byte	0x1
  1689 05ef AF       		.byte	0xaf
  1690 05f0 97000000 		.4byte	0x97
  1691 05f4 AA040000 		.4byte	.LLST32
  1692 05f8 0B       		.uleb128 0xb
- 1693 05f9 9F030000 		.4byte	.LASF46
+ 1693 05f9 F4030000 		.4byte	.LASF46
  1694 05fd 01       		.byte	0x1
  1695 05fe B0       		.byte	0xb0
  1696 05ff 97000000 		.4byte	0x97
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  1725 063d 01       		.uleb128 0x1
  1726 063e 51       		.byte	0x51
  1727 063f 02       		.uleb128 0x2
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 36
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 36
 
 
  1728 0640 09       		.byte	0x9
@@ -2147,18 +2147,18 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  1771 06a1 97000000 		.4byte	0x97
  1772 06a5 64050000 		.4byte	.LLST37
  1773 06a9 0B       		.uleb128 0xb
- 1774 06aa 42030000 		.4byte	.LASF42
+ 1774 06aa 97030000 		.4byte	.LASF42
  1775 06ae 01       		.byte	0x1
  1776 06af BF       		.byte	0xbf
  1777 06b0 97000000 		.4byte	0x97
  1778 06b4 85050000 		.4byte	.LLST38
  1779 06b8 0B       		.uleb128 0xb
- 1780 06b9 17050000 		.4byte	.LASF50
+ 1780 06b9 08050000 		.4byte	.LASF50
  1781 06bd 01       		.byte	0x1
  1782 06be C0       		.byte	0xc0
  1783 06bf 97000000 		.4byte	0x97
  1784 06c3 A6050000 		.4byte	.LLST39
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 37
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 37
 
 
  1785 06c7 15       		.uleb128 0x15
@@ -2218,13 +2218,13 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  1839 0724 91       		.byte	0x91
  1840 0725 00       		.sleb128 0
  1841 0726 06       		.byte	0x6
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 38
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 38
 
 
  1842 0727 00       		.byte	0
  1843 0728 00       		.byte	0
  1844 0729 0A       		.uleb128 0xa
- 1845 072a A7040000 		.4byte	.LASF52
+ 1845 072a 98040000 		.4byte	.LASF52
  1846 072e 01       		.byte	0x1
  1847 072f CE       		.byte	0xce
  1848 0730 00000000 		.4byte	.LFB15
@@ -2245,13 +2245,13 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  1863 0754 97000000 		.4byte	0x97
  1864 0758 13060000 		.4byte	.LLST42
  1865 075c 0B       		.uleb128 0xb
- 1866 075d 42030000 		.4byte	.LASF42
+ 1866 075d 97030000 		.4byte	.LASF42
  1867 0761 01       		.byte	0x1
  1868 0762 D0       		.byte	0xd0
  1869 0763 97000000 		.4byte	0x97
  1870 0767 34060000 		.4byte	.LLST43
  1871 076b 0B       		.uleb128 0xb
- 1872 076c 17050000 		.4byte	.LASF50
+ 1872 076c 08050000 		.4byte	.LASF50
  1873 0770 01       		.byte	0x1
  1874 0771 D1       		.byte	0xd1
  1875 0772 97000000 		.4byte	0x97
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  1896 079f 030A0000 		.4byte	0xa03
  1897 07a3 0E       		.uleb128 0xe
  1898 07a4 01       		.uleb128 0x1
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 39
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 39
 
 
  1899 07a5 50       		.byte	0x50
@@ -2315,19 +2315,19 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  1930 07dc 97000000 		.4byte	0x97
  1931 07e0 AF060000 		.4byte	.LLST46
  1932 07e4 0B       		.uleb128 0xb
- 1933 07e5 42030000 		.4byte	.LASF42
+ 1933 07e5 97030000 		.4byte	.LASF42
  1934 07e9 01       		.byte	0x1
  1935 07ea DB       		.byte	0xdb
  1936 07eb 97000000 		.4byte	0x97
  1937 07ef D0060000 		.4byte	.LLST47
  1938 07f3 0B       		.uleb128 0xb
- 1939 07f4 17050000 		.4byte	.LASF50
+ 1939 07f4 08050000 		.4byte	.LASF50
  1940 07f8 01       		.byte	0x1
  1941 07f9 DC       		.byte	0xdc
  1942 07fa 97000000 		.4byte	0x97
  1943 07fe F1060000 		.4byte	.LLST48
  1944 0802 15       		.uleb128 0x15
- 1945 0803 1E040000 		.4byte	.LASF17
+ 1945 0803 0F040000 		.4byte	.LASF17
  1946 0807 01       		.byte	0x1
  1947 0808 DD       		.byte	0xdd
  1948 0809 AD000000 		.4byte	0xad
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  1953 0811 C0000000 		.4byte	.LASF30
  1954 0815 01       		.byte	0x1
  1955 0816 E1       		.byte	0xe1
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 40
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 40
 
 
  1956 0817 89000000 		.4byte	0x89
@@ -2389,7 +2389,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  2001 0862 00       		.byte	0
  2002 0863 00       		.byte	0
  2003 0864 11       		.uleb128 0x11
- 2004 0865 8D040000 		.4byte	.LASF54
+ 2004 0865 7E040000 		.4byte	.LASF54
  2005 0869 01       		.byte	0x1
  2006 086a E6       		.byte	0xe6
  2007 086b AD000000 		.4byte	0xad
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  2010 0877 01       		.uleb128 0x1
  2011 0878 9C       		.byte	0x9c
  2012 0879 AA080000 		.4byte	0x8aa
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 41
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 41
 
 
  2013 087d 0B       		.uleb128 0xb
@@ -2432,7 +2432,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  2041 08a8 00       		.byte	0
  2042 08a9 00       		.byte	0
  2043 08aa 11       		.uleb128 0x11
- 2044 08ab 72050000 		.4byte	.LASF55
+ 2044 08ab 63050000 		.4byte	.LASF55
  2045 08af 01       		.byte	0x1
  2046 08b0 EB       		.byte	0xeb
  2047 08b1 B8000000 		.4byte	0xb8
@@ -2458,12 +2458,12 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  2067 08e0 01       		.uleb128 0x1
  2068 08e1 50       		.byte	0x50
  2069 08e2 00       		.byte	0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 42
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 42
 
 
  2070 08e3 00       		.byte	0
  2071 08e4 11       		.uleb128 0x11
- 2072 08e5 54030000 		.4byte	.LASF56
+ 2072 08e5 A9030000 		.4byte	.LASF56
  2073 08e9 01       		.byte	0x1
  2074 08ea C9       		.byte	0xc9
  2075 08eb B8000000 		.4byte	0xb8
@@ -2508,7 +2508,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  2114 0942 A2070000 		.4byte	.LLST53
  2115 0946 00       		.byte	0
  2116 0947 0A       		.uleb128 0xa
- 2117 0948 E4040000 		.4byte	.LASF58
+ 2117 0948 D5040000 		.4byte	.LASF58
  2118 094c 01       		.byte	0x1
  2119 094d F5       		.byte	0xf5
  2120 094e 00000000 		.4byte	.LFB20
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  2124 0958 F8090000 		.4byte	0x9f8
  2125 095c 0B       		.uleb128 0xb
  2126 095d 0C000000 		.4byte	.LASF36
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 43
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 43
 
 
  2127 0961 01       		.byte	0x1
@@ -2532,13 +2532,13 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  2135 0972 97000000 		.4byte	0x97
  2136 0976 EF070000 		.4byte	.LLST55
  2137 097a 0B       		.uleb128 0xb
- 2138 097b 42030000 		.4byte	.LASF42
+ 2138 097b 97030000 		.4byte	.LASF42
  2139 097f 01       		.byte	0x1
  2140 0980 F7       		.byte	0xf7
  2141 0981 97000000 		.4byte	0x97
  2142 0985 10080000 		.4byte	.LLST56
  2143 0989 0B       		.uleb128 0xb
- 2144 098a 6A050000 		.4byte	.LASF59
+ 2144 098a 5B050000 		.4byte	.LASF59
  2145 098e 01       		.byte	0x1
  2146 098f F8       		.byte	0xf8
  2147 0990 97000000 		.4byte	0x97
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  2181 09df 31       		.byte	0x31
  2182 09e0 00       		.byte	0
  2183 09e1 0F       		.uleb128 0xf
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 44
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 44
 
 
  2184 09e2 2C000000 		.4byte	.LVL109
@@ -2603,8 +2603,8 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  2203 0a01 04       		.byte	0x4
  2204 0a02 17       		.byte	0x17
  2205 0a03 17       		.uleb128 0x17
- 2206 0a04 D1020000 		.4byte	.LASF61
- 2207 0a08 D1020000 		.4byte	.LASF61
+ 2206 0a04 26030000 		.4byte	.LASF61
+ 2207 0a08 26030000 		.4byte	.LASF61
  2208 0a0c 04       		.byte	0x4
  2209 0a0d 1A       		.byte	0x1a
  2210 0a0e 17       		.uleb128 0x17
@@ -2613,13 +2613,13 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  2213 0a17 04       		.byte	0x4
  2214 0a18 2A       		.byte	0x2a
  2215 0a19 17       		.uleb128 0x17
- 2216 0a1a 38050000 		.4byte	.LASF63
- 2217 0a1e 38050000 		.4byte	.LASF63
+ 2216 0a1a 29050000 		.4byte	.LASF63
+ 2217 0a1e 29050000 		.4byte	.LASF63
  2218 0a22 04       		.byte	0x4
  2219 0a23 2C       		.byte	0x2c
  2220 0a24 17       		.uleb128 0x17
- 2221 0a25 55040000 		.4byte	.LASF64
- 2222 0a29 55040000 		.4byte	.LASF64
+ 2221 0a25 46040000 		.4byte	.LASF64
+ 2222 0a29 46040000 		.4byte	.LASF64
  2223 0a2d 04       		.byte	0x4
  2224 0a2e 1B       		.byte	0x1b
  2225 0a2f 17       		.uleb128 0x17
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  2238 0000 01       		.uleb128 0x1
  2239 0001 11       		.uleb128 0x11
  2240 0002 01       		.byte	0x1
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 45
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 45
 
 
  2241 0003 25       		.uleb128 0x25
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  2295 0039 0B       		.uleb128 0xb
  2296 003a 0B       		.uleb128 0xb
  2297 003b 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 46
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 46
 
 
  2298 003c 0B       		.uleb128 0xb
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  2352 0072 00       		.byte	0
  2353 0073 0A       		.uleb128 0xa
  2354 0074 2E       		.uleb128 0x2e
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 47
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 47
 
 
  2355 0075 01       		.byte	0x1
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  2409 00ac 898201   		.uleb128 0x4109
  2410 00af 01       		.byte	0x1
  2411 00b0 11       		.uleb128 0x11
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 48
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 48
 
 
  2412 00b1 01       		.uleb128 0x1
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  2466 00ec 18       		.uleb128 0x18
  2467 00ed 9742     		.uleb128 0x2117
  2468 00ef 19       		.uleb128 0x19
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 49
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 49
 
 
  2469 00f0 01       		.uleb128 0x1
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  2523 0128 16       		.uleb128 0x16
  2524 0129 05       		.uleb128 0x5
  2525 012a 00       		.byte	0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 50
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 50
 
 
  2526 012b 03       		.uleb128 0x3
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  2580 0036 51       		.byte	0x51
  2581 0037 0F000000 		.4byte	.LVL3-1
  2582 003b 20000000 		.4byte	.LFE0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 51
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 51
 
 
  2583 003f 0400     		.2byte	0x4
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  2637 00bb 09000000 		.4byte	.LVL8-1
  2638 00bf 0C000000 		.4byte	.LFE1
  2639 00c3 0400     		.2byte	0x4
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 52
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 52
 
 
  2640 00c5 F3       		.byte	0xf3
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  2694 0143 14000000 		.4byte	.LVL14
  2695 0147 0100     		.2byte	0x1
  2696 0149 54       		.byte	0x54
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 53
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 53
 
 
  2697 014a 14000000 		.4byte	.LVL14
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  2751 01cf 08000000 		.4byte	.LVL23
  2752 01d3 0100     		.2byte	0x1
  2753 01d5 51       		.byte	0x51
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 54
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 54
 
 
  2754 01d6 08000000 		.4byte	.LVL23
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  2808 0258 00000000 		.4byte	0
  2809              	.LLST16:
  2810 025c 00000000 		.4byte	.LVL31
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 55
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 55
 
 
  2811 0260 0E000000 		.4byte	.LVL33
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  2865 02e4 41000000 		.4byte	.LVL41-1
  2866 02e8 0300     		.2byte	0x3
  2867 02ea 72       		.byte	0x72
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 56
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 56
 
 
  2868 02eb 7F       		.sleb128 -1
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  2922 036d 53       		.byte	0x53
  2923 036e 0B000000 		.4byte	.LVL46-1
  2924 0372 20000000 		.4byte	.LFE8
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 57
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 57
 
 
  2925 0376 0400     		.2byte	0x4
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  2979 03f2 00000000 		.4byte	.LVL54
  2980 03f6 06000000 		.4byte	.LVL55
  2981 03fa 0100     		.2byte	0x1
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 58
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 58
 
 
  2982 03fc 50       		.byte	0x50
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  3036 047e 00000000 		.4byte	.LVL62
  3037 0482 06000000 		.4byte	.LVL63
  3038 0486 0100     		.2byte	0x1
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 59
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 59
 
 
  3039 0488 50       		.byte	0x50
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  3093 050a 00000000 		.4byte	.LVL70
  3094 050e 02000000 		.4byte	.LVL71
  3095 0512 0100     		.2byte	0x1
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 60
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 60
 
 
  3096 0514 50       		.byte	0x50
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  3150 0594 2C000000 		.4byte	.LFE13
  3151 0598 0400     		.2byte	0x4
  3152 059a F3       		.byte	0xf3
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 61
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 61
 
 
  3153 059b 01       		.uleb128 0x1
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  3207 061d 51       		.byte	0x51
  3208 061e 0B000000 		.4byte	.LVL82-1
  3209 0622 20000000 		.4byte	.LFE15
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 62
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 62
 
 
  3210 0626 0400     		.2byte	0x4
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  3264 06a4 01       		.uleb128 0x1
  3265 06a5 50       		.byte	0x50
  3266 06a6 9F       		.byte	0x9f
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 63
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 63
 
 
  3267 06a7 00000000 		.4byte	0
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  3321 0729 9F       		.byte	0x9f
  3322 072a 00000000 		.4byte	0
  3323 072e 00000000 		.4byte	0
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 64
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 64
 
 
  3324              	.LLST50:
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  3378 07b1 04000000 		.4byte	.LFE19
  3379 07b5 0400     		.2byte	0x4
  3380 07b7 F3       		.byte	0xf3
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 65
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 65
 
 
  3381 07b8 01       		.uleb128 0x1
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  3435 0839 0100     		.2byte	0x1
  3436 083b 53       		.byte	0x53
  3437 083c 0C000000 		.4byte	.LVL103
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 66
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 66
 
 
  3438 0840 4A000000 		.4byte	.LFE20
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  3492              	.LLST60:
  3493 08c2 00000000 		.4byte	.LVL102
  3494 08c6 0C000000 		.4byte	.LVL103
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 67
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 67
 
 
  3495 08ca 0200     		.2byte	0x2
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  3549 0030 00000000 		.4byte	.LFB5
  3550 0034 2A000000 		.4byte	.LFE5-.LFB5
  3551 0038 00000000 		.4byte	.LFB4
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 68
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 68
 
 
  3552 003c 20000000 		.4byte	.LFE4-.LFB4
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  3606 004c 1A000000 		.4byte	.LFE9
  3607 0050 00000000 		.4byte	.LFB10
  3608 0054 24000000 		.4byte	.LFE10
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 69
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 69
 
 
  3609 0058 00000000 		.4byte	.LFB11
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  3643      61646361 
  3644              	.LASF66:
  3645 0071 4465636F 		.ascii	"DecodeBytesToIntMSBFirst\000"
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 70
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 70
 
 
  3645      64654279 
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  3667      6E743136 
  3667      5F7400
  3668              	.LASF57:
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 71
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 71
 
 
  3669 0129 4465636F 		.ascii	"DecodeTelemetryType\000"
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  3688              	.LASF19:
  3689 023b 43414E50 		.ascii	"CANPacket\000"
  3689      61636B65 
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 72
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 72
 
 
  3689      7400
@@ -4302,208 +4302,206 @@ ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 1
  3705 02c7 74696D65 		.ascii	"timestamp\000"
  3705      7374616D 
  3705      7000
- 3706              	.LASF61:
- 3707 02d1 57726974 		.ascii	"WriteSenderSerialAndPacketID\000"
- 3707      6553656E 
- 3707      64657253 
- 3707      65726961 
- 3707      6C416E64 
- 3708              	.LASF0:
- 3709 02ee 7369676E 		.ascii	"signed char\000"
- 3709      65642063 
- 3709      68617200 
- 3710              	.LASF11:
- 3711 02fa 6C6F6E67 		.ascii	"long long unsigned int\000"
- 3711      206C6F6E 
- 3711      6720756E 
- 3711      7369676E 
- 3711      65642069 
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 73
+ 3706              	.LASF69:
+ 3707 02d1 433A5C55 		.ascii	"C:\\Users\\davis\\Documents\\PSoC Creator\\BLDC_Mot"
+ 3707      73657273 
+ 3707      5C646176 
+ 3707      69735C44 
+ 3707      6F63756D 
+ 3708 02ff 6F725F42 		.ascii	"or_Board_PY2023\\BLDC_Motor_Board.cydsn\000"
+ 3708      6F617264 
+ 3708      5F505932 
+ 3708      3032335C 
+ 3708      424C4443 
+ 3709              	.LASF61:
+ 3710 0326 57726974 		.ascii	"WriteSenderSerialAndPacketID\000"
+ 3710      6553656E 
+ 3710      64657253 
+ 3710      65726961 
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 73
 
 
- 3712              	.LASF16:
- 3713 0311 75696E74 		.ascii	"uint32_t\000"
- 3713      33325F74 
- 3713      00
- 3714              	.LASF12:
- 3715 031a 756E7369 		.ascii	"unsigned int\000"
- 3715      676E6564 
- 3715      20696E74 
- 3715      00
- 3716              	.LASF14:
- 3717 0327 75696E74 		.ascii	"uint16_t\000"
- 3717      31365F74 
- 3717      00
- 3718              	.LASF21:
- 3719 0330 74617267 		.ascii	"targetDeviceGroup\000"
- 3719      65744465 
- 3719      76696365 
- 3719      47726F75 
- 3719      7000
- 3720              	.LASF42:
- 3721 0342 74617267 		.ascii	"targetSerial\000"
- 3721      65745365 
- 3721      7269616C 
- 3721      00
- 3722              	.LASF31:
- 3723 034f 74696D65 		.ascii	"time\000"
- 3723      00
- 3724              	.LASF56:
- 3725 0354 47657454 		.ascii	"GetTelemetryTimingFromPacket\000"
- 3725      656C656D 
- 3725      65747279 
- 3725      54696D69 
- 3725      6E674672 
- 3726              	.LASF45:
- 3727 0371 41737365 		.ascii	"AssembleChipTypePullPacket\000"
- 3727      6D626C65 
- 3727      43686970 
- 3727      54797065 
- 3727      50756C6C 
- 3728              	.LASF5:
- 3729 038c 73686F72 		.ascii	"short unsigned int\000"
- 3729      7420756E 
- 3729      7369676E 
- 3729      65642069 
- 3729      6E7400
- 3730              	.LASF46:
- 3731 039f 74617267 		.ascii	"targetDeviceSerial\000"
- 3731      65744465 
- 3731      76696365 
- 3731      53657269 
- 3731      616C00
- 3732              	.LASF15:
- 3733 03b2 696E7433 		.ascii	"int32_t\000"
- 3733      325F7400 
- 3734              	.LASF69:
- 3735 03ba 433A5C55 		.ascii	"C:\\Users\\M4rz4n\\Desktop\\Husky Robotics\\Firmwar"
- 3735      73657273 
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 74
+ 3710      6C416E64 
+ 3711              	.LASF0:
+ 3712 0343 7369676E 		.ascii	"signed char\000"
+ 3712      65642063 
+ 3712      68617200 
+ 3713              	.LASF11:
+ 3714 034f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 3714      206C6F6E 
+ 3714      6720756E 
+ 3714      7369676E 
+ 3714      65642069 
+ 3715              	.LASF16:
+ 3716 0366 75696E74 		.ascii	"uint32_t\000"
+ 3716      33325F74 
+ 3716      00
+ 3717              	.LASF12:
+ 3718 036f 756E7369 		.ascii	"unsigned int\000"
+ 3718      676E6564 
+ 3718      20696E74 
+ 3718      00
+ 3719              	.LASF14:
+ 3720 037c 75696E74 		.ascii	"uint16_t\000"
+ 3720      31365F74 
+ 3720      00
+ 3721              	.LASF21:
+ 3722 0385 74617267 		.ascii	"targetDeviceGroup\000"
+ 3722      65744465 
+ 3722      76696365 
+ 3722      47726F75 
+ 3722      7000
+ 3723              	.LASF42:
+ 3724 0397 74617267 		.ascii	"targetSerial\000"
+ 3724      65745365 
+ 3724      7269616C 
+ 3724      00
+ 3725              	.LASF31:
+ 3726 03a4 74696D65 		.ascii	"time\000"
+ 3726      00
+ 3727              	.LASF56:
+ 3728 03a9 47657454 		.ascii	"GetTelemetryTimingFromPacket\000"
+ 3728      656C656D 
+ 3728      65747279 
+ 3728      54696D69 
+ 3728      6E674672 
+ 3729              	.LASF45:
+ 3730 03c6 41737365 		.ascii	"AssembleChipTypePullPacket\000"
+ 3730      6D626C65 
+ 3730      43686970 
+ 3730      54797065 
+ 3730      50756C6C 
+ 3731              	.LASF5:
+ 3732 03e1 73686F72 		.ascii	"short unsigned int\000"
+ 3732      7420756E 
+ 3732      7369676E 
+ 3732      65642069 
+ 3732      6E7400
+ 3733              	.LASF46:
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 74
 
 
- 3735      5C4D3472 
- 3735      7A346E5C 
- 3735      4465736B 
- 3736 03e8 655C424C 		.ascii	"e\\BLDC\\BLDC_Motor_Board_PY2023\\BLDC_Motor_Board."
- 3736      44435C42 
- 3736      4C44435F 
- 3736      4D6F746F 
- 3736      725F426F 
- 3737 0418 63796473 		.ascii	"cydsn\000"
- 3737      6E00
- 3738              	.LASF17:
- 3739 041e 64617461 		.ascii	"data\000"
- 3739      00
- 3740              	.LASF40:
- 3741 0423 41737365 		.ascii	"AssembleFailReportPacket\000"
- 3741      6D626C65 
- 3741      4661696C 
- 3741      5265706F 
- 3741      72745061 
- 3742              	.LASF68:
- 3743 043c 48696E64 		.ascii	"HindsightCAN\\CANCommon.c\000"
- 3743      73696768 
- 3743      7443414E 
- 3743      5C43414E 
- 3743      436F6D6D 
- 3744              	.LASF64:
- 3745 0455 57726974 		.ascii	"WritePacketIDOnly\000"
- 3745      65506163 
- 3745      6B657449 
- 3745      444F6E6C 
- 3745      7900
- 3746              	.LASF9:
- 3747 0467 6C6F6E67 		.ascii	"long unsigned int\000"
- 3747      20756E73 
- 3747      69676E65 
- 3747      6420696E 
- 3747      7400
- 3748              	.LASF26:
- 3749 0479 67726F75 		.ascii	"groupCode\000"
- 3749      70436F64 
- 3749      6500
- 3750              	.LASF6:
- 3751 0483 5F5F696E 		.ascii	"__int32_t\000"
- 3751      7433325F 
- 3751      7400
- 3752              	.LASF54:
- 3753 048d 4465636F 		.ascii	"DecodeTelemetryDataSigned\000"
- 3753      64655465 
- 3753      6C656D65 
- 3753      74727944 
- 3753      61746153 
- 3754              	.LASF52:
- 3755 04a7 41737365 		.ascii	"AssembleTelemetryPullPacket\000"
- 3755      6D626C65 
- 3755      54656C65 
- 3755      6D657472 
- 3755      7950756C 
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 75
+ 3734 03f4 74617267 		.ascii	"targetDeviceSerial\000"
+ 3734      65744465 
+ 3734      76696365 
+ 3734      53657269 
+ 3734      616C00
+ 3735              	.LASF15:
+ 3736 0407 696E7433 		.ascii	"int32_t\000"
+ 3736      325F7400 
+ 3737              	.LASF17:
+ 3738 040f 64617461 		.ascii	"data\000"
+ 3738      00
+ 3739              	.LASF40:
+ 3740 0414 41737365 		.ascii	"AssembleFailReportPacket\000"
+ 3740      6D626C65 
+ 3740      4661696C 
+ 3740      5265706F 
+ 3740      72745061 
+ 3741              	.LASF68:
+ 3742 042d 48696E64 		.ascii	"HindsightCAN\\CANCommon.c\000"
+ 3742      73696768 
+ 3742      7443414E 
+ 3742      5C43414E 
+ 3742      436F6D6D 
+ 3743              	.LASF64:
+ 3744 0446 57726974 		.ascii	"WritePacketIDOnly\000"
+ 3744      65506163 
+ 3744      6B657449 
+ 3744      444F6E6C 
+ 3744      7900
+ 3745              	.LASF9:
+ 3746 0458 6C6F6E67 		.ascii	"long unsigned int\000"
+ 3746      20756E73 
+ 3746      69676E65 
+ 3746      6420696E 
+ 3746      7400
+ 3747              	.LASF26:
+ 3748 046a 67726F75 		.ascii	"groupCode\000"
+ 3748      70436F64 
+ 3748      6500
+ 3749              	.LASF6:
+ 3750 0474 5F5F696E 		.ascii	"__int32_t\000"
+ 3750      7433325F 
+ 3750      7400
+ 3751              	.LASF54:
+ 3752 047e 4465636F 		.ascii	"DecodeTelemetryDataSigned\000"
+ 3752      64655465 
+ 3752      6C656D65 
+ 3752      74727944 
+ 3752      61746153 
+ 3753              	.LASF52:
+ 3754 0498 41737365 		.ascii	"AssembleTelemetryPullPacket\000"
+ 3754      6D626C65 
+ 3754      54656C65 
+ 3754      6D657472 
+ 3754      7950756C 
+ 3755              	.LASF44:
+ 3756 04b4 41737365 		.ascii	"AssembleOverrideProtectionPacket\000"
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 75
 
 
- 3756              	.LASF44:
- 3757 04c3 41737365 		.ascii	"AssembleOverrideProtectionPacket\000"
- 3757      6D626C65 
- 3757      4F766572 
- 3757      72696465 
- 3757      50726F74 
- 3758              	.LASF58:
- 3759 04e4 41737365 		.ascii	"AssembleRGBColorPacket\000"
- 3759      6D626C65 
- 3759      52474243 
- 3759      6F6C6F72 
- 3759      5061636B 
- 3760              	.LASF24:
- 3761 04fb 41737365 		.ascii	"AssembleEmergencyStopPacket\000"
- 3761      6D626C65 
- 3761      456D6572 
- 3761      67656E63 
- 3761      7953746F 
- 3762              	.LASF50:
- 3763 0517 74656C65 		.ascii	"telemetryTypeCode\000"
- 3763      6D657472 
- 3763      79547970 
- 3763      65436F64 
- 3763      6500
- 3764              	.LASF43:
- 3765 0529 6661696C 		.ascii	"failedPacketID\000"
- 3765      65645061 
- 3765      636B6574 
- 3765      494400
- 3766              	.LASF63:
- 3767 0538 5061636B 		.ascii	"PackIntIntoDataMSBFirst\000"
- 3767      496E7449 
- 3767      6E746F44 
- 3767      6174614D 
- 3767      53424669 
- 3768              	.LASF28:
- 3769 0550 47657445 		.ascii	"GetEmergencyStopErrorCode\000"
- 3769      6D657267 
- 3769      656E6379 
- 3769      53746F70 
- 3769      4572726F 
- 3770              	.LASF59:
- 3771 056a 61646472 		.ascii	"addrLED\000"
- 3771      4C454400 
- 3772              	.LASF55:
- 3773 0572 4465636F 		.ascii	"DecodeTelemetryDataUnsigned\000"
- 3773      64655465 
- 3773      6C656D65 
- 3773      74727944 
- 3773      61746155 
- 3774              	.LASF29:
- 3775 058e 47657448 		.ascii	"GetHeartbeatTimeStamp\000"
- 3775      65617274 
- 3775      62656174 
- 3775      54696D65 
- 3775      5374616D 
- 3776              	.LASF27:
-ARM GAS  C:\Users\M4rz4n\AppData\Local\Temp\ccqFZg1D.s 			page 76
+ 3756      6D626C65 
+ 3756      4F766572 
+ 3756      72696465 
+ 3756      50726F74 
+ 3757              	.LASF58:
+ 3758 04d5 41737365 		.ascii	"AssembleRGBColorPacket\000"
+ 3758      6D626C65 
+ 3758      52474243 
+ 3758      6F6C6F72 
+ 3758      5061636B 
+ 3759              	.LASF24:
+ 3760 04ec 41737365 		.ascii	"AssembleEmergencyStopPacket\000"
+ 3760      6D626C65 
+ 3760      456D6572 
+ 3760      67656E63 
+ 3760      7953746F 
+ 3761              	.LASF50:
+ 3762 0508 74656C65 		.ascii	"telemetryTypeCode\000"
+ 3762      6D657472 
+ 3762      79547970 
+ 3762      65436F64 
+ 3762      6500
+ 3763              	.LASF43:
+ 3764 051a 6661696C 		.ascii	"failedPacketID\000"
+ 3764      65645061 
+ 3764      636B6574 
+ 3764      494400
+ 3765              	.LASF63:
+ 3766 0529 5061636B 		.ascii	"PackIntIntoDataMSBFirst\000"
+ 3766      496E7449 
+ 3766      6E746F44 
+ 3766      6174614D 
+ 3766      53424669 
+ 3767              	.LASF28:
+ 3768 0541 47657445 		.ascii	"GetEmergencyStopErrorCode\000"
+ 3768      6D657267 
+ 3768      656E6379 
+ 3768      53746F70 
+ 3768      4572726F 
+ 3769              	.LASF59:
+ 3770 055b 61646472 		.ascii	"addrLED\000"
+ 3770      4C454400 
+ 3771              	.LASF55:
+ 3772 0563 4465636F 		.ascii	"DecodeTelemetryDataUnsigned\000"
+ 3772      64655465 
+ 3772      6C656D65 
+ 3772      74727944 
+ 3772      61746155 
+ 3773              	.LASF29:
+ 3774 057f 47657448 		.ascii	"GetHeartbeatTimeStamp\000"
+ 3774      65617274 
+ 3774      62656174 
+ 3774      54696D65 
+ 3774      5374616D 
+ 3775              	.LASF27:
+ 3776 0595 41737365 		.ascii	"AssembleBrodcastEmergencyStopPacket\000"
+ 3776      6D626C65 
+ARM GAS  C:\Users\davis\AppData\Local\Temp\cclKIkUk.s 			page 76
 
 
- 3777 05a4 41737365 		.ascii	"AssembleBrodcastEmergencyStopPacket\000"
- 3777      6D626C65 
- 3777      42726F64 
- 3777      63617374 
- 3777      456D6572 
- 3778              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 3776      42726F64 
+ 3776      63617374 
+ 3776      456D6572 
+ 3777              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

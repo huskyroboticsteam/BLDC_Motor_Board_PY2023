@@ -1,5 +1,5 @@
--- Project:   C:\Users\M4rz4n\Desktop\Husky Robotics\Firmware\BLDC\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_Motor_Board.cyprj
--- Generated: 04/06/2024 13:49:05
+-- Project:   C:\Users\davis\Documents\PSoC Creator\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_Motor_Board.cyprj
+-- Generated: 04/13/2024 12:58:24
 -- PSoC Creator  4.4
 
 ENTITY BLDC_Motor_Board IS
@@ -22,11 +22,11 @@ ENTITY BLDC_Motor_Board IS
         \Current_Sensor_I2C:sda(0)_PAD\ : INOUT std_ulogic;
         \Current_Sensor_I2C:scl(0)_PAD\ : INOUT std_ulogic;
         CAN_LED(0)_PAD : OUT std_ulogic;
-        DRV_EN(0)_PAD : IN std_ulogic;
-        \TMC6100:ss_s(0)_PAD\ : IN std_ulogic;
-        \TMC6100:miso_s(0)_PAD\ : INOUT std_ulogic;
-        \TMC6100:sclk_s(0)_PAD\ : IN std_ulogic;
-        \TMC6100:mosi_s(0)_PAD\ : IN std_ulogic;
+        DRV_EN(0)_PAD : OUT std_ulogic;
+        \TMC6100:sclk_m(0)_PAD\ : INOUT std_ulogic;
+        \TMC6100:miso_m(0)_PAD\ : IN std_ulogic;
+        \TMC6100:mosi_m(0)_PAD\ : INOUT std_ulogic;
+        \TMC6100:ss0_m(0)_PAD\ : INOUT std_ulogic;
         DIP_1(0)_PAD : IN std_ulogic;
         Pin_Limit_2(0)_PAD : IN std_ulogic;
         Pin_Limit_1(0)_PAD : IN std_ulogic;
@@ -145,23 +145,21 @@ ARCHITECTURE __DEFAULT__ OF BLDC_Motor_Board IS
     SIGNAL \Current_Sensor_I2C:select_m_wire_2\ : bit;
     SIGNAL \Current_Sensor_I2C:select_m_wire_3\ : bit;
     SIGNAL \Current_Sensor_I2C:tx_wire\ : bit;
-    SIGNAL \TMC6100:Net_1297\ : bit;
     SIGNAL \TMC6100:Net_847_ff2\ : bit;
     ATTRIBUTE global_signal OF \TMC6100:Net_847_ff2\ : SIGNAL IS true;
-    SIGNAL \\\TMC6100:miso_s(0)\\__PA\ : bit;
+    SIGNAL \\\TMC6100:miso_m(0)\\__PA\ : bit;
+    SIGNAL \TMC6100:miso_m_wire\ : bit;
     SIGNAL \TMC6100:miso_s_wire\ : bit;
+    SIGNAL \\\TMC6100:mosi_m(0)\\__PA\ : bit;
     SIGNAL \TMC6100:mosi_m_wire\ : bit;
-    SIGNAL \\\TMC6100:mosi_s(0)\\__PA\ : bit;
-    SIGNAL \TMC6100:mosi_s_wire\ : bit;
     SIGNAL \TMC6100:rts_wire\ : bit;
+    SIGNAL \\\TMC6100:sclk_m(0)\\__PA\ : bit;
     SIGNAL \TMC6100:sclk_m_wire\ : bit;
-    SIGNAL \\\TMC6100:sclk_s(0)\\__PA\ : bit;
-    SIGNAL \TMC6100:sclk_s_wire\ : bit;
     SIGNAL \TMC6100:select_m_wire_0\ : bit;
     SIGNAL \TMC6100:select_m_wire_1\ : bit;
     SIGNAL \TMC6100:select_m_wire_2\ : bit;
     SIGNAL \TMC6100:select_m_wire_3\ : bit;
-    SIGNAL \\\TMC6100:ss_s(0)\\__PA\ : bit;
+    SIGNAL \\\TMC6100:ss0_m(0)\\__PA\ : bit;
     SIGNAL \TMC6100:tx_wire\ : bit;
     SIGNAL \Timer_Period_Reset:TimerUDB:control_0\ : bit;
     SIGNAL \Timer_Period_Reset:TimerUDB:control_1\ : bit;
@@ -265,14 +263,14 @@ ARCHITECTURE __DEFAULT__ OF BLDC_Motor_Board IS
     ATTRIBUTE Location OF CAN_LED(0) : LABEL IS "P6[4]";
     ATTRIBUTE lib_model OF DRV_EN(0) : LABEL IS "iocell19";
     ATTRIBUTE Location OF DRV_EN(0) : LABEL IS "P5[2]";
-    ATTRIBUTE lib_model OF \TMC6100:ss_s(0)\ : LABEL IS "iocell20";
-    ATTRIBUTE Location OF \TMC6100:ss_s(0)\ : LABEL IS "P2[3]";
-    ATTRIBUTE lib_model OF \TMC6100:miso_s(0)\ : LABEL IS "iocell21";
-    ATTRIBUTE Location OF \TMC6100:miso_s(0)\ : LABEL IS "P2[1]";
-    ATTRIBUTE lib_model OF \TMC6100:sclk_s(0)\ : LABEL IS "iocell22";
-    ATTRIBUTE Location OF \TMC6100:sclk_s(0)\ : LABEL IS "P2[2]";
-    ATTRIBUTE lib_model OF \TMC6100:mosi_s(0)\ : LABEL IS "iocell23";
-    ATTRIBUTE Location OF \TMC6100:mosi_s(0)\ : LABEL IS "P2[0]";
+    ATTRIBUTE lib_model OF \TMC6100:sclk_m(0)\ : LABEL IS "iocell20";
+    ATTRIBUTE Location OF \TMC6100:sclk_m(0)\ : LABEL IS "P2[2]";
+    ATTRIBUTE lib_model OF \TMC6100:miso_m(0)\ : LABEL IS "iocell21";
+    ATTRIBUTE Location OF \TMC6100:miso_m(0)\ : LABEL IS "P2[1]";
+    ATTRIBUTE lib_model OF \TMC6100:mosi_m(0)\ : LABEL IS "iocell22";
+    ATTRIBUTE Location OF \TMC6100:mosi_m(0)\ : LABEL IS "P2[0]";
+    ATTRIBUTE lib_model OF \TMC6100:ss0_m(0)\ : LABEL IS "iocell23";
+    ATTRIBUTE Location OF \TMC6100:ss0_m(0)\ : LABEL IS "P2[3]";
     ATTRIBUTE lib_model OF DIP_1(0) : LABEL IS "iocell24";
     ATTRIBUTE Location OF DIP_1(0) : LABEL IS "P3[4]";
     ATTRIBUTE lib_model OF Pin_Limit_2(0) : LABEL IS "iocell25";
@@ -2398,13 +2396,13 @@ BEGIN
 
     DRV_EN:logicalport
         GENERIC MAP(
-            drive_mode => "001",
+            drive_mode => "110",
             ibuf_enabled => "1",
             id => "29938f8e-7989-4f38-afcc-a0b03c6eb22d",
             init_dr_st => "1",
             input_buffer_sel => "00",
             input_clk_en => 0,
-            input_sync => "0",
+            input_sync => "1",
             input_sync_mode => "0",
             intr_mode => "00",
             invert_in_clock => 0,
@@ -2434,7 +2432,7 @@ BEGIN
             pa_out_clock_en => -1,
             pa_out_reset => -1,
             pin_aliases => "",
-            pin_mode => "I",
+            pin_mode => "O",
             por_state => 4,
             port_alias_group => "",
             port_alias_required => 0,
@@ -2451,7 +2449,7 @@ BEGIN
             spanning => 0,
             sw_only => 0,
             use_annotation => "0",
-            vtrip => "00",
+            vtrip => "10",
             width => 1,
             in_clk_inv => 0,
             in_clken_inv => 0,
@@ -2486,102 +2484,11 @@ BEGIN
             out_clock_en => '1',
             out_reset => '0');
 
-    \TMC6100:ss_s\:logicalport
-        GENERIC MAP(
-            drive_mode => "001",
-            ibuf_enabled => "1",
-            id => "8c8734ef-3644-4eed-bc55-360072b94fff/3446580a-3b9d-491c-8730-f7ea34ca86e3",
-            init_dr_st => "0",
-            input_buffer_sel => "00",
-            input_clk_en => 0,
-            input_sync => "0",
-            input_sync_mode => "0",
-            intr_mode => "00",
-            invert_in_clock => 0,
-            invert_in_clock_en => 0,
-            invert_in_reset => 0,
-            invert_out_clock => 0,
-            invert_out_clock_en => 0,
-            invert_out_reset => 0,
-            io_voltage => "",
-            layout_mode => "CONTIGUOUS",
-            oe_conn => "0",
-            oe_reset => 0,
-            oe_sync => "0",
-            output_clk_en => 0,
-            output_clock_mode => "0",
-            output_conn => "0",
-            output_mode => "0",
-            output_reset => 0,
-            output_sync => "0",
-            ovt_hyst_trim => "0",
-            ovt_needed => "0",
-            ovt_slew_control => "00",
-            pa_in_clock => -1,
-            pa_in_clock_en => -1,
-            pa_in_reset => -1,
-            pa_out_clock => -1,
-            pa_out_clock_en => -1,
-            pa_out_reset => -1,
-            pin_aliases => "",
-            pin_mode => "I",
-            por_state => 4,
-            port_alias_group => "",
-            port_alias_required => 0,
-            sio_group_cnt => 0,
-            sio_hifreq => "00000000",
-            sio_hyst => "1",
-            sio_ibuf => "00000000",
-            sio_info => "00",
-            sio_obuf => "00000000",
-            sio_refsel => "00000000",
-            sio_vohsel => "00000000",
-            sio_vtrip => "00000000",
-            slew_rate => "0",
-            spanning => 0,
-            sw_only => 0,
-            use_annotation => "0",
-            vtrip => "00",
-            width => 1,
-            in_clk_inv => 0,
-            in_clken_inv => 0,
-            in_clken_mode => 1,
-            in_rst_inv => 0,
-            out_clk_inv => 0,
-            out_clken_inv => 0,
-            out_clken_mode => 1,
-            out_rst_inv => 0)
-        PORT MAP(
-            in_clock_en => open,
-            in_reset => open,
-            out_clock_en => open,
-            out_reset => open);
-
-    \TMC6100:ss_s(0)\:iocell
-        GENERIC MAP(
-            in_sync_mode => 0,
-            out_sync_mode => 0,
-            oe_sync_mode => 0,
-            logicalport => "\TMC6100:ss_s\",
-            logicalport_pin_id => 0,
-            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
-        PORT MAP(
-            pa_out => \\\TMC6100:ss_s(0)\\__PA\,
-            oe => open,
-            fb => \TMC6100:Net_1297\,
-            pad_in => \TMC6100:ss_s(0)_PAD\,
-            in_clock => open,
-            in_clock_en => '1',
-            in_reset => '0',
-            out_clock => open,
-            out_clock_en => '1',
-            out_reset => '0');
-
-    \TMC6100:miso_s\:logicalport
+    \TMC6100:sclk_m\:logicalport
         GENERIC MAP(
             drive_mode => "110",
             ibuf_enabled => "0",
-            id => "8c8734ef-3644-4eed-bc55-360072b94fff/52f31aa9-2f0a-497d-9a1f-1424095e13e6",
+            id => "8c8734ef-3644-4eed-bc55-360072b94fff/38438ec5-732c-47a6-9805-e2b697fb82a2",
             init_dr_st => "1",
             input_buffer_sel => "00",
             input_clk_en => 0,
@@ -2648,20 +2555,20 @@ BEGIN
             out_clock_en => open,
             out_reset => open);
 
-    \TMC6100:miso_s(0)\:iocell
+    \TMC6100:sclk_m(0)\:iocell
         GENERIC MAP(
             in_sync_mode => 0,
             out_sync_mode => 0,
             oe_sync_mode => 0,
-            logicalport => "\TMC6100:miso_s\",
+            logicalport => "\TMC6100:sclk_m\",
             logicalport_pin_id => 0,
             io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
         PORT MAP(
-            pa_out => \\\TMC6100:miso_s(0)\\__PA\,
+            pa_out => \\\TMC6100:sclk_m(0)\\__PA\,
             oe => open,
-            pin_input => \TMC6100:miso_s_wire\,
-            pad_out => \TMC6100:miso_s(0)_PAD\,
-            pad_in => \TMC6100:miso_s(0)_PAD\,
+            pin_input => \TMC6100:sclk_m_wire\,
+            pad_out => \TMC6100:sclk_m(0)_PAD\,
+            pad_in => \TMC6100:sclk_m(0)_PAD\,
             in_clock => open,
             in_clock_en => '1',
             in_reset => '0',
@@ -2669,11 +2576,11 @@ BEGIN
             out_clock_en => '1',
             out_reset => '0');
 
-    \TMC6100:sclk_s\:logicalport
+    \TMC6100:miso_m\:logicalport
         GENERIC MAP(
             drive_mode => "001",
             ibuf_enabled => "1",
-            id => "8c8734ef-3644-4eed-bc55-360072b94fff/4c15b41e-e284-4978-99e7-5aaee19bd0ce",
+            id => "8c8734ef-3644-4eed-bc55-360072b94fff/1425177d-0d0e-4468-8bcc-e638e5509a9b",
             init_dr_st => "0",
             input_buffer_sel => "00",
             input_clk_en => 0,
@@ -2740,19 +2647,19 @@ BEGIN
             out_clock_en => open,
             out_reset => open);
 
-    \TMC6100:sclk_s(0)\:iocell
+    \TMC6100:miso_m(0)\:iocell
         GENERIC MAP(
             in_sync_mode => 0,
             out_sync_mode => 0,
             oe_sync_mode => 0,
-            logicalport => "\TMC6100:sclk_s\",
+            logicalport => "\TMC6100:miso_m\",
             logicalport_pin_id => 0,
             io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
         PORT MAP(
-            pa_out => \\\TMC6100:sclk_s(0)\\__PA\,
+            pa_out => \\\TMC6100:miso_m(0)\\__PA\,
             oe => open,
-            fb => \TMC6100:sclk_s_wire\,
-            pad_in => \TMC6100:sclk_s(0)_PAD\,
+            fb => \TMC6100:miso_m_wire\,
+            pad_in => \TMC6100:miso_m(0)_PAD\,
             in_clock => open,
             in_clock_en => '1',
             in_reset => '0',
@@ -2760,12 +2667,12 @@ BEGIN
             out_clock_en => '1',
             out_reset => '0');
 
-    \TMC6100:mosi_s\:logicalport
+    \TMC6100:mosi_m\:logicalport
         GENERIC MAP(
-            drive_mode => "001",
-            ibuf_enabled => "1",
-            id => "8c8734ef-3644-4eed-bc55-360072b94fff/5e2b647c-52cb-4f09-80bd-87ed9563ab24",
-            init_dr_st => "0",
+            drive_mode => "110",
+            ibuf_enabled => "0",
+            id => "8c8734ef-3644-4eed-bc55-360072b94fff/ed092b9b-d398-4703-be89-cebf998501f6",
+            init_dr_st => "1",
             input_buffer_sel => "00",
             input_clk_en => 0,
             input_sync => "0",
@@ -2784,7 +2691,7 @@ BEGIN
             oe_sync => "0",
             output_clk_en => 0,
             output_clock_mode => "0",
-            output_conn => "0",
+            output_conn => "1",
             output_mode => "0",
             output_reset => 0,
             output_sync => "0",
@@ -2798,7 +2705,7 @@ BEGIN
             pa_out_clock_en => -1,
             pa_out_reset => -1,
             pin_aliases => "",
-            pin_mode => "I",
+            pin_mode => "B",
             por_state => 4,
             port_alias_group => "",
             port_alias_required => 0,
@@ -2831,19 +2738,112 @@ BEGIN
             out_clock_en => open,
             out_reset => open);
 
-    \TMC6100:mosi_s(0)\:iocell
+    \TMC6100:mosi_m(0)\:iocell
         GENERIC MAP(
             in_sync_mode => 0,
             out_sync_mode => 0,
             oe_sync_mode => 0,
-            logicalport => "\TMC6100:mosi_s\",
+            logicalport => "\TMC6100:mosi_m\",
             logicalport_pin_id => 0,
             io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
         PORT MAP(
-            pa_out => \\\TMC6100:mosi_s(0)\\__PA\,
+            pa_out => \\\TMC6100:mosi_m(0)\\__PA\,
             oe => open,
-            fb => \TMC6100:mosi_s_wire\,
-            pad_in => \TMC6100:mosi_s(0)_PAD\,
+            pin_input => \TMC6100:mosi_m_wire\,
+            pad_out => \TMC6100:mosi_m(0)_PAD\,
+            pad_in => \TMC6100:mosi_m(0)_PAD\,
+            in_clock => open,
+            in_clock_en => '1',
+            in_reset => '0',
+            out_clock => open,
+            out_clock_en => '1',
+            out_reset => '0');
+
+    \TMC6100:ss0_m\:logicalport
+        GENERIC MAP(
+            drive_mode => "110",
+            ibuf_enabled => "0",
+            id => "8c8734ef-3644-4eed-bc55-360072b94fff/9613317f-9767-4872-a15a-e07325d93413",
+            init_dr_st => "1",
+            input_buffer_sel => "00",
+            input_clk_en => 0,
+            input_sync => "0",
+            input_sync_mode => "0",
+            intr_mode => "00",
+            invert_in_clock => 0,
+            invert_in_clock_en => 0,
+            invert_in_reset => 0,
+            invert_out_clock => 0,
+            invert_out_clock_en => 0,
+            invert_out_reset => 0,
+            io_voltage => "",
+            layout_mode => "CONTIGUOUS",
+            oe_conn => "0",
+            oe_reset => 0,
+            oe_sync => "0",
+            output_clk_en => 0,
+            output_clock_mode => "0",
+            output_conn => "1",
+            output_mode => "0",
+            output_reset => 0,
+            output_sync => "0",
+            ovt_hyst_trim => "0",
+            ovt_needed => "0",
+            ovt_slew_control => "00",
+            pa_in_clock => -1,
+            pa_in_clock_en => -1,
+            pa_in_reset => -1,
+            pa_out_clock => -1,
+            pa_out_clock_en => -1,
+            pa_out_reset => -1,
+            pin_aliases => "",
+            pin_mode => "B",
+            por_state => 4,
+            port_alias_group => "",
+            port_alias_required => 0,
+            sio_group_cnt => 0,
+            sio_hifreq => "00000000",
+            sio_hyst => "1",
+            sio_ibuf => "00000000",
+            sio_info => "00",
+            sio_obuf => "00000000",
+            sio_refsel => "00000000",
+            sio_vohsel => "00000000",
+            sio_vtrip => "00000000",
+            slew_rate => "0",
+            spanning => 0,
+            sw_only => 0,
+            use_annotation => "0",
+            vtrip => "00",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0)
+        PORT MAP(
+            in_clock_en => open,
+            in_reset => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    \TMC6100:ss0_m(0)\:iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "\TMC6100:ss0_m\",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
+        PORT MAP(
+            pa_out => \\\TMC6100:ss0_m(0)\\__PA\,
+            oe => open,
+            pin_input => \TMC6100:select_m_wire_0\,
+            pad_out => \TMC6100:ss0_m(0)_PAD\,
+            pad_in => \TMC6100:ss0_m(0)_PAD\,
             in_clock => open,
             in_clock_en => '1',
             in_reset => '0',
@@ -3928,16 +3928,16 @@ BEGIN
             uart_cts => open,
             uart_rts => \TMC6100:rts_wire\,
             mosi_m => \TMC6100:mosi_m_wire\,
-            miso_m => open,
+            miso_m => \TMC6100:miso_m_wire\,
             select_m_3 => \TMC6100:select_m_wire_3\,
             select_m_2 => \TMC6100:select_m_wire_2\,
             select_m_1 => \TMC6100:select_m_wire_1\,
             select_m_0 => \TMC6100:select_m_wire_0\,
             sclk_m => \TMC6100:sclk_m_wire\,
-            mosi_s => \TMC6100:mosi_s_wire\,
+            mosi_s => open,
             miso_s => \TMC6100:miso_s_wire\,
-            select_s => \TMC6100:Net_1297\,
-            sclk_s => \TMC6100:sclk_s_wire\,
+            select_s => open,
+            sclk_s => open,
             tr_tx_req => Net_592,
             tr_rx_req => Net_583);
 
