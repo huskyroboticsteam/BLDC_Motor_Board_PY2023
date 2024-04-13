@@ -1,6 +1,0 @@
-C:\Users\davis\Documents\PSoC Creator\BLDC_Motor_Board_PY2023\BLDC_Motor_Board.cydsn\BLDC_Motor_Board.cyprj|36033734-a61d-4a39-a525-a8948162d9ae
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|9b4f1027-d519-491a-810f-f42321e60337
-C:\Users\davis\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|e8cee267-a8cf-4fb4-8b49-54ca02f93298
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|3fc65e4e-e8e6-4859-894e-9c9d9e894f9e
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|bde35969-3219-47bc-876d-756433ee2806
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|438fe967-1d8e-417b-86e9-c9ca61a0818a
