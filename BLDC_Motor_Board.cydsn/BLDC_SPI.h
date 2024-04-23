@@ -9,5 +9,8 @@
  *
  * ========================================
 */
+#include <project.h>
+
+uint32 read_spi(uint8 address, uint32 dataToSend);
 
 /* [] END OF FILE */

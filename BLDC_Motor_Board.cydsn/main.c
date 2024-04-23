@@ -121,124 +121,32 @@ int main(void)
     CyDelay(10);
     
     // set chip select low
-    TMC6100_SpiSetSlaveSelectPolarity(0, 0);
+    // TMC6100_SpiSetSlaveSelectPolarity(0, 0);
     
     // send message 0x0000 to addr 1
-    uint8 data[4] = {0,0,0,0};
-    uint8 addr[1] = {1};
-    TMC6100_SpiUartPutArray(addr, 1);
-    TMC6100_SpiUartPutArray(data, 4);
-    CyDelay(10);
+    // uint8 data[4] = {0,0,0,0};
+    // uint8 addr[1] = {1};
+    // TMC6100_SpiUartPutArray(addr, 1);
+    // TMC6100_SpiUartPutArray(data, 4);
+    // CyDelay(10);
     // read response
-    uint32 gstat = TMC6100_SpiUartReadRxData();
+    // uint32 gstat = TMC6100_SpiUartReadRxData();
     
     // set chip select high
-    TMC6100_SpiSetSlaveSelectPolarity(0, 1);
-    PrintIntBin(gstat);
+    // TMC6100_SpiSetSlaveSelectPolarity(0, 1);
+    // PrintIntBin(gstat);
+    
+    UART_UartPutString("Hello!\r\n");
     
     for(;;)
     {
-        //set_speed(1000*(1-cos(6.28 * delay * counter / 1000 / period)), 0);
-        //set_speed(0, 0);
+        DEBUG_LED_Write(!DEBUG_LED_Read());
         
-        /*UH_Write(1);
-        UL_Write(0);
-        VH_Write(0);
-        VL_Write(1);
-        WH_Write(0);
-        WL_Write(0);*/
+        uint32 gstat = read_spi(0x01, 0x00000000);
+        sprintf(txData, "GSTAT: %08lX\r\n", gstat);
+        UART_UartPutString(txData);
         
-        /*UH_Write(0);
-        UL_Write(1);
-        VH_Write(1);
-        VL_Write(0);
-        WH_Write(0);
-        WL_Write(0); // not work
-*/
-        //                     WL,WH,VL,VH,UL,UH
-        // none work
-        /*uint8_t rotorStates[6] = {0b001001, 
-                                  0b011000, 
-                                  0b010010,
-                                  0b000110,
-                                  0b100100,
-                                  0b100001};
-        
-        uint8_t rotorStates[6] = {0b100100, 
-                                  0b000110, 
-                                  0b010010,
-                                  0b011000,
-                                  0b001001,
-                                  0b100001};
-
-        uint8_t state = rotorStates[0];
-    
-        // write registers in UVW
-        UH_Write((state & (1 << 0)) != 0);
-        UL_Write((state & (1 << 1)) != 0);
-        VH_Write((state & (1 << 2)) != 0);
-        VL_Write((state & (1 << 3)) != 0);
-        WH_Write((state & (1 << 4)) != 0);
-        WL_Write((state & (1 << 5)) != 0);*/
-        
-        
-            TMC6100_SpiSetSlaveSelectPolarity(0, 0);
-    
-    // send message 0x0000 to addr 1
-    uint8 data[4] = {0,0,0,0};
-    uint8 addr[1] = {1};
-    TMC6100_SpiUartPutArray(addr, 1);
-    TMC6100_SpiUartPutArray(data, 4);
-    CyDelay(10);
-    // read response
-    uint32 gstat = TMC6100_SpiUartReadRxData();
-        
-        
-        counter++;
-        CyDelay(delay);
-        ERROR_LED_Write(FAULT_Read());
-        /*
-        uint8 data[5] = {1,0,0,0,0};
-        // set chip select high
-        TMC6100_SpiUartPutArray(data, 5);
-        // set chip select low
-        uint32 gstat = TMC6100_SpiUartReadRxData();
-        */
-        
-        /*
-        switch(GetState()) {
-            case(UNINIT):
-                //idle animation
-                SetStateTo(CHECK_CAN);
-                break;
-            case(SET_PWM):
-                set_speed(nextPWM, ignoreLimSw);
-                SetStateTo(CHECK_CAN);
-                break;
-            case(CALC_PID):
-                SetPosition(millidegreeTarget);   
-                SetStateTo(CHECK_CAN);
-                break;
-            case(QUEUE_ERROR):
-                SetStateTo(CHECK_CAN);
-                break;
-            case(CHECK_CAN):
-                NextStateFromCAN(&can_recieve, &can_send);
-                #ifdef PRINT_CAN_PACKET
-                PrintCanPacket(can_recieve);
-                #endif
-                break;
-            default:
-                //Should Never Get Here
-                //TODO: ERROR
-                GotoUninitState();
-                break;
-        }
-        
-        if (UART_SpiUartGetRxBufferSize()) {
-            DebugPrint(UART_UartGetByte());
-        }
-        */
+        CyDelay(500);
     }
 }
 
